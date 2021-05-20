@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 import {blocks as applabBlocks} from '@cdo/apps/applab/dropletConfig';
 import {getExportedGlobals} from '@cdo/apps/applab/export';
 import {dropletGlobalConfigBlocks} from '@cdo/apps/dropletUtils';

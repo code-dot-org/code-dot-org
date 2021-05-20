@@ -1,0 +1,48 @@
+---
+title: Policy implementation summary
+---
+
+:ruby
+  if request.params["pdf_version"]
+    @header["layout"] = "none"
+    @header["theme"] = "pdf"
+  end
+
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-policy-landscape.css'}
+
+// Generates summary of all state policies based on the data in cdo-state-promote Google Sheet.
+- state_info = DB[:cdo_state_promote]
+
+.policy-summary
+  %img{ src: '/images/logo.png'}
+  %h1 K–12 Computer Science Policy and Implementation in States
+
+  %p 
+  %ul.link-bar
+    %li= link_to 'Code.org’s Nine Policy Elements','https://code.org/files/Making_CS_Fundamental.pdf'
+    %li= link_to 'State-by-state data on the 9 policies','https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml'
+    %li= link_to 'Current Legislation','https://advocacy.code.org/current-legislation'
+  .intro-text2
+    %p We are seeing a groundswell of interest and effort from students, parents, teachers, districts, and states to bring computer science into our K–12 system. Tens of millions of students are participating in the Hour of Code. Tens of thousands of teachers are going through professional development to bring computer science into their schools. Hundreds of school districts have embraced computer science in their curriculum. And in the past five years, every state has responded to this growing interest by passing policies to boost computer science.
+
+    %p
+      Our advocacy coalition (
+      =link_to('https://advocacy.code.org','https://advocacy.code.org')
+      ) recommends nine policies states can adopt to make computer science foundational for all students (see: 
+      =link_to('https://code.org/files/Making_CS_Fundamental.pdf','https://code.org/files/Making_CS_Fundamental.pdf')
+      ). Below is a list of state actions working toward these statewide policies and/or implementation plans for scaling K–12 computer science, including efforts prioritizing equity.
+
+  - policy_label_pairs = [[:state_plan_t,"State Plan"],[:standards_t,"K-12 CS Standards"],[:funding_t,"Funding"],[:certification_t,"K-12 CS Certification"],[:preservice_t,"Preservice Incentives"],[:state_cs_t,"Dedicated CS Position"],[:hs_t,"Requiring All Secondary Schools to Offer CS"],[:count_t,"Making CS Count"],[:higher_ed_t,"Higher Education Admission"]]
+  - state_info.each do |state|
+    %h2=state[:state_name_s]
+    %ul.state-facts
+      - policy_label_pairs.each do |policy|
+        - unless state[policy[0]] == nil
+          %li
+            %b #{policy[1]}: 
+            = state[policy[0]]
+
+%p 
+  %i 
+    See a comparison chart of the 9 policies by state at 
+    =link_to 'www.bit.ly/9policies','www.bit.ly/9policies'

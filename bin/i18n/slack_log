@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require_relative '../../deployment'
+require 'cdo/chat_client'
+
+ARGF.each_line do |line|
+  ChatClient.log(line)
+end

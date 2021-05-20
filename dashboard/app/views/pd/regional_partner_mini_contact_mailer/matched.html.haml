@@ -1,0 +1,37 @@
+%p= "Hello #{@name},"
+
+%p
+  A teacher or administrator in your region has asked us to connect them with their local Code.org
+  Regional Partner. We let them know that you’ll get back to them. Please follow up with them
+  directly at your convenience.
+
+%div{style: 'margin-left: 1em;'}
+  = render partial: 'form_body'
+
+%p
+  %strong Why is this person contacting you?
+%p
+  We encourage administrators and teachers to fill out
+  = link_to 'this form', CDO.code_org_url('educate/professional-learning/contact-regional-partner', CDO.default_scheme)
+  if they want to learn more about
+  expanding CS in their schools. You can reach out to them to let them know about your resources
+  and ask how you can help them do this.
+%p
+  We also ask educators to fill out the form to find out when applications open in their area.
+  You should add their email to your list to let them know when you open applications for 6-12 PD
+  or when you set up a K-5 workshop they can join.
+%p
+  They may also use this form to ask you a question about the Professional Learning Program.
+
+%p
+  Best,
+  %br
+  &nbsp;
+  %br
+  Tawny Bradley
+  %br
+  Program Manager, Operations
+  %br
+  partner@code.org
+  %br
+  Code.org

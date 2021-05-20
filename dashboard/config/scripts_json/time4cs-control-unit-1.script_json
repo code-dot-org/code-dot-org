@@ -1,0 +1,3583 @@
+{
+  "script": {
+    "name": "time4cs-control-unit-1",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "editor_experiment": "broward",
+      "pilot_experiment": "time4cs-control",
+      "lesson_extras_available": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:39 UTC",
+    "seeding_key": {
+      "script.name": "time4cs-control-unit-1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csf_sequencing",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Sequencing"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "csf_loops",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Loops"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "csf_conditionals",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Conditionals"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "csf_events",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Events"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_events",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "csf_sprites",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Sprites"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "csf_digcit",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Digital Citizenship"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "csf_impacts",
+      "user_facing": true,
+      "position": 7,
+      "properties": {
+        "display_name": "Impacts of Computing"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_impacts",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "ramp_up",
+      "user_facing": true,
+      "position": 8,
+      "properties": {
+        "display_name": "Ramp-Up"
+      },
+      "seeding_key": {
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Sequencing in Maze",
+      "name": "Sequencing in Maze",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Programming and Loops with the Artist",
+      "name": "Programming and Loops with the Artist",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Conditionals in Minecraft: Voyage Aquatic",
+      "name": "Conditionals in Minecraft: Voyage Aquatic",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "name": "Conditionals",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Events: The Big Event",
+      "name": "Events: The Big Event",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "csf_events",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Simon Says",
+      "name": "Simon Says",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Learning Sprites with Sprite Lab",
+      "name": "Learning Sprites with Sprite Lab",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Alien Dance Party with Sprite Lab",
+      "name": "Alien Dance Party with Sprite Lab",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Private and Personal Information",
+      "name": "Private and Personal Information",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Private and Personal Information",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "About Me",
+      "name": "About Me",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Access Ability",
+      "name": "Access Ability",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Access Ability",
+        "lesson_group.key": "csf_impacts",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "Conditionals Review",
+      "name": "Conditionals Review",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_ramp1_control"
+        ],
+        "progression": "Maze Intro: Programming with Blocks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_ramp1_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_video_ramp1_control"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp1_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_maze_ramp1_control"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging9_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging9_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_maze_debugging9_control"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp3_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_maze_ramp3_control"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_debugging_control"
+        ],
+        "progression": "Debugging with the Step Button"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_debugging_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_video_debugging_control"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging2_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging2_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_maze_debugging2_control"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp4_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp4_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_maze_ramp4_control"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging4_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging4_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_maze_debugging4_control"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging6_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging6_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_maze_debugging6_control"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging7_control"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging7_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_maze_debugging7_control"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5a_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5a_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5a_control"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5c_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5c_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5c_control"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_artist_control"
+        ],
+        "progression": "Artist Intro with JR Hildebrande"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_artist_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_video_artist_control"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog1_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog1_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_artist_prog1_control"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog2_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog2_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_artist_prog2_control"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist_control"
+        ],
+        "progression": "Loops with the Artist"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_video_loopsArtist_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "ramp_video_loopsArtist_control"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog3_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog3_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_artist_prog3_control"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog4_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog4_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_artist_prog4_control"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog7_control"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog7_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_artist_prog7_control"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops4_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops4_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "ramp_artist_loops4_control"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops5_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops5_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "ramp_artist_loops5_control"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops6_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops6_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "ramp_artist_loops6_control"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "ramp_artist_loops8_control"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops8_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "ramp_artist_loops8_control"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge1_control"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge1_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_artist_prog_challenge1_control"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge2a_control"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge2a_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseC_artist_prog_challenge2a_control"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_1_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_1_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_1_control"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_2_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_2_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_2_control"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_3_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_3_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_3_control"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_4_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_4_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_4_control"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_5_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_5_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_5_control"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_6_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_6_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_6_control"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_7a_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_7a_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_7a_control"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_8_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_8_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_8_control"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_9b_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_9b_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_9b_control"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_10_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_10_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_10_control"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_11_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_11_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseE_HOC 2018 Level_11_control"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_control"
+        ],
+        "progression": "While Loops with the Farmer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_video_whileIntro_control"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_control"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_farmer_while4_predict1_control"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11a_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp11a_control"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11b_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp11b_control"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12b_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12b_control"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12_forswap_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12_forswap_control"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_control"
+        ],
+        "progression": "Repeat Unit Statements"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_video_repeatUntil_control"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12c_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12c_control"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12d_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12d_control"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12e_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12e_control"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse_control"
+        ],
+        "progression": "\"If/Else\" with the Bee"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_BeeifElse_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_video_BeeifElse_control"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseE_farmer_ramp12f_control"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12f_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12f_control"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12g_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12g_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12g_control"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BigEvent-Unplugged_control"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BigEvent-Unplugged_control"
+        ],
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "csf_events",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "BigEvent-Unplugged_control"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SimonSays-Unplugged_control"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SimonSays-Unplugged_control"
+        ],
+        "lesson.key": "Simon Says",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "SimonSays-Unplugged_control"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_control"
+        ],
+        "progression": "Introducing Sprite Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseEF_video_IntroSpriteLab_control"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 1-validated_control"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 1-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Fish Tank 1-validated_control"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 2-validated_control"
+        ],
+        "progression": "Mini-Project: Swimming Fish"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 2-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Fish Tank 2-validated_control"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 3-validated_control"
+        ],
+        "progression": "Mini-Project: Swimming Fish"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 3-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Fish Tank 3-validated_control"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 4-validated_control"
+        ],
+        "progression": "Mini-Project: Swimming Fish"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 4-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Fish Tank 4-validated_control"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_control"
+        ],
+        "progression": "How to Make a Sprite"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite_control"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 5-validated_control"
+        ],
+        "progression": "Mini-Project: Swimming Fish (continued)"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 5-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Fish Tank 5-validated_control"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 6-validated_control"
+        ],
+        "progression": "Mini-Project: Swimming Fish (continued)"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 6-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Fish Tank 6-validated_control"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 7-validated_control"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 7-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Fish Tank 7-validated_control"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 1-validated_control"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 1-validated_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Dance Party 1-validated_control"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CDEF_video_SpritesInAction_control"
+        ],
+        "progression": "Video"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CDEF_video_SpritesInAction_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "CDEF_video_SpritesInAction_control"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 2_control"
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 2_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Dance Party 2_control"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 3_control"
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 3_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Dance Party 3_control"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 4_control"
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 4_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Dance Party 4_control"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 5_control"
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 5_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Dance Party 5_control"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 6_control"
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 6_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Dance Party 6_control"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 7_control"
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 7_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Dance Party 7_control"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party Freeplay_control"
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party Freeplay_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "Dance Party Freeplay_control"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PrivatePersonalInformation-Unplugged_control"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PrivatePersonalInformation-Unplugged_control"
+        ],
+        "lesson.key": "Private and Personal Information",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "PrivatePersonalInformation-Unplugged_control"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_aboutme_1_control"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aboutme_1_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_aboutme_1_control"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_aboutme_2_control"
+        ],
+        "progression": "Mini-project: Interactive Poster"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aboutme_2_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_aboutme_2_control"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_aboutme_3_control"
+        ],
+        "progression": "Mini-project: Interactive Poster"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aboutme_3_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_aboutme_3_control"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_aboutme_4_control"
+        ],
+        "progression": "Mini-project: Interactive Poster"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aboutme_4_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_aboutme_4_control"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_aboutme_5_control"
+        ],
+        "progression": "Mini-project: Interactive Poster"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aboutme_5_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_aboutme_5_control"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_aboutme_6_control"
+        ],
+        "progression": "Mini-project: Interactive Poster"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aboutme_6_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_aboutme_6_control"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2019_control"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2019_control"
+        ],
+        "lesson.key": "Access Ability",
+        "lesson_group.key": "csf_impacts",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "DesigningForAccessibilityMarkdownLevel_2019_control"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_control"
+        ],
+        "progression": "While Loops with the Farmer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_video_whileIntro_control"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_control"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_farmer_while4_predict1_control"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11a_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp11a_control"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11b_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp11b_control"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12b_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12b_control"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12_forswap_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12_forswap_control"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_control"
+        ],
+        "progression": "Repeat Unit Statements"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseD_video_repeatUntil_control"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12c_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12c_control"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12d_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12d_control"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12e_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12e_control"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse_control"
+        ],
+        "progression": "\"If/Else\" with the Bee"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_BeeifElse_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_video_BeeifElse_control"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseE_farmer_ramp12f_control"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12f_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12f_control"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12g_control"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12g_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12g_control"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_ramp1_control",
+        "script_level.level_keys": [
+          "courseD_video_ramp1_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp1_control",
+        "script_level.level_keys": [
+          "courseD_maze_ramp1_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging9_control",
+        "script_level.level_keys": [
+          "courseC_maze_debugging9_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp3_control",
+        "script_level.level_keys": [
+          "courseD_maze_ramp3_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_debugging_control",
+        "script_level.level_keys": [
+          "courseC_video_debugging_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging2_control",
+        "script_level.level_keys": [
+          "courseC_maze_debugging2_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp4_control",
+        "script_level.level_keys": [
+          "courseD_maze_ramp4_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging4_control",
+        "script_level.level_keys": [
+          "courseC_maze_debugging4_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging6_control",
+        "script_level.level_keys": [
+          "courseC_maze_debugging6_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging7_control",
+        "script_level.level_keys": [
+          "courseC_maze_debugging7_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5a_control",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5a_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5c_control",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5c_control"
+        ],
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_artist_control",
+        "script_level.level_keys": [
+          "courseC_video_artist_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog1_control",
+        "script_level.level_keys": [
+          "courseC_artist_prog1_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog2_control",
+        "script_level.level_keys": [
+          "courseC_artist_prog2_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_loopsArtist_control",
+        "script_level.level_keys": [
+          "ramp_video_loopsArtist_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog3_control",
+        "script_level.level_keys": [
+          "courseC_artist_prog3_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog4_control",
+        "script_level.level_keys": [
+          "courseC_artist_prog4_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog7_control",
+        "script_level.level_keys": [
+          "courseC_artist_prog7_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops4_control",
+        "script_level.level_keys": [
+          "ramp_artist_loops4_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops5_control",
+        "script_level.level_keys": [
+          "ramp_artist_loops5_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops6_control",
+        "script_level.level_keys": [
+          "ramp_artist_loops6_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops8_control",
+        "script_level.level_keys": [
+          "ramp_artist_loops8_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog_challenge1_control",
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge1_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog_challenge2a_control",
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge2a_control"
+        ],
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_1_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_1_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_2_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_2_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_3_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_3_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_4_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_4_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_5_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_5_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_6_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_6_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_7a_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_7a_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_8_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_8_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_9b_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_9b_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_10_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_10_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_HOC 2018 Level_11_control",
+        "script_level.level_keys": [
+          "CourseE_HOC 2018 Level_11_control"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_whileIntro_control",
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while4_predict1_control",
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp11a_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11a_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp11b_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11b_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12b_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12b_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12_forswap_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12_forswap_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_repeatUntil_control",
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12c_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12c_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12d_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12d_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12e_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12e_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_BeeifElse_control",
+        "script_level.level_keys": [
+          "courseE_video_BeeifElse_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12f_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12f_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12g_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12g_control"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BigEvent-Unplugged_control",
+        "script_level.level_keys": [
+          "BigEvent-Unplugged_control"
+        ],
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "csf_events",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SimonSays-Unplugged_control",
+        "script_level.level_keys": [
+          "SimonSays-Unplugged_control"
+        ],
+        "lesson.key": "Simon Says",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_IntroSpriteLab_control",
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 1-validated_control",
+        "script_level.level_keys": [
+          "Fish Tank 1-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 2-validated_control",
+        "script_level.level_keys": [
+          "Fish Tank 2-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 3-validated_control",
+        "script_level.level_keys": [
+          "Fish Tank 3-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 4-validated_control",
+        "script_level.level_keys": [
+          "Fish Tank 4-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_MakeSprite_control",
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 5-validated_control",
+        "script_level.level_keys": [
+          "Fish Tank 5-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 6-validated_control",
+        "script_level.level_keys": [
+          "Fish Tank 6-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 7-validated_control",
+        "script_level.level_keys": [
+          "Fish Tank 7-validated_control"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 1-validated_control",
+        "script_level.level_keys": [
+          "Dance Party 1-validated_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CDEF_video_SpritesInAction_control",
+        "script_level.level_keys": [
+          "CDEF_video_SpritesInAction_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 2_control",
+        "script_level.level_keys": [
+          "Dance Party 2_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 3_control",
+        "script_level.level_keys": [
+          "Dance Party 3_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 4_control",
+        "script_level.level_keys": [
+          "Dance Party 4_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 5_control",
+        "script_level.level_keys": [
+          "Dance Party 5_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 6_control",
+        "script_level.level_keys": [
+          "Dance Party 6_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 7_control",
+        "script_level.level_keys": [
+          "Dance Party 7_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party Freeplay_control",
+        "script_level.level_keys": [
+          "Dance Party Freeplay_control"
+        ],
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PrivatePersonalInformation-Unplugged_control",
+        "script_level.level_keys": [
+          "PrivatePersonalInformation-Unplugged_control"
+        ],
+        "lesson.key": "Private and Personal Information",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aboutme_1_control",
+        "script_level.level_keys": [
+          "courseE_aboutme_1_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aboutme_2_control",
+        "script_level.level_keys": [
+          "courseE_aboutme_2_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aboutme_3_control",
+        "script_level.level_keys": [
+          "courseE_aboutme_3_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aboutme_4_control",
+        "script_level.level_keys": [
+          "courseE_aboutme_4_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aboutme_5_control",
+        "script_level.level_keys": [
+          "courseE_aboutme_5_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aboutme_6_control",
+        "script_level.level_keys": [
+          "courseE_aboutme_6_control"
+        ],
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DesigningForAccessibilityMarkdownLevel_2019_control",
+        "script_level.level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2019_control"
+        ],
+        "lesson.key": "Access Ability",
+        "lesson_group.key": "csf_impacts",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_whileIntro_control",
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while4_predict1_control",
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp11a_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11a_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp11b_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11b_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12b_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12b_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12_forswap_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12_forswap_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_repeatUntil_control",
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12c_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12c_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12d_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12d_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12e_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12e_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_BeeifElse_control",
+        "script_level.level_keys": [
+          "courseE_video_BeeifElse_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12f_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12f_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12g_control",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12g_control"
+        ],
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

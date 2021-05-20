@@ -1,0 +1,55 @@
+name 'csp-7-exam1-API-algorithms-2020'
+editor_experiment ''
+right '![](https://images.code.org/4948c6f6eba7ced880b33c31a2c9735f-image-1604608364369.27.15 PM.png)'
+wrong '![](https://images.code.org/995e40fe93f09df5bda26477784d2a07-image-1604608770294.38.50 PM.png)'
+wrong '![](https://images.code.org/fe81d575064fbb0da6b80e9331009748-image-1604609006618.43.08 PM.png)'
+wrong '![](https://images.code.org/7f3cc07ac8d70c8a68508f676d813926-image-1604609125912.45.01 PM.png)'
+
+
+
+
+
+markdown <<MARKDOWN
+Here is the API for a robot library.
+
+```
+// moves the robot forward
+function moveForward();
+
+// turns the robot to the left
+function rotateLeft();
+
+// turns the robot to the right
+function rotateRight();
+
+// checks if a robot can move in any direction
+// direction {string} - the direction to be checked
+// return {Boolean} - true if the robot can move in that direction, otherwise returns false
+function canMove(direction);
+```
+
+Which code segment will guarantee that the robot makes it to the gray square without hitting a wall or a barrier (black square)?
+
+![](https://images.code.org/38a33896798110989862a99a7ccefe66-image-1581103498011.png)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** This animation walks through the function running and directing the robot to the gray square.
+
+Students start seeing libraries in use in  [Lesson 6 - Libraries Investigate](https://curriculum.code.org/csp-20/unit7/6/).
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.M.1: Algorithms can be created from an idea, by combining existing algorithms, or by modifying existing algorithms.
+
+* AAP-2.M.2: Knowledge of existing algorithms can help in constructing new ones. Some existing algorithms include:
+●   	determining the maximum or minimum value of 2 or more numbers
+●   	computing the sum or average of 2 or more numbers
+●   	identifying if an integer is or is not evenly divisible by another integer
+●   	determining a robot’s path through a maze
+:::
+
+
+![](https://images.code.org/46a569f2fd787a18da36ebd0f82e7f82-image-1612571266125.gif)
+MARKDOWN

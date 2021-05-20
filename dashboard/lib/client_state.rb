@@ -11,26 +11,11 @@ class ClientState
     @cookies = cookies
   end
 
-  # Resets all client state (level progress, lines of code, videos seen, etc.)
+  # Resets all client state (level progress, videos seen, etc.)
   def reset
-    cookies[:lines] = nil
     cookies[:progress] = nil
     session[:videos_seen] = nil
     session[:callouts_seen] = nil
-  end
-
-  # Returns the number of lines written in the current user session.
-  # return [Integer]
-  def lines
-    migrate_cookies
-    (cookies[:lines] || 0).to_i
-  end
-
-  # Add additional lines completed in the given session
-  # @param [Integer] added_lines
-  def add_lines(added_lines)
-    migrate_cookies
-    cookies.permanent[:lines] = (lines + added_lines).to_s
   end
 
   # Returns the progress value for the given level_id, or 0 if there
@@ -130,10 +115,6 @@ class ClientState
     if session[:progress]
       cookies.permanent[:progress] = JSON.generate(session[:progress])
       session[:progress] = nil
-    end
-    if session[:lines]
-      cookies[:lines] = session[:lines].to_s
-      session[:lines] = nil
     end
   end
 end

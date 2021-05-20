@@ -1,0 +1,11 @@
+name 'CSD games cake challenge choice_virtual_2020'
+display_name 'Challenges'
+description '
+Make It Your Own
+You just walked through someone else\'s plan for creating a game, so now it\'s time to make it your own. What additional features or challenges do you want to create?'
+
+sublevels
+level 'CSD U3 AnimationsMulti defender background_virtual_2020'
+level 'CSD U3 AnimationsMulti defender randomizespeed_virtual_2020'
+level 'CSD U3 AnimationsMulti defender changevisuals_virtual_2020'
+level 'CSD U3 AnimationsMulti defender endgame_virtual_2020'

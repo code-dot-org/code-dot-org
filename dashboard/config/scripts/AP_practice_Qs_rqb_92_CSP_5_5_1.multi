@@ -1,42 +1,40 @@
 name 'AP_practice_Qs_rqb_92_CSP_5_5_1'
-wrong 'IF  
-ELSE'
-right 'AND
-OR'
-wrong 'LIST
-REPEAT'
-wrong 'NOT
-LOOP'
+editor_experiment ''
+wrong 'IF ELSE'
+right 'AND OR'
+wrong 'LIST REPEAT'
+wrong 'NOT LOOP'
 markdown <<MARKDOWN
 Compound expressions are a facet of Boolean logic, and are part of most programming languages.
 Which of the following operators are both examples of Boolean operators used in complex expressions?
 
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **5.5.1** and Essential Knowledge statements: **5.5.1F**
-<hr>
- (A) This answer is NOT correct.
+
+---
+(A) This answer is NOT correct.
 While IF statements make use of a Boolean expression (e.g. IF (x > 5 AND x < 10)   ), they are not themselves Boolean operators.
 Furthermore, this question refers to compound expressions, which are not needed to make an IF statement viable 
-(e.g.  IF (x > 5)    ) 
+(e.g.  IF (x > 5)    )
 ELSE is similar, it essentially means if the previous IF evaluated to false
 
-<hr>
- (B) This IS the correct answer.
+---
+(B) This IS the correct answer.
 The AND operator creates a compound Boolean expression in which both arguments must be true in order for the entire expression to evaluate true.
 This IS a correct answer.
 The OR operator creates a compound Boolean expression in which both arguments must be false in order for the entire expression to evaluate false.
 
-<hr>
- (C) This answer is NOT correct.
+---
+(C) This answer is NOT correct.
 LIST is a concept which allows for the collection of more than one data to be referenced by the same variable(pointer).
 (e.g.    LIST the_list <-- {5, 2, 3, 4, 7}     )
 While the data is perhaps compound in a LIST, LISTs are not Boolean in nature.  
 REPEAT is a concept that, like an IF, is based on a Boolean argument.  It however is not itself a Boolean argument.
 
-<hr>
- (D) This answer is NOT correct
+---
+(D) This answer is NOT correct
 NOT is a Boolean operator, but unlike AND and OR, is is not compound.  NOT changes the Boolean value of a single argument.
 LOOP is a concept that, like an IF, is based on a Boolean argument.  It however is not itself a Boolean argument.
-
 MARKDOWN

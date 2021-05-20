@@ -9,6 +9,7 @@ import $ from 'jquery';
 var utils = require('../utils');
 var _ = require('lodash');
 var i18n = require('@cdo/netsim/locale');
+import {getStore} from '../redux';
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimAlert = require('./NetSimAlert');
@@ -16,6 +17,7 @@ var NetSimApiError = require('./NetSimApiError');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
+import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
 var logger = require('./NetSimLogger').getSingleton();
 var NetSimGlobals = require('./NetSimGlobals');
@@ -158,16 +160,13 @@ var NetSimLobby = (module.exports = function(rootDiv, netsim, options) {
    * @private {function}
    */
   this.showTeacherLogCallback_ = options.showTeacherLogCallback;
-
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
-    this.getUserSections_(
-      function(sectionList) {
-        this.buildShardChoiceList_(sectionList, options.sharedShardSeed);
-        this.render();
-      }.bind(this)
-    );
+    getUserSections(sectionList => {
+      this.buildShardChoiceList_(sectionList, options.sharedShardSeed);
+      this.render();
+    });
   } else {
     this.buildShardChoiceList_([], options.sharedShardSeed);
   }
@@ -532,33 +531,6 @@ NetSimLobby.prototype.onWireTableChange_ = function() {
 };
 
 /**
- * Send a request to dashboard and retrieve a JSON array listing the
- * sections this user belongs to.
- * @param {function} callback
- * @private
- */
-NetSimLobby.prototype.getUserSections_ = function(callback) {
-  var memberSectionsRequest = $.ajax({
-    dataType: 'json',
-    url: '/api/v1/sections/membership'
-  });
-
-  var ownedSectionsRequest = $.ajax({
-    dataType: 'json',
-    url: '/api/v1/sections'
-  });
-
-  $.when(memberSectionsRequest, ownedSectionsRequest).done(function(
-    result1,
-    result2
-  ) {
-    var memberSectionData = result1[0];
-    var ownedSectionData = result2[0];
-    callback(memberSectionData.concat(ownedSectionData));
-  });
-};
-
-/**
  * Populate the internal cache of shard options, given a set of the current
  * user's sections.
  * @param {Array} sectionList - list of sections this user is a member or
@@ -583,11 +555,13 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     });
   }
 
-  // Add user's sections to the shard list
+  // Add user's active (non-archived) sections to the shard list
+  const unarchivedSections = sectionList.filter(section => !section.hidden);
   this.shardChoices_ = this.shardChoices_.concat(
-    sectionList.map(
+    unarchivedSections.map(
       function(section) {
         return {
+          sectionId: section.id,
           shardSeed: section.id,
           shardID: this.makeShardIDFromSeed_(section.id),
           displayName: section.name
@@ -607,9 +581,20 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     });
   }
 
+  // Get teacher selected section (selected in TeacherPanel)
+  const teacherSections = getStore().getState().teacherSections;
+  const teacherSelectedSectionId =
+    teacherSections && teacherSections.selectedSectionId;
+
   // If there's only one possible shard, select it by default
   if (this.shardChoices_.length === 1 && !this.selectedShardID_) {
     this.setShardID(this.shardChoices_[0].shardID);
+  } else if (teacherSelectedSectionId && !this.selectedShardID_) {
+    // If teacher has selected a section, select it by default
+    const selectedSectionShardId = this.makeShardIDFromSeed_(
+      teacherSelectedSectionId
+    );
+    this.setShardID(selectedSectionShardId);
   }
 };
 

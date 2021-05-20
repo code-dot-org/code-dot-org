@@ -1,4 +1,4 @@
-stage 'craft17 stage'
+lesson 'craft17 stage', display_name: 'craft17 stage', has_lesson_plan: false
 level 'MC_HOC_2017_01_Kiki'
 level 'MC_HOC_2017_02_Kiki'
 level 'MC_HOC_2017_03_Kiki'
@@ -11,3 +11,4 @@ level 'MC_HOC_2017_08_Kiki'
 level 'MC_HOC_2017_09_Kiki'
 level 'MC_HOC_2017_10_Kiki'
 level 'MC_HOC_2017_11_Kiki'
+

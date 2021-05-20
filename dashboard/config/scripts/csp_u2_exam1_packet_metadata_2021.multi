@@ -1,0 +1,17 @@
+name 'csp-u2-exam1-packet-metadata_2021'
+height 'auto'
+
+question 'Which of the following is true of how packets are sent through the Internet?'
+
+wrong ‘Packet metadata is only included on important packets to indicate they should get access to faster paths through the network’
+right ‘Packet metadata is used to route and reassemble information travelling through the Internet’
+wrong ‘Information sent through the internet is only encapsulated in packets if the message is too large to be sent as a datastream’
+wrong ‘Information sent through the internet is split into two packets, one which contains the message and another which contains the metadata’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

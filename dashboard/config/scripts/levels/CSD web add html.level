@@ -6,7 +6,7 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "project_template_level_name": "CSD web upload images multi_pilot",
+    "project_template_level_name": "CSD Web Multi-page Template",
     "hide_share_and_remix": "false",
     "submittable": "false",
     "parent_level_id": 18318,
@@ -28,7 +28,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-14 16:46:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-14 17:05:21 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-29 16:29:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-29 16:30:23 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-30 21:04:55 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:19:40 +0000\",\"changed\":[\"project_template_level_name\",\"hide_share_and_remix\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:22:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:22:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 16:46:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-14 17:05:21 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-29 16:29:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-29 16:30:23 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-30 21:04:55 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:19:40 +0000\",\"changed\":[\"project_template_level_name\",\"hide_share_and_remix\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:22:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:22:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-25 23:10:07 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

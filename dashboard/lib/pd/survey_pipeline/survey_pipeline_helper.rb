@@ -3,7 +3,6 @@ require 'pd/survey_pipeline/daily_survey_parser.rb'
 require 'pd/survey_pipeline/daily_survey_joiner.rb'
 require 'pd/survey_pipeline/mapper.rb'
 require 'pd/survey_pipeline/daily_survey_decorator.rb'
-require 'pd/survey_pipeline/survey_rollup_decorator.rb'
 
 module Pd::SurveyPipeline::Helper
   include Pd::JotForm::Constants
@@ -14,16 +13,15 @@ module Pd::SurveyPipeline::Helper
     WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY = 'teacher_engagement'
   ]
 
-  # Summarize facilitator-specific and general workshop results from all workshops
-  # that a group of selected facilitators have facilitated.
+  # Roll up facilitator-specific and general workshop survey results from all related workshops.
   #
-  # @param workshop [Pd::Workshop]
-  # @param current_user [User]
-  #
-  # @return [Hash]
+  # @param workshop [Pd::Workshop] the workshop user selects, which is used to find related workshops
+  # @param current_user [User] the user requesting survey report
+  # @return [Hash] {:workshopRollups, :facilitatorRollups => rollup_content}
+  # @see SurveyRollupDecorator.decorate_facilitator_rollup for data structure of rollup_content
   #
   def report_rollups(workshop, current_user)
-    # Filter list of facilitators that the current user can see.
+    # Get list of facilitators this user can see
     facilitator_ids =
       if current_user.program_manager? || current_user.workshop_organizer? || current_user.workshop_admin?
         workshop.facilitators.pluck(:id)
@@ -31,61 +29,56 @@ module Pd::SurveyPipeline::Helper
         [current_user.id]
       end
 
-    # Roll up facilitator-specific results and general workshop results for each facilitator
-    reports = {}
-    facilitator_ids.each do |facilitator_id|
-      reports.deep_merge! report_facilitator_rollup(facilitator_id, workshop)
-      reports.deep_merge! report_workshop_rollup(facilitator_id, workshop)
+    # Roll up facilitator-specific and general workshop results
+    reports = {facilitator_rollups: {}, workshop_rollups: {}}
+
+    facilitator_ids.each do |fid|
+      reports[:facilitator_rollups].deep_merge! report_facilitator_rollup(fid, workshop, true)
+      reports[:workshop_rollups].deep_merge! report_facilitator_rollup(fid, workshop, false)
+
+      # TODO: report_partner_rollup()
+      # TODO: report_cdo_rollup()
     end
 
     reports
   end
 
-  # Summarize facilitator-specific results from all related workshops
-  # that a facilitator have facilitated.
+  # Summarize facilitator-specific results from all related workshops a facilitator have facilitated.
   #
-  # @param facilitator_id [Number] a valid user id
-  # @param workshop [Pd::Workshop] a valid workshop
+  # @param facilitator_id [Integer]
+  # @param workshop [Pd::Workshop]
+  # @param only_facilitator_questions [Boolean]
+  # @return [Hash]
   #
-  # @return [Hash{:facilitators, :facilitator_response_counts, :facilitator_averages, :errors => Hash, Array}]
-  #   facilitators: {facilitator_id => fac_name}
-  #   facilitator_response_counts: {this_workshop, all_my_workshops => {facilitator_id => count}}
-  #   facilitator_averages: {
-  #     fac_name => {qcategory, qname => {this_workshop, all_my_workshops => score}},
-  #     questions => {qname => qtext}
-  #    }
-  #   errors: Array
-  #
-  def report_facilitator_rollup(facilitator_id, workshop)
+  def report_facilitator_rollup(facilitator_id, workshop, only_facilitator_questions)
     context = {
       current_workshop_id: workshop.id,
       facilitator_id: facilitator_id,
-      question_categories: [FACILITATOR_EFFECTIVENESS_CATEGORY]
     }
 
-    # Retrieve data
+    context[:question_categories] = only_facilitator_questions ?
+      [FACILITATOR_EFFECTIVENESS_CATEGORY] :
+      [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY]
+
     related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
     context[:related_workshop_ids] = related_ws_ids
-    context.merge! retrieve_facilitator_surveys([facilitator_id], related_ws_ids)
+
+    # Retrieve data
+    if only_facilitator_questions
+      context[:survey_questions], context[:facilitator_submissions] =
+        Pd::SurveyPipeline::DailySurveyRetriever.retrieve_facilitator_surveys facilitator_id, related_ws_ids
+    else
+      context[:survey_questions], context[:workshop_submissions] =
+        Pd::SurveyPipeline::DailySurveyRetriever.retrieve_general_workshop_surveys related_ws_ids
+    end
 
     # Process data
     process_rollup_data context
-  end
 
-  def report_workshop_rollup(facilitator_id, workshop)
-    context = {
-      current_workshop_id: workshop.id,
-      facilitator_id: facilitator_id,
-      question_categories: [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY]
-    }
-
-    # Retrieve data
-    related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
-    context[:related_workshop_ids] = related_ws_ids
-    context.merge! retrieve_workshop_surveys(related_ws_ids)
-
-    # Process data
-    process_rollup_data context
+    # Decorate
+    Pd::SurveyPipeline::SurveyRollupDecorator.decorate_facilitator_rollup(
+      context, only_facilitator_questions
+    )
   end
 
   def process_rollup_data(context)
@@ -139,27 +132,22 @@ module Pd::SurveyPipeline::Helper
     Pd::SurveyPipeline::GenericMapper.new(
       group_config: group_config_this_ws, map_config: map_config_this_ws
     ).process_data context
-
-    # Decorate
-    Pd::SurveyPipeline::SurveyRollupDecorator.decorate_facilitator_rollup context
   end
 
   # Summarize all survey results for a workshop.
   #
   # @param workshop [Pd::Workshop]
   # @param current_user [User]
-  #
   # @return [Hash]
   #
   def report_single_workshop(workshop, current_user)
     # Centralized context object shared by all workers in the pipeline.
     # Workers read from and write to this object.
-    context = {
-      current_user: current_user,
-      filters: {workshop_ids: workshop.id}
-    }
+    context = {current_user: current_user}
 
-    Pd::SurveyPipeline::DailySurveyRetriever.process_data context
+    context[:survey_questions], context[:workshop_submissions], context[:facilitator_submissions] =
+      Pd::SurveyPipeline::DailySurveyRetriever.retrieve_all_workshop_surveys workshop.id
+
     Pd::SurveyPipeline::DailySurveyParser.process_data context
     Pd::SurveyPipeline::DailySurveyJoiner.process_data context
 
@@ -183,9 +171,7 @@ module Pd::SurveyPipeline::Helper
 
     Pd::SurveyPipeline::DailySurveyModifier.augment_questions_for_display context[:parsed_questions]
 
-    Pd::SurveyPipeline::DailySurveyDecorator.process_data context
-
-    context[:decorated_summaries]
+    Pd::SurveyPipeline::DailySurveyDecorator.decorate_single_workshop context
   end
 
   private
@@ -204,42 +190,5 @@ module Pd::SurveyPipeline::Helper
       where(users: {id: facilitator_id}, course: course).
       distinct.
       pluck(:id)
-  end
-
-  # Retrieve facilitator submissions and survey questions for selected facilitators and workshops.
-  #
-  # @param facilitator_ids [Array<number>] non-empty list of facilitator ids
-  # @param ws_ids [Array<number>] non-empty list of workshop ids
-  #
-  # @return [Hash{:facilitator_submissions, :survey_questions => Array}]
-  #
-  # TODO: Move these functions into a Retriever
-  #
-  def retrieve_facilitator_surveys(facilitator_ids, ws_ids)
-    fac_submissions = Pd::WorkshopFacilitatorDailySurvey.where(
-      facilitator_id: facilitator_ids, pd_workshop_id: ws_ids
-    )
-    form_ids = fac_submissions.pluck(:form_id).uniq
-
-    {
-      survey_questions: Pd::SurveyQuestion.where(form_id: form_ids),
-      facilitator_submissions: fac_submissions
-    }
-  end
-
-  # Retrieve workshop daily submissions and survey questions for selected workshops.
-  #
-  # @param ws_ids [Array<number>] non-empty list of workshop ids
-  #
-  # @return [Hash{:workshop_submissions, :survey_questions => Array}]
-  #
-  def retrieve_workshop_surveys(ws_ids)
-    ws_submissions = Pd::WorkshopDailySurvey.where(pd_workshop_id: ws_ids)
-    form_ids = ws_submissions.pluck(:form_id).uniq
-
-    {
-      survey_questions: Pd::SurveyQuestion.where(form_id: form_ids),
-      workshop_submissions: ws_submissions
-    }
   end
 end

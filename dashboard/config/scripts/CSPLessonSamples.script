@@ -1,10 +1,10 @@
-stage 'Lesson 14'
+lesson 'Lesson 14', display_name: 'Lesson 14', has_lesson_plan: false
 level 'Pixelation - Video - Lesson 14 - B and W'
 level 'Pixelation - Lesson 14 - Make the Letter A'
 level 'Pixelation - Lesson 14 - Fix bit offset'
 level 'Pixelation - Lesson 14 - Make your own B and W Image'
 
-stage 'Lesson 15'
+lesson 'Lesson 15', display_name: 'Lesson 15', has_lesson_plan: false
 level 'Pixelation - Video - Color 1'
 level 'Pixelation - Lesson 15 - Complete 3-bit color'
 level 'Pixelation - Video - Color 2'

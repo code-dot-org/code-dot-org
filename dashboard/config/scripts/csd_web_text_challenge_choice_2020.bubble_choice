@@ -1,0 +1,10 @@
+name 'CSD web text challenge choice_2020'
+editor_experiment ''
+display_name 'Text Challenges'
+description 'Try out these new blocks and challenges.'
+
+sublevels
+level 'CSD web text stroke'
+level 'CSD web challenge stroke'
+level 'CSD web challenge wrap text'
+level 'CSD games text freeplay'

@@ -1,0 +1,99 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-02-25T15:54:13.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":3,\"range\":3,\"possibleFeatures\":[3],\"startsHidden\":true},{\"tileType\":1,\"value\":3,\"range\":6,\"possibleFeatures\":[3],\"startsHidden\":true},{\"tileType\":1,\"value\":3,\"range\":4,\"possibleFeatures\":[3],\"startsHidden\":true},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "start_direction": "1",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "short_instructions": "While there is lettuce, pick lettuce!",
+    "ideal": "5",
+    "step_speed": "2",
+    "authored_hints": "[]",
+    "long_instructions": "Now the harvester needs to pick all of the lettuce.  Use `while there is lettuce` inside of a `repeat` loop to get it all!",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2020",
+    "parent_level_id": 14789,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:32:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 20:14:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:32:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-20 00:20:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"skin\",\"instructions\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:21:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:25:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:26:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:26:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:27:31 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:34:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:35:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:43:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_important\",\"authored_hints\",\"markdown_instructions\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:44:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:45:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:50:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"instructions\",\"authored_hints\",\"markdown_instructions\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:51:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:51:36 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:52:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-20 00:59:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-04 00:12:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 19:52:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="harvester_lettuce"/>
+        <block type="harvester_whileHasCrop">
+          <title name="LOC">Lettuce</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="harvester_whileHasCrop">
+                      <title name="LOC">Lettuce</title>
+                      <statement name="DO">
+                        <block type="harvester_lettuce"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

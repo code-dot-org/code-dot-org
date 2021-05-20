@@ -1,0 +1,1614 @@
+{
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/1": {
+    "display_name": "Homestead",
+    "short_instructions": "Write code to get the Agent to the pressure plate, then press \"Run\" and use the arrow keys to move the player out of the house to collect the chest. ",
+    "long_instructions": "The door is locked, but the Agent is here to help!\n\nSnap a `move forward` block to the bottom of the `when run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up], then press \"Run\" and use the arrow keys to move out of the house to collect the **chest** [chest].",
+    "authored_hints": {
+      "MC_HOC_2017_01_RETRY_a": "Drag one `move forward` block from the toolbox to the workspace, and snap it into place beneath the `when run` block.",
+      "MC_HOC_2017_01_RETRY_b": "Don't forget to click \"Run\" to run the code for the Agent.",
+      "MC_HOC_2017_01_RETRY_c": "Once the Agent has run all of its code, you can move the player with the arrow keys!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/2": {
+    "display_name": "The Farm",
+    "short_instructions": "Move the Agent to the pressure plate so that {currentPlayerName} can get to the map. ",
+    "long_instructions": "{currentPlayerName} is headed on an adventure! To help, get the **map** [map_empty] behind the locked door on the right. \n\nSnap the code into the workspace to move the Agent to the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get through. ",
+    "authored_hints": {
+      "MC_HOC_2017_02_Cole_a": "Move the Agent forward two spaces to stand on the pressure plate.  That will open the door for your player.",
+      "MC_HOC_2017_02_Cole_b": "Press \"Run\"!\n\nYou can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.",
+      "MC_HOC_2017_02_Cole_c": "Once the Agent has opened the door, use the arrow keys to move the player to the map!",
+      "MC_HOC_2017_02_Cole_d": "Make sure the Agent is following the path outlined on the map!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/3": {
+    "display_name": "The Woods",
+    "short_instructions": "Code the Agent to open the gate. ",
+    "long_instructions": "{currentPlayerName} continues on the adventure and needs the **compass** [compass] to prepare for the trip.  \n\nCode the Agent to open the gate. ",
+    "authored_hints": {
+      "MC_HOC_2017_03_Cole_a": "Once you get the Agent to the pressure plate, you can use your arrow keys to walk the player to the compass!",
+      "MC_HOC_2017_03_Cole_b": "Does the code feel a little long?  Try using a `repeat` loop and see if you can figure out how to make it shorter!"
+    },
+    "callouts": {
+      "MC_HOC_2017_03_Cole_1": "This is a `repeat` loop!  Click it into the workspace and add code that you want to run over and over."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/4": {
+    "display_name": "The Swamp",
+    "short_instructions": "Get the Agent to the pressure plate.",
+    "long_instructions": "The Agent can move across water!  \n\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName} get to the **bucket** [bucket_empty] behind the door. ",
+    "authored_hints": {
+      "MC_HOC_2017_04_Cole_a": "The Agent needs to `move forward` 7 times.  How can you use a `repeat` loop to make that happen?",
+      "MC_HOC_2017_04_Cole_c": "Press \"Run\"!\n\nYou can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.",
+      "MC_HOC_2017_04_Cole_b": "Once the Agent gets to the pressure plate, the Agent will open the door for the player."
+    },
+    "callouts": {
+      "MC_HOC_2017_04_Cole_a": "The Agent can hover over water, but the player can't!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/5": {
+    "display_name": "The Desert",
+    "short_instructions": "Get the Agent to the pressure plate.",
+    "long_instructions": "You made it across! \n\nNow, get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]",
+    "authored_hints": {
+      "MC_HOC_2017_04POINT5_RYAN_b": "Use the `turn right` block to change the agent's direction ",
+      "MC_HOC_2017_04POINT5_RYAN_a": "The Agent only needs to get to the first pressure plate to let Alex or Steve through to the axe."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/6": {
+    "display_name": "The River",
+    "short_instructions": "Get the player to the shovel.",
+    "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the [blockly block][0] block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
+    "authored_hints": {
+      "MC_HOC_2017_05_Cole_a": "Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.",
+      "MC_HOC_2017_05_Cole_b": "Get the Agent across the river, building a bridge as you go."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/7": {
+    "display_name": "High Tide",
+    "short_instructions": "Fix this code to get the Agent to build a bridge across this river.",
+    "long_instructions": "Another river, but this one is much wider! \n\nFix this code to help the Agent build a bridge so that {currentPlayerName} can get to the **pickaxe** [diamond_pickaxe]. ",
+    "authored_hints": {
+      "MC_HOC_2017_06_Cole_a": "How many times does this loop run?  How many times _should_ it run?",
+      "MC_HOC_2017_06_Cole_b": "Help the Agent build a bridge all the way across the water! "
+    },
+    "callouts": {
+      "MC_HOC_2017_06_Cole_1": "You cannot throw these blocks away, but you can edit them!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/8": {
+    "short_instructions": "Use the `build bridge` function twice to make a path to the Redstone Torch.",
+    "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green [blockly block][0] function block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
+    "authored_hints": {
+      "Function_intro_Ryan_b": "If you call the functions correctly, this is the path you will travel...",
+      "Function_intro_Ryan_a": "You can call a function many times inside of your program!  Try calling it twice to solve this puzzle."
+    },
+    "callouts": {
+      "Function_intro_Ryan_1": "This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace."
+    },
+    "function_definitions": {
+      "build bridge": {
+        "name": "build bridge"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/9": {
+    "display_name": "Snowy Pass",
+    "short_instructions": "Destroy the ice and get {currentPlayerName} to the Minecart.",
+    "long_instructions": "There's ice in the way!  \n\nThe `clear path` function can help you destroy the ice and get {currentPlayerName} to the Minecart [minecart_normal]! ",
+    "authored_hints": {
+      "MC_HOC_2017_07_Cole_c": "All you need to have the Agent do is clear the path to the Minecart.",
+      "MC_HOC_2017_07_Cole_a": "To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.",
+      "MC_HOC_2017_07_Cole_b": "Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle."
+    },
+    "function_definitions": {
+      "clear path": {
+        "name": "clear path"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/10": {
+    "display_name": "The Cave",
+    "short_instructions": "Use the functions to finish this minecart track.",
+    "long_instructions": "Can you spot the difference between the two functions in your workspace? \n\nUse these functions with other code from the toolbox to clear a path for the Minecart, then collect the **Flint and Steel** [flint_and_steel]. \n ",
+    "authored_hints": {
+      "MC_HOC_2017_10_Cole_b": "Don't know where to go?  See if you can find the dotted line!",
+      "MC_HOC_2017_10_Cole_a": "Use functions to make solving this puzzle easier!"
+    },
+    "function_definitions": {
+      "fix long path": {
+        "name": "fix long path"
+      },
+      "fix short path": {
+        "name": "fix short path"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/11": {
+    "display_name": "The Nether Fortress",
+    "short_instructions": "Use the functions to find a way across the lava.",
+    "long_instructions": "Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  ",
+    "authored_hints": {
+      "MC_HOC_2017_08_RY_a": "Press \"Run\"!\n\nYou can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.",
+      "MC_HOC_2017_08_RY_b": "There are LOTS of ways to solve this puzzle.  Try a few!",
+      "MC_HOC_2017_08_RY_c": "Try following the dotted line for a simple path through the lava."
+    },
+    "callouts": {
+      "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but Steve and Alex can't!  "
+    },
+    "function_definitions": {
+      "build short bridge": {
+        "name": "build short bridge"
+      },
+      "build long bridge": {
+        "name": "build long bridge"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/1/levels/12": {
+    "display_name": "Freeplay",
+    "short_instructions": "**Freeplay:**  Time to explore on your own!",
+    "long_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
+    "authored_hints": {
+      "MC_HOC_2017_13_Cole_a": "Try having the Agent build some minecart tracks so you can explore the world!"
+    },
+    "function_definitions": {
+      "function 1": {
+        "name": "function 1"
+      },
+      "function 2": {
+        "name": "function 2"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/1": {
+    "display_name": "This is Sprite Lab"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/2": {
+    "contained levels": [
+      {
+        "long_instructions": "**Make a prediction**: What do you think will happen when you run this code?"
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/3": {
+    "short_instructions": "Change the tumbleweed into any kind of fish!",
+    "long_instructions": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking [blockly block][0].\n\nBe sure to also update this sprite's costume in [blockly block][1].",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must have at least one fish sprite with an active behavior.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/4": {
+    "short_instructions": "Change the fish's behavior so that it swims left and right.",
+    "long_instructions": "The fish is getting dizzy! \n\nChange the fish's behavior so that it swims left and right.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least one fish sprite with an active behavior.\n-   The fish sprite needs to move left and right. This can be done by changing its behavior to `swimming left and right`.",
+    "callouts": {
+      "spritelab_comment": "Use this block to leave yourself or your teacher notes about how your code works."
+    },
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/5": {
+    "short_instructions": "Use the `set background color` block to make the background any color.",
+    "long_instructions": "Our fish tank needs some water! \n\nUse [blockly block][0] to make the background any color. We recommend blue!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _PROGRESSION NAME_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the background to something other than white.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/6": {
+    "display_name": "How to Make a Sprite"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/7": {
+    "short_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
+    "long_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create exactly two unique sprites, and one must be a fish.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/8": {
+    "short_instructions": "Add a behavior to the fish's new friend.",
+    "long_instructions": "What do you want your fish’s new friend to do?\n\nAdd a behavior and watch them go!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Each sprite must have an active behavior.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/levels/9": {
+    "short_instructions": "Use some new blocks from the toolbox to make your fish tank special!",
+    "long_instructions": "We've added a lot of new blocks to the toolbox.   \n\nPlay with them to make your fish tank special!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/2/extras?level_name=spritelab_extras_repeat": {
+    "display_name": "Lots of sprites!",
+    "bubble_choice_description": "Create many matching sprites quickly using loops!",
+    "long_instructions": "<img src=\"https://images.code.org/a364f402e2052a73c513e0606d658cf7-image-1593014310879.2020-06-24 11_58_08.gif\" style=\"float:right\">\n\n# Lots of sprites!\n\nYou can quickly create a busy scene by making sprites at a  [blockly block][0] and using the [blockly block][1] block.\n\nCreate lots of sprites, then get them moving with behaviors. Use at least two different types of fish.\n\n**Hint:** You only need one [blockly block][2] block to make all sprites with a matching costume start the same behavior."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/1": {
+    "contained levels": [
+      {
+        "short_instructions": "What do you think will happen when you click on the alien?  ",
+        "long_instructions": "**Make a prediction:** Here’s a sprite that looks like a blue alien!   \n\nWhat do you think will happen when you click on it?  "
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/2": {
+    "display_name": "How to Make a Sprite"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/3": {
+    "short_instructions": "Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning!",
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.\n\nReplace the behavior block in [blockly block][0] to a different one that will make the alien start spinning!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must click the sprite after pressing `Run`.\n-   The sprite needs to spin.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/4": {
+    "short_instructions": "Create a new sprite that looks like a pink alien, then make it do a any move when it's clicked.  ",
+    "long_instructions": "Create a new sprite that looks like a pink alien. <img src=\"https://studio.code.org/api/v1/animation-library/spritelab/2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu/category_characters/alienPink.png\" width=\"3%\"></img>\n\nMake it do any move you want when it's clicked. Try using a new move this time!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create a pink alien sprite.\n-   The pink alien sprite must start a behavior when clicked.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/5": {
+    "short_instructions": "Create a third sprite that looks like a yellow alien, make it do a dance when clicked, and set all of your aliens to stand in a horizontal line.",
+    "long_instructions": "Form an alien dance crew! \n\n-   Create a third sprite that looks like a yellow alien, and make it begin a dance move when clicked.\n-   Set all of your aliens to stand in a horizontal line, like this:\n\n[][0]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must create three sprites using the blue alien, pink alien, and yellow alien costumes.\n-   Students must arrange the alien sprites in a horizontal line (within 50 pixels).\n-   The yellow alien sprite needs to start a behavior when clicked.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/6": {
+    "short_instructions": "Create a single keypress event using the keypress event block. For this event, make it so that when a key is pressed, each of your aliens changes color!",
+    "long_instructions": "<!-- We can change all kinds of things in this program when you click on the sprites. Add code to change the color of each alien when it gets clicked. -->\n\nLet's try using a different kind of event. \n\nCreate a single keypress event using [blockly block][0]. \n\nFor this event, make it so that when a key is pressed, each of your aliens changes color! Choose any key you like, but if you are using a touch screen we recommend _up_, _down_, _left_, or _right_.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the color of each of the three alien sprites.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/7": {
+    "short_instructions": "Add a sprite that looks like a bell, then add an event that makes each alien stop dancing when it is clicked.",
+    "long_instructions": "These aliens are running wild! Let's calm them down by ringing a bell.\n\nFirst add a new sprite that looks like a bell.\n\nThen add an event that makes each alien stop dancing when the bell is clicked, using [blockly block][0]!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   All alien sprites must stop their behaviors.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/8": {
+    "short_instructions": "Make the blue alien begin a new dance when the pink alien touches it. Use the `when touches` event.",
+    "long_instructions": "For the pink alien, fun is contagious! Touching it makes anyone want to dance! \n\nUse [blockly block][0] to make the blue alien begin a new dance move when the pink alien touches it.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   The blue alien sprite needs to start a new behavior.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/3/levels/9": {
+    "short_instructions": "Now create your own alien disco!",
+    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create another alien that does another move when clicked.\n-   Make aliens do more dance moves when they touch each other.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least one costume in their project.\n-   Students must create three sprites with unique costumes."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/2": {
+    "short_instructions": "Play with the blocks in the toolbox to see what they do!",
+    "long_instructions": "_\"Hi, I'm an artist. You can write code to make me draw almost anything.\"_\n\nPlay with the blocks in the toolbox to see what they do!"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/3": {
+    "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
+    "long_instructions": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.\\\n(Each line is 100 pixels long)",
+    "authored_hints": {
+      "courseC_artist_prog2_a": "_\"If you use the [blockly block][0] block, I will draw a line.\"_",
+      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the [blockly block][0] block."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/5": {
+    "short_instructions": "Each side of the inner square is 100 pixels and all of the angles are 90 degrees.",
+    "long_instructions": "_\"This spaceship needs a window!\"_\n\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.",
+    "authored_hints": {
+      "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
+      "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
+    },
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/6": {
+    "short_instructions": "Finish Starla's rocket so she can chase her pet.",
+    "long_instructions": "_\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"_\n\nFinish Starla's rocket so she can chase her pet.\\\n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)",
+    "authored_hints": {
+      "courseC_artist_prog4_a": "To finish the rocket, just draw the triangle on top!",
+      "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
+      "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
+    },
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/7": {
+    "short_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
+    "long_instructions": "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?\\\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
+    "authored_hints": {
+      "courseC_artist_prog7_a": "Every angle is either 45 or 90 degrees.",
+      "courseC_artist_prog7_b": "Does it work at the first step?\\\nHow about the second?\\\nWhere does it go wrong?",
+      "courseC_artist_prog7_c": "You can use the dropdown menu on the turn blocks to see which angle you need!",
+      "courseC_artist_prog7_d": "You will want to:\n\n-   move forward\n-   turn right 45 degrees\n-   move forward\n-   turn right 90 degrees\n-   move forward\n-   turn right 45 degrees\n\nRepeat this pattern 2 times!",
+      "courseC_artist_prog7_e": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/8": {
+    "short_instructions": "Create this star pattern by looping a sequence of \"move forward\" and \"turn right by 144 degrees\" blocks.",
+    "long_instructions": "You can create this star by looping a sequence of `move forward` and `turn right by 144 degrees` blocks."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/9": {
+    "short_instructions": "Use loops to draw this staircase.",
+    "long_instructions": "Loops sure make writing code easier!\n\nUse loops to draw this staircase.\n\n-   Each stairstep is 50 pixels long and 50 pixels tall\n-   You will need to turn 90 degrees in each direction"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/10": {
+    "short_instructions": "Edit your loop to draw this staircase.",
+    "long_instructions": "This staircase is much bigger, but it takes the same amount of code as the last puzzle!\n\nFix this loop to complete the puzzle."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/levels/11": {
+    "short_instructions": "Look for a pattern and make this code shorter using loops.",
+    "long_instructions": "**Challenge:** Look for a pattern and make this code shorter using loops."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/extras?level_name=courseC_artist_prog_challenge1_2020": {
+    "short_instructions": "Draw rooms for each of the animals. ",
+    "long_instructions": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun! Each square has a side length of 100 pixels.",
+    "authored_hints": {
+      "courseC_artist_prog_challenge1_a": "You can draw this as a rectangle with a line in the middle or two different squares!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/4/extras?level_name=courseC_artist_prog_challenge2a_2020": {
+    "short_instructions": "_\"Help me paint the yellow lines on this road!\"_",
+    "long_instructions": "_\"Help me paint the yellow lines on this road!\"_\n\nThe three line segments have lengths of 150, 100, and 200 pixels!",
+    "authored_hints": {
+      "courseC_artist_prog_challenge2_a": "After you draw the first line, turn left before you draw your second line.",
+      "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/1": {
+    "short_instructions": "Help the bee collect all of the nectar.",
+    "long_instructions": "_\"This is going to **BEE** great!\"_\n\nHelp the bee collect all of the nectar.",
+    "authored_hints": {
+      "courseD_bee_nestedLoops1_a": "Not working?  Try using the \"Step\" button to see what happens line by line.",
+      "courseD_bee_nestedLoops1_c": "Remember to use the `get nectar` block once you are on a square with a flower."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/2": {
+    "short_instructions": "Help the bee collect all of the nectar.",
+    "long_instructions": "\"_This is going to **BEE** great!_\"\n\nHelp the bee collect all of the nectar.",
+    "authored_hints": {
+      "courseD_bee_nestedLoops1_a": "Not working?  Try using the \"Step\" button to see what happens line by line.",
+      "courseD_bee_nestedLoops1_b": "Try writing code for one side of the square first. Can you loop this to get all of the nectar?",
+      "courseD_bee_nestedLoops1_c": "Remember to use the `get nectar` block once you are on a square with a flower."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/4": {
+    "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The bee will move forward and get nectar only one time.",
+              "correct": false,
+              "feedback": "Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            },
+            {
+              "text": "The bee will get only 2 units of nectar.",
+              "correct": false,
+              "feedback": "Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            },
+            {
+              "text": "The bee will get all of the nectar.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/5": {
+    "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "authored_hints": {
+      "courseD_bee_nestedLoops2_a": "To solve this puzzle, you will need to nest one `repeat` loop inside of another.",
+      "courseD_bee_nestedLoops2_b": "Can't figure out where to put the loops? Try writing the code on paper step-by-step and look for a pattern.",
+      "courseD_bee_nestedLoops2_c": "Remember you can put more than one block inside of a loop."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/6": {
+    "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible.",
+    "long_instructions": "_\"Zombie hungry!\"_\n\nGet the zombie to the sunflower using the fewest number of blocks possible.",
+    "authored_hints": {
+      "courseD_maze_nestedLoops3_a": "To solve this puzzle, you will need to \"nest\" one `repeat` loop inside of another `repeat` loop.",
+      "courseD_maze_nestedLoops3_b": "Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern.",
+      "courseD_maze_nestedLoops3_c": "Try writing code for one straight piece of path and a turn. Can you repeat this to get to the sunflower?"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/7": {
+    "short_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
+    "long_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
+    "authored_hints": {
+      "courseD_maze_nestedLoops4_a": "Try using this path through the maze.\n\n[][0]",
+      "courseD_maze_nestedLoops4_b": "If the loop pattern is hard to see, try coding it all out first and see what code repeats over and over before you put the loops in.",
+      "courseD_maze_nestedLoops4_c": "Try using one `repeat` loop inside of another to cut down on the amount of code you need."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/8": {
+    "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible!",
+    "authored_hints": {
+      "courseD_maze_nestedLoops5_a": "Look for a stair-step pattern in this maze to find where a nested loop can be used.",
+      "courseD_maze_nestedLoops5_b": "Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/9": {
+    "short_instructions": "Get the zombie to the sunflower using only the blocks available.",
+    "long_instructions": "_\"Must eat sunflower!\"_\n\nGet the zombie to the sunflower using only the blocks available.",
+    "authored_hints": {
+      "courseD_maze_nestedLoops6_a": "If you are stuck, try writing out the code out on paper without loops first and look for patterns.",
+      "courseD_maze_nestedLoops6_b": "Nesting `repeat` loops can help decrease the number of blocks used.",
+      "courseD_maze_nestedLoops6_c": "It will take two sets of nested `repeat` loops to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/10": {
+    "short_instructions": "Challenge: Figure out how to get all of the nectar using only the blocks available.",
+    "long_instructions": "**Challenge:** Figure out how to get all of the nectar using only the blocks available.",
+    "authored_hints": {
+      "courseD_bee_nestedLoops7_a": "You will need to repeat `get nectar` inside of another `repeat` that also has the `move forward` block inside of it.",
+      "courseD_bee_nestedLoops7_b": "You will need to use all three of the available `repeat` blocks to solve this puzzle.",
+      "courseD_bee_nestedLoops7_c": "Nest your blocks three deep, like this:\n\n-   repeat 4\n    -   repeat 3\n        -   repeat 12\n            -   get nectar\n        -   move forward\n    -   turn right"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/11": {
+    "short_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
+    "long_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. "
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/12": {
+    "short_instructions": "Make all of the honey.",
+    "long_instructions": "Make all of the honey."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/5/levels/13": {
+    "short_instructions": "Make all of the honey.",
+    "long_instructions": "Make all of the honey.",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            },
+            {
+              "text": "8",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "12",
+              "correct": false,
+              "feedback": "Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/6/levels/1": {
+    "dsls": {
+      "markdown": "# The Power of Words\n\n## What should you do when someone uses mean or hurtful language on the internet?\n"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/7/levels/1": {
+    "dsls": {
+      "markdown": "# Envelope Variables\n\nVariables allow for a lot of freedom in computer science. This lesson helps to explain what variables are and how we can use them in many different ways.\n"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/8/levels/1": {
+    "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
+    "authored_hints": {
+      "grade5_artist_variables_triangles1_a": "To make an internal angle of 60 degrees in this triangle, remember to turn the artist 120 degrees.",
+      "grade5_artist_variables_triangles1_b": "Use the `repeat` loop to make your code shorter.",
+      "grade5_artist_variables_triangles1_c": "Inside your loop, you will want to move forward 50 pixels, then turn left 120 degrees."
+    },
+    "callouts": {
+      "grade5_artist_variables_triangles1_1": "Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/8/levels/2": {
+    "short_instructions": "Now draw three of those triangles right next to each other.   ",
+    "long_instructions": "Now use another loop to draw three of those triangles right next to each other.   \n\nYou can nest the code from your last puzzle inside.",
+    "authored_hints": {
+      "courseF_artist_variables2_a": "Remember to move forward after drawing each triangle.",
+      "courseF_artist_variables2_b": "Your new loop will contain the loop for your triangle, then a `move forward` command."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/8/levels/4": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The artist will draw a triangle with 50 pixel sides.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The artist will draw a 50-sided polygon with 3 pixel sides.",
+              "correct": false,
+              "feedback": "Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen."
+            },
+            {
+              "text": "The artist will draw three open sides with 50 degree turns.",
+              "correct": false,
+              "feedback": "Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides."
+            }
+          ],
+          "questions": [
+            {
+              "text": "We have set the variable \"length\" to 50. What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/8/levels/5": {
+    "short_instructions": "Move the length of 50 into a variable so we can use it in the next few puzzles.",
+    "long_instructions": "Before things get tricky, can you move the length of 50 into a variable so we can use it in the next few puzzles?  \n\n[expandable][0]",
+    "authored_hints": {
+      "courseF_artist_variables3_a": "The variable `length` will be used in two places in your code: In the side length of your triangle, and in the amount you move forward between triangles.",
+      "courseF_artist_variables3_b": "A number block with value 50 should only be in one place: after the `set length` block."
+    },
+    "callouts": {
+      "courseF_artist_variables3_a": "Use this to set the value of the variable `length`"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/8/levels/6": {
+    "short_instructions": "Now, use the `length` variable to have the artist jump forward and down by `length` pixels between triangles.",
+    "long_instructions": "Now, use the `length` variable to have the artist jump forward and down by `length` pixels between triangles.",
+    "authored_hints": {
+      "courseF_artist_variables4_a": "Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to draw the next triangle.",
+      "courseF_artist_variables4_c": "This is the pattern your artist will be following:\n\n[][0]",
+      "courseF_artist_variables4_b": "[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/8/levels/7": {
+    "short_instructions": "Add another set of loops at the end of your code to add three more triangles. This time, move forward and up!",
+    "authored_hints": {
+      "courseF_artist_variables5_a": "The second half of your code should look almost the same as the first half, except you will be turning _left_, jumping, then turning _right_.",
+      "courseF_artist_variables5_b": "The first half of your code will draw three triangles, and the second half will draw the other three.",
+      "courseF_artist_variables5_c": "Start by duplicating the code in the first half of your program, then alter it to make the design shown.",
+      "courseF_artist_variables5_d": "This is the pattern your artist will follow:\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/8/levels/8": {
+    "short_instructions": "Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  ",
+    "long_instructions": "**OOPS!**  \n\nWe actually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \n\nAren't you glad you're using a variable?",
+    "authored_hints": {
+      "courseF_artist_variables6_a": "Thanks to variables, you only need to change one number at the top to make this work.",
+      "courseF_artist_variables6_b": "You will need to edit the number block with value 50, but nothing else in the code needs to be altered."
+    },
+    "callouts": {
+      "courseF_artist_variables6_1": "Variables can be helpful when you have to change a lot of copies of the same number."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/8/levels/9": {
+    "short_instructions": "Build this design where the squares have 80 pixel sides and the artist jumps 80 pixels over and down between each one.",
+    "long_instructions": "Use what you've learned to build this design where the squares have 80 pixel sides and the artist jumps 80 pixels over and down between each one.",
+    "authored_hints": {
+      "courseF_artist_variables6a_a": "Remember to use the variable `length` instead of an actual number to solve this puzzle.",
+      "courseF_artist_variables6a_b": "This code will be very similar to your triangle code, just with a different shape!",
+      "courseF_artist_variables6a_c": "Write the code for one square first, then add the code to move between squares. Finally, add a loop around everything!",
+      "courseF_artist_variables6a_d": "This is the pattern you'll follow!\n\n[][0]"
+    },
+    "callouts": {
+      "courseF_artist_variables6a_1": "Variables can be helpful when you have to change a lot of copies of the same number."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/9/levels/1": {
+    "short_instructions": "Finish this code so that the bee can collect all of the honey and nectar.",
+    "callouts": {
+      "courseF_bee_functions_1_2018_1": "You can find your variables under here!"
+    },
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/9/levels/2": {
+    "short_instructions": "Edit your solution in one place so that the bee can collect all of the honey and nectar.",
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/9/levels/3": {
+    "short_instructions": "Subtract one from the variable each time through the loop if you want to use the same function to solve this level.",
+    "long_instructions": "_\"Such an a-MAZE-ing garden!\"_\n\nIn this puzzle, each patch needs the variable to be one less than the patch before. Subtract one from the variable each time through the loop if you want to use the same function to solve this level.",
+    "authored_hints": {
+      "courseF_bee_variables_3_2019_1": "To subtract one from the variable, you can use this code in your program:\n[blockly block][0]"
+    },
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/9/levels/4": {
+    "short_instructions": "Edit the code to work for this puzzle.",
+    "long_instructions": "\"Let's keep going!\"\n\nEdit the code to make it work for this puzzle.",
+    "authored_hints": {
+      "courseF_bee_variables_4_2019_1": "Instead of subtracting 1 from `gather`, add 1 each time instead. What should value should the variable have at first?"
+    },
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/9/levels/5": {
+    "short_instructions": "Create your own code to solve this puzzle",
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/9/levels/6": {
+    "short_instructions": "**Challenge** Now give this puzzle a try!",
+    "function_definitions": {
+      "collect stairs": {
+        "name": "collect stairs"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/9/levels/7": {
+    "short_instructions": "This puzzle is a little different.  What do you need to do to solve it?",
+    "function_definitions": {
+      "collect": {
+        "name": "collect"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/10/levels/1": {
+    "short_instructions": "Draw a triangle with 150 pixels sides. ",
+    "long_instructions": "Let's start this section by drawing a triangle with 150 pixel sides. \n\nBe sure to use the `length` variable and a repeat loop.",
+    "authored_hints": {
+      "courseF_artist_variables7_a": "Start your code by using the `set length` block. Set the length variable to 150.",
+      "courseF_artist_variables7_b": "You can use a `repeat` loop to make your code for the triangle simpler.",
+      "courseF_artist_variables7_c": "You will want to turn left 120 degrees to make the corners of the triangle."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/10/levels/2": {
+    "short_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.",
+    "long_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.\n\n[blockly block][0]\n\nThe length of the first side of the triangle is 150 pixels.",
+    "authored_hints": {
+      "courseF_artist_variables8_b": "Remember to start your code for the triangle with the `set length` block, and start it at 150 pixels.",
+      "courseF_artist_variables8_c": "Make sure to use the `repeat` loop to draw your triangle.",
+      "courseF_artist_variables8_a": "Try putting the set of \n\n[blockly block][0]\n\nblocks inside your loop at the end."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/10/levels/3": {
+    "short_instructions": "See what happens when you repeat the code from the last puzzle 30 times instead of only 3!  Feel free to make your lines any color or pattern for some extra zest.",
+    "long_instructions": "Time to make some art!  \n\nSee what happens when you repeat the code from the last puzzle **30** times instead of only 3!\n\nFeel free to make your lines any color or pattern for some extra zest.",
+    "authored_hints": {
+      "courseF_artist_variables9_a": "For this puzzle, all you need to do is change how many times the loop repeats.",
+      "courseF_artist_variables9_b": "Make sure the blocks that increment `length` are within your loop so the lines keep getting longer."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/10/levels/4": {
+    "short_instructions": "Here's your code from the last puzzle.  Try editing the variable in other ways.  ",
+    "long_instructions": "Here's your code from the last puzzle.  Try editing the variable in other ways.  \n\n-   What happens if you start out with `length` less than 150? \n-   What if you multiply your variable by 1.25 each time through?\n-   What will your code do if you turn 119 degrees?",
+    "authored_hints": {
+      "courseF_artist_variables10_a": "Have fun with this level! See what little changes can do to your code.",
+      "courseF_artist_variables10_b": "You can try multiple things, and run your code multiple times."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/10/levels/5": {
+    "short_instructions": "**Freeplay:** Take what you've learned and make your own drawing. ",
+    "long_instructions": "**Freeplay:** Take what you've learned and make your own drawing. \n\nHow can you use variables with squares, pentagons, or hexagons?",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseF_artist_variablesFP_a": "Try one of these three drawings.\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/10/extras?level_name=courseF_artist_variables_challenge1_2020": {
+    "short_instructions": "Can you create a `length` variable and use it to create this pattern?",
+    "long_instructions": "Challenge alert! Can you create a `length` variable and use it to create this interesting pattern?",
+    "authored_hints": {
+      "courseF_artist_variables_challenge1_a": "Each vertical line has a length of `10`. Each horizontal line should have a length of `length`.",
+      "courseF_artist_variables_challenge1_b": "You will want to increase the value of `length` by 10 **twice** inside the loop.",
+      "courseF_artist_variables_challenge1_c": "To complete the pattern you will need to turn left twice, turn right twice, and move forward a total of four times.",
+      "courseF_artist_variables_challenge1_d": "This puzzle just uses one loop. Without any variables, a similar path might just be a zig-zag.\n\n[][0]\n\nIf you are having trouble, start by creating this image, then try to see where you can use variables to change the length of the horizontal lines.",
+      "courseF_artist_variables_challenge1_e": "Here is the solution.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/10/extras?level_name=courseF_artist_variables_challenge2_2020": {
+    "short_instructions": "You've now learned everything you need to know to make a pattern like this!",
+    "long_instructions": "<img src=\"https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png\" width=\"250px\"/>\n\nYou've now learned everything you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can you stick with it until you figure out the solution?",
+    "authored_hints": {
+      "courseF_artist_variables_challenge2_a": "Variables are helpful because you can add to them each time through a loop.",
+      "courseF_artist_variables_challenge2_c": "Using one variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.",
+      "courseF_artist_variables_challenge2_d": "**Solution:**\n\n[Solution][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/11/levels/1": {
+    "long_instructions": "# Collecting Data\n\nRun this simulation 5 times. Each time, use the Collecting Data activity guide to record:\n\n-   How many apples did the elephant collect?\n-   How many apples did the hippo collect?\n-   How much time did it take for all of the apples to be collected?"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/11/levels/2": {
+    "long_instructions": "# Modify and Predict\n\nPick one of the variables that control this simulation to modify and predict how that will change the outcome.\n\nAfter you have written down your prediction, run the simulation 5 times and write down your findings. Was your prediction accurate?"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/11/extras?level_name=courseF_extras_sim": {
+    "display_name": "Your own simulation!",
+    "bubble_choice_description": "Create and customize your own simulation!",
+    "long_instructions": "# Create your own simulation!\n\nHere is another version of the simulation. Try making some changes to the sprite costumes or the code below. Have fun customizing your own simulation!",
+    "behavior_names": {
+      "wandering 2": "wandering 2",
+      "wandering 1": "wandering 1"
+    },
+    "placeholder_texts": {
+      "a2e534e7e893bd7ddb5d2047ed29dc8e": "elephant has collected "
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/12/levels/1": {
+    "display_name": "Video: Machine Learning"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/12/levels/5": {
+    "display_name": "Video: Training Data"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/12/levels/7": {
+    "display_name": "Video: Societal Implications"
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/13/levels/1": {
+    "dsls": {
+      "markdown": "# The Internet\n\nBuild your own Internet in the classroom just using pieces of paper.\n"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/14/levels/1": {
+    "dsls": {
+      "markdown": "# For Loop Fun\n\nWe know that loops allow us to do things over and over again, but now we're going to learn how to use loops with extra structure built right in.\n"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/1": {
+    "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
+    "authored_hints": {
+      "courseF_bee_for1_a": "Drag a purple number block into the blank space on the `repeat` loop to tell it how many times to repeat.",
+      "courseF_bee_for1_b": "You will need two blocks in your ‘repeat’ loop to collect all of the nectar."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/2": {
+    "short_instructions": "Write the code to help the bee collect all of the nectar.",
+    "long_instructions": "Write the code to help the bee collect all of the nectar.\n\nYou will need lots of blocks for this challenge, but we'll learn an easier way in the next puzzle.",
+    "authored_hints": {
+      "courseF_bee_for2_a": "If you’re confused, work one flower at a time, and test often.",
+      "courseF_bee_for2_b": "Remember to move forward between each loop, so you reach each flower."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/4": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The bee will move forward and collect all of the nectar from every flower. ",
+              "correct": false,
+              "feedback": "Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
+            },
+            {
+              "text": "The bee will move forward and collect all of the nectar from every flower, except for one.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The bee will move forward and collect one nectar from each flower. ",
+              "correct": false,
+              "feedback": "Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
+            },
+            {
+              "text": "I don't know. ",
+              "correct": false,
+              "feedback": "The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
+            }
+          ],
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n",
+          "questions": [
+            {
+              "text": "Read the code below. What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/5": {
+    "short_instructions": "Help the bee collect all of the nectar.",
+    "authored_hints": {
+      "courseF_bee_for4_a": "Use a `for` loop that goes from 1 to 7 with an increment of 1 to solve this puzzle.",
+      "courseF_bee_for4_b": "Within your `for` loop, you will want to have a `move forward` command, and a loop to collect nectar.",
+      "courseF_bee_for4_c": "Make sure to use the `counter` variable inside your nested `repeat` loop to get enough nectar!"
+    },
+    "callouts": {
+      "courseF_bee_for4_1": "You will find the `for` loop in here!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/6": {
+    "short_instructions": "Try gathering this nectar by counting down from 5 to 1 by 1.",
+    "long_instructions": "You can also use a `for` loop to count down. \n\nTry gathering this nectar by counting down from **5** to **1** by **1**.",
+    "authored_hints": {
+      "courseF_bee_for6_a": "Don't forget to use a `counter` variable inside your `repeat` loop.",
+      "courseF_bee_for6_b": "Within your `for` loop, you will want to have a `move forward` command, and a loop to collect nectar.",
+      "courseF_bee_for6_c": "Your loop should count **from 5 to 1**."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/7": {
+    "short_instructions": "Try collecting these flowers using an increment of 2.",
+    "long_instructions": "The last number in your `for` loop is called the **\"increment\"**.  Each time the loop is run, the counter variable changes by the value of the **increment**.\n\nTry collecting these flowers using an **increment** of 2.",
+    "authored_hints": {
+      "courseF_bee_for7_a": "Your `for` loop will need to count from 1 to 7 by 2.",
+      "courseF_bee_for7_b": "Within your `for` loop, you will want to have a `move forward` command, and a loop to collect nectar.",
+      "courseF_bee_for7_c": "Remember to use the `counter` variable in your `repeat` loop."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/8": {
+    "short_instructions": "You've got this! What should your increment be to collect 3, 6, 9, 12, 15 nectar?",
+    "long_instructions": "You've got this!  \n\nWhat should your **increment** be to collect 3, 6, 9, 12, 15 nectar?",
+    "authored_hints": {
+      "courseF_bee_for8_a": "If your loop is counting up, the increment is added to your counter variable each time through. \n\nWhat do you need to add to each number to get the next amount of nectar?",
+      "courseF_bee_for8_b": "In this puzzle, you will need to move in a stair step pattern to get to the flowers.",
+      "courseF_bee_for8_c": "Your loop will count _from 3 to 15_ with some increment. What is it?"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/9": {
+    "short_instructions": "Use the `counter` variable twice to solve this puzzle.",
+    "authored_hints": {
+      "courseF_bee_for5_a": "This time, your `move forward` block and your `get nectar` block will need to be in separate `repeat` loops, both inside the same `for` loop.",
+      "courseF_bee_for5_b": "Use the `counter` variable in each loop so the bee moves different distances between each flower.",
+      "courseF_bee_for5_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/10": {
+    "short_instructions": "Use the `counter` variable to navigate this garden with the fewest number of blocks possible.",
+    "long_instructions": "Now, let's combine the `counter` variable with a `math` block! \n\nHow can you use the `counter` variable to navigate this garden with the fewest number of blocks possible?",
+    "authored_hints": {
+      "courseF_bee_for9_a": "Try doing some math with the counter variable.\n\nWhat do you have to do to the counter at each flower to equal the amount of nectar you need to collect?",
+      "courseF_bee_for9_c": "It looks like you will need to turn the bee at the beginning of each loop iteration if you want to solve the puzzle.",
+      "courseF_bee_for9_b": "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
+    },
+    "callouts": {
+      "courseF_bee_for9_1": "You will find the `math` block in here."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/11": {
+    "short_instructions": "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. ",
+    "long_instructions": "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. \n\nRemember: You may have to run through solutions multiple times before you figure out all of the steps.",
+    "authored_hints": {
+      "courseF_bee_for10_a": "Can you find a pattern between the number of steps you need to take and the number of nectars to gather?",
+      "courseF_bee_for10_b": "The first set of flowers has a total of **14 flowers**. To get to this first set, the bee must buzz down **7 squares** (or 14 squares divided by 2.) How many flowers are in the next set and how many squares will be the bee have to travel to get there?",
+      "courseF_bee_for10_c": "In the puzzle, the first set of flowers has **14** flowers, the second set has **10** flowers, third set has **6** flowers, and the fourth set has **2** flowers.\n\nIn this drawing, notice there are **7** red squares, **5** orange squares, **3** green squares, and **1** blue block. \n\n[][0]\n\nHow do the numbers relate?",
+      "courseF_bee_for10_d": "You'll need to have 2 repeats, one will use a math block."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/levels/12": {
+    "short_instructions": "What should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
+    "long_instructions": "If your loop is counting down, the increment is **subtracted** from your counter variable each time through. \n\nWhat should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
+    "authored_hints": {
+      "courseF_bee_for11_a": "How much less is 12 than 15?\\\nHow much less is 9 than 12?\n\nDo you see a pattern?"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/extras?level_name=courseF_bee_for_challenge1_2020": {
+    "short_instructions": "Use this `for loop` to collect all of the nectar. ",
+    "long_instructions": "You can use this `for loop` to collect all of the nectar. Un-bee-lievable!\n\nThere are a few actions that you will want to `repeat 'counter' times`.",
+    "function_definitions": {
+      "move and get nectar with counter": {
+        "name": "move and get nectar with counter"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/15/extras?level_name=courseF_bee_for_challenge2_2020": {
+    "short_instructions": "Solve this puzzle using the fewest number of blocks possible.",
+    "long_instructions": "Solve this puzzle with the fewest number of blocks possible.",
+    "authored_hints": {
+      "courseF_bee_for_challenge2_a": "Take a look at this option for movement:  \n\n[][0]",
+      "courseF_bee_for_challenge2_b": "Try using two `for` loops: One for climbing up and grabbing nectar, and the other for climbing down and making honey.",
+      "courseF_bee_for_challenge2_c": "Notice that one `for` loop needs several regular loops inside that repeat `counter` times to make the increasing stair pattern. \n\nThe other `for` loop only needs one regular loop to make `counter` amount of honey.",
+      "courseF_bee_for_challenge2_d": "**Solution:**\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/2": {
+    "display_name": "For Loops Freeplay (Beginning)",
+    "short_instructions": "Experiment with the `for` loop and play with the `counter` variable.",
+    "long_instructions": "**Free Play:** Experiment with the `for` loop and the `counter` variable.  \n\nDrag out a few blocks and see what happens.  ",
+    "authored_hints": {
+      "courseF_artist_for1_a": "Can you draw something like this:\n\n[][0]"
+    },
+    "callouts": {
+      "courseF_artist_for1_1": "The toolbox is in \"category\" mode to make more room for your code.  The `for` loops live in here."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/3": {
+    "short_instructions": "Create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
+    "long_instructions": "Use a `repeat` loop inside of a `for` loop to create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
+    "authored_hints": {
+      "courseF_artist_for2_a": "Use `counter` for the length of your triangles inside your `repeat` loop.\n\n[blockly block][0]",
+      "courseF_artist_for2_b": "Remember to count by 10 within your for loop.",
+      "courseF_artist_for2_c": "This is the pattern that the Artist will follow:\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/4": {
+    "short_instructions": "These triangles go from 20 pixel sides to 200 pixel sides, and each triangle is 20 pixels larger than the last. ",
+    "long_instructions": "Create these triangles that go from 20 pixel sides to 200 pixel sides, where each triangle is 20 pixels larger than the last.",
+    "authored_hints": {
+      "courseF_artist_for3_a": "To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.\n\n[blockly block][0]",
+      "courseF_artist_for3_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/5": {
+    "short_instructions": "These squares start at 15 pixels long. The largest is 300 pixels long, and each square is 15 pixels larger than the last. ",
+    "authored_hints": {
+      "courseF_artist_for4_a": "**What is the smallest number you will need?\\\nWhat is the largest number?\\\nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop.",
+      "courseF_artist_for4_b": "Your code will be very similar to what you wrote in the last puzzle, but remember to draw a square this time!",
+      "courseF_artist_for4_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/6": {
+    "short_instructions": "Just one little change to the code from the last image can create this drawing. Can you figure out what that change is?",
+    "long_instructions": "Just one little change to the code from the last image can create this drawing. Can you figure out what that change is?\n\n* * *\n\nHint:  You need to remove something!",
+    "authored_hints": {
+      "courseF_artist_for5_a": "You don't need the `repeat` loop inside when making this spiral!",
+      "courseF_artist_for5_b": "Your `for` loop, move, and turn blocks can stay exactly the same."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/7": {
+    "short_instructions": "Recreate your code from the last level, but turn 89 degrees to create this twisted square spiral.",
+    "long_instructions": "If you turn a little bit more or less than you normally would for a shape, it creates a neat effect.\n\nRecreate your code from the last level, but turn 89 degrees to create this twisted square spiral.",
+    "authored_hints": {
+      "courseF_artist_for6_a": "Your `for` loop will count from 15 to 300 by 15.",
+      "courseF_artist_for6_b": "Put a `move forward` and a `turn` block within this `for` loop.",
+      "courseF_artist_for6_c": "All you have to change is the number of degrees in the `turn` block."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/8": {
+    "short_instructions": "Make three small changes to the code from the last level to get this!",
+    "long_instructions": "Make three small changes to the code from the last level to get this!  ",
+    "authored_hints": {
+      "courseF_artist_for7_a": "The pen is thinner in this puzzle. You will need to set it to `1` before you start.",
+      "courseF_artist_for7_b": "Notice that this spiral turns right instead of left!",
+      "courseF_artist_for7_c": "The `for` loop in this puzzle goes from 15 to 300 by 2.",
+      "courseF_artist_for7_d": "This image is made by turning just 89 degrees."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/9": {
+    "short_instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.",
+    "authored_hints": {
+      "courseF_artist_for8_a": "Keep everything else the same in your code, only the turn angle needs to change.",
+      "courseF_artist_for8_b": "If you want, you can choose a different color for your spiral!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/10": {
+    "short_instructions": "**Inspiration:**  Use the counter inside the `set alpha` block to get this faded center.",
+    "long_instructions": "**Inspiration:** Use the counter inside the `set alpha` block to get something like this faded center.\\\n(This hexagon pattern was made using a 60 degree turn.)",
+    "authored_hints": {
+      "courseF_artist_for9_a": "If you put the `set alpha` block inside of your `for` loop, and use the `counter` variable to change it, you can create a design like this.",
+      "courseF_artist_for9_b": "The `set alpha` block changes the opacity of a color. The smaller the value, the more transparent the color is."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/11": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The artist will draw a straight line that increases in thickness from one side of the play space to the other.",
+              "correct": false,
+              "feedback": "Incorrect. The artist turns between iterations of the `for` loop."
+            },
+            {
+              "text": "The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ",
+              "correct": false,
+              "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
+            },
+            {
+              "text": "The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
+            }
+          ],
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/levels/12": {
+    "short_instructions": "Free Play: Try using the `counter` variable with other drawing elements to make magical images like this one.",
+    "long_instructions": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\n\n[][0]",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseF_artist_for10_a": "The image in the drawing was made using a counter for the `set alpha` and `counter` / 10 as a brush size.",
+      "courseF_artist_for10_b": "The image in the drawing uses a turn of 61 degrees.",
+      "courseF_artist_for10_c": "Want to know how the sample image was done?\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/extras?level_name=courseF_artist_for_challenge1_2020": {
+    "short_instructions": "Can you figure out how to re-create this drawing?",
+    "long_instructions": "Can you figure out how to re-create this drawing? \n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>",
+    "authored_hints": {
+      "courseF_artist_for_challenge1_a": "The `pen width` is 1. The first square has 50 pixel sides, and each square is 50 pixels wider than the last.",
+      "courseF_artist_for_challenge1_b": "The opacity on the brush is always `counter`/2.",
+      "courseF_artist_for_challenge1_c": "After you make each square, don't forget to jump backward, turn, jump again, then turn back!",
+      "courseF_artist_for_challenge1_d": "**Solution:**\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/16/extras?level_name=courseF_artist_for_challenge2_2020": {
+    "short_instructions": "Can you figure out how to re-create this drawing with a single loop?",
+    "long_instructions": "Can you figure out how to re-create this drawing with a single loop? \n\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\" width=\"350px\"/>",
+    "authored_hints": {
+      "courseF_artist_for_challenge2_c": "The `for loop` goes from 5 to 250 by 2. ",
+      "courseF_artist_for_challenge2_a": "The color change happens using the `set color with red, green, blue` block.  Red is set constant at 255, green is always the value of `counter`, and blue is always `255 - counter`.",
+      "courseF_artist_for_challenge2_b": "The code for this is simpler than you might think.  Just set the color inside the for loop, move forward, then turn.",
+      "courseF_artist_for_challenge2_d": "**Solution:**\n\n[blockly block][0]\n\n[][1]"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/levels/1": {
+    "short_instructions": "Make a prediction!",
+    "long_instructions": "Make a prediction! Study the code.\n\n-   The sprite will spin.\n-   The sprite will shrink.\n-   The sprite will move.\n-   The sprite will change colors.",
+    "callouts": {
+      "behaviors_edit": "Click here to see how this behavior works."
+    },
+    "behavior_names": {
+      "mystery behavior": "mystery behavior",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The sprite will spin",
+              "correct": false,
+              "feedback": "Incorrect."
+            },
+            {
+              "text": "The sprite will shrink.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The sprite will move.",
+              "correct": false,
+              "feedback": "Incorrect."
+            },
+            {
+              "text": "The sprite will change colors.",
+              "correct": false,
+              "feedback": "Incorrect"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Click the \"edit\" button to see how the `mystery behavior` works. Study the code inside, then make a prediction."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/levels/2": {
+    "short_instructions": "Fly the rocket to the stars!",
+    "long_instructions": "Fly the rocket to the stars!\n\n-   Change the behavior of the rocket so that it flies upwards in the display area.",
+    "authored_hints": {
+      "behavior hint": "Try editing the behaviors! \n\n-   Which direction does the rocket need to move?"
+    },
+    "behavior_names": {
+      "flying": "flying",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/levels/3": {
+    "short_instructions": "Help the rover outrun the robot!",
+    "long_instructions": "Help the rover outrun the robot!\n\n-   Edit the behavior of the rover sprite (top) so that it goes faster than the robot.",
+    "authored_hints": {
+      "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+    },
+    "behavior_names": {
+      "zooming east": "zooming east",
+      "driving east": "driving east",
+      "wandering": "wandering",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/levels/4": {
+    "short_instructions": "Debug: Make all of the stars spin the same way!",
+    "long_instructions": "Edit the `spinning right` behavior. The [blockly block][0] block should be used instead of the `costume` block. This will make it work for any sprite, regardless of the costume it uses.\n\n**Debug:** Make all of the stars spin the same way!",
+    "authored_hints": {
+      "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+    },
+    "callouts": {
+      "behavior_callout": "Why isn't this behavior working for the middle star?",
+      "star2_callout": "Remove this costume block and use the \"this sprite\" block instead.",
+      "this_sprite_callout": "Replace the costume block below with this."
+    },
+    "behavior_names": {
+      "spinning right": "spinning right",
+      "zooming east": "zooming east",
+      "driving east": "driving east",
+      "wandering": "wandering",
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/levels/5": {
+    "short_instructions": "Make a prediction!",
+    "long_instructions": "Make a prediction! Which path will the satellite follow to reach the solar system?",
+    "callouts": {
+      "behaviors_edit": "Click here to see how this behavior works."
+    },
+    "behavior_names": {
+      "move south and west": "move south and west",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Left then down",
+              "correct": false,
+              "feedback": "Incorrect."
+            },
+            {
+              "text": "Diagonally",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "Zig zag",
+              "correct": false,
+              "feedback": "Incorrect. "
+            },
+            {
+              "text": "Down, then left",
+              "correct": false,
+              "feedback": "Incorrect"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Make a prediction. Which way will the satellite move towards the galaxy?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/levels/6": {
+    "short_instructions": "Move the astronaut diagonally.",
+    "long_instructions": "Write your own behavior.\n\n-   Write a new behavior for this astronaut to lead it towards one of the four ships in the display area.",
+    "authored_hints": {
+      "target hint": "You can pick any of the four ships. Which one does the astronaut want?",
+      "behavior hint": "Edit the behavior to solve this puzzle. The astronaut sprite needs to move in two different directions to end up going diagonally."
+    },
+    "callouts": {
+      "behaviors_edit": "Add code to this behavior."
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/levels/7": {
+    "short_instructions": "Free play: Create your own outer space scene!",
+    "long_instructions": "**Free play:** Create your own outer space scene!",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
+    "callouts": {
+      "behaviors_edit": "Add code to this behavior."
+    },
+    "behavior_names": {
+      "spinning and growing": "spinning and growing"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/extras?level_name=behaviors+6_2020": {
+    "short_instructions": "Make the ball roll.",
+    "long_instructions": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.\n\n[][0]",
+    "authored_hints": {
+      "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+    },
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving east": "moving east",
+      "rolling": "rolling",
+      "running east": "running east",
+      "wandering": "wandering",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/17/extras?level_name=behaviors+7_2020": {
+    "short_instructions": "Drive off into the horizon!",
+    "long_instructions": "Drive off into the horizon!\n\n-   Create a new behavior and use it to make the car move up (north) and shrink. If you do it right, it could look like it is driving off into the horizon.\n\n[][0]",
+    "authored_hints": {
+      "behaviors_hint1": "You can create a new behavior that uses two different actions or combine two existing behaviors.",
+      "sprites_idea1": "For fun, you can use a similar behavior to make a ship fly off into space or a character run to the foreground. Try changing the background and sprite costumes in your scene!\n\n[][0]\n\n[][1]"
+    },
+    "behavior_names": {
+      "moving north": "moving north",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "rolling": "rolling",
+      "running east": "running east",
+      "wandering": "wandering",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/18/levels/1": {
+    "long_instructions": "**Free Play**: Whoa! Check out this cool pet! \n\nWhile reading the code below, ask yourself:\n\n-   How do you command the pet to move? \n-   What happens when the pet touches the ice cream cone? How about the pepper?\n-   How is the `energy` variable used? How can you check the pet's current `energy` value?\n\nRun the code and play with the pet! When you are done, click **Finish**.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "mystery": "mystery",
+      "spinning right": "spinning right",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "growing": "growing",
+      "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "22661453237feb87f1b00dd17bc39666": "Yum! Energy increased!",
+      "4ac000226dd5bc7fc14ecde063245731": "Yuck! Energy reset!"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/18/levels/2": {
+    "long_instructions": "Now it's your turn to create your own virtual pet! Start by giving it a look you like.\n\n1.  Click the **Costumes** tab at the top-left of your screen (next to **Code**). \n2.  Edit the starting costume, or add a new one that you like. \n3.  Change the sprite's costume to your own in the code below.\n4.  Click **Run** to see your pet's new look!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "callouts": {
+      "": "Click here!"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/18/levels/3": {
+    "long_instructions": "Create events to make your pet move on command!\n\nStart by using [blockly block][0] along with [blockly block][1] to make your pet move North **while** the up arrow is pressed.\n\nRepeat the above for the other three directions (South, West, East) and arrow keys (down, left, right)!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "wandering2": "wandering2",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "moving east2": "moving east2",
+      "shrinking": "shrinking",
+      "spinning left2": "spinning left2",
+      "growing": "growing",
+      "spinning right2": "spinning right2",
+      "moving south": "moving south",
+      "shrinking2": "shrinking2",
+      "swimming left and right": "swimming left and right",
+      "growing2": "growing2",
+      "moving south2": "moving south2",
+      "swimming left and right2": "swimming left and right2",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "moving north2": "moving north2",
+      "patrolling": "patrolling",
+      "jittering2": "jittering2",
+      "moving west2": "moving west2",
+      "patrolling2": "patrolling2"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/18/levels/4": {
+    "long_instructions": "Let's make some wandering food!\n\n1.  Add **two** sprites to your world. \n2.  Make one sprite look like what your pet **likes** to eat, and the other look like what it **doesn't** like to eat.\n3.  Make each food sprite begin the **wandering** behavior immediately after it appears.",
+    "teacher_markdown": "This lesson contains a **mini-project** called \\*Virtual Pet. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least three sprites.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/18/levels/5": {
+    "long_instructions": "Use [blockly block][0] with [blockly block][1] to **simulate** \"eating\" in your virtual world!\n\n1.  Create an event that makes one of your food sprites jump to a random location when your pet touches it.\n2.  Repeat the above for the other food sprite.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/18/levels/6": {
+    "long_instructions": "Use [blockly block][0] along with [blockly block][1] to make eating food affect your pet's energy! The more energy it has, the faster it moves! \n\n1.  Set the variable `energy` to 5 when the program starts.\n2.  When your pet eats food it **likes**, add 1 to `energy`.\n3.  When your pet eats food it **doesn't like**, set `energy` back to 5.\n4.  Change each arrow key event so that your pet now moves `energy` pixels instead of a specific number.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/18/levels/7": {
+    "long_instructions": "You can check your pet's `energy` value with [blockly block][0], a new block found in the `World` category! \n\nCreate an event that makes the value of `energy` be printed when the pet sprite is clicked. ",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/18/levels/8": {
+    "short_instructions": "**Free Play:** What more can you make your pet do? Try anything you like!",
+    "long_instructions": "**Free Play:** Your virtual pet is _VIRTUALLY AWESOME!_ \n\nWhat more can you do? Try these ideas:\n\n-   Change the background to a color or an image.\n-   Print more! Try printing _\"Yum! Energy increased!\"_ when the pet eats food it likes, or _\"Yuck! Energy reset!\"_ when it eats food it doesn't like.\n-   Add another sprite that interacts with your pet in a different way. How about a **toy** sprite?\n-   Add another variable that can affect your pet or the world. What might `happiness` or `age` do?\n-   Experiment with behaviors! Try editing the **wandering** behavior to slow down or speed up the food sprites (hint: their \"speed\" is currently 5...).",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/19/levels/1": {
+    "dsls": {
+      "content1": "Test Markdown Textbook Page",
+      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | \tAirplane Game (Sprite Lab) |\n|---|---|\n| [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Artist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)  |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
+    }
+  },
+  "https://studio.code.org/s/coursef-2020/lessons/19/levels/2": {
+    "dsls": {
+      "description": "You have reached the end of Course F! Choose a project to create.",
+      "display_name": "End of Course Project"
+    },
+    "sublevels": {
+      "CourseF_Project_SpriteLab_2020": {
+        "display_name": "Create a Sprite Lab project",
+        "behavior_names": {
+          "moving east": "moving east",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "growing": "growing",
+          "moving south": "moving south",
+          "swimming left and right": "swimming left and right",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "moving west": "moving west",
+          "patrolling": "patrolling",
+          "wandering": "wandering"
+        }
+      },
+      "Course F: Artist Project_2020": {
+        "display_name": "Create an Artist project"
+      }
+    }
+  }
+}

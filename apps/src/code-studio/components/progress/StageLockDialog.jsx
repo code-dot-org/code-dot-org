@@ -10,63 +10,6 @@ import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
-const styles = {
-  main: {
-    marginTop: 20,
-    marginBottom: 10,
-    marginLeft: 20,
-    marginRight: 20,
-    color: color.charcoal,
-    whiteSpace: 'normal',
-    // maxHeight provided in render method based on window size
-    overflowY: 'scroll',
-    textAlign: 'left'
-  },
-  title: {
-    color: color.teal,
-    fontSize: 20,
-    fontWeight: 900,
-    marginTop: 15,
-    marginBottom: 15
-  },
-  headerRow: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.teal,
-    backgroundColor: color.teal,
-    padding: 10,
-    fontSize: '100%',
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold'
-  },
-  descriptionText: {
-    marginTop: 10,
-    marginBottom: 10
-  },
-  studentTable: {
-    width: '100%'
-  },
-  tableCell: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.light_gray,
-    padding: 10
-  },
-  selectedCell: {
-    backgroundColor: color.lightest_teal
-  },
-  radioCell: {
-    textAlign: 'center'
-  },
-  buttonContainer: {
-    textAlign: 'right',
-    marginRight: 15
-  },
-  hidden: {
-    display: 'none'
-  }
-};
-
 class StageLockDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -325,13 +268,70 @@ class StageLockDialog extends React.Component {
   }
 }
 
+const styles = {
+  main: {
+    marginTop: 20,
+    marginBottom: 10,
+    marginLeft: 20,
+    marginRight: 20,
+    color: color.charcoal,
+    whiteSpace: 'normal',
+    // maxHeight provided in render method based on window size
+    overflowY: 'scroll',
+    textAlign: 'left'
+  },
+  title: {
+    color: color.teal,
+    fontSize: 20,
+    fontWeight: 900,
+    marginTop: 15,
+    marginBottom: 15
+  },
+  headerRow: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.teal,
+    backgroundColor: color.teal,
+    padding: 10,
+    fontSize: '100%',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold'
+  },
+  descriptionText: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+  studentTable: {
+    width: '100%'
+  },
+  tableCell: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.light_gray,
+    padding: 10
+  },
+  selectedCell: {
+    backgroundColor: color.lightest_teal
+  },
+  radioCell: {
+    textAlign: 'center'
+  },
+  buttonContainer: {
+    textAlign: 'right',
+    marginRight: 15
+  },
+  hidden: {
+    display: 'none'
+  }
+};
+
 export const UnconnectedStageLockDialog = Radium(StageLockDialog);
 export default connect(
   state => ({
     initialLockStatus: state.stageLock.lockStatus,
     isOpen: !!state.stageLock.lockDialogStageId,
     saving: state.stageLock.saving,
-    selectedSectionId: state.teacherSections.selectedSectionId
+    selectedSectionId: state.teacherSections.selectedSectionId.toString()
   }),
   dispatch => ({
     saveDialog(sectionId, lockStatus) {

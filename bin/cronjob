@@ -31,7 +31,7 @@ require 'open3'
 #
 def email_notify(command, status, content, recipient)
   return if recipient.nil? || recipient.empty?
-  return if content.empty? && status == 0
+  return if content.empty? || status == 0
 
   Mail.new do |mail|
     mail.to recipient

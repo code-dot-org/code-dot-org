@@ -18,7 +18,8 @@ export default class ImagePickerPropertyRow extends React.Component {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func,
     desc: PropTypes.node,
-    elementId: PropTypes.string
+    elementId: PropTypes.string,
+    currentImageType: PropTypes.string
   };
 
   componentDidMount() {
@@ -67,7 +68,9 @@ export default class ImagePickerPropertyRow extends React.Component {
     // are intertwined with `StudioApp` which is why we have this direct call.
     dashboard.assets.showAssetManager(this.changeImage, 'image', null, {
       showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
-      elementId: this.props.elementId
+      elementId: this.props.elementId,
+      currentValue: this.state.value,
+      currentImageType: this.props.currentImageType
     });
   };
 
@@ -93,7 +96,9 @@ export default class ImagePickerPropertyRow extends React.Component {
             style={rowStyle.input}
           />
           &nbsp;
-          <a onClick={this.handleButtonClick}>Choose...</a>
+          <a style={rowStyle.link} onClick={this.handleButtonClick}>
+            Choose...
+          </a>
         </div>
       </div>
     );

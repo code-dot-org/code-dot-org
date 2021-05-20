@@ -1,0 +1,14 @@
+name 'CommuteAssess - Cond 1 - block_2018_2019_virtual'
+question 'What will be displayed after running this code?'
+wrong '`Inside first if`'
+right '`Inside second if`'
+wrong '`Inside first if`  
+`Inside second if`'
+wrong 'Nothing will be printed'
+wrong 'It will be different each time'
+
+
+
+markdown <<MARKDOWN
+![](https://images.code.org/49f5ea1df195407bdc654e501ba9c9bb-image-1483466329439.png)
+MARKDOWN

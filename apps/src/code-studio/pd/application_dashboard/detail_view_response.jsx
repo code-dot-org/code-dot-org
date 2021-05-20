@@ -2,27 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
 import {Row, Col, FormControl, Panel} from 'react-bootstrap';
-import MarkdownSpan from '../components/markdownSpan';
-
-const styles = {
-  lineItem: {
-    fontFamily: '"Gotham 7r"',
-    marginRight: '10px',
-    display: 'inline-block'
-  },
-  panel: {
-    width: '66%',
-    minWidth: 500,
-    marginTop: '10px',
-    marginBottom: '10px'
-  }
-};
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const Question = props => {
   const suffix =
     '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
   return (
-    <MarkdownSpan style={props.style}>{`${props.text}${suffix}`}</MarkdownSpan>
+    <span style={props.style}>
+      <InlineMarkdown markdown={`${props.text}${suffix}`} />
+    </span>
   );
 };
 Question.propTypes = {
@@ -124,3 +112,17 @@ export default class DetailViewResponse extends React.Component {
     }
   }
 }
+
+const styles = {
+  lineItem: {
+    fontFamily: '"Gotham 7r"',
+    marginRight: '10px',
+    display: 'inline-block'
+  },
+  panel: {
+    width: '66%',
+    minWidth: 500,
+    marginTop: '10px',
+    marginBottom: '10px'
+  }
+};

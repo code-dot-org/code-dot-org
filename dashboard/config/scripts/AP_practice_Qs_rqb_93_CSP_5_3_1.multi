@@ -1,6 +1,5 @@
 name 'AP_practice_Qs_rqb_93_CSP_5_3_1'
-wrong 'Redundancy
-'
+wrong 'Redundancy'
 right 'Abstraction'
 wrong 'Iteration'
 wrong 'Control Structure'

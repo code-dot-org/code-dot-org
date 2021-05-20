@@ -11,26 +11,32 @@ class RoutesTest < ActionDispatch::IntegrationTest
   end
 
   def test_dance_session_cookie_and_cache_headers
-    script = Script.find_by_name('dance')
-    stage = create :stage, script: script, relative_position: 1
-    create :script_level, script: script, stage: stage
-    create :script_level, script: script, stage: stage, position: 12
-    create :script_level, script: script, stage: stage, position: 13
+    script = create :script, name: 'dance'
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, relative_position: 1, lesson_group: lesson_group
+    create :script_level, script: script, lesson: lesson
+    create :script_level, script: script, lesson: lesson, position: 12
+    create :script_level, script: script, lesson: lesson, position: 13
 
-    get '/s/dance/stage/1/puzzle/1'
+    get '/s/dance/lessons/1/levels/1'
     assert_caching_enabled response.headers['Cache-Control'],
       ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
       ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
     assert_nil cookies['_learn_session_test']
 
-    get '/s/dance/stage/1/puzzle/12'
+    get '/s/dance/lessons/1/levels/12'
     assert_caching_enabled response.headers['Cache-Control'],
       ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
       ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
     assert_nil cookies['_learn_session_test']
 
-    get '/s/dance/stage/1/puzzle/13'
+    get '/s/dance/lessons/1/levels/13'
     assert_caching_disabled response.headers['Cache-Control']
     assert_not_nil cookies['_learn_session_test']
+  end
+
+  def test_level_starter_assets_handles_periods
+    assert_generates('level_starter_assets/level_name.with.periods', {controller: 'level_starter_assets', action: 'show', level_name: 'level_name.with.periods'})
+    assert_generates('level_starter_assets/level_name_no_periods', {controller: 'level_starter_assets', action: 'show', level_name: 'level_name_no_periods'})
   end
 end

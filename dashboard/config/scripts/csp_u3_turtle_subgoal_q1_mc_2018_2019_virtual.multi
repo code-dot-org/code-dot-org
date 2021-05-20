@@ -1,0 +1,15 @@
+name 'csp_U3_turtle_subgoal_q1_mc_2018_2019_virtual'
+wrong 'https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png,175'
+right 'https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png,175'
+wrong 'https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png,200'
+wrong 'https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png,200'
+
+markdown <<MARKDOWN
+Which of the following blocks is *least* similar to the others?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+`turnLeft` is the correct answer because it's the only one that simply orients the turtle. All of the others move the turtle / change its location.
+
+
+MARKDOWN

@@ -1,57 +1,57 @@
 {
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/1": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/1": {
     "short_instructions": "Collect a boat from the chest.",
     "long_instructions": "You need supplies for the voyage ahead. Collect a **boat** [][0] from the **chest** [][1]."
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/2": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/2": {
     "short_instructions": "Head to the end of the dock.",
     "long_instructions": "Boats are much easier than swimming in open water! Head to the end of the dock to hop aboard."
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/3": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/3": {
     "short_instructions": "Head across the open seas to the cod.",
     "long_instructions": "Grab the oars and pilot your boat across the open seas to catch the **cod** [][0]."
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/4": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/4": {
     "short_instructions": "Use a loop to get to the dolphin.",
     "long_instructions": "Let's feed the cod to the **dolphin** [][0]. Use a repeat until block to get across the ocean faster."
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/5": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/5": {
     "short_instructions": "Explore the shipwreck to reach the chest.",
     "long_instructions": "There's a **nautilus shell** [][0] hidden somewhere! Explore the shipwreck to reach the **chest** [][1]."
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/6": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/6": {
     "short_instructions": "Navigate through the ice to reach the salmon.",
     "long_instructions": "Looks freezing out there! Catch a **salmon** [][0] on your way to the underwater ruins."
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/7": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/7": {
     "short_instructions": "Search these underwater ruins for a chest.",
     "long_instructions": "You found the underwater ruins. Search the sandstone for a **chest** [][0] containing **prismarine** [][1] treasure.",
     "authored_hints": {
       "aquatic7": "You can use the if path block to help you make the right turns."
     }
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/8": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/8": {
     "long_instructions": "First icebergs, now lava? Get through this volcanic island and find the **tropical fish** [][0] in the coral reef."
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/9": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/9": {
     "short_instructions": "Use the coral as waypoints to reach the treasure.",
     "long_instructions": "You made it to the reef, now search for the **Heart of the Sea** [][0] ! Use the blue and red coral to reach the treasure **chest** [][1].",
     "authored_hints": {
       "voyage_aquatic_9a": "See the red and blue coral blocks? Use them as guideposts to turn right and left through the reef."
     }
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/10": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/10": {
     "short_instructions": "Get to the entrance of this Ocean Monument.",
     "long_instructions": "There is a **squid** [][0] hiding somewhere in this Ocean Monument, can you find it?",
     "authored_hints": {
       "voyage_aquatic_10a": "See the **Sea Lanterns** [][0]? How can you use a conditional with them to get through the Ocean Monument?"
     }
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/11": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/11": {
     "short_instructions": "Build a conduit with Prismarine inside the Ocean Monument.",
     "long_instructions": "Build a wall of **prismarine** [][0] around the black concrete. This will activate the **conduit** [][1] and complete your challenge!"
   },
-  "https://studio.code.org/s/aquatic/stage/1/puzzle/12": {
+  "https://studio.code.org/s/aquatic/lessons/1/levels/12": {
     "short_instructions": "Design your own underwater environment, it’s up to you!",
     "long_instructions": "Congratulations! The open aquatic world awaits you. Build a coral reef! A volcano! A shipwreck! It's up to you."
   }

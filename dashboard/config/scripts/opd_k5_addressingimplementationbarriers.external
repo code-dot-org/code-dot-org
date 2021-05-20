@@ -1,0 +1,16 @@
+name 'OPD-K5 AddressingImplementationBarriers'
+skip_dialog true
+markdown <<MARKDOWN
+# Addressing Implementation Approaches and Barriers
+**Total Suggested Time:**
+
+Code.org recognizes educators play a vital role in implementing and teach CS equitably.  Engaging in work that supports equity in CS is a journey that takes time and requires a continual re-commitment to the goal of bringing CS to all students.
+
+The first focus of this lesson is to examine the importance of implementing CS equitably.  The second focus of this lesson is to examine the most common implementation barriers educators face, as well as reflect on unique barriers you may need to overcome.
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+
+    
+
+MARKDOWN

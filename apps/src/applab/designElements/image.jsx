@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import objectFitImages from 'object-fit-images';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
@@ -12,7 +13,6 @@ import {ICON_PREFIX_REGEX} from '../constants';
 import EnumPropertyRow from './EnumPropertyRow';
 import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
-import {applabObjectFitImages} from '../applabObjectFitImages';
 
 class ImageProperties extends React.Component {
   static propTypes = {
@@ -38,9 +38,7 @@ class ImageProperties extends React.Component {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(
-            element.getAttribute('data-icon-color') || '#000000'
-          )}
+          initialValue={element.getAttribute('data-icon-color') || '#000000'}
           handleChange={this.handleIconColorChange}
         />
       );
@@ -81,6 +79,7 @@ class ImageProperties extends React.Component {
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
+          currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')}
           elementId={elementUtils.getId(element)}
         />
@@ -129,15 +128,8 @@ class ImageEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "click", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' clicked!");\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} clicked!");\n}`;
+    return `onEvent("${id}", "click", ${callback});`;
   }
 
   insertClick = () => {
@@ -179,12 +171,10 @@ function setObjectFitStyles(element, value, forceObjectFitNow) {
   // Set a style that will be picked up by objectFitImages() for old browsers:
   element.style.fontFamily = `'object-fit: ${value};'`;
   if (forceObjectFitNow) {
-    //
     // Enable polyfill for this element so we can use object-fit (it relies on
     // the style in font-family and avoid scale-down & using it in media queries)
     // See https://www.npmjs.com/package/object-fit-images for details.
-    //
-    applabObjectFitImages(element);
+    objectFitImages(element);
   }
 }
 
@@ -199,6 +189,7 @@ export default {
     elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     element.setAttribute('src', '/blockly/media/1x1.gif');
     element.setAttribute('data-canonical-image-url', '');
+    element.setAttribute('data-image-type', '');
 
     // New elements are created with 'contain', but the default value for
     // existing (unadorned) images is 'fill' for compatibility reasons

@@ -1,0 +1,95 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-12-04T22:23:59.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (\r\n      ((Studio.eventHandlers[0] &&\r\n        Studio.eventHandlers[0].name == 'whenSpriteClicked-0') ||\r\n        (Studio.eventHandlers[1] &&\r\n          Studio.eventHandlers[1].name == 'whenSpriteClicked-0')) &&\r\n      Studio.sprite[0].bubbleText != 'Hi there.' &&\r\n      Studio.sayComplete > 0\r\n    );\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"sprite\":0},{\"tileType\":16,\"sprite\":4},{\"tileType\":0,\"sprite\":1},{\"tileType\":0,\"sprite\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "short_instructions": "Can you write a program to make Octavia the Octopus say \"What's new?\" when she is clicked?",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "first_sprite_index": "0",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to click the dropdown menu in the `actor say` block to find the text \\\"What's new?\\\"\",\"hint_id\":\"courseC_PlayLab_events5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/118770edb1c85d0f8120b2daa520775c/courseC_PlayLab_events5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Click on Octavia when you run your program to check that it works!\",\"hint_id\":\"courseC_PlayLab_events5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1812671cad3447bb10d8e2d6d54268be/courseC_PlayLab_events5.mp3\"}]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false",
+    "parent_level_id": 21274,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 20:45:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 20:46:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-11 18:20:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-21 14:20:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-02-28 18:32:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-28 18:33:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2020-07-10 19:58:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+        <block type="studio_whenSpriteClicked" deletable="false" y="150px">
+          <title name="SPRITE">0</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run"/>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          <next>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">What&#x2019;s new?</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Studio>

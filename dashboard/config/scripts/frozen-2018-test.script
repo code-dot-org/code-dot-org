@@ -1,4 +1,4 @@
-stage 'Artist'
+lesson 'Artist', display_name: 'Artist', has_lesson_plan: false
 level 'frozen line_test'
 level 'frozen perpendicular_test'
 level 'frozen_video_loops'
@@ -21,3 +21,4 @@ level 'frozen snowflower_test'
 level 'frozen snowflake branch_test'
 level 'frozen snowflake full_test'
 level 'frozen freeplay_test'
+

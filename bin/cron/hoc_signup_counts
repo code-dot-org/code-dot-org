@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This script performs aggregation queries on the pegasus.forms table, specifically HOC signup
 # forms, saving the results to the pegasus.properties table.
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/db'
-require 'cdo/only_one'
 require 'cdo/properties'
 require 'dynamic_config/dcdo'
 
@@ -47,4 +48,4 @@ def main
   )
 end
 
-main if only_one_running?(__FILE__)
+main

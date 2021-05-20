@@ -1,0 +1,17 @@
+<CurriculumReference>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-05-05T23:11:51.000Z",
+  "level_num": "custom",
+  "user_id": 890,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "applab_intro_welcome",
+    "instructions_important": "false",
+    "teacher_markdown": "Test - does this work on this level?",
+    "reference": "/docs/concepts/html/html-tags/index.html"
+  },
+  "published": true,
+  "notes": "Here is a note to myself"
+}]]></config>
+</CurriculumReference>

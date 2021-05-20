@@ -38,8 +38,6 @@ module Pd::Application
   class Teacher1920Application < TeacherApplicationBase
     include Pd::Teacher1920ApplicationConstants
 
-    validates_uniqueness_of :user_id
-
     PRINCIPAL_APPROVAL_STATE = [
       NOT_REQUIRED = 'Not required',
       IN_PROGRESS = 'Incomplete - Principal email sent on ',
@@ -62,6 +60,30 @@ module Pd::Application
       TEXT_FIELDS[:other_please_list]
     ]
 
+    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
+    # In these decision emails, status and email_type are the same.
+    AUTO_EMAIL_STATUSES = %w(
+      accepted_no_cost_registration
+      declined
+      waitlisted
+      registration_sent
+    )
+
+    # If the regional partner's emails are SENT_BY_SYSTEM, the application must
+    # have an assigned workshop to be set to one of these statuses because they
+    # trigger emails with a link to the workshop registration form
+    WORKSHOP_REQUIRED_STATUSES = %w(
+      accepted_no_cost_registration
+      registration_sent
+    )
+
+    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
+
+    validates_uniqueness_of :user_id
+    validate :workshop_present_if_required_for_status, if: -> {status_changed?}
+
+    before_save :log_status, if: -> {status_changed?}
+
     serialized_attrs %w(
       status_log
       principal_approval_not_required
@@ -82,29 +104,6 @@ module Pd::Application
         withdrawn
       )
     end
-
-    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
-    # In these decision emails, status and email_type are the same.
-    AUTO_EMAIL_STATUSES = %w(
-      accepted_no_cost_registration
-      declined
-      waitlisted
-      registration_sent
-    )
-
-    # If the regional partner's emails are SENT_BY_SYSTEM, the application must
-    # have an assigned workshop to be set to one of these statuses because they
-    # trigger emails with a link to the workshop registration form
-    WORKSHOP_REQUIRED_STATUSES = %w(
-      accepted_no_cost_registration
-      registration_sent
-    )
-
-    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
-
-    before_save :log_status, if: -> {status_changed?}
-
-    validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
@@ -139,7 +138,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
+      TeacherApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     # Return a string if the principal approval state is complete, in-progress, or not required.
@@ -182,51 +181,225 @@ module Pd::Application
 
     # @override
     def self.options
-      super.merge(
-        {
-          completing_on_behalf_of_someone_else: [YES, NO],
-          replace_existing: [
-            YES,
-            "No, this course will be added to the schedule in addition to an existing computer science course",
-            "No, this course will be added to the existing schedule, but it won't replace an existing computer science course",
-            TEXT_FIELDS[:i_dont_know_explain]
-          ],
-          cs_terms: COMMON_OPTIONS[:terms_per_year],
-          how_heard: [
-            'Code.org website',
-            'Code.org email',
-            'Regional Partner website',
-            'Regional Partner email',
-            'Regional Partner event or workshop',
-            'From a teacher',
-            'From an administrator',
-            TEXT_FIELDS[:other_with_text]
-          ],
-          csd_which_grades: (6..12).map(&:to_s) <<
-            'Not sure yet if my school plans to offer CS Discoveries in the 2019-20 school year',
-          csp_which_grades: (9..12).map(&:to_s) <<
-            'Not sure yet if my school plans to offer CS Principles in the 2019-20 school year',
-          plan_to_teach: [
-            'Yes, I plan to teach this course this year (2019-20)',
-            'I hope to be able teach this course this year (2019-20)',
-            'No, I don’t plan to teach this course this year (2019-20), but I hope to teach this course the following year (2020-21)',
-            'No, someone else from my school will teach this course this year (2019-20)',
-            TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
-          ],
-          travel_to_another_workshop: [
-            'Yes, please provide me with additional information about attending a local summer workshop outside of my region.',
-            'No, I’m not interested in travelling to attend a local summer workshop outside of my region.',
-            TEXT_FIELDS[:not_sure_explain]
-          ],
-          pay_fee: [
-            'Yes, my school will be able to pay the full program fee.',
-            TEXT_FIELDS[:no_pay_fee_1920],
-            "I don't know."
-          ],
-          willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
-          interested_in_online_program: [YES, NO]
-        }
-      )
+      {
+        country: [
+          'United States',
+          'Other country'
+        ],
+
+        title: COMMON_OPTIONS[:title],
+        state: COMMON_OPTIONS[:state],
+        gender_identity: COMMON_OPTIONS[:gender_identity],
+        race: COMMON_OPTIONS[:race],
+
+        school_state: COMMON_OPTIONS[:state],
+        school_type: COMMON_OPTIONS[:school_type],
+
+        principal_title: COMMON_OPTIONS[:title],
+
+        current_role: [
+          'Teacher',
+          'Instructional coach',
+          'Librarian',
+          'School administrator',
+          'District administrator',
+          TEXT_FIELDS[:other_please_list]
+        ],
+
+        grades_at_school: GRADES,
+        grades_teaching: [
+          *GRADES,
+          TEXT_FIELDS[:not_teaching_this_year],
+          TEXT_FIELDS[:other_please_explain]
+        ],
+        grades_expect_to_teach: [
+          *GRADES,
+          TEXT_FIELDS[:not_teaching_next_year],
+          TEXT_FIELDS[:other_please_explain]
+        ],
+
+        subjects_teaching: SUBJECTS_THIS_YEAR,
+        subjects_expect_to_teach: SUBJECTS_THIS_YEAR,
+
+        does_school_require_cs_license: [
+          YES,
+          NO,
+          "I'm not sure",
+        ],
+
+        have_cs_license: [
+          YES,
+          NO,
+          "I'm not sure",
+          'Not applicable - My district does not require a specific license, certification, or endorsement to teach computer science.'
+        ],
+
+        subjects_licensed_to_teach: [
+          'Computer Science',
+          'Career and Technical Education',
+          'Math',
+          'Science',
+          'History',
+          'Social Studies',
+          'English/Language Arts',
+          'Music',
+          'Art',
+          'Multimedia',
+          'Foreign Language',
+          'Business',
+          'Special Education',
+          'Physical Education',
+          'I am not currently licensed',
+          TEXT_FIELDS[:other_please_list]
+        ],
+
+        previous_yearlong_cdo_pd: [
+          'CS Discoveries',
+          'CS Principles',
+          'Exploring Computer Science',
+          'CS in Algebra',
+          'CS in Science',
+          "I haven't participated in a yearlong Code.org Professional Learning Program"
+        ],
+
+        cs_offered_at_school: [
+          'AP CS A',
+          'Beauty and Joy of Computing',
+          'Bootstrap',
+          'Code HS',
+          'Code Monkey',
+          'Codesters',
+          'CS in Algebra',
+          'CS Discoveries',
+          'CS Fundamentals',
+          'CS Principles (intro or AP-level)',
+          'CS in Science',
+          'Edhesive',
+          'Exploring Computer Science',
+          'Globaloria',
+          'Hour of Code',
+          'Mobile CSP',
+          'NMSI',
+          'Project Lead the Way',
+          'Pythonroom',
+          'Robotics',
+          'Scalable Game Design',
+          'ScratchEd',
+          'Tynker',
+          'UC Davis C-Stem',
+          'UTeach',
+          TEXT_FIELDS[:other_please_list],
+          'No computer science courses are offered at my school'
+        ],
+
+        cs_opportunities_at_school: [
+          'Courses for credit',
+          'After school clubs',
+          'Lunch clubs',
+          'Hour of Code',
+          'No computer science opportunities are currently available at my school',
+          TEXT_FIELDS[:other_with_text]
+        ],
+
+        program: PROGRAM_OPTIONS,
+
+        csd_which_grades: (6..12).map(&:to_s) <<
+          'Not sure yet if my school plans to offer CS Discoveries in the 2019-20 school year',
+
+        csd_course_hours_per_week: [
+          '5 or more course hours per week',
+          '4 to less than 5 course hours per week',
+          '3 to less than 4 course hours per week',
+          'Less than 3 course hours per week',
+          TEXT_FIELDS[:other_please_list]
+        ],
+
+        csd_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
+
+        csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
+
+        csp_which_grades: (9..12).map(&:to_s) <<
+          'Not sure yet if my school plans to offer CS Principles in the 2019-20 school year',
+
+        csp_course_hours_per_week: [
+          'More than 5 course hours per week',
+          '4 - 5 course hours per week',
+          'Less than 4 course hours per week'
+        ],
+
+        csp_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
+
+        csp_terms_per_year: COMMON_OPTIONS[:terms_per_year],
+
+        csp_how_offer: [
+          'As an introductory course',
+          'As an AP course',
+          'We will offer both introductory and AP-level courses'
+        ],
+
+        csp_ap_exam: [
+          'Yes, all students will be expected to take the AP CS Principles exam',
+          "Students will be encouraged to take the exam, but it won't be required",
+          "No, I don't plan for my students to take the AP CS Principles exam"
+        ],
+
+        plan_to_teach: [
+          'Yes, I plan to teach this course this year (2019-20)',
+          'I hope to be able teach this course this year (2019-20)',
+          'No, I don’t plan to teach this course this year (2019-20), but I hope to teach this course the following year (2020-21)',
+          'No, someone else from my school will teach this course this year (2019-20)',
+          TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
+        ],
+
+        pay_fee: [
+          'Yes, my school will be able to pay the full program fee.',
+          TEXT_FIELDS[:no_pay_fee_1920],
+          "I don't know."
+        ],
+
+        how_heard: [
+          'Code.org website',
+          'Code.org email',
+          'Regional Partner website',
+          'Regional Partner email',
+          'Regional Partner event or workshop',
+          'From a teacher',
+          'From an administrator',
+          TEXT_FIELDS[:other_with_text]
+        ],
+
+        committed: [
+          YES,
+          'No (Please Explain):'
+        ],
+
+        willing_to_travel: [
+          'Up to 10 miles',
+          'Up to 25 miles',
+          'Up to 50 miles',
+          'Any distance',
+          'I am unable to travel to the school year workshops'
+        ],
+
+        taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
+          TEXT_FIELDS[:other_please_list],
+          "I don't have experience teaching any of these courses"
+        ],
+        completing_on_behalf_of_someone_else: [YES, NO],
+        replace_existing: [
+          YES,
+          "No, this course will be added to the schedule in addition to an existing computer science course",
+          "No, this course will be added to the existing schedule, but it won't replace an existing computer science course",
+          TEXT_FIELDS[:i_dont_know_explain]
+        ],
+        cs_terms: COMMON_OPTIONS[:terms_per_year],
+        travel_to_another_workshop: [
+          'Yes, please provide me with additional information about attending a local summer workshop outside of my region.',
+          'No, I’m not interested in travelling to attend a local summer workshop outside of my region.',
+          TEXT_FIELDS[:not_sure_explain]
+        ],
+        interested_in_online_program: [YES, NO]
+      }
     end
 
     # @override
@@ -301,7 +474,23 @@ module Pd::Application
 
     # @override
     def additional_text_fields
-      super.concat [
+      [
+        [:current_role, TEXT_FIELDS[:other_please_list]],
+        [:grades_teaching, TEXT_FIELDS[:not_teaching_this_year], :grades_teaching_not_teaching_explanation],
+        [:grades_teaching, TEXT_FIELDS[:other_please_explain], :grades_teaching_other],
+        [:grades_expect_to_teach, TEXT_FIELDS[:not_teaching_next_year], :grades_expect_to_teach_not_expecting_to_teach_explanation],
+        [:grades_expect_to_teach, TEXT_FIELDS[:other_please_explain], :grades_expect_to_teach_other],
+        [:subjects_teaching, TEXT_FIELDS[:other_please_list]],
+        [:subjects_expect_to_teach, TEXT_FIELDS[:other_please_list]],
+        [:subjects_licensed_to_teach, TEXT_FIELDS[:other_please_list]],
+        [:taught_in_past, TEXT_FIELDS[:other_please_list]],
+        [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
+        [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
+        [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
+        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_other],
+        [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
+        [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
+        [:committed, TEXT_FIELDS[:no_explain], :committed_other],
         [:cs_terms, TEXT_FIELDS[:other_with_text]],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
@@ -511,7 +700,7 @@ module Pd::Application
     # approval is done. Generates scores for responses, is idempotent and does not
     # override existing scores
     #
-    # Overriding the base class because scores are somewhat different
+    # @override
     def auto_score!
       responses = sanitize_form_data_hash
 
@@ -543,7 +732,14 @@ module Pd::Application
         meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
       end
 
-      bonus_points_scores[:replace_existing] = responses[:replace_existing].in?(options[:replace_existing].values_at(1, 2)) ? 5 : 0
+      meets_minimum_criteria_scores[:replace_existing] =
+        if responses[:replace_existing] == YES
+          NO
+        elsif responses[:replace_existing] == TEXT_FIELDS[:i_dont_know_explain]
+          nil
+        else
+          YES
+        end
 
       # Section 3
       if course == 'csd'
@@ -604,13 +800,13 @@ module Pd::Application
             nil
           end
 
-        bonus_points_scores[:replace_existing] =
+        meets_minimum_criteria_scores[:replace_existing] =
           if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
-            5
-          elsif responses[:principal_wont_replace_existing_course]&.in? [principal_options[:replace_course][0], principal_options[:replace_course][2]]
-            0
-          else
+            YES
+          elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
             nil
+          else
+            NO
           end
 
         if course == 'csd'

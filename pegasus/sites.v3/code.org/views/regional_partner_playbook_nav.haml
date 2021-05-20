@@ -12,14 +12,11 @@
       'Ordering Supplies'=>'/educate/regional-partner/playbook/ordering-supplies',
       'Partner Network'=>'/educate/regional-partner/playbook/directory',
       'Payment Information'=>'/educate/regional-partner/playbook/payments',
-      'Reporting and Evaluations'=>'/educate/regional-partner/playbook/reporting-and-evaluations',
-      'Teacher & District Recruitment'=>'/educate/regional-partner/playbook/teacher-recruitment',
+      'District & School Recruitment'=>'/educate/regional-partner/playbook/teacher-recruitment',
       'Teachers & Curriculum'=>'/educate/regional-partner/playbook/curriculum',
-      'Timeline'=>'/educate/regional-partner/playbook/timeline',
       'Training Materials'=>'/educate/regional-partner/playbook/training-materials',
       'Workshops & Professional Learning'=>'/educate/regional-partner/playbook/workshops-pl',
-      'FAQ'=>'/educate/regional-partner/playbook/faq',
-      'Legacy'=>'/educate/regional-partner/playbook/legacy'}.each_pair do |label,url|
+      'FAQ'=>'/educate/regional-partner/playbook/faq'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

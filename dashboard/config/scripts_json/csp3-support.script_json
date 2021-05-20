@@ -1,0 +1,1774 @@
+{
+  "script": {
+    "name": "csp3-support",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "peer_reviews_to_complete": 4,
+      "professional_learning_course": "CSP Support",
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:56 UTC",
+    "seeding_key": {
+      "script.name": "csp3-support"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "practice",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Teaching Practices"
+      },
+      "seeding_key": {
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Unit 3 Overview",
+      "name": "Unit 3 Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "AP Preparation and Support",
+      "name": "AP Preparation and Support",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "Lessons 1 - 3: Algorithms",
+      "name": "Lessons 1 - 3: Algorithms",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+      "name": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+      "name": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "Group Work and Peer Learning",
+      "name": "Group Work and Peer Learning",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "Balancing Teachers and Tools",
+      "name": "Balancing Teachers and Tools",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "Discovery Learning",
+      "name": "Discovery Learning",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "key": "Measuring Student Learning",
+      "name": "Measuring Student Learning",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What's inside and how is it organized?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What's inside and how is it organized?"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "What's inside and how is it organized?"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to Unit 3"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Unit 3"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Introduction to Unit 3"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 3 Tool Talk"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 3 Tool Talk"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Unit 3 Tool Talk"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Teaching Programming in Unit 3"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teaching Programming in Unit 3"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Teaching Programming in Unit 3"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Practice Performance Tasks in Unit 3"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Practice Performance Tasks in Unit 3"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Practice Performance Tasks in Unit 3"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 3 Self-Assessment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 3 Self-Assessment"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Unit 3 Self-Assessment"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 3 Vocab and Concept Review Activity"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 3 Vocab and Concept Review Activity"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Unit 3 Vocab and Concept Review Activity"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AP Test Prep Guidance"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AP Test Prep Guidance"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "AP Test Prep Guidance"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "3.1 - 3.3 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "3.1 - 3.3 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "3.1 - 3.3 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Understanding the Human Machine Language"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Understanding the Human Machine Language"
+        ],
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Understanding the Human Machine Language"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "3.1 - 3.3 Lesson Connections in the Framework"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "3.1 - 3.3 Lesson Connections in the Framework"
+        ],
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "3.1 - 3.3 Lesson Connections in the Framework"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 L1 - 3: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 L1 - 3: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "U3 L1 - 3: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "3.4 - 3.6 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "3.4 - 3.6 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "3.4 - 3.6 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to App Lab and Turtle Programming"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to App Lab and Turtle Programming"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Introduction to App Lab and Turtle Programming"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Philosophy Behind the Four Primitive Programming Commands"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Philosophy Behind the Four Primitive Programming Commands"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "The Philosophy Behind the Four Primitive Programming Commands"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Defining and Calling Functions"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Defining and Calling Functions"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Defining and Calling Functions"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Common Misconceptions about Functions"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Common Misconceptions about Functions"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Common Misconceptions about Functions"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Top-Down Design"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Top-Down Design"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Top-Down Design"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 L4 - 6: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 L4 - 6: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "U3 L4 - 6: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "3.7 - 3.9 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "3.7 - 3.9 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "3.7 - 3.9 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Documentation in App Lab"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Documentation in App Lab"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Documentation in App Lab"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to Functions with Parameters"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Functions with Parameters"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Introduction to Functions with Parameters"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Functions with Parameters"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Functions with Parameters"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Functions with Parameters"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to Loops"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Loops"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Introduction to Loops"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Using Loops"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Using Loops"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Using Loops"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 L7 - 9: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 L7 - 9: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "U3 L7 - 9: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Overview: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Collaborative Learning and Group Work: Description and Strategies"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "The Official Peer Instruction Blog"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "the Journal of Peer Learning"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 3 Teaching Practice Plan: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 3 Teaching Practice Plan: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Unit 3 Teaching Practice Plan: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Overview: Balancing Teachers and Tools"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Classroom Management Tips for School Computer Labs"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Considerations for the 1-to-1 Classroom"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 3 Teaching Practice Plan: Balancing Teacher and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 3 Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Unit 3 Teaching Practice Plan: Balancing Teacher and Tools"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Overview: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Discovery learning definition and history"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Discovery learning techniques"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 3 Teaching Practice Plan: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 3 Teaching Practice Plan: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Unit 3 Teaching Practice Plan: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Overview: Capturing Student Learning"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "What is the difference between formative and summative assessment?"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Designing Assessment Questions"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Designing Assessment Questions"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Designing Assessment Questions"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Classroom Assessment Techniques"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 3 Teaching Practice Plan: Assessing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 3 Teaching Practice Plan: Assessing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      },
+      "level_keys": [
+        "Unit 3 Teaching Practice Plan: Assessing Student Learning"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "What's inside and how is it organized?",
+        "script_level.level_keys": [
+          "What's inside and how is it organized?"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Unit 3",
+        "script_level.level_keys": [
+          "Introduction to Unit 3"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 3 Tool Talk",
+        "script_level.level_keys": [
+          "Unit 3 Tool Talk"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teaching Programming in Unit 3",
+        "script_level.level_keys": [
+          "Teaching Programming in Unit 3"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Practice Performance Tasks in Unit 3",
+        "script_level.level_keys": [
+          "Practice Performance Tasks in Unit 3"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 3 Self-Assessment",
+        "script_level.level_keys": [
+          "Unit 3 Self-Assessment"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 3 Vocab and Concept Review Activity",
+        "script_level.level_keys": [
+          "Unit 3 Vocab and Concept Review Activity"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AP Test Prep Guidance",
+        "script_level.level_keys": [
+          "AP Test Prep Guidance"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "3.1 - 3.3 Lesson Connections",
+        "script_level.level_keys": [
+          "3.1 - 3.3 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Understanding the Human Machine Language",
+        "script_level.level_keys": [
+          "Understanding the Human Machine Language"
+        ],
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "3.1 - 3.3 Lesson Connections in the Framework",
+        "script_level.level_keys": [
+          "3.1 - 3.3 Lesson Connections in the Framework"
+        ],
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 L1 - 3: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U3 L1 - 3: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 1 - 3: Algorithms",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "3.4 - 3.6 Lesson Connections",
+        "script_level.level_keys": [
+          "3.4 - 3.6 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to App Lab and Turtle Programming",
+        "script_level.level_keys": [
+          "Introduction to App Lab and Turtle Programming"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Philosophy Behind the Four Primitive Programming Commands",
+        "script_level.level_keys": [
+          "The Philosophy Behind the Four Primitive Programming Commands"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Defining and Calling Functions",
+        "script_level.level_keys": [
+          "Defining and Calling Functions"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Common Misconceptions about Functions",
+        "script_level.level_keys": [
+          "Common Misconceptions about Functions"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Top-Down Design",
+        "script_level.level_keys": [
+          "Top-Down Design"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 L4 - 6: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U3 L4 - 6: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 4 - 6 : Procedural Abstraction and Top-Down Design",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "3.7 - 3.9 Lesson Connections",
+        "script_level.level_keys": [
+          "3.7 - 3.9 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Documentation in App Lab",
+        "script_level.level_keys": [
+          "Documentation in App Lab"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Functions with Parameters",
+        "script_level.level_keys": [
+          "Introduction to Functions with Parameters"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Functions with Parameters",
+        "script_level.level_keys": [
+          "Functions with Parameters"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Loops",
+        "script_level.level_keys": [
+          "Introduction to Loops"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Using Loops",
+        "script_level.level_keys": [
+          "Using Loops"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 L7 - 9: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U3 L7 - 9: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Collaborative Learning and Group Work: Description and Strategies",
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Official Peer Instruction Blog",
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "the Journal of Peer Learning",
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 3 Teaching Practice Plan: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Unit 3 Teaching Practice Plan: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Balancing Teachers and Tools",
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Management Tips for School Computer Labs",
+        "script_level.level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Considerations for the 1-to-1 Classroom",
+        "script_level.level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 3 Teaching Practice Plan: Balancing Teacher and Tools",
+        "script_level.level_keys": [
+          "Unit 3 Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Discovery Learning",
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning definition and history",
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning techniques",
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 3 Teaching Practice Plan: Discovery Learning",
+        "script_level.level_keys": [
+          "Unit 3 Teaching Practice Plan: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Capturing Student Learning",
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is the difference between formative and summative assessment?",
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Designing Assessment Questions",
+        "script_level.level_keys": [
+          "Designing Assessment Questions"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Assessment Techniques",
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 3 Teaching Practice Plan: Assessing Student Learning",
+        "script_level.level_keys": [
+          "Unit 3 Teaching Practice Plan: Assessing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp3-support"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,0 +1,1493 @@
+{
+  "script": {
+    "name": "time4cs-experiment-unit-2",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "editor_experiment": "broward",
+      "pilot_experiment": "time4cs-experiment",
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:39 UTC",
+    "seeding_key": {
+      "script.name": "time4cs-experiment-unit-2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "time4cs_c1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Collection 1: The Everglades & its Ecosystems"
+      },
+      "seeding_key": {
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "time4cs_c2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Collection 2: Food Chains (in the Everglades)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "time4cs_c3",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Collection 3: Native Species (in the Everglades)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "time4cs_c4",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Collection 4: Impact of Invasive Species (on the Everglades)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "time4cs_c5",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Collection 5: Citizens Take Action"
+      },
+      "seeding_key": {
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to the Problem",
+      "name": "Introduction to the Problem",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to the Problem",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Crowdsourcing (Integrated lesson)",
+      "name": "Crowdsourcing (Integrated lesson)",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Crowdsourcing (Integrated lesson)",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Everglades Habitats",
+      "name": "Everglades Habitats",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Everglades Habitats",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Evaluating a Project in Sprite Lab",
+      "name": "Evaluating a Project in Sprite Lab",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Evaluating a Project in Sprite Lab",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Food Chains",
+      "name": "Food Chains",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Food Chains",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Conditionals with Cards (Integrated Lesson)- Part 1",
+      "name": "Conditionals with Cards (Integrated Lesson)- Part 1",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 1",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Alligator Holes",
+      "name": "Alligator Holes",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Alligator Holes",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Food Chain Game",
+      "name": "Food Chain Game",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Food Chain Game",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Invasive Species",
+      "name": "Invasive Species",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Invasive Species",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Conditionals with Cards (Integrated Lesson)- Part 2",
+      "name": "Conditionals with Cards (Integrated Lesson)- Part 2",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 2",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "I am in Big Trouble",
+      "name": "I am in Big Trouble",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "I am in Big Trouble",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Conditionals in Sprite Lab",
+      "name": "Conditionals in Sprite Lab",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Sprite Lab",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Nested Loops in Maze",
+      "name": "Nested Loops in Maze",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Fancy Shapes using Nested Loops",
+      "name": "Fancy Shapes using Nested Loops",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Nested Loops with Frozen",
+      "name": "Nested Loops with Frozen",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Fishy Business",
+      "name": "Fishy Business",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Fishy Business",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Songwriting (Integrated Lesson)",
+      "name": "Songwriting (Integrated Lesson)",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Songwriting (Integrated Lesson)",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Functions in Minecraft",
+      "name": "Functions in Minecraft",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Functions with Harvester",
+      "name": "Functions with Harvester",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Functions with Artist",
+      "name": "Functions with Artist",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Pythons impacting native populations",
+      "name": "Pythons impacting native populations",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pythons impacting native populations",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Functions in Sprite Lab",
+      "name": "Functions in Sprite Lab",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Sprite Lab",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Python Problem- Current Solutions",
+      "name": "Python Problem- Current Solutions",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Python Problem- Current Solutions",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "End of Course Project (integrated- project planning lesson)",
+      "name": "End of Course Project (integrated- project planning lesson)",
+      "absolute_position": 24,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project (integrated- project planning lesson)",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Debate- Pythons impacting native populations",
+      "name": "Debate- Pythons impacting native populations",
+      "absolute_position": 25,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 25,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debate- Pythons impacting native populations",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "key": "Work on Project",
+      "name": "Work on Project",
+      "absolute_position": 26,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Work on Project",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Introduction to the Problem",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel2"
+        ],
+        "lesson.key": "Introduction to the Problem",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Crowdsourcing (Integrated lesson)",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel2"
+        ],
+        "lesson.key": "Crowdsourcing (Integrated lesson)",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Everglades Habitats",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Evaluating a Project in Sprite Lab",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Food Chains",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 1",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Alligator Holes",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Food Chain Game",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Invasive Species",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 2",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "I am in Big Trouble",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Conditionals in Sprite Lab",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Nested Loops in Maze",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Fishy Business",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Songwriting (Integrated Lesson)",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Functions with Artist",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Pythons impacting native populations",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Functions in Sprite Lab",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Python Problem- Current Solutions",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "End of Course Project (integrated- project planning lesson)",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Debate- Pythons impacting native populations",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Work on Project",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      },
+      "level_keys": [
+        "BrowardTestMarkdownLevel"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Introduction to the Problem",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel2",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel2"
+        ],
+        "lesson.key": "Introduction to the Problem",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Crowdsourcing (Integrated lesson)",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel2",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel2"
+        ],
+        "lesson.key": "Crowdsourcing (Integrated lesson)",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Everglades Habitats",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Evaluating a Project in Sprite Lab",
+        "lesson_group.key": "time4cs_c1",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Food Chains",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 1",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Alligator Holes",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Food Chain Game",
+        "lesson_group.key": "time4cs_c2",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Invasive Species",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Conditionals with Cards (Integrated Lesson)- Part 2",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "I am in Big Trouble",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Conditionals in Sprite Lab",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Nested Loops in Maze",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "time4cs_c3",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Fishy Business",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Songwriting (Integrated Lesson)",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Functions with Artist",
+        "lesson_group.key": "time4cs_c4",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Pythons impacting native populations",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Functions in Sprite Lab",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Python Problem- Current Solutions",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "End of Course Project (integrated- project planning lesson)",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Debate- Pythons impacting native populations",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BrowardTestMarkdownLevel",
+        "script_level.level_keys": [
+          "BrowardTestMarkdownLevel"
+        ],
+        "lesson.key": "Work on Project",
+        "lesson_group.key": "time4cs_c5",
+        "script.name": "time4cs-experiment-unit-2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

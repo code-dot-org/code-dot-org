@@ -1,0 +1,693 @@
+{
+  "script": {
+    "name": "Equity-OnlinePD",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "Equity Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:43 UTC",
+    "seeding_key": {
+      "script.name": "Equity-OnlinePD"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Getting Started",
+      "name": "Getting Started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "key": "Introduction to Equity",
+      "name": "Introduction to Equity",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "key": "Creating Equitable Learning Environments",
+      "name": "Creating Equitable Learning Environments",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "key": "Next Steps",
+      "name": "Next Steps",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Welcome"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Welcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity About"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity About"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity About"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Participation"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Participation"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Participation"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Stage1Go"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Stage1Go"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Stage1Go"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Define"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Define"
+        ],
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Define"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity CS"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity CS"
+        ],
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity CS"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Strategies"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Strategies"
+        ],
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Strategies"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Stage2Go"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Stage2Go"
+        ],
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Stage2Go"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Self Assess"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Self Assess"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Self Assess"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Goals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Goals"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Goals"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Resources"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Resources"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Resources"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Reflection"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Reflection"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Stage3Go"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Stage3Go"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Stage3Go"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Review"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Review"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Review"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Keep Learning"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Keep Learning"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Keep Learning"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Equity Celebrate"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Equity Celebrate"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      },
+      "level_keys": [
+        "Equity Celebrate"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Equity Welcome",
+        "script_level.level_keys": [
+          "Equity Welcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity About",
+        "script_level.level_keys": [
+          "Equity About"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Participation",
+        "script_level.level_keys": [
+          "Equity Participation"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Stage1Go",
+        "script_level.level_keys": [
+          "Equity Stage1Go"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Define",
+        "script_level.level_keys": [
+          "Equity Define"
+        ],
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity CS",
+        "script_level.level_keys": [
+          "Equity CS"
+        ],
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Strategies",
+        "script_level.level_keys": [
+          "Equity Strategies"
+        ],
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Stage2Go",
+        "script_level.level_keys": [
+          "Equity Stage2Go"
+        ],
+        "lesson.key": "Introduction to Equity",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Self Assess",
+        "script_level.level_keys": [
+          "Equity Self Assess"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Goals",
+        "script_level.level_keys": [
+          "Equity Goals"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Resources",
+        "script_level.level_keys": [
+          "Equity Resources"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Reflection",
+        "script_level.level_keys": [
+          "Equity Reflection"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Stage3Go",
+        "script_level.level_keys": [
+          "Equity Stage3Go"
+        ],
+        "lesson.key": "Creating Equitable Learning Environments",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Review",
+        "script_level.level_keys": [
+          "Equity Review"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Keep Learning",
+        "script_level.level_keys": [
+          "Equity Keep Learning"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Equity Celebrate",
+        "script_level.level_keys": [
+          "Equity Celebrate"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "Equity-OnlinePD"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

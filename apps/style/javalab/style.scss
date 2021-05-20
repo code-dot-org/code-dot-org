@@ -1,0 +1,86 @@
+@import 'color';
+
+.container {
+  width: 95%;
+}
+
+.main {
+  padding: 0;
+}
+
+.cm-content, .cm-gutter { 
+  min-height: 390px;
+}
+
+.cm-gutters { margin: 1px; }
+
+.cm-scroller { overflow: auto; }
+
+.cm-wrap { 
+  border: 1px solid silver;
+  max-height: 100%;
+}
+
+#codeWorkspace {
+  border: none !important;
+}
+
+.nav {
+  margin-bottom: 0px;
+}
+
+// The selected tab
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+  border-color: darkgrey;
+  border-bottom-color: transparent;
+}
+
+  // Unselected tabs
+  ul > li > a {
+    color: $charcoal;
+  }
+
+  // On hover over a tab
+  ul > li > a:hover {
+    color: $charcoal;
+    background-color: black;
+  }
+
+// This class is used in the editor tabs when we're in dark mode
+.darkmode {
+  // The selected tab
+  .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    border-color: darkgrey;
+    background-color: rgb(40, 44, 52);
+    color: white;
+  }
+
+  // Tabs
+  ul > li > a {
+    color: darkgrey;
+  }
+
+  // On hover over a tab
+  ul > li > a:hover {
+    background-color: black;
+  }
+}
+
+/* Slider. */
+.sliderContainer {
+  float: left
+}
+.sliderTrack {
+  stroke: #aaa;
+  stroke-width: 6px;
+  stroke-linecap: round;
+}
+.sliderKnob {
+  fill: #ddd;
+  stroke: #bbc;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+.sliderKnob:hover {
+  fill: #eee;
+}

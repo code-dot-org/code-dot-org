@@ -569,6 +569,7 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
+            replace_existing: YES,
             principal_schedule_confirmed: YES,
             principal_implementation: YES
           },
@@ -580,7 +581,6 @@ module Pd::Application
             principal_diversity_recruitment: YES,
           },
           bonus_points_scores: {
-            replace_existing: 5,
             taught_in_past: 2,
             race: 2,
             free_lunch_percent: 5,
@@ -629,6 +629,7 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
+            replace_existing: YES,
             principal_schedule_confirmed: YES,
             principal_implementation: YES
           },
@@ -641,7 +642,6 @@ module Pd::Application
           },
           bonus_points_scores: {
             csp_how_offer: 2,
-            replace_existing: 5,
             taught_in_past: 2,
             race: 2,
             free_lunch_percent: 5,
@@ -679,6 +679,7 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
+            replace_existing: YES,
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -686,7 +687,6 @@ module Pd::Application
           },
           bonus_points_scores: {
             csp_how_offer: 2,
-            replace_existing: 5,
             taught_in_past: 2,
             race: 2
           },
@@ -729,6 +729,7 @@ module Pd::Application
             cs_total_course_hours: NO,
             plan_to_teach: NO,
             committed: NO,
+            replace_existing: NO,
             principal_schedule_confirmed: NO,
             principal_implementation: NO
           },
@@ -740,7 +741,6 @@ module Pd::Application
             principal_diversity_recruitment: NO,
           },
           bonus_points_scores: {
-            replace_existing: 0,
             taught_in_past: 0,
             race: 0,
             free_lunch_percent: 0,
@@ -788,6 +788,7 @@ module Pd::Application
             cs_total_course_hours: NO,
             plan_to_teach: NO,
             committed: NO,
+            replace_existing: NO,
             principal_implementation: NO,
             principal_schedule_confirmed: NO,
           },
@@ -800,7 +801,6 @@ module Pd::Application
           },
           bonus_points_scores: {
             csp_how_offer: 0,
-            replace_existing: 0,
             taught_in_past: 0,
             race: 0,
             free_lunch_percent: 0,
@@ -834,7 +834,7 @@ module Pd::Application
 
       assert_equal NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:plan_to_teach]
       assert_equal NO, application.response_scores_hash[:meets_minimum_criteria_scores][:plan_to_teach]
-      assert_equal 0, application.response_scores_hash[:bonus_points_scores][:replace_existing]
+      assert_equal NO, application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
 
       application.update_form_data_hash(
         {
@@ -848,7 +848,7 @@ module Pd::Application
 
       assert_equal YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:plan_to_teach]
       assert_equal YES, application.response_scores_hash[:meets_minimum_criteria_scores][:plan_to_teach]
-      assert_equal 5, application.response_scores_hash[:bonus_points_scores][:replace_existing]
+      assert_equal YES, application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
     end
 
     test 'nil results when applicable' do

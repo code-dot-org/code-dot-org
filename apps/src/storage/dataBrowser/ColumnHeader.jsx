@@ -11,27 +11,6 @@ import color from '../../util/color';
 import * as dataStyles from './dataStyles';
 import {valueOr} from '../../utils';
 
-const styles = {
-  columnName: {
-    display: 'inline-block',
-    maxWidth: dataStyles.maxCellWidth,
-    overflow: 'hidden',
-    whiteSpace: 'nowrap'
-  },
-  container: {
-    justifyContent: 'space-between',
-    padding: '6px 0'
-  },
-  iconWrapper: {
-    alignSelf: 'flex-end',
-    paddingLeft: 5
-  },
-  icon: {
-    color: 'white',
-    cursor: 'pointer'
-  }
-};
-
 const INITIAL_STATE = {
   newName: undefined,
   hasEnteredText: false,
@@ -48,6 +27,7 @@ class ColumnHeader extends React.Component {
     isEditable: PropTypes.bool.isRequired,
     isEditing: PropTypes.bool.isRequired,
     isPending: PropTypes.bool.isRequired,
+    readOnly: PropTypes.bool,
     renameColumn: PropTypes.func.isRequired
   };
 
@@ -150,27 +130,29 @@ class ColumnHeader extends React.Component {
       }
     ];
     return (
-      <th style={dataStyles.headerCell}>
+      <th style={dataStyles.headerCell} className="uitest-data-table-column">
         <div style={containerStyle} className="flex">
           <div style={styles.columnName} className="test-tableNameDiv">
             {this.props.columnName}
           </div>
-          <div style={styles.iconWrapper}>
-            {this.props.isPending ? (
-              <FontAwesome
-                icon="spinner"
-                className="fa-spin"
-                style={styles.icon}
-              />
-            ) : (
-              <ColumnMenu
-                coerceColumn={this.coerceColumn}
-                handleDelete={this.handleDelete}
-                handleRename={this.handleRename}
-                isEditable={this.props.isEditable}
-              />
-            )}
-          </div>
+          {!this.props.readOnly && (
+            <div style={styles.iconWrapper}>
+              {this.props.isPending ? (
+                <FontAwesome
+                  icon="spinner"
+                  className="fa-spin"
+                  style={styles.icon}
+                />
+              ) : (
+                <ColumnMenu
+                  coerceColumn={this.coerceColumn}
+                  handleDelete={this.handleDelete}
+                  handleRename={this.handleRename}
+                  isEditable={this.props.isEditable}
+                />
+              )}
+            </div>
+          )}
         </div>
         <Dialog
           body="Are you sure you want to delete this entire column? You cannot undo this action."
@@ -195,5 +177,26 @@ class ColumnHeader extends React.Component {
     );
   }
 }
+
+const styles = {
+  columnName: {
+    display: 'inline-block',
+    maxWidth: dataStyles.maxCellWidth,
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
+  },
+  container: {
+    justifyContent: 'space-between',
+    padding: '6px 0'
+  },
+  iconWrapper: {
+    alignSelf: 'flex-end',
+    paddingLeft: 5
+  },
+  icon: {
+    color: 'white',
+    cursor: 'pointer'
+  }
+};
 
 export default Radium(ColumnHeader);

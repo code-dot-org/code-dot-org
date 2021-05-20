@@ -1,6 +1,13 @@
 !!! 5
 %html{dir: locale_dir}
   %head
+    // The Crowdin In-Context tool (https://crowdin.com/project/codeorg/settings#in-context) allows us to view original & translated strings in Crowdin.
+    // "in-TL" is a pseudo-language locale where the Crowdin strings are stored
+    - if request.locale === "in-TL"
+      :javascript
+        var _jipt = [];
+        _jipt.push(['project', 'codeorg']);
+      %script{type: "text/javascript", src: "//cdn.crowdin.com/jipt/jipt.js"}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{appname} - #{@page_title}" : appname
     %title= title
@@ -15,15 +22,15 @@
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/analytics'
     // webpack-runtime.js must appear exactly once on any page containing webpack entries
-    %script{src: minifiable_asset_path('js/webpack-runtime.js')}
+    %script{src: webpack_asset_path('js/webpack-runtime.js')}
     // essential.js is ordered above application.js to filter new relic errors
-    %script{src: minifiable_asset_path('js/essential.js')}
-    %script{src: minifiable_asset_path('js/vendors.js')}
-    = render file: Rails.root.join('..', 'shared', 'haml', 'answerdash.haml') if view_options[:answerdash]
+    %script{src: webpack_asset_path('js/essential.js')}
+    %script{src: webpack_asset_path('js/vendors.js')}
+    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'answerdash.haml')), type: :haml if view_options[:answerdash]
     = javascript_include_tag 'application'
-    = javascript_include_tag "js/#{js_locale}/common_locale"
+    %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
     = javascript_include_tag 'https://cdn.optimizely.com/js/12977480133.js' if Rails.env.production?
-    %script{src: minifiable_asset_path('js/code-studio-common.js')}
+    %script{src: webpack_asset_path('js/code-studio-common.js')}
     = csrf_meta_tags
     = yield :head
     - if content_for? :og
@@ -32,10 +39,15 @@
       = tag 'meta', property: 'og:title', content: title
       = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
       = tag 'meta', property: 'og:description', content: t('share.description')
-    = render partial: 'layouts/javascript_strings'
-  %body
-    - unless Rails.env.production?
-      = render partial: 'layouts/environment_tag'
+  %body{class: @body_classes}
+    - if session[:assumed_identity]
+      - if Rails.env.production?
+        #assumed_identity_tag= 'Assumed identity'
+      - else
+        #assumed_identity_tag= 'Assumed identity (' + Rails.env + ')'
+    - else
+      - unless Rails.env.production?
+        = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
@@ -44,14 +56,12 @@
 
     - gdpr_data = {}
     - if current_user
-      - already_accepted = current_user.data_transfer_agreement_accepted == true
-      - force_eu = request.params['force_in_eu'].present?
-      - gdpr_data[:show_gdpr_dialog] = (request.gdpr? || force_eu) && !already_accepted
+      - gdpr_data[:show_gdpr_dialog] = GdprDialogHelper.show?(current_user, request)
       - gdpr_data[:current_user_id] = current_user.id
 
     #gdpr-dialog
 
-    %script{src: minifiable_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json}}
+    %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json}}
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]
@@ -59,12 +69,13 @@
       - if view_options[:code_studio_logo]
         = render partial: 'layouts/logo'
       - page = yield
+
       - if view_options[:full_width]
         - if view_options[:responsive_content]
-          .responsive_full_container
+          .responsive_full_container{style: ('padding: 0' if view_options[:no_padding_container])}
             = page
         - else
-          .full_container
+          .full_container{style: ('padding: 0' if view_options[:no_padding_container])}
             = page
       - else
         .container.main
@@ -78,7 +89,7 @@
         - unless view_options[:no_footer] || view_options[:small_footer]
           .push
 
-      - if view_options[:small_footer]
+      - if view_options[:small_footer] && !view_options[:no_footer]
         = render partial: 'layouts/small_footer', locals: {channel: view_options[:channel]}
 
       - if view_options[:responsive_content]
@@ -86,6 +97,9 @@
           = render partial: 'layouts/small_footer', locals: {full_width: true}
 
     - unless view_options[:no_footer]
+      - if content_for? :above_footer_content
+        = yield :above_footer_content
+
       - if view_options[:responsive_content]
         .responsive-content-desktop-footer
           = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
@@ -93,6 +107,5 @@
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
       = render partial: 'shared/maybe_set_hoc_secret'
 
-    = render file: Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml'), locals: {dashboard: true}
-
+    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml')), type: :haml, locals: {dashboard: true}
     = yield :body_scripts

@@ -1,24 +1,37 @@
 name 'csp-20-21-u4-assess-conditionals pick 1'
-encrypted 'wkchWoHR4XZGNK9LNjFfB5loia875C8OgBLh8A3ZMfHps34cxv1LKwfe+4s+
-mr7cNM3CCTiZQI8UvZ+vbYVm1DqZseBfi2ABgJAzQf9tcOBqtJ46RC8FaiL+
-ONmt8hrfv6sS/Zby5bxAhNKq73cDylNjpPbozUCISEvKPuvFHVId//HGA5+3
-Zrx+XiijTUlvAWNpRXaGM3Lafo0Dz+MkEDJVOydPurPVWXotTO12xbomF8rU
-UcldQc7Z9y+3jHf/bAPpmQ08G4v48OuqebXjhVcVMDt5GN6BSf2BAr6gl/SI
-Qv6fBwChNmGAAmhvsh9bkb1Io7lM7/GUslL4rvFc+6zvVB8L8YH7yeIaQjS1
-lSe9vpKr5wzuLjN9lfX+w9xYGYMiVlK1Udq2ds2k21fFYvCuh+UvPJ9U0Gx0
-cBtrphfWGqs7i2megss1XWGjOEzUIBOh7Mwkqc3/wMXyK6UaPyTs3lzQGhvI
-3p1yN2DoRIyAnw8Vet3EI0nWBkKmhhend831rhyFFU+0bFSVpa26NDqEjiQg
-r+qRxEV9heSr0hM5frWjFztc5kDK+a16uRDP14VD/AJ0lpUBV0EksY4EXApu
-ihennVOlPqia3V5u4/m4qM3Z5DI5ss6pgCsBwUB6kiYjBQitvXv7P15VpsLl
-S7/zeZOsNckoqnhkN8wx6OYYq8SqqmQptrBiHhF7re7LZEym+FR7dc+OrkSK
-iUvgJq4omNk/tSE7v4q8NSwqupByThj8vCoFIRNVVSDbwoK49jliw0duBh44
-+unAjJCsaxEnXoi0ljshsmw7oO1S9/s66+zu/P/Q65221cJGp3wYGRIa2l+y
-3xbj4EKlCfvRcFU0wpbasEQB0NPF201eIveafs+Y1tHutQK6Tq3SxmHI+Gio
-gGkAtlNXYx2AZfOF6VNFs1ojLO8k/v3QiHIsAqRYgkK8A/p9zT0Pume35tS5
-Po15UwKA5F4lIXFiPn01ZA3snOpeA0fs/SKtqNMmPfMP9ieq9+KwcmWAbonF
-pAWfwgNujQX4ksZO9spSm5WbNOAiXeQv+Olreii+vWxU007JBe8lzn0N4KWD
-hk8vT6Q8vxPG1wxF63vsutrBNKIr6sE+6jKpF/+QZ+NC0jA6XVxINbwe4Ypo
-CQCv1QAPWE1BJ0HohIRX4mavqy6/nElpTqqmJAMghoAuGhIQX46LBDRXKka5
-eEcYve/9y1oZM37BgGXZW0vDpvME9CYzkdZqPB3uF1o5M9UDXsokx+yynAyC
-srEMj+ARQdUf+MN4BcUZvyavDxTVfHSzZCmObK8szg==
-'
+editor_experiment ''
+
+
+
+
+wrong '![](https://images.code.org/f55c7fd58d43e01cc5fc42a6768692ca-image-1599153877135.png)'
+wrong '![](https://images.code.org/6452795e8f284a62541d154a9c2274fd-image-1599153890602.png)'
+right '![](https://images.code.org/f6e473e3e008d4a71dfc869aa9e85045-image-1599153902795.png)'
+wrong '![](https://images.code.org/c5368a3e09d6be80cf04cbf9133ed291-image-1599153912758.png)'
+
+markdown <<MARKDOWN
+A movie theater charges different ticket prices based on a customer's age. The prices are shown in the table below.
+
+| Age | Ticket Price |
+|:-----------------------:|:------------------:|
+|12 and younger|$5|
+|13 to 64|$8|
+|65 and older|$6|
+
+The customer's age is stored in the variable `age` and the price is stored in the variable `price`. Which piece of code will correctly decide the price for each ticket.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** There are multiple ways to write this conditional statement so that it correctly decides the price for each ticket. C is the only one of these choices that accomplishes that. Options A and B will assign a ticket price of $8 to anyone over the age of 12, including those 65 and older. Option D will assign a ticket price of $8 to everyone under the age of 65, including those 12 and younger.
+
+This question is similar to the set of levels where students programing the star-color changing app in [Lesson 7 - Conditionals Practice](https://curriculum.code.org/csp-20/unit4/7/) 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+* CRD-2.J - Identify inputs and corresponding expected output or behaviors that can be used to check the correctness of an algorithm or program.
+AAP-2.E.2 - The exam reference sheet provides the following relational operators: =, ≠, >, <, ≥, and ≤. ●   	a = b●   	a ≠ b●   	a > b●   	a < b●   	a ≥ b●  a ≤ b These are used to test the relationship between two variables, expressions, or values.
+* AAP-2.I - For nested selection: a. Represent using nested conditional statements. b. Determine the result of nested conditional statements.
+
+:::
+
+MARKDOWN

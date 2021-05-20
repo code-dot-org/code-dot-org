@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:03:54.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "Explain in your own words the process of creating and updating a variable. How does the Counter Pattern with Event work?\r\n\r\n| Name  | Code (Block) | Code (Text) |\r\n| ------------- | ------------- | ------------- |\r\n| Counter Pattern with Event  | ![](https://images.code.org/fb4f1477d57648cb4bde14c2b710e196-image-1600883760296.png)  | <div>`var myVar = 0;` <br><br> `onEvent(\"id\", \"click\", function() {` <br>&nbsp;&nbsp;&nbsp;&nbsp;`myVar = myVar + 1;` <br> `});`</div> |",
+    "title": "Updating Variables",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 15832,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Check Your Understanding",
+    "encrypted_solution": "YafY0sytENUTw0f9xzfzBghcC8CUOcG49ONFEFHOyhHYSp041uFSV+ZNOXLp\nbN5iq4kX3Dug4Z1krb2Uvslaoy86VJQGKirF1SxHGSjsAOokWYPpr8CB7Vp3\n8d/hRZLPGpbJoPiQP+JX0LaE10Hogwx1REKkUPerwtwZqNazLBB4wCmq0+yx\nUMGn1BOZWDybIjXug+UsB22dYem9M4UqoHmaytPTgXsfRq6Y4S+9TPwTEYR6\nzNpCEJvqvW2MOJBpZLYmI4ZA45nkefEjOK+UcZHdXGYJ6vExz0N4lCxoSo0m\n0MFRrcZO3G5tZKCJHTBSG335thWawHO3NwyNEYbhWLEpoobsX3QfE9tK+nMl\n/C9zNEcnogphSMB5XDylypVjMW4hnC+BzLTL8O00M5njLMgfkH3lQP2CJG3T\nGn/ff2gx0bAwVJ9VdW5454JHXcH5ZmH6BH/cJCsaz4YfVd/du9OrQjbrmVkQ\nNuFzb0i6ZDE=\n",
+    "optional": "false",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-09-23 17:57:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

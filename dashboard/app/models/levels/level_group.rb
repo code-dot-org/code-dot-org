@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -24,69 +24,134 @@
 #
 
 class LevelGroup < DSLDefined
+  serialized_attrs %w(
+    levels_and_texts_per_page
+  )
+
   def dsl_default
-    <<ruby
-name 'unique level name here'
-title 'title of the assessment here'
-submittable 'true'
-anonymous 'false'
+    <<~ruby
+      name 'unique level name here'
+      title 'title of the assessment here'
+      submittable 'true'
+      anonymous 'false'
 
-page
-level 'level1'
-level 'level2'
+      page
+      level 'level1'
+      level 'level2'
 
-page
-level 'level 3'
-level 'level 4'
-ruby
+      page
+      level 'level 3'
+      level 'level 4'
+    ruby
   end
 
   def icon
     'fa fa-list-ul'
   end
 
-  # Returns a flattened array of all the Levels in this LevelGroup, in order.
-  def levels
-    level_names = []
-    properties["pages"].each do |page|
-      page["levels"].each do |page_level_name|
-        level_names << page_level_name
-      end
-    end
+  # Returns an array of all the levels and texts in this LevelGroup,
+  # in order.
+  def levels_and_texts
+    pages.map(&:levels_and_texts).flatten
+  end
 
-    Level.where(name: level_names).sort_by {|l| level_names.index(l.name)}
+  # Returns an array of all the levels in this LevelGroup, in order.
+  def levels
+    pages.map(&:levels).flatten
   end
 
   class LevelGroupPage
-    def initialize(page_properties, page_number, offset)
-      @levels = []
-      page_properties["levels"].each do |level_name|
-        level = Level.find_by_name(level_name)
-        @levels << level
-      end
-      @offset = offset
+    def initialize(page_number, levels_and_texts_offset, levels_and_texts, levels_offset)
       @page_number = page_number
+      @levels_and_texts_offset = levels_and_texts_offset
+      @levels_and_texts = levels_and_texts
+      @levels_offset = levels_offset
     end
 
-    attr_reader :levels
     attr_reader :page_number
-    attr_reader :offset
+    attr_reader :levels_and_texts_offset
+    attr_reader :levels_and_texts
+    attr_reader :levels_offset
+
+    def levels
+      levels_and_texts.reject {|l| l.is_a?(External)}
+    end
+
+    def texts
+      levels_and_texts.select {|l| l.is_a?(External)}
+    end
   end
 
-  # Returns an array of pages LevelGroupPage objects, each of which contains:
-  #   levels: an array of Levels.
+  # Returns an array of LevelGroupPage objects, each of which contains:
   #   page_number: the 1-based page number (corresponding to the /page/X URL).
-  #   page_offset: the count of questions occurring on prior pages.
+  #   levels_and_texts_offset: the count of levels and texts on prior pages.
+  #   levels_and_texts: an array of levels and texts on this page.
+  #   levels_offset: the count of levels on prior pages.
+  #   levels: an array of levels on this page.
+  #   texts: an array of texts on this page.
+  #
+  # In this context, a "level" is a Level object of one of the following types:
+  #   multi match text_match free_response evaluation_multi
+  # These "levels" contain questions which the end user can answer.
+  #
+  # A "text" is a Level object of type external. These show text on
+  # the page but do not accept an answer and are excluded from numbering.
+  #
+  # Under the hood, "levels" and "texts" are both referred to as "sublevels",
+  # which live in the parent_levels_child_levels table.
 
   def pages
-    offset = 0
-    page_count = 0
-    @pages ||= properties['pages'].map do |page|
-      page_count += 1
-      page_object = LevelGroupPage.new(page, page_count, offset)
-      offset += page_object.levels.count
+    levels_and_texts_offset = 0
+    levels_offset = 0
+    return @pages if @pages
+    all_levels_and_texts = child_levels.all
+    @pages = properties['levels_and_texts_per_page'].map.with_index do |page_size, page_index|
+      page_number = page_index + 1
+      levels_and_texts = all_levels_and_texts[levels_and_texts_offset..(levels_and_texts_offset + page_size - 1)]
+      page_object = LevelGroupPage.new(page_number, levels_and_texts_offset, levels_and_texts, levels_offset)
+      levels_and_texts_offset += page_size
+      levels_offset += page_object.levels.length
       page_object
     end
+  end
+
+  def self.setup(data)
+    level = super(data)
+
+    levels_and_texts_by_page = data[:pages].map do |page|
+      page[:levels].map do |level_name|
+        Level.find_by_name!(level_name)
+      end
+    end
+    level.update_levels_and_texts_by_page(levels_and_texts_by_page)
+
+    level
+  end
+
+  # @param [Array] new_levels_and_texts_by_page A 2D array of levels and texts,
+  # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
+  def update_levels_and_texts_by_page(new_levels_and_texts_by_page)
+    reload
+    self.child_levels = []
+    new_levels = new_levels_and_texts_by_page.flatten
+    new_levels.each_with_index do |level, level_index|
+      ParentLevelsChildLevel.find_or_create_by!(
+        parent_level: self,
+        child_level: level,
+        position: level_index + 1
+      )
+    end
+
+    self.levels_and_texts_per_page = []
+    @pages = nil
+    new_levels_and_texts_by_page.each do |levels_and_texts_by_page|
+      levels_and_texts_per_page.push(levels_and_texts_by_page.count)
+    end
+    save!
+  end
+
+  def get_levels_and_texts_by_page
+    pages.map(&:levels_and_texts)
   end
 
   def assign_attributes(params)
@@ -108,35 +173,25 @@ ruby
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
     level = super(new_suffix, editor_experiment: editor_experiment)
-    level.clone_sublevels_with_suffix(new_suffix)
+    level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, new_suffix)
     level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level
   end
 
   # Clone the sublevels, adding the specified suffix to the level name. Also
   # updates this level to reflect the new level names.
-  def clone_sublevels_with_suffix(new_suffix)
-    new_properties = properties
-
-    if new_properties['texts']
-      new_properties['texts'].map! do |text|
-        new_level = Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
-        text['level_name'] = new_level.name
-        text
-      end
+  # @param [Array[Array[Level]]] A 2D array of levels and texts, e.g.
+  # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
+  def clone_sublevels_with_suffix(old_levels_and_texts_by_page, new_suffix)
+    new_levels_and_texts_by_page = old_levels_and_texts_by_page.map do |levels_and_texts|
+      levels_and_texts.map {|level| level.clone_with_suffix(new_suffix)}
     end
+    update_levels_and_texts_by_page(new_levels_and_texts_by_page)
+  end
 
-    if new_properties['pages']
-      new_properties['pages'].map! do |page|
-        page['levels'].map! do |level_name|
-          new_level = Level.find_by_name(level_name).clone_with_suffix(new_suffix)
-          new_level.name
-        end
-        page
-      end
-    end
-
-    update!(properties: new_properties)
+  # @override
+  def all_child_levels
+    child_levels.all
   end
 
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
@@ -168,7 +223,11 @@ ruby
       # anonymity.
       results = section.students.map do |student|
         # Skip student if they haven't submitted for this LevelGroup.
-        user_level = student.user_level_for(script_level, script_level.level)
+        user_level = UserLevel.find_by(
+          user: student,
+          script: script_level.script,
+          level: script_level.level
+        )
         next unless user_level.try(:submitted)
 
         get_sublevel_result(sublevel, student.last_attempt(sublevel).try(:level_source).try(:data))
@@ -236,7 +295,7 @@ ruby
 
       # All the results for one LevelGroup for a group of students.
       surveys_by_level_group[level_group.id] = {
-        stage_name: script_level.stage.localized_title,
+        stage_name: script_level.lesson.localized_title,
         levelgroup_results: reportable_results
       }
     end

@@ -1,5 +1,6 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
+import firehoseClient from './lib/util/firehose';
 
 function project() {
   return require('./code-studio/initApp/project');
@@ -96,12 +97,26 @@ class CollectionsApi {
   }
 
   _withBeforeFirstWriteHook(fn) {
-    if (this._beforeFirstWriteHook) {
-      this._beforeFirstWriteHook(err => {
-        // continuing regardless of error status from hook...
-        fn();
+    if (this._shouldCallBeforeFirstWriteHook && this._beforeFirstWriteHook) {
+      this._beforeFirstWriteHook((err, success) => {
+        if (err) {
+          firehoseClient.putRecord(
+            {
+              study: 'weblab_loading_investigation',
+              study_group: 'empty_manifest',
+              event: 'error_uploading_starter_files',
+              project_id: this.getProjectId()
+            },
+            {includeUserId: true}
+          );
+          this._shouldCallBeforeFirstWriteHook = true;
+          this._errorAction();
+        } else if (success) {
+          this._shouldCallBeforeFirstWriteHook = false;
+          this._beforeFirstWriteHook = null;
+          fn();
+        }
       });
-      this._beforeFirstWriteHook = null;
     } else {
       fn();
     }
@@ -114,7 +129,15 @@ class CollectionsApi {
    * default starting data)
    */
   registerBeforeFirstWriteHook(hook) {
+    this._shouldCallBeforeFirstWriteHook = true;
     this._beforeFirstWriteHook = hook;
+  }
+
+  /**
+   * Sets up an error handler for failed api calls.
+   */
+  registerErrorAction(hook) {
+    this._errorAction = hook;
   }
 }
 
@@ -341,15 +364,20 @@ class FilesApi extends CollectionsApi {
    * @param fileData {Blob} file data
    * @param success {Function} callback when successful (includes xhr parameter)
    * @param error {Function} callback when failed (includes xhr parameter)
+   * @param skipPreWriteHook {Boolean} skip calling the pre write hook
    */
-  putFile(filename, fileData, success, error) {
-    this._withBeforeFirstWriteHook(() => {
+  putFile(filename, fileData, success, error, skipPreWriteHook = false) {
+    let functionCall = () =>
       this._putFileInternal(filename, fileData, success, error);
-    });
+    if (skipPreWriteHook) {
+      functionCall();
+    } else {
+      this._withBeforeFirstWriteHook(functionCall);
+    }
   }
 
   /*
-   * Delete all files in project (always creates a new version)
+   * Delete all files in project
    * @param success {Function} callback when successful (includes xhr parameter)
    * @param error {Function} callback when failed (includes xhr parameter)
    */
@@ -357,18 +385,8 @@ class FilesApi extends CollectionsApi {
     // Note: just reset the _beforeFirstWriteHook, but don't call it
     // since we're deleting everything:
     this._beforeFirstWriteHook = null;
-    return ajaxInternal(
-      'DELETE',
-      this.basePath('*'),
-      xhr => {
-        var response = JSON.parse(xhr.response);
-        project().filesVersionId = response.filesVersionId;
-        if (success) {
-          success(xhr, project().filesVersionId);
-        }
-      },
-      error
-    );
+    this._shouldCallBeforeFirstWriteHook = false;
+    return ajaxInternal('DELETE', this.basePath('*'), success, error);
   }
 
   /*

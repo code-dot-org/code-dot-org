@@ -20,15 +20,25 @@ es-MX:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de
     CSEdWeek</a>'
+  csedweek_banner_teachers_text: "¿Eres profesor de Ciencias de la Computación? Mira
+    otros recursos de CSEdWeek"
   n_have_learned_an_hoc: "<h1>Prueba una</h1><h2>Hora de Código</h2><h3># intentaron</h3>"
+  try_hoc_num_served: "<h1>Prueba una</h1><h2>Hora del Código</h2><h3>%{num} participaron</h3>"
+  try_hoc_num_served_markdown: |-
+    # Prueba una\
+    \
+    ## Hora del Código\
+    \
+    ### %{num} participaron #Try an
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender
     ciencias de la computación
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
-  petition_sign_message_support: 'Si usted nos apoya, firme su nombre. Invite a #
-    otros.'
+  petition_sign_message_num: Si estás de acuerdo, firma con tu nombre y únete a nuestra
+    lista de correo junto con otras %{num} personas.
   petition_join_others: 'Únete a # otros'
+  petition_join_others_num: Únete a %{num} personas más
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -60,6 +70,8 @@ es-MX:
   hoc2014_support: Apóyalo ▾
   hoc2014_whatishoc: "¿Qué es la Hora de Programación?"
   csedweek_map_header: "# CSEdWeek / Eventos sobre Hora del Código en el mundo"
+  csedweek_map_header_num: "%{num} eventos de CSEdWeek/Hora del Código en todo el
+    mundo"
   csedweek_map_signup: Registra tu evento
   csedweek_map_search_placeholder: Busca eventos sobre Hora del Código
   csedweek_map_search_search: Buscar
@@ -232,14 +244,31 @@ es-MX:
   get_a_certificate_message_after: Haz clic en el certificado para descargarlo o imprimirlo.
     Ahora, continúa con nuestros <a href='http://studio.code.org'>otros cursos</a>,
     o vé más opciones en <a href='/learn/beyond'>Aprender más allá de Una Hora</a>.
+  get_a_certificate_message_after_markdown: Haz clic en el certificado para descargarlo
+    o imprimirlo. Ahora, continúa con nuestros [otros cursos] (http://studio.code.org),
+    o explora opciones en [Aprender más allá de una hora] (/ learn / beyond).
   thanks_for_submitting: "¡Gracias por enviar!"
   if_you_enjoyed: "¡Si te ha gustado aprender, invita a amigos para que lo intenten
     también! Queremos que todo el mundo pueda aprender."
   personalize_certificate: Personaliza tu certificado
+  print_batch_certificates: Imprime un lote de certificados
+  print_certificates: Imprimir certificados
+  certificate_sponsor_message: "%{sponsor_name} tuve el generoso gesto de patrocinar
+    tu aprendizaje."
+  print_ice_art_from_frozen: Imprimir arte de hielo de los tutoriales de Frozen
+  want_a_blank_certificate_template: "¿Quieres una plantilla de certificado en blanco
+    para escribir los nombres de tus alumnos?"
+  landscape_recommended_certificates: Se recomienda que elijas **Horizontal** cuando
+    imprimas los certificados.
+  print_one_here_certificates: Imprimir uno aquí.
+  enter_certificate_names: Ingresa hasta 30 nombres, **uno por línea**. Se generará
+    una página imprimible con certificados %{script_name} personalizados.
   share_achievement: Comparte tu logro
   beyond_hour_message: Continúa con <a href='http://studio.code.org'>otros cursos</a>
     nuestros o consulta más opciones en <a href='/learn/beyond'>Aprender más allá
     de una Hora</a>.
+  beyond_hour_message_markdown: Continúa con nuestros [otros cursos](http://studio.code.org)
+    o explora más opciones en [Aprender más allá de una hora] (/learn/beyond).
   leaderboards_for_hoc: Clasificaciones para la Hora del Código.
   support_url: http://support.code.org/
   country: País
@@ -327,6 +356,12 @@ es-MX:
     Alzate, estudiante de 5º grado'
   stats_michael: '"<b>Nunca antes</b> había visto a mis estudiantes tan entusiasmados
     por aprender" - Frank Martinez, docente'
+  stats_nina_markdown: '"Todos los días arrojaron los mismos resultados: 100 % de
+    compromiso". - Nina Nichols Peery, profesora'
+  stats_student_markdown: '"Sabía que esta sería una oportunidad **única**". - Mariana
+    Alzate, 5to grado'
+  stats_michael_markdown: '"**Jamás** he visto a mis alumnos tan entusiasmados para
+    aprender". - Frank Martinez, profesor'
   studiobar_title: Explora los <a href='http://studio.code.org'>cursos de Code.org</a>
   studiobar_title_nolink: Explora los cursos de Code.org
   studiobar_elementary_title: Cursos para escuelas primarias
@@ -411,6 +446,7 @@ es-MX:
   homepage_action_text_signpetition: Firma la petición
   homepage_action_text_wincelebritychat: Gana un chat con celebridades
   homepage_signpetition_dropdown: Firma nuestra petición ▾
+  homepage_signpetition_dropdown_text: Acepto
   homepage_diversity_pledge: Toma la promesa de diversidad
   homepage_banner_text_prizes: 'Vuelve la Hora del Código, 7-13 de Diciembre. '
   homepage_banner_link_prizes: Únete al mayor evento educativo de la historia.
@@ -513,8 +549,12 @@ es-MX:
   class_submission_languages_other: Otros idiomas
   videos_more: Más <a href='%{inspiring_videos_playlist}'>videos inspiradores</a>
     con la participación de referentes y celebridades
+  videos_more_markdown: Más [videos inspiradores] (%{inspiring_videos_playlist}) con
+    modelos de referencia y celebridades
   careers_page_more: Más <a href='%{careers_url}' target='_blank'>videos inspiradores</a>
     con la participación de profesionales en el campo de la tecnología
+  careers_page_more_markdown: Más [videos inspiradores] (%{careers_url}) con profesionales
+    de campos de la tecnología
   playlab_choose_theme: Elige el tema para tu laboratorio de juego
   playlab_classic_title: Clásico
   playlab_gumball_title: Gumball
@@ -689,18 +729,33 @@ es-MX:
     computación (que podría hacerse a través de una video conferencia). Si usted no
     está buscando ofrecerse como voluntario, <a href="%{url}"> aprenda más</a> acerca
     de organizar su propio evento de Hora de Código.'
+  volunteer_engineer_submission_intro_recruit_markdown: A los profesores les encantaría
+    tener a alguien **apasionado por la educación en la ciencia de la computación**
+    que pueda ayudar en el aula, o alguien que pueda **inspirar** a sus estudiantes
+    mediante charlas sobre la amplitud de posibilidades que brinda la ciencia de la
+    computación (lo cual podría hacerse a través de un chat de video).
   volunteer_engineer_submission_intro_guide: Conoce más sobre nuestro <a href="%{volunteer_guide}">programa
     de voluntariado aquí</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Obtén más información sobre
+    nuestro [programa de voluntarios aquí](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Ingresa la siguiente información si
     eres estudiante de ciencias de la computación o profesional de software. Debes
     tener al menos 18 años de edad para inscribirte como voluntario. Ten en cuenta
     que todos los que miren el <a href="/volunteer/local">mapa de voluntarios</a>
     verán los campos que completes en esta sección. Los campos marcados con <span
     class="form-required-field">*</span> son obligatorios.
+  volunteer_engineer_submission_intro_signup_markdown: Ingresa la siguiente información
+    si eres un estudiante de ciencias de la computación o un profesional del software.
+    Debes tener al menos 18 años para inscribirte como voluntario. Ten en cuenta que
+    todos los campos que completes en esta sección estarán disponibles públicamente
+    para cualquiera que esté mirando el [mapa de voluntarios](/volunteer/local). Los
+    campos marcados con un "*" son obligatorios.
   volunteer_engineer_submission_intro_links: ¿No está buscando ser voluntario? <a
     href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de
     Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}">
     mapa de voluntariado</a>.
+  volunteer_engineer_submission_intro_links_markdown: "¿Eres un profesor buscando
+    voluntarios? Encuentra un voluntario local en nuestro [mapa de voluntarios](%{volunteer_local})."
   volunteer_engineer_submission_update_information: Actualiza tu información
   volunteer_engineer_submission_header_shared: Información compartida con docentes
     en el mapa de voluntarios
@@ -758,6 +813,10 @@ es-MX:
     se envió correctamente. Los docentes usarán <a href="%{url}">este mapa</a> para
     buscar y contactar a voluntarios como tú. La actualización de tu información en
     el mapa puede demorar hasta 48 horas.
+  volunteer_engineer_submission_thankyou_markdown: "¡Gracias! Tu información de voluntario
+    fue enviada con éxito. Los profesores usarán [este mapa](%{url}) para buscar y
+    contactar voluntarios como tú. Espera 48 horas para que tu información aparezca
+    correctamente en el mapa."
   volunteer_engineer_submission_commitment_uncertain: Incierto
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hora por semana
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 horas por semana
@@ -1067,6 +1126,8 @@ es-MX:
   dashboard_express: 'Curso Express: '
   dashboard_unplugged: Si no tienes computadoras, <a href='%{unplugged_url}'>prueba
     estas lecciones sin conexión</a> en tu aula.
+  dashboard_unplugged_markdown: Si no tienes computadoras, [prueba estas lecciones
+    sin conexión](%{unplugged_url}) en tu aula.
   dashboard_tools: 'Herramientas: '
   dashboard_curriculum: Plan de estudios
   dashboard_curriculum_overview: Resumen del plan de estudios de preescolar a quinto
@@ -1308,13 +1369,22 @@ es-MX:
   coursed-2019_name: Curso D (2019)
   coursee-2019_name: Curso E (2019)
   coursef-2019_name: Curso F (2019)
+  coursea-2020_name: Curso A (2019)
+  courseb-2020_name: Curso B (2019)
+  coursec-2020_name: Curso C (2019)
+  coursed-2020_name: Curso D (2019)
+  coursee-2020_name: Curso E (2019)
+  coursef-2020_name: Curso F (2019)
   express-2018_name: Curso Express (2018)
   pre-express-2018_name: Curso Express para prelectores (2018)
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
+  express-2020_name: Curso Express (2019)
+  pre-express-2020_name: Curso Express para prelectores (2020)
+  csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: Curso acelerado
-  express_name: Curso Express
+  express_name: Curso Express (2018)
   pre-express_name: Curso Express para prelectores
   20-hour_name: Curso acelerado
   algebra_name: Curso completo de Ciencias de la Comunicación en el álgebra
@@ -1414,6 +1484,12 @@ es-MX:
   coursed-2019_gradelevel: Edades de 7 a 11 años
   coursee-2019_gradelevel: De 8 a 12 años
   coursef-2019_gradelevel: De 9 a 13 años
+  coursea-2020_gradelevel: De 4 a 7 años
+  courseb-2020_gradelevel: De 5 a 8 años
+  coursec-2020_gradelevel: Edades de 6 a 10 años
+  coursed-2020_gradelevel: Edades de 7 a 11 años
+  coursee-2020_gradelevel: De 8 a 12 años
+  coursef-2020_gradelevel: De 9 a 13 años
   accelerated_gradelevel: De 10 a 18 años
   codeorg_platformtext: Navegadores modernos, teléfonos inteligentes, tabletas
   codeintl_platformtext: Navegadores modernos, teléfonos inteligentes, tabletas
@@ -1608,6 +1684,28 @@ es-MX:
     C y D, y luego avanza con funciones.
   coursef-2019_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
     de Ciencias de la Computación y crea tu propio arte, historia o juego.
+  coursea-2020_shortdescription_congrats: Aprende los fundamentos de las ciencias
+    de la computación y la seguridad en Internet. Al final del curso, crea tu propio
+    juego o historia para compartir.
+  courseb-2020_shortdescription_congrats: Aprende los fundamentos de las ciencias
+    de la computación y la seguridad en Internet. Al final del curso, crea tu propio
+    juego o historia para compartir.
+  coursec-2020_shortdescription_congrats: Crea programas con secuencias, bucles y
+    eventos. Traduce tus iniciales a código binario, investiga distintas técnicas
+    de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del
+    curso podrás crear tu propio juego o historia para compartir!
+  coursed-2020_shortdescription_congrats: Los estudiantes desarrollan su comprensión
+    de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes
+    no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
+  coursee-2020_shortdescription_congrats: Empieza a programar con algoritmos, bucles,
+    condicionales y eventos, y pasa luego a las funciones. En la segunda parte de
+    este curso, diseñarás y crearás un proyecto final que puedes compartir con tus
+    amigos y familiares.
+  coursef-2020_shortdescription_congrats: Aprende a usar diferentes tipos de bucles,
+    eventos, funciones y condicionales. Investiga distintas técnicas de resolución
+    de problemas y debate sobre el impacto de la computación y de Internet en la sociedad.
+    En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir
+    con tus amigos y familiares.
   codeorg_longdescription: Aprende los conceptos básicos de las ciencias de la computación
     mediante la programación del tipo arrastrar y soltar. Este tutorial autodirigido
     similar a un juego incluye videoconferencias protagonizadas por Bill Gates, Mark
@@ -2139,6 +2237,7 @@ es-MX:
   compatibility_unsupported_browser_markdown: Tu navegador no es compatible. Actualiza
     tu navegador a [uno de nuestros navegadores compatibles](%{supported_browsers_url})
     Puedes tratar de ver la página, pero la funcionalidad podría verse afectada.
+  starwars_shortcode: estrella
   mc_shortcode: mc
   flappy_shortcode: aletear
   header_home: Inicio
@@ -2176,11 +2275,19 @@ es-MX:
   header_teacher_community: Comunidad de docentes
   header_help_support: 'Ayuda y soporte '
   header_report_bug: Reportar un error
+  header_report_abuse: Denunciar abuso
+  header_legal: Privacidad y Legalidad
+  header_legal_privacy: Política de privacidad
+  header_legal_tos: Términos de uso
   header_tutorials: Tutoriales
+  header_screen_reader_hamburger: Menú
+  header_screen_reader_help: Menú de ayuda
   app_lab_documentation: Documentación del Laboratorio de aplicaciones
   app_lab_tutorials: Tutoriales del Laboratorio de aplicaciones
   game_lab_documentation: Documentación del Laboratorio de juegos
   game_lab_tutorials: Tutoriales del Laboratorio de juegos
+  sprite_lab_documentation: Documentación del Laboratorio de sprites
+  sprite_lab_tutorials: Tutoriales del Laboratorio de sprites
   header_documentation: Documentación
   user_header_label: Hola, %{username}
   user_header_team: Equipo
@@ -2269,18 +2376,31 @@ es-MX:
   hoc_overview_dance_title: Fiesta de baile
   hoc_overview_dance_subtitle: Programa una Fiesta de baile y compártela con tus amigos.
     ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!
+  hoc_overview_dance_2019_subtitle: Programa una Fiesta de baile para compartir con
+    tus amigos. Con Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas
+    Brothers, ¡y muchos más!
   hoc_overview_title: Actividades de la Hora del Código de Code.org
   hoc_overview_subtitle: La <a href="https://hourofcode.com">Hora del Código</a> es
     un movimiento global que llega a decenas de millones de estudiantes en más 180
     países. Cualquier persona, en cualquier lugar del mundo, puede organizar una Hora
     del Código o probar uno de los más de 200 tutoriales de una hora, disponibles
     en más de 45 idiomas.
+  hoc_overview_subtitle_markdown: La [Hora del Código](https://hourofcode.com) es
+    un movimiento global que llega a decenas de millones de estudiantes en más de
+    180 países. Cualquiera, en cualquier lugar, puede organizar un evento de Hora
+    del Código o probar cualquiera de los más de 500 tutoriales de una hora, que están
+    disponibles en más de 45 idiomas.
   hoc_overview_partner_activities_title: Más actividades de nuestros socios
   hoc_overview_partner_activities_body: El sitio web de la Hora del Código cuenta
-    con más de 100 actividades sobre ciencias de la computación para todas las edades
+    con más de 500 actividades sobre ciencias de la computación para todas las edades
     y niveles de experiencia, desarrolladas por Code.org y nuestros socios.
   hoc_overview_partner_activities_link: Ver actividades
   hoc_overview_start_tutorial: Comenzar
+  hoc_overview_more_resources: Quieres más información recursos para animar a tus
+    estudiantes en tus clases remotas? consulta a nuestra guía de [Hora de Código
+    virtual](https://hourofcode.com/us/how-to/virtual). Para estudiantes sin computadoras,
+    o con poca conectividad, comparte este paquete que contiene [actividades desconectadas
+    de la Hora de Codigo]{https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Ver la guía para docentes
   hoc2018_creativity: creatividad
   hoc2018_creativity_create: Crear
@@ -2310,6 +2430,7 @@ es-MX:
   hoc2018_mc_aquatic_title: Voyage Aquatic de Minecraft
   hoc2018_mc_aquatic_description: "¡Minecraft está de vuelta para la Hora del Código
     con una actividad nueva! Viaja a través de Minecraft con códigos."
+  hoc2019_mc_aquatic_description: Explora y crea mundos submarinos a través del código.
   hoc2018_mc_hero_title: Viaje del héroe de Minecraft
   hoc2018_mc_hero_description: "¡Minecraft está de vuelta para la Hora del Código
     con una actividad nueva! Viaja a través de Minecraft con códigos."
@@ -2417,6 +2538,13 @@ es-MX:
     diseñado para inspirar, educar y formar a niños y jóvenes de bajos recursos y
     con otras necesidades, y ayudarlos a seguir una carrera en ciencias de la computación.
     <a href='%{amazon_future_engineer_link}' target='_blank'>Conoce más</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* es un programa integral que abarca desde la niñez hasta la carrera
+    y tiene el objetivo de inspirar, educar y capacitar a niños y jóvenes de bajos
+    ingresos y otros niños y jóvenes desfavorecidos para que sigan carreras en ciencias
+    de la computación. [Más información](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Si eres alumno o profesor
+    en Francia, visita [Amazon Future Engineer - France].(%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Aprende más acerca
     de Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Acerca de Amazon Future Engineer
@@ -2471,3 +2599,53 @@ es-MX:
   hoc2018_mc_thank_microsoft: Agradecemos a Microsoft por el apoyo a nuestra visión
     y misión centradas en asegurar que cada niño tenga la oportunidad de aprender
     ciencias de la computación y las habilidades para tener éxito en el siglo XXI.
+  hoc2019_mc_mee_title: Minecraft AI for Good
+  hoc2019_mc_mee_description1: 'El nuevo tutorial para Minecraft de la Hora del Código
+    ya está disponible en Minecraft: Education Edition para Windows, Mac y iPad. ¡Aprende
+    los conceptos básicos de programar y explorar la inteligencia artificial con tus
+    estudiantes!'
+  hoc2019_mc_mee_description2: Accede a recursos gratuitos que incluyen un plan de
+    lecciones, videos, un plan de estudios en ciencias de la computación y entrenamientos
+    para docentes.
+  hoc2019_mc_more_coding_resources: Más recursos para la programación
+  hoc2019_dance_previous_versions: "¿Estás buscando una versión anterior de Fiesta
+    de baile?  \nHaz clic aquí para iniciar [Parte 1](%{dance_2018_link}) y [Parte
+    2](%{dance_extras_2018_link}) del último año."
+  homepage_slot_text_title_at_home: Aprende desde casa
+  homepage_slot_text_blurb_at_home: Aprender es fácil con estos recursos
+  homepage_slot_text_link_code_break: "¡Tómate un descanso de código!"
+  homepage_slot_text_link_do_hoc: Prepara una Hora de Código
+  homepage_slot_text_link_express_course: Prueba un Curso Exprés
+  page_not_available_title: Página no disponible
+  page_not_available_description: Lo sentimos, la página que solicitó ya no está disponible
+    en esta dirección. Si todavía necesita acceso, envíe un correo electrónico a [support@code.org](%{support_email_link}).
+  page_not_available_button: Volver a la página de inicio
+  hoc2020_mc_available_code_org: Disponible en Code.org
+  hoc2020_mc_available_mee: 'Disponible en Minecraft: Edición de Educación'
+  hoc2020_mc_mee_title: Minecraft Historia de Dos Pueblos
+  hoc2020_mc_mee_description: 'El nuevo tutorial de Minecraft "Hora del Código" ya
+    está disponible en Minecraft: Edición Educativa para Windows, Mac, Chromebook
+    y iPad. Aprende los fundamentos de la codificación y explora la diversidad y la
+    inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de
+    clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de
+    igualdad y formación para docentes.'
+  footer_powered_by_aws: Impulsado por Amazon Web Services
+  footer_built_on_github: Creado en GitHub de Microsoft
+  codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras
+    mini-lecciones en vivo de CodeBytes!"
+  codebytes_skinny_banner_description: "¡Únase a nosotros cada día en la Semana de
+    la Educación en Ciencias de la Computación, para asistir a CodeBytes, lecciones
+    interactivas de 20 minutos sobre ciencias de la computación. Transmitiendo en
+    directo dos veces al día, CodeBytes es una gran manera de que los alumnos participen
+    en una #HoraDelCódigo virtual."
+  codebytes_skinny_banner_english_only: Solo en inglés
+  codebytes_skinny_banner_learn: Más información en [code.org/codebytes](%{code_bytes_url}).
+  footer_privacy_policy: Política de privacidad
+  footer_privacy_policy_updated: Política de privacidad (actualizada)
+  footer_about: Acerca de
+  footer_partners: Socios
+  footer_blog: Blog
+  footer_donate: Dona
+  footer_store: Tienda
+  footer_support: Soporte
+  footer_terms: Términos

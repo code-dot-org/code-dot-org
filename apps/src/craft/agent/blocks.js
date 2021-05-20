@@ -1,60 +1,5 @@
-var i18n = require('./locale');
-
-var blocksToDisplayText = {
-  bedrock: i18n.blockTypeBedrock(),
-  bricks: i18n.blockTypeBricks(),
-  clay: i18n.blockTypeClay(),
-  oreCoal: i18n.blockTypeOreCoal(),
-  dirtCoarse: i18n.blockTypeDirtCoarse(),
-  doorIron: i18n.blockTypeDoorIron(),
-  cobblestone: i18n.blockTypeCobblestone(),
-  oreDiamond: i18n.blockTypeOreDiamond(),
-  dirt: i18n.blockTypeDirt(),
-  oreEmerald: i18n.blockTypeOreEmerald(),
-  farmlandWet: i18n.blockTypeFarmlandWet(),
-  glass: i18n.blockTypeGlass(),
-  glowstone: i18n.blockTypeGlowstone(),
-  oreGold: i18n.blockTypeOreGold(),
-  grass: i18n.blockTypeGrass(),
-  gravel: i18n.blockTypeGravel(),
-  ice: i18n.blockTypeIce(),
-  snow: i18n.blockTypeSnow(),
-  netherrack: i18n.blockTypeNetherrack(),
-  netherBrick: i18n.blockTypeNetherBrick(),
-  clayHardened: i18n.blockTypeClayHardened(),
-  oreIron: i18n.blockTypeOreIron(),
-  oreLapis: i18n.blockTypeOreLapis(),
-  lava: i18n.blockTypeLava(),
-  logAcacia: i18n.blockTypeLogAcacia(),
-  logBirch: i18n.blockTypeLogBirch(),
-  logJungle: i18n.blockTypeLogJungle(),
-  logOak: i18n.blockTypeLogOak(),
-  logSpruce: i18n.blockTypeLogSpruce(),
-  planksAcacia: i18n.blockTypePlanksAcacia(),
-  planksBirch: i18n.blockTypePlanksBirch(),
-  planksJungle: i18n.blockTypePlanksJungle(),
-  planksOak: i18n.blockTypePlanksOak(),
-  planksSpruce: i18n.blockTypePlanksSpruce(),
-  pressurePlateUp: i18n.blockTypePressurePlateUp(),
-  oreRedstone: i18n.blockTypeOreRedstone(),
-  rails: i18n.blockTypeRail(),
-  railsRedstoneTorch: i18n.blockTypeRailsRedstoneTorch(),
-  redstoneWire: i18n.blockTypeRedstoneWire(),
-  sand: i18n.blockTypeSand(),
-  sandstone: i18n.blockTypeSandstone(),
-  stone: i18n.blockTypeStone(),
-  tnt: i18n.blockTypeTnt(),
-  tree: i18n.blockTypeTree(),
-  water: i18n.blockTypeWater(),
-  wool: i18n.blockTypeWool(),
-  wool_orange: i18n.blockTypeWoolOrange(),
-  wool_blue: i18n.blockTypeWoolBlue(),
-  wool_magenta: i18n.blockTypeWoolMagenta(),
-  wool_pink: i18n.blockTypeWoolPink(),
-  wool_red: i18n.blockTypeWoolRed(),
-  wool_yellow: i18n.blockTypeWoolYellow(),
-  '': i18n.blockTypeEmpty()
-};
+var i18n = require('../locale');
+import {blockTypesToDropdownOptions} from '../utils';
 
 var allBlocks = [
   'bedrock',
@@ -94,13 +39,6 @@ var allBlocks = [
   'wool'
 ];
 
-function keysToDropdownOptions(keysList) {
-  return keysList.map(function(key) {
-    var displayText = blocksToDisplayText[key] || key;
-    return [displayText, key];
-  });
-}
-
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var dropdownBlocks = (blockInstallOptions.level.availableBlocks || []).concat(
@@ -138,7 +76,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_moveForward = function() {
+  blockly.getGenerator().craft_moveForward = function() {
     return "moveForward('block_id_" + this.id + "');\n";
   };
 
@@ -154,7 +92,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_moveBackward = function() {
+  blockly.getGenerator().craft_moveBackward = function() {
     return "moveBackward('block_id_" + this.id + "');\n";
   };
 
@@ -177,7 +115,7 @@ exports.install = function(blockly, blockInstallOptions) {
     [i18n.blockTurnRight() + ' \u21BB', 'right']
   ];
 
-  blockly.Generator.get('JavaScript').craft_turn = function() {
+  blockly.getGenerator().craft_turn = function() {
     // Generate JavaScript for turning left or right.
     var dir = this.getTitleValue('DIR');
     var methodCall = dir === 'left' ? 'turnLeft' : 'turnRight';
@@ -196,14 +134,14 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_destroyBlock = function() {
+  blockly.getGenerator().craft_destroyBlock = function() {
     return "destroyBlock('block_id_" + this.id + "');\n";
   };
 
   blockly.Blocks.craft_ifBlockAhead = {
     helpUrl: '',
     init: function() {
-      var dropdownOptions = keysToDropdownOptions(
+      var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.ifBlockOptions || allDropdownBlocks
       );
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
@@ -219,11 +157,8 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_ifBlockAhead = function() {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(
-      this,
-      'DO'
-    );
+  blockly.getGenerator().craft_ifBlockAhead = function() {
+    var innerCode = blockly.getGenerator().statementToCode(this, 'DO');
     var blockType = this.getTitleValue('TYPE');
     return (
       'ifBlockAhead("' +
@@ -247,11 +182,8 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_ifLavaAhead = function() {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(
-      this,
-      'DO'
-    );
+  blockly.getGenerator().craft_ifLavaAhead = function() {
+    var innerCode = blockly.getGenerator().statementToCode(this, 'DO');
     return (
       'ifLavaAhead(function() {\n' +
       innerCode +
@@ -264,7 +196,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_placeBlock = {
     helpUrl: '',
     init: function() {
-      var dropdownOptions = keysToDropdownOptions(
+      var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
@@ -279,7 +211,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_placeBlock = function() {
+  blockly.getGenerator().craft_placeBlock = function() {
     var blockType = this.getTitleValue('TYPE');
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + "');\n";
   };
@@ -294,7 +226,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_placeBlockDirection = {
     helpUrl: '',
     init: function() {
-      var dropdownOptions = keysToDropdownOptions(
+      var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
@@ -311,7 +243,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_placeBlockDirection = function() {
+  blockly.getGenerator().craft_placeBlockDirection = function() {
     var blockType = this.getTitleValue('TYPE');
     var direction = this.getTitleValue('DIR');
     return (

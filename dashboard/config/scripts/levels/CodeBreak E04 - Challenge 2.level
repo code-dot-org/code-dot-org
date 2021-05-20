@@ -1,0 +1,33 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-04-10T19:10:58.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Use 3-bit color to create a scene with a balloon in the color of your choice. ",
+    "long_instructions": "Do This: Use 3-bit color to create a scene with a balloon in the color of your choice.  Share the image you create using the hashtag #CodeBreak or emailing it to <codebreatech@code.org>. \r\n\r\n**Note:** Remember, you can ignore the 0's and 1's that are already on the screen when you start. These are setting up the length and width and the number of bits. If you accidentally delete them, you can reset the level! \r\n\r\nExample:\r\n\r\n![](https://images.code.org/6a659ad1b2f7ed81a39fd20f6a7dad44-image-1586546583512.png)",
+    "version": "3",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "true",
+    "parent_level_id": 23193,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "v1_initial_width": "10",
+    "v1_initial_height": "10",
+    "display_name": "Beginner Challenge: Create Your Own Balloon",
+    "bubble_choice_description": "Use 3-bit color to create a scene with a balloon in the color of your choice. ",
+    "data": "0000 1111\r\n0000 1111\r\n0000 0011",
+    "thumbnail_url": "https://images.code.org/d08d5ca6fb7b26e4d6dcebcbd59ca84d-image-1586546603741.gif"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-09 22:03:49 +0000\",\"changed\":[\"markdown_instructions\",\"video_key\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2019-07-22 15:00:03 +0000\",\"changed\":[\"version\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:00:39 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:01:28 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:32 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:52 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 17:56:21 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\",\"v1_hide_sliders\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 17:56:53 +0000\",\"changed\":[\"hide_encoding_controls\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 18:05:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 19:04:17 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"v1_initial_width\",\"v1_initial_height\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 19:09:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 19:14:47 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"version\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 19:23:38 +0000\",\"changed\":[\"long_instructions\",\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>

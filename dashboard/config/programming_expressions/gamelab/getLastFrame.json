@@ -1,0 +1,7 @@
+{
+  "func": "getLastFrame",
+  "category": "Animations",
+  "modeOptionName": "*.getLastFrame",
+  "type": "value",
+  "noAutocomplete": true
+}

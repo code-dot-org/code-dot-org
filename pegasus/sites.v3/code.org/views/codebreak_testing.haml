@@ -1,0 +1,48 @@
+:javascript
+  // Set the date we're counting down to
+  // THIS CODE NEEDS TO CHANGE EACH WEEK
+  var episode1 = new Date(Date.UTC(
+    2020, // set this to the year
+    3,    // set this to the month minus one (JavaScript months start at 0
+    27,    // set this to the day
+    16,   // don't change this (hours in UTC)
+    58,   // don't change this (minutes)
+    0,    // don't change this (seconds)
+    0     // don't change this (milliseconds)
+  ));
+
+  // SWAP THE //s IN THE LINE BELOW TO SWITCH FROM DEMO TO REAL
+  //var countDownDate = new Date(Date.now() + 10000).getTime(); // THIS IS FOR TESTING
+  var countDownDate = episode1.getTime();  // THIS SETS THE REAL COUNTDOWN
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    //   document.getElementById("demo").innerHTML = days + " days | " + hours + " hours | " +
+    //   minutes + " minutes | " + seconds + " seconds";
+    document.getElementById("demo").innerHTML = "<span style='white-space: nowrap;'>" + days + " days | </span><span style='white-space: nowrap;'>" + hours + " hours |</span><span style='white-space: nowrap;'> " +
+      minutes + " minutes |</span><span style='white-space: nowrap;'> " + seconds + " seconds</span>";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "<a href='https://codebreak.live/now'>Click <u>here</u> to join Code Break!</a>";
+    }
+  }, 1000);
+
+%div{:style => "color:#00adbc; padding: 20px;"}
+  %p#demo.countdown-live{:style => "text-align:center; font-size: 28px; font-weight: bold; line-height:1.2em;"}
+

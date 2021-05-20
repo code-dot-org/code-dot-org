@@ -8,43 +8,6 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '../../../../templates/SafeMarkdown';
 
-const styles = {
-  subtitle: {
-    fontSize: 16
-  },
-  form: {
-    margin: '10px 0'
-  },
-  signature: {
-    margin: '5px 0'
-  },
-  signatureBox: {
-    height: 40,
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: 10
-  },
-  checkboxes: {
-    paddingLeft: 5,
-    marginBottom: 20
-  },
-  checkboxLabel: {
-    marginLeft: 25
-  },
-  checkbox: {
-    marginLeft: -25,
-    width: 25
-  },
-  error: {
-    color: 'red',
-    marginTop: 20
-  },
-  bold: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    display: 'inline'
-  }
-};
-
 export default class EligibilityConfirmDialog extends Component {
   static propTypes = {
     onCancel: PropTypes.func.isRequired,
@@ -151,11 +114,13 @@ export default class EligibilityConfirmDialog extends Component {
         {this.state.error && <div style={styles.error}>{this.state.error}</div>}
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.props.onCancel}
             color={Button.ButtonColor.gray}
           />
           <Button
+            __useDeprecatedTag
             text={i18n.getCode()}
             onClick={this.handleSubmit}
             disabled={!this.state.validInput || this.state.submitting}
@@ -165,6 +130,43 @@ export default class EligibilityConfirmDialog extends Component {
     );
   }
 }
+
+const styles = {
+  subtitle: {
+    fontSize: 16
+  },
+  form: {
+    margin: '10px 0'
+  },
+  signature: {
+    margin: '5px 0'
+  },
+  signatureBox: {
+    height: 40,
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: 10
+  },
+  checkboxes: {
+    paddingLeft: 5,
+    marginBottom: 20
+  },
+  checkboxLabel: {
+    marginLeft: 25
+  },
+  checkbox: {
+    marginLeft: -25,
+    width: 25
+  },
+  error: {
+    color: 'red',
+    marginTop: 20
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline'
+  }
+};
 
 const verifySignatureMd = `
 **Electronic Signature** (type your first and last name below):

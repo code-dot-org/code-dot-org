@@ -94,17 +94,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE2_NAME)
     assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE3_NAME)
     assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE4_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::MINECRAFT_NAME)
     assert_certificate_url_encodes user, Script.get_from_cache(Script::ARTIST_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::INFINITY_NAME)
-  end
-
-  test 'client state lines' do
-    assert_equal 0, client_state.lines
-    client_state.add_lines 10
-    assert_equal 10, client_state.lines
-    client_state.add_lines 1
-    assert_equal 11, client_state.lines
   end
 
   test 'client state level progress' do
@@ -125,11 +115,6 @@ class ApplicationHelperTest < ActionView::TestCase
   # versions of the client state, as would happen if we roll back from a future
   # version.
   test 'client state migration' do
-    session[:lines] = 37
-    assert_equal 37, client_state.lines
-    assert_equal '37', cookies[:lines]
-    assert_nil session[:lines]
-
     script = create :script, name: 'progress-test'
     sl = create(:script_level, script: script)
     data = {'progress-test' => {sl.level_id => 100}}
@@ -191,14 +176,18 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '/sharing_drawing.png', meta_image_url(level: Artist.first)
     assert_equal '/studio_sharing_drawing.png', meta_image_url(level: Studio.first)
     assert_equal '/bounce_sharing_drawing.png', meta_image_url(level: Game.find_by_app('Bounce').levels.first)
-    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level: Game.find_by_app('Flappy').levels.first)
+    level = create :level, game: Game.find_by_app('Flappy')
+    level_source = create(:level_source, level: level)
+    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
 
   test 'meta_image_url for level_source without image' do
     assert_equal '/sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Artist.first))
     assert_equal '/studio_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Studio.first))
     assert_equal '/bounce_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Game.find_by_app('Bounce').levels.first))
-    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Game.find_by_app('Flappy').levels.first))
+    level = create :level, game: Game.find_by_app('Flappy')
+    level_source = create(:level_source, level: level)
+    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
 
   test 'meta_image_url for level_source with image' do

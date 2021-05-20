@@ -62,7 +62,7 @@ export function renderTeacherPanel(
  * Query the server for lock status of this teacher's students
  * @returns {Promise} when finished
  */
-export function queryLockStatus(store, scriptId) {
+export function queryLockStatus(store, scriptId, pageType) {
   return new Promise((resolve, reject) => {
     $.ajax('/api/lock_status', {
       data: {script_id: scriptId}
@@ -73,12 +73,18 @@ export function queryLockStatus(store, scriptId) {
         name: section.section_name
       }));
 
-      store.dispatch(setSections(teacherSections));
-      store.dispatch(setSectionLockStatus(data));
-      const query = queryString.parse(location.search);
-      if (query.section_id) {
-        store.dispatch(selectSection(query.section_id));
+      // Don't dispatch setSections on script overview pages because setSections
+      // has already been dispatched on those pages with data specific to which
+      // sections are assigned to the script for the TeacherSectionSeletor.
+      if (pageType !== 'script_overview') {
+        store.dispatch(setSections(teacherSections));
+        const query = queryString.parse(location.search);
+        if (query.section_id) {
+          store.dispatch(selectSection(query.section_id));
+        }
       }
+
+      store.dispatch(setSectionLockStatus(data));
       resolve();
     });
   });

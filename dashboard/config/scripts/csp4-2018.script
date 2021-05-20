@@ -1,55 +1,54 @@
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp-18/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit4/standards/"], ["professionalLearning", "https://studio.code.org/s/csp4-support"]]
 has_verified_resources true
-has_lesson_plan true
-script_announcements [{"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Student-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Student-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csp4'
 version_year '2018'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
-stage 'What is Big Data?', flex_category: 'csp4_1_2018'
+lesson_group 'csp4_1_2018', display_name: 'Unit 4: Big Data and Privacy'
+lesson 'What is Big Data?', display_name: 'What is Big Data?', has_lesson_plan: true
 level 'CSP U4L01 SFLP', named: true
 level 'U4L1 - MC moores law_2018', progression: 'Check Your Understanding', assessment: true
 level 'U4L1 - MC big data def_2018', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-5-levelgroup-U4Ch1_2018', progression: 'Quick Check-In', assessment: true
 
-stage 'Finding Trends with Visualizations', flex_category: 'csp4_1_2018'
+lesson 'Finding Trends with Visualizations', display_name: 'Finding Trends with Visualizations', has_lesson_plan: true
 level 'CSP U2L08 SFLP', named: true
 level 'U2L8 google trends MC_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L8 google trends hypothesis_2018', progression: 'Check Your Understanding', assessment: true
 level 'CSP Unit 4 google trends MC_2018', progression: 'Check Your Understanding', assessment: true
 level 'CSP Unit 4 trends as predictors_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Check Your Assumptions', flex_category: 'csp4_1_2018'
+lesson 'Check Your Assumptions', display_name: 'Check Your Assumptions', has_lesson_plan: true
 level 'CSP U2L09 SFLP', named: true
 level 'U2L9 What is digital divide MC_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L9 FR digital divide issue_2018', progression: 'Check Your Understanding', assessment: true
 level 'CSP Unit 4 MC data bias_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Rapid Research - Data Innovations', flex_category: 'csp4_1_2018'
+lesson 'Rapid Research - Data Innovations', display_name: 'Rapid Research - Data Innovations', has_lesson_plan: true
 level 'CSP U4L02 SFLP', named: true
 level 'Video - Data and Medicine_2018', progression: 'Data and Medicine'
 level 'Video - CS is Changing Everything_2018', progression: 'CS is Changing Everything'
 level 'U4L2 - FR Practice AP response about data_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Identifying People with Data', flex_category: 'csp4_1_2018'
+lesson 'Identifying People with Data', display_name: 'Identifying People with Data', has_lesson_plan: true
 level 'CSP U4L03 SFLP', named: true
 level 'U4-AP-Practice-Choose-The-Data-Concern_2018'
 level 'U4L3 - FR Identifying people_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'The Cost of Free', flex_category: 'csp4_1_2018'
+lesson 'The Cost of Free', display_name: 'The Cost of Free', has_lesson_plan: true
 level 'CSP U4L04 SFLP', named: true
 level 'U4-AP-Practice-Justify-the-Score_2018', named: true
 level 'U4L4 - MC cost of free_2018', progression: 'Check Your Understanding', assessment: true
 level 'U4L4 - FR cost of free_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Simple Encryption', flex_category: 'csp4_1_2018'
+lesson 'Simple Encryption', display_name: 'Simple Encryption', has_lesson_plan: true
 level 'CSP U4L05 SFLP', named: true
 level 'Crack a Caesar Cipher_2018', progression: 'Crack a Caesar Cipher', named: true
 level 'Terminology Recap_2018', progression: 'Terminology Recap', named: true
@@ -63,7 +62,7 @@ level 'U2L13 Assessment4_2018', progression: 'Check Your Understanding', assessm
 level 'U2L13 Free Response Wrap Up_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L14 Free Response Wrap Up_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Encryption with Keys and Passwords', flex_category: 'csp4_1_2018'
+lesson 'Encryption with Keys and Passwords', display_name: 'Encryption with Keys and Passwords', has_lesson_plan: true
 level 'CSP U4L06 SFLP', named: true
 level 'The Vigenere Cipher Widget_2018', progression: 'The Vigenere Cipher Widget', named: true
 level 'How Secure Is Your Password?_2018', progression: 'How Secure Is Your Password?', named: true
@@ -74,7 +73,7 @@ level 'U2L14 Free Response Wrap Up_2018', progression: 'Check Your Understanding
 level 'U2L14 Assessment2_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L15 Assessment1_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Public Key Crypto', flex_category: 'csp4_1_2018'
+lesson 'Public Key Crypto', display_name: 'Public Key Crypto', has_lesson_plan: true
 level 'CSP U4L07 SFLP', named: true
 level 'Video - Encryption and Public Keys_2018', progression: 'Encryption and Public Keys', named: true
 level 'Cups and Beans Activity_2018', progression: 'Cups and Beans Activity', named: true
@@ -89,12 +88,15 @@ level 'U2L19 mutlichoice 20 mod 15_2018', progression: 'Check Your Understanding
 level 'U2L19 multichoice 13 MOD 17_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L19 Free Response Wrap Up_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Rapid Research - Cybercrime', flex_category: 'csp4_1_2018'
+lesson 'Rapid Research - Cybercrime', display_name: 'Rapid Research - Cybercrime', has_lesson_plan: true
 level 'CSP U4L08 SFLP', named: true
 level 'Video - Cybersecurity and Crime_2018', progression: 'Cybersecurity and Crime', named: true
 
-stage 'Unit 4 Assessment', lockable: true, flex_category: 'cspAssessment'
+lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
+lesson 'Unit 4 Assessment', display_name: 'Unit 4 Assessment', lockable: true, has_lesson_plan: false
 level 'CSP Unit 4 Ch1 Cumulative Assessment MC_2018', assessment: true
 
-stage 'CS Principles Post-Course Survey', flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: true
 level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
+

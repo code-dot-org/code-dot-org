@@ -1,0 +1,2399 @@
+{
+  "script": {
+    "name": "csp2-support",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "professional_learning_course": "CSP Support",
+      "peer_reviews_to_complete": 4,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:54 UTC",
+    "seeding_key": {
+      "script.name": "csp2-support"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "practice",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Teaching Practices"
+      },
+      "seeding_key": {
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Unit 2 Overview",
+      "name": "Unit 2 Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "AP Preparation and Support",
+      "name": "AP Preparation and Support",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+      "name": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Lessons 3 - 4 : Encoding Images",
+      "name": "Lessons 3 - 4 : Encoding Images",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+      "name": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Lessons 7 - 10: Interpreting Visual Data",
+      "name": "Lessons 7 - 10: Interpreting Visual Data",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Lessons 11 - 15: Communicating with Visualizations",
+      "name": "Lessons 11 - 15: Communicating with Visualizations",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Group Work and Peer Learning",
+      "name": "Group Work and Peer Learning",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Balancing Teachers and Tools",
+      "name": "Balancing Teachers and Tools",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Discovery Learning",
+      "name": "Discovery Learning",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "key": "Measuring Student Learning",
+      "name": "Measuring Student Learning",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What's inside and how is it organized?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What's inside and how is it organized?"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "What's inside and how is it organized?"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to Unit 2"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Unit 2"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Introduction to Unit 2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Curriculum Framework Connections in Unit 2"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Curriculum Framework Connections in Unit 2"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Curriculum Framework Connections in Unit 2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Tool Talk"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Tool Talk"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Unit 2 Tool Talk"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Practice Performance Tasks in Unit 2"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Practice Performance Tasks in Unit 2"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Practice Performance Tasks in Unit 2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Self-Assessment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Self-Assessment"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Unit 2 Self-Assessment"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Vocab and Concept Review Activity"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Vocab and Concept Review Activity"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Unit 2 Vocab and Concept Review Activity"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AP Test Prep Guidance"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AP Test Prep Guidance"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "AP Test Prep Guidance"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "2.1 and 2.2 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2.1 and 2.2 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "2.1 and 2.2 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview of File Sizes and Metrics"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview of File Sizes and Metrics"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Overview of File Sizes and Metrics"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to Lossless Compression and the Text Compression Widget"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Lossless Compression and the Text Compression Widget"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Introduction to Lossless Compression and the Text Compression Widget"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is a Heuristic?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is a Heuristic?"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "What is a Heuristic?"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "How to: Text Compression Widget"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How to: Text Compression Widget"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "How to: Text Compression Widget"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Widget: Text Compression"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Widget: Text Compression"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Widget: Text Compression"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Task: Write your own Heuristic"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Task: Write your own Heuristic"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Task: Write your own Heuristic"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2 L1 - 2: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2 L1 - 2: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "U2 L1 - 2: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "2.3 and 2.4 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2.3 and 2.4 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "2.3 and 2.4 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "How are Images Encoded?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How are Images Encoded?"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "How are Images Encoded?"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "A Note On Metadata in the Curriculum Framework"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "A Note On Metadata in the Curriculum Framework"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "A Note On Metadata in the Curriculum Framework"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Widget: Black and White Pixelation"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Widget: Black and White Pixelation"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Widget: Black and White Pixelation"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Binary, Hex, and Images"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Binary, Hex, and Images"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Binary, Hex, and Images"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Widget: Color Pixelation"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Widget: Color Pixelation"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Widget: Color Pixelation"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Task: Make your own Favicon"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Task: Make your own Favicon"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Task: Make your own Favicon"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2 L3 - 4: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2 L3 - 4: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "U2 L3 - 4: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "2.5 and 2.6 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2.5 and 2.6 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "2.5 and 2.6 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to Lossy Compression"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Lossy Compression"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Introduction to Lossy Compression"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lossy vs. Lossless Compression"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lossy vs. Lossless Compression"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Lossy vs. Lossless Compression"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Task: Encode an Experience"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Task: Encode an Experience"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Task: Encode an Experience"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2 L5 - 6: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2 L5 - 6: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "U2 L5 - 6: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "2.7 -  10 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2.7 -  10 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "2.7 -  10 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "How to: Setup your Class Data Tracker"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How to: Setup your Class Data Tracker"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "How to: Setup your Class Data Tracker"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Correlation vs Causation"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Correlation vs Causation"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Correlation vs Causation"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "How to: Use Google Trends"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How to: Use Google Trends"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "How to: Use Google Trends"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Task: Explore Google Trends"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Task: Explore Google Trends"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Task: Explore Google Trends"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What Makes an Effective Visualization?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What Makes an Effective Visualization?"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "What Makes an Effective Visualization?"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Data Visualizations 101"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Visualizations 101"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Data Visualizations 101"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2 L7 - 10: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2 L7 - 10: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "U2 L7 - 10: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "2.11 - 15 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2.11 - 15 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "2.11 - 15 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "How to: Make Charts from your Data"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How to: Make Charts from your Data"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "How to: Make Charts from your Data"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Selecting an Appropriate Visualization for your Data"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Selecting an Appropriate Visualization for your Data"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Selecting an Appropriate Visualization for your Data"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Cleaning Data"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Cleaning Data"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Cleaning Data"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Summary Tables 101"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Summary Tables 101"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Summary Tables 101"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2 L11 - 15: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2 L11 - 15: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "U2 L11 - 15: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Overview: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Collaborative Learning and Group Work: Description and Strategies"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "The Official Peer Instruction Blog"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "the Journal of Peer Learning"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Overview: Balancing Teachers and Tools"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Classroom Management Tips for School Computer Labs"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Considerations for the 1-to-1 Classroom"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Overview: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Discovery learning definition and history"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Discovery learning techniques"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Teaching Practice Plan: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Teaching Practice Plan: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Unit 2 Teaching Practice Plan: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Overview: Capturing Student Learning"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "What is the difference between formative and summative assessment?"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Designing Assessment Questions"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Designing Assessment Questions"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Designing Assessment Questions"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Classroom Assessment Techniques"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Teaching Practice Plan: Assessing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Teaching Practice Plan: Assessing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      },
+      "level_keys": [
+        "Unit 2 Teaching Practice Plan: Assessing Student Learning"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "What's inside and how is it organized?",
+        "script_level.level_keys": [
+          "What's inside and how is it organized?"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Unit 2",
+        "script_level.level_keys": [
+          "Introduction to Unit 2"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Curriculum Framework Connections in Unit 2",
+        "script_level.level_keys": [
+          "Curriculum Framework Connections in Unit 2"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Tool Talk",
+        "script_level.level_keys": [
+          "Unit 2 Tool Talk"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Practice Performance Tasks in Unit 2",
+        "script_level.level_keys": [
+          "Practice Performance Tasks in Unit 2"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Self-Assessment",
+        "script_level.level_keys": [
+          "Unit 2 Self-Assessment"
+        ],
+        "lesson.key": "Unit 2 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Vocab and Concept Review Activity",
+        "script_level.level_keys": [
+          "Unit 2 Vocab and Concept Review Activity"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AP Test Prep Guidance",
+        "script_level.level_keys": [
+          "AP Test Prep Guidance"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2.1 and 2.2 Lesson Connections",
+        "script_level.level_keys": [
+          "2.1 and 2.2 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview of File Sizes and Metrics",
+        "script_level.level_keys": [
+          "Overview of File Sizes and Metrics"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Lossless Compression and the Text Compression Widget",
+        "script_level.level_keys": [
+          "Introduction to Lossless Compression and the Text Compression Widget"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is a Heuristic?",
+        "script_level.level_keys": [
+          "What is a Heuristic?"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How to: Text Compression Widget",
+        "script_level.level_keys": [
+          "How to: Text Compression Widget"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Widget: Text Compression",
+        "script_level.level_keys": [
+          "Widget: Text Compression"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Task: Write your own Heuristic",
+        "script_level.level_keys": [
+          "Task: Write your own Heuristic"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2 L1 - 2: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U2 L1 - 2: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2.3 and 2.4 Lesson Connections",
+        "script_level.level_keys": [
+          "2.3 and 2.4 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How are Images Encoded?",
+        "script_level.level_keys": [
+          "How are Images Encoded?"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "A Note On Metadata in the Curriculum Framework",
+        "script_level.level_keys": [
+          "A Note On Metadata in the Curriculum Framework"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Widget: Black and White Pixelation",
+        "script_level.level_keys": [
+          "Widget: Black and White Pixelation"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Binary, Hex, and Images",
+        "script_level.level_keys": [
+          "Binary, Hex, and Images"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Widget: Color Pixelation",
+        "script_level.level_keys": [
+          "Widget: Color Pixelation"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Task: Make your own Favicon",
+        "script_level.level_keys": [
+          "Task: Make your own Favicon"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2 L3 - 4: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U2 L3 - 4: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 3 - 4 : Encoding Images",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2.5 and 2.6 Lesson Connections",
+        "script_level.level_keys": [
+          "2.5 and 2.6 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Lossy Compression",
+        "script_level.level_keys": [
+          "Introduction to Lossy Compression"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lossy vs. Lossless Compression",
+        "script_level.level_keys": [
+          "Lossy vs. Lossless Compression"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Task: Encode an Experience",
+        "script_level.level_keys": [
+          "Task: Encode an Experience"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2 L5 - 6: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U2 L5 - 6: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2.7 -  10 Lesson Connections",
+        "script_level.level_keys": [
+          "2.7 -  10 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How to: Setup your Class Data Tracker",
+        "script_level.level_keys": [
+          "How to: Setup your Class Data Tracker"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Correlation vs Causation",
+        "script_level.level_keys": [
+          "Correlation vs Causation"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How to: Use Google Trends",
+        "script_level.level_keys": [
+          "How to: Use Google Trends"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Task: Explore Google Trends",
+        "script_level.level_keys": [
+          "Task: Explore Google Trends"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What Makes an Effective Visualization?",
+        "script_level.level_keys": [
+          "What Makes an Effective Visualization?"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Data Visualizations 101",
+        "script_level.level_keys": [
+          "Data Visualizations 101"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2 L7 - 10: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U2 L7 - 10: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 7 - 10: Interpreting Visual Data",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2.11 - 15 Lesson Connections",
+        "script_level.level_keys": [
+          "2.11 - 15 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How to: Make Charts from your Data",
+        "script_level.level_keys": [
+          "How to: Make Charts from your Data"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Selecting an Appropriate Visualization for your Data",
+        "script_level.level_keys": [
+          "Selecting an Appropriate Visualization for your Data"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Cleaning Data",
+        "script_level.level_keys": [
+          "Cleaning Data"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Summary Tables 101",
+        "script_level.level_keys": [
+          "Summary Tables 101"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2 L11 - 15: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U2 L11 - 15: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 11 - 15: Communicating with Visualizations",
+        "lesson_group.key": "content",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Collaborative Learning and Group Work: Description and Strategies",
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Official Peer Instruction Blog",
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "the Journal of Peer Learning",
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Teaching Practice Plan: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Balancing Teachers and Tools",
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Management Tips for School Computer Labs",
+        "script_level.level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Considerations for the 1-to-1 Classroom",
+        "script_level.level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools",
+        "script_level.level_keys": [
+          "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Discovery Learning",
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning definition and history",
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning techniques",
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Teaching Practice Plan: Discovery Learning",
+        "script_level.level_keys": [
+          "Unit 2 Teaching Practice Plan: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Capturing Student Learning",
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is the difference between formative and summative assessment?",
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Designing Assessment Questions",
+        "script_level.level_keys": [
+          "Designing Assessment Questions"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Assessment Techniques",
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Teaching Practice Plan: Assessing Student Learning",
+        "script_level.level_keys": [
+          "Unit 2 Teaching Practice Plan: Assessing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp2-support"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

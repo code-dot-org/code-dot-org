@@ -38,10 +38,10 @@
     "validation_code": "if(Math.floor(nativeAPI.getTime(\"measures\")) > 6){\r\n  if (sprites.length >1) {\r\n    if (sprites.length>3) {\r\n     \tnativeAPI.fail(\"danceFeedbackTooManyDancers\"); \r\n    } else {\r\n  \t\tnativeAPI.pass();\r\n    }\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackNeedMakeANewDancer\");\r\n  }\r\n}",
     "block_pool": "Dancelab",
     "preload_asset_list": [
-      "https://curriculum.code.org/images/sprites/dance_20181127/alien_00.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/alien_01.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/alien_02.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/alien_03.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/alien_00.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/alien_01.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/alien_02.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/alien_03.png"
     ],
     "custom_helper_library": "World.SPRITE_NAMES = [\"ALIEN\", \"CAT\", \"DUCK\", \"MOOSE\", \"ROBOT\"];",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_06\",\r\n  \"callout_text\": \"Add your new dancer here\",\r\n  \"element_id\": \".svgGroup [block-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",

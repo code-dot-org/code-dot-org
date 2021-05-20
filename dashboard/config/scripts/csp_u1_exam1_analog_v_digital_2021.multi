@@ -1,0 +1,27 @@
+name 'csp-u1-exam1-analog-v-digital_2021'
+height 'auto'
+
+question 'When visiting a museum Lian takes a photo of a painting with a smartphone which stores the photo as an image file. Which of the following best describes the differences between the painting itself and the photo of the painting stored on the smartphone?'
+wrong ‘Both the painting and the photo are analog’
+right ‘The photo is a digital representation of the analog painting’
+wrong ‘Sampling can be used to determine whether the analog image is an accurate representation of the painting’
+wrong ‘The phone can represent the photo in either digital or analog formats depending on the sampling technique that is used’
+
+teacher_markdown <<MARKDOWN
+**Explanation:** A painting is an analog because it’s something with continuous representation. A digital photo changes discreetly at every pixel using a finite set of colors.
+
+The came up in [Lesson 7 - Black and White Images](https://curriculum.code.org/csp-20/unit1/7/)
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+DAT-1.A.8: Analog data have values that change smoothly, rather than in discrete intervals, over time. Some examples of analog data include pitch and volume of music, colors of a painting, or position of a sprinter during a race.  
+
+DAT-1.A.9: The use of digital data to approximate real-world analog data is an example of abstraction.
+
+DAT-1.A.10: Analog data can be closely approximated digitally using a sampling technique, which means measuring values of the analog signal at regular intervals called samples. The samples are measured to figure out the exact bits required to store each sample.
+:::
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,6 +1,42 @@
 %h1= @page_title = "Editing script '#{@script.name}'"
 
-= render 'form'
+= form_for(@script || :script, @script ? {} : {url: scripts_path}) do |f|
+  - if @script && @script.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@script.errors.count, 'error')
+        prohibited this script from being saved:
+      %ul
+        - @script.errors.full_messages.each do |msg|
+          %li= msg
+  - if @script.nil? || @script.new_record?
+    .field
+      = f.label :name
+      = f.text_field :name
+  - else
+    = f.hidden_field :name
+  .edit_container
+  %script{src: webpack_asset_path('js/scripts/edit.js'),
+          data: {levelBuilderEditScript: @script_data.to_json}}
+
+- if @show_all_instructions
+  - @script.lessons.each do |stage|
+    %br
+      %h1= stage.localized_title
+      %br
+      - stage.script_levels.each do |sl|
+        %div{style: 'padding-left:40px'}
+          = link_to edit_level_path(sl.level) do
+            %h2= "Puzzle #{sl.position} Instructions (#{sl.level.name}):"
+        %br
+        %div{style: 'padding-left:80px'}
+          - md = sl.level.properties['markdown'] || sl.level.properties['long_instructions']
+          - if md.present?
+            = ActionView::Base.new.render(inline: md, type: :md)
+          - else
+            = sl.level.properties['short_instructions']
+        %br
+
 = link_to t('crud.show'), @script
 |
-\#{link_to t('crud.back'), scripts_path}
+\#{link_to t('crud.back'), script_path(@script)}

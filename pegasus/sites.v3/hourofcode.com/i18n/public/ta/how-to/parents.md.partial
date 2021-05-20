@@ -1,79 +1,100 @@
 ---
-title: பெற்றோர்களுக்கு வழிகாட்டுவது எப்படி என்று
+title: Hour of Code How-to Guide for parents
 layout: wide
 nav: how_to_nav
 ---
 
-{{signup_button}}
-
 # உங்கள் குழந்தைடன் எப்படி ஒரு கோட் ஆப் செய்ய வேண்டும்
 
-### உங்கள் பிள்ளையின் வகுப்பறைக்கு கொண்டு வர வீட்டுக்குள்ளே ஒரு குறியீடான கோட் அல்லது தன்னார்வலரை முடிக்கவும்!
+Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
 
----
+You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
 
-## 1) எப்படி வீடியோவை பாருங்கள் <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
 
-## 2) ஒரு டுடோரியலைத் தேர்வு செய்க
+<h3>What do I need to get started?</h3>
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
 
-**கோட் டுடோரியல்களின் அனைத்து நேரம் சுய வழிகாட்டுதலும் - உங்கள் குழந்தை வேகத்திலும் வேகத்திலும் வேலை செய்ய அனுமதிக்கிறது**
+You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
 
-## 3) உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள்
+* * *
 
-இன்டர்நெட் இணைக்கப்பட்ட கணினிகளுடன் கோட் அனுபவத்தின் சிறந்த நேரம் இருக்கும். ஆனால் நீங்கள் ** ஒரு கணினிக்கு </ strong> தேவையில்லை. "தடையேதும் இல்லை" மற்றும் எந்த தொழில்நுட்பம் இல்லாமல் செய்ய முடியும் என்று பல நடவடிக்கைகள் உள்ளன உங்கள் கணினி அல்லது சாதனத்தில் சோதனை பயிற்சிகள். அவர்கள் ஒலி மற்றும் வீடியோவுடன் உலாவியில் சரியாக இயங்குவதை உறுதிசெய்யவும்.</p> 
+## 1) Explore activities and tutorials.
 
-** உங்கள் குழந்தைக்குத் தெரிந்துகொள்ள விரும்புகிறீர்களா? </ strong>  ஜோடி நிரலாக்க முயற்சிக்கவும். </ ஒரு> கணினி அறிவியல் சமூக மற்றும் கூட்டு.</p> 
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 4) குறியீடு உங்கள் மணி தொடக்கத்தில் ஒரு எழுச்சியூட்டும் வீடியோ தொடங்க
+There are countless [Hour of Code activities](https://hourofcode.com/us/learn) available to you if you’re working on a computer with internet access. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
 
-உங்கள் குழந்தையை ஊக்குவிப்பதன் மூலம் கோட் ஆஃப் ஹோர்ஸை உதைத்து, கணினி விஞ்ஞானம் நமது வாழ்க்கையின் ஒவ்வொரு பகுதியையும் எப்படி பாதிக்கிறது என்பதை விவாதிக்கிறது.
+All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
 
-**ஒரு தூண்டுதலாக வீடியோவை காட்டு:**
+- For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves to learn: [AI for Oceans](https://code.org/oceans) or [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
-- பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நடிகர் கிரிஸ் பாஷ் ([ 1 நிமிடம் </ a > [ 5 நிமிடம் ](https://www.youtube.com/watch?v=nKIu9yen5nc), மற்றும் <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 நிமிட ](https://www.youtube.com/watch?v=qYZF6oIZtfc) பதிப்புகள்).
-- [ குறியீட்டு உலகளாவிய வீடியோவின் ஹவர் ](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [ ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களும் கணினி அறிவியலைக் கற்றுக் கொள்ளுமாறு அழைப்பு விடுத்துள்ளனர்](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+<h3>Low-tech or no-tech?</h3>
 
-நீங்கள் மற்றும் உங்கள் குழந்தை இருவரும் கணினி அறிவியல் புத்தம் புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் நேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:
+If you’ll be using limited or no technology, you can filter [Hour of Code activities](https://hourofcode.com/us/learn) by selecting “No computers or devices” in the *Classroom technology* section.
 
-- உதாரணமாக, சிறுவர்கள் மற்றும் பெண்கள் இருவருக்கும் கவனித்துக்கொள்வதற்கான வழிகள் (உயிர்களைக் காப்பாற்றுவது, மக்களுக்கு உதவுதல், மக்களை இணைத்தல், முதலியன) ஆகியவற்றைக் கொண்டு நமது வாழ்க்கையைப் பாதிக்கும் வழிகளை விளக்குங்கள்.
-- அன்றாட வாழ்க்கையில் குறியீட்டைப் பயன்படுத்தும் பட்டியலைக் குறிப்பிடுக.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-மேலும் யோசனைகள் வேண்டுமா? அனுபவம் வாய்ந்த கல்வியாளர்களிடமிருந்து சிறந்த நடைமுறைகளுக்கு எங்கள் [ டெம்ப்ளேட் பாடம் திட்டம் ](/files/AfterschoolEducatorLessonPlanOutline.docx) என்பதைப் பார்க்கவும்.
+You can also check out these [short videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) for more ideas on how to facilitate an unplugged activity at home!
 
-## 5) கோட்!
+## 2) Prepare ahead of time
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+Now that you have some tutorials in mind, it may be helpful to try these activities on your device before introducing them to your child.
 
-நீங்கள் டுடோரியலை தேர்வு செய்தால், நீங்கள் செய்ய விரும்பும் பயிற்சியைக் குறிக்க முடியும்.
+[![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-**உங்கள் குழந்தை சிரமங்களை சந்திக்கும்போது**
+<h3>More than one child at home?</h3>
 
-உங்கள் குழந்தை சிரமங்களை சந்திக்கும்போது
+Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-- "எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "
-- "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது."
-- "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.
 
-## 6) கொண்டாடுங்கள்
+<h3>Get the kids excited! </h3>
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
 
-சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!
+- Show them an [inspirational video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) that features one of their favorite role models
+- Inspire them with a video on one of the [many careers](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) that computer science skills can lead to
+- [Order some swag](https://store.code.org/)! You can choose from t-shirts, stickers, or even temporary tattoos. Share it with them right away to get them excited, or save it for the end of your Hour of Code as a special prize. 
 
-உங்களிடம் இன்னும் கேள்விகளைக் கொண்டிருந்தால் [ கோட் அடிக்கடி கேட்கப்படும் கேள்விகள் ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) மதிப்பாய்வு செய்யுங்கள்.
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## கோட் ஆஃப் ஹவர் என்ன ஆனது?
+## 3) Tips for introducing your child to CS
 
-தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும். இந்த பயணத்தை தொடர
+It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+- Explain ways that technology impacts our lives, with specific examples that may interest your child. For example, you could talk about medicine or connecting people virtually. Also, check out [Code.org/CSforGood](https://code.org/csforgood) for suggested discussion questions.
+- Together, list everyday things that use code in order to work properly.
 
-{{signup_button}}
+[![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
+
+<h3>Have young women at home?</h3>
+
+<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+
+<h3>Problem-solve together</h3>
+
+Lastly, when your child comes across difficulties it's okay to respond: - “I don’t know. இதை ஒன்றாகச் சேர்த்து விடுவோம். " - "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது." - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
+
+Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+
+## 4) Don’t forget to celebrate!
+
+The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+
+- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity 
+- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise. 
+- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+<h2>கோட் ஆஃப் ஹவர் என்ன ஆனது?</h2>
+
+Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
+
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})

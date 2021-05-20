@@ -1,0 +1,1184 @@
+{
+  "script": {
+    "name": "csp2-2020",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSP",
+      "student_detail_progress_view": true,
+      "has_verified_resources": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit2/{LESSON}",
+      "project_sharing": true,
+      "hideable_lessons": true,
+      "has_lesson_plan": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-20/unit2/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-20/unit2/standards/"
+        ]
+      ],
+      "is_stable": true,
+      "script_announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Student-only"
+        }
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:47 UTC",
+    "seeding_key": {
+      "script.name": "csp2-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_unit2_2020",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Unit 2: The Internet"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "cspSurvey2020",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp2-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome to the Internet",
+      "name": "Welcome to the Internet",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "Building a Network",
+      "name": "Building a Network",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Building a Network",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "The Need for Addressing",
+      "name": "The Need for Addressing",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "Routers and Redundancy",
+      "name": "Routers and Redundancy",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "Packets",
+      "name": "Packets",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "DNS and HTTP",
+      "name": "DNS and HTTP",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "Project - Internet Dilemmas Part 1",
+      "name": "Project - Internet Dilemmas Part 1",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "Project - Internet Dilemmas Part 2",
+      "name": "Project - Internet Dilemmas Part 2",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "Lesson 9: Assessment Day",
+      "name": "Assessment Day",
+      "absolute_position": 9,
+      "lockable": true,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp2-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L1 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L1 SFLP 20-21"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L1 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L1 Internet Simulator: Sending Text"
+        ],
+        "progression": "Widget: Internet Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L1 Internet Simulator: Sending Text"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L1 Internet Simulator: Sending Text"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L1 CFU how use internet"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L1 CFU how use internet"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L2 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L2 SFLP 20-21"
+        ],
+        "lesson.key": "Building a Network",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L2 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L1 CFU paths"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L1 CFU paths"
+        ],
+        "lesson.key": "Building a Network",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L1 CFU paths"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L3 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L3 SFLP 20-21"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L3 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast"
+        ],
+        "progression": "Internet Simulator: Broadcast Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L2 CSP Internet Simulator Broadcast"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 CSP CFU IP Addresses"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L2 CSP CFU IP Addresses"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP works"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 CSP CFU IP works"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L2 CSP CFU IP works"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L4 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L4 SFLP 20-21"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L4 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers"
+        ],
+        "progression": "Internet Simulator: Routers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 CSP Internet Simulator Routers"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U1L3 CSP Internet Simulator Routers"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Routers"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L3 CSP CFU Routers"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L3 CSP CFU Routers"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Redundancy"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L3 CSP CFU Redundancy"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L3 CSP CFU Redundancy"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L5 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L5 SFLP 20-21"
+        ],
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L5 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2"
+        ],
+        "progression": "Internet Simulator: Packets"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2"
+        ],
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U1L4 CSP Internet Simulator Packets 2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets"
+        ],
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L4 Multiple Choice packets"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU terms"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 CSP CFU terms"
+        ],
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L4 CSP CFU terms"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L6 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L6 SFLP 20-21"
+        ],
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L6 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS"
+        ],
+        "progression": "Internet Simulator: DNS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 CSP Internet Simulator DNS"
+        ],
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U1L5 CSP Internet Simulator DNS"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU scale"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 CSP CFU scale"
+        ],
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L4 CSP CFU scale"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L5 CSP CFU subgroups"
+        ],
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "U2L5 CSP CFU subgroups"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L7 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L7 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L7 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U2L9 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U2L9 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP U2L9 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 2 MC Assessment _2020"
+        ],
+        "progression": "Unit 2 Exam"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 2 MC Assessment _2020"
+        ],
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "CSP Unit 2 MC Assessment _2020"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "csp-post-survey-2020-markdown-with-link-to-survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L1 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U2L1 SFLP 20-21"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L1 Internet Simulator: Sending Text",
+        "script_level.level_keys": [
+          "CSP U2L1 Internet Simulator: Sending Text"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L1 CFU how use internet",
+        "script_level.level_keys": [
+          "U2L1 CFU how use internet"
+        ],
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L2 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U2L2 SFLP 20-21"
+        ],
+        "lesson.key": "Building a Network",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L1 CFU paths",
+        "script_level.level_keys": [
+          "U2L1 CFU paths"
+        ],
+        "lesson.key": "Building a Network",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L3 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U2L3 SFLP 20-21"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 CSP Internet Simulator Broadcast",
+        "script_level.level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 CSP CFU IP Addresses",
+        "script_level.level_keys": [
+          "U2L2 CSP CFU IP Addresses"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 CSP CFU IP works",
+        "script_level.level_keys": [
+          "U2L2 CSP CFU IP works"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L4 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U2L4 SFLP 20-21"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 CSP Internet Simulator Routers",
+        "script_level.level_keys": [
+          "U1L3 CSP Internet Simulator Routers"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L3 CSP CFU Routers",
+        "script_level.level_keys": [
+          "U2L3 CSP CFU Routers"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L3 CSP CFU Redundancy",
+        "script_level.level_keys": [
+          "U2L3 CSP CFU Redundancy"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L5 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U2L5 SFLP 20-21"
+        ],
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 CSP Internet Simulator Packets 2",
+        "script_level.level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2"
+        ],
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 Multiple Choice packets",
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets"
+        ],
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 CSP CFU terms",
+        "script_level.level_keys": [
+          "U2L4 CSP CFU terms"
+        ],
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L6 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U2L6 SFLP 20-21"
+        ],
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 CSP Internet Simulator DNS",
+        "script_level.level_keys": [
+          "U1L5 CSP Internet Simulator DNS"
+        ],
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 CSP CFU scale",
+        "script_level.level_keys": [
+          "U2L4 CSP CFU scale"
+        ],
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L5 CSP CFU subgroups",
+        "script_level.level_keys": [
+          "U2L5 CSP CFU subgroups"
+        ],
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L7 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U2L7 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U2L9 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U2L9 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 2 MC Assessment _2020",
+        "script_level.level_keys": [
+          "CSP Unit 2 MC Assessment _2020"
+        ],
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2020-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp2-2020"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

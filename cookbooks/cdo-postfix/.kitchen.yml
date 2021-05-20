@@ -1,0 +1,15 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 15.2.20
+platforms:
+  - name: ubuntu-18.04
+    run_list:
+      - recipe[apt]
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-postfix]

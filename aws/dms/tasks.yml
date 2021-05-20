@@ -1,6 +1,5 @@
 cron-pii:
 - dashboard.census_submissions
-- pegasus.contact_rollups
 - pegasus.contacts
 - pegasus.forms
 - pegasus.form_geos
@@ -15,6 +14,7 @@ cron-pii:
 - dashboard.circuit_playground_discount_codes
 - dashboard.survey_questions
 - dashboard.survey_answers
+- dashboard.foorm_%
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
@@ -46,6 +46,7 @@ cron:
 - dashboard.levels
 - dashboard.script_levels
 - dashboard.levels_script_levels
+- dashboard.parent_levels_child_levels
 - dashboard.courses
 - dashboard.course_scripts
 - dashboard.survey_results
@@ -106,10 +107,17 @@ cron-user-hierarchy:
 cron-user-hierarchy-pii:
 - dashboard.studio_people
 - dashboard.teacher_profiles
-- dashboard.users
+- dashboard.users:
+    remove_column:
+        - encrypted_password
+        - reset_password_token
+        - secret_picture_id
+        - secret_words
 - dashboard.user_geos
 - dashboard.user_school_infos
 cron-user-levels:
 - dashboard.user_levels
 cron-level-sources-pii:
-- dashboard.level_sources
+- dashboard.level_sources:
+    skip_staging_table: true
+    schedule: 'weekly'

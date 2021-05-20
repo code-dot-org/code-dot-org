@@ -1,0 +1,333 @@
+hidden false
+login_required true
+hideable_lessons true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-20/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit3/code/"]]
+has_verified_resources true
+curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
+is_stable true
+project_sharing true
+curriculum_umbrella 'CSD'
+tts true
+
+lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
+lesson 'Programming for Entertainment', display_name: 'Programming for Entertainment', has_lesson_plan: true
+level 'CSD U3L01 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Entertainment_2018_2019_pilot_2020', progression: 'Exploring CS in Entertainment'
+level 'CSD U3 Entertainment Sample 4_2020', progression: 'Sample Programs'
+level 'CSD U3 Entertainment Sample 3_2020', progression: 'Sample Programs'
+level 'CSD U3 Entertainment Sample 1_2020', progression: 'Sample Programs'
+level 'CSD U3 Entertainment Sample 2_2020', progression: 'Sample Programs'
+
+lesson 'Plotting Shapes', display_name: 'Plotting Shapes', has_lesson_plan: true
+level 'CSD U3L02 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Plotting Shapes Shape Lab_2020', progression: 'Drawing Shapes'
+
+lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab', has_lesson_plan: true
+level 'CSD U3L03 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 rect_2020', progression: 'Introduction to Game Lab'
+level 'CSD: Drawing in Game Lab 1_2020', progression: 'Video: Drawing in Game Lab - Part 1'
+level 'CSD U3 Drawing Squares to Corners_2020', progression: 'Using the Grid'
+level 'CSD: Drawing in Game Lab 2_2020', progression: 'Video: Drawing in Game Lab - Part 2'
+level 'CSD U3 fill_2020', progression: 'Skill Building'
+level 'CSD U3 sequence_2020', progression: 'Skill Building'
+level 'CSD U3 ellipse_2020', progression: 'Skill Building'
+level 'CSD U3 drawing practice choice_2020', progression: 'Practice'
+level 'CSD U3 debug_2020', progression: 'Assessment', assessment: true
+level 'CSD U3 drawing challenges_2020', progression: 'Challenges'
+
+lesson 'Shapes and Parameters', display_name: 'Shapes and Parameters', has_lesson_plan: true
+level 'CSD U3L04 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Random Taller Rectangle_2020', progression: 'Skill Building'
+level 'CSD U3 Random Ellipse Behind_2018_2020', progression: 'Skill Building'
+level 'CSD U3 Random background_2020', progression: 'Skill Building'
+level 'CSD U3 Random background2_2020', progression: 'Skill Building'
+level 'CSD U3 Random Debug Grass_2020', progression: 'Skill Building'
+level 'CSD Games parameters practice_2020', progression: 'Practice'
+level 'CSD U3 Random Debug Cloud_2018_2020', progression: 'Assessment', assessment: true
+level 'CSD Games Parameters challenge_2020', progression: 'Challenges'
+
+lesson 'Variables', display_name: 'Variables', has_lesson_plan: true
+level 'CSD U3L05 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Variables Predict Where X_2020', progression: 'Prediction'
+level 'Introduction to Variables - Part 1_2020', progression: 'Video: Introduction to Variables'
+level 'CSD U3 Variables Predict Where XY_2020', progression: 'Skill Building'
+level 'CSD U3 Variables naming rules v2_2018_2020', progression: 'Skill Building'
+level 'CSD U3 Variables Draw Poppy_2020', progression: 'Skill Building'
+level 'CSD Games variables practice_2020', progression: 'Practice'
+level 'CSD U3 Variables assessment_2020', progression: 'Assessment', assessment: true
+level 'CSD Games variables challenge_2020', progression: 'Challenges'
+
+lesson 'Random Numbers', display_name: 'Random Numbers', has_lesson_plan: true
+level 'CSD U3L06 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Random random ellipse_2018_2020', progression: 'Exploration'
+level 'CSD U3 Random random ellipse2_2018_2020', progression: 'Skill Building'
+level 'CSD U3 Variables random with assignment_2020', progression: 'Skill Building'
+level 'CSD U3 Variables random reassign_2020', progression: 'Skill Building'
+level 'CSD games random practice_2020', progression: 'Practice'
+level 'CSD U3 Random rainbow snake_2018_2020', progression: 'Assessment', assessment: true
+level 'CSD games random challenge_2020', progression: 'Challenges'
+
+lesson 'Sprites', display_name: 'Sprites', has_lesson_plan: true
+level 'CSD U3L07 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Sprites Exploration_2020', progression: 'Exploration'
+level 'CSD: Sprites in Game Lab_2020', progression: 'Video: Introduction to Sprites'
+level 'CSD U3 Sprites intro sprites_2020', progression: 'Skill Building'
+level 'CSD U3 Sprites intro debug_2020', progression: 'Skill Building'
+level 'CSD U3 Sprites anitab 1_2020', progression: 'Skill Building'
+level 'CSD: Animation Tab_2020', progression: 'Video: The Animation Tab'
+level 'CSD U3 Sprites sequencing_2020', progression: 'Skill Building'
+level 'CSD U3 drawSprites placement match_2019_pilot_2020', progression: 'Skill Building', assessment: true
+level 'CSD Games Sprites practice_2020', progression: 'Practice'
+level 'CSD U3 Sprites assessment_2020', progression: 'Assessment', assessment: true
+level 'CSD Games Sprites Challenges_2020', progression: 'Challenges'
+
+lesson 'Sprite Properties', display_name: 'Sprite Properties', has_lesson_plan: true
+level 'CSD U3L08 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD Games properties predict_2020', progression: 'Prediction'
+level 'CSD Games properties xy_2020', progression: 'Skill Building'
+level 'CSD Games properties new_2020', progression: 'Skill Building'
+level 'CSD Games Properties practice_2020', progression: 'Practice'
+level 'CSD Games properties assessment_2020', progression: 'Assessment', assessment: true
+level 'CSD Games Properties challenge_2020', progression: 'Challenges'
+
+lesson 'Text', display_name: 'Text', has_lesson_plan: true
+level 'CSD U3L09 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD web text explore', progression: 'Prediction'
+level 'CSD U3 Sprites text_2020', progression: 'Skill Building'
+level 'CSD web text size', progression: 'Skill Building'
+level 'CSD web text practice choice_2020', progression: 'Practice'
+level 'CSD web text assessment', progression: 'Assessment', assessment: true
+level 'CSD web text challenge choice_2020', progression: 'Challenges'
+
+lesson 'Mini-Project: Captioned Scenes', display_name: 'Mini-Project: Captioned Scenes', has_lesson_plan: true
+level 'CSD U3L09a TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Scene Example_2018_2020', progression: 'Sprite Scenes'
+level 'CSD U3 Sprites scene drawing_2020', progression: 'Create a Background'
+level 'CSD U3 Sprites scene sprites_2020', progression: 'Add Sprites'
+level 'CSD U3 Sprites scene text_2020', progression: 'Add Text'
+level 'CSD U3 Sprites scene challenge_2020', progression: 'Review Your Scene'
+
+lesson 'The Draw Loop', display_name: 'The Draw Loop', has_lesson_plan: true
+level 'CSD U3L10 TFMD pilot_2020', progression: 'Lesson Overview'
+level 'CSD: Introduction to the Draw Loop_2020', progression: 'Video: Introduction to the Draw Loop'
+level 'CSD U3 Draw Loop Plugged predict 1_2020', progression: 'Exploration'
+level 'CSD U3 Draw Loop Plugged orange and green_2020', progression: 'Skill Building'
+level 'CSD U3 Draw Loop Plugged predict 2_2020', progression: 'Prediction'
+level 'CSD U3 dancing alien_2020', progression: 'Skill Building'
+level 'CSD U3 Draw Loop Plugged wiggle sprite x_2020', progression: 'Skill Building'
+level 'CSD web draw loop practice choice', progression: 'Practice'
+level 'CSD U3 Draw Loop Plugged wiggle sprite y_2020', progression: 'Assessment', assessment: true
+level 'CSD web draw loop challenge choice', progression: 'Challenges'
+
+lesson 'Sprite Movement', display_name: 'Sprite Movement', has_lesson_plan: true
+level 'CSD U3L12 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 - Simple Counter Predict_2020', progression: 'Prediction'
+level 'CSD: Animating Sprite Movement_2020', progression: 'Video: Sprite Movement'
+level 'CSD U3 Sprite Movement Right_2020', progression: 'Skill Building'
+level 'CSD U3 Sprite Movement Left_2020', progression: 'Skill Building'
+level 'CSD U3 Diagonal Movement_2020', progression: 'Skill Building'
+level 'CSD U3 Sprite Movement Predict_2020', progression: 'Skill Building'
+level 'CSD web movement practice choice', progression: 'Practice'
+level 'CSD U3 Movement Fish_2020', progression: 'Assessment', assessment: true
+level 'CSD web movement challenge choice', progression: 'Challenges'
+
+lesson 'Mini-Project: Animation', display_name: 'Mini-Project: Animation', has_lesson_plan: true
+level 'CSD U3L13 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD web project animated example', progression: 'Example Animated Scene'
+level 'CSD web project animated plan', progression: 'Plan Your Scene'
+level 'CSD web project animated background', progression: 'Draw a Background'
+level 'CSD web project animated sprites', progression: 'Add Sprites'
+level 'CSD web project animated text', progression: 'Add Text'
+level 'CSD web project animated movement', progression: 'Add Movement'
+level 'CSD web project animated review', progression: 'Review Your Animated Scene'
+
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: true
+level 'CSD U3L14 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Boolean Predict_2020', progression: 'Prediction'
+level 'CSD U3 - Booleans Video_2020', progression: 'Video: Booleans'
+level 'CSD U3 - conditionals - Matching_2018_2019_pilot_2020', progression: 'Quick Check'
+level 'CSD U3 - conditionals - transition_2020', progression: 'Skill Building'
+level 'CSD U3 - conditionals - first conditional_2020', progression: 'Skill Building'
+level 'csd U3 conditional statements video_2020', progression: 'Video: Conditional Statements'
+level 'CSD U3 Conditionals Apple 2_2018_2020', progression: 'Skill Building'
+level 'CSD web conditionals practice choice', progression: 'Practice'
+level 'CSD web conditionals assessment', progression: 'Assessment', assessment: true
+level 'CSD web conditionals challenge choice', progression: 'Challenges'
+
+lesson 'Keyboard Input', display_name: 'Keyboard Input', has_lesson_plan: true
+level 'CSD U3L15 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Keypress Boolean_2018_2020', progression: 'Prediction'
+level 'CSD U3 keydown conditional_2018_2020', progression: 'Skill Building'
+level 'CSD U3 UP_ARROW_2018_2020', progression: 'Skill Building'
+level 'CSD U3 Input Gears_2020', progression: 'Skill Building'
+level 'CSD web keyboard practice choice', progression: 'Practice'
+level 'CSD U3 Direction Arrows_2018_2020', progression: 'Assessment', assessment: true
+level 'CSD web keyboard challenge choice', progression: 'Challenges'
+
+lesson 'Mouse Input', display_name: 'Mouse Input', has_lesson_plan: true
+level 'CSD U3L16 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 if else predict_2020', progression: 'Prediction'
+level 'CSD U3 - Conditionals Video_2020', progression: 'Video: If/Else Statements'
+level 'CSD U3 Else_2020', progression: 'Skill Building'
+level 'CSD games mousedown intro', progression: 'Skill Building'
+level 'CSD U3 - complex - mouse down_2020', progression: 'Skill Building'
+level 'CSD U3 If Else_2020', progression: 'Skill Building'
+level 'CSD web mouse practice choice', progression: 'Practice'
+level 'CSD web mouse assessment', progression: 'Assessment', assessment: true
+level 'CSD web mouse challenge choice', progression: 'Challenges'
+
+lesson 'Project - Interactive Card', display_name: 'Project - Interactive Card', has_lesson_plan: true
+level 'CSD U3L17 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Interactive Card Exemplar_2020', progression: 'interactive Card'
+level 'CSD U3 Card Examples_2018_2019_pilot_2020', progression: 'Make an Interactive Card'
+level 'CSD U3 Interactive Card Background_2020', progression: 'Project Work'
+level 'CSD U3 Interactive Card Sprites_2020', progression: 'Project Work'
+level 'CSD U3 Interactive Card User Input_2020', progression: 'Project Work'
+level 'CSD U3 Interactive Card Other Conditionals_2020', progression: 'Project Work'
+level 'CSD U3 Interactive Card Final_2020', progression: 'Project Work'
+level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2020', progression: 'Reflection', assessment: true
+
+lesson_group 'csd3_2', display_name: 'Chapter 2: Building Games'
+lesson 'Velocity', display_name: 'Velocity', has_lesson_plan: true
+level 'CSD U3L18 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 abstraction velocityX_2020', progression: 'Skill Building'
+level 'CSD: Sprite Velocity_2020', progression: 'Video: Velocity'
+level 'CSD U3 abstraction velocityY_2020', progression: 'Skill Building'
+level 'CSD U3 abstraction rotation_2020', progression: 'Skill Building'
+level 'CSD U3 abstraction rotation control_2020', progression: 'Skill Building'
+level 'CSD U3 abstraction velocityX if-statements_2020', progression: 'Skill Building'
+level 'CSD games velocity tennis', progression: 'Skill Building'
+level 'CSD games velocity practice choice', progression: 'Practice'
+level 'CSD U3 abstraction velocityX control_2020', progression: 'Assessment', assessment: true
+level 'CSD games velocity challenge choice', progression: 'Challenges'
+
+lesson 'Collision Detection', display_name: 'Collision Detection', has_lesson_plan: true
+level 'CSD U3L19 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 collisions car intro_2020', progression: 'Sample Game'
+level 'CSD U3 collisions build isTouching_2020', progression: 'Skill Building'
+level 'CSD U3 collisions isTouching intro_2020', progression: 'Skill Building'
+level 'CSD U3 collisions egg_2020', progression: 'Skill Building'
+level 'CSD U3 collisions debug isTouching_2020', progression: 'Skill Building'
+level 'CSD games istouching practice choice', progression: 'Practice'
+level 'CSD U3 collisions horse_2020', progression: 'Assessment', assessment: true
+level 'CSD games istouching challenge choice', progression: 'Challenges'
+
+lesson 'Mini-Project: Side Scroller', display_name: 'Mini-Project: Side Scroller', has_lesson_plan: true
+level 'CSD U3L20 TFMD', progression: 'Lesson Overview'
+level 'CSD games side scroller demo', progression: 'Intro to Side Scrollers'
+level 'CSD games sidescroll background', progression: 'Draw Your Background'
+level 'CSD U3 abstraction tumbleweed_2020', progression: 'Create Your Sprites'
+level 'CSD U3 abstraction jump_2018_2020', progression: 'Player Controls'
+level 'CSD U3 abstraction looping_2020', progression: 'Looping'
+level 'CSD U3 collisions sidescroll2_2020', progression: 'Sprite Interactions'
+level 'CSD U3 collisions scoreboard_2020', progression: 'Scoring & Scoreboard'
+level 'CSD games sidescroll review', progression: 'Review Your Game'
+
+lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement', has_lesson_plan: true
+level 'CSD U3L20 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 Complex Movement counter prediction gamelab_2020', progression: 'Prediction'
+level 'CSD U3 abstraction accelerateX_2020', progression: 'Skill Building'
+level 'CSD U3 abstraction accelerateY_2020', progression: 'Skill Building'
+level 'CSD U3 abstraction decelerateX_2020', progression: 'Skill Building'
+level 'CSD games movement2 practice choice', progression: 'Practice'
+level 'CSD U3 abstraction decelerateY_2020', progression: 'Assessment', assessment: true
+level 'CSD games movement2 challenge choice', progression: 'Challenges'
+
+lesson 'Collisions', display_name: 'Collisions', has_lesson_plan: true
+level 'CSD U3L21 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 collisions predict set velocity code_2020', progression: 'Code Prediction'
+level 'CSD U3 collisions displace x_2020', progression: 'Skill Building'
+level 'CSD U3 collisions displace y_2020', progression: 'Skill Building'
+level 'CSD U3 collisions displace intro_2020', progression: 'Skill Building'
+level 'CSD U3 collisions try blocks_2020', progression: 'Skill Building'
+level 'CSD games collisions practice choice', progression: 'Practice'
+level 'CSD games collisions assessment', progression: 'Assessment', assessment: true
+level 'CSD games collisions challenge choice', progression: 'Challenges'
+
+lesson 'Mini-Project: Flyer Game', display_name: 'Mini-Project: Flyer Game', has_lesson_plan: true
+level 'CSD U3L23 TFMD', progression: 'Lesson Overview'
+level 'CSD games flyer demo', progression: 'Intro to Flyer Game'
+level 'CSD U3 abstraction add coin_2020', progression: 'Make Your Sprites'
+level 'CSD U3 abstraction jumping_2020', progression: 'Player Controls'
+level 'CSD U3 abstraction left right counter_2020', progression: 'Player Controls'
+level 'CSD U3 abstraction left right counter 2_2020', progression: 'Player Controls'
+level 'CSD U3 collisions flyman add obstacles_2020', progression: 'Sprite Movement'
+level 'CSD U3 abstraction reset coin_2020', progression: 'Sprite Interactions'
+level 'CSD U3 collisions flyman bounceOff_2020', progression: 'Review Your Game'
+
+lesson 'Functions', display_name: 'Functions', has_lesson_plan: true
+level 'CSD U3L22 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 function video_2020', progression: 'Video: Functions'
+level 'CSD U3 Functions Call Function_2020', progression: 'Skill Building'
+level 'CSD U3 Functions Order Functions_2020', progression: 'Skill Building'
+level 'CSD U3 Functions Prediction Order of Create_2020', progression: 'Predict'
+level 'CSD games functions practice choice', progression: 'Practice'
+level 'CSD games functions assessment FR', progression: 'Quick Check', assessment: true
+level 'CSD U3 Functions Write Reset_2020', progression: 'Collector Game'
+level 'CSD U3 Functions Add IsTouching_2020', progression: 'Collector Game'
+level 'CSD U3 Functions Add Change Background_2020', progression: 'Collector Game', assessment: true
+level 'CSD games functions challenge choice', progression: 'Challenges'
+
+lesson 'The Game Design Process', display_name: 'The Game Design Process', has_lesson_plan: true
+level 'CSD U3L23 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 AnimationsMulti Play Defender_2020', progression: 'Same Game'
+level 'CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020', progression: 'Plan Your Project'
+level 'CSD U3 AnimationsMulti defender animate cake enemies_2020', progression: 'Set Up Sprites'
+level 'CSD U3 AnimationsMulti defender enemies move_2020', progression: 'Set Up Sprites'
+level 'CSD U3 AnimationsMulti defender move player_2020', progression: 'Control Your Player'
+level 'CSD U3 AnimationsMulti defender move up down_2020', progression: 'Control Your Player'
+level 'CSD U3 AnimationsMulti defender animate player_2020', progression: 'Control Your Player'
+level 'CSD U3 AnimationsMulti defender enemies touch cake_2020', progression: 'Sprite Interactions'
+level 'CSD U3 AnimationsMulti defender enemies touch cake sprite2_2020', progression: 'Sprite Interactions'
+level 'CSD U3 AnimationsMulti defender create set enemies_2020', progression: 'Sprite Interactions'
+level 'CSD U3 AnimationsMulti defender displace enemies_2020', progression: 'Sprite Interactions'
+level 'CSD U3 AnimationsMulti defender touch water_2020', progression: 'Sprite Interactions'
+level 'CSD games cake challenge choice', progression: 'Challenges'
+
+lesson 'Using the Game Design Process', display_name: 'Using the Game Design Process', has_lesson_plan: true
+level 'CSD U3L24 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 platform sample1_2020', progression: 'Sample Platform Jumper Game'
+level 'CSD U3 platform intro_2018_2019_pilot_2020', progression: 'Build a Platform Jumper'
+level 'CSD U3 platform background1_2020', progression: 'Platform Jumper - Background and Variables'
+level 'CSD U3 platform variable1_2020', progression: 'Platform Jumper - Background and Variables'
+level 'CSD U3 platform background2_2020', progression: 'Platform Jumper - Background and Variables'
+level 'CSD U3 platform scoreboard_2020', progression: 'Platform Jumper - Background and Variables'
+level 'CSD U3 platform platform1_2020', progression: 'Platform Jumper - Platforms'
+level 'CSD U3 platform platform2_2020', progression: 'Platform Jumper - Platforms'
+level 'CSD U3 platform platform3_2020', progression: 'Platform Jumper - Platforms'
+level 'CSD U3 platform items1_2020', progression: 'Platform Jumper - Items'
+level 'CSD U3 platform items2_2020', progression: 'Platform Jumper - Items'
+level 'CSD U3 platform items3_2020', progression: 'Platform Jumper - Items'
+level 'CSD U3 platform player1_2020', progression: 'Platform Jumper - Player'
+level 'CSD U3 platform player2_2020', progression: 'Platform Jumper - Player'
+level 'CSD U3 platform player3_2020', progression: 'Platform Jumper - Player'
+level 'CSD U3 platform player4_2020', progression: 'Platform Jumper - Player'
+level 'CSD U3 platform review', progression: 'Platform Jumper Review', assessment: true
+level 'CSD U3 platform sample2_2020', progression: 'Challenges'
+level 'CSD U3 platform sample3_2020', progression: 'Challenges'
+level 'CSD games platform challenge choice', progression: 'Challenges'
+
+lesson 'Project - Design a Game', display_name: 'Project - Design a Game', has_lesson_plan: true
+level 'CSD U3L25 TFMD_2020', progression: 'Lesson Overview'
+level 'CSD U3 game intro_2018_2019_pilot_2020', progression: 'Design Your Game'
+level 'CSD U3 game variables_2020', progression: 'Project - Background and Variables'
+level 'CSD U3 game backgrounds_2020', progression: 'Project - Background and Variables'
+level 'CSD U3 game display boards_2020', progression: 'Project - Background and Variables'
+level 'CSD U3 game choose background_2020', progression: 'Project - Background and Variables'
+level 'CSD U3 game animations_2020', progression: 'Project - Sprites and Interactions'
+level 'CSD U3 game create sprites_2020', progression: 'Project - Sprites and Interactions'
+level 'CSD U3 game sprite movement_2020', progression: 'Project - Sprites and Interactions'
+level 'CSD U3 game user controls_2020', progression: 'Project - Sprites and Interactions'
+level 'CSD U3 game interactions_2020', progression: 'Project - Sprites and Interactions'
+level 'CSD games project review', progression: 'Review Your Game'
+level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2020', progression: 'Reflection', assessment: true
+
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
+level 'CSD Interactive Animations and Games Post-Project Test_pilot_2020', assessment: true
+
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
+level 'csd-post-survey-intro-2019_pilot_2020'
+level 'csd-post-survey-2017-levelgroup_2018_2019_pilot_2020', assessment: true
+

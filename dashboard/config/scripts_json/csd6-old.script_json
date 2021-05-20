@@ -1,0 +1,5596 @@
+{
+  "script": {
+    "name": "csd6-old",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "project_widget_visible": true,
+      "project_widget_types": [
+        "applab"
+      ],
+      "lesson_extras_available": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:14 UTC",
+    "seeding_key": {
+      "script.name": "csd6-old"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd6_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: Programming with Hardware"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "csd6_2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: Building Physical Prototypes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Computing Innovations",
+      "name": "Computing Innovations",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Computing Innovations",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Input Unplugged",
+      "name": "Input Unplugged",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Input Unplugged",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Event Types",
+      "name": "Event Types",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Getters and Setters",
+      "name": "Getters and Setters",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "The Circuit Playground",
+      "name": "The Circuit Playground",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Lists",
+      "name": "Lists",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Lights",
+      "name": "Lights",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "For Loops",
+      "name": "For Loops",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Lists and For Loops",
+      "name": "Lists and For Loops",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Timed Loops",
+      "name": "Timed Loops",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Project: Board Output",
+      "name": "Project: Board Output",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Physical Input",
+      "name": "Physical Input",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Analog Input",
+      "name": "Analog Input",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Sensor Applications",
+      "name": "Sensor Applications",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "Project: Prototype an Innovation",
+      "name": "Project: Prototype an Innovation",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 Innovation"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 Innovation"
+        ],
+        "lesson.key": "Computing Innovations",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 Innovation"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 GameLab Input 1"
+        ],
+        "progression": "Input Examples"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 GameLab Input 1"
+        ],
+        "lesson.key": "Input Unplugged",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 GameLab Input 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 AppLab Input 1"
+        ],
+        "progression": "Input Examples"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 AppLab Input 1"
+        ],
+        "lesson.key": "Input Unplugged",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 AppLab Input 1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L03 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L03 Overview"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD U6L03 Overview"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Review: Design Mode, IDs, and Events"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Review: Design Mode, IDs, and Events"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Review: Design Mode, IDs, and Events"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Review Events"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Review Events"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: Review Events"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Creating Variables In App Lab"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Creating Variables In App Lab"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: Creating Variables In App Lab"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - event type testing"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - event type testing"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - event type testing"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD - Getters and Setters"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD - Getters and Setters"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD - Getters and Setters"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setScreen"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setScreen"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - setScreen"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setText"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setText"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - setText"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - hide show"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - hide show"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - hide show"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - getText"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - getText"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - getText"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - dropdown setText"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - dropdown setText"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - dropdown setText"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - get set with text input"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - get set with text input"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - get set with text input"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - getNumber practice"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - getNumber practice"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - getNumber practice"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: getText vs getNumber"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: getText vs getNumber"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: getText vs getNumber"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - getNumber"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - getNumber"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - getNumber"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: setProperty"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: setProperty"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: setProperty"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setProperty first level"
+        ],
+        "progression": "UI Element Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setProperty first level"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - setProperty first level"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setProperty Image"
+        ],
+        "progression": "UI Element Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setProperty Image"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - setProperty Image"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setProperty"
+        ],
+        "progression": "UI Element Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setProperty"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - setProperty"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Stop: Review Getters and Setters"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Stop: Review Getters and Setters"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "Stop: Review Getters and Setters"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Challenge: Input and UI"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Challenge: Input and UI"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "Challenge: Input and UI"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD LEDs Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD LEDs Map"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD LEDs Map"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 Circuit Playground Test"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED basics led.on"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED basics led.on"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 LED basics led.on"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED basics onEvent"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED basics onEvent"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 LED basics onEvent"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED basics led.off()"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED basics led.off()"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 LED basics led.off()"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED predict"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED predict"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 LED predict"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED alarm silent"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED alarm silent"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 LED alarm silent"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Buzzer Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Buzzer Map"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Buzzer Map"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 buzzer freq"
+        ],
+        "progression": "Using the Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 buzzer freq"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 buzzer freq"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 buzzer stop"
+        ],
+        "progression": "Using the Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 buzzer stop"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 buzzer stop"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 buzzer alarm"
+        ],
+        "progression": "Using the Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 buzzer alarm"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 buzzer alarm"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Challenge: Buzzer and LED"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Challenge: Buzzer and LED"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "Challenge: Buzzer and LED"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Introduction to Lists - Part 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Introduction to Lists - Part 1"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: Introduction to Lists - Part 1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Lists"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Lists"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: Lists"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - lists - lists 1"
+        ],
+        "progression": "Introduction to Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 1"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - lists - lists 1"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - lists - lists 2"
+        ],
+        "progression": "Introduction to Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 2"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - lists - lists 2"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Introduction to Lists - Part 2"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Introduction to Lists - Part 2"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: Introduction to Lists - Part 2"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Accessing List Items"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Accessing List Items"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: Accessing List Items"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - lists - lists 3"
+        ],
+        "progression": "Using List Indexes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 3"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - lists - lists 3"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - lists - lists 4"
+        ],
+        "progression": "Using List Indexes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 4"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - lists - lists 4"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - Arrays - indexPractice"
+        ],
+        "progression": "Using List Indexes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - Arrays - indexPractice"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - Arrays - indexPractice"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - Arrays - expressionsAsIndexes"
+        ],
+        "progression": "Using List Indexes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - Arrays - expressionsAsIndexes"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - Arrays - expressionsAsIndexes"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Introduction to Lists - Length"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Introduction to Lists - Length"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Introduction to Lists - Length"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: List Length"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: List Length"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: List Length"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - Arrays - length"
+        ],
+        "progression": "Understanding List Length"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - Arrays - length"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - Arrays - length"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - Arrays - lengthMinus1"
+        ],
+        "progression": "Understanding List Length"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - Arrays - lengthMinus1"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - Arrays - lengthMinus1"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - lists - lists 5"
+        ],
+        "progression": "Understanding List Length"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 5"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - lists - lists 5"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Challenge: Random Button Colors"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Challenge: Random Button Colors"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "Challenge: Random Button Colors"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD colorLed Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD colorLed Map"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD colorLed Map"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6L06 - lists and colorLeds - song list"
+        ],
+        "progression": "Using Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - song list"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6L06 - lists and colorLeds - song list"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6L06 - lists and colorLeds - set color"
+        ],
+        "progression": "Using Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - set color"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6L06 - lists and colorLeds - set color"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6L06 - lists and colorLeds - debug"
+        ],
+        "progression": "Using Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - debug"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6L06 - lists and colorLeds - debug"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6L06 - lists and colorLeds - toggle"
+        ],
+        "progression": "Using Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - toggle"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6L06 - lists and colorLeds - toggle"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6L06 - lists and colorLeds - intensity"
+        ],
+        "progression": "Using Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - intensity"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6L06 - lists and colorLeds - intensity"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD - Functions Review"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD - Functions Review"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD - Functions Review"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6L06 - lists and colorLeds -solo light pattern"
+        ],
+        "progression": "Light Patterns"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds -solo light pattern"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6L06 - lists and colorLeds -solo light pattern"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6L06 - lists and colorLeds - light pattern off"
+        ],
+        "progression": "Light Patterns"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - light pattern off"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6L06 - lists and colorLeds - light pattern off"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Challenge: Lights Picker"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Challenge: Lights Picker"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "Challenge: Lights Picker"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: For Loops"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: For Loops"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: For Loops"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: For Loop"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: For Loop"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: For Loop"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - 2"
+        ],
+        "progression": "Introduction to For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 2"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - 2"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - 6"
+        ],
+        "progression": "Introduction to For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 6"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - 6"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - predict repeat"
+        ],
+        "progression": "Introduction to For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - predict repeat"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - predict repeat"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - predict print"
+        ],
+        "progression": "Introduction to For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - predict print"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - predict print"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Lists with For Loops"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Lists with For Loops"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD: Lists with For Loops"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - 5"
+        ],
+        "progression": "Looping Over Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 5"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - 5"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - 10"
+        ],
+        "progression": "Looping Over Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 10"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - 10"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - 1"
+        ],
+        "progression": "Looping Over Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 1"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - 1"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - button grid 1"
+        ],
+        "progression": "Looping Over Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - button grid 1"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - button grid 1"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - color buttons"
+        ],
+        "progression": "Looping Over Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - color buttons"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - color buttons"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - color buttons with for"
+        ],
+        "progression": "Looping Over Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - color buttons with for"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - color buttons with for"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - why for"
+        ],
+        "progression": "Looping Over Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - why for"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - why for"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Stop: Check with Teacher"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Stop: Check with Teacher"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "Stop: Check with Teacher"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD - for loop - on off"
+        ],
+        "progression": "For Loops and LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD - for loop - on off"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD - for loop - on off"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loops - lights picker"
+        ],
+        "progression": "For Loops and LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loops - lights picker"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - for loops - lights picker"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - timed Loop predict for"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - timed Loop predict for"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD U6 - timed Loop predict for"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Timed Loop Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Timed Loop Map"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Timed Loop Map"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - timed Loop predict timed"
+        ],
+        "progression": "Introduction to Timed Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - timed Loop predict timed"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD U6 - timed Loop predict timed"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop smiley rand y"
+        ],
+        "progression": "Introduction to Timed Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop smiley rand y"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop smiley rand y"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop smiley event"
+        ],
+        "progression": "Introduction to Timed Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop smiley event"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop smiley event"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop console.log()"
+        ],
+        "progression": "Introduction to Timed Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop console.log()"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop console.log()"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop stop board"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop stop board"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop stop board"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop random blink"
+        ],
+        "progression": "Timed Loops and the Board"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop random blink"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop random blink"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop random sound"
+        ],
+        "progression": "Timed Loops and the Board"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop random sound"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop random sound"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop predict counter"
+        ],
+        "progression": "Timed Loops and the Board"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop predict counter"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop predict counter"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Timed For Loop Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Timed For Loop Map"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Timed For Loop Map"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop for LEDs"
+        ],
+        "progression": "Timed Loops and Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop for LEDs"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop for LEDs"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop random sound exit"
+        ],
+        "progression": "Timed Loops and Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop random sound exit"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop random sound exit"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop helpers"
+        ],
+        "progression": "Timed Loops and Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop helpers"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop helpers"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - timed loop challenge"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - timed loop challenge"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - timed loop challenge"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - ch 1 exemplar LEDs"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 exemplar LEDs"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - ch 1 exemplar LEDs"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - ch 1 project design"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project design"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - ch 1 project design"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - ch 1 project events"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project events"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - ch 1 project events"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - ch 1 project functions"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project functions"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - ch 1 project functions"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - ch 1 project output"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project output"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - ch 1 project output"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - ch 1 project finish"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project finish"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - ch 1 project finish"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U6Ch1"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD onBoardEvent Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD onBoardEvent Map"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD onBoardEvent Map"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button screen buttonL"
+        ],
+        "progression": "Board Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button screen buttonL"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button screen buttonL"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button screen buttonR"
+        ],
+        "progression": "Board Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button screen buttonR"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button screen buttonR"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Board Buttons Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Board Buttons Map"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Board Buttons Map"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button toggle"
+        ],
+        "progression": "Using the Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button toggle"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button toggle"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button on off"
+        ],
+        "progression": "Using the Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button on off"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button on off"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button up down predict"
+        ],
+        "progression": "Using the Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button up down predict"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button up down predict"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button up down"
+        ],
+        "progression": "Using the Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button up down"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button up down"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button check for understanding"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button check for understanding"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button check for understanding"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button switch"
+        ],
+        "progression": "Using the Switch"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button switch"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button switch"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button debug"
+        ],
+        "progression": "Using the Switch"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button debug"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button debug"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war right button"
+        ],
+        "progression": "Tug o War Game"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war right button"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button tug o war right button"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war left button"
+        ],
+        "progression": "Tug o War Game"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war left button"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button tug o war left button"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war challenge"
+        ],
+        "progression": "Tug o War game"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war challenge"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - button tug o war challenge"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors experiment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors experiment"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors experiment"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Board Sensors Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Board Sensors Map"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Board Sensors Map"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors sound"
+        ],
+        "progression": "Using Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors sound"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors sound"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors light"
+        ],
+        "progression": "Using Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors light"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors light"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors temp"
+        ],
+        "progression": "Using Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors temp"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors temp"
+      ]
+    },
+    {
+      "chapter": 121,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors predict"
+        ],
+        "progression": "Using Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors predict"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors predict"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Set Scale Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Set Scale Map"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Set Scale Map"
+      ]
+    },
+    {
+      "chapter": 123,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors rgb part 1"
+        ],
+        "progression": "Displaying Sensor Values"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors rgb part 1"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors rgb part 1"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors rgb part 2"
+        ],
+        "progression": "Displaying Sensor Values"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors rgb part 2"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors rgb part 2"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Polling Events Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Polling Events Map"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSD Polling Events Map"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors rgb part 3"
+        ],
+        "progression": "Displaying Sensor Values"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors rgb part 3"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors rgb part 3"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors temp f c"
+        ],
+        "progression": "Displaying Sensor Values"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors temp f c"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors temp f c"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors challenge"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors challenge"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors challenge"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensor theremin demo"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensor theremin demo"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensor theremin demo"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors theremin 1"
+        ],
+        "progression": "Light Theremin Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors theremin 1"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors theremin 1"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors theremin 2"
+        ],
+        "progression": "Light Theremin Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors theremin 2"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors theremin 2"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors theremin 3"
+        ],
+        "progression": "Light Theremin Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors theremin 3"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors theremin 3"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensor vu meter demo"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensor vu meter demo"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensor vu meter demo"
+      ]
+    },
+    {
+      "chapter": 134,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors vu meter 1"
+        ],
+        "progression": "VU Meter Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors vu meter 1"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors vu meter 1"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors vu meter 2"
+        ],
+        "progression": "VU Meter Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors vu meter 2"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors vu meter 2"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors vu meter 3"
+        ],
+        "progression": "VU Meter Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors vu meter 3"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors vu meter 3"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensor love tester demo"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensor love tester demo"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensor love tester demo"
+      ]
+    },
+    {
+      "chapter": 138,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors love tester 1"
+        ],
+        "progression": "Love Tester Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors love tester 1"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors love tester 1"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors love tester 2"
+        ],
+        "progression": "Love Tester Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors love tester 2"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors love tester 2"
+      ]
+    },
+    {
+      "chapter": 140,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors love tester 3"
+        ],
+        "progression": "Love Tester Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors love tester 3"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensors love tester 3"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensor projects challenge"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensor projects challenge"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - sensor projects challenge"
+      ]
+    },
+    {
+      "chapter": 142,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 1"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 1"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - final project 1"
+      ]
+    },
+    {
+      "chapter": 143,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 2"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 2"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - final project 2"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 3"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 3"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - final project 3"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 4"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 4"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - final project 4"
+      ]
+    },
+    {
+      "chapter": 146,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 5"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 5"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - final project 5"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 6"
+        ],
+        "progression": "Project Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 6"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "CSDU6 - final project 6"
+      ]
+    },
+    {
+      "chapter": 148,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch2"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch2"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U6Ch2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 Innovation",
+        "script_level.level_keys": [
+          "CSDU6 Innovation"
+        ],
+        "lesson.key": "Computing Innovations",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 GameLab Input 1",
+        "script_level.level_keys": [
+          "CSDU6 GameLab Input 1"
+        ],
+        "lesson.key": "Input Unplugged",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 AppLab Input 1",
+        "script_level.level_keys": [
+          "CSDU6 AppLab Input 1"
+        ],
+        "lesson.key": "Input Unplugged",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L03 Overview",
+        "script_level.level_keys": [
+          "CSD U6L03 Overview"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Review: Design Mode, IDs, and Events",
+        "script_level.level_keys": [
+          "CSD Review: Design Mode, IDs, and Events"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Review Events",
+        "script_level.level_keys": [
+          "CSD: Review Events"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Creating Variables In App Lab",
+        "script_level.level_keys": [
+          "CSD: Creating Variables In App Lab"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - event type testing",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - event type testing"
+        ],
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD - Getters and Setters",
+        "script_level.level_keys": [
+          "CSD - Getters and Setters"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - setScreen",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setScreen"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - setText",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setText"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - hide show",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - hide show"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - getText",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - getText"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - dropdown setText",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - dropdown setText"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - get set with text input",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - get set with text input"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - getNumber practice",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - getNumber practice"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: getText vs getNumber",
+        "script_level.level_keys": [
+          "CSD: getText vs getNumber"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - getNumber",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - getNumber"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: setProperty",
+        "script_level.level_keys": [
+          "CSD: setProperty"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - setProperty first level",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setProperty first level"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - setProperty Image",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setProperty Image"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - setProperty",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setProperty"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Stop: Review Getters and Setters",
+        "script_level.level_keys": [
+          "Stop: Review Getters and Setters"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Challenge: Input and UI",
+        "script_level.level_keys": [
+          "Challenge: Input and UI"
+        ],
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD LEDs Map",
+        "script_level.level_keys": [
+          "CSD LEDs Map"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 Circuit Playground Test",
+        "script_level.level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED basics led.on",
+        "script_level.level_keys": [
+          "CSDU6 LED basics led.on"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED basics onEvent",
+        "script_level.level_keys": [
+          "CSDU6 LED basics onEvent"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED basics led.off()",
+        "script_level.level_keys": [
+          "CSDU6 LED basics led.off()"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED predict",
+        "script_level.level_keys": [
+          "CSDU6 LED predict"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED alarm silent",
+        "script_level.level_keys": [
+          "CSDU6 LED alarm silent"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Buzzer Map",
+        "script_level.level_keys": [
+          "CSD Buzzer Map"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 buzzer freq",
+        "script_level.level_keys": [
+          "CSDU6 buzzer freq"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 buzzer stop",
+        "script_level.level_keys": [
+          "CSDU6 buzzer stop"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 buzzer alarm",
+        "script_level.level_keys": [
+          "CSDU6 buzzer alarm"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Challenge: Buzzer and LED",
+        "script_level.level_keys": [
+          "Challenge: Buzzer and LED"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Introduction to Lists - Part 1",
+        "script_level.level_keys": [
+          "CSD: Introduction to Lists - Part 1"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Lists",
+        "script_level.level_keys": [
+          "CSD: Lists"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - lists - lists 1",
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 1"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - lists - lists 2",
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 2"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Introduction to Lists - Part 2",
+        "script_level.level_keys": [
+          "CSD: Introduction to Lists - Part 2"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Accessing List Items",
+        "script_level.level_keys": [
+          "CSD: Accessing List Items"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - lists - lists 3",
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 3"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - lists - lists 4",
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 4"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - Arrays - indexPractice",
+        "script_level.level_keys": [
+          "CSDU6 - Arrays - indexPractice"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - Arrays - expressionsAsIndexes",
+        "script_level.level_keys": [
+          "CSDU6 - Arrays - expressionsAsIndexes"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Introduction to Lists - Length",
+        "script_level.level_keys": [
+          "CSD Introduction to Lists - Length"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: List Length",
+        "script_level.level_keys": [
+          "CSD: List Length"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - Arrays - length",
+        "script_level.level_keys": [
+          "CSDU6 - Arrays - length"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - Arrays - lengthMinus1",
+        "script_level.level_keys": [
+          "CSDU6 - Arrays - lengthMinus1"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - lists - lists 5",
+        "script_level.level_keys": [
+          "CSDU6 - lists - lists 5"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Challenge: Random Button Colors",
+        "script_level.level_keys": [
+          "Challenge: Random Button Colors"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD colorLed Map",
+        "script_level.level_keys": [
+          "CSD colorLed Map"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6L06 - lists and colorLeds - song list",
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - song list"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6L06 - lists and colorLeds - set color",
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - set color"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6L06 - lists and colorLeds - debug",
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - debug"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6L06 - lists and colorLeds - toggle",
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - toggle"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6L06 - lists and colorLeds - intensity",
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - intensity"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD - Functions Review",
+        "script_level.level_keys": [
+          "CSD - Functions Review"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6L06 - lists and colorLeds -solo light pattern",
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds -solo light pattern"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6L06 - lists and colorLeds - light pattern off",
+        "script_level.level_keys": [
+          "CSDU6L06 - lists and colorLeds - light pattern off"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Challenge: Lights Picker",
+        "script_level.level_keys": [
+          "Challenge: Lights Picker"
+        ],
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: For Loops",
+        "script_level.level_keys": [
+          "CSD: For Loops"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: For Loop",
+        "script_level.level_keys": [
+          "CSD: For Loop"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - 2",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 2"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - 6",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 6"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - predict repeat",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - predict repeat"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - predict print",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - predict print"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Lists with For Loops",
+        "script_level.level_keys": [
+          "CSD: Lists with For Loops"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - 5",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 5"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - 10",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 10"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - 1",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - 1"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - button grid 1",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - button grid 1"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - color buttons",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - color buttons"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - color buttons with for",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - color buttons with for"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - why for",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - why for"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Stop: Check with Teacher",
+        "script_level.level_keys": [
+          "Stop: Check with Teacher"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD - for loop - on off",
+        "script_level.level_keys": [
+          "CSD - for loop - on off"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loops - lights picker",
+        "script_level.level_keys": [
+          "CSDU6 - for loops - lights picker"
+        ],
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - timed Loop predict for",
+        "script_level.level_keys": [
+          "CSD U6 - timed Loop predict for"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Timed Loop Map",
+        "script_level.level_keys": [
+          "CSD Timed Loop Map"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - timed Loop predict timed",
+        "script_level.level_keys": [
+          "CSD U6 - timed Loop predict timed"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop smiley rand y",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop smiley rand y"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop smiley event",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop smiley event"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop console.log()",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop console.log()"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop stop board",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop stop board"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop random blink",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop random blink"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop random sound",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop random sound"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop predict counter",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop predict counter"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Timed For Loop Map",
+        "script_level.level_keys": [
+          "CSD Timed For Loop Map"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop for LEDs",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop for LEDs"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop random sound exit",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop random sound exit"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop helpers",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop helpers"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - timed loop challenge",
+        "script_level.level_keys": [
+          "CSDU6 - timed loop challenge"
+        ],
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - ch 1 exemplar LEDs",
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 exemplar LEDs"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - ch 1 project design",
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project design"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - ch 1 project events",
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project events"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - ch 1 project functions",
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project functions"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - ch 1 project output",
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project output"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - ch 1 project finish",
+        "script_level.level_keys": [
+          "CSDU6 - ch 1 project finish"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U6Ch1",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1"
+        ],
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD onBoardEvent Map",
+        "script_level.level_keys": [
+          "CSD onBoardEvent Map"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button screen buttonL",
+        "script_level.level_keys": [
+          "CSDU6 - button screen buttonL"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button screen buttonR",
+        "script_level.level_keys": [
+          "CSDU6 - button screen buttonR"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Board Buttons Map",
+        "script_level.level_keys": [
+          "CSD Board Buttons Map"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button toggle",
+        "script_level.level_keys": [
+          "CSDU6 - button toggle"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button on off",
+        "script_level.level_keys": [
+          "CSDU6 - button on off"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button up down predict",
+        "script_level.level_keys": [
+          "CSDU6 - button up down predict"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button up down",
+        "script_level.level_keys": [
+          "CSDU6 - button up down"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button check for understanding",
+        "script_level.level_keys": [
+          "CSDU6 - button check for understanding"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button switch",
+        "script_level.level_keys": [
+          "CSDU6 - button switch"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button debug",
+        "script_level.level_keys": [
+          "CSDU6 - button debug"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button tug o war right button",
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war right button"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button tug o war left button",
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war left button"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button tug o war challenge",
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war challenge"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors experiment",
+        "script_level.level_keys": [
+          "CSDU6 - sensors experiment"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Board Sensors Map",
+        "script_level.level_keys": [
+          "CSD Board Sensors Map"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors sound",
+        "script_level.level_keys": [
+          "CSDU6 - sensors sound"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors light",
+        "script_level.level_keys": [
+          "CSDU6 - sensors light"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors temp",
+        "script_level.level_keys": [
+          "CSDU6 - sensors temp"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors predict",
+        "script_level.level_keys": [
+          "CSDU6 - sensors predict"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Set Scale Map",
+        "script_level.level_keys": [
+          "CSD Set Scale Map"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors rgb part 1",
+        "script_level.level_keys": [
+          "CSDU6 - sensors rgb part 1"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors rgb part 2",
+        "script_level.level_keys": [
+          "CSDU6 - sensors rgb part 2"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Polling Events Map",
+        "script_level.level_keys": [
+          "CSD Polling Events Map"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors rgb part 3",
+        "script_level.level_keys": [
+          "CSDU6 - sensors rgb part 3"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors temp f c",
+        "script_level.level_keys": [
+          "CSDU6 - sensors temp f c"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors challenge",
+        "script_level.level_keys": [
+          "CSDU6 - sensors challenge"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensor theremin demo",
+        "script_level.level_keys": [
+          "CSDU6 - sensor theremin demo"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors theremin 1",
+        "script_level.level_keys": [
+          "CSDU6 - sensors theremin 1"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors theremin 2",
+        "script_level.level_keys": [
+          "CSDU6 - sensors theremin 2"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors theremin 3",
+        "script_level.level_keys": [
+          "CSDU6 - sensors theremin 3"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensor vu meter demo",
+        "script_level.level_keys": [
+          "CSDU6 - sensor vu meter demo"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors vu meter 1",
+        "script_level.level_keys": [
+          "CSDU6 - sensors vu meter 1"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors vu meter 2",
+        "script_level.level_keys": [
+          "CSDU6 - sensors vu meter 2"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors vu meter 3",
+        "script_level.level_keys": [
+          "CSDU6 - sensors vu meter 3"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensor love tester demo",
+        "script_level.level_keys": [
+          "CSDU6 - sensor love tester demo"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors love tester 1",
+        "script_level.level_keys": [
+          "CSDU6 - sensors love tester 1"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors love tester 2",
+        "script_level.level_keys": [
+          "CSDU6 - sensors love tester 2"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors love tester 3",
+        "script_level.level_keys": [
+          "CSDU6 - sensors love tester 3"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensor projects challenge",
+        "script_level.level_keys": [
+          "CSDU6 - sensor projects challenge"
+        ],
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 1",
+        "script_level.level_keys": [
+          "CSDU6 - final project 1"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 2",
+        "script_level.level_keys": [
+          "CSDU6 - final project 2"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 3",
+        "script_level.level_keys": [
+          "CSDU6 - final project 3"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 4",
+        "script_level.level_keys": [
+          "CSDU6 - final project 4"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 5",
+        "script_level.level_keys": [
+          "CSDU6 - final project 5"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 6",
+        "script_level.level_keys": [
+          "CSDU6 - final project 6"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U6Ch2",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch2"
+        ],
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

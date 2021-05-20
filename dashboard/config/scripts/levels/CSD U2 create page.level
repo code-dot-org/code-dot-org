@@ -8,7 +8,7 @@
     "instructions_important": "false",
     "project_template_level_name": "CSD U2 Project Template",
     "hide_share_and_remix": "true",
-    "long_instructions": "# Create and Name Your New Page\r\n\r\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename it. (Look at <a href=\"/s/csd2-2017/stage/6/puzzle/8\" target=\"_new\">Lesson 6 Level 8</a> if you've forgotten how.)\r\n* Repeat this process for any other pages you want to add.\r\n\r\n",
+    "long_instructions": "# Create and Name Your New Page\r\n\r\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename it. (Look at <a href=\"/s/csd2-2017/lessons/6/levels/8\" target=\"_new\">Lesson 6 Level 8</a> if you've forgotten how.)\r\n* Repeat this process for any other pages you want to add.\r\n\r\n",
     "submittable": "false"
   },
   "published": true,

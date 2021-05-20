@@ -41,16 +41,26 @@ const TURN_DIRECTION_VALUES = [
 ];
 
 const POSITION_VALUES = [
-  [commonMsg.positionRandom(), RANDOM_VALUE],
-  [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
-  [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
-  [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
-  [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-  [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-  [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-  [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-  [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-  [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
+  [commonMsg.random(), RANDOM_VALUE],
+  [commonMsg.topLeft(), Position.TOPLEFT.toString()],
+  [commonMsg.topCenter(), Position.TOPCENTER.toString()],
+  [commonMsg.topRight(), Position.TOPRIGHT.toString()],
+  [commonMsg.middleLeft(), Position.MIDDLELEFT.toString()],
+  [commonMsg.middleCenter(), Position.MIDDLECENTER.toString()],
+  [commonMsg.middleRight(), Position.MIDDLERIGHT.toString()],
+  [commonMsg.bottomLeft(), Position.BOTTOMLEFT.toString()],
+  [commonMsg.bottomCenter(), Position.BOTTOMCENTER.toString()],
+  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()]
+];
+
+const JUMP_BY_DIRECTION_VALUES = [
+  [msg.jumpForward(), 'jumpForward'],
+  [msg.jumpBackward(), 'jumpBackward']
+];
+
+const JUMP_DIRECTION_VALUES = [
+  [msg.forward(), 'jumpForward'],
+  [msg.backward(), 'jumpBackward']
 ];
 
 const MOVE_BY_DIRECTION_VALUES = [
@@ -67,7 +77,7 @@ const DIRECTION_VALUES = [
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
 
-  var generator = blockly.Generator.get('JavaScript');
+  var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
   var gensym = function(name) {
@@ -740,13 +750,17 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.appendValueInput('VALUE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(
-          new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
-          'DIR'
-        );
-      this.appendDummyInput().appendTitle(msg.dots());
+      this.interpolateMsg(
+        msg.jumpByDirection(),
+        () => {
+          this.appendDummyInput().appendTitle(
+            new blockly.FieldDropdown(JUMP_DIRECTION_VALUES),
+            'DIR'
+          );
+        },
+        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
+        blockly.ALIGN_RIGHT
+      );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1019,11 +1033,6 @@ exports.install = function(blockly, blockInstallOptions) {
 
   SimpleMove.generateBlocksForAllDirections();
 
-  blockly.Blocks.jump.DIRECTIONS = [
-    [msg.jumpForward(), 'jumpForward'],
-    [msg.jumpBackward(), 'jumpBackward']
-  ];
-
   generator.jump = function() {
     // Generate JavaScript for jumping forward or backwards.
     var value =
@@ -1046,7 +1055,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
+        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -1072,7 +1081,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
+        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -1108,8 +1117,13 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.jump());
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.interpolateMsg(
+        msg.jumpToPosition(),
+        () => {
+          this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+        },
+        blockly.ALIGN_RIGHT
+      );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);

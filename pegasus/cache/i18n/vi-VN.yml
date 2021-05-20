@@ -21,26 +21,26 @@ vi-VN:
     none; font-weight: 400"><a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Bạn là giáo viên Tin Học? Xem thêm thư viện tuần giáo
     dục Tin Học.</a>'
+  csedweek_banner_teachers_text: Bạn là giáo viên Tin Học? Xem thêm thư viện tuần
+    giáo dục Tin Học.
   n_have_learned_an_hoc: "<h1>Hãy thử một</h1><h2>Hour of Code</h2><h3># phục vụ</h3>"
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
-  petition_message: Mỗi học sinh trong tất cả các trường nên có cơ hội để tìm hiểu
-    khoa học máy tính
-  petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người
-    khác.'
-  petition_sign_message_support: 'Nếu bạn hỗ trợ chúng tôi, hãy ký tên.  Tham gia
-    cùng # những người khác.'
+  petition_message: Mọi học sinh ở mọi trường học đều phải có cơ hội học khoa học
+    máy tính
+  petition_sign_message: 'Nếu bạn đồng ý, hãy ký tên của bạn và tham gia vào danh
+    sách gửi thư của chúng tôi cùng với # người khác.'
   petition_join_others: 'Tham gia cùng # những người khác'
   name: Tên
   email: Thư điện tử
-  zipcode: Mã bưu chính
+  zipcode: Mã ZIP hoặc quốc gia
   submit: Gửi
   twentyhours_heading: Hãy thử xem Giới thiệu khóa học Khoa học Máy tính của chúng
     tôi
   twentyhours_text: Bạn đã học xong khóa học Giờ Lập Trình? Hãy học tiếp các khóa
     học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
   og_title: 'Code.org: Mọi người có thể Học'
-  og_title_soon: Giờ Lập Trình đã đến
+  og_title_soon: Sự kiện Giờ Mã đang đến gần
   og_title_here: Giờ Lập Trình đây nè!
   og_description: Tất cả học sinh ở mọi trường xứng đáng có cơ hội học ngành khoa
     học máy tính. Khoa học máy tính có thể thay đổi mọi thứ.
@@ -56,7 +56,7 @@ vi-VN:
   hoc2014_teachers: Giáo viên
   hoc2014_host: Lưu trữ nó
   hoc2014_everyone: Tất cả mọi người
-  hoc2014_support: Hỗ trợ nó &#x25BE;
+  hoc2014_support: Ủng hộ điều này &#x25BE;
   hoc2014_whatishoc: Giờ Mã là gì?
   csedweek_map_header: "# CSEdWeek / Các sự kiện Hour of Code trên toàn thế giới"
   csedweek_map_signup: Đăng ký sự kiện của bạn
@@ -68,7 +68,7 @@ vi-VN:
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Đăng ký
   cded_try_it: Hãy thử nó
-  try_now: Thử ngay bây giờ
+  try_now: Thử ngay
   california_heading: Yêu cầu trường học của bạn giảng dạy khoa học máy tính
   california_text: Bất kỳ giáo viên có thể cung cấp các <a href='http://studio.code.org/'>khóa
     học miễn phí</a>.  Bất kỳ trường tiểu học có thể <a href='http://code.org/educate/k5'>dạy
@@ -203,6 +203,7 @@ vi-VN:
   if_you_enjoyed: Nếu bạn cảm thấy việc học Code thật thú vị thì hãy rủ bạn bè cùng
     tham gia nhé! Chúng tớ mong muốn cả thế giới có thể học về nó.
   personalize_certificate: Cá nhân hoá chứng chỉ của bạn
+  print_ice_art_from_frozen: Hướng dẫn in hình ảnh băng từ Frozen
   share_achievement: Chia sẻ thành tích của bạn
   beyond_hour_message: Tiếp tục với <a href='http://studio.code.org'>other courses</a>,
     hoặc tham khảo thêm một vài lựa chọn ở <a href='/learn/beyond'>Learn beyond One
@@ -223,21 +224,22 @@ vi-VN:
   share_on_twitter: Chia sẻ lên Twitter
   beyond_an_hour: Hơn cả một tiếng học lập trinh
   get_started: Bắt đầu
-  i_agree: Tôi đồng ý
-  participant_select: "-Chọn-"
+  i_agree: tôi đồng ý
+  participant_select: "- Lựa chọn -"
   participant_student: Học sinh
-  participant_parent: Phụ Huynh
-  participant_educator: Giáo viên
-  participant_engineer: Kĩ sư phần mềm
-  participant_other: Không có ở trên
+  participant_parent: Cha mẹ
+  participant_educator: Nhà giáo dục
+  participant_engineer: Kỹ sư phần mềm
+  participant_other: Không có điều nào ở trên
   print_all: In tất cả
   print_ice_art: In tác phẩm Ice art của bạn
   create_art_with_zombie: hoặc thiết kế đồ họa chuyên nghiệp với zombie
-  i_am_a: Tôi là một
+  i_am_a: tôi là
   never_spam: Chúng tôi sẽ không bao giờ gửi tin nhắn rác cho bạn
-  enter_country: Nhập đất nước Nếu bạn không sống ở Mỹ
-  used_infrequent_updates: Chỉ được dùng cho những cập nhật không thường xuyên
-  privacy_practices_children: Hãy xem nguyên tắc bảo mật cho trẻ em
+  enter_country: Nhập quốc gia nếu bên ngoài Hoa Kỳ
+  used_infrequent_updates: Chỉ được sử dụng cho các bản cập nhật không thường xuyên
+  privacy_practices_children: Xem các thực tiễn về quyền riêng tư của chúng tôi dành
+    cho trẻ em
   petition_thankyou: Cảm ơn bạn đã đăng ký kiến nghị
   continue_learning_header: Tiếp tục học tập hơn 1 giờ
   continue_learning_body: Có rất nhiều lựa chọn.  Bạn có thể học trực tuyến, hoặc
@@ -279,8 +281,8 @@ vi-VN:
   studiobar_title_nolink: Khám phá Code Studio
   studiobar_elementary_title: Các khóa học tiểu học
   studiobar_elementary_body: Ba khóa học mới của chúng tôi dành cho K&#8209;5
-  studiobar_dance_title: Bữa tiệc khiêu vũ
-  studiobar_dance_body: Tạo và chia sẻ Bữa tiệc Khiêu vũ riêng của bạn
+  studiobar_dance_title: Bữa Tiệc Khiêu Vũ
+  studiobar_dance_body: Tạo và chia sẻ Bữa tiệc khiêu vũ của riêng bạn
   studiobar_hoc_title: Một giờ lập trình
   studiobar_hoc_body: Học cách lập trình với Angry Birds
   studiobar_flappy_title: Lập trình Flappy
@@ -333,7 +335,7 @@ vi-VN:
   homepage_hero_text_stat_loc: "#loc các dòng mã học viên viết"
   homepage_hero_text_stat_students: "#student_count tài khoản học viên trên Code Studio"
   homepage_hero_text_stat_served: 'Giờ lập trình: đã phục vụ #served'
-  homepage_hero_hoc_is_coming: Giờ Lập Trình đã đến
+  homepage_hero_hoc_is_coming: Sự kiện Giờ Mã đang đến gần
   homepage_hero_hoc_is_here: Giờ Lập Trình tại đây
   homepage_slot_text_hoc: Một giờ lập trình
   homepage_slot_text_frozen: Băng giá với Anna và Elsa
@@ -354,6 +356,7 @@ vi-VN:
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
   homepage_signpetition_dropdown: Tôi đồng ý &#x25BE;
+  homepage_signpetition_dropdown_text: tôi đồng ý
   homepage_banner_text_prizes: The Hour of Code sắp diễn ra một lần nữa từ ngày
     7 đến ngày 13 tháng mười hai
   homepage_banner_link_prizes: 'Tham gia sự kiện học lập trình lớn nhất trong lịch
@@ -369,19 +372,19 @@ vi-VN:
   homepage_banner_emailprivacy_link: Đọc thêm
   homepage_banner_40k_teachers_link: Tìm hiểu thêm
   homepage_slot_text_title_hoc: Giờ của mã
-  homepage_slot_text_blurb_hoc: Ai cũng có thể học. Ngay hôm nay
+  homepage_slot_text_blurb_hoc: Ai cũng có thể học. Bắt đầu hôm nay
   homepage_slot_text_link_hoc: Học thử Hour of Code
   homepage_slot_text_link_host: Đăng cai một Giờ Lập Trình
   homepage_slot_text_link_hocserved: phục vụ
   homepage_solot_text_link_volunteer: Tình nguyện viên cho Hour of Code
   homepage_slot_text_title_students: Học sinh
-  homepage_slot_text_blurb_students: Khám phá tất cả các bài hướng dẫn của chúng tôi
+  homepage_slot_text_blurb_students: Khám phá tất cả các hướng dẫn của chúng tôi
   homepage_slot_text_blurb_students_courses: Tìm hiểu các khóa học của chúng tôi
   homepage_slot_text_link_codestudio: Thử Code Studio
   homepage_slot_text_link_local: Tìm lớp ở địa phương
   homepage_slot_text_link_othercourses: Các khoá trực tuyến khác
-  homepage_slot_text_title_educators: Nhà giáo
-  homepage_slot_text_blurb_educators: Dạy các học viên của bạn
+  homepage_slot_text_title_educators: Nhà giáo dục
+  homepage_slot_text_blurb_educators: Dạy học sinh của bạn
   homepage_slot_text_link_elementary: Trường trung học cơ sở
   homepage_slot_text_link_middle: Trung học cơ sở
   homepage_slot_text_link_high: Trung học phổ thông
@@ -394,8 +397,9 @@ vi-VN:
   homepage_slot_text_link_buy: Tham gia
   homepage_slot_text_link_donate: Quyên góp
   homepage_slot_text_link_shop: Áo phông, nón và nhiều hơn nữa
-  homepage_header_donors: Code.org cảm ơn những người hỗ trợ
-  homepage_donors_seall: Xem tất cả
+  homepage_gallery_header: Hơn %{project_count} triệu dự án Code.org đã được tạo
+  homepage_header_donors: Code.org cảm ơn những người ủng hộ nó
+  homepage_donors_seall: Nhìn tất cả
   homepage_donors_donate: Quyên góp
   homepage_below_hero_announcement_text: Chúng tôi quan tâm đến việc giữ bảo mật thông
     tin của bạn và đang cập nhật chính sách bảo mật, có hiệu lực từ ngày 25 tháng
@@ -440,20 +444,23 @@ vi-VN:
   class_submission_level_college: Đại học và cao đẳng
   class_submission_level_vocational: Dạy nghề
   class_submission_languages_other: Ngôn ngữ khác
+  videos_more: Thêm <a href='%{inspiring_videos_playlist}'>video truyền cảm hứng</a>
+    với sự góp mặt của các thần tượng và người nổi tiếng
+  videos_more_markdown: Thêm [video truyền cảm hứng](%{inspiring_videos_playlist})
+    với sự góp mặt của các thần tượng và người nổi tiếng
   playlab_choose_theme: Chọn chủ đề cho Play Lab của bạn
   playlab_classic_title: Cổ điển
   playlab_gumball_title: Thế giới kì diệu của Gumball
   playlab_iceage_title: Kỉ băng hà -sắp ra mắt
   playlab_iceage_title_live: Kỉ băng hà
-  starwars_subtitle: Xây dựng vũ trụ bằng mã lập trình
+  starwars_subtitle: Xây dựng thiên hà bằng mã lệnh
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Sử dụng các khối kéo-thả và JavaScript.
-  starwars_javascript_specs: Chỉ sử dụng Tiếng Anh | Các trình duyệt hiện đại | Tuổi
-    11+
+  starwars_javascript_description: Sử dụng khối kéo thả và JavaScript.
+  starwars_javascript_specs: Chỉ tiếng anh | Trình duyệt hiện đại | Độ tuổi 11+
   starwars_blocks_title: Các khối lệnh
-  starwars_blocks_description: Sử dụng các khối kéo-thả.
-  starwars_blocks_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại, điện thoại thông
-    minh, máy tính bảng | Tuổi từ 6-106
+  starwars_blocks_description: Sử dụng khối kéo thả.
+  starwars_blocks_specs: Nhiều ngôn ngữ | Trình duyệt hiện đại, điện thoại thông minh,
+    máy tính bảng | Độ tuổi 6-106
   mc_name: Minecraft Hour of Code
   mc_longdescription: Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào chuyến phiêu
     lưu khám phá thế giới Minecraft
@@ -463,6 +470,7 @@ vi-VN:
     6-106
   minecraft_agent: 'Minecraft: Hero''s Journey'
   minecraft_designer: Nhà thiết kế Minecraft
+  minecraft_tutorials: Bài hướng dẫn Giờ lập trình Minecraft
   minecraft_agent_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới
     cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
   minecraft_agent_button: Bắt đầu
@@ -471,6 +479,8 @@ vi-VN:
   minecraft_designer_button: Bắt đầu
   minecraft_adventurer_button: Bắt đầu
   minecraft_no_internet: Không có Internet?
+  minecraft_download_adventurer: Tải về các phiên bản ngoại tuyến của Nhà phiêu lưu
+    Minecraft.
   minecraft_subtitle: Minecraft Hour of Code
   minecraft_join_online_training: Bạn đã sẵn sàng để thực hiện Giờ lập trình với Minecraft,
     nhưng không biết bắt đầu từ đâu? Hãy tham gia webinar của chúng tôi <a href='%{minecraft_webinar_url}'>tại
@@ -478,13 +488,35 @@ vi-VN:
     hành trình Hero's Journey từ Minecraft team. Hãy bắt đầu bằng suy nghĩ sẽ mang
     Giờ lập trình đến với các bạn trẻ trong tuần lễ giáo dục khoa học máy tính (từ
     ngày 4/12 - 10/12) và hơn thế nữa.
+  minecraft_og_designer: Minecraft đã trở lại với Giờ lập trình cùng một hoạt động
+    hoàn toàn mới! Hãy lập trình cho động vật và các sinh vật Minecraft khác trong
+    phiên bản Minecraft của riêng bạn.
   minecraft_og_agent: Minecaft là nền tảng của Giờ lập trình, và bạn chính là anh
     hùng! Hãy viết các câu lệnh để lập trình hành trình trong thế giới Minecraft.
+  sports_page_title: Thể thao Giờ lập trình
+  sports_og_title: Hãy tự thúc đẩy bản thân. Bất cứ ai cũng có thể học.
+  sports_title: Tự lập trình game thể thao của riêng bạn
   sports_watch_video: Xem video
+  sports_video_title: Hãy tự thúc đẩy bản thân. Bất cứ ai cũng có thể học.
+  sports_select_theme: Chọn chủ đề cho bài hướng dẫn
+  sports_basketball_title: Làm game bóng rổ
+  sports_featured_athletes: Xem các vận động viên tham dự
+  sports_athletes_title: Các vận động viên tham dự
+  watch_inspirational_videos: Trước khi bạn bắt đầu, hãy xem một trong những video
+    truyền cảm hứng này
+  video_title_cs_is_everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
   video_title_inspire_girl: Truyền cảm hứng cho một cô gái
+  video_title_cs_intro: Giới thiệu Khoa học máy tính
+  video_title_schools_dont_teach: Những gì hầu hết các trường không dạy
+  video_title_obama: Tổng thống Obama với khoa học máy tính
+  video_title_hoc_is_here: Giờ lập trình đã tới - Bất cứ ai cũng có thể học
+  video_title_anybody_can_learn: Bất cứ ai cũng có thể học
+  video_title_steph_curry: Giờ lập trình với Steph Curry
+  video_title_my_name_is_aracely: Tên tôi là Aracely
   video_5min: 5 phút
   help_translate: Giúp chúng tôi dịch.
   no_internet: Không có Internet?
+  download_offline: Tải xuống phiên bản ngoại tuyến.
   are_you_teacher: Bạn có phải là giáo viên?
   volunteer_engineer_submission_title: Truyền cảm hứng cho sinh viên và tình nguyện
     viên
@@ -807,6 +839,7 @@ vi-VN:
     duyệt Web mới nhất.</a>
   mobile_devices: Hướng dẫn cho thiết bị di động
   frozen_name: Mã hóa cùng  Anna và Elsa
+  starwars_name: 'Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh'
   codeorg_name: Mê cung cổ điển
   codeintl_name: Mê cung cổ điển
   khan_name: Giới thiệu chung về JavaScript
@@ -834,15 +867,32 @@ vi-VN:
   course2_name: Khóa học 2
   course3_name: Khóa học 3
   course4_name: Khóa học 4
+  coursea-draft_name: Khóa học A
+  coursea_name: Khóa học A
+  courseb-draft_name: Khóa học B
+  courseb_name: Khóa học B
+  coursec-draft_name: Khóa học C
+  coursec_name: Khóa học C
+  coursed-draft_name: Khóa học D
+  coursed_name: Khóa học D
+  coursee-draft_name: Khóa học E
+  coursee_name: Khóa học E
+  coursef-draft_name: Khóa học F
+  coursef_name: Khóa học F
   coursed-2018_name: Kịch bản khóa D mới
   accelerated_name: Khóa học cấp tốc
   20-hour_name: Khóa học cấp tốc
   classicmaze_name: Mê cung cổ điển
   iceage_name: Kỉ băng hà
   minecraft_name: Minecraft
+  starwarsblocks_name: Chiến tranh giữa các vì sao (Khối)
+  hoc-encryption_name: Mã hóa đơn giản
+  text-compression_name: Nén văn bản
   applab_name: Phòng thí nghiệm ứng dụng
-  gamelab_name: Kho Trò chơi
-  applab_gradelevel: Lứa tuổi 13 +
+  gamelab_name: Phòng thí nghiệm trò chơi
+  basketball_name: Làm game bóng rổ
+  sports_name: Tự lập trình game thể thao của riêng bạn
+  applab_gradelevel: 13 tuổi trở lên
   lightbot_gradelevel: Mọi lứa tuổi
   thinkersmith_gradelevel: Mọi lứa tuổi
   lightbotintl_gradelevel: Mọi lứa tuổi
@@ -855,15 +905,18 @@ vi-VN:
   makeschool_gradelevel: Trung học phổ thông
   touchdevelop_gradelevel: Trung học phổ thông
   blockly_gradelevel: Mọi lứa tuổi
+  frozen_gradelevel: Độ tuổi 8-108
+  artist_gradelevel: Độ tuổi 8-108
   boxisland_gradelevel: Tiểu học
-  course1_gradelevel: Lứa tuổi 4 + (trước khi biết đọc)
+  course1_gradelevel: Tuổi từ 4-6
   course2_gradelevel: Lứa tuổi 6 + (yêu cầu biết đọc)
-  course3_gradelevel: Lứa tuổi 8 + (sau khi khóa học 2)
+  course3_gradelevel: 8-18 tuổi
   course4_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
   coursed_gradelevel: Lớp 8 +
   coursed-2017_gradelevel: Lớp 8 +
   coursed-2018_gradelevel: Lớp 8 +
   coursed-2019_gradelevel: Lớp 8 +
+  coursed-2020_gradelevel: Lớp 8 +
   accelerated_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
   thinkersmithspanish_platformtext: Không dùng máy tính
   thinkersmith_platformtext: Không dùng máy tính
@@ -899,19 +952,80 @@ vi-VN:
     trên điện thoại của bạn. '
   appinventor_shortdescription: Làm ứng dụng của riêng bạn! (Chỉ cho android)
   hourofcode_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
-  starwars_shortdescription: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
-    của riêng bạn trong một thiên hà xa xôi.
+  frozen_shortdescription: Hãy sử dụng mã để tham gia cùng Anna và Elsa khi họ khám
+    phá sự kỳ diệu và vẻ đẹp của băng.
+  starwars_shortdescription: Học cách lập trình droid và làm game Chiến tranh giữa
+    các vì sao của riêng bạn ở một thiên hà xa rất xa.
   playlab_shortdescription: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng
     thí nghiệm trò chơi!
   infinity_shortdescription: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
     hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
   artist_shortdescription: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
+  coursea_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc
+    trước.
+  courseb_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc
+    trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
+  coursec_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy tính
+    và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursed_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa học
+    C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn thế
+    nữa.
+  coursee_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong Khóa
+    học C & D và sau đó đi xa hơn với các chức năng.
+  coursef_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản về
+    Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của
+    riêng bạn.
+  coursea-2017_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước.
+  courseb-2017_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
+  coursec-2017_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
+    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursed-2017_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
+    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
+    thế nữa.
+  coursee-2017_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
+    Khóa học C & D và sau đó đi xa hơn với các chức năng.
+  coursef-2017_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản
+    về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của
+    riêng bạn.
+  coursea-2018_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước.
+  courseb-2018_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
+  coursec-2018_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
+    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursed-2018_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
+    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
+    thế nữa.
+  coursee-2018_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
+    Khóa học C & D và sau đó đi xa hơn với các chức năng.
+  coursef-2018_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản
+    về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của
+    riêng bạn.
+  coursea-2019_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước.
+  courseb-2019_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
+  coursec-2019_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
+    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursed-2019_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
+    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
+    thế nữa.
+  coursee-2019_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
+    Khóa học C & D và sau đó đi xa hơn với các chức năng.
+  coursef-2019_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản
+    về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của
+    riêng bạn.
   frozen_longdescription: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá
     sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt
     băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ
     với bạn bè của bạn!
-  starwars_longdescription: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
-    của riêng bạn trong một thiên hà xa xôi.
+  starwars_longdescription: Học cách lập trình droid và làm game Chiến tranh giữa
+    các vì sao của riêng bạn ở một thiên hà xa rất xa.
+  playlab_longdescription: Sáng tác truyện hoặc làm game với Play Lab! Hãy tạo chuyển
+    động cho động vật, cướp biển, zombie, ninja và nhiều nhân vật khác, tạo âm thanh,
+    điểm số và thậm chí là ném quả cầu lửa!
   scratch_beyond_name: Hãy sáng tạo trong lập trình
   robomind_beyond_name: Lập trình một robot ảo
   codehs_beyond_name: Học cách lập trình cùng cún Karel
@@ -957,7 +1071,7 @@ vi-VN:
   header_my_dashboard: Bảng điều khiển của tôi
   header_courses: Các khóa học
   header_course_catalog: Danh mục khóa học
-  header_project_gallery: chương trình
+  header_project_gallery: Dự án
   header_sections: Mục
   header_professional_learning: Học tập nâng cao chuyên môn
   header_educate_overview: Tổng quát về Giáo dục
@@ -970,7 +1084,7 @@ vi-VN:
   header_educate_inspire: Truyền cảm hứng cho Hssv
   header_educate_community: Cộng đồng trực tuyến
   header_educate_tools: Các công cụ và video
-  header_about_us: Thông tin
+  header_about_us: Về chúng tôi
   header_about_leadership: Khả năng lãnh đạo
   header_about_donors: Người tặng
   header_about_partners: Đối tác
@@ -983,25 +1097,35 @@ vi-VN:
   header_learn: Học
   header_teach: Dạy
   header_help_us: Giúp đỡ chúng tôi
-  header_about: Thông tin
+  header_about: về chúng tôi
   header_teacher_community: Cộng đồng giáo viên
-  header_report_bug: Báo lỗi
+  header_help_support: Giúp đỡ và hỗ trợ
+  header_report_bug: Báo cáo sự cố
+  header_legal_privacy: Chính sách bảo mật
+  header_legal_tos: Các điều khoản của Code.org
   header_tutorials: Hướng dẫn
   header_documentation: Tài liệu
   user_header_label: Chào %{username}
   user_header_team: Nhóm
   user_header_my_projects: Chương trình của tôi
-  user_header_settings: Tài khoản của bạn
+  user_header_settings: Cài đặt tài khoản
   user_header_logout: Đăng xuất
   user_header_signin: Đăng nhập
-  user_header_gamelab: Kho Trò chơi
+  user_header_create: Tạo
+  user_header_applab: Phòng thí nghiệm ứng dụng
+  user_header_artist: Họa sĩ
+  user_header_gamelab: Phòng thí nghiệm trò chơi
   user_header_playlab: Phòng trò chơi
-  user_header_dance: Bữa tiệc khiêu vũ
+  user_header_dance: Bữa Tiệc Khiêu Vũ
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy bird
+  user_header_view_all: Xem tất cả các dự án ...
   user_header_view_my_projects: Xem chương trình của tôi
   view_all_sections: Xem tất cả các phần
   hero_name: 'Minecraft: Hero''s Journey'
+  applab_tile_subtitle: Hãy sáng tạo ứng dụng JavaScript của riêng mình bằng lập trình
+    dạng khối. Hoặc là đưa kỹ năng của bản thân lên một đẳng cấp mới với lập trình
+    dạng văn bản. (Chỉ bằng tiếng Anh)
   applab_tile_start_tutorial: Bắt đầu
   applab_tile_teacher_guide: Xem hướng dẫn cho giáo viên
   aquatic_name: Minecraft Chuyến thám hiểm đại dương
@@ -1010,13 +1134,29 @@ vi-VN:
     máy tính khác không?
   account_sign_up_child_accept_terms: Tôi xác nhận rằng tôi có bố mẹ hoặc người giám
     hộ hợp pháp cho phép sử dụng dịch vụ Code.org.
-  hoc_overview_dance_title: Bữa tiệc khiêu vũ
+  hoc_overview_dance_title: Bữa Tiệc Khiêu Vũ
+  hoc_overview_dance_subtitle: Code một Bữa Tiệc Khiêu Vũ để chia sẻ với bạn bè của
+    bạn. Với sự góp mặt của Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara,
+    và 25 nghệ sĩ khác!
+  hoc_overview_dance_2019_subtitle: Code một Bữa Tiệc Khiêu Vũ để chia sẻ với bạn
+    bè của bạn. Với sự góp mặt của Katy Perry, Shawn Mendes, Panic! At The Disco,
+    Lil Nas X, Jonas Brothers, Nicki Minaj, và 34 nghệ sĩ khác!
+  hoc_overview_title: Các hoạt động Giờ lập trình đến từ Code.org
+  hoc_overview_subtitle_markdown: "[Giờ lập trình](https://hourofcode.com) là phong
+    trào toàn cầu với sự tham gia của hàng chục triệu học sinh tại hơn 180 quốc gia.
+    Bất kỳ ai, dù ở bất kỳ đâu cũng đều có thể tổ chức sự kiện Giờ lập trình hoặc
+    thử một trong hơn 500 bài hướng dẫn kéo dài một giờ với hơn 45 ngôn ngữ."
   hoc_overview_partner_activities_title: Nhiều hoạt động hơn từ các đối tác
   hoc_overview_partner_activities_body: Trang web The Hour of Code có hơn 100 hoạt
     động khoa học máy tính cho tất cả các lứa tuổi và các mức độ kinh nghiệm, phát
     triển bởi Code.org và các đối tác.
   hoc_overview_partner_activities_link: Xem hoạt động
   hoc_overview_start_tutorial: Bắt đầu
+  hoc_overview_more_resources: Để xem thêm các tài liệu về cách tương tác với lớp
+    học từ xa, hãy xem hướng dẫn tổ chức [Hour of Code trực tuyến](https://hourofcode.com/us/how-to/virtual).
+    Đối với các em học sinh không có hoặc bị giới hạn về thiết bị công nghệ hoặc kết
+    nối, hãy chia sẻ gói [các hoạt động Hour of Code ngoại tuyến](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    này.
   hoc_overview_view_teacher_guide: Xem hướng dẫn cho giáo viên
   hoc2018_creativity_create: Tạo
   hoc2018_creativity_what_will_you_create: Bạn sẽ tạo những gì?
@@ -1106,15 +1246,17 @@ vi-VN:
     đề của bạn để khám phá và xây dựng những thế giới dưới nước với sức mạnh của lập
     trình.
   hoc2018_mc_journey: Hành trình thông qua Minecraft với lập trình.
-  hoc2018_dance_party_main_heading: Bữa tiệc khiêu vũ
+  hoc2018_dance_party_main_heading: Bữa Tiệc Khiêu Vũ
+  hoc2018_dance_party_subheading: Giúp dịch Bữa tiệc Khiêu vũ
   hoc2018_dance_create_your_own_dance_title: Tạo Bữa tiệc Khiêu vũ của riêng bạn
-  hoc2018_dance_party_box_title: Bữa tiệc khiêu vũ
+  hoc2018_dance_party_box_title: Bữa Tiệc Khiêu Vũ
   hoc2018_dance_party_box_description: Viết mã cho Bữa tiệc Khiêu vũ để chia sẻ với
     bạn bè của bạn!
   hoc2018_dance_party_button: Bắt đầu
   hoc2018_dance_keep_on_dancing_box_title: Hãy Tiếp tục Nhảy
   hoc2018_dance_keep_on_dancing_description: Hãy làm nhiều hơn nữa so với giờ đầu
     tiên với các ý tưởng dự án mở rộng.
+  hoc2018_dance_keep_on_dancing_specs: Ngôn ngữ | Định dạng | Độ tuổi 13+
   hoc2018_dance_keep_on_dancing_button: Bắt đầu phần 2
   hoc2018_dance_teacher_resources_title: Tài nguyên giáo viên
   hoc2018_dance_teacher_resources_tile1_description: Kế hoạch bài học, chứng chỉ và
@@ -1124,7 +1266,61 @@ vi-VN:
   hoc2018_dance_teacher_resources_tile2_description: Không cần máy tính!  Tìm hiểu
     các khái niệm mã hóa để cùng nhau dàn dựng một bữa tiệc khiêu vũ.
   hoc2018_dance_teacher_resources_tile2_button: Hoạt động không dùng máy
+  hoc2018_dance_featured_student_creations_title: Đính kèm tác phẩm của học sinh
+  hoc2018_dance_videos_section_heading: Khơi dậy nguồn cảm hứng
+  hoc2018_dance_video_title_what_is_creativity: Sáng tạo là gì?
+  hoc2018_dance_view_creativity_video_playlist: Sáng tạo là gì? Xem toàn bộ sêri (5
+    phút)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: Hợp tác cùng
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* (Kỹ sư tương lai Amazon) là chương trình hướng nghiệp toàn diện cho
+    trẻ em nhằm truyền cảm hứng, giáo dục và đào tạo trẻ em cũng như những thanh niên
+    có thu nhập thấp và hoàn cảnh thiệt thòi khác để theo đuổi sự nghiệp trong ngành
+    khoa học máy tính. <a href='%{amazon_future_engineer_link}' target='_blank'>Tìm
+    hiểu thêm</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* (Kỹ sư tương lai Amazon) là chương trình hướng nghiệp toàn diện
+    cho trẻ em nhằm truyền cảm hứng, giáo dục và đào tạo trẻ em cũng như những thanh
+    niên có thu nhập thấp và hoàn cảnh thiệt thòi khác để theo đuổi sự nghiệp trong
+    ngành khoa học máy tính. [Tìm hiểu thêm](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Tìm hiểu thêm
+    về Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Hãy tìm hiểu về chương trình
+    hướng nghiệp từ bậc mầm non của Amazon để tăng cường tiếp cận giáo dục khoa học
+    máy tính. Hãy tìm thông tin về cách tham gia trại hè, lớp KHMT bậc trung học,
+    học bổng và khóa thực tập của chúng tôi.
   hoc2018_dance_amazon_about_future_engineer_button: Tìm hiểu thêm
   hoc2018_dance_amazon_scholarship_programs_button: Đăng ký ngay
+  hoc2018_dance_amazon_future_engineer_footer: "* Nghệ sĩ có bản nhạc được sử dụng
+    trong bài hướng dẫn này không tài trợ hoặc ủng hộ Amazon theo nội dung sử dụng
+    giấy phép âm nhạc của họ trên Code.org."
   hoc2018_dance_measure: Nhịp
   hoc2018_dance_measure_colon: 'Nhịp:'
+  hoc2018_mc_with_microsoft: Hợp tác cùng
+  hoc2018_mc_thank_microsoft: Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng
+    tôi để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ
+    năng cần thiết để thành công trong thế kỷ 21.
+  hoc2019_mc_mee_description1: 'Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên
+    Minecraft: Education Edition dành cho Windows, Mac và iPad. Hãy tìm hiểu những
+    căn bản về viết mã lệnh và khám phá AI cùng các em học sinh!'
+  hoc2019_mc_more_coding_resources: Xem thêm nguồn hỗ trợ viết mã
+  hoc2019_dance_previous_versions: |-
+    Bạn đang tìm phiên bản trước của Bữa tiệc Khiêu vũ?
+    Nhấn vào đây để bắt đầu [Phần 1](%{dance_2018_link}) và [Phần 2](%{dance_extras_2018_link}) từ năm 2018.
+  hoc2020_mc_available_code_org: Có trên Code.org
+  hoc2020_mc_available_mee: 'Có trong Minecraft: Education Edition'
+  hoc2020_mc_mee_description: 'Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên
+    Minecraft: Education Edition dành cho Windows, Mac, Chromebook và iPad. Hãy tìm
+    hiểu những căn bản về viết mã lệnh và khám phá sự đa dạng cũng như hòa nhập của
+    các em học sinh! Hãy truy cập những nguồn hỗ trợ miễn phí, bao gồm thời khóa biểu,
+    video, chương trình đào tạo khoa học máy tính, bài học về sự công bằng và các
+    khóa đào tạo giáo viên.'
+  footer_powered_by_aws: Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là
+    các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và
+    / hoặc các quốc gia khác.
+  footer_privacy_policy: Chính sách bảo mật
+  footer_about: về chúng tôi
+  footer_partners: Đối tác
+  footer_donate: Quyên góp
+  footer_support: Trợ giúp và Cộng đồng
+  footer_terms: Điều khoản

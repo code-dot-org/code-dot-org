@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-10-31T17:41:59.000Z",
+  "level_num": "custom",
+  "user_id": 898,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "how-to-k5-workshops",
+    "instructions_important": "false",
+    "long_instructions": "## Getting Started: Why Computer Science (CS) Fundamentals?\r\n\r\nYou'll complete this free, self-paced course using the same learning platform you can use in your classroom with your students. \r\n\r\nLet's start by learning a bit about what Computer Science (CS) Fundamentals is, and how it's worked for teachers and students around the globe. In the next level, we'll cover how to interact with the CS Fundamentals learning platform, which you'll be using to complete this course.\r\n\r\n> ## Reflect\r\nWhat are your first impressions of CS Fundamentals?\r\n>\r\n> [Tweet your thoughts](https://twitter.com/teachcode) and be sure to tag @teachcode in your tweet so we can respond.\r\n>\r\n> <a href=\"http://ctt.ec/Bfjw3\" target=\"blank\">Share on Twitter >></a>\r\n>\r\nDon't have a Twitter account? You can also find us on [Facebook](https://www.facebook.com/Code.org/) or [Instagram](https://www.instagram.com/codeorg/).",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-21 18:29:07 +0000\",\"changed\":[],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-21 18:29:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-21 19:18:55 +0000\",\"changed\":[\"name\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-21 19:22:25 +0000\",\"changed\":[],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2020-05-19 23:39:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2020-05-19 23:46:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

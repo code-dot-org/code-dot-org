@@ -1,0 +1,35 @@
+.field
+  = f.label :text_to_speech_overrides
+  %p By default, Text-to-Speech will use the Instructions text as its source. You can override here if you wish to tweak the pronunciation.
+  #tts-error.alert.alert-error{style: "display: none"}
+    #alert-content
+  .row
+    - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(Javalab))
+      .span6
+        %h5 Short Instructions
+        = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+    .span6
+      %h5 Long Instructions
+      = f.text_area :tts_long_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+  - if CDO.use_acapela
+    = f.label :voice
+    %div
+      %select#level_tts_voice
+    %div
+      %button.tts#tts-short-instructions{type: 'button'} Hear Short Instructions
+      %button.tts#tts-long-instructions{type: 'button'} Hear Long Instructions
+    %div
+      %audio#tts-audio
+
+-if CDO.acapela_login
+  :javascript
+      const config = {
+        login: "#{CDO.acapela_login}",
+        app: "#{CDO.acapela_ephemeral_app}",
+        pwd: "#{CDO.acapela_ephemeral_password}",
+      };
+
+      $(document).ready(function () {
+        levelbuilder.acapela.populateVoicesList(config);
+        levelbuilder.acapela.listenForGetAudio(config);
+      });

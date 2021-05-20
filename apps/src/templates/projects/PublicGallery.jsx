@@ -1,23 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-
-const styles = {
-  clear: {
-    clear: 'both'
-  },
-  linkBox: {
-    textAlign: 'center',
-    width: '100%',
-    marginTop: 10
-  },
-  link: {
-    display: 'inline-block'
-  }
-};
+import ProjectCardGrid from './ProjectCardGrid';
 
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -31,8 +17,13 @@ export const publishedProjectPropType = PropTypes.shape({
 
 class PublicGallery extends Component {
   static propTypes = {
-    // from redux state
+    // Controls hiding/showing view more links for App Lab and Game Lab.
+    limitedGallery: PropTypes.bool,
+    includeDanceParty: PropTypes.bool,
+
+    // Provided by Redux
     projectLists: PropTypes.shape({
+      special_topic: PropTypes.arrayOf(publishedProjectPropType),
       applab: PropTypes.arrayOf(publishedProjectPropType),
       spritelab: PropTypes.arrayOf(publishedProjectPropType),
       gamelab: PropTypes.arrayOf(publishedProjectPropType),
@@ -40,10 +31,7 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
       dance: PropTypes.arrayOf(publishedProjectPropType)
-    }),
-    // Controls hiding/showing view more links for App Lab and Game Lab.
-    limitedGallery: PropTypes.bool,
-    includeDanceParty: PropTypes.bool
+    })
   };
 
   /**
@@ -70,7 +58,7 @@ class PublicGallery extends Component {
     const {projectLists, limitedGallery, includeDanceParty} = this.props;
 
     return (
-      <div>
+      <div id="uitest-public-projects">
         <ProjectCardGrid
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
@@ -90,6 +78,20 @@ class PublicGallery extends Component {
     );
   }
 }
+
+const styles = {
+  clear: {
+    clear: 'both'
+  },
+  linkBox: {
+    textAlign: 'center',
+    width: '100%',
+    marginTop: 10
+  },
+  link: {
+    display: 'inline-block'
+  }
+};
 export default connect(state => ({
   projectLists: state.projects.projectLists
 }))(PublicGallery);

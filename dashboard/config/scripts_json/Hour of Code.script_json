@@ -1,0 +1,786 @@
+{
+  "script": {
+    "name": "Hour of Code",
+    "wrapup_video_id": 13,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:35 UTC",
+    "seeding_key": {
+      "script.name": "Hour of Code"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Hour of Code 2013",
+      "name": "Hour of Code 2013",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_2"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_1"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_2_5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_2_5"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_2_5"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_3"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_3"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_4"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_4"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_5"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_5"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_6"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_6"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_7"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_7"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_8"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_8"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_9"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_9"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_10"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_10"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_11"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_11"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_12"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_12"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_13"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_13"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_13"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_14"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_14"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_14"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_15"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_15"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_15"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_16"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_16"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_16"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_17"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_17"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_17"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_18"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_18"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_18"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_19"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_19"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      },
+      "level_keys": [
+        "blockly:Maze:2_19"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_2",
+        "script_level.level_keys": [
+          "blockly:Maze:2_2"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_1",
+        "script_level.level_keys": [
+          "blockly:Maze:2_1"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_2_5",
+        "script_level.level_keys": [
+          "blockly:Maze:2_2_5"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_3",
+        "script_level.level_keys": [
+          "blockly:Maze:2_3"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_4",
+        "script_level.level_keys": [
+          "blockly:Maze:2_4"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_5",
+        "script_level.level_keys": [
+          "blockly:Maze:2_5"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_6",
+        "script_level.level_keys": [
+          "blockly:Maze:2_6"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_7",
+        "script_level.level_keys": [
+          "blockly:Maze:2_7"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_8",
+        "script_level.level_keys": [
+          "blockly:Maze:2_8"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_9",
+        "script_level.level_keys": [
+          "blockly:Maze:2_9"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_10",
+        "script_level.level_keys": [
+          "blockly:Maze:2_10"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_11",
+        "script_level.level_keys": [
+          "blockly:Maze:2_11"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_12",
+        "script_level.level_keys": [
+          "blockly:Maze:2_12"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_13",
+        "script_level.level_keys": [
+          "blockly:Maze:2_13"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_14",
+        "script_level.level_keys": [
+          "blockly:Maze:2_14"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_15",
+        "script_level.level_keys": [
+          "blockly:Maze:2_15"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_16",
+        "script_level.level_keys": [
+          "blockly:Maze:2_16"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_17",
+        "script_level.level_keys": [
+          "blockly:Maze:2_17"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_18",
+        "script_level.level_keys": [
+          "blockly:Maze:2_18"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_19",
+        "script_level.level_keys": [
+          "blockly:Maze:2_19"
+        ],
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "Hour of Code"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

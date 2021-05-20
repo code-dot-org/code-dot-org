@@ -4,7 +4,6 @@ layout: wide_index
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
-  "twitter:url": "https://<%=request.host%>/learn"
   "twitter:image:src" : "https://code.org/images/learn/og-learn-robotics.png"
   "twitter:title": "Hour of Code"
   "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
@@ -18,6 +17,9 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+
+:ruby
+  @header["social"]["twitter:url"] = "https://#{request.host}/learn"
 
 -# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
 :css
@@ -64,8 +66,8 @@ social:
 -# Not ideal but we can pull the undigested files from /blockly.
 - locale_code = hoc_get_locale_code
 - js_locale = locale_code.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
-%script{src: minifiable_asset_path("js/tutorialExplorer.js")}
+%script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
@@ -83,6 +85,7 @@ social:
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+  - tutorial[:teachers_notes]                       = CDO.curriculum_url(locale_code, tutorial[:teachers_notes], false)
 
 #tutorials
 
@@ -93,11 +96,12 @@ social:
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
-      tutorials: #{tutorials_contents.to_json},
+      tutorials: #{raw tutorials_contents.to_json},
       locale: "#{locale_code}",
       robotics: true,
+      showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
       backButton: true,
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });

@@ -1,0 +1,59 @@
+- registration_url = "https://studio.code.org/pd/workshops/#{@application.workshop.id}/enroll"
+
+%p
+  Hello
+  = @application.first_name + "!"
+
+%p
+  Congratulations on being accepted into the
+  = @application.course_name
+  Professional Learning program in partnership with
+  - if @application.regional_partner
+    = @application.effective_regional_partner_name
+    and Code.org!
+  - else
+    Code.org!
+  Now it's time to register!
+
+%p
+  Please read on for more details, and then make sure to register using the link below
+  %strong within two weeks
+  of receiving this message
+  %strong to register for your summer workshop.
+
+= render partial: 'expectations'
+
+%p
+  Here are your important next steps:
+
+%ul
+  %li
+    %strong Within two weeks
+    of receiving this message, please register for your summer workshop
+    and confirm your seat in this program.
+    = link_to('Register Here', registration_url) + '.'
+  %li
+    If you want to decline your seat, let me know as soon as possible,
+    using the contact information in my signature
+    so we can accommodate another teacher.
+  %li
+    %strong Mark your calendar for your summer workshop!
+    Details about the dates/location of your workshop can be found at
+    = link_to('this registration link', registration_url) + '.'
+    You will receive more details
+    approximately six weeks prior to your summer workshop.
+  %li
+    Share the good news with your school! Start talking with your
+    administration, colleagues, students, and parents about the course you
+    will be teaching next year, and encourage a diverse group of students to
+    enroll. Once you register for the program, you will receive a
+    welcome kit complete with recruitment tips and tools. In the meantime,
+    please check out these
+    = link_to('recruitment resources', 'https://code.org/educate/resources/recruit') + '.'
+
+%p
+  Congratulations again! We look forward to receiving your registration
+  within two weeks.
+
+= render partial: 'partner_signature'
+

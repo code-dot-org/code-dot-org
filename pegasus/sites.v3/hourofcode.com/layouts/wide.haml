@@ -1,4 +1,3 @@
-%link{rel:'stylesheet', type:'text/css', href: '/shared/css/warning-banner.css'}
 %link{rel:'stylesheet', type:'text/css', href:'/css/wide-layout.css'}
 
 = view :unsupported_browser
@@ -6,19 +5,15 @@
 
 .container.wide-index-content
 
-  - if header['nav']
+  - if @header['nav']
     .row
       .col-sm-9
         = body
       .col-sm-3.nav-col
-        = view(header['nav'])
+        = view(@header['nav'])
   - else
     = body
 
 %br/
 %br/
 %br/
-
-= view :cookie_banner
-
-= view :footer

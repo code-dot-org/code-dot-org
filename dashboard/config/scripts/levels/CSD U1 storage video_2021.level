@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:45:11.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csd_what_computers_do",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "## Questions to think about:\r\n\r\n* Think of something you do on the computer. What sort of input, output, storage, and processing are happening?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThis discussion should allow students to review the input, output, storage, and processing model that they have been exploring in the past few lessons.  While they should be familiar with how the model works with apps, there may still be questions around other computing devices, and around the examples shown later in the lesson.  For example, one common source of controversy around processing is whether some devices are processing information themselves, or whether the user is processing the information, while the device simply stores information (e.g. the abacus).",
+    "display_name": "IOSP Model",
+    "parent_level_id": 21735,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-03 22:31:41 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-23 07:55:55 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-24 23:21:36 +0000\",\"changed\":[],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-29 16:22:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

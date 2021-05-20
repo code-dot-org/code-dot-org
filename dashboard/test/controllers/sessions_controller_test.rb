@@ -46,10 +46,25 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "sign in page saves return to url in session" do
-    user_return_to = 'http://code.org/a-return-to-url'
-    get :new, params: {user_return_to:  user_return_to}
+    # Note that we currently have no restrictions on what the domain of the
+    # redirect url can be; we may at some point want to add domain
+    # restrictions, but if we do so we want to make sure that both
+    # studio.code.org and code.org are supported.
+    #
+    # See also the "sign up page saves return to url in session" test in
+    # registrations_controller_test
+    urls = [
+      "/foo",
+      "//studio.code.org/foo",
+      "//code.org/foo",
+      "//some_other_domain.com/foo"
+    ]
 
-    assert_equal user_return_to, session[:user_return_to]
+    urls.each do |url|
+      session.delete(:user_return_to)
+      get :new, params: {user_return_to: url}
+      assert_equal url, session[:user_return_to]
+    end
   end
 
   test "teachers go to specified return to url after signing in" do

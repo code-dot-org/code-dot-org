@@ -1,0 +1,7 @@
+name 'CSD games functions challenge choice_2021'
+display_name 'Functions Challenges'
+description 'Improve your game and try out these challenges with functions.'
+
+sublevels
+level 'CSD U3 Functions challenge drawscene_2021'
+level 'CSD U3 L19 Freeplay_2021'

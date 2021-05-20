@@ -1,20 +1,20 @@
 professional_learning_course 'ECS Support Legacy'
-login_required 'true'
+login_required true
 
-stage 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'ECS Phase 3 Welcome'
 level 'ECSPD3-u6 about'
 level 'PD check your progress'
 level 'ECSPD3-u6 plan'
 level 'ECSPD course goals'
 
-stage 'Unit 6 Overview'
+lesson 'Unit 6 Overview', display_name: 'Unit 6 Overview', has_lesson_plan: false
 level 'ECSPD3-u6 overview'
 level 'ECSPD3-u6 intro to u6'
 level 'ECSPD3-u6 connections'
 level 'ECSPD3-u6 why study robotics'
 
-stage 'Unit 6 lessons'
+lesson 'Unit 6 lessons', display_name: 'Unit 6 lessons', has_lesson_plan: false
 level 'ECSPD3-u6 lesson overview'
 level 'ECSPD3-u6 day 1'
 level 'ECSPD3-u6 day 2-3'
@@ -29,21 +29,22 @@ level 'ECSPD3-u6 day 16-18'
 level 'ECSPD3-u6 day 19-23'
 level 'ECSPD3-u6 day 24-33'
 
-stage 'Alternative Ideas for Unit 6'
+lesson 'Alternative Ideas for Unit 6', display_name: 'Alternative Ideas for Unit 6', has_lesson_plan: false
 level 'ECSPD3-u6 alt lesson overview'
 level 'ECSPD3-u6 lesson ideas'
-level 'ECSPD3-u6 Links to Online Simulations'
-level 'ECSPD3-u6 Ideas for culminating projects'
+level 'ECSPD3-u6 links to online simulations'
+level 'ECSPD3-u6 ideas for culminating projects'
 
-stage 'Unit 6 Challenge'
+lesson 'Unit 6 Challenge', display_name: 'Unit 6 Challenge', has_lesson_plan: false
 level 'ECSPD3-u6 challenge inside'
 level 'ECSPD3-u6 challenge details'
 level 'ECSPD3-u6 list of challenges'
 level 'ECSPD3-u6 pick a challenge'
 level 'ECSPD3-u6 do the challenge'
 
-stage 'Share out and Submit'
+lesson 'Share out and Submit', display_name: 'Share out and Submit', has_lesson_plan: false
 level 'ECSPD3-u6 share out overview'
 level 'ECSPD3-u6 post to forum'
 level 'ECSPD3-u6 submit forum link'
 level 'ECSPD3-u6 post survey'
+

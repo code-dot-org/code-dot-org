@@ -5,6 +5,10 @@ ur-PK:
   'yes': جی
   'no': نہيں
   select_language: براہ مہربانی اپنی زبان منتخب کریں
+  upgrade_ie_message: کوڈ ڈاٹ او آر جی جلد ہی انٹرنیٹ ایکسپلورر 8 ، 9 اور 10 کی مدد
+    کو دور کردے گا۔ براہ کرم جدید براؤزر میں اپ گریڈ کریں.
+  upgrade_ie_message_csedweek: بہت جلد code.org انٹرنیٹ ایکسپلورر 8,9 اور 10 کی سپورٹ
+    ختم کرنے جارہی ہے۔ براہ مہربانی انٹرنیٹ براوزر کے جدید ورژن نصب کر لیجئے.
   upgrade_ie_link: مزید سیکھے
   en: کمپیوٹر سائنس
   computer_science_edweek: کمپیوٹر سائنس کا تعلیمی ہفتہ
@@ -16,6 +20,8 @@ ur-PK:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> کیا آپ CS (کمپیوٹر سا‏ئنس) کے ایک استاد ہیں؟ دیگر CSEdWeek
     وسائل دیکھیں</a>'
+  csedweek_banner_teachers_text: کیا آپ CS (کمپیوٹر سا‏ئنس) کے ایک استاد ہیں؟ دیگر
+    CSEdWeek وسائل دیکھیں
   n_have_learned_an_hoc: "<h1>آزمائیں ایک</h1><h2>کوڈ کی گھڑی</h2><h3># جیسے پیش کیا
     گیا ہے</h3>"
   anybody_can_learn: ھر کوئ سیکھ سکتا ھے۔
@@ -23,21 +29,47 @@ ur-PK:
   petition_message: ہر سکول کے ہر طالب علم کو کمپیوٹر سائنس سیکھنے کا موقع ملنا چاہئیے
   petition_sign_message: 'اگر آپ متفق ہوں، اپنا نام سائن ان کریں ۔  # دوسروں میں شامل
     ہوں'
-  petition_sign_message_support: 'اگر آپ ہماری مدد کرنا چاہیں تو اپنا نام سائن ان
-    کریں ۔  # دوسروں میں شامل ہوں'
   petition_join_others: "# دوسروں میں شامل ہوں"
   name: نام
   email: Email
   zipcode: زپ کوڈ یا ملک
   submit: جمع کرائیں
   twentyhours_heading: ہمارے کمپیوٹر سائنس کے تعارفی کورسز کر کے دیکھیے
+  twentyhours_text: آپ نے اپنی کوڈنگ کا پہلا گھنٹہ مکمل کرلیا؟ اس کے بعد آنے والے
+    کورس میں مزید بنیادی کمپیوٹر سائنس اور پروگرامنگ کے تصورات پر مبنی کورسز سے استفادہ
+    حاصل کیجئے.
+  og_title: 'Code.org: ہرشخص پڑھ سکتا ہے'
+  og_title_soon: آور آف کوڈ آرہا ہے۔
+  og_title_here: پیش خدمت ہے ۔ ایک گھنٹہ کوڈنگ کے نام!
+  og_description: ہراسکول کا ہر طالب علم حق رکھتا ہے کہ وہ کمپیوٹر سائنس کی تعلیم
+    کے حصول کا موقع حاصل کرے.
+  og_description_celeb: اس نئے ٹیوٹوریل پر کام کیجئے، اور حاصل کیجئے کسی مشہور شخصیت
+    سے ویڈیو کے ذریعے گفتگو کا موقع، اپنے لئے اور اپنی کلاس کے لئے!
   csedweek_og_title: کمپیوٹر سائنس کا تعلیمی ہفتہ
+  csedweek_og_description: کمپیوٹر سائنس کی تعلیم ہرطالب علم کے لئے بنیادی حیثیت کی
+    حامل ہے.
+  csedweek_og_description_soon: Hour of Code پیش کیا جا رہا ہے دسمبر 2018 کی 3 تا
+    9 تواریخ میں۔ کمپیوٹر سائنس کی تعلیم ہر طالب علم کے لئے ایک بنیادی حیثیت کی حامل
+    ہے.
+  csedweek_og_description_here: پیش خدمت ہے Hour of Code. کمپیوٹر سائنس کی تعلیم ہر
+    طالب علم کے لئے بنیادی حیثیت کی حامل ہے.
+  hoc2014_try: یہ آزمائیے
+  hoc2014_teachers: اساتذہ
+  hoc2014_host: منعقد کرنا
   hoc2014_everyone: ہر کوئی
   hoc2014_support: اس ▾ کی حمایت;
   hoc2014_whatishoc: آور-آف-کوڈ کیا ہے؟
+  csedweek_map_header: 'CSEdWeek # / آور آف کوڈ کی تقریبات پوری دنیا میں'
+  csedweek_map_signup: اپنی تقریب کے لئے رجسٹر ہوں
   csedweek_map_search_placeholder: آور-آف-کوڈ کے ایونٹ کے لئے تلاش کریں
+  csedweek_map_search_search: تلاش
   csedweek_map_search_reset: ری-سیٹ کریں
+  csedweek_map_legend_title: علامت
   csedweek_map_legend_event: آور اف کوڈ ایونٹ
+  csedweek_map_legend_cs_tech_jam: خاص موقع
+  cded_try_it: یہ آزمائیے
+  try_now: مزید سیکھے
+  california_heading: اپنے اسکول سے کمپیوٹر پڑھانے کے سلسلے میں بات کیجئے۔
   view_english_site: انگریزی ویب سائٹ دیکھئں
   write_your_first_program: Apna pehla Computer ka Program likhiye
   all_ages: Her umer k log
@@ -49,6 +81,9 @@ ur-PK:
   congratulations_volunteer: 'مبارک باد: اب جب کہ آپ نے کوڈ کی گھڑی کی کوشش کی ہے،
     <a href="https://code.org/volunteer"> ایک کلاس روم میں رضاکارانہ کام کے لئے سائن
     اپ کریں</a> اور مدد کریں طالب علموں کو ایک کوڈ کی گھڑی سیکھنے میں!'
+  third_party_price_free: 'قیمت: بالکل مفت'
+  third_party_price_299: 'قیمت: 2.99 ڈالر فی ڈاونلوڈ'
+  third_party_appinv_btn_forum: ایپ اینوینٹر 2 فورم
   enter_valid_email: Spna sahi Email address ka indraj kijiye
   thanks_for_submitting: Jama kerwane ka shukarya!
   leaderboards_for_hoc: کوڈ کی گھڑی کے لیئے رہنما تختہ.
@@ -106,6 +141,8 @@ ur-PK:
   studiobar_title_nolink: Code Studio کو جانچیں
   studiobar_elementary_title: بنیادی کورسز
   studiobar_elementary_body: ہمارے تین نئے کورس K کے لیے &#8209; 5
+  studiobar_dance_title: ڈانس پارٹی
+  studiobar_dance_body: اپنی خود کی ڈانس پارٹی بنائیں اور اشتراک کریں
   studiobar_hoc_title: گھنٹے کا کوڈ
   studiobar_hoc_body: کوڈ کرنا سیکھیں Angry Birds کے ساتھ
   studiobar_flappy_body: خود کی Flappy گیم بنائیں اور دوسروں کو دکھائیں
@@ -158,6 +195,7 @@ ur-PK:
   homepage_hero_text_stat_loc: ٢٥ لاکھ لڑکیاں کوڈ سٹوڈیو میں اس وقت داخل ہیں۔
   homepage_hero_text_stat_students: "#student_count طلبہ کے اکاؤنٹس کوڈ سٹوڈیو پر"
   homepage_hero_text_stat_served: 'دا ہور کوڈ: #served لوگوں کی خدمات کی'
+  homepage_hero_hoc_is_coming: آور آف کوڈ آرہا ہے۔
   homepage_slot_text_hoc: گھنٹے کا کوڈ
   homepage_slot_text_frozen: فروزن۔ اینا اور ایلسا کے ساتھ
   homepage_slot_text_teacher: ٹیچر کا ڈیش بورڈ
@@ -166,6 +204,7 @@ ur-PK:
   homepage_action_text_hoc: ہر اسٹوڈینٹ کے لیے ایک کوڈ کی گھڑی.
   homepage_action_text_num_served: "# خدمات سر انجام دیں"
   homepage_action_text_join_us: ہمارے ساتھ شامل ہوں
+  homepage_action_text_try_it: یہ آزمائیے
   homepage_action_text_volunteers: تکنیکی رضاکاروں چاہئیں
   homepage_action_text_codevideo: ویڈیو دیکھے
   homepage_action_text_teachervideo: ویڈیو دیکھے
@@ -174,6 +213,7 @@ ur-PK:
   homepage_action_text_learn: سیکھنا شروع کریں
   homepage_action_text_signpetition: درخواست پر دستخط کریں
   homepage_signpetition_dropdown: میں اتفاق کرتا ہوں &#x25BE;
+  homepage_signpetition_dropdown_text: ma manta ho
   homepage_diversity_pledge: کوڈ کو پھیلانے کا عہد کریں
   homepage_banner_text_prizes: کوڈ کی گھڑی آ رہا ہے پھر 7-13 دسمبر ہے.
   homepage_banner_link_prizes: 'سب سے بڑا تعلیم ایونٹ کی تاریخ میں شامل ہوں. '
@@ -260,7 +300,7 @@ ur-PK:
   playlab_iceage_title: برفانی عہد - جلد آ رہا ہے
   playlab_iceage_title_live: برفانی عہد
   starwars_subtitle: ایک کہکشاں کی کوڈ کے ساتھ تعمیر
-  starwars_blocks_title: بلاکس
+  starwars_blocks_title: مسدود کرتا ہے
   mc_name: Minecraft کوڈ کی گھڑی
   minecraft_agent_button: شروع کریں
   minecraft_designer_button: شروع کریں
@@ -339,6 +379,7 @@ ur-PK:
   dashboard_action_delete_yes: جی
   dashboard_action_delete_no: نہيں
   dashboard_navigation_home_page: ٹیچر ہوم پیج
+  dashboard_sections_close: بند
   dashboard_students_name: نام
   dashboard_grade_other: دیگر
   dashboard_login_none: Email
@@ -346,9 +387,10 @@ ur-PK:
   dashboard_puzzle: پزل(Puzzle)
   stats_hoc_2013_image_alt: کوڈ کی گھڑی کے شماریات 2013
   dashboard_student: Talib-e-ilm
+  learn_more: مزید سیکھے
   hoc2014_try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
   frozen_name: اینا اور ایلسا کے ساتھ کوڈ
-  blockly_name: بلاکلی
+  blockly_name: Blockly
   iceage_name: برفانی عہد
   lightbot_gradelevel: Her umer k log
   thinkersmith_gradelevel: Her umer k log
@@ -396,12 +438,34 @@ ur-PK:
   flappy_shortcode: پھڑپھڑایں
   header_my_dashboard: ڈیش بورڈ
   header_courses: کورسز
+  header_course_catalog: کورس کیٹلاگ
+  header_project_gallery: پروجیکٹس
   header_professional_learning: پیشہ ورانہ تعلیم
   header_educate_hoc: آور-آف-کوڈ
+  header_about: متعلق
+  header_help_support: 'مدد اور معاونت '
+  header_report_bug: ایک مسئلہ کی اطلاع دیں
+  header_legal_privacy: رازداری کی پالیسی
+  header_legal_tos: سروس کی شرائط
+  user_header_signin: سائن ان کریں
+  user_header_create: 'تخلیق کریں '
+  user_header_dance: ڈانس پارٹی
   user_header_view_my_projects: تمام منصوبوں کو دیکھیں
   view_all_sections: تمام سیکشن دیکھیں
   applab_tile_start_tutorial: شروع کریں
+  hoc_overview_dance_title: ڈانس پارٹی
+  hoc_overview_dance_subtitle: اپنے دوستوں کے ساتھ اشتراک کرنے کیلئے ڈانس پارٹی کوڈ
+    کریں۔ کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور مزید 25 کی خاصیت
+    بنانا!
+  hoc_overview_dance_2019_subtitle: اپنے دوستوں کے ساتھ اشتراک کرنے کیلئے ڈانس پارٹی
+    کوڈ کریں۔ کیٹی پیری، شان مینڈس، پینک کی خاصیت بنانا ڈسکو میں، لِل ناس ایکس، جوناس
+    برادرز، نکی میناج، اور 34 مزید!
   hoc_overview_start_tutorial: شروع کریں
+  hoc_overview_more_resources: اپنے آنلائن کلاس روم میں دلچسپی بڑھانے کے لئے مزید
+    وسائل [مجازی یعنی آنلائن آور آف کوڈ](https://hourofcode.com/us/how-to/virtual)
+    کی میزبانی کے ہمارا گائیڈ دیکھیں. محدود یا کوئی ٹکنالوجی یا رابطہ نہ رکھنے والے
+    طلبا کے لئے [انپلگڈ Hour of Code](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    کی سرگرمیوں کا پیکٹ شیئر کریں.
   hoc2018_creativity_create: بنائیں
   hoc2018_creativity_what_will_you_create: آپ کیا بنائیں گے؟
   hoc2018_mc_start: شروع کریں
@@ -409,8 +473,19 @@ ur-PK:
   hoc2018_mc_video_title_inspire_girl: ایک لڑکی کی حوصلہ افزائی
   hoc2018_mc_homepage_what_create: آپ کیا بنائیں گے؟
   hoc2018_mc_homepage_join_us: ہمارے ساتھ شامل ہوں
+  hoc2018_mc_homepage_try_it: یہ آزمائیے
   hoc2018_mc_minecraft_education: Minecraft تعلیم کے لئے جانا
   hoc2018_mc_continue_learning: Minecraft کے ساتھ تعلیم جاری رکھیں ۔
   hoc2018_mc_go_to_mc_education: Minecraft تعلیم کے لئے جانا
+  hoc2018_dance_party_main_heading: ڈانس پارٹی
+  hoc2018_dance_party_box_title: ڈانس پارٹی
   hoc2018_dance_party_button: شروع کریں
   hoc2018_dance_amazon_about_future_engineer_button: مزید سیکھے
+  hoc2018_dance_measure: پیمائش
+  hoc2018_dance_measure_colon: 'پیمائش:'
+  hoc2018_mc_thank_microsoft: ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری
+    بصیرت اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں
+    سیکھنے کا موقع فراہم ہو کی حمایت کی.
+  footer_privacy_policy: رازداری کی پالیسی
+  footer_about: متعلق
+  footer_donate: عطیہ کریں

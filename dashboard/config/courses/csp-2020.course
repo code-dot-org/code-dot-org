@@ -1,0 +1,29 @@
+{
+  "name": "csp-2020",
+  "script_names": [
+    "csp1-2020",
+    "csp2-2020",
+    "csp3-2020",
+    "csp4-2020",
+    "csp5-2020",
+    "csp6-2020",
+    "csp7-2020",
+    "csp8-2020",
+    "csp9-2020",
+    "csp10-2020",
+    "csp-post-survey-2020"
+  ],
+  "properties": {
+    "version_year": "2020",
+    "family_name": "csp",
+    "has_verified_resources": true,
+    "visible": true,
+    "is_stable": true
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

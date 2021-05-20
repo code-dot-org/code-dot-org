@@ -1,6 +1,5 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -8,9 +7,16 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^33.0.7",
-    "expo-cli": "^2.20.10",
-    "react": "16.8.3",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz"
-  }
+    "expo": "~36.0.0",
+    "expo-cli": "3.11.1",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-native-web": "~0.11.7",
+    "react-native-webview": "7.4.3"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "~8.0.0"
+  },
+  "private": true
 }

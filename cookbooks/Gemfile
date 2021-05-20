@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '~> 2.5'
 
 gem 'berkshelf'
-gem 'chef', '12.7.2'
+gem 'chef', '15.2.20'
 gem 'chefspec'
 gem 'kitchen-inspec'
 

@@ -4,15 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
 import i18n from '@cdo/locale';
-
-const styles = {
-  input: {
-    width: 100,
-    height: 29,
-    marginTop: -25,
-    marginRight: 10
-  }
-};
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 class PasswordReset extends Component {
   static propTypes = {
@@ -59,6 +51,19 @@ class PasswordReset extends Component {
           isResetting: false,
           input: ''
         });
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'manage-students',
+            event: 'reset-secret',
+            data_json: JSON.stringify({
+              sectionId: sectionId,
+              studentId: studentId,
+              loginType: 'email'
+            })
+          },
+          {includeUserId: true}
+        );
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -83,6 +88,7 @@ class PasswordReset extends Component {
         {!this.state.isResetting && (
           <span data-for={tooltipId} data-tip>
             <Button
+              __useDeprecatedTag
               onClick={this.reset}
               color={Button.ButtonColor.white}
               text={i18n.resetPassword()}
@@ -104,22 +110,37 @@ class PasswordReset extends Component {
               onChange={this.updateInput}
             />
             <Button
+              __useDeprecatedTag
               onClick={this.save}
               color={Button.ButtonColor.blue}
               text={i18n.save()}
+              style={styles.button}
             />
-            <div>
-              <Button
-                onClick={this.cancel}
-                color={Button.ButtonColor.white}
-                text={i18n.cancel()}
-              />
-            </div>
+            <Button
+              __useDeprecatedTag
+              onClick={this.cancel}
+              color={Button.ButtonColor.white}
+              text={i18n.cancel()}
+              style={styles.button}
+            />
           </div>
         )}
       </div>
     );
   }
 }
+
+const styles = {
+  input: {
+    width: '90%',
+    height: 29,
+    marginRight: 10,
+    marginLeft: 5,
+    padding: 5
+  },
+  button: {
+    margin: 5
+  }
+};
 
 export default PasswordReset;

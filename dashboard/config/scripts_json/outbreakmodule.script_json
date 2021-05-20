@@ -1,0 +1,327 @@
+{
+  "script": {
+    "name": "outbreakmodule",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:56:13 UTC",
+    "seeding_key": {
+      "script.name": "outbreakmodule"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "Outbreak Module",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Outbreak Module"
+      },
+      "seeding_key": {
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "intro monster town",
+      "name": "Outbreak in Monster Town",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "intro monster town",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "key": "contagion simulator setup",
+      "name": "Contagion Simulator Setup",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "key": "sometimes but not always",
+      "name": "Sometimes, but Not Always",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "key": "modifying your model",
+      "name": "Modifying Your model",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "key": "telling a data story",
+      "name": "Telling a Data Story",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "contagion_story"
+        ],
+        "progression": "Welcome to Monster Town"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_story"
+        ],
+        "lesson.key": "intro monster town",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      },
+      "level_keys": [
+        "contagion_story"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "outbreak_rampup_sprites_make"
+        ],
+        "progression": "Setup"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "outbreak_rampup_sprites_make"
+        ],
+        "lesson.key": "intro monster town",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      },
+      "level_keys": [
+        "outbreak_rampup_sprites_make"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "outbreak_rampup_sprites_properties"
+        ],
+        "progression": "Setup"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "outbreak_rampup_sprites_properties"
+        ],
+        "lesson.key": "intro monster town",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      },
+      "level_keys": [
+        "outbreak_rampup_sprites_properties"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "progression": "Sometimes, but Not Always"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      },
+      "level_keys": [
+        "contagion_lesson1_markdown"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "progression": "Telling a Data Story"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      },
+      "level_keys": [
+        "contagion_lesson1_markdown"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "contagion_story",
+        "script_level.level_keys": [
+          "contagion_story"
+        ],
+        "lesson.key": "intro monster town",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "outbreak_rampup_sprites_make",
+        "script_level.level_keys": [
+          "outbreak_rampup_sprites_make"
+        ],
+        "lesson.key": "intro monster town",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "outbreak_rampup_sprites_properties",
+        "script_level.level_keys": [
+          "outbreak_rampup_sprites_properties"
+        ],
+        "lesson.key": "intro monster town",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_lesson1_markdown",
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_lesson1_markdown",
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

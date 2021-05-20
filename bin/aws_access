@@ -8,13 +8,13 @@ module Aws
     def current_provider
       providers.find do |method_name, options|
         send(method_name, options.merge(config: @config))&.set?
-      end.first
+      end&.first
     end
   end
 end
 
-unless (provider = Aws::CredentialProviderChain.new.current_provider) == :google_credentials
-  puts "WARNING: AWS is currently using #{provider}, not google_credentials."
+unless (provider = Aws::STS::Client.new.config.credentials).class == Aws::Google
+  puts "WARNING: AWS is currently using #{provider}, not Google credentials."
 end
 
 arn = Aws::STS::Client.new.get_caller_identity.arn

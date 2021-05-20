@@ -1,0 +1,131 @@
+{
+  "https://studio.code.org/p/artist": {
+    "short_instructions": "Draw something awesome! Your code is saved as a project that you can return to at any time.",
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    },
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star",
+        "description": "draw a star with given points and sides of given length",
+        "parameters": {
+          "points": "points",
+          "length": "length"
+        }
+      },
+      "draw a circle": {
+        "name": "draw a circle",
+        "description": "draw a circle of given radius",
+        "parameters": {
+          "radius": "radius"
+        }
+      },
+      "draw a pinwheel": {
+        "name": "draw a pinwheel",
+        "parameters": {
+          "sides": "sides",
+          "length": "length",
+          "repeat": "repeat"
+        }
+      },
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a shape": {
+        "name": "draw a shape",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      },
+      "draw a house": {
+        "name": "draw a house",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a square": {
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/p/frozen": {
+    "callouts": {
+      "snowflake_dropdown": "Use this drop-down to create different snowflakes!"
+    }
+  },
+  "https://studio.code.org/p/playlab": {
+    "callouts": {
+      "New Play Lab Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program",
+      "New Play Lab Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    },
+    "function_definitions": {
+      "jump": {
+        "name": "jump",
+        "description": "jump function block with height and actor parameter",
+        "parameters": {
+          "height": "height",
+          "actor": "actor"
+        }
+      },
+      "patrol": {
+        "name": "patrol",
+        "description": "a patrol function that has a actor and speed parameter",
+        "parameters": {
+          "actor": "actor",
+          "speed": "speed"
+        }
+      }
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/p/iceage": {
+    "short_instructions": "Create anything you like and share it!"
+  },
+  "https://studio.code.org/p/infinity": {
+    "short_instructions": "Create anything you like and share it!"
+  },
+  "https://studio.code.org/p/gumball": {
+    "short_instructions": "Create anything you like and share it!"
+  },
+  "https://studio.code.org/p/minecraft_hero": {
+    "display_name": "Freeplay",
+    "short_instructions": "**Freeplay:**  Time to explore on your own!",
+    "long_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
+    "authored_hints": {
+      "MC_HOC_2017_13_Cole_a": "Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map."
+    },
+    "function_definitions": {
+      "function 1": {
+        "name": "function 1"
+      },
+      "function 2": {
+        "name": "function 2"
+      }
+    }
+  },
+  "https://studio.code.org/p/dance": {
+    "display_name": "New Dance Party Project"
+  },
+  "https://studio.code.org/p/bounce": {
+    "short_instructions": "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Share to let friends try your game on their phones."
+  },
+  "https://studio.code.org/p/sports": {
+    "short_instructions": "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
+  },
+  "https://studio.code.org/p/basketball": {
+    "short_instructions": "Create your own Basketball game. You can change all the rules. When you're done, click Share to let friends try your game on their phones."
+  }
+}

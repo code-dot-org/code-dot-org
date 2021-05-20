@@ -3,18 +3,19 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  plugins: ["react", "mocha", "babel"],
+  plugins: ["react", "mocha", "babel", "cdo-custom-rules"],
   extends: [
     "plugin:prettier/recommended",
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
   ],
   env: {
     browser: true,
     node: true,
-    mocha: true
+    mocha: true,
   },
   rules: {
+    "cdo-custom-rules/style-blocks-below-class": "error",
     "array-bracket-spacing": ["error", "never"],
     "babel/semi": "error", // autofixable
     "brace-style": ["error", "1tbs", { allowSingleLine: true }],
@@ -48,20 +49,21 @@ module.exports = {
     "react/jsx-first-prop-new-line": ["error", "multiline"],
     "react/jsx-indent-props": ["error", 2], // autofixable
     "react/jsx-key": "off",
-    "react/jsx-no-target-blank": "off",
+    "react/jsx-no-target-blank": "error",
     "react/jsx-wrap-multilines": "error", // autofixable
     "react/no-find-dom-node": "off",
     "react/no-render-return-value": "off",
     "react/no-string-refs": "off",
     "react/no-unescaped-entities": "off",
     "react/self-closing-comp": "error",
+    "react/no-danger": "error",
     semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
-    strict: "error"
+    strict: "error",
   },
   settings: {
     react: {
-      version: "detect"
-    }
-  }
+      version: "detect",
+    },
+  },
 };

@@ -16,6 +16,65 @@ class ApiController < ApplicationController
     end
   end
 
+  # Calls Azure Cognitive Services in order to get a temporary OAuth token with access to the Immersive Reader API.
+  # Requires the following configurations
+  #   CDO.imm_reader_tenant_id
+  #   CDO.imm_reader_client_id
+  #   CDO.imm_reader_subdomain
+  #   CDO.imm_reader_client_secret
+  # @return [Hash] {token: 'string', subdomain: 'string'}
+  # @return [Hash] {error: 'string'}
+  def immersive_reader_token
+    tenant_id = CDO.imm_reader_tenant_id
+    client_id = CDO.imm_reader_client_id
+    subdomain = CDO.imm_reader_subdomain
+    client_secret = CDO.imm_reader_client_secret # Do not log this secret
+    if tenant_id.blank? || client_id.blank? || subdomain.blank? || client_secret.blank?
+      return render status: :internal_server_error, json: {error: 'Environment not configured for Immersive Reader.'}
+    end
+
+    begin
+      headers = {
+        'content-type' => 'application/x-www-form-urlencoded'
+      }
+      url = "https://login.windows.net/#{tenant_id}/oauth2/token"
+      form = {
+        'grant_type' => 'client_credentials',
+        'client_id' => client_id,
+        'client_secret' => client_secret, # Do not log this secret
+        'resource' => 'https://cognitiveservices.azure.com/'
+      }
+      auth_response = JSON.parse(RestClient.post(url, form, headers))
+      response = {
+        token: auth_response['access_token'],
+        subdomain: subdomain,
+      }
+      render json: response
+    rescue RestClient::Exception => e
+      Honeybadger.notify(
+        e,
+        error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
+        context: {
+          client_id: tenant_id,
+          tenant_id: client_id,
+          subdomain: subdomain,
+        }
+      )
+      render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
+    rescue JSON::JSONError => e
+      Honeybadger.notify(
+        e,
+        error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
+        context: {
+          client_id: tenant_id,
+          tenant_id: client_id,
+          subdomain: subdomain,
+        }
+      )
+      render status: :internal_server_error, json: {error: 'Unable to get token from Azure.'}
+    end
+  end
+
   def clever_classrooms
     return head :forbidden unless current_user
 
@@ -108,7 +167,7 @@ class ApiController < ApplicationController
     @user_header_options = {}
     @user_header_options[:current_user] = current_user
     @user_header_options[:show_pairing_dialog] = show_pairing_dialog
-    @user_header_options[:session_pairings] = session[:pairings]
+    @user_header_options[:session_pairings] = pairing_user_ids
     @user_header_options[:loc_prefix] = 'nav.user.'
   end
 
@@ -144,6 +203,8 @@ class ApiController < ApplicationController
     render json: {}
   end
 
+  use_database_pool lockable_state: :persistent
+
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
     unless current_user
@@ -158,7 +219,7 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: script.stages.each_with_object({}) do |stage, stage_hash|
+        stages: script.lessons.each_with_object({}) do |stage, stage_hash|
           stage_state = stage.lockable_state(section.students)
           stage_hash[stage.id] = stage_state unless stage_state.nil?
         end
@@ -168,12 +229,14 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  use_database_pool section_progress: :persistent
+
   def section_progress
     section = load_section
     script = load_script(section)
 
     # stage data
-    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:stage).map do |stage, levels|
+    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |stage, levels|
       {
         length: levels.length,
         title: ActionController::Base.helpers.strip_tags(stage.localized_title)
@@ -242,6 +305,8 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  use_database_pool section_level_progress: :persistent
+
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
   # If not specified, the API will default to a page size of 50, providing the first page
@@ -263,9 +328,12 @@ class ApiController < ApplicationController
       return head :range_not_satisfiable
     end
 
+    student_progress, student_timestamps = script_progress_for_users(paged_students, script)
+
     # Get the level progress for each student
     render json: {
-      students: script_progress_for_users(paged_students, script),
+      student_progress: student_progress,
+      student_last_updates: student_timestamps,
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
@@ -274,65 +342,21 @@ class ApiController < ApplicationController
     }
   end
 
-  # Get level progress for a set of users within this script.
-  # @param [Enumerable<User>] users
-  # @param [Script] script
-  # @return [Hash]
-  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
-  #   {
-  #     "1": {
-  #       "135": {"status": "perfect", "result": 100}
-  #       "136": {"status": "perfect", "result": 100}
-  #     },
-  #     "2": {
-  #       "135": {"status": "perfect", "result": 100}
-  #       "136": {"status": "perfect", "result": 100}
-  #     }
-  #   }
-  private def script_progress_for_users(users, script)
-    user_levels = User.user_levels_by_user_by_level(users, script)
-    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
-    users.inject({}) do |progress_by_user, user|
-      progress_by_user[user.id] = merge_user_progress_by_level(
-        script: script,
-        user: user,
-        user_levels_by_level: user_levels[user.id],
-        paired_user_levels: paired_user_levels_by_user[user.id]
-      )
-      progress_by_user
-    end
-  end
-
-  def student_progress
-    student = load_student(params.require(:student_id))
-    section = load_section
-    # @script is used by user_states
-    @script = load_script(section)
-
-    progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: student})
-
-    data = {
-      student: {
-        id: student.id,
-        name: student.name,
-      },
-      script: {
-        id: @script.id,
-        name: @script.localized_title
-      },
-      progressHtml: progress_html
-    }
-
-    render json: data
-  end
-
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize(true, nil, true)
+    summary = script.summarize(true, current_user, true)
     summary[:path] = overview_path
     render json: summary
   end
+
+  def script_standards
+    script = Script.get_from_cache(params[:script])
+    standards = script.standards
+    render json: standards
+  end
+
+  use_database_pool user_progress: :persistent
 
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
@@ -340,11 +364,18 @@ class ApiController < ApplicationController
       script = Script.get_from_cache(params[:script])
       user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
       teacher_viewing_student = current_user.students.include?(user)
-      render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
+      render json: summarize_user_progress(script, user).merge(
+        {
+          signedIn: true,
+          teacherViewingStudent: teacher_viewing_student,
+        }
+      )
     else
-      render json: {}
+      render json: {signedIn: false}
     end
   end
+
+  use_database_pool user_progress_for_stage: :persistent
 
   # Return the JSON details of the users progress on a particular script
   # level and marks the user as having started that level. (Because of the
@@ -353,9 +384,10 @@ class ApiController < ApplicationController
   # but not completed.)
   def user_progress_for_stage
     response = user_summary(current_user)
+    response[:signedIn] = !current_user.nil?
 
     script = Script.get_from_cache(params[:script])
-    stage = script.stages[params[:stage_position].to_i - 1]
+    stage = script.lessons[params[:lesson_position].to_i - 1]
     script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
@@ -363,7 +395,9 @@ class ApiController < ApplicationController
       user_level = current_user.last_attempt(level, script)
       level_source = user_level.try(:level_source).try(:data)
 
-      response[:progress] = current_user.user_progress_by_stage(stage)
+      # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
+      response[:progress] = summarize_user_progress(script, current_user)[:progress]
+
       if user_level
         response[:lastAttempt] = {
           timestamp: user_level.updated_at.to_datetime.to_milliseconds,
@@ -413,7 +447,7 @@ class ApiController < ApplicationController
         next unless response
         {
           student: student_hash,
-          stage: level_hash[:script_level].stage.localized_title,
+          stage: level_hash[:script_level].lesson.localized_title,
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
@@ -449,21 +483,18 @@ class ApiController < ApplicationController
     event = original_data['event']
     project_id = original_data['project_id'] || nil
     FirehoseClient.instance.put_record(
-      study: 'firehose-error-unreachable',
-      event: event,
-      project_id: project_id,
-      data_string: params.require(:error_text),
-      data_json: original_data.to_json
+      :analysis,
+      {
+        study: 'firehose-error-unreachable',
+        event: event,
+        project_id: project_id,
+        data_string: params.require(:error_text),
+        data_json: original_data.to_json
+      }
     )
   end
 
   private
-
-  def load_student(student_id)
-    student = User.find(student_id)
-    authorize! :read, student
-    student
-  end
 
   def load_section
     section = Section.find(params[:section_id])

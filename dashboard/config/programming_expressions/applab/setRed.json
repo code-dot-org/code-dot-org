@@ -1,0 +1,17 @@
+{
+  "func": "setRed",
+  "category": "Canvas",
+  "paletteParams": [
+    "imgData",
+    "x",
+    "y",
+    "r"
+  ],
+  "params": [
+    "imgData",
+    "0",
+    "0",
+    "255"
+  ],
+  "dontMarshal": true
+}

@@ -1,6 +1,10 @@
+require 'census_helper'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
+
 class HomeController < ApplicationController
   include UsersHelper
-  before_action :authenticate_user!, only: :gallery_activities
+  include SurveyResultsHelper
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -29,15 +33,13 @@ class HomeController < ApplicationController
     if current_user
       render 'index', layout: false, formats: [:html]
     else
-      render text: ''
+      render plain: ''
     end
   end
 
   def health_check
-    render text: 'healthy!'
+    render plain: 'healthy!'
   end
-
-  GALLERY_PER_PAGE = 5
 
   # Signed in student, with an assigned course/script: redirect to course overview page
   # Note: the student will be redirected to the course or script in which they
@@ -52,7 +54,6 @@ class HomeController < ApplicationController
         redirect_to '/home'
       end
     else
-      clear_takeover_session_variables
       redirect_to '/courses'
     end
   end
@@ -63,14 +64,6 @@ class HomeController < ApplicationController
     authenticate_user!
     init_homepage
     render 'home/index'
-  end
-
-  def gallery_activities
-    if current_user
-      @gallery_activities =
-        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-    end
-    render partial: 'home/gallery_content'
   end
 
   def certificate_link_test
@@ -87,7 +80,6 @@ class HomeController < ApplicationController
 
   def should_redirect_to_script_overview?
     current_user.student? &&
-    !account_takeover_in_progress? &&
     current_user.can_access_most_recently_assigned_script? &&
     (
       !current_user.user_script_with_most_recent_progress ||
@@ -96,38 +88,102 @@ class HomeController < ApplicationController
     )
   end
 
+  # Set all local variables needed to render the signed-in homepage.
+  # @raise if called when the user is not signed in.
   def init_homepage
-    @is_english = request.language == 'en'
-    if current_user
-      @gallery_activities =
-        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-      @force_race_interstitial = params[:forceRaceInterstitial]
-      @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
-      @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
-      @sections = current_user.sections.map(&:summarize_without_students)
-      @student_sections = current_user.sections_as_student.map(&:summarize_without_students)
+    raise 'init_homepage can only be called when there is a current_user' unless current_user
 
-      # Students and teachers will receive a @top_course for their primary
-      # script, so we don't want to include that script (if it exists) in the
-      # regular lists of recent scripts.
-      exclude_primary_script = true
-      @recent_courses = current_user.recent_courses_and_scripts(exclude_primary_script)
-      @has_feedback = current_user.student? && TeacherFeedback.where(
-        student_id: current_user.id
-      ).count > 0
-      script = current_user.primary_script
-      if script
-        script_level = current_user.next_unpassed_progression_level(script)
+    view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
+
+    @homepage_data = {}
+    @homepage_data[:valid_grades] = Section.valid_grades
+    @homepage_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
+    @homepage_data[:isEnglish] = request.language == 'en'
+    @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
+    @homepage_data[:localeCode] = request.locale
+    @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
+    @homepage_data[:providers] = current_user.providers
+    @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
+    @homepage_data[:currentUserId] = current_user.id
+
+    # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
+    @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
+
+    @force_race_interstitial = params[:forceRaceInterstitial]
+    @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
+    @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+
+    student_sections = current_user.sections_as_student.map(&:summarize_without_students)
+
+    # Students and teachers will receive a @top_course for their primary
+    # script, so we don't want to include that script (if it exists) in the
+    # regular lists of recent scripts.
+    exclude_primary_script = true
+    @homepage_data[:courses] = current_user.recent_courses_and_scripts(exclude_primary_script)
+
+    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.where(
+      student_id: current_user.id
+    ).count > 0
+
+    script = Queries::ScriptActivity.primary_script(current_user)
+    if script
+      script_level = current_user.next_unpassed_progression_level(script)
+    end
+    @homepage_data[:topCourse] = nil
+    if script && script_level
+      @homepage_data[:topCourse] = {
+        assignableName: data_t_suffix('script.name', script[:name], 'title'),
+        lessonName: script_level.lesson.localized_title,
+        linkToOverview: script_path(script),
+        linkToLesson: script_next_path(script, 'next')
+      }
+    end
+
+    if current_user.teacher?
+      unless current_user.donor_teacher_banner_dismissed
+        donor_banner_name = current_user.school_donor_name
       end
 
-      if script && script_level
-        @top_course = {
-          assignableName: data_t_suffix('script.name', script[:name], 'title'),
-          lessonName: script_level.stage.localized_title,
-          linkToOverview: script_path(script),
-          linkToLesson: script_next_path(script, 'next')
-        }
+      donor_banner_name ||= params[:forceDonorTeacherBanner]
+      show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
+
+      @homepage_data[:isTeacher] = true
+      @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
+      @homepage_data[:joined_sections] = student_sections
+      @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
+      @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
+      @homepage_data[:showCensusBanner] = show_census_banner
+      @homepage_data[:showNpsSurvey] = show_nps_survey?
+      @homepage_data[:donorBannerName] = donor_banner_name
+      @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
+      @homepage_data[:textToSpeechScriptIds] = Script.text_to_speech_script_ids
+      @homepage_data[:preReaderScriptIds] = Script.pre_reader_script_ids
+
+      if show_census_banner
+        teachers_school = current_user.school_info.school
+        school_stats = SchoolStatsByYear.where(school_id: teachers_school.id).order(school_year: :desc).first
+
+        @homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
+        @homepage_data[:currentSchoolYear] = current_census_year
+        @homepage_data[:ncesSchoolId] = teachers_school.id
+        @homepage_data[:teacherName] = current_user.name
+        @homepage_data[:teacherId] = current_user.id
+        @homepage_data[:teacherEmail] = current_user.email
+      elsif donor_banner_name
+        @homepage_data[:teacherId] = current_user.id
       end
+    else
+      @homepage_data[:isTeacher] = false
+      @homepage_data[:sections] = student_sections
+      @homepage_data[:studentId] = current_user.id
+    end
+
+    if current_user.school_donor_name
+      donor_footer_options = {}
+      donor_footer_options[:donorName] = current_user.school_donor_name
+      donor_footer_options[:logos] = Dir.glob("app/assets/images/donor_logos/#{current_user.school_donor_name}/*").sort
+
+      @homepage_data[:donorFooterOptions] = donor_footer_options
     end
   end
 end

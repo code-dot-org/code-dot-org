@@ -1,6 +1,7 @@
 hidden false
+tts true
 
-stage 'Dance Party - Go Further'
+lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further', has_lesson_plan: false
 level 'Dance_Party_extras_intro', named: true
 level 'Dance_Party_extras_layout', named: true
 level 'Dance_Party_extras_visible', named: true
@@ -8,3 +9,4 @@ level 'Dance_Party_extras_battle', named: true
 level 'Dance_Party_extras_every_beat', named: true
 level 'Dance_Party_extras_on_beat', named: true
 level 'Dance_Party_extras_speed', named: true
+

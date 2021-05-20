@@ -20,6 +20,8 @@ bg-BG:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Вие учител по информатика ли сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте
     други ресурси на CSEdWeek</a>'
+  csedweek_banner_teachers_text: Вие учител по информатика ли сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте
+    други ресурси на CSEdWeek
   n_have_learned_an_hoc: "<h1>Опитайте</h1><h2>Часът на кодирането</h2><h3># пробваха</h3>"
   anybody_can_learn: Всеки може да се научи.
   learn_now: Научете сега
@@ -27,8 +29,6 @@ bg-BG:
     науки
   petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете
     се към # други.'
-  petition_sign_message_support: 'Ако ни подкрепяте, запишете се.  Присъединете се
-    # към другите.'
   petition_join_others: 'Присъединете се към # другите'
   name: Име
   email: Имейл
@@ -219,10 +219,14 @@ bg-BG:
     или да го отпечатате. Сега продължете с нашият <a href='http://studio.code.org'>
     20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите
     и след Часът на кодирането</a>.
+  get_a_certificate_message_after_markdown: Щракнете върху сертификата, за да го изтеглите
+    или да го отпечатате. Сега продължете с нашият (20-часов курс)[http://studio.code.org],
+    или вижте повече възможности да (учите и след Часът на кодирането)[/learn/beyond].
   thanks_for_submitting: Благодарим за изпращането!
   if_you_enjoyed: Ако Ви е харесало наученото, споделете с приятелите си, за да пробват
     и те! Ние искаме целият свят да научи.
   personalize_certificate: Персонализирайте вашия сертификат
+  print_certificates: Печат на сертификати
   share_achievement: Споделете вашето постижение
   beyond_hour_message: Продължете с нашия<a href='http://studio.code.org'> 20-часов
     курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите след
@@ -393,6 +397,7 @@ bg-BG:
   homepage_action_text_signpetition: Подпишете петицията
   homepage_action_text_wincelebritychat: Спечели чат със знаменитост
   homepage_signpetition_dropdown: Съгласен&#x25BE;
+  homepage_signpetition_dropdown_text: Приемам
   homepage_diversity_pledge: Вземете разнообразни подаръци
   homepage_banner_text_prizes: 'Часът на кода идва отново, декември 7-13. '
   homepage_banner_link_prizes: 'Присъединете се към най-голямото обучително събитие
@@ -1197,6 +1202,8 @@ bg-BG:
   coursee-2018_gradelevel: Възраст 8-12
   coursed-2019_gradelevel: Клас 8 +
   coursee-2019_gradelevel: Възраст 8-12
+  coursed-2020_gradelevel: Клас 8 +
+  coursee-2020_gradelevel: Възраст 8-12
   accelerated_gradelevel: Възраст 10 + (след курс 3)
   codeorg_platformtext: Съвременни браузъри, смартфони, таблети
   codeintl_platformtext: Съвременни браузъри, смартфони, таблети
@@ -1872,6 +1879,8 @@ bg-BG:
   header_about: Относно
   header_teacher_community: Учителска общност
   header_report_bug: Съобщи за бъгове
+  header_legal_privacy: Защита на личните данни
+  header_legal_tos: Термини
   user_header_label: Здравейте %{username}
   user_header_team: Екип
   user_header_settings: Моят акаунт
@@ -1887,6 +1896,10 @@ bg-BG:
   applab_tile_start_tutorial: Старт
   aquatic_name: 'Minecraft: Подводното пътешествие'
   hoc_overview_start_tutorial: Старт
+  hoc_overview_more_resources: За повече ресурси за взаимодействие с вашата отдалечена
+    класна стая, вижте нашето ръководство за хостване на [виртуален Hour of Code](https://hourofcode.com/us/how-to/virtual).
+    За ученици с ограничена или никаква техника или свързаност, споделете този пакет
+    от [достъпни Hour of Code дейности](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc2018_creativity_create: Създай
   hoc2018_mc_page_title: Minecraft Hour of Code уроци
   hoc2018_mc_details: Много езици | Съвременни браузъри и таблети | Клас 2 +
@@ -1943,3 +1956,10 @@ bg-BG:
   hoc2018_dance_teacher_resources_tile2_button: Ънплъгд дейност
   hoc2018_dance_amazon_about_future_engineer_button: Научете повече
   hoc2018_dance_amazon_scholarship_programs_button: Регистрирай се сега
+  footer_powered_by_aws: Създадено с Amazon Web Services
+  footer_privacy_policy: Защита на личните данни
+  footer_about: Относно
+  footer_partners: Партньори
+  footer_donate: Дарения
+  footer_support: Помощ
+  footer_terms: Условия

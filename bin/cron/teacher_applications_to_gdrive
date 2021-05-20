@@ -1,0 +1,71 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/google/sheet'
+require 'honeybadger/ruby'
+
+# Returns a set of teacher application data to be written to
+# a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
+# by our programs team.
+def get_rows
+  applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
+                     meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
+                     free_reduced_lunch_percent urm_percent accepted_at accepted race community_type two_or_more_races)]
+  Pd::Application::Teacher2122Application.find_each do |app|
+    stats = app.get_latest_school_stats(app.school_id)
+    pay_fee = app.sanitize_form_data_hash[:principal_pay_fee] || app.sanitize_form_data_hash[:pay_fee]
+    frl_percent = stats&.frl_eligible_percent
+    # principal data is stored as a string with % at the end. Convert to float
+    if app.sanitize_form_data_hash[:principal_free_lunch_percent]
+      frl_percent = app.sanitize_form_data_hash[:principal_free_lunch_percent].to_f
+    end
+    urm_percent = stats&.urm_percent
+    if app.sanitize_form_data_hash[:principal_underrepresented_minority_percent]
+      urm_percent = app.sanitize_form_data_hash[:principal_underrepresented_minority_percent].to_f
+    end
+    accepted_statuses = %w(accepted_no_cost_registration accepted_notified_by_partner registration_sent paid accepted_not_notified)
+    accepted = accepted_statuses.include?(app.status) ? 1 : 0
+
+    races = app.sanitize_form_data_hash[:race]
+    two_or_more_races = races.length > 1 ? 1 : 0
+
+    applications << [
+      app.course,
+      app.regional_partner.try(:name),
+      app.status,
+      app.scholarship_status,
+      app.school_type,
+      pay_fee,
+      app.email,
+      app.created_at,
+      app.meets_criteria,
+      app.meets_scholarship_criteria,
+      app.friendly_registered_workshop,
+      stats&.rural_school?,
+      frl_percent,
+      urm_percent,
+      app.accepted_at,
+      accepted,
+      races,
+      stats&.community_type,
+      two_or_more_races
+    ]
+  end
+
+  applications
+end
+
+def main
+  # This list is saved in DCDO as an array. To append a new value to this list:
+  # DCDO.set(key_name, DCDO.get(key_name, []) << new_value)
+  allowed_list = DCDO.get('external_emails_with_application_data_access', [])
+
+  # Uses a Google Cloud service account to access Google Drive
+  sheet = Google::Sheet.new CDO.applications_2021_2022_gsheet_key
+  sheet.export(tab_name: 'all_apps_21_22', rows: get_rows)
+  sheet.notify_of_external_sharing(allowed_list)
+end
+
+main

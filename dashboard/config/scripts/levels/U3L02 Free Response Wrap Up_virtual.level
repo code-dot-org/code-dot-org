@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T16:56:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Programming with Simple Commands",
+    "long_instructions": "Summarize your experiences with this first App Lab lesson by answering the following questions:\n\n* What surprised you about programming with such a small set of basic commands?\n* Were you able to be creative with such a limited set of tools?\n* What was most frustrating about this activity? If you could add one additional simple command, what would it be and why?\n\n\n",
+    "encrypted_solution": "PT13JUrjsorklUbsQXY+cHjH87xNK8hiMvK+2kpx8joCrILkkkR1U6Eyxm3I\nIr0HqbE4f700gDVjGQo2p77XpajzBNNwxF/Jk/douVrSjLVIpHy11ZriXo6g\newsD3ln7iimUl99ppFpEuxqDeO2RZX8MehqZdCsj3KGIvQtmiUYKrnwLD0cg\nP7eZH7KkcnHQcXhYa6gQQIJ+R/lKS2wYd/wTHUGIPe3RIG5cw/MpwZ9SG3Zs\nxto38fD7fR1IoNT+ij313OIkswIqGxDCCVoyySLJWQPh4r8cI6YMId3WZJwM\nnk2LhtMN67onH9rLokhFq0zLt3iR4oq11SF5RwAfyT41XlOM+UUNpE/HzMat\nyE3eYAxVQSuKahMw+0REFgaSFWfaEwG1grzocYURnbJt0sPueb4t5+M3Ncnk\nSU9FDFIpHZAmVOyIVbtOk9R0xRj0BGbd0ljiVXa+tLRBVyDqOVsnfTTXQCzR\naks+DtHIipHm0as92Jlmaa5VZpWe2p+1xc0v968hX9oCmMwQI6hY4C6NFb4H\nRJcaTd3SnQT1sPJL9aBmaaJXZZAASdAs/qRDzI5Sb0wSHUojx4WynBFLlpP7\nsmDu1p9SVArtMdIi46mE/FmzWzbcB7RlwYNDxy7PIFSTaoH/4fwqdxQwQ6ES\nhjNAw3fSKXTBP7nTX/fH4q0=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16890,
+    "name_suffix": "_virtual"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

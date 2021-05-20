@@ -2,7 +2,3 @@ source 'https://supermarket.chef.io'
 
 metadata
 cookbook 'varnish_test', path: './test/cookbooks/varnish_test'
-
-cookbook 'apt', '~> 2.6.0' # 6.0.0 requires Chef >= 12.9
-cookbook 'ark', '< 4.0.0' # 4.0.0 requires Chef >= 13.4
-cookbook 'seven_zip', '< 3.0.0' # 3.0.0 requires Chef >= 13

@@ -1,0 +1,7 @@
+name 'CSD U2 links challenge_2021'
+display_name 'Creating Links'
+description 'Try extra challenges or learn some new code.'
+
+sublevels
+level 'CSD U2 external links_2021'
+level 'CSD U2 image links_2021'

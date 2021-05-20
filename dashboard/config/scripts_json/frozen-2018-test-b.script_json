@@ -1,0 +1,716 @@
+{
+  "script": {
+    "name": "frozen-2018-test-b",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:26 UTC",
+    "seeding_key": {
+      "script.name": "frozen-2018-test-b"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Artist",
+      "name": "Artist",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen line_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen line_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen line_b"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen perpendicular_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen perpendicular_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen perpendicular_b"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen_video_loops_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen_video_loops_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen_video_loops_b"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen square iterative_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen square iterative_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen square iterative_b"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen square loop_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen square loop_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen square loop_b"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen square loop 3x_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen square loop 3x_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen square loop 3x_b"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen square snowflake_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen square snowflake_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen square snowflake_b"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen cross_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen cross_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen cross_b"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen cross rotate_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen cross rotate_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen cross rotate_b"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen cross rotate dense_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen cross rotate dense_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen cross rotate dense_b"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen diamond_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen diamond_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen diamond_b"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen diamond mini snowflake_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen diamond mini snowflake_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen diamond mini snowflake_b"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen diamond snowflake_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen diamond snowflake_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen diamond snowflake_b"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen_variables_functions_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen_variables_functions_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen_variables_functions_b"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen snowflake branch_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen snowflake branch_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen snowflake branch_b"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen snowflake full_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen snowflake full_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen snowflake full_b"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen snowflake fuller_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen snowflake fuller_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen snowflake fuller_b"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "frozen freeplay_b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen freeplay_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      },
+      "level_keys": [
+        "frozen freeplay_b"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "frozen line_b",
+        "script_level.level_keys": [
+          "frozen line_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen perpendicular_b",
+        "script_level.level_keys": [
+          "frozen perpendicular_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen_video_loops_b",
+        "script_level.level_keys": [
+          "frozen_video_loops_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen square iterative_b",
+        "script_level.level_keys": [
+          "frozen square iterative_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen square loop_b",
+        "script_level.level_keys": [
+          "frozen square loop_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen square loop 3x_b",
+        "script_level.level_keys": [
+          "frozen square loop 3x_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen square snowflake_b",
+        "script_level.level_keys": [
+          "frozen square snowflake_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen cross_b",
+        "script_level.level_keys": [
+          "frozen cross_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen cross rotate_b",
+        "script_level.level_keys": [
+          "frozen cross rotate_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen cross rotate dense_b",
+        "script_level.level_keys": [
+          "frozen cross rotate dense_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen diamond_b",
+        "script_level.level_keys": [
+          "frozen diamond_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen diamond mini snowflake_b",
+        "script_level.level_keys": [
+          "frozen diamond mini snowflake_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen diamond snowflake_b",
+        "script_level.level_keys": [
+          "frozen diamond snowflake_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen_variables_functions_b",
+        "script_level.level_keys": [
+          "frozen_variables_functions_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen snowflake branch_b",
+        "script_level.level_keys": [
+          "frozen snowflake branch_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen snowflake full_b",
+        "script_level.level_keys": [
+          "frozen snowflake full_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen snowflake fuller_b",
+        "script_level.level_keys": [
+          "frozen snowflake fuller_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "frozen freeplay_b",
+        "script_level.level_keys": [
+          "frozen freeplay_b"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "frozen-2018-test-b"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

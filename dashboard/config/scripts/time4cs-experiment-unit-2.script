@@ -1,0 +1,90 @@
+login_required true
+hideable_lessons true
+pilot_experiment 'time4cs-experiment'
+editor_experiment 'broward'
+
+lesson_group 'time4cs_c1', display_name: 'Collection 1: The Everglades & its Ecosystems'
+lesson 'Introduction to the Problem', display_name: 'Introduction to the Problem', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+level 'BrowardTestMarkdownLevel2'
+
+lesson 'Crowdsourcing (Integrated lesson)', display_name: 'Crowdsourcing (Integrated lesson)', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+level 'BrowardTestMarkdownLevel2'
+
+lesson 'Everglades Habitats', display_name: 'Everglades Habitats', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Evaluating a Project in Sprite Lab', display_name: 'Evaluating a Project in Sprite Lab', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson_group 'time4cs_c2', display_name: 'Collection 2: Food Chains (in the Everglades)'
+lesson 'Food Chains', display_name: 'Food Chains', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Conditionals with Cards (Integrated Lesson)- Part 1', display_name: 'Conditionals with Cards (Integrated Lesson)- Part 1', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Alligator Holes', display_name: 'Alligator Holes', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Food Chain Game', display_name: 'Food Chain Game', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson_group 'time4cs_c3', display_name: 'Collection 3: Native Species (in the Everglades)'
+lesson 'Invasive Species', display_name: 'Invasive Species', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Conditionals with Cards (Integrated Lesson)- Part 2', display_name: 'Conditionals with Cards (Integrated Lesson)- Part 2', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'I am in Big Trouble', display_name: 'I am in Big Trouble', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Conditionals in Sprite Lab', display_name: 'Conditionals in Sprite Lab', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Nested Loops in Maze', display_name: 'Nested Loops in Maze', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Fancy Shapes using Nested Loops', display_name: 'Fancy Shapes using Nested Loops', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Nested Loops with Frozen', display_name: 'Nested Loops with Frozen', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson_group 'time4cs_c4', display_name: 'Collection 4: Impact of Invasive Species (on the Everglades)'
+lesson 'Fishy Business', display_name: 'Fishy Business', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Songwriting (Integrated Lesson)', display_name: 'Songwriting (Integrated Lesson)', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Functions with Harvester', display_name: 'Functions with Harvester', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Functions with Artist', display_name: 'Functions with Artist', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson_group 'time4cs_c5', display_name: 'Collection 5: Citizens Take Action'
+lesson 'Pythons impacting native populations', display_name: 'Pythons impacting native populations', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Functions in Sprite Lab', display_name: 'Functions in Sprite Lab', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Python Problem- Current Solutions', display_name: 'Python Problem- Current Solutions', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'End of Course Project (integrated- project planning lesson)', display_name: 'End of Course Project (integrated- project planning lesson)', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Debate- Pythons impacting native populations', display_name: 'Debate- Pythons impacting native populations', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Work on Project', display_name: 'Work on Project', has_lesson_plan: false
+level 'BrowardTestMarkdownLevel'
+

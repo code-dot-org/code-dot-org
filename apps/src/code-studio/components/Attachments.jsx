@@ -6,22 +6,6 @@ import React from 'react';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import assetListStore from '../assets/assetListStore';
 
-const styles = {
-  button: {
-    float: 'left',
-    marginRight: '5px'
-  },
-  attachment: {
-    background: '#08c',
-    color: '#fff',
-    borderRadius: '4px',
-    padding: '0 5px',
-    margin: '4px 4px 4px 0',
-    float: 'left',
-    fontSize: '0.8em'
-  }
-};
-
 /**
  * An attachment list component.
  */
@@ -75,6 +59,7 @@ export default class Attachments extends React.Component {
             href={url}
             className="uitest-attachment"
             target="_blank"
+            rel="noopener noreferrer"
           >
             {asset.filename}
           </a>
@@ -104,5 +89,18 @@ export default class Attachments extends React.Component {
   }
 }
 
-window.dashboard = window.dashboard || {};
-window.dashboard.Attachments = Attachments;
+const styles = {
+  button: {
+    float: 'left',
+    marginRight: '5px'
+  },
+  attachment: {
+    background: '#08c',
+    color: '#fff',
+    borderRadius: '4px',
+    padding: '0 5px',
+    margin: '4px 4px 4px 0',
+    float: 'left',
+    fontSize: '0.8em'
+  }
+};

@@ -1,7 +1,6 @@
 login_required true
-has_lesson_plan true
 
-stage 'Debugging: Unspotted Bugs'
+lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs', has_lesson_plan: true
 level 'courseB_video_Unspotted'
 level 'courseB_story_unspottedBugs1'
 level 'courseB_story_unspottedBugs2'
@@ -22,7 +21,7 @@ level 'courseB_story_unspottedBugs16'
 level 'courseB_story_unspottedBugs17'
 level 'courseB_story_unspottedBugs18'
 
-stage 'Persistence & Frustration: Stevie and the Marbles'
+lesson 'Persistence & Frustration: Stevie and the Marbles', display_name: 'Persistence & Frustration: Stevie and the Marbles', has_lesson_plan: true
 level 'courseA_video_Stevie'
 level 'courseA_external_stevie1'
 level 'courseA_external_stevie2'
@@ -42,44 +41,56 @@ level 'courseA_external_stevie14'
 level 'courseA_external_stevie15'
 level 'courseA_external_stevie16'
 
-stage 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed', has_lesson_plan: true, unplugged: true
 level 'PlantASeed'
 
-stage 'Learn to Drag and Drop'
+lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop', has_lesson_plan: true
 level 'elementary_video_pairProgramming'
 level 'gradek1_activity_beNice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:2'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:4'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:5'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:6'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:7'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:8'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:9'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:10'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:11'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:13', assessment: true
 
-stage 'Your Digital Footprint'
+lesson 'Your Digital Footprint', display_name: 'Your Digital Footprint', has_lesson_plan: true, unplugged: true
 level 'DigitalFootprint'
 
-stage 'Programming: My Robotic Friends'
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true
 level 'courseB_external_MRF'
 
-stage 'Programming in Maze'
+lesson 'Programming in Maze', display_name: 'Programming in Maze', has_lesson_plan: true
 level 'courseAB_video_NewIntro'
 level 'courseB_maze_seq1'
 level 'courseB_video_debuggingOrg'
@@ -97,10 +108,10 @@ level 'courseB_maze_seq12'
 bonus 'courseB_maze_seq_challenge1', challenge: true
 bonus 'courseB_maze_seq_challenge2', challenge: true
 
-stage 'Loops: My Loopy Robotic Friends'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true
 level 'courseB_external_loopMRF'
 
-stage 'Loops in Collector'
+lesson 'Loops in Collector', display_name: 'Loops in Collector', has_lesson_plan: true
 level 'courseAB_video_collector'
 level 'courseB_collector_loops1'
 level 'courseB_collector_loops2'
@@ -117,7 +128,7 @@ level 'courseB_collector_loops11'
 bonus 'courseB_collector_loops_challenge1', challenge: true
 bonus 'courseB_collector_loops_challenge2', challenge: true
 
-stage 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
 level 'courseB_video_ArtistIntro'
 level 'courseB_artist_loops1'
 level 'courseB_video_artistLoops'
@@ -133,10 +144,10 @@ level 'courseB_artist_loops10'
 bonus 'courseB_artist_loops_challenge1'
 bonus 'courseB_artist_loops_challenge2'
 
-stage 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 
-stage 'Events in Play Lab'
+lesson 'Events in Play Lab', display_name: 'Events in Play Lab', has_lesson_plan: true
 level 'courseA_video_events'
 level 'courseB_playLab_events1'
 level 'courseB_playlab_events2'
@@ -148,3 +159,4 @@ level 'courseB_playlab_events7'
 level 'courseB_playlab_eventsFP'
 bonus 'courseB_playlab_events_challenge1'
 bonus 'courseB_playlab_events_challenge2'
+

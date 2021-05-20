@@ -1,9 +1,9 @@
 name 'CSPFinal_Question_3_2018_2019'
 layout 'wrap'
-wrong '<code>Computer A</code>'
-wrong '<code>Computer B</code>'
-right '<code>Computer D</code>'
-wrong '<code>Computer F</code>'
+wrong '`Computer A`'
+wrong '`Computer B`'
+right '`Computer D`'
+wrong '`Computer F`'
 markdown <<MARKDOWN
 The figure represents a network of physically linked computers labeled `A` through `F`.  A line between two computers indicates that the computers can communicate directly with each other.  Any information sent between two computers that are not directly connected must go through at least one other computer.  The weight or cost of sending information from one computer to another is indicated by the number above the line.  
 

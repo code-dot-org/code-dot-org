@@ -1,86 +1,92 @@
 ---
-title: دليل الاستخدام
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# كيف تدرس " ساعة من البرمجة" لفصول وأندية "ما بعد المدرسة"
+# كيف تدرس "ساعة من البرمجة" لفصول وأندية "ما بعد المدرسة"
 
-### انضم للحراك وقدم لمجموعة من طلابك ساعتهم الأولى من علوم الحاسب بهذه الخطوات. "ساعة من البرمجة" سهلة العمل - حتى للمبتدئين! اذا اردت مساعدة إضافية، يمكنك ان تجد [متطوعا محليا](%= codeorg_url('/volunteer/local') %) ليساعدك في القيام بساعة برمجة بعد المدرسة أو في لنادي.
+### انضم إلى الحركة، وعرِّف الطلاب بمجال علوم الكمبيوتر من خلال هذه الخطوات.
 
----
+فالتفكير الحسابي يُساعِد في تنمية مهارات حل المشكلات والمنطق والابتكار. فالتفكير الحسابي يُساعِد في تنمية مهارات حل المشكلات والمنطق والابتكار. ينبغي للطلاب اليوم أن يتعلَّموا كيفية تصميم التقنية، وليس استخدامها فحسب. ومع بدء الطلاب للتعلُّم في مرحلة مبكرة، سيصبح لديهم أساسًا للنجاح في أي مسارٍ مهني في القرن الحادي والعشرين.
 
-## ١. شاهد هذا الفيديو كيف-تفعل <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### تُنظَّم فعالية "ساعة من البرمجة" أيضًا عن بُعد! وللبدء، يُرجى مراجعة [نصائحنا لفعالية افتراضية من "ساعة من البرمجة"](https://hourofcode.com/us/how-to/virtual).
+
+* * *
+
+## ١. شاهد هذا الفيديو الإرشادي <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. اختر برنامجاً تعليمياً
 
-نوفر متعة متنوعة، [دورات طويلة]({{ urls/learn }}) للمشاركين من كل الأعمار، مصممة من طرف شركاء مختلفين. [جربها]({{ urls/learn }})
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**كل دروس "ساعة من البرمجة"** تتطلب اقل وقت ممكن من الاعداد من المنظمين, وهي ذاتية الاسترشاد - بحيث تسمح للطلاب بالتعلم حسب مستوى مهارة كل فرد.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**هل أنت بحاجة إلى خطة دراسية لنشاط "ساعة من البرمجة" بعد المدرسة ؟** تفقد هذا! [النموذج](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## ٣. عزّز ساعة البرمجة لديك
+## ٣. عزّز أنشطة "ساعة البرمجة"
 
-روج لحدثك لساعة البرمجة [مع هذه الأدوات]({{ urls/promote }}) وشجع الآخرين على استضافتها.
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
-## ٤. حدد احتياجاتك من التقنية - أجهزة الحاسب الآلي اختيارية
+## ٤. حدِّد احتياجاتك التقنية - أجهزة الحاسوب اختيارية
 
-أفضل تجربة ل"ساعة من البرمجة" تتضمن أجهزة كمبيوتر متصلة بالإنترنت. لكن **لا** تحتاج إلى جهاز كمبيوتر لكل طفل، ويمكنك حتى تعليم "ساعة من البرمجة" دون كمبيوتر على الإطلاق.
+تشتمل أفضل تجربة لأنشطة "ساعة البرمجة" على أجهزة كمبيوتر متصلة بالإنترنت. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-تأكد من اختبار البرامج التعليمية على كمبيوترات الطلاب أو أجهزتهم للتأكد من أنها تعمل بشكل صحيح على المتصفحات بالصوت والفيديو. **هل سرعة النت ضعيفة ؟** قم أنت بعرض مقاطع الفيديو أمام كل طلاب الفصل، بحيث لا يحتاج كل طالب تحميل المقاطع بنفسه. أو جرب البرامج التعليمية الغير متصلة / بدون انترنت.
+تأكَّد من اختبار البرامج التعليمية على أجهزة كمبيوتر الطلاب أو أجهزتهم للتأكد من أنها تعمل على ما يرام على المتصفحات مع الصوت والفيديو. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-**وفر سماعات لطلاب الفصل**، أو أطلب من الطلاب إحضار سماعاتهم، إذا اخترت برنامجا تعليميا يعمل بشكل أفضل مع الصوت.
+وفِّر سماعات رأس داخل الفصل الدراسي، أو اطلب من الطلاب إحضار سماعاتهم الخاصة، إذا كان البرنامج التعليمي الذي تختاره يعمل بشكل أفضل مع الصوت.
 
-**ليس لديك ما يكفي من الاجهزة؟**إستخدم[البرمجة المزدوجة](https://www.youtube.com/watch?v=vgkahOzFH2Q). عندما يتعاون الطلبة، يقل الاعتماد على المعلم. أيضا سيلاحظون أن علم الحاسوب اجتماعي و تعاوني.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). عندما يتحد الطلاب، فإنهم سيساعدون بعضهم البعض و يصبح اعتمادهم على المعلم بشكل أقل. وسيدركون أيضًا أن علوم الحاسوب هي علوم اجتماعية وتعاونية.
 
-## 5) ابدأ تدريب "ساعة من البرمجة" بمشاهدة فيديو ملهم للطلاب
+## 5) ابدأ نشاط "ساعة البرمجة" بمقطع فيديو مُلهِم
 
-أطلق "ساعة من البزمجة" بإلهام المشاركين و مناقشة كيف يأثر علم الحاسوب في كل جزء من حياتنا.
+ابدأ نشاط "ساعة البرمجة" من خلال إلهام المشاركين ومناقشة كيفية تأثير علوم الحاسوب على كل جزء من حياتنا.
 
-**اعرض احد الفيديوهات المُلهِمة:**
+**عرض مقطع فيديو مُلهم:**
 
 - الفيديو الرسمي ل Code.org، من تقديم بيل غاتس, مارك زوكربيرج ونجم إن بي أي كريس بوش (توجد نسح <a href="https://www.youtube.com/watch?v=qYZF6oIZtfc"1 دقيقة واحدة</a>, [5 دقائق](https://www.youtube.com/watch?v=nKIu9yen5nc), [9 دقائق](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- [الفيديو العالمي لساعة من البرمجة ](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [الرئيس اوباما يدعو جميع الطلاب لتعلم علم الحاسوب](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- للعثور على المزيد من أشرطة الفيديوهات الملهمة من [ هنا](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- [الفيديو العالمي لـ "ساعة البرمجة"](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [الرئيس أوباما يدعو جميع الطلاب لتعلم علوم الحاسوب](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- يمكنك العثور على المزيد من مقاطع الفيديو الملهمة من [هنا](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**ليست مشكلة اذا كنت جديد على علم الحاسوب. هذا بعض الافكار اللتي ستعرفم على نشاط "ساعة برمجة":**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- اشرح كيف أن التكنولوجيا تؤثر على حياتنا بطرق متعددة، مع أمثلة بحيث أن كلا من الأولاد والبنات يهتمون ب (النقاش حول كيف أن التطبيقات التكنولوجية تستخدم في إنقاذ الأرواح، ومساعدة الناس، وربط الناس ببعضهم البعض وإلى أخره).
-- بمشاركة الفصل، اسرد الاشياء التي نستخدم فيها البرمجة في حياتنا اليومية.
-- هذه بعض التوجيهات لجعل الفتيات يهتمن بعلوم الكمبيوتر[هنا]({{ urls/girls }}).
+- اشرح الطرق التي تؤثر بها التكنولوجيا على حياتنا، مع أمثلة يهتم بها كل من الأولاد والبنات (تحدث عن التطبيقات والتكنولوجيا المستخدمة لإنقاذ الأرواح، ومساعدة الناس، وتواصل الناس، وغير ذلك)
+- ضع قائمة بالأشياء التي تستخدم البرمجة في الحياة اليومية.
+- يمكنك الاطلاع على بعض النصائح لجعل الفتيات مهتمات بعلوم الحاسوب[هنا]({{ urls/girls }}).
 
-**بحاجة إلى المزيد من التوجيه؟** حمل هذا [ النموذج من الخطة الدراسية](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## ٦- برمج!
+## 6. ابدأ البرمجة!
 
-**توجيه المشاركين الى النشاط** -اكتب رابط الدرس في لوح المعلومات. اعثر على الرابط المدرج في [معلومات حول دورتك المختارة]({{ urls/learn }}) تحت عدد المشاركين.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. ابحث عن الرابط المذكور في [معلومات عن برنامجك التعليمي المختار]({{ urls/learn }}) تحت عدد المشاركين. 
 
-**عندما يأتي شخص عبر الصعوبات لا بأس بأن يجاوب:** --"أنا لا أعرف. دعونا نتخيل هذا معا. " -"التكنولوجيا لا تعمل دائماً بالطريقة التي نريد". -"تعلم البرمجة مثل تعلم لغة جديدة; لا يمكن ان تجيدها على الفور. "
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. دعونا نكتشف ذلك معًا." - "التكنولوجيا لا تعمل دائمًا بالطريقة التي نريدها." - "تعلم البرمجة يشبه تعلم لغة جديدة، فأنت لن تتحدث بطلاقة على الفور."
 
-**ماذ تفعل إن أنهى أحد عمله باكرا؟** - شجع المشاركين لإجراء نشاط ساعة برمجة آ على [خر hourofcode.com/learn]({{ urls/learn }}) - أو اطلب ممن أنهوا باكرا ليساعدوا المتعثرين.
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
-## ٧- احتفل
+## 7) الإشادة والتكريم
 
-- [اطبع الشهادات](%= codeorg_url('/certificates')%) لطلابك.
-- [اطبع "أجريت ساعة البرمجة"]({{ promote/resources_stickers }}) ملصقات لطلابك.
-- [اطلب قمصان خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لمدرستك.
-- شارك صور وفيديوهات حدث ساعة برمجة الذي قمت به على وسائل التواصل الاجتماعي. استخدم #HourOfCode و @codeorg حتى نسلط الضوء على نجاحك ايضا!
+- [اطبع الشهادات]({{ urls/certificates }}) لطلابك.
+- [اطبع ملصقات مكتوب عليها "أنجزت نشاط "ساعة البرمجة"]({{ promote/resources_stickers }}) لطلابك.
+- [اطلب قمصان خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) للمشاركين.
+- شارك الصور ومقاطع الفيديو الخاصة بحدث "ساعة البرمجة" على وسائل التواصل الاجتماعي. استخدم هاشتاج #HourOfCode و @codeorg حتى نتمكن من إبراز نجاحك أيضًا!
 
-## موارد أخرى لمعلمي ساعة برمجة
+## مصادر أخرى للمعلمين في "ساعة البرمجة"
 
-- تفقد [ أفضل الممارسات](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) من منظمين اخرين لنشاط "ساعة من البرمجة".
-- شاهد تسجيلنا لمحاضرة [ دليل المعلم لنشاط"ساعة من البرمجة"](https://youtu.be/EJeMeSW2-Mw).
-- قم بزيارة [ منتدى ساعة من البرمجة](http://forum.code.org/c/plc/hour-of-code) للحصول على نصيحة، فكرة و دعم من منظمين اخرين.
-- استعرض [ساعة برمجة سؤال وجواب](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- يرجى مطالعة[أفضل الممارسات](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) من منظمين سابقين لأنشطة "ساعة البرمجة".
+- شاهد تسجيلنا لمحاضرة [ دليل المعلم لأنشطة "ساعة من البرمجة"](https://youtu.be/EJeMeSW2-Mw).
+- تفضَّل بزيارة [منتدى "ساعة البرمجة"](http://forum.code.org/c/plc/hour-of-code) للحصول على نصيحة، أو فكرة أو دعم من منظمين آخرين.
+- يرجى الاطلاع على [ الأسئلة الشائعة عن "ساعة البرمجة"](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## ماذا بعد ساعة برمجة؟
+## ماذا بعد "ساعة البرمجة"؟
 
-نشاط"ساعة من البرمجة" هو مجرد خطوه اولية في الرحلة لمعرفه كيفيه عمل التكنولوجيا وكيفيه انشاء التطبيقات البرمجيات. ساعد الطلاب في متابعة مسيرتهم و تشجيعهم [لتعلم المزيد على الانترنت](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

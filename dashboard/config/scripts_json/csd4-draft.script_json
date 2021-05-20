@@ -1,0 +1,2067 @@
+{
+  "script": {
+    "name": "csd4-draft",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "exclude_csf_column_in_legend": true,
+      "student_detail_progress_view": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:06 UTC",
+    "seeding_key": {
+      "script.name": "csd4-draft"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd4_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: User Centered Design"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "csd4_2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: App Prototyping"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Analysis of Design",
+      "name": "Analysis of Design",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Analysis of Design",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Understanding Your User",
+      "name": "Understanding Your User",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "User-Centered Design Micro Activity",
+      "name": "User-Centered Design Micro Activity",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "User-Centered Design Micro Activity",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "User Interface and Prototype Testing",
+      "name": "User Interface and Prototype Testing",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "User Interface and Prototype Testing",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Feedback and Prototypes",
+      "name": "Feedback and Prototypes",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Feedback and Prototypes",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Identifying User Needs",
+      "name": "Identifying User Needs",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Project - Paper Prototype",
+      "name": "Project - Paper Prototype",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Designing Apps for Good",
+      "name": "Designing Apps for Good",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Market Research",
+      "name": "Market Research",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Paper Prototypes",
+      "name": "Paper Prototypes",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Prototype Testing",
+      "name": "Prototype Testing",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Digital Design",
+      "name": "Digital Design",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Linking Screens",
+      "name": "Linking Screens",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Testing the App",
+      "name": "Testing the App",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "Improving and Iterating",
+      "name": "Improving and Iterating",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Improving and Iterating",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "key": "App Presentation",
+      "name": "App Presentation",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "App Presentation",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L01 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L01 SFLP"
+        ],
+        "lesson.key": "Analysis of Design",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L01 SFLP"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L02 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L02 SFLP"
+        ],
+        "lesson.key": "Understanding Your User",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L02 SFLP"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L03 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L03 SFLP"
+        ],
+        "lesson.key": "User-Centered Design Micro Activity",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L03 SFLP"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L04 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L04 SFLP"
+        ],
+        "lesson.key": "User Interface and Prototype Testing",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L04 SFLP"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L05 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L05 SFLP"
+        ],
+        "lesson.key": "Feedback and Prototypes",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L05 SFLP"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L06 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L06 SFLP"
+        ],
+        "lesson.key": "Identifying User Needs",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L06 SFLP"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L07 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L07 SFLP"
+        ],
+        "lesson.key": "Project - Paper Prototype",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L07 SFLP"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1"
+        ],
+        "lesson.key": "Project - Paper Prototype",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U4Ch1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L08 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L08 SFLP"
+        ],
+        "lesson.key": "Designing Apps for Good",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L08 SFLP"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L09 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L09 SFLP"
+        ],
+        "lesson.key": "Market Research",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L09 SFLP"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L10 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L10 SFLP"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L10 SFLP"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Example App Types"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Example App Types"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "Example App Types"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU4 Quiz App Demo"
+        ],
+        "progression": "Demo Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU4 Quiz App Demo"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSDU4 Quiz App Demo"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU4 Decision App Demo"
+        ],
+        "progression": "Demo Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU4 Decision App Demo"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSDU4 Decision App Demo"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU4 List App Demo"
+        ],
+        "progression": "Demo Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU4 List App Demo"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSDU4 List App Demo"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU4 Crowdsource App Demo"
+        ],
+        "progression": "Demo Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU4 Crowdsource App Demo"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSDU4 Crowdsource App Demo"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L11 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L11 SFLP"
+        ],
+        "lesson.key": "Prototype Testing",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L11 SFLP"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L12 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L12 SFLP"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L12 SFLP"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 Design Mode Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 Design Mode Map"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4 Design Mode Map"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU4 Design Mode Video"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU4 Design Mode Video"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSDU4 Design Mode Video"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Design 1"
+        ],
+        "progression": "Build a Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Design 1"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Design 1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Design 2"
+        ],
+        "progression": "Build a Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Design 2"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Design 2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Design 3"
+        ],
+        "progression": "Build a Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Design 3"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Design 3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Design 4"
+        ],
+        "progression": "Build a Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Design 4"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Design 4"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 Design Elements Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 Design Elements Map"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4 Design Elements Map"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Design 5"
+        ],
+        "progression": "Finish a Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Design 5"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Design 5"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Design 6"
+        ],
+        "progression": "Finish a Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Design 6"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Design 6"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Design 7"
+        ],
+        "progression": "Finish a Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Design 7"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Design 7"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Design a Screen for your App"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Design a Screen for your App"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "Design a Screen for your App"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project"
+        ],
+        "progression": "App Project: Screen Design"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 - Design Mode Project"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4 - Design Mode Project"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L13 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L13 SFLP"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L13 SFLP"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 Mult Screen Map"
+        ],
+        "progression": "Adding Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 Mult Screen Map"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4 Mult Screen Map"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 1"
+        ],
+        "progression": "Adding Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Program 1"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Program 1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5"
+        ],
+        "progression": "Adding Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Program 1.5"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Program 1.5"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 Importing Screens Map"
+        ],
+        "progression": "Adding Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 Importing Screens Map"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4 Importing Screens Map"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 2"
+        ],
+        "progression": "Adding Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Program 2"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Program 2"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5"
+        ],
+        "progression": "Adding Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Program 2.5"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Program 2.5"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 User Input Map"
+        ],
+        "progression": "Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 User Input Map"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4 User Input Map"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 3"
+        ],
+        "progression": "Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Program 3"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Program 3"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 Change Screen Map"
+        ],
+        "progression": "Linking Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 Change Screen Map"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4 Change Screen Map"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 4"
+        ],
+        "progression": "Linking Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Program 4"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Program 4"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 5"
+        ],
+        "progression": "Linking Screens"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Model Program 5"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "U4 Model Program 5"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU4 Project Import"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU4 Project Import"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSDU4 Project Import"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU4 Project Events"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU4 Project Events"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSDU4 Project Events"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L15 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L15 SFLP"
+        ],
+        "lesson.key": "Testing the App",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L15 SFLP"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L16 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L16 SFLP"
+        ],
+        "lesson.key": "Improving and Iterating",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L16 SFLP"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU4 Project Bug Feature"
+        ],
+        "lesson.key": "Improving and Iterating",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSDU4 Project Bug Feature"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4L17 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4L17 SFLP"
+        ],
+        "lesson.key": "App Presentation",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "CSD U4L17 SFLP"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2"
+        ],
+        "lesson.key": "App Presentation",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U4Ch2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L01 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L01 SFLP"
+        ],
+        "lesson.key": "Analysis of Design",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L02 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L02 SFLP"
+        ],
+        "lesson.key": "Understanding Your User",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L03 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L03 SFLP"
+        ],
+        "lesson.key": "User-Centered Design Micro Activity",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L04 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L04 SFLP"
+        ],
+        "lesson.key": "User Interface and Prototype Testing",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L05 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L05 SFLP"
+        ],
+        "lesson.key": "Feedback and Prototypes",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L06 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L06 SFLP"
+        ],
+        "lesson.key": "Identifying User Needs",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L07 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L07 SFLP"
+        ],
+        "lesson.key": "Project - Paper Prototype",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U4Ch1",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1"
+        ],
+        "lesson.key": "Project - Paper Prototype",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L08 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L08 SFLP"
+        ],
+        "lesson.key": "Designing Apps for Good",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L09 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L09 SFLP"
+        ],
+        "lesson.key": "Market Research",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L10 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L10 SFLP"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Example App Types",
+        "script_level.level_keys": [
+          "Example App Types"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU4 Quiz App Demo",
+        "script_level.level_keys": [
+          "CSDU4 Quiz App Demo"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU4 Decision App Demo",
+        "script_level.level_keys": [
+          "CSDU4 Decision App Demo"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU4 List App Demo",
+        "script_level.level_keys": [
+          "CSDU4 List App Demo"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU4 Crowdsource App Demo",
+        "script_level.level_keys": [
+          "CSDU4 Crowdsource App Demo"
+        ],
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L11 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L11 SFLP"
+        ],
+        "lesson.key": "Prototype Testing",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L12 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L12 SFLP"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 Design Mode Map",
+        "script_level.level_keys": [
+          "CSD U4 Design Mode Map"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU4 Design Mode Video",
+        "script_level.level_keys": [
+          "CSDU4 Design Mode Video"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Design 1",
+        "script_level.level_keys": [
+          "U4 Model Design 1"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Design 2",
+        "script_level.level_keys": [
+          "U4 Model Design 2"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Design 3",
+        "script_level.level_keys": [
+          "U4 Model Design 3"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Design 4",
+        "script_level.level_keys": [
+          "U4 Model Design 4"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 Design Elements Map",
+        "script_level.level_keys": [
+          "CSD U4 Design Elements Map"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Design 5",
+        "script_level.level_keys": [
+          "U4 Model Design 5"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Design 6",
+        "script_level.level_keys": [
+          "U4 Model Design 6"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Design 7",
+        "script_level.level_keys": [
+          "U4 Model Design 7"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Design a Screen for your App",
+        "script_level.level_keys": [
+          "Design a Screen for your App"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 - Design Mode Project",
+        "script_level.level_keys": [
+          "CSD U4 - Design Mode Project"
+        ],
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L13 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L13 SFLP"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 Mult Screen Map",
+        "script_level.level_keys": [
+          "CSD U4 Mult Screen Map"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Program 1",
+        "script_level.level_keys": [
+          "U4 Model Program 1"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Program 1.5",
+        "script_level.level_keys": [
+          "U4 Model Program 1.5"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 Importing Screens Map",
+        "script_level.level_keys": [
+          "CSD U4 Importing Screens Map"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Program 2",
+        "script_level.level_keys": [
+          "U4 Model Program 2"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Program 2.5",
+        "script_level.level_keys": [
+          "U4 Model Program 2.5"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 User Input Map",
+        "script_level.level_keys": [
+          "CSD U4 User Input Map"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Program 3",
+        "script_level.level_keys": [
+          "U4 Model Program 3"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 Change Screen Map",
+        "script_level.level_keys": [
+          "CSD U4 Change Screen Map"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Program 4",
+        "script_level.level_keys": [
+          "U4 Model Program 4"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Model Program 5",
+        "script_level.level_keys": [
+          "U4 Model Program 5"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU4 Project Import",
+        "script_level.level_keys": [
+          "CSDU4 Project Import"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU4 Project Events",
+        "script_level.level_keys": [
+          "CSDU4 Project Events"
+        ],
+        "lesson.key": "Linking Screens",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L15 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L15 SFLP"
+        ],
+        "lesson.key": "Testing the App",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L16 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L16 SFLP"
+        ],
+        "lesson.key": "Improving and Iterating",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU4 Project Bug Feature",
+        "script_level.level_keys": [
+          "CSDU4 Project Bug Feature"
+        ],
+        "lesson.key": "Improving and Iterating",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4L17 SFLP",
+        "script_level.level_keys": [
+          "CSD U4L17 SFLP"
+        ],
+        "lesson.key": "App Presentation",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U4Ch2",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2"
+        ],
+        "lesson.key": "App Presentation",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-draft"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

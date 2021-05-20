@@ -1,13 +1,13 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2019-01-22T18:09:10.000Z",
-  "level_num": "custom",
-  "user_id": 684,
   "properties": {
     "parent_level_id": 11601,
     "name_suffix": "_2019"
   },
+  "game_id": 31,
+  "level_num": "custom",
+  "created_at": "2019-01-22T18:09:10.000Z",
+  "user_id": 684,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2017-06-13 15:48:30 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
 }]]></config>

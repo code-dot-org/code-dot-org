@@ -1,8 +1,13 @@
 - deep_dive_only ||= false
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&libraries=places,geometry&v=3.27"}
 - image_path = CDO.studio_url 'blockly/media/workshop_search/m', CDO.default_scheme
-%script{type: 'text/javascript', src: minifiable_asset_path('js/code.org/views/workshop_search.js'), data: {workshopSearch: {'imagePath': image_path}.to_json} }
+%script{type: 'text/javascript', src: webpack_asset_path('js/code.org/views/workshop_search.js'), data: {workshopSearch: {'imagePath': image_path}.to_json} }
+
+%link{href:'https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css', rel:'stylesheet'}
+%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'}
+%script{src:'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js'}
+%link{href:'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css', rel:'stylesheet', type:'text/css'}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&libraries=places,geometry&v=3.27"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
 :css
@@ -20,20 +25,52 @@
   .workshop-location-name {
     white-space: nowrap;
   }
+  .geocoder {
+    z-index: 1;
+    left: 50%;
+    margin-top: 0px;
+  }
+  .mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+  }
+  .mapboxgl-ctrl-geocoder--button {
+    height: 0;
+  }
+  .suggestions li {
+    text-indent: 0;
+    padding-left: 0;
+  }
+  .suggestions li:before {
+    content: none;
+  }
+  #mapbox-map {
+    width: 100%;
+    padding-bottom: 56.25%;
+    border: 3px solid #ddd;
+  }
+  .popup {
+    max-width: none !important;
+  }
+  .popup button {
+    color: black;
+    padding-top: 2px;
+    height: auto;
+  }
+  #mapbox-map button {
+    margin: 0;
+  }
 
 .row
   %form#workshop-search-form{role: "form", onsubmit: "event.preventDefault();"}
     .form-section
       .col-xs-4
         .form-group
-          %div
-            %input#geocomplete.form-control{name: "geocomplete", placeholder: "Search for workshops", type: "text"}/
-      .col-xs-8
-        .form-group
-          %button#btn-submit{type: "submit", style: "margin-top: 0px"} Search
-          %button#btn-reset.btn-link{type: "reset", style: "margin-top: 0px"} Reset
+          %div#mapboxgeocoder{class: 'geocoder'}
 .row
   .col-xs-12
-    #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
+    #mapbox-map
 
 #properties{'data-studio-url': CDO.studio_url, 'data-deep-dive-only': deep_dive_only}
+
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";

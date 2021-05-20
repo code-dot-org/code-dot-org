@@ -25,13 +25,17 @@ module SafeNames
       item_descriptions << {full_name: full_name, item: item, first_name: first_name}
     end
 
+    # Count cases of each first name to check first-name uniqueness
+    # {"Aaron" => 2, "Bey" => 1, "Chloe" => 1, ...}
+    first_name_counts = item_descriptions.group_by {|item| item[:first_name]}.transform_values(&:count)
+
     # Determine safe names for each item, map to an array of tuples (safe_name, item), and sort by safe_name
     item_descriptions.map do |item_description|
-      [determine_safe_name(trie, item_description), item_description[:item]]
+      [determine_safe_name(trie, first_name_counts, item_description), item_description[:item]]
     end.sort_by(&:first)
   end
 
-  def self.determine_safe_name(trie, item_description)
+  def self.determine_safe_name(trie, first_name_counts, item_description)
     first_name = item_description[:first_name]
     full_name = item_description[:full_name]
 
@@ -43,8 +47,10 @@ module SafeNames
     # abbreviated and use the full name
     return full_name if first_name.length == 1 || /^.\.$/.match(first_name)
 
-    # If the first name is unique, simply use that
-    return first_name if trie.words(first_name).count == 1
+    # If the first name is unique among first names, only use the first name.
+    # Or - if the first name is not unique but it appears unique in the trie (which is a set)
+    # we have identical full names, and should only use the first name.
+    return first_name if first_name_counts[first_name] == 1 || trie.words(first_name).count == 1
 
     # Otherwise, we first must find the leaf node representing the entire name
     leaf = trie.root

@@ -15,36 +15,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  instructions: {
-    marginTop: 20
-  },
-  answers: {
-    float: 'left',
-    width: 550
-  },
-  icon: {
-    color: color.level_perfect
-  },
-  iconSpace: {
-    width: 40,
-    float: 'left'
-  },
-  answerBlock: {
-    width: '100%'
-  },
-  answerLetter: {
-    width: 30,
-    float: 'left',
-    fontWeight: 'bold'
-  }
-};
-
 class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
@@ -102,6 +72,7 @@ class MultipleChoiceDetailsDialog extends Component {
         )}
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.done()}
             onClick={this.props.closeDialog}
             color={Button.ButtonColor.gray}
@@ -111,6 +82,36 @@ class MultipleChoiceDetailsDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  instructions: {
+    marginTop: 20
+  },
+  answers: {
+    float: 'left',
+    width: 550
+  },
+  icon: {
+    color: color.level_perfect
+  },
+  iconSpace: {
+    width: 40,
+    float: 'left'
+  },
+  answerBlock: {
+    width: '100%'
+  },
+  answerLetter: {
+    width: 30,
+    float: 'left',
+    fontWeight: 'bold'
+  }
+};
 
 export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
 

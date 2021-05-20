@@ -1,0 +1,62 @@
+{
+  "script": {
+    "name": "test-new-seed-course-offering",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "version_year": "1234",
+      "is_course": true
+    },
+    "new_name": null,
+    "family_name": "xyz",
+    "seeding_key": {
+      "script.name": "test-new-seed-course-offering"
+    }
+  },
+  "lesson_groups": [
+
+  ],
+  "lessons": [
+
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "programming_expressions": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "standards": [
+
+  ],
+  "lessons_standards": [
+
+  ]
+}

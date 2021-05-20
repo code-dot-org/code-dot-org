@@ -1,0 +1,196 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "translateStrings",
+    "blockText": "translate {STRING}",
+    "args": [
+      {
+        "name": "STRING",
+        "options": [
+          [
+            "Waves",
+            "\"music_wave\""
+          ],
+          [
+            "Ripples",
+            "\"ripples\""
+          ],
+          [
+            "Random Ripples",
+            "\"ripples_random\""
+          ],
+          [
+            "Angular",
+            "\"quads\""
+          ],
+          [
+            "Angles",
+            "\"quads\""
+          ],
+          [
+            "Flowers",
+            "\"flowers\""
+          ],
+          [
+            "Popsicles",
+            "\"popsicles\""
+          ],
+          [
+            "Squiggles",
+            "\"squiggles\""
+          ],
+          [
+            "Growing Stars",
+            "\"growing_stars\""
+          ],
+          [
+            "Emojis",
+            "\"emojis\""
+          ],
+          [
+            "Colorful Hearts",
+            "\"hearts_colorful\""
+          ],
+          [
+            "Hearts",
+            "\"hearts_colorful\""
+          ],
+          [
+            "Paint Drip",
+            "\"paint_drio\""
+          ],
+          [
+            "Starburst",
+            "\"exploding_stars\""
+          ],
+          [
+            "top row",
+            "\"row_top\""
+          ],
+          [
+            "bottom row",
+            "\"row_bottom\""
+          ],
+          [
+            "left column",
+            "\"column_left\""
+          ],
+          [
+            "right column",
+            "\"column_right\""
+          ],
+          [
+            "diamond",
+            "\"diamond\""
+          ],
+          [
+            "Mural",
+            "\"mural\""
+          ],
+          [
+            "Safari",
+            "\"safari\""
+          ],
+          [
+            "Network",
+            "\"network\""
+          ],
+          [
+            "Highway",
+            "\"highway\""
+          ],
+          [
+            "Stream",
+            "\"stream\""
+          ],
+          [
+            "Tile",
+            "\"tile\""
+          ],
+          [
+            "Shadow",
+            "\"shadow\""
+          ],
+          [
+            "s",
+            "\"s\""
+          ],
+          [
+            "t",
+            "\"t\""
+          ],
+          [
+            "u",
+            "\"u\""
+          ],
+          [
+            "v",
+            "\"v\""
+          ],
+          [
+            "w",
+            "\"w\""
+          ],
+          [
+            "x",
+            "\"x\""
+          ],
+          [
+            "y",
+            "\"y\""
+          ],
+          [
+            "z",
+            "\"z\""
+          ],
+          [
+            "0",
+            "\"0\""
+          ],
+          [
+            "1",
+            "\"1\""
+          ],
+          [
+            "2",
+            "\"2\""
+          ],
+          [
+            "3",
+            "\"3\""
+          ],
+          [
+            "4",
+            "\"4\""
+          ],
+          [
+            "5",
+            "\"5\""
+          ],
+          [
+            "6",
+            "\"6\""
+          ],
+          [
+            "7",
+            "\"7\""
+          ],
+          [
+            "8",
+            "\"8\""
+          ],
+          [
+            "9",
+            "\"9\""
+          ]
+        ]
+      }
+    ],
+    "eventBlock": true,
+    "color": [
+      1,
+      1,
+      0.1
+    ]
+  }
+}

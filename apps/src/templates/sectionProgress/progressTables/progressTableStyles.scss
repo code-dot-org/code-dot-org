@@ -1,0 +1,115 @@
+@import 'color';
+@import 'style-constants';
+
+$scrollbar-height: 15px;
+$row-height: 42px;
+$expanded-row-height: 30px;
+$max-rows: 14;
+$max-height: $max-rows * $row-height + $scrollbar-height;
+$student-list-width: 170px;
+$content-view-width: $content-width - $student-list-width;
+
+.progress-table {
+  table {
+    table-layout: fixed;
+    border: 1px solid;
+    border-color: $border-gray;
+    border-collapse: separate;
+  }
+  th {
+    background-color: $table-header;
+    color: $charcoal;
+    border-width: 0px 1px 2px 0px;
+    border-color: $border-gray;
+    height: $row-height;
+  }
+  th,
+  td {
+    padding: 0px;
+    box-sizing: border-box;
+    border-right: 1px solid;
+    border-color: $border-gray;
+    &:last-child {
+      border-right: 0px;
+    }
+  }
+  .primary-row {
+    td {
+      height: $row-height;
+    }
+  }
+  .expanded-row {
+    td {
+      height: $expanded-row-height;
+      border-width: 0px 1px 1px 0px;
+      border-style: solid;
+      border-color: $border-gray;
+    }
+    td:last-of-type {
+      border-width: 0px 0px 1px 0px;
+    }
+  }
+  .first-expanded-row {
+    td {
+      border-width: 1px 1px 1px 0px;
+    }
+    td:last-of-type {
+      border-width: 1px 0px;
+    }
+  }
+  .student-list {
+    table,
+    th,
+    td {
+      width: $student-list-width;
+    }
+    tbody {
+      tr,
+      td {
+        display: block;
+        width: 100%;
+      }
+    }
+    .expanded-row {
+      td {
+        border-width: 0px 0px 1px 0px;
+      }
+    }
+    .first-expanded-row {
+      td {
+        border-width: 1px 0px;
+      }
+    }
+  }
+  .dark-row {
+    background-color: $background_gray;
+  }
+  .content-view {
+    thead,
+    tbody {
+      max-width: $content-view-width;
+    }
+  }
+}
+
+.progress-bubble {
+  &.enabled {
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
+      color 0.2s ease-out;
+    &:hover {
+      text-decoration: none;
+      color: $white !important;
+      border-color: $level_current !important;
+      background-color: $level_current !important;
+    }
+  }
+}
+
+:export {
+  MAX_BODY_HEIGHT: $max-height / 1px;
+  STUDENT_LIST_WIDTH: $student-list-width / 1px;
+  CONTENT_VIEW_WIDTH: $content-view-width / 1px;
+  ROW_HEIGHT: $row-height / 1px;
+  MAX_ROWS: $max-rows;
+  MIN_COLUMN_WIDTH: 40;
+}

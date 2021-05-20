@@ -1,184 +1,217 @@
 {
-  "https://studio.code.org/s/csd5-2017/stage/1/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/1/levels/1": {
     "dsls": {
-      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* make improvements to the course\n* understand your experience\n* tell us what topics you want to learn more about in the future\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey!!!</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n"
+      "markdown": "# Overview\n\nGet your first taste of the importance of how information is represented and how it affects the way we make decisions. You'll help a few people decide which meal they should order.\n\n## Resources\n\n* [Representation Matters - Activity Guide](https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)\n",
+      "teacher_markdown": "[key]\n\n* [Representation Matters](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))\n* [Meals Data](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Resource ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))\n\n[/key]\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/2/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/2/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis lesson looks closer at what is needed to create a system of representation.  Groups create systems that can represent any letter in the alphabet using only a single stack of cards, then create messages with their systems and exchange with other groups to ensure the system worked as intended.   The class discusses commonalities between working systems while recognizing that there are many possible working solutions.\n## Vocabulary\n\n* **Decode** - to change how information is represented so that it can be read by a person\n* **Encode** - to change how information is represented so that it can be read by a computer\n\n\n## Resources\n\n* [Representing Information](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))\n"
+      "markdown": "# Overview\n\nThis lesson looks closer at what is needed to create a system of representation.  Groups create systems that can represent any letter in the alphabet using only a single stack of cards, then create messages with their systems and exchange with other groups to ensure the system worked as intended.   The class discusses commonalities between working systems while recognizing that there are many possible working solutions.\n## Vocabulary\n\n* **Decode** - to change how information is represented so that it can be read by a person\n* **Encode** - to change how information is represented so that it can be read by a computer\n\n\n## Resources\n\n* [Representing Information](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))\n",
+      "teacher_markdown": "* [Representing Information](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Exemplar 1 ([PDF](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))\n* [Representing Information](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Exemplar 2 ([PDF](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))\n\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/3/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/3/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nLearn how the ASCII system uses On-Off patterns to represent the alphabet, then use it to create your own binary system for representing the alphabet. \n\n## Vocabulary\n\n* **ASCII** - ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.\n* **Binary** - A way of representing information using only two options.\n* **Bit** - A contraction of \"Binary Digit\".  A bit is the single unit of information in a computer, typically represented as a 0 or 1.\n\n\n## Resources\n\n* [ASCII - Activity Guide](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)\n"
+      "markdown": "# Overview\n\nLearn how the ASCII system uses On-Off patterns to represent the alphabet, then use it to create your own binary system for representing the alphabet. \n\n## Vocabulary\n\n* **ASCII** - ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.\n* **Binary** - A way of representing information using only two options.\n* **Bit** - A contraction of \"Binary Digit\".  A bit is the single unit of information in a computer, typically represented as a 0 or 1.\n\n\n## Resources\n\n* [ASCII - Activity Guide](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)\n",
+      "teacher_markdown": "* [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/4/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/4/levels/1": {
     "dsls": {
       "markdown": "# Overview\n\nLearn how the on-off patterns you learned about in the last lesson can be used to represent images. Along the way you'll explore how some of the properties of representation systems you've already seen apply to images as well.\n\n## Vocabulary\n\n* **pixel** - short for \"picture element\" it is the fundamental unit of a digital image, typically a tiny square or dot which contains a single point of color of a larger image.\n\n\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/4/puzzle/2": {
+  "https://studio.code.org/s/csd5-2017/lessons/4/levels/2": {
     "display_name": "Black and White Pixelation Widget",
     "short_instructions": "Complete the X shape by typing 0s and 1s",
     "long_instructions": "# Do This\n\nComplete the \"X\" shape by typing 0s and 1s. You can always click \"Readable Format\" if you want to clean up your work."
   },
-  "https://studio.code.org/s/csd5-2017/stage/4/puzzle/3": {
+  "https://studio.code.org/s/csd5-2017/lessons/4/levels/3": {
     "display_name": "Black and White Pixelation Widget",
     "short_instructions": "Draw a smiley face (click here to see image)",
     "long_instructions": "# Do This\n\nUse the pixelation widget to draw a smiley face\n\n[][0]"
   },
-  "https://studio.code.org/s/csd5-2017/stage/4/puzzle/4": {
+  "https://studio.code.org/s/csd5-2017/lessons/4/levels/4": {
     "display_name": "Black and White Pixelation Widget",
     "short_instructions": "Change the width and height sliders to find the image (click here to see more)",
     "long_instructions": "# Do This\n\nThe width and height sliders are set incorrectly for this image so it doesn't look like anything. Change them until you find the image.\n\n[][0]"
   },
-  "https://studio.code.org/s/csd5-2017/stage/4/puzzle/5": {
+  "https://studio.code.org/s/csd5-2017/lessons/4/levels/5": {
     "display_name": "Black and White Pixelation Widget",
     "short_instructions": "Add eyebrows to the smiley face (click here to see the image)",
     "long_instructions": "# Do This\n\nAdd eyebrows to this smiley face. Remember to use the \"Readable Format\" if you get stuck.\n\n[][0]"
   },
-  "https://studio.code.org/s/csd5-2017/stage/4/puzzle/6": {
+  "https://studio.code.org/s/csd5-2017/lessons/4/levels/6": {
     "display_name": "Black and White Pixelation Widget",
     "short_instructions": "Draw anything you like",
     "long_instructions": "# Do This\n\nNow it's your turn. Draw anything you want in the pixelation widget. Feel free to change the width and height of your image if you wish."
   },
-  "https://studio.code.org/s/csd5-2017/stage/5/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/5/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis lesson introduces the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system, the class turns bits \"on\" or \"off\" by turning cards face up and face down, then observes the numbers that result from these different patterns.  Eventually, the pattern is extended to a generic 4-bit system.\n\n## Resources\n* [Representing Numbers - Activity Guide](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)\n* [Number Cards - Manipulative](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)\n"
+      "markdown": "# Overview\n\nThis lesson introduces the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system, the class turns bits \"on\" or \"off\" by turning cards face up and face down, then observes the numbers that result from these different patterns.  Eventually, the pattern is extended to a generic 4-bit system.\n\n## Resources\n* [Representing Numbers - Activity Guide](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)\n* [Number Cards - Manipulative](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)\n",
+      "teacher_markdown": "[key]\n\n* Representing Numbers - Exemplar ([Google Doc](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))\n\n[/key]\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/5/puzzle/2": {
-    "long_instructions": "# 5-Bit Number\n\nWhen you only had four bits, the highest number that you could make was fifteen.  Now you'll have a chance to work with more bits to make higher numbers.\n\nIn this activity, the dots are replaced with numbers, but you still add up everything that's showing to see what number the binary code stands for.  The left-most bit doesn't have a number yet, so you'll have to give it one.\n\n# Do This\n\n-   Click on the bits to turn them on and off, and see the different numbers you can make.\n-   With your partner, discuss the pattern in the numbers.  Decide what number you think should go in the left most box.\n-   Click \"Edit\" to change the value of the left most bit.\n-   Once you've decided on the value, try to make the following numbers: 16, 27, 31"
+  "https://studio.code.org/s/csd5-2017/lessons/5/levels/2": {
+    "long_instructions": "# 5-Bit Number\n\nWhen you only had four bits, the highest number that you could make was fifteen.  Now you'll have a chance to work with more bits to make higher numbers.\n\nIn this activity, the dots are replaced with numbers, but you still add up everything that's showing to see what number the binary code stands for.  The left-most bit doesn't have a number yet, so you'll have to give it one.\n\n# Do This\n\n-   Click on the bits to turn them on and off, and see the different numbers you can make.\n-   With your partner, discuss the pattern in the numbers.  Decide what number you think should go in the left most box.\n-   Click \"Edit\" to change the value of the left most bit.\n-   Once you've decided on the value, try to make the following numbers: 16, 27, 31",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
-  "https://studio.code.org/s/csd5-2017/stage/5/puzzle/3": {
-    "long_instructions": "# 6-Bit Number\n\nThis widget helps you to calculate 6-bit binary numbers.\n\n# Do This\n\n-   With your partner, answer the following questions:\n    1.  What's the biggest number you can make with this widget?\n    2.  The record for most skips by a dog and person in one minute is 59.  How would you encode 59 in binary?"
+  "https://studio.code.org/s/csd5-2017/lessons/5/levels/3": {
+    "long_instructions": "# 6-Bit Number\n\nThis widget helps you to calculate 6-bit binary numbers.\n\n# Do This\n\n-   With your partner, answer the following questions:\n    1.  What's the biggest number you can make with this widget?\n    2.  The record for most skips by a dog and person in one minute is 59.  How would you encode 59 in binary?",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
-  "https://studio.code.org/s/csd5-2017/stage/5/puzzle/4": {
-    "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to find the two world records encoded in the binary string below.\n\n[][0]\n\n1.  Most number of people lifted and thrown in two minutes. (4 bits)\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\n\n# Do This\n\n-   Decode the two numbers from the binary string."
+  "https://studio.code.org/s/csd5-2017/lessons/5/levels/4": {
+    "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to find the two world records encoded in the binary string below.\n\n[][0]\n\n1.  Most number of people lifted and thrown in two minutes. (4 bits)\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\n\n# Do This\n\n-   Decode the two numbers from the binary string.",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
-  "https://studio.code.org/s/csd5-2017/stage/5/puzzle/5": {
-    "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers up to to eight bits. You can use it to find the values of the two world records below.\n\nDon't forget to make sure that the \"1\" bit is always the right most bit.  If you have extra bits on the left side of the widget, just keep them turned off.\n\n[][0]\n\n1.  Longest tail on a dog (in inches) (5 bits)\n2.  Most spoons balanced on someone's face (5 bits)\n\n# Do This\n\n-   Decode the two numbers from a the binary string."
+  "https://studio.code.org/s/csd5-2017/lessons/5/levels/5": {
+    "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers up to to eight bits. You can use it to find the values of the two world records below.\n\nDon't forget to make sure that the \"1\" bit is always the right most bit.  If you have extra bits on the left side of the widget, just keep them turned off.\n\n[][0]\n\n1.  Longest tail on a dog (in inches) (5 bits)\n2.  Most spoons balanced on someone's face (5 bits)\n\n# Do This\n\n-   Decode the two numbers from a the binary string.",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
-  "https://studio.code.org/s/csd5-2017/stage/5/puzzle/6": {
-    "long_instructions": "# Decoding multiple numbers\n\nHere's a new bit string.  This time, you don't know the bit length of the two numbers.  Try to decode the numbers without knowing the bit length.\n\n[][0]\n\n1.  Largest wind chime, in feet (? bits)\n2.  Furthest arrow shot with someone's feet (in feet) (? bits)\n\n# Do This\n\n-   Try to decode the two numbers from the binary string.\n-   Discuss with your partner why you cannot know for sure whether your answer is correct."
+  "https://studio.code.org/s/csd5-2017/lessons/5/levels/6": {
+    "long_instructions": "# Decoding multiple numbers\n\nHere's a new bit string.  This time, you don't know the bit length of the two numbers.  Try to decode the numbers without knowing the bit length.\n\n[][0]\n\n1.  Largest wind chime, in feet (? bits)\n2.  Furthest arrow shot with someone's feet (in feet) (? bits)\n\n# Do This\n\n-   Try to decode the two numbers from the binary string.\n-   Discuss with your partner why you cannot know for sure whether your answer is correct.",
+    "teacher_markdown": "Without knowing the length of each of the numbers, students will not be certain of their answers, but they should be able to at least find one possible solution.  Allow students to discuss any differences in their answers.  They should eventually see that they need to know the bit length of each number to answer the question."
   },
-  "https://studio.code.org/s/csd5-2017/stage/5/puzzle/7": {
-    "long_instructions": "# Bit Length\n\nIf you don't know how many bits long each number is, you won't be able to decode a string of numbers.\n\nFor example, the following binary string could be decoded many different ways.\n\n[][0]\n\nIf you split the string like this, the string reads 10, 84.\n\n[][1] [][2]\n\nIf you split it like this, the string reads 42, 20.\n\n[][3] [][4]\n\nTo solve this problem, people agree on a fixed length for every number.  The following string uses the same two numbers, but each number takes up exactly eight bits, no matter how many bits it actually needs.\n\n[][5]\n\n# Do This\n\n-   Use the binary widget to decode the string that uses eight bit numbers.\n-   Check you answer with a partner to see whether you got the same answer."
+  "https://studio.code.org/s/csd5-2017/lessons/5/levels/7": {
+    "long_instructions": "# Bit Length\n\nIf you don't know how many bits long each number is, you won't be able to decode a string of numbers.\n\nFor example, the following binary string could be decoded many different ways.\n\n[][0]\n\nIf you split the string like this, the string reads 10, 84.\n\n[][1] [][2]\n\nIf you split it like this, the string reads 42, 20.\n\n[][3] [][4]\n\nTo solve this problem, people agree on a fixed length for every number.  The following string uses the same two numbers, but each number takes up exactly eight bits, no matter how many bits it actually needs.\n\n[][5]\n\n# Do This\n\n-   Use the binary widget to decode the string that uses eight bit numbers.\n-   Check you answer with a partner to see whether you got the same answer.",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
-  "https://studio.code.org/s/csd5-2017/stage/5/puzzle/8": {
+  "https://studio.code.org/s/csd5-2017/lessons/5/levels/8": {
     "display_name": "Binary and Data"
   },
-  "https://studio.code.org/s/csd5-2017/stage/6/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/6/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis lesson addresses how people can keep data secret, even when other people can see it.  The class will look at an encoding method for emojis, then learn a way to encrypt their emoji messages using a keyword.\n\n\n## Resources\n\n* [Keeping Data Secret - Activity Guide](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)\n"
+      "markdown": "# Overview\n\nThis lesson addresses how people can keep data secret, even when other people can see it.  The class will look at an encoding method for emojis, then learn a way to encrypt their emoji messages using a keyword.\n\n\n## Resources\n\n* [Keeping Data Secret - Activity Guide](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)\n",
+      "teacher_markdown": "* Keeping Data Secret - Exemplar ([PDF](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/6/puzzle/2": {
+  "https://studio.code.org/s/csd5-2017/lessons/6/levels/2": {
     "dsls": {
-      "title": "Decoding Binary Strings",
       "content1": "description here",
       "markdown": "# Decoding Binary Strings\n\n![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)\n\n* Can you decode this binary string?\n* What do you need to know before you can decode it?\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/6/puzzle/3": {
+  "https://studio.code.org/s/csd5-2017/lessons/6/levels/3": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
-      "markdown": "# Decoding Binary Strings\n\n![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)\n\n## Encoding system:\n\n![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)\n\n![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)\n"
+      "markdown": "# Decoding Binary Strings\n\n![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)\n\n## Encoding system:\n\n![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)\n\n![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)\n",
+      "teacher_markdown": "The message itself is a doughnut, thumbs down, and angry face.  Students may have fun coming up with their own interpretations of the emojis.  One possible interpretation is that the sender expected a doughnut, didn't get one and became angry, but there is no \"right\" answer to what the emojis mean.\n    \n(Hide this message by going to your teacher panel on the right and choosing to view as a student.)\n\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/7/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/7/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThis lesson combines all three types of binary representation systems (ASCII characters, binary number, and images) to allow for the encode of more complex types information in a record.  After seeing a series of bits and being asked to decode them, the class is introduced to the idea that  understanding binary information requires understanding both the system that is being used and the meaning of the information encoded.\n\n\n## Resources\n\n* [Pet Records - Activity Guide](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)\n* [ASCII to Binary Table - Reference](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)\n"
+      "markdown": "# Overview\n\nThis lesson combines all three types of binary representation systems (ASCII characters, binary number, and images) to allow for the encode of more complex types information in a record.  After seeing a series of bits and being asked to decode them, the class is introduced to the idea that  understanding binary information requires understanding both the system that is being used and the meaning of the information encoded.\n\n\n## Resources\n\n* [Pet Records - Activity Guide](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)\n* [ASCII to Binary Table - Reference](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)\n",
+      "teacher_markdown": "* [Pet Records](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/) - Exemplar ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/7/puzzle/2": {
+  "https://studio.code.org/s/csd5-2017/lessons/7/levels/2": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "### Can you decode this binary string?\n\n\n\n# 1000011\n\n\n\n### What information do you need to help you decode it?\n\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/7/puzzle/3": {
+  "https://studio.code.org/s/csd5-2017/lessons/7/levels/3": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
-      "markdown": "# Student record\n\n<div style=\"float: right; height:209px; width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n</div>\n\n## The student record holds information according to the following rules:\n\n * <h4>The first eight bits store the student's grade as a binary number.</h4>\n * <h4>The second eight store the student's age as a binary number.</h4>\n * <h4>The next eight store the student's first initial in ASCII.</h4>\n * <h4>The last eight store the student's last initial in ASCII.</h4>\n\n<br />\n<br />\n"
+      "markdown": "# Student record\n\n<div style=\"float: right; height:209px; width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n</div>\n\n## The student record holds information according to the following rules:\n\n * <h4>The first eight bits store the student's grade as a binary number.</h4>\n * <h4>The second eight store the student's age as a binary number.</h4>\n * <h4>The next eight store the student's first initial in ASCII.</h4>\n * <h4>The last eight store the student's last initial in ASCII.</h4>\n\n<br />\n<br />\n",
+      "teacher_markdown": "[key]\n\n**Byte 0:** The student is in Grade 9.\n\n**Byte 1:** The student is 15 years old.\n\n**Byte 2** The student's first initial is \"J\".\n\n**Byte 3** The second initial is \"H\".\n\n[/key]\n\nTo hide this box when you display the level, click the teacher panel on the right hand side of this page and choose the \"View as Student\" option.\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/8/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/8/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nDesign a structure to represent your perfect day using the binary representation systems they've learned in this chapter. You'll need to use ASCII, binary numbers, and images as you design a punch card format.\n\n## Resources\n\n* [Create a Representation - Project Guide](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)\n"
+      "markdown": "# Overview\n\nDesign a structure to represent your perfect day using the binary representation systems they've learned in this chapter. You'll need to use ASCII, binary numbers, and images as you design a punch card format.\n\n## Resources\n\n* [Create a Representation - Project Guide](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)\n",
+      "teacher_markdown": "* Create a Representation - Project Guide ([Google Doc](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit) | [PDF](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))\n\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/9/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/8/levels/2": {
     "dsls": {
-      "markdown": "# Overview\n\nYou'll use the problem solving process to help solve a data problem.\n\n## Resources\n\n* [Problem Solving with Data](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Activity Guide\n"
+      "title": "CS Discoveries Rapid Survey!"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/10/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/9/levels/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nYou'll use the problem solving process to help solve a data problem.\n\n## Resources\n\n* [Problem Solving with Data](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Activity Guide\n",
+      "teacher_markdown": "* Problem Solving with Data - Exemplar ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))\n"
+    }
+  },
+  "https://studio.code.org/s/csd5-2017/lessons/10/levels/1": {
     "dsls": {
       "markdown": "# Overview\n\nThis lesson covers how data is collected and used by a organizations to solve problems in the real world. The class looks at three scenarios that could be solved using data and brainstorms the types of data they would want to solve them and how they could collect the data.  Each scenario also includes a video about a real-world service that has solved a similar problem with data.\n\n\n## Resources\n\n* [Data in the Real World](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - Activity Guide\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/10/puzzle/2": {
-    "long_instructions": "Watch this video to learn how this problem is solved by Netflix. As you watch think about what data is being collected and where it's coming from."
+  "https://studio.code.org/s/csd5-2017/lessons/10/levels/2": {
+    "long_instructions": "Watch this video to learn how this problem is solved by Netflix. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Web Pix\" questions on their activity guide before showing this video.  After the video, they should answer the third question.\n\n_You can hide the \"For Teachers Only\" box in Code Studio by clicking the Teacher Panel on the right side of the page and choosing the \"View as Student\" option._"
   },
-  "https://studio.code.org/s/csd5-2017/stage/10/puzzle/3": {
+  "https://studio.code.org/s/csd5-2017/lessons/10/levels/3": {
     "display_name": "Collecting Information About Users",
-    "long_instructions": "Watch this video to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from."
+    "long_instructions": "Watch this video to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Routz\" questions on their activity guide before showing this video. After the video, they should answer the third question."
   },
-  "https://studio.code.org/s/csd5-2017/stage/10/puzzle/4": {
+  "https://studio.code.org/s/csd5-2017/lessons/10/levels/4": {
     "display_name": "Collecting Information About Users",
-    "long_instructions": "Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from."
+    "long_instructions": "Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Nyle\" questions on their activity guide before showing this video. After the video, they should answer the third question."
   },
-  "https://studio.code.org/s/csd5-2017/stage/11/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/11/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nGo further into the structuring of data by cleaning and visualizing raw data sets. Look at how visualizations change the way you understand data and make decisions about it.\n\n## Resources\n\n* [Structuring Data](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Activity Guide\n"
+      "markdown": "# Overview\n\nGo further into the structuring of data by cleaning and visualizing raw data sets. Look at how visualizations change the way you understand data and make decisions about it.\n\n## Resources\n\n* [Structuring Data](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Activity Guide\n",
+      "teacher_markdown": "* Structuring Data - Exemplar ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/11/puzzle/2": {
+  "https://studio.code.org/s/csd5-2017/lessons/11/levels/2": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "## Best Class Pet\n### Here are three different ways to show the results of a vote for best class pet.\n\n![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)\n\n\n### Which one makes it easiest for a human to make a decision about which pet is the most popular?\n### Which one makes it easiest for a computer to make a decision?\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/11/puzzle/3": {
+  "https://studio.code.org/s/csd5-2017/lessons/11/levels/3": {
     "long_instructions": "# Pizza Party\n\nThe pizza party data has been put into an app for you, and the answers from another class have been added.  Because this is an app, we can automate the creation of the bar chart from the given data.\n\n# Do This\n\n-   Click \"Run\" to see the list of answers that the classes have given.\n-   Discuss with a partner what you think the chart of this data will look like.\n-   Click \"Show Chart\" to see for yourself.\n\n# Spreadsheet Version\n\nThe pizza party data has also been put into a spreadsheet for you, if you would like to use it instead.  To use the spreadsheet, you'll need to make your own copy of it.\n\n-   This link will make you your own copy of the \"Pizza Topping Choices\" data: [Pizza Topping Choices][0]\n-   You can also download a CSV version of the file [here][1]."
   },
-  "https://studio.code.org/s/csd5-2017/stage/11/puzzle/4": {
+  "https://studio.code.org/s/csd5-2017/lessons/11/levels/4": {
     "long_instructions": "# Pizza Party\n\nWhen people work with data, they know to leave off answers that don't make sense, and that some answers, such as \"peppers\", \"pepppers\" and \"green peppers\", actually meant the same thing. Computers don't know how to do this, so we have to clean the data before the computer is able to use it.\n\nThis version of the app has a second column for data to be cleaned.\n\n## Do this\n\n-   Click \"Run\" to see the new list of answers to be cleaned.\n-   Click on each answer that needs to be cleaned and correct it so that the computer will chart it properly. (You may want to delete some answers entirely.)\n-   When you are finished, click \"Show Chart\" to see the new chart of cleaned answers."
   },
-  "https://studio.code.org/s/csd5-2017/stage/12/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/12/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this lesson you'll get some practice making decisions with data with some problems that might feel familiar.\n\n## Resources\n\n* [Making Decisions with Data](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Activity Guide\n"
+      "markdown": "# Overview\n\nIn this lesson you'll get some practice making decisions with data with some problems that might feel familiar.\n\n## Resources\n\n* [Making Decisions with Data](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Activity Guide\n",
+      "teacher_markdown": "* [Making Decisions with Data](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/13/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/13/levels/1": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
-      "markdown": "# Overview\n\nGo further into the interpreting of data by finding looking at the relationships between two different types of data. Look at how finding relationships can help you solve problems.\n\n## Resources\n\n* [Interpreting Data](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Activity Guide\n* [Interpreting Data](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Resource\n"
+      "markdown": "# Overview\n\nGo further into the interpreting of data by finding looking at the relationships between two different types of data. Look at how finding relationships can help you solve problems.\n\n## Resources\n\n* [Interpreting Data](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Activity Guide\n* [Interpreting Data](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Resource\n",
+      "teacher_markdown": "* Interpreting Data - Exemplar ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/13/puzzle/2": {
+  "https://studio.code.org/s/csd5-2017/lessons/13/levels/2": {
     "dsls": {
-      "title": "Pizza Survey",
       "content1": "description here",
       "markdown": "# Cake Survey\n\nFor this survey, people got to choose a cake flavor and an icing flavor.\n\n<table style=\"text-align: center; border: solid 1px darkgray;\">\n<tr><td style=\"width: 50px; background-color: gray; color:white\"></td><td style=\"width: 200px; background-color: gray; color:white\">Cake Flavor</td><td style=\"width: 200px; background-color: gray; color:white\">Icing Flavor</td></tr>\n<tr><td>1</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>\n<tr><td>2</td><td>Red Velvet Cake</td><td>Cream Cheese Icing</td></tr>\n<tr><td>3</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>\n<tr><td>4</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>\n<tr><td>5</td><td>Carrot Cake</td><td>Vanilla Icing</td></tr>\n<tr><td>6</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>\n<tr><td>7</td><td>Chocolate Cake</td><td>Cream Cheese Icing</td></tr>\n<tr><td>8</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>\n</table>\n<br><br>\n\nIf these people had to agree on one cake and icing combination for a party, what should it be?\n\nWhat if they were able to order two cakes with icing?\n\nHow does knowing both choices help us better understand what sort of cakes we should order?\n\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/14/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/14/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nYou'll see an example of how a computer could be used to complete essentially every step of the data problem solving process. You'll create rules, or an algorithm, that a computer could use to make a decision automatically.\n\n## Resources\n\n* [Automating Data Decisions](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Resource (copy as [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))\n* [Automating Data Decisions](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))\n"
+      "markdown": "# Overview\n\nYou'll see an example of how a computer could be used to complete essentially every step of the data problem solving process. You'll create rules, or an algorithm, that a computer could use to make a decision automatically.\n\n## Resources\n\n* [Automating Data Decisions](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Resource (copy as [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))\n* [Automating Data Decisions](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))\n",
+      "teacher_markdown": "* Automating Data Decisions - Exemplar ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))\n"
     }
   },
-  "https://studio.code.org/s/csd5-2017/stage/15/puzzle/1": {
+  "https://studio.code.org/s/csd5-2017/lessons/15/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nTo conclude this unit you will design a way to use data to make a recommendation or prediction to help solve a problem of your choosing.\n\n## Resources\n\n* [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide\n* [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review\n"
+      "markdown": "# Overview\n\nTo conclude this unit you will design a way to use data to make a recommendation or prediction to help solve a problem of your choosing.\n\n## Resources\n\n* [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide\n* [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review\n",
+      "teacher_markdown": "* Make a Recommendation - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))\n* Make a Recommendation - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))\n"
+    }
+  },
+  "https://studio.code.org/s/csd5-2017/lessons/15/levels/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd5-2017/lockable/1/levels/1": {
+    "dsls": {
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* make improvements to the course\n* understand your experience\n* tell us what topics you want to learn more about in the future\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey!!!</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n",
+      "teacher_markdown": "**Please have your students complete this survey!!!**\n\n* You can see anonymized results of the survey in your teacher dashboard\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well, where you can provide your own input, which you will be notified about via email.\n\n**Note:**\n\n* The button on this page redirects to [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)\n* If you prefer you can set \"Student Post-Course Survey\" as the current unit for your section from the dropdown menu in the teacher dashboard.\n"
     }
   }
 }

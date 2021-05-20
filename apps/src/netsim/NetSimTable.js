@@ -414,13 +414,11 @@ NetSimTable.prototype.deleteMany = function(ids, callback) {
 };
 
 /**
- * Delete a row using a synchronous call. For use when navigating away from
- * the page; most of the time an asynchronous call is preferred.
+ * Delete a row while user is navigating away from the page.
  * @param {!number} id
  */
-NetSimTable.prototype.synchronousDelete = function(id) {
-  var async = false; // Force synchronous request
-  this.api_.deleteRows(
+NetSimTable.prototype.deleteOnUnload = function(id) {
+  this.api_.deleteRowsOnUnload(
     [id],
     function(err) {
       if (err) {
@@ -430,8 +428,7 @@ NetSimTable.prototype.synchronousDelete = function(id) {
         throw err;
       }
       this.removeRowsFromCache_([id]);
-    }.bind(this),
-    async
+    }.bind(this)
   );
 };
 

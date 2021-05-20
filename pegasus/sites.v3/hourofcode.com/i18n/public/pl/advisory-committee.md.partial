@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Komitet Doradczy Godziny Kodowania i Tygodnia Edukacji Informatycznej
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Komitet Doradczy Godziny Kodowania i Tygodnia Edukacji Informatycznej
 
 {{ advisory-committee/about_headshots }}
 

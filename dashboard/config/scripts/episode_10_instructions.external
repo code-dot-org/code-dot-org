@@ -1,0 +1,22 @@
+name 'Episode 10 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### AI for Oceans
+
+**Do This:** In this week's episode, we trained A.I. to recognize sea creatures in the ocean. Now it's your turn! 
+
+![](https://images.code.org/7772be9b8ca254090c21119c80958464-image-1590071239877.png)
+
+## CS For Good
+
+**Do This:** Check out [these resources and activities](https://code.org/csforgood).
+
+![](https://images.code.org/2e1cdfdfd5c82fe31df39672610214dc-image-1590071483454.png)
+MARKDOWN

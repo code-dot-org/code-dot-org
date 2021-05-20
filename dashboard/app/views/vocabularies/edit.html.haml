@@ -1,0 +1,5 @@
+%link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
+%script{src: webpack_asset_path('js/vocabularies/edit.js'),
+  data: {vocabularies: @vocabularies.to_json, courseVersionData: {id: @course_version.id, lessons: @course_version.contained_lessons.map {|l| {id: l.id, name: l.name} }}.to_json, courseName: params[:course_name].to_json}}
+
+#vocabularies-table

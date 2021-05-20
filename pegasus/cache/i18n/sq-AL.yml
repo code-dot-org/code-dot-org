@@ -21,15 +21,21 @@ sq-AL:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">A je ti një mësues për shkencat kompjuterike? Shiko burimet
     e javes për shkencat kompjuterike</a>'
+  csedweek_banner_teachers_text: A je ti një mësues për shkencat kompjuterike? Shiko
+    burimet e javes për shkencat kompjuterike
   n_have_learned_an_hoc: "<h1>Provo</h1><h2>Orën e Kodimit</h2><h3># të shërbyer</h3>"
+  try_hoc_num_served_markdown: |-
+    # Provo\
+    \
+    ## Ora e Kodimit\
+    \
+    ### %{num} të shërbyer #Try an
   anybody_can_learn: Të gjithë mund të mësojnë.
   learn_now: Meso tani
   petition_message: Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
     rreth shkencave kompjuterike
   petition_sign_message: 'Nëse jeni dakort, nënshkruani emrin tuaj. Bashkohuni me
     # të tjerët.'
-  petition_sign_message_support: 'Në qoftë se ju na mbështesni, nënshkruaj emrin tënd.
-    Bashkohu # të tjerë.'
   petition_join_others: 'Bashkohu # të tjerë'
   name: Emri
   email: Email
@@ -213,10 +219,14 @@ sq-AL:
   get_a_certificate_message_after: Kliko te certivikata për ta shkarkuar ose për ta
     printuar. Tani vazhdo me <a href='http://studio.code.org'> kurset e tjera</a>,
     ose shiko mundësi të tjera tek <a href='/learn/beyond'> Mëso Përtej Një Ore</a>.
+  get_a_certificate_message_after_markdown: Kliko te certivikata për ta shkarkuar
+    ose për ta printuar. Tani vazhdo me [kurset e tjera](http://studio.code.org),
+    ose shiko mundësi të tjera tek [Mësoni përtej një ore](/learn/beyond].
   thanks_for_submitting: Faleminderit për dorëzimin!
   if_you_enjoyed: Ne qofte se u perlqeu te mesuarit, pyesni miqte ta provojne gjithashtu!
     Ne duam qe e gjithe bota te mesoje.
   personalize_certificate: Personalizoni certifikatën tuaj
+  print_certificates: Shtyp Certifikatat
   share_achievement: Shpërndaj arritjet tuaja
   beyond_hour_message: Vazhdo me <a href='http://studio.code.org'>kurse të tjera</a>,
     ose shiko më shumë mundësi tek <a href='/learn/beyond'>Mëso Përtej Një Ore</a>.
@@ -376,6 +386,7 @@ sq-AL:
   homepage_action_text_learn: Fillo të mësosh
   homepage_action_text_signpetition: Nënshkruaj peticionin
   homepage_signpetition_dropdown: Jam dakort &#x25BE;
+  homepage_signpetition_dropdown_text: Pranoj
   homepage_diversity_pledge: Zgjidh zotimin e diversitetit
   homepage_banner_text_prizes: 'Ora e Kodimit po vjen përsëri më 7-13 dhjetor. '
   homepage_banner_link_prizes: 'Bashkoju ngjarjes më të madhe të mësimit në histori. '
@@ -985,6 +996,8 @@ sq-AL:
   coursee-2018_gradelevel: Moshat 8-12
   coursed-2019_gradelevel: Klasat 8+
   coursee-2019_gradelevel: Moshat 8-12
+  coursed-2020_gradelevel: Klasat 8+
+  coursee-2020_gradelevel: Moshat 8-12
   accelerated_gradelevel: Moshat 10-18
   codeorg_platformtext: Browserat e kohës, smartphones, tableta
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
@@ -1558,6 +1571,8 @@ sq-AL:
   header_courses: Kurset
   header_project_gallery: Projekte
   header_educate_hoc: Ora e Kodimit
+  header_legal_privacy: Rregullat e Privatësisë
+  header_legal_tos: Kushtet e shërbimit
   user_header_label: Përshëndetje %{username}
   user_header_team: Skuadra
   user_header_settings: Llogaria ime
@@ -1598,3 +1613,8 @@ sq-AL:
   hoc2018_dance_teacher_resources_tile1_button: Plani Mësimor
   hoc2018_dance_teacher_resources_tile2_button: Aktiviteti Unplugged
   hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë
+  footer_powered_by_aws: Mundësuar nga Amazon Web Services
+  footer_privacy_policy: Rregullat e Privatësisë
+  footer_donate: Dhuro
+  footer_support: Ndihma dhe Komuniteti
+  footer_terms: Termat

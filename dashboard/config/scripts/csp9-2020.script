@@ -1,0 +1,65 @@
+hidden false
+login_required true
+hideable_lessons true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit9/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit9/standards/"]]
+has_verified_resources true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit9/{LESSON}'
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"", "details"=>"Are your students planning to take the AP Exam? This unit covers content that will be assessed on the exam. Check out the standards covered in this unit.", "link"=>"https://curriculum.code.org/csp-20/unit9/standards/", "type"=>"information", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Student-only"}]
+is_stable true
+project_sharing true
+curriculum_umbrella 'CSP'
+
+lesson_group 'csp_unit9_2020', display_name: 'Unit 9: Data'
+lesson 'Learning From Data', display_name: 'Learning From Data', has_lesson_plan: true
+level 'CSP U9L1 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9L1 Metadata', progression: 'Exploring Metadata'
+level 'U9L1 google trends CFU', progression: 'Check For Understanding', assessment: true
+
+lesson 'Exploring One Column', display_name: 'Exploring One Column', has_lesson_plan: true
+level 'CSP U9L2 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9L2 Making Bar Charts and Histograms', progression: 'Making Bar Charts and Histograms'
+level 'U9L2 CFU Histogram vs Bar Chart', progression: 'Check For Understanding', assessment: true
+
+lesson 'Filtering and Cleaning Data', display_name: 'Filtering and Cleaning Data', has_lesson_plan: true
+level 'CSP U9L3 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9L3 Data Cleaning', progression: 'Cleaning Data'
+level 'CSP U9L3 Data Filtering', progression: 'Filtering Data'
+level 'U9L3 CFU manually cleaning data', progression: 'Check For Understanding', assessment: true
+
+lesson 'Exploring Two Columns', display_name: 'Exploring Two Columns', has_lesson_plan: true
+level 'CSP U9L4 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9L4 Making Crosstabs and Scatter Plots', progression: 'Crosstab and Scatter Charts'
+level 'Which Type of Chart', progression: 'What Type of Chart?'
+level 'U9L4 CFU Two Column vs One', progression: 'Check For Understanding', assessment: true
+
+lesson 'Big Data, Crowdsourcing, and Machine Learning', display_name: 'Big Data, Crowdsourcing, and Machine Learning', has_lesson_plan: true
+level 'CSP U9L6 SFLP 20-21', progression: 'Lesson Overview'
+
+lesson 'Machine Learning and Bias', display_name: 'Machine Learning and Bias', has_lesson_plan: true
+level 'CSP U9L7 SFLP 20-21', progression: 'Lesson Overview'
+level 'Oceans_Video_Machine_Learning', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_FishVTrash', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_CreaturesVTrashDemo', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_CreaturesVTrash', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_Video_Training_Data', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_Short', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_Long', progression: 'AI for Oceans - Machine Learning'
+level 'U9L6 CFU ML Bias', progression: 'Check for Understanding', assessment: true
+
+lesson 'Project - Tell a Data Story - Part 1', display_name: 'Project - Tell a Data Story - Part 1', has_lesson_plan: true
+level 'CSP U9L8 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9 Data Story Day 1', progression: 'Data Story Workspace'
+
+lesson 'Project - Tell a Data Story - Part 2', display_name: 'Project - Tell a Data Story - Part 2', has_lesson_plan: true
+level 'CSP U9L9 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9 Data Story Day 2', progression: 'Data Story Workspace', assessment: true
+
+lesson 'Lesson 9: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
+level 'CSP U9L10 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP Unit 9 AP-Style Assessment _2020', progression: 'Unit 9 Exam', assessment: true
+
+lesson_group 'cspSurvey2020', display_name: 'Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-2020-markdown-with-link-to-survey', progression: 'Post-Course Survey Instructions', assessment: true
+

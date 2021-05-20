@@ -1,0 +1,1546 @@
+{
+  "script": {
+    "name": "usability",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:38 UTC",
+    "seeding_key": {
+      "script.name": "usability"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Intro",
+      "name": "Intro",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "key": "Variables",
+      "name": "Variables",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "key": "For Loops",
+      "name": "For Loops",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "key": "Functions and Functions with Parameters",
+      "name": "Functions and Functions with Parameters",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "key": "Binary",
+      "name": "Binary",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Maze 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Maze 6"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Maze 6"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Bee 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Bee 1"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Bee 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Bee 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Bee 2"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Bee 2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Bee 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Bee 3"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Bee 3"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Bee 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Bee 4"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Bee 4"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist 7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist 7"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist 7"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist 8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist 8"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist 8"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist 9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist 9"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist 9"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Vars 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Play Lab Vars 1"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Play Lab Vars 1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Vars 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Play Lab Vars 2"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Play Lab Vars 2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 2"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Vars 2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 3"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Vars 3"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 4"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Vars 4"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 5"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Vars 5"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 6"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Vars 6"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Bee For Loops 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Bee For Loops 4"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Bee For Loops 4"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Bee For Loops 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Bee For Loops 5"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Bee For Loops 5"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Bee For Loops 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Bee For Loops 6"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Bee For Loops 6"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Play Labs For Loops 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Play Labs For Loops 1"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Play Labs For Loops 1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Play Labs For Loops 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Play Labs For Loops 2"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Play Labs For Loops 2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Play Labs For Loops 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Play Labs For Loops 3"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Play Labs For Loops 3"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Functions 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Functions 2"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Functions 2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Functions 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Functions 4"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Functions 4"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Functions 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Functions 5"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Functions 5"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Params 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Params 1"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Params 1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Params 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Params 2"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Params 2"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Params 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Params 3"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Params 3"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Params 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Params 4"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Params 4"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Params 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Play Lab Params 1"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Play Lab Params 1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Params 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Play Lab Params 2"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Play Lab Params 2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Params 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Play Lab Params 3"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Play Lab Params 3"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 1"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary 1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 2"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary 2"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 3"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary 3"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 4"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary 4"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 5"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary 5"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 6"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary 6"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 7"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary 7"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary Free Play"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary Free Play"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary Free Play"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary Free Play 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course 4 Artist Binary Free Play 2"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      },
+      "level_keys": [
+        "Course 4 Artist Binary Free Play 2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Maze 6",
+        "script_level.level_keys": [
+          "Course 4 Maze 6"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Bee 1",
+        "script_level.level_keys": [
+          "Course 4 Bee 1"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Bee 2",
+        "script_level.level_keys": [
+          "Course 4 Bee 2"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Bee 3",
+        "script_level.level_keys": [
+          "Course 4 Bee 3"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Bee 4",
+        "script_level.level_keys": [
+          "Course 4 Bee 4"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist 7",
+        "script_level.level_keys": [
+          "Course 4 Artist 7"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist 8",
+        "script_level.level_keys": [
+          "Course 4 Artist 8"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist 9",
+        "script_level.level_keys": [
+          "Course 4 Artist 9"
+        ],
+        "lesson.key": "Intro",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Play Lab Vars 1",
+        "script_level.level_keys": [
+          "Course 4 Play Lab Vars 1"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Play Lab Vars 2",
+        "script_level.level_keys": [
+          "Course 4 Play Lab Vars 2"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Vars 2",
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 2"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Vars 3",
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 3"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Vars 4",
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 4"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Vars 5",
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 5"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Vars 6",
+        "script_level.level_keys": [
+          "Course 4 Artist Vars 6"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Bee For Loops 4",
+        "script_level.level_keys": [
+          "Course 4 Bee For Loops 4"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Bee For Loops 5",
+        "script_level.level_keys": [
+          "Course 4 Bee For Loops 5"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Bee For Loops 6",
+        "script_level.level_keys": [
+          "Course 4 Bee For Loops 6"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Play Labs For Loops 1",
+        "script_level.level_keys": [
+          "Course 4 Play Labs For Loops 1"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Play Labs For Loops 2",
+        "script_level.level_keys": [
+          "Course 4 Play Labs For Loops 2"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Play Labs For Loops 3",
+        "script_level.level_keys": [
+          "Course 4 Play Labs For Loops 3"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Functions 2",
+        "script_level.level_keys": [
+          "Course 4 Artist Functions 2"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Functions 4",
+        "script_level.level_keys": [
+          "Course 4 Artist Functions 4"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Functions 5",
+        "script_level.level_keys": [
+          "Course 4 Artist Functions 5"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Params 1",
+        "script_level.level_keys": [
+          "Course 4 Artist Params 1"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Params 2",
+        "script_level.level_keys": [
+          "Course 4 Artist Params 2"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Params 3",
+        "script_level.level_keys": [
+          "Course 4 Artist Params 3"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Params 4",
+        "script_level.level_keys": [
+          "Course 4 Artist Params 4"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Play Lab Params 1",
+        "script_level.level_keys": [
+          "Course 4 Play Lab Params 1"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Play Lab Params 2",
+        "script_level.level_keys": [
+          "Course 4 Play Lab Params 2"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Play Lab Params 3",
+        "script_level.level_keys": [
+          "Course 4 Play Lab Params 3"
+        ],
+        "lesson.key": "Functions and Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary 1",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 1"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary 2",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 2"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary 3",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 3"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary 4",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 4"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary 5",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 5"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary 6",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 6"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary 7",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary 7"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary Free Play",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary Free Play"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course 4 Artist Binary Free Play 2",
+        "script_level.level_keys": [
+          "Course 4 Artist Binary Free Play 2"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "usability"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,0 +1,18 @@
+name 'VPL - CSD - Module 2 Wrap Up'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Module 2 Asynchronous Wrap Up
+
+## Engage with the Code.org Community
+
+Don't forget to check out the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org forum</a> for more ideas on implementing Unit 3 with your students. The forum is also a great place to go when you are looking for additional resources, ideas, and templates to use when implementing Code.org lessons with your students. Teachers within the community have created and shared some great ideas. Don't forget to share your ideas and resources too!
+
+## Next Steps
+
+1. Return to your cohort's shared slide deck for Module 2. 
+2. Follow the directions in the shared slide deck to finish final reflections or tasks for this module.
+3. Join us for the Module 2 Synchronous Workshop. 
+MARKDOWN

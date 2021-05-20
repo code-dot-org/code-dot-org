@@ -1,0 +1,28 @@
+{
+  "pages": {
+    "/home": "teacher-apps-closing-2020",
+    "/courses": "teacher-apps-open-2021",
+    "/another-page": "not-a-banner"
+  },
+  "banners": {
+    "teacher-apps-open-2021": {
+      "image": "https://code.org/images/professional-learning-2019-3.png",
+      "title": "Sign up for Professional Learning",
+      "body": "Join our hands-on workshops!",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-open-2021-sign-up"
+    },
+    "teacher-apps-closing-2020": {
+      "image": "https://code.org/images/professional-learning-2019-closing-soon.png",
+      "title": "Don’t miss out. Apply today!",
+      "body": "Join us in this movement and submit your application today.",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-closing-2020-sign-up",
+      "buttonText2": "Join us 2!",
+      "buttonUrl2": "https://code.org/educate/professional-learning",
+      "buttonId2": "teacher-apps-closing-2020-sign-up-2"
+    }
+  }
+}

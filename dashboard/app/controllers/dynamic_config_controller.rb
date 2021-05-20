@@ -10,7 +10,7 @@ class DynamicConfigController < ApplicationController
     gk_yaml = Gatekeeper.to_yaml
     dcdo_yaml = DCDO.to_yaml
     output = "# Gatekeeper Config\n #{gk_yaml}\n\n# DCDO Config\n#{dcdo_yaml}"
-    render text: output, content_type: 'text/yaml'
+    render plain: output, content_type: 'text/yaml'
   end
 
   def gatekeeper_show

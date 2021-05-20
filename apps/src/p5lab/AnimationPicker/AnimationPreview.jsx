@@ -18,7 +18,8 @@ export default class AnimationPreview extends React.Component {
     playBehavior: PropTypes.oneOf([
       PlayBehavior.ALWAYS_PLAY,
       PlayBehavior.NEVER_PLAY
-    ])
+    ]),
+    onPreviewLoad: PropTypes.func
   };
 
   state = {
@@ -27,7 +28,7 @@ export default class AnimationPreview extends React.Component {
     scaledSourceSize: {x: 0, y: 0},
     scaledFrameSize: {x: 0, y: 0},
     extraTopMargin: 0,
-    wrappedSourceUrl: ''
+    extraLeftMargin: 0
   };
 
   componentWillMount() {
@@ -90,16 +91,15 @@ export default class AnimationPreview extends React.Component {
     const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
     const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
-    const sourceUrl = nextProps.sourceUrl ? nextProps.sourceUrl : EMPTY_IMAGE;
     const sourceSize = nextAnimation.sourceSize
       ? nextAnimation.sourceSize
       : {x: 1, y: 1};
     this.setState({
-      framesPerRow: Math.floor(sourceSize.x / nextAnimation.frameSize.x),
+      framesPerRow: Math.floor(sourceSize.x / nextAnimation.frameSize.x) || 1,
       scaledSourceSize: scaleVector2(sourceSize, scale),
       scaledFrameSize: scaledFrameSize,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),
-      wrappedSourceUrl: `url('${sourceUrl}')`
+      extraLeftMargin: Math.ceil((innerWidth - scaledFrameSize.x) / 2)
     });
   }
 
@@ -110,7 +110,7 @@ export default class AnimationPreview extends React.Component {
       scaledSourceSize,
       scaledFrameSize,
       extraTopMargin,
-      wrappedSourceUrl
+      extraLeftMargin
     } = this.state;
 
     const row = Math.floor(currentFrame / framesPerRow);
@@ -123,18 +123,48 @@ export default class AnimationPreview extends React.Component {
       height: this.props.height,
       textAlign: 'center'
     };
-    const imageStyle = {
+    const cropStyle = {
       width: scaledFrameSize.x,
       height: scaledFrameSize.y,
+      overflow: 'hidden',
       marginTop: MARGIN_PX + extraTopMargin,
-      marginLeft: MARGIN_PX,
+      marginLeft: MARGIN_PX + extraLeftMargin,
       marginRight: MARGIN_PX,
-      marginBottom: MARGIN_PX,
-      backgroundImage: wrappedSourceUrl,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: scaledSourceSize.x,
-      backgroundPosition: xOffset + 'px ' + yOffset + 'px'
+      marginBottom: MARGIN_PX
     };
+
+    const imageStyle = {
+      // The maxWidth and maxHeight params need to be 'none' for the animation previews to animate.
+      // Our animation previews involve scaling up the size of the spritesheet such that each frame fills the container.
+      // To do the animation, the spritesheet is moved around (using xOffset and yOffset).
+      // If the image is not allowed to exceed the size of the container, the animation will show the spritesheet with all of the frames rotating
+      // instead of a single appropriate frame at a time.
+      maxWidth: 'none',
+      maxHeight: 'none',
+      width: scaledSourceSize.x,
+      height: scaledSourceSize.y,
+      marginLeft: xOffset,
+      marginTop: yOffset
+    };
+    const backgroundImageStyle = {
+      borderRadius: 10,
+      height: '100%',
+      width: '100%'
+    };
+
+    if (
+      this.props.animationProps &&
+      this.props.animationProps.categories &&
+      this.props.animationProps.categories.includes('backgrounds')
+    ) {
+      return (
+        <img
+          onLoad={this.props.onPreviewLoad}
+          src={this.props.sourceUrl || EMPTY_IMAGE}
+          style={backgroundImageStyle}
+        />
+      );
+    }
 
     return (
       <div
@@ -151,7 +181,13 @@ export default class AnimationPreview extends React.Component {
             : null
         }
       >
-        <img src={EMPTY_IMAGE} style={imageStyle} />
+        <div style={cropStyle}>
+          <img
+            onLoad={this.props.onPreviewLoad}
+            src={this.props.sourceUrl || EMPTY_IMAGE}
+            style={imageStyle}
+          />
+        </div>
       </div>
     );
   }

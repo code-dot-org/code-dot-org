@@ -1,4 +1,6 @@
 :ruby
+  # The locale the user has set in the browser e.g. en-US.
+  locale ||= nil
   show_state = Gatekeeper.allows('logged_in_studio_homepage', default: true)
 
   tall_blocks = [
@@ -6,12 +8,6 @@
     Script::COURSE2_NAME,
     Script::COURSE3_NAME,
     Script::COURSE4_NAME,
-    Script::COURSEA_NAME,
-    Script::COURSEB_NAME,
-    Script::COURSEC_NAME,
-    Script::COURSED_NAME,
-    Script::COURSEE_NAME,
-    Script::COURSEF_NAME,
     Script::MINECRAFT_AQUATIC_NAME,
     Script::MINECRAFT_HERO_NAME,
     Script::STARWARS_NAME,
@@ -22,25 +18,55 @@
     Script::PLAYLAB_NAME,
     Script::ARTIST_NAME,
     Script::APPLAB_INTRO,
-    Script::DANCE_PARTY_NAME
+    Script::DANCE_PARTY_NAME,
+    Script::DANCE_PARTY_2019_NAME,
+    Script::OCEANS_NAME
   ]
 
   wide_blocks = [
     Script::TWENTY_HOUR_NAME,
     "unplugged",
-    Script::EXPRESS_NAME,
-    Script::PRE_READER_EXPRESS_NAME,
+  ]
+
+  # Family name for a set of courses. A block will be generated for the recommended one.
+  family_wide_blocks = [
+    Script::EXPRESS,
+    Script::PREEXPRESS,
+  ]
+
+  # Family name for a set of courses. A block will be generated for the recommended one.
+  family_tall_blocks = [
+    Script::COURSEA,
+    Script::COURSEB,
+    Script::COURSEC,
+    Script::COURSED,
+    Script::COURSEE,
+    Script::COURSEF,
   ]
 
 .all-course-blocks
   - tall_blocks.each do |script_name|
     %div{id: script_name}
-      = render partial: 'shared/course_tall_block', locals: { id: script_name }
+      = render partial: 'shared/course_tall_block', locals: { id: script_name, family_name: nil}
 
   - wide_blocks.each do |script_name|
     %div{id: script_name}
       = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small" }
 
+  -# Creates a block for the recommended course version in the given course family.
+  - family_tall_blocks.each do |family_name|
+    - script = Script.latest_stable_version(family_name, locale: locale)
+    - next unless script
+    %div{id: family_name}
+      = render partial: 'shared/course_tall_block', locals: { id: script.name, family_name: family_name}
+
+  -# Creates a block for the recommended course version in the given course family.
+  - family_wide_blocks.each do |family_name|
+    - script = Script.latest_stable_version(family_name, locale: locale)
+    - next unless script
+    %div{id: family_name}
+      = render partial: 'shared/course_wide_block', locals: { id: script.name, view: "small", family_name: family_name }
+
 .csf-courses-header
   .row
-    .span12.twolineheader!= t('home.heading_elementary')
+    .span12.twolineheader!= t('home.heading_elementary_markdown', markdown: true)

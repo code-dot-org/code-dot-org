@@ -1,0 +1,14 @@
+name 'csp-9-exam1-data-bias_2021'
+editor_experiment ''
+wrong 'Finding the same people surveyed previously to ask more detailed questions.'
+wrong 'Visiting the same neighborhood to collect more survey responses'
+right 'Visiting multiple new neighborhoods to collect more survey responses' 
+wrong 'Having her staff collect the data using an app rather than paper surveys'
+
+
+
+
+markdown <<MARKDOWN
+The mayor of a city is interested in learning what goals are most important for residents of the city. Members of her staff visit one of the many neighborhoods in the city and ask 20 residents to fill out a survey.
+The mayor is concerned that the survey may be biased and not accurately reflect the overall interests in her town. Which of the following strategies is MOST likely to address concerns about the data being biased or inaccurate
+MARKDOWN

@@ -1,0 +1,20 @@
+vocab_1_2018:
+  key: "Algorithm"
+  word: "Algorithm"
+  definition: "A list of steps to finish a task."
+  course_version: course_version_2018
+vocab_2_2018:
+  key: "Debugging"
+  word: "Debugging"
+  definition: "Finding and fixing problems in an algorithm or program."
+  course_version: course_version_2018
+vocab_3_2018:
+  key: "Programming"
+  word: "Programming"
+  definition: "The art of creating a program."
+  course_version: course_version_2018
+vocab_1_2019:
+  key: "Algorithm"
+  word: "Algorithm"
+  definition: "A list of steps to finish a task."
+  course_version: course_version_2019

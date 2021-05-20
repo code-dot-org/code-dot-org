@@ -1,0 +1,518 @@
+{
+  "script": {
+    "name": "ScienceP3OLPT3",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS in Science Legacy"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:46 UTC",
+    "seeding_key": {
+      "script.name": "ScienceP3OLPT3"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome!",
+      "name": "Welcome!",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "key": "Assessing Computer Models",
+      "name": "Assessing Computer Models",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Assessing Computer Models",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "key": "(optional) Refresh your connection to Complex Adaptive Systems",
+      "name": "(optional) Refresh your connection to Complex Adaptive Systems",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "key": "Wrap-Up",
+      "name": "Wrap-Up",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD3OLP33 intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD3OLP33 intro"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD3OLP33 intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD2 timeline"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD2 timeline"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD2 timeline"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD PD details"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "ECSPD PD details"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PD check your progress"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PD check your progress"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "PD check your progress"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD33 rubric"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD33 rubric"
+        ],
+        "lesson.key": "Assessing Computer Models",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD33 rubric"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD33 implement2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD33 implement2"
+        ],
+        "lesson.key": "Assessing Computer Models",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD33 implement2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD33 refresh"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD33 refresh"
+        ],
+        "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD33 refresh"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD33 refresh2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD33 refresh2"
+        ],
+        "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD33 refresh2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD33 thanks"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD33 thanks"
+        ],
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD33 thanks"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD33 reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD33 reflection"
+        ],
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD33 reflection"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD33 end"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD33 end"
+        ],
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      },
+      "level_keys": [
+        "sciPD33 end"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "sciPD3OLP33 intro",
+        "script_level.level_keys": [
+          "sciPD3OLP33 intro"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD2 timeline",
+        "script_level.level_keys": [
+          "sciPD2 timeline"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD PD details",
+        "script_level.level_keys": [
+          "ECSPD PD details"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PD check your progress",
+        "script_level.level_keys": [
+          "PD check your progress"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD33 rubric",
+        "script_level.level_keys": [
+          "sciPD33 rubric"
+        ],
+        "lesson.key": "Assessing Computer Models",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD33 implement2",
+        "script_level.level_keys": [
+          "sciPD33 implement2"
+        ],
+        "lesson.key": "Assessing Computer Models",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD33 refresh",
+        "script_level.level_keys": [
+          "sciPD33 refresh"
+        ],
+        "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD33 refresh2",
+        "script_level.level_keys": [
+          "sciPD33 refresh2"
+        ],
+        "lesson.key": "(optional) Refresh your connection to Complex Adaptive Systems",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD33 thanks",
+        "script_level.level_keys": [
+          "sciPD33 thanks"
+        ],
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD33 reflection",
+        "script_level.level_keys": [
+          "sciPD33 reflection"
+        ],
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD33 end",
+        "script_level.level_keys": [
+          "sciPD33 end"
+        ],
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "ScienceP3OLPT3"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

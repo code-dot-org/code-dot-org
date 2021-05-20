@@ -1,0 +1,19 @@
+name 'Episode 7 Challenge Instructions - younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+### Fun with Flow Charts
+
+Complete the [Challenge Guide](https://docs.google.com/document/d/1u2pWGQu2urYrAVYAEfAsjCuBDqDVpPNjvJ4hNA88HdE/edit?usp=sharing) to build your own fun flow chart, and challenge your family to follow all the branches!
+
+![](https://images.code.org/59d28f6c688d16c0889e600af670a82d-image-1588607985888.png)
+
+---
+*Over 13 year old? Find your challenge level [here](https://studio.code.org/s/code-break/lessons/7/levels/19).*
+MARKDOWN

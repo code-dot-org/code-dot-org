@@ -1,0 +1,128 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-03-26T21:38:22.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "0",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "ideal": "13",
+    "step_speed": "2",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "contained_level_names": [
+      "courseC_multi_harvester_loops11_predict1_2018_2019"
+    ],
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 15538,
+    "name_suffix": "_2019",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 19:13:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-28 23:12:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-06 00:00:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="harvester_pumpkin"/>
+                  </statement>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">4</title>
+                          <statement name="DO">
+                            <block type="harvester_pumpkin"/>
+                          </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                              <next>
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
+                                  <next>
+                                    <block type="controls_repeat">
+                                      <title name="TIMES">4</title>
+                                      <statement name="DO">
+                                        <block type="harvester_pumpkin"/>
+                                      </statement>
+                                      <next>
+                                        <block type="maze_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <next>
+                                            <block type="maze_move">
+                                              <title name="DIR">moveForward</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="harvester_pumpkin"/>
+        <block type="harvester_corn"/>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Karel>

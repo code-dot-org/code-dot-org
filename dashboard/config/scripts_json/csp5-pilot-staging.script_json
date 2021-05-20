@@ -1,0 +1,3002 @@
+{
+  "script": {
+    "name": "csp5-pilot-staging",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "project_sharing": true,
+      "curriculum_umbrella": "CSP"
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp5-pilot-staging"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_lists",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Lists"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "csp_loops",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Loops"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "csp_traversals",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Traversals"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "csp_project",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "csp_libraries",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Libraries"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Lists Explore",
+      "name": "Lists Explore",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Lists Investigate",
+      "name": "Lists Investigate",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Lists Practice",
+      "name": "Lists Practice",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Lists Make",
+      "name": "Lists Make",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Student Survey (Lists)",
+      "name": "Student Survey (Lists)",
+      "absolute_position": 5,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Survey (Lists)",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Teacher Survey (Lists)",
+      "name": "Teacher Survey (Lists)",
+      "absolute_position": 6,
+      "lockable": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teacher Survey (Lists)",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Loops Explore",
+      "name": "Loops Explore",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Loops Investigate and Practice",
+      "name": "Loops Investigate and Practice",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Traversals Explore",
+      "name": "Traversals Explore",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Traversals Investigate",
+      "name": "Traversals Investigate",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Traversals Practice",
+      "name": "Traversals Practice",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Traversals Make",
+      "name": "Traversals Make",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Student Survey (Traversals)",
+      "name": "Student Survey (Traversals)",
+      "absolute_position": 13,
+      "lockable": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Survey (Traversals)",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Teacher Survey (Traversals)",
+      "name": "Teacher Survey (Traversals)",
+      "absolute_position": 14,
+      "lockable": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teacher Survey (Traversals)",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Mini PT",
+      "name": "Mini PT",
+      "absolute_position": 15,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Mini PT",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Student Survey (Mini PT)",
+      "name": "Student Survey (Mini PT)",
+      "absolute_position": 16,
+      "lockable": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Survey (Mini PT)",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Unit 5 Mini Assessment",
+      "name": "Unit 5 Mini Assessment",
+      "absolute_position": 17,
+      "lockable": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 5 Mini Assessment",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Libraries Explore",
+      "name": "Libraries Explore",
+      "absolute_position": 18,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Libraries Investigate",
+      "name": "Libraries Investigate",
+      "absolute_position": 19,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Student Survey (Libraries)",
+      "name": "Student Survey (Libraries)",
+      "absolute_position": 20,
+      "lockable": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Survey (Libraries)",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "key": "Teacher Survey (Libraries)",
+      "name": "Teacher Survey (Libraries)",
+      "absolute_position": 21,
+      "lockable": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teacher Survey (Libraries)",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-20-21-u5-assess-lists"
+        ],
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "csp-20-21-u5-assess-lists"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Introduction to Lists"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L01 Introduction to Lists"
+        ],
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L01 Introduction to Lists"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Introduction to Lists"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Lists - Part 2_2018"
+        ],
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Introduction to Lists - Part 2_2018"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Investigate Outfitly App"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Investigate Outfitly App"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Investigate Bandly App"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Investigate Bandly App"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Investigate Partnersly App"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Investigate Partnersly App"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Lists - Part 3_2018"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Introduction to Lists - Part 3_2018"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Lists - Part 4_2018"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Introduction to Lists - Part 4_2018"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Investigate Outfitly Code"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Investigate Outfitly Code"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Investigate Bandly Code"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Investigate Bandly Code"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Investigate Partnersly Code"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Investigate Partnersly Code"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "List Patterns"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Random List Access Pattern"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Random List Access Pattern"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "List Patterns"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "List Scrolling Pattern"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "List Scrolling Pattern"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Setting up Lists"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 1"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Setting up Lists"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 2"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Accessing Elements in a List"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 3"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 3"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Accessing Elements in a List"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 3.75"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 3.75"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Accessing Elements in a List"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 3.5"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 3.5"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "List Operations"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 4"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 4"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "List Operations"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 5"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 5"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "List Operations"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 9"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 9"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "List Operations"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 6"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 6"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "List Operations"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 10"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L03 Lists Practice 10"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Reminders App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Make Project Sample App"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Make Project Sample App"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Reminders App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 1"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Make Project Step 1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Reminders App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 2"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Make Project Step 2"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Reminders App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 3"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Make Project Step 3"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Reminders App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 4"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Make Project Step 4"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Reminders App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 5"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Make Project Step 5"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "assessment": true,
+      "properties": {
+        "progression": "Build the Reminders App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 6"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Lists Make Project Step 6"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey (Lists)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student Late Spring Pilot Survey Lists"
+        ],
+        "lesson.key": "Student Survey (Lists)",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Student Late Spring Pilot Survey Lists"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Teacher Survey (Lists)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teacher Late Spring Pilot Survey Lists"
+        ],
+        "lesson.key": "Teacher Survey (Lists)",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Teacher Late Spring Pilot Survey Lists"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Introduction to Loops"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_loops_2018"
+        ],
+        "lesson.key": "Loops Explore",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "csp_applab_loops_2018"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 Free Response Reflection_2018"
+        ],
+        "lesson.key": "Loops Explore",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U3L07 Free Response Reflection_2018"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Coin Flipper Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Investigate Coin Flipper"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Investigate Coin Flipper"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "While Loop Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 1"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 1"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "While Loop Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 2"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 2"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "While Loop Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 3"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 3"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "For Loop Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 4"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 4"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "For Loop Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 5"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 5"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "For Loop Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 6"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 6"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Simulations Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 7"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 7"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Simulations Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 8"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 8"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "Simulations Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 9"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Loops Practice Part 9"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Introduction to Traversal"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Processing Lists with Loops_2018"
+        ],
+        "lesson.key": "Traversals Explore",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Processing Lists with Loops_2018"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 L09 Traversals Exit Ticket"
+        ],
+        "lesson.key": "Traversals Explore",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 L09 Traversals Exit Ticket"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Mile Tracker"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Investigate Mile Tracker"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Word Guess - clone"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Investigate Word Guess - clone"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Dog Finder - clone"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Investigate Dog Finder - clone"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Investigate Mile Tracker Modify"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "The getList() Block"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Get List Explanation Video"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Get List Explanation Video"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Word Guess Modify"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Investigate Word Guess Modify"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Dog Finder Modify"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Investigate Dog Finder Modify"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Traversal Patterns"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "List Filter Pattern"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "List Filter Pattern"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Traversal Patterns"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "List Reduce Pattern"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "List Reduce Pattern"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Traversal Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 1"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 1"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Traversal Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 2"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 2"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Traversal Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 3"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 3"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Filter and Reduce Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 4"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 4"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Filter and Reduce Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 5"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 5"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Filter and Reduce Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 6"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 6"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "App Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 7"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 7"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "App Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 8"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 8"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "The Wacky Name Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Sample App"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Make Project Sample App"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Wacky Name Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 1"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Make Project Step 1"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Wacky Name Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 2"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Make Project Step 2"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Wacky Name Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 3"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Make Project Step 3"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Wacky Name Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 4"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Make Project Step 4"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Wacky Name Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 5"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Make Project Step 5"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 7,
+      "assessment": true,
+      "properties": {
+        "progression": "Build the Wacky Name Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 6"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Traversals Make Project Step 6"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey (Traversals)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student Late Spring Pilot Survey Traversals"
+        ],
+        "lesson.key": "Student Survey (Traversals)",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Student Late Spring Pilot Survey Traversals"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Teacher Survey (Traversals)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teacher Late Spring Pilot Survey Traversals"
+        ],
+        "lesson.key": "Teacher Survey (Traversals)",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Teacher Late Spring Pilot Survey Traversals"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Instructions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Mini Practice PT"
+        ],
+        "lesson.key": "Mini PT",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U5 Mini Practice PT"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Mini PT"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pilot U5 Mini PT Project"
+        ],
+        "lesson.key": "Mini PT",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "CSP Pilot U5 Mini PT Project"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey (Mini PT)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student Late Spring Pilot Survey Mini PT"
+        ],
+        "lesson.key": "Student Survey (Mini PT)",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Student Late Spring Pilot Survey Mini PT"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Unit 5 Pilot Mini Assessment"
+        ],
+        "lesson.key": "Unit 5 Mini Assessment",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "CSP 20-21 Unit 5 Pilot Mini Assessment"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 L04 Exit Ticket"
+        ],
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U7 L04 Exit Ticket"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Investigate Painting"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U7 Libraries Investigate Painting"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries List Math Library"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U7 Libraries List Math Library"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Investigate Pig Latin"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "U7 Libraries Investigate Pig Latin"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey (Libraries)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student Late Spring Pilot Survey Libraries"
+        ],
+        "lesson.key": "Student Survey (Libraries)",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Student Late Spring Pilot Survey Libraries"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Teacher Survey (Libraries)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teacher Late Spring Pilot Survey Libraries"
+        ],
+        "lesson.key": "Teacher Survey (Libraries)",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      },
+      "level_keys": [
+        "Teacher Late Spring Pilot Survey Libraries"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csp-20-21-u5-assess-lists",
+        "script_level.level_keys": [
+          "csp-20-21-u5-assess-lists"
+        ],
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L01 Introduction to Lists",
+        "script_level.level_keys": [
+          "U5 L01 Introduction to Lists"
+        ],
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Lists - Part 2_2018",
+        "script_level.level_keys": [
+          "Introduction to Lists - Part 2_2018"
+        ],
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Investigate Outfitly App",
+        "script_level.level_keys": [
+          "U5 Lists Investigate Outfitly App"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Investigate Bandly App",
+        "script_level.level_keys": [
+          "U5 Lists Investigate Bandly App"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Investigate Partnersly App",
+        "script_level.level_keys": [
+          "U5 Lists Investigate Partnersly App"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Lists - Part 3_2018",
+        "script_level.level_keys": [
+          "Introduction to Lists - Part 3_2018"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Lists - Part 4_2018",
+        "script_level.level_keys": [
+          "Introduction to Lists - Part 4_2018"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Investigate Outfitly Code",
+        "script_level.level_keys": [
+          "U5 Lists Investigate Outfitly Code"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Investigate Bandly Code",
+        "script_level.level_keys": [
+          "U5 Lists Investigate Bandly Code"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Investigate Partnersly Code",
+        "script_level.level_keys": [
+          "U5 Lists Investigate Partnersly Code"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Random List Access Pattern",
+        "script_level.level_keys": [
+          "Random List Access Pattern"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "List Scrolling Pattern",
+        "script_level.level_keys": [
+          "List Scrolling Pattern"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 1",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 1"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 2",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 2"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 3",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 3"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 3.75",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 3.75"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 3.5",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 3.5"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 4",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 4"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 5",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 5"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 9",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 9"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 6",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 6"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L03 Lists Practice 10",
+        "script_level.level_keys": [
+          "U5 L03 Lists Practice 10"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Make Project Sample App",
+        "script_level.level_keys": [
+          "U5 Lists Make Project Sample App"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Make Project Step 1",
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 1"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Make Project Step 2",
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 2"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Make Project Step 3",
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 3"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Make Project Step 4",
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 4"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Make Project Step 5",
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 5"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Lists Make Project Step 6",
+        "script_level.level_keys": [
+          "U5 Lists Make Project Step 6"
+        ],
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student Late Spring Pilot Survey Lists",
+        "script_level.level_keys": [
+          "Student Late Spring Pilot Survey Lists"
+        ],
+        "lesson.key": "Student Survey (Lists)",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teacher Late Spring Pilot Survey Lists",
+        "script_level.level_keys": [
+          "Teacher Late Spring Pilot Survey Lists"
+        ],
+        "lesson.key": "Teacher Survey (Lists)",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_loops_2018",
+        "script_level.level_keys": [
+          "csp_applab_loops_2018"
+        ],
+        "lesson.key": "Loops Explore",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 Free Response Reflection_2018",
+        "script_level.level_keys": [
+          "U3L07 Free Response Reflection_2018"
+        ],
+        "lesson.key": "Loops Explore",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Investigate Coin Flipper",
+        "script_level.level_keys": [
+          "U5 Loops Investigate Coin Flipper"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 1",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 1"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 2",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 2"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 3",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 3"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 4",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 4"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 5",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 5"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 6",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 6"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 7",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 7"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 8",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 8"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Loops Practice Part 9",
+        "script_level.level_keys": [
+          "U5 Loops Practice Part 9"
+        ],
+        "lesson.key": "Loops Investigate and Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Processing Lists with Loops_2018",
+        "script_level.level_keys": [
+          "Processing Lists with Loops_2018"
+        ],
+        "lesson.key": "Traversals Explore",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 L09 Traversals Exit Ticket",
+        "script_level.level_keys": [
+          "U5 L09 Traversals Exit Ticket"
+        ],
+        "lesson.key": "Traversals Explore",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Investigate Mile Tracker",
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Mile Tracker"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Investigate Word Guess - clone",
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Word Guess - clone"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Investigate Dog Finder - clone",
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Dog Finder - clone"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Investigate Mile Tracker Modify",
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Get List Explanation Video",
+        "script_level.level_keys": [
+          "U5 Traversals Get List Explanation Video"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Investigate Word Guess Modify",
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Word Guess Modify"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Investigate Dog Finder Modify",
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Dog Finder Modify"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "List Filter Pattern",
+        "script_level.level_keys": [
+          "List Filter Pattern"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "List Reduce Pattern",
+        "script_level.level_keys": [
+          "List Reduce Pattern"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 1",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 1"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 2",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 2"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 3",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 3"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 4",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 4"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 5",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 5"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 6",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 6"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 7",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 7"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 8",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 8"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Make Project Sample App",
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Sample App"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Make Project Step 1",
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 1"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Make Project Step 2",
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 2"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Make Project Step 3",
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 3"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Make Project Step 4",
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 4"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Make Project Step 5",
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 5"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Make Project Step 6",
+        "script_level.level_keys": [
+          "U5 Traversals Make Project Step 6"
+        ],
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student Late Spring Pilot Survey Traversals",
+        "script_level.level_keys": [
+          "Student Late Spring Pilot Survey Traversals"
+        ],
+        "lesson.key": "Student Survey (Traversals)",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teacher Late Spring Pilot Survey Traversals",
+        "script_level.level_keys": [
+          "Teacher Late Spring Pilot Survey Traversals"
+        ],
+        "lesson.key": "Teacher Survey (Traversals)",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Mini Practice PT",
+        "script_level.level_keys": [
+          "U5 Mini Practice PT"
+        ],
+        "lesson.key": "Mini PT",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Pilot U5 Mini PT Project",
+        "script_level.level_keys": [
+          "CSP Pilot U5 Mini PT Project"
+        ],
+        "lesson.key": "Mini PT",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student Late Spring Pilot Survey Mini PT",
+        "script_level.level_keys": [
+          "Student Late Spring Pilot Survey Mini PT"
+        ],
+        "lesson.key": "Student Survey (Mini PT)",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Unit 5 Pilot Mini Assessment",
+        "script_level.level_keys": [
+          "CSP 20-21 Unit 5 Pilot Mini Assessment"
+        ],
+        "lesson.key": "Unit 5 Mini Assessment",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 L04 Exit Ticket",
+        "script_level.level_keys": [
+          "U7 L04 Exit Ticket"
+        ],
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Investigate Painting",
+        "script_level.level_keys": [
+          "U7 Libraries Investigate Painting"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries List Math Library",
+        "script_level.level_keys": [
+          "U7 Libraries List Math Library"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Investigate Pig Latin",
+        "script_level.level_keys": [
+          "U7 Libraries Investigate Pig Latin"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student Late Spring Pilot Survey Libraries",
+        "script_level.level_keys": [
+          "Student Late Spring Pilot Survey Libraries"
+        ],
+        "lesson.key": "Student Survey (Libraries)",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teacher Late Spring Pilot Survey Libraries",
+        "script_level.level_keys": [
+          "Teacher Late Spring Pilot Survey Libraries"
+        ],
+        "lesson.key": "Teacher Survey (Libraries)",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp5-pilot-staging"
+      }
+    }
+  ]
+}

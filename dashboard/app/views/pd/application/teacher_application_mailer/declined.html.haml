@@ -1,0 +1,25 @@
+%p
+  Hi
+  = @application.first_name + ","
+
+%p
+  Thank you for applying to
+  = @application.effective_regional_partner_name + "'s"
+  Professional Learning Program for
+  = @application.course_name + "."
+  Our team appreciated the opportunity to review your application and learn about your
+  commitment to computer science education. I'm writing to let you know that we are currently
+  unable to offer you a space in the Professional Learning Program this year.
+
+%p
+  We hope that you will continue to use Code.org’s free resources and materials
+  for all educators at code.org/educate.  If your plans for next year change,
+  we'd like to invite you to
+  = link_to('apply again', 'https://code.org/apply')
+  next year.
+
+%p
+  We wish you the best this year!
+
+= render partial: 'questions_concerns'
+= render partial: 'partner_signature'

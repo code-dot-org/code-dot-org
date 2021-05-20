@@ -1,0 +1,25 @@
+name 'U5L7 CFU Loops Psuedocode 2'
+title 'AP Pseudocode: Loops'
+description ''
+wrong '"1 2 3"'
+wrong '"2 4 6"'
+wrong '"1 3 6"'
+right '"1 3 5"'
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how loops questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below.
+
+![](https://images.code.org/546dcc1f00d148623c4d83970db8ea28-image-1571438398722.34.10 PM.png)
+
+![](https://images.code.org/c058dc313e4c0825e6c552785811a51a-image-1571438454943.40.45 PM.png)
+
+![](https://images.code.org/fe94594a924a02d81675417220c2845e-image-1571438747745.45.38 PM.png)
+
+## Practice Question
+
+What will be displayed after this code is run?
+
+![](https://images.code.org/475c342b53e79793d9bf6889af3b54b6-image-1571439207321.53.16 PM.png)
+MARKDOWN

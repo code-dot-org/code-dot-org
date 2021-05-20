@@ -4,6 +4,7 @@ nav: about_nav
 video_player: true
 theme: responsive
 ---
+<link rel="stylesheet" type="text/css" rel= "stylesheet" href="/css/jobs.css" />
 
 # Job Openings at Code.org
 
@@ -12,13 +13,14 @@ theme: responsive
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
 <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
 
+
 <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
 
 </div>
 
 [col-50]
 
-Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
+Code.org&reg; is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science as part of their core K-12 education. The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also created the annual <a href="http://hourofcode.com/">Hour of Code</a> campaign, which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Microsoft, Facebook, Amazon, the Infosys Foundation, Google and <a href="https://code.org/about/donors">many more</a>.
 
 [/col-50]
 
@@ -26,14 +28,21 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 **[Working at Code.org](#info)**
 
 **We are currently hiring for:**
-<div class="hire-jobs"></div>
-<script id="hire-embed-loader" async defer src="https://hire.withgoogle.com/s/embed/hire-jobs.js?company=codeorg"></script>
+<div id='lever-jobs-container'></div>
+<script type='text/javascript'>
+
+  window.leverJobsOptions = {accountName: 'Code.org'};
+
+</script>
+<script type='text/javascript' src='https://andreasmb.github.io/lever-jobs-embed/index.js'></script>
+
+_**COVID-19 update:** We are continuing to closely monitor the evolving situation and we appreciate your understanding and flexibility with any related changes to our interviewing process._
 
 ## <a name="info" href="#info">Working at Code.org</a>
 
 **Company Profile**
 
-Code.org is a nonprofit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+Code.org is a nonprofit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school should have the opportunity to learn computer science.
 
 We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
 
@@ -42,7 +51,7 @@ We believe computer science and computer programming should be part of the core 
 We offer a comprehensive employee benefits package that includes:
 
 - Competitive Salary
-- Technology subsidy consistent with our Bring Your Own Device environment 
+- Technology subsidy consistent with our Bring Your Own Device environment
 - Flexible, engaging working environment
 - Monthly unlimited ORCA pass or equal value transit subsidy; located near public transit hub in Seattle, WA
 - Paid time off: 3 weeks vacation annually, sick leave, and 'winter break' office closure the two weeks that include Christmas and New Years.
@@ -56,5 +65,3 @@ We offer a comprehensive employee benefits package that includes:
 No relocation packages
 
 **Don't see a good fit? <a href="mailto:jobs@code.org">Drop us a line</a> and a resume and let us know why you want to work for us and what you would bring to our team.**
-
-

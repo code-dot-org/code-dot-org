@@ -1,11 +1,12 @@
 $light_background_colour: #a69bc1;
+$blue_background_colour: #59b9dc;
 
 @keyframes slideInFromLeft {
   0% {
-      transform: translateX(-50px);
+    transform: translateX(-50px);
   }
   100% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -14,18 +15,18 @@ $light_background_colour: #a69bc1;
 }
 
 .homepage-professional-learning-banner {
-  background-color: $light_background_colour;
+  background-color: $blue_background_colour;
   padding-top: 5px;
   padding-bottom: 5px;
 
   a {
-    font-family: 'Gotham 4r', sans-serif;
+    font-family: "Gotham 4r", sans-serif;
     text-decoration: none;
   }
 
   .nonphone {
     padding: 5px;
-    background-color: $light_background_colour;
+    background-color: $blue_background_colour;
     height: 97px;
     margin: 0 auto;
     float: none;
@@ -55,6 +56,7 @@ $light_background_colour: #a69bc1;
           top: 0px;
           left: 37px;
           animation: fadein 5s;
+          width: calc(100% - 150px);
         }
       }
     }

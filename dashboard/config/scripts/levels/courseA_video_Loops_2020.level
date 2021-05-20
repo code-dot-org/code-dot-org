@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-25T15:42:57.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSF_collector_repeat_loops",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 15647,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-23 16:37:55 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-23 16:40:27 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

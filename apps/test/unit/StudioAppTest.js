@@ -1,54 +1,61 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/reconfiguredChai';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
   makeFooterMenuItems
 } from '@cdo/apps/StudioApp';
-import i18n from '@cdo/apps/code-studio/i18n';
+import Sounds from '@cdo/apps/Sounds';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {sandboxDocumentBody} from '../util/testUtils';
+import {
+  sandboxDocumentBody,
+  replaceOnWindow,
+  restoreOnWindow
+} from '../util/testUtils';
+import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import * as utils from '@cdo/apps/utils';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
 
   describe('StudioApp.singleton', () => {
-    beforeEach(stubStudioApp);
-    afterEach(restoreStudioApp);
-
     let containerDiv, codeWorkspaceDiv;
+
     beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      registerReducers(commonReducers);
+      replaceOnWindow('setTimeout', () => {});
+
       codeWorkspaceDiv = document.createElement('div');
       codeWorkspaceDiv.id = 'codeWorkspace';
       document.body.appendChild(codeWorkspaceDiv);
-
       containerDiv = document.createElement('div');
       containerDiv.id = 'foo';
       containerDiv.innerHTML = `
-  <button id="runButton" />
-  <button id="resetButton" />
-  <div id="visualizationColumn" />
-  <div id="toolbox-header" />
-  `;
+      <button id="runButton" />
+      <button id="resetButton" />
+      <div id="visualizationColumn" />
+      <div id="toolbox-header" />
+      `;
       document.body.appendChild(containerDiv);
     });
 
     afterEach(() => {
+      restoreStudioApp();
+      restoreRedux();
+      restoreOnWindow('setTimeout');
+
       document.body.removeChild(codeWorkspaceDiv);
       document.body.removeChild(containerDiv);
     });
-
-    beforeEach(() => {
-      stubRedux();
-      registerReducers(commonReducers);
-    });
-    afterEach(restoreRedux);
 
     describe('the init() method', () => {
       let files;
@@ -104,21 +111,182 @@ describe('StudioApp', () => {
         expect(listener).to.have.been.calledOnce;
       });
     });
+
+    describe('StudioApp.editDuringRunAlertHandler()', () => {
+      const mockCode = '<xml></xml>';
+      let studio;
+
+      beforeEach(() => {
+        studio = studioApp();
+        studio.executingCode = mockCode;
+        studio.clearHighlighting = sinon.spy();
+      });
+
+      afterEach(() => {
+        sinon.restore();
+      });
+
+      it('no-ops if app is not running', () => {
+        sinon.stub(studio, 'isRunning').returns(false);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
+      it('no-ops if code has not changed', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode);
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
+      it('no-ops if editDuringRunAlert is not undefined', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        studio.editDuringRunAlert = '<div/>';
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
+      it('clears block highlighting', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+
+        studio.editDuringRunAlertHandler();
+
+        expect(studio.clearHighlighting).to.have.been.calledOnce;
+      });
+
+      it('checks localStorage if showEditDuringRunAlert is true', () => {
+        studio.showEditDuringRunAlert = true;
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        sinon.stub(utils, 'tryGetLocalStorage');
+
+        studio.editDuringRunAlertHandler();
+
+        expect(utils.tryGetLocalStorage).to.have.been.calledWith(
+          'hideEditDuringRunAlert',
+          null
+        );
+      });
+
+      it('renders editDuringRunAlert if showEditDuringRunAlert is true and editDuringRunAlert is undefined', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        studio.showEditDuringRunAlert = true;
+        studio.editDuringRunAlert = undefined;
+        sinon.stub(utils, 'tryGetLocalStorage').returns(null); // user has not dismissed this alert before
+        studio.displayWorkspaceAlert = sinon.spy();
+
+        studio.editDuringRunAlertHandler();
+
+        expect(studio.displayWorkspaceAlert).to.have.been.calledOnce;
+      });
+    });
+
+    describe('The StudioApp.resetButtonClick function', () => {
+      let studio, reportSpy;
+      beforeEach(() => {
+        studio = studioApp();
+        studio.onResetPressed = () => {};
+        studio.toggleRunReset = () => {};
+        studio.clearHighlighting = () => {};
+        studio.isUsingBlockly = () => {
+          return false;
+        };
+        studio.reset = () => {};
+
+        reportSpy = sinon.spy();
+        studio.debouncedSilentlyReport = reportSpy;
+      });
+
+      it('Sets hasReported to false', () => {
+        studio.hasReported = true;
+        studio.resetButtonClick();
+        expect(studio.hasReported).to.be.false;
+        expect(reportSpy).to.have.not.been.called;
+      });
+
+      it('Calls `report` if it has not yet been called', () => {
+        studio.hasReported = false;
+        studio.config = {level: {}};
+        studio.resetButtonClick();
+        expect(studio.hasReported).to.be.false;
+        expect(reportSpy).to.have.been.calledOnce;
+        delete studio.config;
+      });
+    });
+
+    describe('The StudioApp.report function', () => {
+      let clock, studio, onAttemptSpy;
+      beforeEach(() => {
+        clock = sinon.useFakeTimers();
+        studio = studioApp();
+        studio.feedback_ = {
+          canContinueToNextLevel: () => {},
+          getNumBlocksUsed: () => {}
+        };
+
+        onAttemptSpy = sinon.spy();
+        studio.onAttempt = onAttemptSpy;
+      });
+
+      afterEach(() => {
+        clock.restore();
+      });
+
+      it('sets the milestoneStartTime to the current time', () => {
+        studio.milestoneStartTime = 0;
+        clock.tick(2000);
+
+        studio.report({});
+
+        expect(studio.milestoneStartTime).to.equal(2000);
+      });
+
+      it('sets hasReported to true', () => {
+        studio.hasReported = false;
+        studio.report({});
+        expect(studio.hasReported).to.be.true;
+      });
+
+      it('calculates the timeSinceLastMilestone', () => {
+        studio.milestoneStartTime = 1000;
+        studio.initTime = 1000;
+        clock.tick(3000);
+
+        studio.report({});
+
+        expect(onAttemptSpy).to.have.been.calledWith({
+          pass: undefined,
+          time: 2000,
+          timeSinceLastMilestone: 2000,
+          attempt: 0,
+          lines: undefined
+        });
+      });
+    });
   });
 
   describe('The StudioApp.makeFooterMenuItems function', () => {
     beforeEach(() => {
       sinon.stub(project, 'getUrl');
       sinon.stub(project, 'getStandaloneApp');
-      sinon.stub(i18n, 't').callsFake(function(txt) {
-        return txt;
-      });
     });
 
     afterEach(() => {
       project.getUrl.restore();
       project.getStandaloneApp.restore();
-      i18n.t.restore();
     });
 
     it('returns a How It Works link to the project edit page from an embed page in GameLab', () => {
@@ -128,7 +296,7 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       expect(howItWorksItem.link).to.equal(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit'
@@ -142,7 +310,7 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       expect(howItWorksItem.link).to.equal(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit'
@@ -156,10 +324,10 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       var footItems = makeFooterMenuItems();
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       var reportAbuseIndex = footItems.findIndex(
-        item => item.text === 'footer.report_abuse'
+        item => item.key === 'report-abuse'
       );
       expect(howItWorksIndex).to.be.below(reportAbuseIndex);
     });
@@ -170,8 +338,8 @@ describe('StudioApp', () => {
       );
       project.getStandaloneApp.returns('gamelab');
       var footItems = makeFooterMenuItems();
-      var itemTexts = footItems.map(item => item.text);
-      expect(itemTexts).not.to.include('footer.try_hour_of_code');
+      var itemKeys = footItems.map(item => item.key);
+      expect(itemKeys).not.to.include('try-hoc');
     });
 
     it('does return Try-HOC menu item in PlayLab', () => {
@@ -180,14 +348,129 @@ describe('StudioApp', () => {
       );
       project.getStandaloneApp.returns('playlab');
       var footItems = makeFooterMenuItems();
-      var itemTexts = footItems.map(item => item.text);
-      expect(itemTexts).to.include('footer.try_hour_of_code');
+      var itemKeys = footItems.map(item => item.key);
+      expect(itemKeys).to.include('try-hoc');
+    });
+  });
+
+  describe('playAudio', () => {
+    let playStub, isPlayingStub;
+    beforeEach(() => {
+      playStub = sinon.stub(Sounds.getSingleton(), 'play');
+      isPlayingStub = sinon.stub(Sounds.getSingleton(), 'isPlaying');
+    });
+
+    afterEach(() => {
+      playStub.restore();
+      isPlayingStub.restore();
+    });
+
+    it('does not play audio over itself when noOverlap is true', () => {
+      isPlayingStub.onCall(0).returns(true);
+      studioApp().playAudio('testAudio', {noOverlap: true});
+      expect(playStub).not.to.have.been.called;
+
+      isPlayingStub.onCall(1).returns(false);
+      studioApp().playAudio('testAudio', {noOverlap: true});
+      expect(playStub).to.have.been.calledOnce;
+    });
+
+    it('does play audio over itself when noOverlap is false or unspecified', () => {
+      isPlayingStub.returns(true);
+      studioApp().playAudio('testAudio', {noOverlap: false});
+      studioApp().playAudio('testAudio');
+      expect(playStub).to.have.been.calledTwice;
+    });
+  });
+
+  describe('loadLibraryBlocks', () => {
+    const initialConfig = {
+      level: {
+        codeFunctions: {preExistingFunction: null}
+      },
+      dropletConfig: {
+        additionalPredefValues: ['preExistingValue'],
+        blocks: ['preExistingBlock']
+      }
+    };
+
+    it('given no libraries, leaves the config unchanged', () => {
+      let config = initialConfig;
+      studioApp().loadLibraryBlocks(config);
+      expect(config).to.deep.equal(initialConfig);
+    });
+
+    it('given empty libraries array, leaves the config unchanged', () => {
+      let config = initialConfig;
+      config.level.libraries = [];
+      studioApp().loadLibraryBlocks(config);
+      expect(config).to.deep.equal(initialConfig);
+    });
+
+    it('given a library, creates a libraryCode string', () => {
+      let config, targetConfig;
+      config = targetConfig = initialConfig;
+      studioApp().loadLibraryBlocks(config);
+      targetConfig.level.libraryCode = '';
+      expect(config).to.deep.equal(targetConfig);
+    });
+
+    it('given some libraries, adds all blocks to the droplet config', () => {
+      let config = initialConfig;
+      let targetBlocks = [
+        'preExistingBlock',
+        ...sampleLibrary.libraries[0].dropletConfig,
+        ...sampleLibrary.libraries[1].dropletConfig
+      ];
+
+      config.level.libraries = sampleLibrary.libraries;
+      studioApp().loadLibraryBlocks(config);
+      expect(config.dropletConfig.blocks).to.deep.equal(targetBlocks);
+    });
+
+    it('given a library, adds all library closures to projectLibraries', () => {
+      let config = initialConfig;
+      let librarycode = [
+        {
+          name: sampleLibrary.libraries[0].name,
+          code: createLibraryClosure(sampleLibrary.libraries[0])
+        },
+        {
+          name: sampleLibrary.libraries[1].name,
+          code: createLibraryClosure(sampleLibrary.libraries[1])
+        }
+      ];
+
+      config.level.libraries = sampleLibrary.libraries;
+      studioApp().loadLibraryBlocks(config);
+      expect(config.level.projectLibraries).to.deep.equal(librarycode);
+    });
+
+    it('given a library, adds all functions to codeFunctions', () => {
+      let config = initialConfig;
+      let targetCodeFunctions = {
+        preExistingFunction: null,
+        'twoFunctionLibrary.functionWithParams': null,
+        'twoFunctionLibrary.functionWithGlobalVariable': null,
+        'oneFunctionLibrary.functionWithPrivateFunctionCall': null
+      };
+
+      config.level.libraries = sampleLibrary.libraries;
+      studioApp().loadLibraryBlocks(config);
+      expect(config.level.codeFunctions).to.deep.equal(targetCodeFunctions);
     });
   });
 
   describe('addChangeHandler', () => {
-    beforeEach(stubStudioApp);
-    afterEach(restoreStudioApp);
+    beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      registerReducers(commonReducers);
+    });
+    afterEach(() => {
+      restoreRedux();
+      restoreStudioApp();
+    });
 
     it('calls a handler in response to a blockly change', () => {
       let changed = false;
@@ -245,6 +528,37 @@ describe('StudioApp', () => {
 
       expect(changed1).to.be.true;
       expect(changed2).to.be.true;
+    });
+  });
+
+  describe('The StudioApp.validateCodeChanged function', () => {
+    let studio, codeDifferentStub;
+    beforeEach(() => {
+      codeDifferentStub = sinon.stub(project, 'isCurrentCodeDifferent');
+      studio = studioApp();
+    });
+
+    afterEach(() => {
+      codeDifferentStub.restore();
+    });
+
+    it('returns true if validationEnabled is not set', () => {
+      studio.config = {level: {}};
+      expect(studio.validateCodeChanged()).to.be.true;
+      expect(codeDifferentStub).to.have.not.been.called;
+    });
+
+    it('returns true if validationEnabled is false', () => {
+      studio.config = {level: {validationEnabled: false}};
+      expect(studio.validateCodeChanged()).to.be.true;
+      expect(codeDifferentStub).to.have.not.been.called;
+    });
+
+    it('returns the result of project.isCurrentCodeDifferent', () => {
+      studio.config = {level: {validationEnabled: true}};
+      codeDifferentStub.returns(false);
+      expect(studio.validateCodeChanged()).to.be.false;
+      expect(codeDifferentStub).to.have.been.called;
     });
   });
 });

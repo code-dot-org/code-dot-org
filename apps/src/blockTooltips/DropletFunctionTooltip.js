@@ -63,9 +63,14 @@ var DropletFunctionTooltip = function(appMsg, definition) {
   /** @type {?string} */
   this.customDocURL = definition.customDocURL;
 
-  var description = this.getLocalization(this.descriptionKey());
-  if (description) {
-    this.description = description();
+  var localizedDescription = this.getLocalization(this.descriptionKey());
+  this.showExamplesLink = true;
+  if (definition.comment) {
+    this.description = definition.comment;
+    this.showCodeLink = true;
+    this.showExamplesLink = false;
+  } else if (localizedDescription) {
+    this.description = localizedDescription();
   }
 
   var signatureOverride = this.getLocalization(this.signatureOverrideKey());
@@ -159,7 +164,7 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function(appType) {
   if (this.customDocURL) {
     return this.customDocURL;
   }
-  return '//docs.code.org/' + appType + '/' + this.functionName + '/';
+  return '/docs/' + appType + '/' + this.functionName + '/';
 };
 
 module.exports = DropletFunctionTooltip;

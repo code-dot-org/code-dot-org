@@ -1,8 +1,8 @@
 :ruby
   @page_title = t('project.project_gallery')
-  is_public = local_assigns[:is_public]
   projects_data = {}
-  projects_data[:limitedGallery] = local_assigns[:limited_gallery]
+  projects_data[:limitedGallery] = @limited_gallery
+  projects_data[:currentTab] = @current_tab
   projects_data[:projectCount] = fetch_project_count['total_projects']
 
   if current_user
@@ -10,18 +10,9 @@
     projects_data[:canShare] = !current_user.sharing_disabled?
   end
 
-%script{src: asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
-%script{src: minifiable_asset_path('js/projects/index.js')}
+  projects_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/projects")
 
-.projects-page
-  #projects-header
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/projects/index.js'), data: {projects: projects_data.to_json}}
 
-  #gallery-navigation
-
-  #personal-projects-wrapper{'style' => ('display: none;' if is_public)}
-    #react-personal-projects
-
-  #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
-    #public-gallery
-  #publish-confirm
-  #delete-confirm
+#projects-page

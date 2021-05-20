@@ -2,14 +2,14 @@ require 'test_helper'
 
 class CourseUnitTest < ActionView::TestCase
   setup do
-    @course = create :plc_course
+    @plc_course = create :plc_course
     @user = create :teacher
   end
 
   test 'Launching course units works with no created unit assignments' do
     # Simulates a unit that was created after people were enrolled
-    @enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
-    @course_unit = create(:plc_course_unit, plc_course: @course, started: false)
+    @enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @plc_course)
+    @course_unit = create(:plc_course_unit, plc_course: @plc_course, started: false)
 
     @course_unit.launch
 
@@ -18,8 +18,8 @@ class CourseUnitTest < ActionView::TestCase
 
   test 'Launching course units with with already created assignments' do
     # Simulates a unit that people were enrolled in but was locked
-    @course_unit = create(:plc_course_unit, plc_course: @course, started: false)
-    @enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
+    @course_unit = create(:plc_course_unit, plc_course: @plc_course, started: false)
+    @enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @plc_course)
 
     @course_unit.launch
 

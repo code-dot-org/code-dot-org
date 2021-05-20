@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../deployment.rb'
-require_relative '../tools/hooks/hooks_utils.rb'
 require 'cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../tools/hooks/hooks_utils.rb'
 require 'time'
 
 REPO_DIR = File.expand_path('../../', __FILE__).freeze
@@ -12,8 +14,6 @@ LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__).
 LEVELBUILDER_CI_LAST_RUN_FILENAME = 'levelbuilder_ci_last_run'.freeze
 
 Dir.chdir(REPO_DIR)
-
-exit unless only_one_running?(__FILE__)
 
 last_modified_time = File.exist?(LEVELBUILDER_CI_LAST_RUN_FILENAME) ?
     DateTime.parse(File.read(LEVELBUILDER_CI_LAST_RUN_FILENAME)).to_time : Time.at(0)

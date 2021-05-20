@@ -1,6 +1,6 @@
 login_required true
 
-stage 'What is a Computer? - sample progression'
+lesson 'What is a Computer? - sample progression', display_name: 'What is a Computer? - sample progression', has_lesson_plan: false
 level 'csd digital unplugged WIAC'
 level 'csd digital unplugged WIAC L1'
 level 'csd digital unplugged WIAC L2'
@@ -8,6 +8,7 @@ level 'CSD digital Unplugged WIAC video'
 level 'csd digital unplugged WIAC L3'
 level 'CSD digital unplugged WIAC Qs'
 
-stage 'Problem Solving Process - sample activities'
+lesson 'Problem Solving Process - sample activities', display_name: 'Problem Solving Process - sample activities', has_lesson_plan: false
 level 'csd digital unplugged PSP word search'
 level 'csd digital unplugged PSP seating'
+

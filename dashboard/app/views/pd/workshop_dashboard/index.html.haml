@@ -1,8 +1,10 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&libraries=places"}
-%script{src: minifiable_asset_path('js/pd/workshop_dashboard/index.js'), data: @script_data}
+
+%script{type: "text/javascript", src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"}
+%link{rel: "stylesheet", type: "text/css", href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"}
+%script{src: webpack_asset_path('js/pd/workshop_dashboard/index.js'), data: @script_data}
 
 #workshop-container
   -# populated by React

@@ -1,0 +1,367 @@
+{
+  "script": {
+    "name": "sports",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:56 UTC",
+    "seeding_key": {
+      "script.name": "sports"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Sports",
+      "name": "Sports",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_1_sports"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_1_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      },
+      "level_keys": [
+        "bounce_1_sports"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_2_sports"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_2_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      },
+      "level_keys": [
+        "bounce_2_sports"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_5_sports"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_5_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      },
+      "level_keys": [
+        "bounce_5_sports"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_6_sports"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_6_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      },
+      "level_keys": [
+        "bounce_6_sports"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_7_sports"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_7_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      },
+      "level_keys": [
+        "bounce_7_sports"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_10_sports"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_10_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      },
+      "level_keys": [
+        "bounce_10_sports"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_11_sports"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_11_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      },
+      "level_keys": [
+        "bounce_11_sports"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_12_sports"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_12_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      },
+      "level_keys": [
+        "bounce_12_sports"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "bounce_1_sports",
+        "script_level.level_keys": [
+          "bounce_1_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_2_sports",
+        "script_level.level_keys": [
+          "bounce_2_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_5_sports",
+        "script_level.level_keys": [
+          "bounce_5_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_6_sports",
+        "script_level.level_keys": [
+          "bounce_6_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_7_sports",
+        "script_level.level_keys": [
+          "bounce_7_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_10_sports",
+        "script_level.level_keys": [
+          "bounce_10_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_11_sports",
+        "script_level.level_keys": [
+          "bounce_11_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_12_sports",
+        "script_level.level_keys": [
+          "bounce_12_sports"
+        ],
+        "lesson.key": "Sports",
+        "lesson_group.key": "",
+        "script.name": "sports"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

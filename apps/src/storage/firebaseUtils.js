@@ -1,6 +1,8 @@
 import Firebase from 'firebase';
+const SHARED_ENV = 'cdo-v3-shared';
 let config;
-let firebaseCache;
+let projectFirebaseCache;
+let sharedFirebaseCache;
 let firebaseConfig;
 
 export function init(setupConfig) {
@@ -72,64 +74,92 @@ export function resetConfigForTesting() {
 }
 
 export function getConfigRef() {
-  return getFirebase().child('v3/config/channels');
+  return getPathRef(getFirebase(config.firebaseName), 'v3/config/channels');
 }
 
 export function getRecordsRef(tableName) {
-  return getProjectDatabase().child(`storage/tables/${tableName}/records`);
+  return getPathRef(
+    getProjectDatabase(),
+    `storage/tables/${tableName}/records`
+  );
+}
+
+export function getProjectCountersRef(tableName) {
+  return getPathRef(getProjectDatabase(), `counters/tables/${tableName}`);
 }
 
 export function getSharedDatabase() {
-  return getFirebase().child('v3/channels/shared');
+  return getPathRef(getFirebase(SHARED_ENV), 'v3/channels/shared');
 }
 
 export function getProjectDatabase() {
   const path = `v3/channels/${config.channelId}${
     config.firebaseChannelIdSuffix
   }`;
-  return getFirebase().child(path);
+  return getPathRef(getFirebase(config.firebaseName), path);
 }
 
-function getFirebase() {
-  let fb = firebaseCache;
+/**
+ * Safe wrapper for accessing a firebase node. Prefer this over using .child() directly
+ * because it ensures that periods will be escaped from the firebase key.
+ * @param dbRef - A firebase node
+ * @param path - a path relative to dbRef
+ * @return the firebase node at the specified path
+ */
+export function getPathRef(dbRef, path) {
+  return dbRef.child(escapeFirebaseKey(path));
+}
+
+function escapeFirebaseKey(key) {
+  return key.replace(/\./g, '%2E');
+}
+
+export function unescapeFirebaseKey(key) {
+  return key.replace(/%2E/g, '.');
+}
+
+function getFirebase(environment) {
+  let fb =
+    environment === SHARED_ENV ? sharedFirebaseCache : projectFirebaseCache;
   if (!fb) {
-    if (!config.firebaseName) {
+    if (!environment) {
       throw new Error(
         'Error connecting to Firebase: Firebase name not specified'
       );
     }
-    if (!config.firebaseAuthToken) {
-      let msg =
-        'Error connecting to Firebase: Firebase auth token not specified. ';
-      if (config.firebaseName === 'cdo-v3-dev') {
-        msg +=
-          'To use data blocks or data browser in development, you must ' +
-          'set "firebase_secret" in locals.yml to the value at ' +
-          'https://manage.chef.io/organizations/code-dot-org/environments/development/attributes ' +
-          '-> cdo-secrets';
-      }
-      throw new Error(msg);
+    const authToken =
+      environment === SHARED_ENV
+        ? config.firebaseSharedAuthToken
+        : config.firebaseAuthToken;
+    if (!authToken) {
+      throw new Error(
+        'Error connecting to Firebase: CDO.firebase_shared_secret and/or CDO.firebase_secret not specified'
+      );
     }
-    let base_url = `https://${config.firebaseName}.firebaseio.com`;
+    let base_url = `https://${environment}.firebaseio.com`;
     fb = new Firebase(base_url);
-    if (config.firebaseAuthToken) {
-      fb.authWithCustomToken(config.firebaseAuthToken, (err, user) => {
+    if (authToken) {
+      fb.authWithCustomToken(authToken, (err, user) => {
         if (err) {
           throw new Error(`error authenticating to Firebase: ${err}`);
         }
       });
     }
-    firebaseCache = fb;
+    if (environment === SHARED_ENV) {
+      sharedFirebaseCache = fb;
+    } else {
+      projectFirebaseCache = fb;
+    }
   }
   return fb;
 }
 
 export function isInitialized() {
-  return !!firebaseCache;
+  return !!projectFirebaseCache;
 }
 
 // The following characters are illegal in firebase paths: .#$[]/
-const ILLEGAL_CHARACTERS_REGEX = /[\.\$#\[\]\/]/g;
+const ILLEGAL_CHARACTERS_REGEX = /[\$#\[\]\/]/g;
 
 /**
  * Replaces illegal characters in the firebase key with dashes.
@@ -142,7 +172,7 @@ export function fixFirebaseKey(key) {
 
 /**
  * Firebase keys must be UTF-8 encoded, can be a maximum of 768 bytes, and cannot contain
- * ., $, #, [, ], /, or ASCII control characters 0-31 or 127.
+ * $, #, [, ], /, or ASCII control characters 0-31 or 127.
  * @param {string} key
  * @throws with a helpful message if the key is invalid.
  */
@@ -157,7 +187,7 @@ export function validateFirebaseKey(key) {
     if (ILLEGAL_CHARACTERS_REGEX.test(key.charAt(i))) {
       throw new Error(
         `The name "${key}" contains an illegal character "${key.charAt(i)}".` +
-          ' The characters ".", "$", "#", "[", "]", and "/" are not allowed.'
+          ' The characters "$", "#", "[", "]", and "/" are not allowed.'
       );
     }
     if (key.charCodeAt(i) < 32 || key.charCodeAt(i) === 127) {

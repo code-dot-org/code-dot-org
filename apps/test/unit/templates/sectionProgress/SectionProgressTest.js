@@ -1,8 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import sinon from 'sinon';
+import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -14,9 +17,10 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
+    sinon.stub(progressLoader, 'loadScriptProgress');
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
-      loadScript: () => {},
+      setCurrentView: () => {},
       setScriptId: () => {},
       scriptId: 1,
       section: {
@@ -32,47 +36,61 @@ describe('SectionProgress', () => {
         stages: [
           {
             id: 456,
-            levels: [{id: 789}]
+            levels: [{id: '789'}]
           }
         ],
-        excludeCsfColumnInLegend: true
+        csf: true,
+        hasStandards: true
       },
-      isLoadingProgress: false
+      isLoadingProgress: false,
+      scriptFriendlyName: 'My Script',
+      showStandardsIntroDialog: false,
+      studentLastUpdateByScript: {
+        1: Date.now()
+      }
     };
   });
 
-  it('loading data shows loading icon', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress {...DEFAULT_PROPS} isLoadingProgress={true} />
+  afterEach(() => {
+    progressLoader.loadScriptProgress.restore();
+  });
+
+  const setUp = (overrideProps = {}) => {
+    return shallow(
+      <UnconnectedSectionProgress {...DEFAULT_PROPS} {...overrideProps} />
     );
+  };
+
+  it('loading data shows loading icon', () => {
+    const wrapper = setUp({isLoadingProgress: true});
     expect(wrapper.find('#uitest-spinner').exists()).to.be.true;
   });
 
   it('done loading data does not show loading icon', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
+    const wrapper = setUp();
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('shows viewCourse link with section id', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    const backLink = wrapper.find(
-      'SmallChevronLink[link="/scripts/myscript?section_id=2"]'
-    );
-    expect(backLink.exists()).to.be.true;
+  it('renders ProgressTableView for detail and summary view only', () => {
+    let wrapper = setUp({currentView: ViewType.DETAIL});
+    expect(wrapper.find(ProgressTableView)).to.have.length(1);
+
+    wrapper = setUp({currentView: ViewType.SUMMARY});
+    expect(wrapper.find(ProgressTableView)).to.have.length(1);
+
+    wrapper = setUp({currentView: ViewType.STANDARDS});
+    expect(wrapper.find(ProgressTableView)).to.have.length(0);
   });
 
-  it('summary view shows summary view and legend', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
+  it('passes currentView to ProgressTableView', () => {
+    const wrapper = setUp({currentView: ViewType.DETAIL});
+    expect(wrapper.find(ProgressTableView).props().currentView).to.equal(
+      ViewType.DETAIL
+    );
   });
 
-  it('detail view shows detail view and legend', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-        currentView={ViewType.DETAIL}
-      />
-    );
-    expect(wrapper.find('#uitest-detail-view').exists()).to.be.true;
+  it('shows standards view', () => {
+    const wrapper = setUp({currentView: ViewType.STANDARDS});
+    expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
   });
 });

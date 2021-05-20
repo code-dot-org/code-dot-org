@@ -1,0 +1,662 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Liberty High School,IL-01-001-0020-26-0100100200001,172277002524,10152A001,Computer Operations and Programming I,unspecified,105,54,0,0,0,0,24,unspecified,unspecified
+Unity High School,IL-01-001-0040-26-0100100400001,172559002771,10152A001,Computer Operations and Programming I,unspecified,11,*,0,*,0,*,0,unspecified,unspecified
+Unity High School,IL-01-001-0040-26-0100100400001,172559002771,10152A001,Computer Operations and Programming I,unspecified,11,*,0,*,0,*,0,unspecified,unspecified
+Quincy Sr High School,IL-01-001-1720-22-0100117200003,173300005053,10152A000,Computer Programming,unspecified,49,*,0,*,0,0,12,unspecified,unspecified
+Jacksonville High School,IL-01-069-1170-22-0106911700014,172028002280,10153A000,Visual Basic (VB) Programming,unspecified,34,10,*,*,0,0,14,unspecified,unspecified
+Jacksonville High School,IL-01-069-1170-22-0106911700014,172028002280,10154A000,C++ Programming,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Jacksonville High School,IL-01-069-1170-22-0106911700014,172028002280,10157A000,AP Computer Science A,unspecified,78,30,0,*,0,0,15,unspecified,unspecified
+Pittsfield High School,IL-01-075-0100-26-0107501000009,173171003332,10152A001,Computer Operations and Programming I,unspecified,12,0,0,*,0,0,*,unspecified,unspecified
+Taylorville Sr High School,IL-03-011-0030-26-0301100300006,173870003938,10152A001,Computer Operations and Programming I,unspecified,23,*,0,0,0,0,11,unspecified,unspecified
+Taylorville Sr High School,IL-03-011-0030-26-0301100300006,173870003938,10152A002,Computer Operations and Programming II,unspecified,10,0,0,0,0,0,*,unspecified,unspecified
+Taylorville Sr High School,IL-03-011-0030-26-0301100300006,173870003938,10152A001,Computer Operations and Programming I,unspecified,23,*,0,0,0,0,11,unspecified,unspecified
+Taylorville Sr High School,IL-03-011-0030-26-0301100300006,173870003938,10152A002,Computer Operations and Programming II,unspecified,10,0,0,0,0,0,*,unspecified,unspecified
+Vandalia Community High School,IL-03-026-2030-26-0302620300001,174014004044,10161A000,AP Computer Science Principles,unspecified,38,10,0,*,0,0,12,unspecified,unspecified
+Vandalia Community High School,IL-03-026-2030-26-0302620300001,174014004044,10161A000,AP Computer Science Principles,unspecified,38,10,0,*,0,0,12,unspecified,unspecified
+Belvidere High School,IL-04-004-1000-26-0400410000001,170579000255,10157A000,AP Computer Science A,unspecified,36,*,0,13,0,0,11,unspecified,unspecified
+Auburn High School,IL-04-101-2050-25-0410120500001,173451003599,10157A000,AP Computer Science A,unspecified,47,13,*,*,0,0,17,unspecified,unspecified
+Rockford East High School,IL-04-101-2050-25-0410120500002,173451003600,10157A000,AP Computer Science A,unspecified,92,*,19,24,0,0,50,unspecified,unspecified
+Guilford High School,IL-04-101-2050-25-0410120500003,173451003577,10157A000,AP Computer Science A,unspecified,57,11,*,12,0,0,19,unspecified,unspecified
+Jefferson High School,IL-04-101-2050-25-0410120500004,173451003585,10157A000,AP Computer Science A,unspecified,76,*,12,38,0,0,37,unspecified,unspecified
+Hononegah CHD High School,IL-04-101-2070-16-0410120700001,171962002236,10152A000,Computer Programming,unspecified,46,*,0,0,0,0,11,unspecified,unspecified
+Evanston Twp High School,IL-05-016-2020-17-0501620200001,171449001804,10152A000,Computer Programming,unspecified,94,34,14,12,0,0,14,unspecified,unspecified
+Evanston Twp High School,IL-05-016-2020-17-0501620200001,171449001804,10152A001,Computer Operations and Programming I,unspecified,133,30,37,22,0,*,49,unspecified,unspecified
+Evanston Twp High School,IL-05-016-2020-17-0501620200001,171449001804,10152A002,Computer Operations and Programming II,unspecified,46,*,12,13,0,*,16,unspecified,unspecified
+Evanston Twp High School,IL-05-016-2020-17-0501620200001,171449001804,10155A000,Java Programming,unspecified,54,*,*,*,0,0,11,unspecified,unspecified
+Evanston Twp High School,IL-05-016-2020-17-0501620200001,171449001804,10157A000,AP Computer Science A,unspecified,35,*,*,*,0,0,*,unspecified,unspecified
+New Trier Township H S Winnetka,IL-05-016-2030-17-0501620300001,172820002975,10152A001,Computer Operations and Programming I,unspecified,53,*,0,*,*,0,0,unspecified,unspecified
+New Trier Township H S Winnetka,IL-05-016-2030-17-0501620300001,172820002975,10155A000,Java Programming,unspecified,118,38,0,*,0,0,*,unspecified,unspecified
+New Trier Township H S Winnetka,IL-05-016-2030-17-0501620300001,172820002975,10157A000,AP Computer Science A,unspecified,156,41,0,0,0,0,*,unspecified,unspecified
+Maine East High School,IL-05-016-2070-17-0501620700001,172409005030,10152A001,Computer Operations and Programming I,unspecified,182,19,*,36,0,0,77,unspecified,unspecified
+Maine East High School,IL-05-016-2070-17-0501620700001,172409005030,10157A000,AP Computer Science A,unspecified,46,16,0,0,0,0,12,unspecified,unspecified
+Maine East High School,IL-05-016-2070-17-0501620700001,172409005030,10161A000,AP Computer Science Principles,unspecified,44,*,*,*,0,0,22,unspecified,unspecified
+Maine South High School,IL-05-016-2070-17-0501620700003,172409005031,10152A001,Computer Operations and Programming I,unspecified,135,17,*,19,0,0,*,unspecified,unspecified
+Maine South High School,IL-05-016-2070-17-0501620700003,172409005031,10155A000,Java Programming,unspecified,39,10,0,*,0,0,*,unspecified,unspecified
+Maine South High School,IL-05-016-2070-17-0501620700003,172409005031,10157A000,AP Computer Science A,unspecified,53,10,0,*,0,0,*,unspecified,unspecified
+Maine South High School,IL-05-016-2070-17-0501620700003,172409005031,10161A000,AP Computer Science Principles,unspecified,74,*,0,*,0,0,*,unspecified,unspecified
+Maine West High School,IL-05-016-2070-17-0501620700004,172409005032,10152A001,Computer Operations and Programming I,unspecified,202,14,10,71,*,0,65,unspecified,unspecified
+Maine West High School,IL-05-016-2070-17-0501620700004,172409005032,10155A000,Java Programming,unspecified,42,*,*,14,0,0,*,unspecified,unspecified
+Maine West High School,IL-05-016-2070-17-0501620700004,172409005032,10157A000,AP Computer Science A,unspecified,53,12,0,*,0,0,*,unspecified,unspecified
+Maine West High School,IL-05-016-2070-17-0501620700004,172409005032,10161A000,AP Computer Science Principles,unspecified,34,*,0,*,0,0,*,unspecified,unspecified
+J B Conant High School,IL-05-016-2110-17-0501621100001,173045003165,10152A000,Computer Programming,unspecified,94,19,*,*,*,0,37,unspecified,unspecified
+J B Conant High School,IL-05-016-2110-17-0501621100001,173045003165,10156A000,Computer Programming—Other Language,unspecified,46,14,*,*,0,0,*,unspecified,unspecified
+J B Conant High School,IL-05-016-2110-17-0501621100001,173045003165,10157A000,AP Computer Science A,unspecified,292,99,*,11,*,0,36,unspecified,unspecified
+J B Conant High School,IL-05-016-2110-17-0501621100001,173045003165,10152A000,Computer Programming,unspecified,94,19,*,*,*,0,37,unspecified,unspecified
+J B Conant High School,IL-05-016-2110-17-0501621100001,173045003165,10156A000,Computer Programming—Other Language,unspecified,46,14,*,*,0,0,*,unspecified,unspecified
+J B Conant High School,IL-05-016-2110-17-0501621100001,173045003165,10157A000,AP Computer Science A,unspecified,292,99,*,11,*,0,36,unspecified,unspecified
+Wm Fremd High School,IL-05-016-2110-17-0501621100002,173045003168,10152A000,Computer Programming,unspecified,228,65,10,18,0,*,27,unspecified,unspecified
+Wm Fremd High School,IL-05-016-2110-17-0501621100002,173045003168,10156A000,Computer Programming—Other Language,unspecified,77,15,*,0,0,0,*,unspecified,unspecified
+Wm Fremd High School,IL-05-016-2110-17-0501621100002,173045003168,10157A000,AP Computer Science A,unspecified,525,149,*,18,*,*,35,unspecified,unspecified
+Wm Fremd High School,IL-05-016-2110-17-0501621100002,173045003168,10152A000,Computer Programming,unspecified,228,65,10,18,0,*,27,unspecified,unspecified
+Wm Fremd High School,IL-05-016-2110-17-0501621100002,173045003168,10156A000,Computer Programming—Other Language,unspecified,77,15,*,0,0,0,*,unspecified,unspecified
+Wm Fremd High School,IL-05-016-2110-17-0501621100002,173045003168,10157A000,AP Computer Science A,unspecified,525,149,*,18,*,*,35,unspecified,unspecified
+Palatine High School,IL-05-016-2110-17-0501621100003,173045003166,10152A000,Computer Programming,unspecified,80,10,0,31,0,0,48,unspecified,unspecified
+Palatine High School,IL-05-016-2110-17-0501621100003,173045003166,10157A000,AP Computer Science A,unspecified,112,12,*,16,0,0,39,unspecified,unspecified
+Palatine High School,IL-05-016-2110-17-0501621100003,173045003166,10152A000,Computer Programming,unspecified,80,10,0,31,0,0,48,unspecified,unspecified
+Palatine High School,IL-05-016-2110-17-0501621100003,173045003166,10157A000,AP Computer Science A,unspecified,112,12,*,16,0,0,39,unspecified,unspecified
+Schaumburg High School,IL-05-016-2110-17-0501621100004,173045003167,10152A000,Computer Programming,unspecified,121,34,*,25,0,0,43,unspecified,unspecified
+Schaumburg High School,IL-05-016-2110-17-0501621100004,173045003167,10156A000,Computer Programming—Other Language,unspecified,38,*,0,*,0,0,*,unspecified,unspecified
+Schaumburg High School,IL-05-016-2110-17-0501621100004,173045003167,10157A000,AP Computer Science A,unspecified,284,64,*,34,0,0,68,unspecified,unspecified
+Schaumburg High School,IL-05-016-2110-17-0501621100004,173045003167,10152A000,Computer Programming,unspecified,121,34,*,25,0,0,43,unspecified,unspecified
+Schaumburg High School,IL-05-016-2110-17-0501621100004,173045003167,10156A000,Computer Programming—Other Language,unspecified,38,*,0,*,0,0,*,unspecified,unspecified
+Schaumburg High School,IL-05-016-2110-17-0501621100004,173045003167,10157A000,AP Computer Science A,unspecified,284,64,*,34,0,0,68,unspecified,unspecified
+Hoffman Estates High School,IL-05-016-2110-17-0501621100006,173045003164,10152A000,Computer Programming,unspecified,71,19,*,14,*,0,27,unspecified,unspecified
+Hoffman Estates High School,IL-05-016-2110-17-0501621100006,173045003164,10157A000,AP Computer Science A,unspecified,172,42,*,22,0,0,54,unspecified,unspecified
+Hoffman Estates High School,IL-05-016-2110-17-0501621100006,173045003164,10152A000,Computer Programming,unspecified,71,19,*,14,*,0,27,unspecified,unspecified
+Hoffman Estates High School,IL-05-016-2110-17-0501621100006,173045003164,10157A000,AP Computer Science A,unspecified,172,42,*,22,0,0,54,unspecified,unspecified
+Elk Grove High School,IL-05-016-2140-17-0501621400002,170417000111,10152A001,Computer Operations and Programming I,unspecified,84,11,0,25,0,0,13,unspecified,unspecified
+Elk Grove High School,IL-05-016-2140-17-0501621400002,170417000111,10152A002,Computer Operations and Programming II,unspecified,51,*,*,12,0,0,*,unspecified,unspecified
+Elk Grove High School,IL-05-016-2140-17-0501621400002,170417000111,10157A000,AP Computer Science A,unspecified,23,*,*,*,0,0,*,unspecified,unspecified
+Elk Grove High School,IL-05-016-2140-17-0501621400002,170417000111,10152A001,Computer Operations and Programming I,unspecified,84,11,0,25,0,0,13,unspecified,unspecified
+Elk Grove High School,IL-05-016-2140-17-0501621400002,170417000111,10152A002,Computer Operations and Programming II,unspecified,51,*,*,12,0,0,*,unspecified,unspecified
+Elk Grove High School,IL-05-016-2140-17-0501621400002,170417000111,10157A000,AP Computer Science A,unspecified,23,*,*,*,0,0,*,unspecified,unspecified
+John Hersey High School,IL-05-016-2140-17-0501621400004,170417000113,10152A001,Computer Operations and Programming I,unspecified,36,*,0,*,0,0,*,unspecified,unspecified
+John Hersey High School,IL-05-016-2140-17-0501621400004,170417000113,10152A002,Computer Operations and Programming II,unspecified,17,*,0,0,0,0,*,unspecified,unspecified
+John Hersey High School,IL-05-016-2140-17-0501621400004,170417000113,10157A000,AP Computer Science A,unspecified,34,*,0,0,0,0,0,unspecified,unspecified
+John Hersey High School,IL-05-016-2140-17-0501621400004,170417000113,10152A001,Computer Operations and Programming I,unspecified,36,*,0,*,0,0,*,unspecified,unspecified
+John Hersey High School,IL-05-016-2140-17-0501621400004,170417000113,10152A002,Computer Operations and Programming II,unspecified,17,*,0,0,0,0,*,unspecified,unspecified
+John Hersey High School,IL-05-016-2140-17-0501621400004,170417000113,10157A000,AP Computer Science A,unspecified,34,*,0,0,0,0,0,unspecified,unspecified
+Prospect High School,IL-05-016-2140-17-0501621400005,170417000114,10152A001,Computer Operations and Programming I,unspecified,73,10,*,*,0,*,*,unspecified,unspecified
+Prospect High School,IL-05-016-2140-17-0501621400005,170417000114,10152A002,Computer Operations and Programming II,unspecified,65,12,0,*,0,0,0,unspecified,unspecified
+Prospect High School,IL-05-016-2140-17-0501621400005,170417000114,10157A000,AP Computer Science A,unspecified,48,*,0,0,0,0,0,unspecified,unspecified
+Prospect High School,IL-05-016-2140-17-0501621400005,170417000114,10152A001,Computer Operations and Programming I,unspecified,74,11,*,10,0,*,*,unspecified,unspecified
+Prospect High School,IL-05-016-2140-17-0501621400005,170417000114,10152A002,Computer Operations and Programming II,unspecified,65,12,0,*,0,0,0,unspecified,unspecified
+Prospect High School,IL-05-016-2140-17-0501621400005,170417000114,10157A000,AP Computer Science A,unspecified,48,*,0,0,0,0,0,unspecified,unspecified
+Wheeling High School,IL-05-016-2140-17-0501621400006,170417000117,10152A001,Computer Operations and Programming I,unspecified,24,*,0,15,0,0,*,unspecified,unspecified
+Wheeling High School,IL-05-016-2140-17-0501621400006,170417000117,10152A002,Computer Operations and Programming II,unspecified,44,*,0,18,0,0,*,unspecified,unspecified
+Wheeling High School,IL-05-016-2140-17-0501621400006,170417000117,10157A000,AP Computer Science A,unspecified,*,*,0,*,0,0,*,unspecified,unspecified
+Wheeling High School,IL-05-016-2140-17-0501621400006,170417000117,10152A001,Computer Operations and Programming I,unspecified,24,*,0,15,0,0,*,unspecified,unspecified
+Wheeling High School,IL-05-016-2140-17-0501621400006,170417000117,10152A002,Computer Operations and Programming II,unspecified,44,*,0,18,0,0,*,unspecified,unspecified
+Wheeling High School,IL-05-016-2140-17-0501621400006,170417000117,10157A000,AP Computer Science A,unspecified,*,*,0,*,0,0,*,unspecified,unspecified
+Rolling Meadows High School,IL-05-016-2140-17-0501621400007,170417000115,10152A001,Computer Operations and Programming I,unspecified,48,10,*,*,0,0,*,unspecified,unspecified
+Rolling Meadows High School,IL-05-016-2140-17-0501621400007,170417000115,10157A000,AP Computer Science A,unspecified,38,11,*,*,0,0,*,unspecified,unspecified
+Rolling Meadows High School,IL-05-016-2140-17-0501621400007,170417000115,10152A001,Computer Operations and Programming I,unspecified,48,10,*,*,0,0,*,unspecified,unspecified
+Rolling Meadows High School,IL-05-016-2140-17-0501621400007,170417000115,10157A000,AP Computer Science A,unspecified,38,11,*,*,0,0,*,unspecified,unspecified
+Buffalo Grove High School,IL-05-016-2140-17-0501621400008,170417000110,10152A001,Computer Operations and Programming I,unspecified,128,22,*,37,0,0,28,unspecified,unspecified
+Buffalo Grove High School,IL-05-016-2140-17-0501621400008,170417000110,10152A002,Computer Operations and Programming II,unspecified,64,17,0,15,0,0,*,unspecified,unspecified
+Buffalo Grove High School,IL-05-016-2140-17-0501621400008,170417000110,10157A000,AP Computer Science A,unspecified,58,*,0,*,0,*,*,unspecified,unspecified
+Buffalo Grove High School,IL-05-016-2140-17-0501621400008,170417000110,10152A001,Computer Operations and Programming I,unspecified,74,13,*,22,0,0,15,unspecified,unspecified
+Buffalo Grove High School,IL-05-016-2140-17-0501621400008,170417000110,10152A002,Computer Operations and Programming II,unspecified,44,12,0,10,0,0,*,unspecified,unspecified
+Buffalo Grove High School,IL-05-016-2140-17-0501621400008,170417000110,10157A000,AP Computer Science A,unspecified,58,*,0,*,0,*,*,unspecified,unspecified
+Vanguard School,IL-05-016-2140-17-0501621403005,170417001965,10152A001,Computer Operations and Programming I,unspecified,*,*,0,*,0,0,*,unspecified,unspecified
+Vanguard School,IL-05-016-2140-17-0501621403005,170417001965,10152A001,Computer Operations and Programming I,unspecified,*,*,0,*,0,0,*,unspecified,unspecified
+Niles North High School,IL-05-016-2190-17-0501621900002,172853002986,10157A000,AP Computer Science A,unspecified,112,19,*,*,*,*,22,unspecified,unspecified
+Niles West High School,IL-05-016-2190-17-0501621900003,172853002988,10157A000,AP Computer Science A,unspecified,154,29,0,11,0,0,25,unspecified,unspecified
+Glenbrook North High School,IL-05-016-2250-17-0501622500001,172901003042,10157A000,AP Computer Science A,unspecified,154,45,0,*,0,*,14,unspecified,unspecified
+Glenbrook North High School,IL-05-016-2250-17-0501622500001,172901003042,10161A000,AP Computer Science Principles,unspecified,40,12,0,*,0,0,0,unspecified,unspecified
+Glenbrook South High School,IL-05-016-2250-17-0501622500002,172901003043,10155A000,Java Programming,unspecified,52,*,0,*,*,0,*,unspecified,unspecified
+Glenbrook South High School,IL-05-016-2250-17-0501622500002,172901003043,10157A000,AP Computer Science A,unspecified,71,10,0,0,0,0,10,unspecified,unspecified
+Glenbrook South High School,IL-05-016-2250-17-0501622500002,172901003043,10161A000,AP Computer Science Principles,unspecified,87,34,0,*,0,0,13,unspecified,unspecified
+Oak Park & River Forest High Sch,IL-06-016-2000-13-0601620000001,172928003070,10152A000,Computer Programming,unspecified,64,15,14,*,0,0,17,unspecified,unspecified
+Oak Park & River Forest High Sch,IL-06-016-2000-13-0601620000001,172928003070,10157A000,AP Computer Science A,unspecified,217,65,15,18,0,0,12,unspecified,unspecified
+J Sterling Morton East High Sch,IL-06-016-2010-17-0601620100001,172688002871,10152A001,Computer Operations and Programming I,unspecified,179,14,0,176,0,0,158,unspecified,unspecified
+J Sterling Morton East High Sch,IL-06-016-2010-17-0601620100001,172688002871,10161A000,AP Computer Science Principles,unspecified,173,58,0,173,0,0,159,unspecified,unspecified
+J Sterling Morton West High Sch,IL-06-016-2010-17-0601620100002,172688002872,10152A001,Computer Operations and Programming I,unspecified,82,20,*,61,0,0,70,unspecified,unspecified
+J Sterling Morton West High Sch,IL-06-016-2010-17-0601620100002,172688002872,10161A000,AP Computer Science Principles,unspecified,51,10,0,43,0,0,39,unspecified,unspecified
+Lyons Twp High Sch,IL-06-016-2040-17-0601620400001,172388002601,10152A001,Computer Operations and Programming I,unspecified,124,21,0,36,0,0,13,unspecified,unspecified
+Lyons Twp High Sch,IL-06-016-2040-17-0601620400001,172388002601,10152A002,Computer Operations and Programming II,unspecified,218,27,*,31,*,0,14,unspecified,unspecified
+Lyons Twp High Sch,IL-06-016-2040-17-0601620400001,172388002601,10157A000,AP Computer Science A,unspecified,155,47,*,12,0,0,*,unspecified,unspecified
+Riverside Brookfield Twp HS,IL-06-016-2080-17-0601620800001,173402003496,10155A000,Java Programming,unspecified,88,23,0,31,0,0,11,unspecified,unspecified
+Proviso West High School,IL-06-016-2090-17-0601620900002,173291003407,10157A000,AP Computer Science A,unspecified,14,*,*,11,0,0,*,unspecified,unspecified
+Proviso West High School,IL-06-016-2090-17-0601620900002,173291003407,10161A000,AP Computer Science Principles,unspecified,45,21,18,23,0,0,*,unspecified,unspecified
+Proviso Math and Science Academy,IL-06-016-2090-17-0601620900003,173291005781,10155A000,Java Programming,unspecified,48,30,11,33,0,0,11,unspecified,unspecified
+Proviso Math and Science Academy,IL-06-016-2090-17-0601620900003,173291005781,10157A000,AP Computer Science A,unspecified,111,45,21,70,0,*,51,unspecified,unspecified
+East Leyden High School,IL-06-016-2120-16-0601621200001,172274002520,10152A001,Computer Operations and Programming I,unspecified,122,14,*,62,0,*,71,unspecified,unspecified
+East Leyden High School,IL-06-016-2120-16-0601621200001,172274002520,10152A002,Computer Operations and Programming II,unspecified,101,26,0,43,*,*,33,unspecified,unspecified
+East Leyden High School,IL-06-016-2120-16-0601621200001,172274002520,10161A000,AP Computer Science Principles,unspecified,54,*,0,16,0,*,23,unspecified,unspecified
+West Leyden High School,IL-06-016-2120-16-0601621200002,172274002522,10152A001,Computer Operations and Programming I,unspecified,109,12,*,88,*,0,71,unspecified,unspecified
+West Leyden High School,IL-06-016-2120-16-0601621200002,172274002522,10152A002,Computer Operations and Programming II,unspecified,53,*,0,34,0,0,30,unspecified,unspecified
+West Leyden High School,IL-06-016-2120-16-0601621200002,172274002522,10161A000,AP Computer Science Principles,unspecified,32,*,0,18,0,0,18,unspecified,unspecified
+Ridgewood Comm High School,IL-06-016-2340-16-0601623400001,173372003469,10152A001,Computer Operations and Programming I,unspecified,57,*,0,24,0,0,17,unspecified,unspecified
+Ridgewood Comm High School,IL-06-016-2340-16-0601623400001,173372003469,10152A002,Computer Operations and Programming II,unspecified,143,14,0,50,0,0,40,unspecified,unspecified
+Ridgewood Comm High School,IL-06-016-2340-16-0601623400001,173372003469,10157A000,AP Computer Science A,unspecified,53,16,0,*,0,0,16,unspecified,unspecified
+Ridgewood Comm High School,IL-06-016-2340-16-0601623400001,173372003469,10161A000,AP Computer Science Principles,unspecified,38,12,0,0,0,0,16,unspecified,unspecified
+Elmwood Park High School,IL-06-016-4010-26-0601640100001,171410001761,10157A000,AP Computer Science A,unspecified,23,*,0,*,0,0,11,unspecified,unspecified
+Thornton Township High School,IL-07-016-2050-17-0701620500001,173897003955,10152A002,Computer Operations and Programming II,unspecified,40,*,20,18,0,0,33,unspecified,unspecified
+Thornton Township High School,IL-07-016-2050-17-0701620500001,173897003955,10152A002,Computer Operations and Programming II,unspecified,40,*,20,18,0,0,33,unspecified,unspecified
+Thornridge High School,IL-07-016-2050-17-0701620500002,173897003954,10152A002,Computer Operations and Programming II,unspecified,36,*,36,0,0,0,22,unspecified,unspecified
+Thornridge High School,IL-07-016-2050-17-0701620500002,173897003954,10152A002,Computer Operations and Programming II,unspecified,36,*,36,0,0,0,22,unspecified,unspecified
+Thornwood High School,IL-07-016-2050-17-0701620500003,173897003956,10152A002,Computer Operations and Programming II,unspecified,36,*,29,*,0,0,36,unspecified,unspecified
+Thornwood High School,IL-07-016-2050-17-0701620500003,173897003956,10152A002,Computer Operations and Programming II,unspecified,36,*,29,*,0,0,36,unspecified,unspecified
+Bloom High School,IL-07-016-2060-17-0701620600001,170642000312,10161A000,AP Computer Science Principles,unspecified,23,*,*,12,0,0,19,unspecified,unspecified
+Lemont Twp High School,IL-07-016-2100-17-0701621000001,172250002508,10152A001,Computer Operations and Programming I,unspecified,29,*,0,*,0,0,*,unspecified,unspecified
+Argo Community High School,IL-07-016-2170-16-0701621700001,170402000088,10152A001,Computer Operations and Programming I,unspecified,104,11,16,45,0,0,75,unspecified,unspecified
+Argo Community High School,IL-07-016-2170-16-0701621700001,170402000088,10152A002,Computer Operations and Programming II,unspecified,29,*,*,10,0,0,17,unspecified,unspecified
+DD Eisenhower High Sch (Campus),IL-07-016-2180-16-0701621800001,170654000342,10157A000,AP Computer Science A,unspecified,60,11,*,48,0,0,48,unspecified,unspecified
+Reavis High School,IL-07-016-2200-17-0701622000001,173327003446,10156A000,Computer Programming—Other Language,unspecified,34,*,0,16,0,0,15,unspecified,unspecified
+Oak Forest High School,IL-07-016-2280-16-0701622800004,170705000366,10152A002,Computer Operations and Programming II,unspecified,49,*,*,*,0,0,16,unspecified,unspecified
+Oak Lawn Comm High School,IL-07-016-2290-16-0701622900001,172922003059,10157A000,AP Computer Science A,unspecified,24,*,0,*,0,0,*,unspecified,unspecified
+Amos Alonzo Stagg High School,IL-07-016-2300-13-0701623000002,170840000458,10161A000,AP Computer Science Principles,unspecified,41,12,0,*,0,0,*,unspecified,unspecified
+Victor J Andrew High School,IL-07-016-2300-13-0701623000003,170840000460,10161A000,AP Computer Science Principles,unspecified,40,*,0,*,0,0,*,unspecified,unspecified
+Homewood-Flossmoor High School,IL-07-016-2330-16-0701623300001,171956002235,10152A000,Computer Programming,unspecified,52,10,36,*,0,0,*,unspecified,unspecified
+Homewood-Flossmoor High School,IL-07-016-2330-16-0701623300001,171956002235,10157A000,AP Computer Science A,unspecified,20,*,*,*,0,0,*,unspecified,unspecified
+Eastland Jr/Sr High School,IL-08-008-3080-26-0800830800001,170000705083,10152A001,Computer Operations and Programming I,unspecified,23,*,0,*,0,0,11,unspecified,unspecified
+Galena High School,IL-08-043-1200-22-0804312000002,171605001912,10152A001,Computer Operations and Programming I,unspecified,*,*,0,0,0,0,0,unspecified,unspecified
+Pearl City High School,IL-08-089-2000-26-0808920000001,173102003227,10152A000,Computer Programming,unspecified,13,*,0,0,0,0,*,unspecified,unspecified
+Centennial High School,IL-09-010-0040-26-0901000400001,170942000545,10152A000,Computer Programming,unspecified,50,10,15,*,*,0,*,unspecified,unspecified
+Centennial High School,IL-09-010-0040-26-0901000400001,170942000545,10157A000,AP Computer Science A,unspecified,50,*,*,*,0,0,*,unspecified,unspecified
+Central High School,IL-09-010-0040-26-0901000400002,170942000546,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Central High School,IL-09-010-0040-26-0901000400002,170942000546,10152A001,Computer Operations and Programming I,unspecified,80,13,0,12,0,0,20,unspecified,unspecified
+Central High School,IL-09-010-0040-26-0901000400002,170942000546,10152A002,Computer Operations and Programming II,unspecified,44,*,0,*,0,0,*,unspecified,unspecified
+Central High School,IL-09-010-0040-26-0901000400002,170942000546,10152A000,Computer Programming,unspecified,55,13,10,12,0,0,*,unspecified,unspecified
+Central High School,IL-09-010-0040-26-0901000400002,170942000546,10157A000,AP Computer Science A,unspecified,58,20,0,*,0,0,*,unspecified,unspecified
+Urbana High School,IL-09-010-1160-22-0901011600001,173996004015,10154A000,C++ Programming,unspecified,10,0,*,*,0,0,*,unspecified,unspecified
+Urbana High School,IL-09-010-1160-22-0901011600001,173996004015,10154A000,C++ Programming,unspecified,10,0,*,*,0,0,*,unspecified,unspecified
+Casey-Westfield Jr/Sr HS,IL-11-012-004C-26-11012004C0001,170000205087,10152A001,Computer Operations and Programming I,unspecified,16,*,0,0,0,0,10,unspecified,unspecified
+Charleston High School,IL-11-015-0010-26-1101500100001,170960000567,10152A001,Computer Operations and Programming I,unspecified,32,*,*,*,*,0,15,unspecified,unspecified
+Tuscola High School,IL-11-021-3010-26-1102130100001,173960004001,10152A001,Computer Operations and Programming I,unspecified,10,*,0,0,0,0,*,unspecified,unspecified
+Tuscola High School,IL-11-021-3010-26-1102130100001,173960004001,10152A001,Computer Operations and Programming I,unspecified,10,*,0,0,0,0,*,unspecified,unspecified
+Central A & M High School,IL-11-087-0210-26-1108702100001,170910002875,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Newton Comm High School,IL-12-040-0010-26-1204000100001,172038002299,10152A001,Computer Operations and Programming I,unspecified,35,*,0,*,0,0,15,unspecified,unspecified
+Newton Comm High School,IL-12-040-0010-26-1204000100001,172038002299,10152A002,Computer Operations and Programming II,unspecified,24,*,0,0,0,0,12,unspecified,unspecified
+Central Comm High School,IL-13-014-0710-16-1301407100001,170477000176,10152A001,Computer Operations and Programming I,unspecified,24,*,0,*,0,0,*,unspecified,unspecified
+Waltonville High School,IL-13-041-0010-26-1304100100001,174065004087,10152A001,Computer Operations and Programming I,unspecified,11,*,0,0,0,0,*,unspecified,unspecified
+Waltonville High School,IL-13-041-0010-26-1304100100001,174065004087,10152A001,Computer Operations and Programming I,unspecified,11,*,0,0,0,0,*,unspecified,unspecified
+Amundsen High School,IL-15-016-2990-25-1501629900001,170993000587,10152A000,Computer Programming,unspecified,428,183,44,248,*,*,330,unspecified,unspecified
+Amundsen High School,IL-15-016-2990-25-1501629900001,170993000587,10152A001,Computer Operations and Programming I,unspecified,51,22,14,28,0,0,42,unspecified,unspecified
+Amundsen High School,IL-15-016-2990-25-1501629900001,170993000587,10152A002,Computer Operations and Programming II,unspecified,35,10,12,17,0,0,29,unspecified,unspecified
+Carver Military Academy HS,IL-15-016-2990-25-1501629900006,170993000671,10152A000,Computer Programming,unspecified,298,140,104,187,0,0,271,unspecified,unspecified
+Farragut Career Academy HS,IL-15-016-2990-25-1501629900011,170993000788,10152A000,Computer Programming,unspecified,478,188,65,409,*,0,468,unspecified,unspecified
+Fenger Academy High School,IL-15-016-2990-25-1501629900012,170993000792,10152A000,Computer Programming,unspecified,139,67,132,*,0,*,130,unspecified,unspecified
+Foreman High School,IL-15-016-2990-25-1501629900013,170993000799,10152A000,Computer Programming,unspecified,381,201,114,252,*,0,355,unspecified,unspecified
+Back of The Yards IB HS,IL-15-016-2990-25-1501629900014,170993006282,10152A000,Computer Programming,unspecified,352,175,*,324,0,0,328,unspecified,unspecified
+Back of The Yards IB HS,IL-15-016-2990-25-1501629900014,170993006282,10157A000,AP Computer Science A,unspecified,126,65,*,115,0,0,121,unspecified,unspecified
+Gage Park High School,IL-15-016-2990-25-1501629900015,170993000809,10152A000,Computer Programming,unspecified,241,95,111,128,0,0,237,unspecified,unspecified
+Harlan Community Academy HS,IL-15-016-2990-25-1501629900016,170993000851,10152A000,Computer Programming,unspecified,67,36,65,*,0,0,63,unspecified,unspecified
+Harper High School,IL-15-016-2990-25-1501629900017,170993000852,10152A000,Computer Programming,unspecified,44,20,42,*,0,0,43,unspecified,unspecified
+Hirsch Metropolitan High School,IL-15-016-2990-25-1501629900019,170993000879,10152A000,Computer Programming,unspecified,153,66,146,0,*,0,147,unspecified,unspecified
+Hubbard High School,IL-15-016-2990-25-1501629900020,170993000889,10152A000,Computer Programming,unspecified,276,108,29,238,*,0,263,unspecified,unspecified
+Hubbard High School,IL-15-016-2990-25-1501629900020,170993000889,10152A001,Computer Operations and Programming I,unspecified,102,11,13,83,*,0,100,unspecified,unspecified
+Hubbard High School,IL-15-016-2990-25-1501629900020,170993000889,10152A002,Computer Operations and Programming II,unspecified,24,*,*,18,0,0,22,unspecified,unspecified
+Hubbard High School,IL-15-016-2990-25-1501629900020,170993000889,10157A000,AP Computer Science A,unspecified,61,24,*,57,0,0,60,unspecified,unspecified
+Hyde Park Academy High School,IL-15-016-2990-25-1501629900021,170993000893,10152A000,Computer Programming,unspecified,187,84,182,*,0,0,179,unspecified,unspecified
+Kennedy High School,IL-15-016-2990-25-1501629900024,170993000924,10152A000,Computer Programming,unspecified,851,440,30,638,15,*,551,unspecified,unspecified
+Kenwood Academy High School,IL-15-016-2990-25-1501629900025,170993000925,10152A000,Computer Programming,unspecified,668,356,569,31,*,0,440,unspecified,unspecified
+Lake View High School,IL-15-016-2990-25-1501629900026,170993000941,10152A000,Computer Programming,unspecified,404,193,58,267,*,0,289,unspecified,unspecified
+Lane Technical High School,IL-15-016-2990-25-1501629900027,170993000942,10152A000,Computer Programming,unspecified,3012,1085,213,1204,14,10,1322,unspecified,unspecified
+Lane Technical High School,IL-15-016-2990-25-1501629900027,170993000942,10157A000,AP Computer Science A,unspecified,442,186,22,176,0,*,218,unspecified,unspecified
+Marshall Metropolitan High School,IL-15-016-2990-25-1501629900029,170993000972,10152A000,Computer Programming,unspecified,127,56,125,*,0,0,125,unspecified,unspecified
+Mather High School,IL-15-016-2990-25-1501629900030,170993000977,10152A000,Computer Programming,unspecified,552,234,100,222,0,*,493,unspecified,unspecified
+Mather High School,IL-15-016-2990-25-1501629900030,170993000977,10152A001,Computer Operations and Programming I,unspecified,50,*,*,10,0,0,46,unspecified,unspecified
+Mather High School,IL-15-016-2990-25-1501629900030,170993000977,10152A002,Computer Operations and Programming II,unspecified,59,19,*,20,0,0,47,unspecified,unspecified
+Mather High School,IL-15-016-2990-25-1501629900030,170993000977,10157A000,AP Computer Science A,unspecified,82,24,*,22,0,0,66,unspecified,unspecified
+Morgan Park High School,IL-15-016-2990-25-1501629900031,170993001002,10152A000,Computer Programming,unspecified,355,191,348,*,0,0,302,unspecified,unspecified
+Morgan Park High School,IL-15-016-2990-25-1501629900031,170993001002,10152A001,Computer Operations and Programming I,unspecified,72,36,70,0,0,0,65,unspecified,unspecified
+Phillips Academy High School,IL-15-016-2990-25-1501629900034,170993001061,10152A000,Computer Programming,unspecified,381,181,369,10,0,0,360,unspecified,unspecified
+Roosevelt High School,IL-15-016-2990-25-1501629900035,170993001093,10152A000,Computer Programming,unspecified,92,36,*,58,*,*,87,unspecified,unspecified
+Roosevelt High School,IL-15-016-2990-25-1501629900035,170993001093,10152A001,Computer Operations and Programming I,unspecified,39,*,*,26,0,0,34,unspecified,unspecified
+Roosevelt High School,IL-15-016-2990-25-1501629900035,170993001093,10152A002,Computer Operations and Programming II,unspecified,37,*,*,27,0,0,33,unspecified,unspecified
+Schurz High School,IL-15-016-2990-25-1501629900036,170993001111,10152A000,Computer Programming,unspecified,73,32,*,61,0,0,67,unspecified,unspecified
+Senn High School,IL-15-016-2990-25-1501629900037,170993001114,10152A000,Computer Programming,unspecified,597,228,175,263,0,*,518,unspecified,unspecified
+Senn High School,IL-15-016-2990-25-1501629900037,170993001114,10152A001,Computer Operations and Programming I,unspecified,38,*,*,28,0,0,34,unspecified,unspecified
+Senn High School,IL-15-016-2990-25-1501629900037,170993001114,10152A002,Computer Operations and Programming II,unspecified,36,12,*,22,0,0,30,unspecified,unspecified
+King College Prep High School,IL-15-016-2990-25-1501629900039,170993000931,10152A000,Computer Programming,unspecified,209,104,202,*,0,0,173,unspecified,unspecified
+King College Prep High School,IL-15-016-2990-25-1501629900039,170993000931,10157A000,AP Computer Science A,unspecified,58,40,58,0,0,0,40,unspecified,unspecified
+Steinmetz College Prep HS,IL-15-016-2990-25-1501629900041,170993001139,10152A000,Computer Programming,unspecified,1372,629,242,962,*,0,1172,unspecified,unspecified
+Sullivan High School,IL-15-016-2990-25-1501629900042,170993001149,10152A000,Computer Programming,unspecified,120,45,37,35,0,0,107,unspecified,unspecified
+Taft High School,IL-15-016-2990-25-1501629900043,170993001153,10152A000,Computer Programming,unspecified,1587,737,38,695,0,*,857,unspecified,unspecified
+Von Steuben Metro Science HS,IL-15-016-2990-25-1501629900046,170993001180,10152A000,Computer Programming,unspecified,689,371,79,400,*,0,485,unspecified,unspecified
+Von Steuben Metro Science HS,IL-15-016-2990-25-1501629900046,170993001180,10152A001,Computer Operations and Programming I,unspecified,178,46,*,108,*,*,119,unspecified,unspecified
+Von Steuben Metro Science HS,IL-15-016-2990-25-1501629900046,170993001180,10152A002,Computer Operations and Programming II,unspecified,56,*,*,28,0,0,40,unspecified,unspecified
+Lincoln Park High School,IL-15-016-2990-25-1501629900047,170993001185,10152A000,Computer Programming,unspecified,806,358,174,262,*,0,422,unspecified,unspecified
+Lincoln Park High School,IL-15-016-2990-25-1501629900047,170993001185,10157A000,AP Computer Science A,unspecified,40,*,*,*,0,0,24,unspecified,unspecified
+Washington G High School,IL-15-016-2990-25-1501629900048,170993001189,10152A000,Computer Programming,unspecified,519,241,28,465,*,0,459,unspecified,unspecified
+Washington G High School,IL-15-016-2990-25-1501629900048,170993001189,10152A001,Computer Operations and Programming I,unspecified,58,16,0,52,0,0,52,unspecified,unspecified
+Washington G High School,IL-15-016-2990-25-1501629900048,170993001189,10152A002,Computer Operations and Programming II,unspecified,57,*,*,49,0,0,51,unspecified,unspecified
+Wells Community Academy HS,IL-15-016-2990-25-1501629900049,170993001192,10152A000,Computer Programming,unspecified,197,85,92,96,0,0,177,unspecified,unspecified
+Wells Community Academy HS,IL-15-016-2990-25-1501629900049,170993001192,10152A001,Computer Operations and Programming I,unspecified,87,18,38,41,0,0,76,unspecified,unspecified
+Wells Community Academy HS,IL-15-016-2990-25-1501629900049,170993001192,10152A002,Computer Operations and Programming II,unspecified,36,*,12,20,0,0,34,unspecified,unspecified
+Crane Medical Prep HS,IL-15-016-2990-25-1501629900052,170993006260,10152A000,Computer Programming,unspecified,240,166,186,48,0,*,210,unspecified,unspecified
+Disney II Magnet HS,IL-15-016-2990-25-1501629900053,170993006250,10152A000,Computer Programming,unspecified,241,115,48,132,0,0,146,unspecified,unspecified
+Disney II Magnet HS,IL-15-016-2990-25-1501629900053,170993006250,10157A000,AP Computer Science A,unspecified,41,10,*,24,0,0,16,unspecified,unspecified
+EPIC Academy High School,IL-15-016-2990-25-150162990015C,170993006088,10152A000,Computer Programming,unspecified,102,39,55,43,0,0,100,unspecified,unspecified
+Intrinsic Charter High School,IL-15-016-2990-25-150162990022C,170993006293,10152A000,Computer Programming,unspecified,882,434,41,808,0,0,725,unspecified,unspecified
+Noble St Chtr-Noble Campus,IL-15-016-2990-25-150162990041C,170993006470,10155A000,Java Programming,unspecified,12,*,*,*,0,0,11,unspecified,unspecified
+Chicago Vocational Career Acad HS,IL-15-016-2990-25-1501629900526,170993000943,10152A000,Computer Programming,unspecified,350,160,336,10,0,0,331,unspecified,unspecified
+Chicago Vocational Career Acad HS,IL-15-016-2990-25-1501629900526,170993000943,10157A000,AP Computer Science A,unspecified,12,*,12,0,0,0,10,unspecified,unspecified
+Jones College Prep High School,IL-15-016-2990-25-1501629900533,170993000990,10152A000,Computer Programming,unspecified,160,90,31,65,0,0,83,unspecified,unspecified
+Jones College Prep High School,IL-15-016-2990-25-1501629900533,170993000990,10157A000,AP Computer Science A,unspecified,568,250,64,129,10,*,206,unspecified,unspecified
+Prosser Career Academy HS,IL-15-016-2990-25-1501629900534,170993000681,10152A000,Computer Programming,unspecified,34,13,13,17,0,0,34,unspecified,unspecified
+Prosser Career Academy HS,IL-15-016-2990-25-1501629900534,170993000681,10152A001,Computer Operations and Programming I,unspecified,51,22,11,36,0,0,49,unspecified,unspecified
+Prosser Career Academy HS,IL-15-016-2990-25-1501629900534,170993000681,10152A002,Computer Operations and Programming II,unspecified,38,20,14,22,0,0,34,unspecified,unspecified
+Richards Career Academy HS,IL-15-016-2990-25-1501629900536,170993000718,10152A000,Computer Programming,unspecified,61,33,26,34,0,0,59,unspecified,unspecified
+Manley Career Academy High School,IL-15-016-2990-25-1501629900616,170993001125,10152A000,Computer Programming,unspecified,52,28,48,*,0,0,52,unspecified,unspecified
+Curie Metropolitan High School,IL-15-016-2990-25-1501629900617,170993001198,10152A000,Computer Programming,unspecified,1435,723,157,1222,*,0,1297,unspecified,unspecified
+Curie Metropolitan High School,IL-15-016-2990-25-1501629900617,170993001198,10152A001,Computer Operations and Programming I,unspecified,56,12,*,48,0,0,52,unspecified,unspecified
+Curie Metropolitan High School,IL-15-016-2990-25-1501629900617,170993001198,10152A002,Computer Operations and Programming II,unspecified,56,*,*,44,0,0,42,unspecified,unspecified
+Curie Metropolitan High School,IL-15-016-2990-25-1501629900617,170993001198,10157A000,AP Computer Science A,unspecified,52,25,*,48,0,0,45,unspecified,unspecified
+Julian High School,IL-15-016-2990-25-1501629900763,170993000895,10152A000,Computer Programming,unspecified,161,63,159,*,0,0,140,unspecified,unspecified
+Julian High School,IL-15-016-2990-25-1501629900763,170993000895,10152A002,Computer Operations and Programming II,unspecified,32,*,32,0,0,0,28,unspecified,unspecified
+Young Magnet High School,IL-15-016-2990-25-1501629900764,170993000714,10152A000,Computer Programming,unspecified,722,342,142,173,*,10,275,unspecified,unspecified
+Young Magnet High School,IL-15-016-2990-25-1501629900764,170993000714,10157A000,AP Computer Science A,unspecified,149,61,20,22,0,0,46,unspecified,unspecified
+Juarez Community Academy HS,IL-15-016-2990-25-1501629900767,170993000722,10152A000,Computer Programming,unspecified,554,256,14,524,0,0,505,unspecified,unspecified
+Juarez Community Academy HS,IL-15-016-2990-25-1501629900767,170993000722,10152A001,Computer Operations and Programming I,unspecified,66,12,*,58,0,0,58,unspecified,unspecified
+Juarez Community Academy HS,IL-15-016-2990-25-1501629900767,170993000722,10152A002,Computer Operations and Programming II,unspecified,61,*,*,55,0,0,57,unspecified,unspecified
+Hancock College Preparatory HS,IL-15-016-2990-25-1501629900779,170993001980,10152A000,Computer Programming,unspecified,371,204,*,350,0,0,290,unspecified,unspecified
+Hancock College Preparatory HS,IL-15-016-2990-25-1501629900779,170993001980,10152A002,Computer Operations and Programming II,unspecified,59,23,*,53,0,0,47,unspecified,unspecified
+Brooks College Prep Academy HS,IL-15-016-2990-25-1501629900788,170993002031,10152A000,Computer Programming,unspecified,178,96,138,36,0,0,119,unspecified,unspecified
+Brooks College Prep Academy HS,IL-15-016-2990-25-1501629900788,170993002031,10157A000,AP Computer Science A,unspecified,150,50,113,34,0,0,98,unspecified,unspecified
+Northside College Preparatory Hs,IL-15-016-2990-25-1501629900794,170993003481,10152A001,Computer Operations and Programming I,unspecified,265,120,25,66,0,*,119,unspecified,unspecified
+Northside College Preparatory Hs,IL-15-016-2990-25-1501629900794,170993003481,10157A000,AP Computer Science A,unspecified,61,14,*,12,*,0,18,unspecified,unspecified
+Chicago Military Academy HS,IL-15-016-2990-25-1501629900795,170993003487,10152A000,Computer Programming,unspecified,168,81,95,71,0,0,126,unspecified,unspecified
+Chicago Military Academy HS,IL-15-016-2990-25-1501629900795,170993003487,10157A000,AP Computer Science A,unspecified,48,26,36,12,0,0,42,unspecified,unspecified
+Payton College Preparatory HS,IL-15-016-2990-25-1501629900796,170993003989,10152A000,Computer Programming,unspecified,75,48,10,35,0,0,36,unspecified,unspecified
+Payton College Preparatory HS,IL-15-016-2990-25-1501629900796,170993003989,10157A000,AP Computer Science A,unspecified,468,206,34,102,*,*,164,unspecified,unspecified
+Phoenix Military Academy HS,IL-15-016-2990-25-1501629900803,170993004715,10152A000,Computer Programming,unspecified,277,124,64,213,0,0,255,unspecified,unspecified
+Spry Community Links High School,IL-15-016-2990-25-1501629900818,170993005677,10152A000,Computer Programming,unspecified,114,38,0,108,*,0,111,unspecified,unspecified
+Chicago Academy High School,IL-15-016-2990-25-1501629900820,170993005061,10152A000,Computer Programming,unspecified,332,183,16,235,*,0,268,unspecified,unspecified
+Chicago Academy High School,IL-15-016-2990-25-1501629900820,170993005061,10152A002,Computer Operations and Programming II,unspecified,64,29,*,46,0,0,54,unspecified,unspecified
+Chicago Academy High School,IL-15-016-2990-25-1501629900820,170993005061,10157A000,AP Computer Science A,unspecified,58,28,*,28,0,*,52,unspecified,unspecified
+Bowen High School,IL-15-016-2990-25-1501629900824,170993005072,10152A000,Computer Programming,unspecified,191,82,160,28,0,*,174,unspecified,unspecified
+North-Grand High School,IL-15-016-2990-25-1501629900825,170993005074,10152A000,Computer Programming,unspecified,255,115,44,207,*,0,239,unspecified,unspecified
+Rickover Naval Academy High Schl,IL-15-016-2990-25-1501629900828,170993005078,10152A000,Computer Programming,unspecified,243,100,16,197,0,0,208,unspecified,unspecified
+Uplift Community High School,IL-15-016-2990-25-1501629900829,170993005787,10152A000,Computer Programming,unspecified,40,18,32,*,0,0,36,unspecified,unspecified
+CICS - Northtown Campus,IL-15-016-2990-25-150162990082C,170993006500,10152A000,Computer Programming,unspecified,73,15,*,29,0,0,53,unspecified,unspecified
+World Language High School,IL-15-016-2990-25-1501629900830,170993005788,10152A000,Computer Programming,unspecified,167,83,16,147,0,0,161,unspecified,unspecified
+Douglass Academy High School,IL-15-016-2990-25-1501629900831,170993005789,10152A000,Computer Programming,unspecified,42,22,38,*,0,0,36,unspecified,unspecified
+Lindblom Math & Science Acad HS,IL-15-016-2990-25-1501629900833,170993005791,10152A001,Computer Operations and Programming I,unspecified,67,*,43,20,0,0,47,unspecified,unspecified
+Lindblom Math & Science Acad HS,IL-15-016-2990-25-1501629900833,170993005791,10152A002,Computer Operations and Programming II,unspecified,44,*,24,17,*,0,27,unspecified,unspecified
+Bronzeville Scholastic HS,IL-15-016-2990-25-1501629900834,170993005792,10152A000,Computer Programming,unspecified,150,75,148,*,0,0,117,unspecified,unspecified
+School of Social Justice HS,IL-15-016-2990-25-1501629900835,170993005793,10152A000,Computer Programming,unspecified,946,527,151,787,0,0,938,unspecified,unspecified
+Infinity Math Science & Tech HS,IL-15-016-2990-25-1501629900837,170993005795,10152A000,Computer Programming,unspecified,215,91,*,209,0,0,211,unspecified,unspecified
+Infinity Math Science & Tech HS,IL-15-016-2990-25-1501629900837,170993005795,10157A000,AP Computer Science A,unspecified,89,32,0,89,0,0,83,unspecified,unspecified
+Orr Academy High School,IL-15-016-2990-25-1501629900847,170993005983,10152A000,Computer Programming,unspecified,132,59,112,16,0,*,118,unspecified,unspecified
+Air Force Acad High School,IL-15-016-2990-25-1501629900848,170993006055,10152A000,Computer Programming,unspecified,137,51,42,81,0,0,118,unspecified,unspecified
+Chicago Technology Academy HS,IL-15-016-2990-25-1501629900850,170993006076,10152A001,Computer Operations and Programming I,unspecified,170,50,121,39,0,0,148,unspecified,unspecified
+Chicago Technology Academy HS,IL-15-016-2990-25-1501629900850,170993006076,10152A002,Computer Operations and Programming II,unspecified,12,0,*,0,0,0,*,unspecified,unspecified
+Chicago Technology Academy HS,IL-15-016-2990-25-1501629900850,170993006076,10157A000,AP Computer Science A,unspecified,15,*,*,*,0,0,13,unspecified,unspecified
+Ogden Int High School,IL-15-016-2990-25-1501629900855,170993006093,10152A000,Computer Programming,unspecified,272,145,129,85,*,0,167,unspecified,unspecified
+Williams Medical Prep High Sch,IL-15-016-2990-25-1501629900856,170993006092,10152A000,Computer Programming,unspecified,150,100,150,0,0,0,144,unspecified,unspecified
+Westinghouse High School,IL-15-016-2990-25-1501629900857,170993006083,10152A000,Computer Programming,unspecified,543,316,260,241,0,0,441,unspecified,unspecified
+Solorio Academy High School,IL-15-016-2990-25-1501629900859,170993006138,10152A000,Computer Programming,unspecified,398,162,18,376,0,0,363,unspecified,unspecified
+Solorio Academy High School,IL-15-016-2990-25-1501629900859,170993006138,10157A000,AP Computer Science A,unspecified,105,47,*,101,0,0,99,unspecified,unspecified
+South Shore Intl Col Prep HS,IL-15-016-2990-25-1501629900860,170993006170,10152A000,Computer Programming,unspecified,151,79,147,*,0,0,126,unspecified,unspecified
+Goode STEM Academy HS,IL-15-016-2990-25-1501629900861,170993006223,10152A000,Computer Programming,unspecified,301,152,105,190,*,0,256,unspecified,unspecified
+Goode STEM Academy HS,IL-15-016-2990-25-1501629900861,170993006223,10155A000,Java Programming,unspecified,45,21,20,24,0,0,32,unspecified,unspecified
+Marine Leadership Academy - Ames,IL-15-016-2990-25-1501629902912,170993002618,10152A000,Computer Programming,unspecified,335,181,*,322,0,0,314,unspecified,unspecified
+Simpson Acad HS for Young Women,IL-15-016-2990-25-1501629903732,170993004383,10152A000,Computer Programming,unspecified,34,34,24,10,0,0,34,unspecified,unspecified
+Peace and Education Coalition HS,IL-15-016-2990-25-1501629903784,170993002596,10152A000,Computer Programming,unspecified,27,16,13,14,0,0,22,unspecified,unspecified
+Sycamore High School,IL-16-019-4270-26-1601942700001,173846003922,10152A000,Computer Programming,unspecified,105,11,*,*,0,0,16,unspecified,unspecified
+Sycamore High School,IL-16-019-4270-26-1601942700001,173846003922,10152A000,Computer Programming,unspecified,105,11,*,*,0,0,16,unspecified,unspecified
+DeKalb High School,IL-16-019-4280-26-1601942800011,171200001449,10152A000,Computer Programming,unspecified,27,*,*,*,0,0,*,unspecified,unspecified
+DeKalb High School,IL-16-019-4280-26-1601942800011,171200001449,10152A002,Computer Operations and Programming II,unspecified,*,*,0,*,0,0,*,unspecified,unspecified
+Hinckley-Big Rock High School,IL-16-019-4290-26-1601942900003,171926002213,10156A000,Computer Programming—Other Language,unspecified,18,*,0,*,0,0,0,unspecified,unspecified
+Prairie Central High School,IL-17-053-0080-26-1705300800001,170000505126,10152A001,Computer Operations and Programming I,unspecified,14,*,*,0,0,0,*,unspecified,unspecified
+Prairie Central High School,IL-17-053-0080-26-1705300800001,170000505126,10161A000,AP Computer Science Principles,unspecified,39,17,0,*,0,0,11,unspecified,unspecified
+Pontiac High School,IL-17-053-0900-17-1705309000001,173222003369,10152A001,Computer Operations and Programming I,unspecified,18,*,*,0,0,0,*,unspecified,unspecified
+Dwight High School,IL-17-053-2300-17-1705323000001,171287001538,10152A001,Computer Operations and Programming I,unspecified,*,*,0,0,0,0,*,unspecified,unspecified
+LeRoy High School,IL-17-064-0020-26-1706400200003,172262002514,10152A001,Computer Operations and Programming I,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Tri-Valley High School,IL-17-064-0030-26-1706400300002,171392001736,10152A001,Computer Operations and Programming I,unspecified,44,*,0,*,0,0,*,unspecified,unspecified
+Tri-Valley High School,IL-17-064-0030-26-1706400300002,171392001736,10152A002,Computer Operations and Programming II,unspecified,*,0,0,*,0,0,0,unspecified,unspecified
+Tri-Valley High School,IL-17-064-0030-26-1706400300002,171392001736,10152A001,Computer Operations and Programming I,unspecified,44,*,0,*,0,0,*,unspecified,unspecified
+Tri-Valley High School,IL-17-064-0030-26-1706400300002,171392001736,10152A002,Computer Operations and Programming II,unspecified,*,0,0,*,0,0,0,unspecified,unspecified
+Heyworth Jr-Sr High School,IL-17-064-0040-26-1706400400001,171887002174,10152A001,Computer Operations and Programming I,unspecified,13,*,0,*,0,0,*,unspecified,unspecified
+Heyworth Jr-Sr High School,IL-17-064-0040-26-1706400400001,171887002174,10152A002,Computer Operations and Programming II,unspecified,13,*,0,*,0,0,*,unspecified,unspecified
+Normal Community High School,IL-17-064-0050-26-1706400500001,172862003002,10152A000,Computer Programming,unspecified,170,45,15,*,*,0,23,unspecified,unspecified
+Normal Community High School,IL-17-064-0050-26-1706400500001,172862003002,10157A000,AP Computer Science A,unspecified,147,27,*,*,0,0,*,unspecified,unspecified
+Normal Community West High School,IL-17-064-0050-26-1706400500002,172862001386,10152A000,Computer Programming,unspecified,83,14,*,0,0,0,19,unspecified,unspecified
+Normal Community West High School,IL-17-064-0050-26-1706400500002,172862001386,10157A000,AP Computer Science A,unspecified,125,30,*,10,0,0,12,unspecified,unspecified
+Chiddix Jr High School,IL-17-064-0050-26-1706400501002,172862002996,10152A000,Computer Programming,unspecified,55,14,*,*,0,0,*,unspecified,unspecified
+Parkside Jr High School,IL-17-064-0050-26-1706400501003,172862003004,10152A000,Computer Programming,unspecified,55,13,*,*,0,0,13,unspecified,unspecified
+Kingsley Jr High School,IL-17-064-0050-26-1706400501004,172862005695,10152A000,Computer Programming,unspecified,58,17,*,*,0,0,15,unspecified,unspecified
+Evans Junior High School,IL-17-064-0050-26-1706400501005,172862006180,10152A000,Computer Programming,unspecified,43,22,*,*,0,0,12,unspecified,unspecified
+Olympia High School,IL-17-064-0160-26-1706401600009,172989003096,10152A001,Computer Operations and Programming I,unspecified,47,17,0,*,0,0,15,unspecified,unspecified
+Olympia High School,IL-17-064-0160-26-1706401600009,172989003096,10152A002,Computer Operations and Programming II,unspecified,17,*,0,*,0,0,*,unspecified,unspecified
+Ridgeview High School,IL-17-064-0190-26-1706401900001,170010905366,10152A001,Computer Operations and Programming I,unspecified,18,*,0,*,0,0,*,unspecified,unspecified
+Bloomington High School,IL-17-064-0870-25-1706408700001,170648000318,10157A000,AP Computer Science A,unspecified,43,*,*,*,0,0,*,unspecified,unspecified
+Hinsdale Central High School,IL-19-022-0860-17-1902208600001,171932002222,10157A000,AP Computer Science A,unspecified,297,101,*,10,0,0,*,unspecified,unspecified
+Glenbard East High School,IL-19-022-0870-17-1902208700001,171683001988,10152A001,Computer Operations and Programming I,unspecified,60,15,*,10,*,0,28,unspecified,unspecified
+Glenbard East High School,IL-19-022-0870-17-1902208700001,171683001988,10157A000,AP Computer Science A,unspecified,80,14,11,11,0,0,21,unspecified,unspecified
+Glenbard North High School,IL-19-022-0870-17-1902208700002,171683001989,10152A000,Computer Programming,unspecified,21,*,*,*,0,0,*,unspecified,unspecified
+Glenbard North High School,IL-19-022-0870-17-1902208700002,171683001989,10152A001,Computer Operations and Programming I,unspecified,63,*,*,*,0,0,17,unspecified,unspecified
+Glenbard North High School,IL-19-022-0870-17-1902208700002,171683001989,10157A000,AP Computer Science A,unspecified,86,*,0,*,0,0,32,unspecified,unspecified
+Glenbard West High School,IL-19-022-0870-17-1902208700003,171683001991,10152A000,Computer Programming,unspecified,23,*,0,0,0,0,*,unspecified,unspecified
+Glenbard West High School,IL-19-022-0870-17-1902208700003,171683001991,10152A001,Computer Operations and Programming I,unspecified,66,10,*,*,0,0,19,unspecified,unspecified
+Glenbard West High School,IL-19-022-0870-17-1902208700003,171683001991,10157A000,AP Computer Science A,unspecified,254,45,*,17,0,0,42,unspecified,unspecified
+Glenbard South High School,IL-19-022-0870-17-1902208700004,171683001990,10152A001,Computer Operations and Programming I,unspecified,27,*,*,*,0,0,*,unspecified,unspecified
+Glenbard South High School,IL-19-022-0870-17-1902208700004,171683001990,10157A000,AP Computer Science A,unspecified,41,*,*,*,0,0,*,unspecified,unspecified
+Addison Trail High School,IL-19-022-0880-16-1902208800001,171394001737,10152A000,Computer Programming,unspecified,114,*,0,53,*,0,54,unspecified,unspecified
+Addison Trail High School,IL-19-022-0880-16-1902208800001,171394001737,10152A001,Computer Operations and Programming I,unspecified,*,0,0,*,0,0,*,unspecified,unspecified
+Willowbrook High School,IL-19-022-0880-16-1902208800002,171394001738,10152A000,Computer Programming,unspecified,96,19,*,17,0,0,41,unspecified,unspecified
+Willowbrook High School,IL-19-022-0880-16-1902208800002,171394001738,10157A000,AP Computer Science A,unspecified,52,*,0,*,0,0,15,unspecified,unspecified
+Community High School,IL-19-022-0940-16-1902209400001,174044004071,10157A000,AP Computer Science A,unspecified,93,23,0,60,0,0,37,unspecified,unspecified
+Comm H S Dist 99 - North H S,IL-19-022-0990-16-1902209900001,171257001518,10152A001,Computer Operations and Programming I,unspecified,63,*,*,*,0,0,14,unspecified,unspecified
+Comm H S Dist 99 - North H S,IL-19-022-0990-16-1902209900001,171257001518,10152A002,Computer Operations and Programming II,unspecified,24,*,0,*,0,0,*,unspecified,unspecified
+Comm H S Dist 99 - North H S,IL-19-022-0990-16-1902209900001,171257001518,10157A000,AP Computer Science A,unspecified,71,12,0,*,0,0,*,unspecified,unspecified
+Comm H S Dist 99 - South High Sch,IL-19-022-0990-16-1902209900002,171257001519,10152A001,Computer Operations and Programming I,unspecified,80,15,11,13,0,0,22,unspecified,unspecified
+Comm H S Dist 99 - South High Sch,IL-19-022-0990-16-1902209900002,171257001519,10152A002,Computer Operations and Programming II,unspecified,23,*,0,*,0,0,*,unspecified,unspecified
+Comm H S Dist 99 - South High Sch,IL-19-022-0990-16-1902209900002,171257001519,10157A000,AP Computer Science A,unspecified,138,38,*,10,0,0,14,unspecified,unspecified
+Fenton High School,IL-19-022-1000-16-1902210000001,171503001832,10161A000,AP Computer Science Principles,unspecified,59,25,0,37,0,0,29,unspecified,unspecified
+Lake Park High School,IL-19-022-1080-16-1902210800001,172184002454,10152A001,Computer Operations and Programming I,unspecified,44,*,0,*,0,0,*,unspecified,unspecified
+Lake Park High School,IL-19-022-1080-16-1902210800001,172184002454,10152A002,Computer Operations and Programming II,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Lake Park High School,IL-19-022-1080-16-1902210800001,172184002454,10157A000,AP Computer Science A,unspecified,52,12,0,*,0,0,0,unspecified,unspecified
+Lake Park High School,IL-19-022-1080-16-1902210800001,172184002454,10161A000,AP Computer Science Principles,unspecified,46,*,*,*,0,0,*,unspecified,unspecified
+Wheaton Warrenville South H S,IL-19-022-2000-26-1902220000020,174218004222,10152A001,Computer Operations and Programming I,unspecified,78,12,*,12,0,0,21,unspecified,unspecified
+Wheaton Warrenville South H S,IL-19-022-2000-26-1902220000020,174218004222,10157A000,AP Computer Science A,unspecified,26,*,0,0,0,0,0,unspecified,unspecified
+Wheaton North High School,IL-19-022-2000-26-1902220000021,174218004223,10152A001,Computer Operations and Programming I,unspecified,90,14,*,*,0,0,13,unspecified,unspecified
+Wheaton North High School,IL-19-022-2000-26-1902220000021,174218004223,10157A000,AP Computer Science A,unspecified,26,*,0,0,0,0,*,unspecified,unspecified
+Lisle High School,IL-19-022-2020-26-1902220200001,172320002553,10152A000,Computer Programming,unspecified,20,*,*,0,0,0,*,unspecified,unspecified
+Naperville Central High School,IL-19-022-2030-26-1902220300001,172771002939,10152A001,Computer Operations and Programming I,unspecified,170,58,*,14,0,0,26,unspecified,unspecified
+Naperville Central High School,IL-19-022-2030-26-1902220300001,172771002939,10152A002,Computer Operations and Programming II,unspecified,98,28,*,*,0,0,*,unspecified,unspecified
+Naperville Central High School,IL-19-022-2030-26-1902220300001,172771002939,10157A000,AP Computer Science A,unspecified,109,32,0,*,0,0,0,unspecified,unspecified
+Naperville North High School,IL-19-022-2030-26-1902220300013,172771002940,10152A001,Computer Operations and Programming I,unspecified,199,48,*,13,0,0,23,unspecified,unspecified
+Naperville North High School,IL-19-022-2030-26-1902220300013,172771002940,10152A002,Computer Operations and Programming II,unspecified,95,17,*,*,0,0,*,unspecified,unspecified
+Naperville North High School,IL-19-022-2030-26-1902220300013,172771002940,10157A000,AP Computer Science A,unspecified,189,38,*,*,0,0,*,unspecified,unspecified
+Waubonsie Valley High School,IL-19-022-2040-26-1902220400001,174169004173,10152A001,Computer Operations and Programming I,unspecified,50,*,*,*,0,0,*,unspecified,unspecified
+Waubonsie Valley High School,IL-19-022-2040-26-1902220400001,174169004173,10157A000,AP Computer Science A,unspecified,84,24,*,*,0,0,*,unspecified,unspecified
+Waubonsie Valley High School,IL-19-022-2040-26-1902220400001,174169004173,10161A000,AP Computer Science Principles,unspecified,64,16,*,*,0,0,10,unspecified,unspecified
+Neuqua Valley High School,IL-19-022-2040-26-1902220400002,174169002092,10152A001,Computer Operations and Programming I,unspecified,102,29,*,*,0,*,11,unspecified,unspecified
+Neuqua Valley High School,IL-19-022-2040-26-1902220400002,174169002092,10157A000,AP Computer Science A,unspecified,406,130,0,16,0,*,28,unspecified,unspecified
+Neuqua Valley High School,IL-19-022-2040-26-1902220400002,174169002092,10161A000,AP Computer Science Principles,unspecified,241,63,*,*,0,*,*,unspecified,unspecified
+Metea Valley High School,IL-19-022-2040-26-1902220400005,174169006090,10152A001,Computer Operations and Programming I,unspecified,82,16,*,10,0,0,15,unspecified,unspecified
+Metea Valley High School,IL-19-022-2040-26-1902220400005,174169006090,10157A000,AP Computer Science A,unspecified,269,75,*,*,0,*,17,unspecified,unspecified
+Metea Valley High School,IL-19-022-2040-26-1902220400005,174169006090,10161A000,AP Computer Science Principles,unspecified,207,71,*,12,0,0,15,unspecified,unspecified
+York Comm High School,IL-19-022-2050-26-1902220500003,171397001755,10156A000,Computer Programming—Other Language,unspecified,86,12,*,12,0,0,*,unspecified,unspecified
+York Comm High School,IL-19-022-2050-26-1902220500003,171397001755,10157A000,AP Computer Science A,unspecified,132,29,*,*,0,0,11,unspecified,unspecified
+Mount Carmel High School,IL-20-093-3480-26-2009334800001,174047004073,10152A001,Computer Operations and Programming I,unspecified,11,*,0,0,0,0,*,unspecified,unspecified
+Mount Carmel High School,IL-20-093-3480-26-2009334800001,174047004073,10152A001,Computer Operations and Programming I,unspecified,11,*,0,0,0,0,*,unspecified,unspecified
+Wayne City High School,IL-20-096-1000-26-2009610000001,174136004151,10152A002,Computer Operations and Programming II,unspecified,12,0,0,0,0,0,*,unspecified,unspecified
+Wayne City High School,IL-20-096-1000-26-2009610000001,174136004151,10152A002,Computer Operations and Programming II,unspecified,12,0,0,0,0,0,*,unspecified,unspecified
+Carmi-White County High School,IL-20-097-0050-26-2009700500001,170850000472,10152A001,Computer Operations and Programming I,unspecified,25,*,0,*,0,0,*,unspecified,unspecified
+Benton Cons High School,IL-21-028-1030-13-2102810300001,170597000278,10152A001,Computer Operations and Programming I,unspecified,67,*,0,0,0,0,27,unspecified,unspecified
+Johnston City High School,IL-21-100-0010-26-2110000100001,172055002320,10152A000,Computer Programming,unspecified,*,*,0,0,0,0,*,unspecified,unspecified
+Marion High School,IL-21-100-0020-26-2110000200001,172460002666,10152A001,Computer Operations and Programming I,unspecified,50,*,*,*,0,0,23,unspecified,unspecified
+Herrin High School,IL-21-100-0040-26-2110000400001,171881002161,10152A001,Computer Operations and Programming I,unspecified,34,*,*,*,0,0,15,unspecified,unspecified
+Herrin High School,IL-21-100-0040-26-2110000400001,171881002161,10152A002,Computer Operations and Programming II,unspecified,21,*,*,0,0,0,*,unspecified,unspecified
+Carterville High School,IL-21-100-0050-26-2110000500001,170864000504,10152A001,Computer Operations and Programming I,unspecified,24,*,0,0,0,0,*,unspecified,unspecified
+Coal City High School,IL-24-032-0010-26-2403200100001,171053001271,10152A000,Computer Programming,unspecified,15,*,0,*,*,0,*,unspecified,unspecified
+Coal City High School,IL-24-032-0010-26-2403200100001,171053001271,10157A000,AP Computer Science A,unspecified,20,0,0,0,0,0,*,unspecified,unspecified
+Plano High School,IL-24-047-0880-26-2404708800001,173177003342,10152A000,Computer Programming,unspecified,29,*,*,11,0,0,11,unspecified,unspecified
+Plano High School,IL-24-047-0880-26-2404708800001,173177003342,10152A001,Computer Operations and Programming I,unspecified,11,*,0,*,0,0,*,unspecified,unspecified
+Plano High School,IL-24-047-0880-26-2404708800001,173177003342,10161A000,AP Computer Science Principles,unspecified,26,0,0,16,0,0,16,unspecified,unspecified
+Yorkville High School,IL-24-047-1150-26-2404711500001,174396004363,10152A001,Computer Operations and Programming I,unspecified,94,14,*,18,0,0,21,unspecified,unspecified
+Yorkville High School,IL-24-047-1150-26-2404711500001,174396004363,10152A002,Computer Operations and Programming II,unspecified,49,*,0,*,0,0,*,unspecified,unspecified
+Yorkville High School,IL-24-047-1150-26-2404711500001,174396004363,10152A001,Computer Operations and Programming I,unspecified,95,15,*,18,0,0,22,unspecified,unspecified
+Yorkville High School,IL-24-047-1150-26-2404711500001,174396004363,10152A002,Computer Operations and Programming II,unspecified,51,*,0,*,0,0,*,unspecified,unspecified
+Oswego High School,IL-24-047-3080-26-2404730800001,173027003132,10152A001,Computer Operations and Programming I,unspecified,100,16,*,19,0,0,18,unspecified,unspecified
+Oswego High School,IL-24-047-3080-26-2404730800001,173027003132,10152A002,Computer Operations and Programming II,unspecified,41,*,*,*,0,0,*,unspecified,unspecified
+Oswego High School,IL-24-047-3080-26-2404730800001,173027003132,10157A000,AP Computer Science A,unspecified,21,*,*,*,0,0,*,unspecified,unspecified
+Oswego East High School,IL-24-047-3080-26-2404730800002,173027005337,10152A001,Computer Operations and Programming I,unspecified,80,18,*,*,0,0,13,unspecified,unspecified
+Oswego East High School,IL-24-047-3080-26-2404730800002,173027005337,10157A000,AP Computer Science A,unspecified,60,*,*,*,0,0,10,unspecified,unspecified
+Astoria High School,IL-26-029-0010-26-2602900100001,170444000130,10152A001,Computer Operations and Programming I,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+V I T Sr High School,IL-26-029-0020-26-2602900200001,173849003925,10152A001,Computer Operations and Programming I,unspecified,16,*,0,0,0,0,*,unspecified,unspecified
+V I T Sr High School,IL-26-029-0020-26-2602900200001,173849003925,10152A001,Computer Operations and Programming I,unspecified,16,*,0,0,0,0,*,unspecified,unspecified
+Cuba Sr High School,IL-26-029-0030-26-2602900300001,171140001370,10152A000,Computer Programming,unspecified,26,*,0,0,0,0,*,unspecified,unspecified
+Canton High School,IL-26-029-0660-25-2602906600001,170828000438,10161A000,AP Computer Science Principles,unspecified,26,*,0,0,0,0,*,unspecified,unspecified
+Southeastern Jr/Sr High School,IL-26-034-3370-26-2603433700001,173661003771,10152A001,Computer Operations and Programming I,unspecified,*,*,0,0,0,0,*,unspecified,unspecified
+Bushnell-Prairie City High Sch,IL-26-062-1700-26-2606217000001,170795000401,10152A000,Computer Programming,unspecified,41,*,0,0,0,0,20,unspecified,unspecified
+Princeton High School,IL-28-006-5000-15-2800650000001,173270003392,10152A001,Computer Operations and Programming I,unspecified,22,*,0,*,0,0,*,unspecified,unspecified
+Galva Jr-Sr High School,IL-28-037-2240-26-2803722400001,171614001939,10152A000,Computer Programming,unspecified,34,*,0,0,0,0,10,unspecified,unspecified
+Annawan High School,IL-28-037-2260-26-2803722600001,170381000069,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Geneseo High School,IL-28-037-2280-26-2803722800001,171635001948,10152A001,Computer Operations and Programming I,unspecified,25,*,0,*,0,0,*,unspecified,unspecified
+Kewanee High School,IL-28-037-2290-26-2803722900001,172100002383,10152A001,Computer Operations and Programming I,unspecified,*,*,0,*,0,0,*,unspecified,unspecified
+Du Quoin High School,IL-30-073-3000-26-3007330000001,171276001530,10152A000,Computer Programming,unspecified,*,0,0,*,0,0,*,unspecified,unspecified
+Anna-Jonesboro High School,IL-30-091-0810-16-3009108100001,170378000067,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Elgin High School,IL-31-045-0460-22-3104504600001,171371001674,10152A000,Computer Programming,unspecified,70,*,*,53,0,0,43,unspecified,unspecified
+Elgin High School,IL-31-045-0460-22-3104504600001,171371001674,10157A000,AP Computer Science A,unspecified,33,*,*,*,0,0,*,unspecified,unspecified
+Streamwood High School,IL-31-045-0460-22-3104504600003,171371001703,10152A000,Computer Programming,unspecified,73,*,*,43,0,0,46,unspecified,unspecified
+Bartlett High School,IL-31-045-0460-22-3104504600004,171371002108,10152A000,Computer Programming,unspecified,105,18,*,23,0,0,36,unspecified,unspecified
+Bartlett High School,IL-31-045-0460-22-3104504600004,171371002108,10157A000,AP Computer Science A,unspecified,51,*,*,10,0,0,*,unspecified,unspecified
+South Elgin High School,IL-31-045-0460-22-3104504600005,171371005611,10152A000,Computer Programming,unspecified,75,*,0,21,0,0,22,unspecified,unspecified
+South Elgin High School,IL-31-045-0460-22-3104504600005,171371005611,10157A000,AP Computer Science A,unspecified,63,*,*,*,*,0,18,unspecified,unspecified
+Batavia Sr High School,IL-31-045-1010-22-3104510100001,170522000202,10153A000,Visual Basic (VB) Programming,unspecified,144,27,*,17,0,0,20,unspecified,unspecified
+Batavia Sr High School,IL-31-045-1010-22-3104510100001,170522000202,10156A000,Computer Programming—Other Language,unspecified,37,*,*,*,0,0,*,unspecified,unspecified
+West Aurora High School,IL-31-045-1290-22-3104512900001,170471000174,10152A001,Computer Operations and Programming I,unspecified,185,28,12,99,0,0,78,unspecified,unspecified
+West Aurora High School,IL-31-045-1290-22-3104512900001,170471000174,10152A002,Computer Operations and Programming II,unspecified,*,0,0,*,0,0,0,unspecified,unspecified
+East High School,IL-31-045-1310-22-3104513100001,170468000143,10157A000,AP Computer Science A,unspecified,17,0,0,13,0,0,*,unspecified,unspecified
+East High School,IL-31-045-1310-22-3104513100001,170468000143,10161A000,AP Computer Science Principles,unspecified,39,11,*,31,0,0,16,unspecified,unspecified
+Dundee-Crown High School,IL-31-045-3000-26-3104530000002,170855000487,10157A000,AP Computer Science A,unspecified,42,*,*,14,0,0,14,unspecified,unspecified
+Hampshire High School,IL-31-045-3000-26-3104530000003,170855000485,10157A000,AP Computer Science A,unspecified,33,10,*,*,0,0,*,unspecified,unspecified
+Harry D Jacobs High School,IL-31-045-3000-26-3104530000004,170855000486,10152A000,Computer Programming,unspecified,122,21,0,20,0,0,23,unspecified,unspecified
+Harry D Jacobs High School,IL-31-045-3000-26-3104530000004,170855000486,10157A000,AP Computer Science A,unspecified,311,45,*,29,0,0,34,unspecified,unspecified
+Kaneland Senior High School,IL-31-045-3020-26-3104530200001,172448002655,10152A001,Computer Operations and Programming I,unspecified,35,11,0,0,*,0,*,unspecified,unspecified
+Kaneland Senior High School,IL-31-045-3020-26-3104530200001,172448002655,10152A002,Computer Operations and Programming II,unspecified,13,*,0,*,0,0,*,unspecified,unspecified
+St Charles East High School,IL-31-045-3030-26-3104530300011,173717003858,10157A000,AP Computer Science A,unspecified,74,*,0,*,0,0,*,unspecified,unspecified
+St Charles East High School,IL-31-045-3030-26-3104530300011,173717003858,10157A000,AP Computer Science A,unspecified,74,*,0,*,0,0,*,unspecified,unspecified
+St Charles North High School,IL-31-045-3030-26-3104530300012,173717004064,10157A000,AP Computer Science A,unspecified,134,10,0,*,0,0,*,unspecified,unspecified
+St Charles North High School,IL-31-045-3030-26-3104530300012,173717004064,10157A000,AP Computer Science A,unspecified,134,10,0,*,0,0,*,unspecified,unspecified
+Watseka Comm High School,IL-32-038-0090-26-3203800900001,172017002269,10152A001,Computer Operations and Programming I,unspecified,*,*,0,0,0,0,*,unspecified,unspecified
+Manteno High School,IL-32-046-0050-26-3204600500005,172439002647,10152A001,Computer Operations and Programming I,unspecified,17,*,0,*,0,0,*,unspecified,unspecified
+Kankakee Junior High School,IL-32-046-1110-25-3204611101008,172076005023,10152A000,Computer Programming,unspecified,414,178,214,126,*,0,370,unspecified,unspecified
+Bradley-Bourbonnais C High School,IL-32-046-3070-16-3204630700001,170696000360,10152A001,Computer Operations and Programming I,unspecified,57,*,*,*,0,0,26,unspecified,unspecified
+Bradley-Bourbonnais C High School,IL-32-046-3070-16-3204630700001,170696000360,10157A000,AP Computer Science A,unspecified,60,*,*,*,0,0,25,unspecified,unspecified
+Williamsfield High School,IL-33-048-2100-26-3304821000001,174245004268,10152A001,Computer Operations and Programming I,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Williamsfield High School,IL-33-048-2100-26-3304821000001,174245004268,10152A002,Computer Operations and Programming II,unspecified,26,0,0,0,0,0,10,unspecified,unspecified
+Williamsfield High School,IL-33-048-2100-26-3304821000001,174245004268,10152A001,Computer Operations and Programming I,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Williamsfield High School,IL-33-048-2100-26-3304821000001,174245004268,10152A002,Computer Operations and Programming II,unspecified,26,0,0,0,0,0,10,unspecified,unspecified
+Williamsfield Middle School,IL-33-048-2100-26-3304821001001,174245004267,10152A001,Computer Operations and Programming I,unspecified,26,*,0,0,0,0,14,unspecified,unspecified
+Williamsfield Middle School,IL-33-048-2100-26-3304821001001,174245004267,10152A001,Computer Operations and Programming I,unspecified,26,*,0,0,0,0,14,unspecified,unspecified
+United High School,IL-33-094-3040-26-3309430400001,170032105608,10152A000,Computer Programming,unspecified,*,*,*,0,0,0,*,unspecified,unspecified
+United High School,IL-33-094-3040-26-3309430400001,170032105608,10152A000,Computer Programming,unspecified,*,*,*,0,0,0,*,unspecified,unspecified
+Waukegan High School,IL-34-049-0600-26-3404906000022,174125004141,10157A000,AP Computer Science A,unspecified,28,*,*,18,0,0,13,unspecified,unspecified
+Waukegan High School,IL-34-049-0600-26-3404906000022,174125004141,10161A000,AP Computer Science Principles,unspecified,20,*,*,13,0,0,*,unspecified,unspecified
+Lake Zurich High School,IL-34-049-0950-26-3404909500001,172190002460,10153A000,Visual Basic (VB) Programming,unspecified,93,16,0,0,0,0,*,unspecified,unspecified
+Lake Zurich High School,IL-34-049-0950-26-3404909500001,172190002460,10157A000,AP Computer Science A,unspecified,170,36,0,*,0,0,10,unspecified,unspecified
+Deerfield High School,IL-34-049-1130-17-3404911300001,171908002193,10152A001,Computer Operations and Programming I,unspecified,21,10,*,*,0,0,0,unspecified,unspecified
+Deerfield High School,IL-34-049-1130-17-3404911300001,171908002193,10152A002,Computer Operations and Programming II,unspecified,88,25,0,*,*,0,0,unspecified,unspecified
+Deerfield High School,IL-34-049-1130-17-3404911300001,171908002193,10155A000,Java Programming,unspecified,*,0,0,*,0,0,*,unspecified,unspecified
+Deerfield High School,IL-34-049-1130-17-3404911300001,171908002193,10157A000,AP Computer Science A,unspecified,119,46,0,*,0,0,*,unspecified,unspecified
+Deerfield High School,IL-34-049-1130-17-3404911300001,171908002193,10152A001,Computer Operations and Programming I,unspecified,21,10,*,*,0,0,0,unspecified,unspecified
+Deerfield High School,IL-34-049-1130-17-3404911300001,171908002193,10152A002,Computer Operations and Programming II,unspecified,88,25,0,*,*,0,0,unspecified,unspecified
+Deerfield High School,IL-34-049-1130-17-3404911300001,171908002193,10155A000,Java Programming,unspecified,*,0,0,*,0,0,*,unspecified,unspecified
+Deerfield High School,IL-34-049-1130-17-3404911300001,171908002193,10157A000,AP Computer Science A,unspecified,119,46,0,*,0,0,*,unspecified,unspecified
+Antioch Comm High School,IL-34-049-1170-16-3404911700001,170387000075,10156A000,Computer Programming—Other Language,unspecified,17,*,*,*,0,*,*,unspecified,unspecified
+Antioch Comm High School,IL-34-049-1170-16-3404911700001,170387000075,10157A000,AP Computer Science A,unspecified,25,*,0,0,0,0,0,unspecified,unspecified
+Antioch Comm High School,IL-34-049-1170-16-3404911700001,170387000075,10161A000,AP Computer Science Principles,unspecified,66,13,0,0,0,0,*,unspecified,unspecified
+Lakes Community High School,IL-34-049-1170-16-3404911700002,170387005622,10156A000,Computer Programming—Other Language,unspecified,20,*,0,0,0,0,0,unspecified,unspecified
+Lakes Community High School,IL-34-049-1170-16-3404911700002,170387005622,10157A000,AP Computer Science A,unspecified,44,*,*,*,0,0,*,unspecified,unspecified
+Lakes Community High School,IL-34-049-1170-16-3404911700002,170387005622,10161A000,AP Computer Science Principles,unspecified,118,30,0,12,0,0,*,unspecified,unspecified
+Wauconda High School,IL-34-049-1180-26-3404911800005,174119004119,10152A001,Computer Operations and Programming I,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Wauconda High School,IL-34-049-1180-26-3404911800005,174119004119,10152A002,Computer Operations and Programming II,unspecified,*,0,0,*,0,0,*,unspecified,unspecified
+Mundelein Cons High School,IL-34-049-1200-13-3404912000001,172757002919,10152A000,Computer Programming,unspecified,43,*,0,20,0,0,11,unspecified,unspecified
+Mundelein Cons High School,IL-34-049-1200-13-3404912000001,172757002919,10157A000,AP Computer Science A,unspecified,32,*,0,*,0,0,*,unspecified,unspecified
+Mundelein Cons High School,IL-34-049-1200-13-3404912000001,172757002919,10161A000,AP Computer Science Principles,unspecified,57,16,*,14,0,0,*,unspecified,unspecified
+Warren Township High School,IL-34-049-1210-17-3404912100001,174080004097,10155A000,Java Programming,unspecified,61,12,*,12,0,0,*,unspecified,unspecified
+Warren Township High School,IL-34-049-1210-17-3404912100001,174080004097,10155A000,Java Programming,unspecified,61,12,*,12,0,0,*,unspecified,unspecified
+Adlai E Stevenson High School,IL-34-049-1250-13-3404912500001,173258003385,10152A000,Computer Programming,unspecified,533,131,*,38,*,*,10,unspecified,unspecified
+Adlai E Stevenson High School,IL-34-049-1250-13-3404912500001,173258003385,10157A000,AP Computer Science A,unspecified,408,122,*,12,0,0,*,unspecified,unspecified
+Adlai E Stevenson High School,IL-34-049-1250-13-3404912500001,173258003385,10161A000,AP Computer Science Principles,unspecified,164,44,0,*,0,0,10,unspecified,unspecified
+Zion-Benton Twnshp Hi Sch,IL-34-049-1260-17-3404912600001,174389004357,10161A000,AP Computer Science Principles,unspecified,53,14,*,27,0,0,14,unspecified,unspecified
+Zion-Benton Twnshp Hi Sch,IL-34-049-1260-17-3404912600001,174389004357,10161A000,AP Computer Science Principles,unspecified,53,14,*,27,0,0,14,unspecified,unspecified
+Grayslake Central High School,IL-34-049-1270-16-3404912700001,171755002057,10156A000,Computer Programming—Other Language,unspecified,36,*,0,*,0,0,*,unspecified,unspecified
+Grayslake Central High School,IL-34-049-1270-16-3404912700001,171755002057,10157A000,AP Computer Science A,unspecified,50,12,0,*,0,0,0,unspecified,unspecified
+Grayslake North High School,IL-34-049-1270-16-3404912700002,171755005623,10156A000,Computer Programming—Other Language,unspecified,39,*,*,*,0,0,0,unspecified,unspecified
+Grayslake North High School,IL-34-049-1270-16-3404912700002,171755005623,10157A000,AP Computer Science A,unspecified,42,*,0,*,0,0,*,unspecified,unspecified
+Libertyville High School,IL-34-049-1280-16-3404912800002,172283002531,10156A000,Computer Programming—Other Language,unspecified,73,15,*,*,0,0,*,unspecified,unspecified
+Libertyville High School,IL-34-049-1280-16-3404912800002,172283002531,10157A000,AP Computer Science A,unspecified,75,24,*,*,0,0,0,unspecified,unspecified
+Libertyville High School,IL-34-049-1280-16-3404912800002,172283002531,10161A000,AP Computer Science Principles,unspecified,95,24,*,*,0,0,*,unspecified,unspecified
+Vernon Hills High School,IL-34-049-1280-16-3404912800004,172283004092,10156A000,Computer Programming—Other Language,unspecified,43,12,0,*,0,0,*,unspecified,unspecified
+Vernon Hills High School,IL-34-049-1280-16-3404912800004,172283004092,10157A000,AP Computer Science A,unspecified,143,38,0,*,0,*,*,unspecified,unspecified
+Vernon Hills High School,IL-34-049-1280-16-3404912800004,172283004092,10161A000,AP Computer Science Principles,unspecified,259,90,*,14,0,0,19,unspecified,unspecified
+Barrington High School,IL-34-049-2200-26-3404922000004,170505000188,10152A000,Computer Programming,unspecified,64,*,0,14,*,0,13,unspecified,unspecified
+Barrington High School,IL-34-049-2200-26-3404922000004,170505000188,10152A001,Computer Operations and Programming I,unspecified,99,21,0,*,0,0,16,unspecified,unspecified
+Barrington High School,IL-34-049-2200-26-3404922000004,170505000188,10152A002,Computer Operations and Programming II,unspecified,158,39,0,*,0,0,*,unspecified,unspecified
+Barrington High School,IL-34-049-2200-26-3404922000004,170505000188,10157A000,AP Computer Science A,unspecified,149,52,*,11,0,0,*,unspecified,unspecified
+Barrington High School,IL-34-049-2200-26-3404922000004,170505000188,10161A000,AP Computer Science Principles,unspecified,44,12,0,*,0,0,*,unspecified,unspecified
+Earlville Jr/Sr High School,IL-35-050-0090-26-3505000900001,171293001541,10152A001,Computer Operations and Programming I,unspecified,24,*,0,*,0,0,*,unspecified,unspecified
+Seneca High School,IL-35-050-1600-17-3505016000001,173585003728,10152A001,Computer Operations and Programming I,unspecified,29,*,0,*,0,0,10,unspecified,unspecified
+Warrensburg-Latham High School,IL-39-055-0110-26-3905501100001,174083004099,10152A001,Computer Operations and Programming I,unspecified,13,*,0,0,0,0,0,unspecified,unspecified
+Warrensburg-Latham High School,IL-39-055-0110-26-3905501100001,174083004099,10152A001,Computer Operations and Programming I,unspecified,13,*,0,0,0,0,0,unspecified,unspecified
+Meridian High School,IL-39-055-0150-26-3905501500001,170012300873,10152A000,Computer Programming,unspecified,11,*,0,0,0,0,*,unspecified,unspecified
+Bement High School,IL-39-074-0050-26-3907400500001,170582000263,10152A001,Computer Operations and Programming I,unspecified,*,*,0,0,0,0,*,unspecified,unspecified
+Monticello High School,IL-39-074-0250-26-3907402500001,172655002843,10152A001,Computer Operations and Programming I,unspecified,21,*,0,0,0,0,*,unspecified,unspecified
+ROE #40 Safe School Jersey,IL-40-000-0000-00-4000000009303,170016906623,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Calhoun High School,IL-40-007-0400-26-4000704000001,171818002089,10152A000,Computer Programming,unspecified,14,*,0,0,0,0,*,unspecified,unspecified
+Southwestern High School,IL-40-056-0090-26-4005600900001,173150003320,10152A001,Computer Operations and Programming I,unspecified,29,10,*,*,0,0,14,unspecified,unspecified
+North Mac High School,IL-40-056-0340-26-4005603400001,170140306148,10152A001,Computer Operations and Programming I,unspecified,*,*,*,0,0,0,*,unspecified,unspecified
+Triad High School,IL-41-057-0020-26-4105700200001,173735003870,10152A001,Computer Operations and Programming I,unspecified,183,28,*,*,0,0,38,unspecified,unspecified
+Triad High School,IL-41-057-0020-26-4105700200001,173735003870,10152A001,Computer Operations and Programming I,unspecified,184,28,*,*,0,0,39,unspecified,unspecified
+Triad High School,IL-41-057-0020-26-4105700200001,173735003870,10152A002,Computer Operations and Programming II,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Highland High School,IL-41-057-0050-26-4105700500001,171899002179,10152A000,Computer Programming,unspecified,17,*,0,0,0,0,*,unspecified,unspecified
+Highland High School,IL-41-057-0050-26-4105700500001,171899002179,10152A001,Computer Operations and Programming I,unspecified,15,*,0,0,0,0,*,unspecified,unspecified
+Edwardsville High School,IL-41-057-0070-26-4105700700001,171353001639,10152A001,Computer Operations and Programming I,unspecified,79,*,*,*,0,0,*,unspecified,unspecified
+Edwardsville High School,IL-41-057-0070-26-4105700700001,171353001639,10155A000,Java Programming,unspecified,75,16,*,*,0,0,*,unspecified,unspecified
+Edwardsville High School,IL-41-057-0070-26-4105700700001,171353001639,10161A000,AP Computer Science Principles,unspecified,20,*,*,*,0,0,*,unspecified,unspecified
+Collinsville High School,IL-41-057-0100-26-4105701000001,171065001278,10152A000,Computer Programming,unspecified,14,*,0,*,0,0,*,unspecified,unspecified
+Collinsville High School,IL-41-057-0100-26-4105701000001,171065001278,10152A001,Computer Operations and Programming I,unspecified,31,0,*,0,0,0,17,unspecified,unspecified
+Madison Senior High School,IL-41-057-0120-26-4105701200001,172397002622,10152A001,Computer Operations and Programming I,unspecified,42,17,39,*,0,0,42,unspecified,unspecified
+Madison Senior High School,IL-41-057-0120-26-4105701200001,172397002622,10152A002,Computer Operations and Programming II,unspecified,15,*,13,0,0,0,15,unspecified,unspecified
+Crystal Lake Central High School,IL-44-063-1550-16-4406315500001,171137001367,10156A000,Computer Programming—Other Language,unspecified,84,17,*,18,0,0,26,unspecified,unspecified
+Crystal Lake Central High School,IL-44-063-1550-16-4406315500001,171137001367,10157A000,AP Computer Science A,unspecified,92,27,*,*,0,0,*,unspecified,unspecified
+Cary-Grove Community High School,IL-44-063-1550-16-4406315500002,171137001366,10152A000,Computer Programming,unspecified,40,*,0,*,0,0,*,unspecified,unspecified
+Cary-Grove Community High School,IL-44-063-1550-16-4406315500002,171137001366,10156A000,Computer Programming—Other Language,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Cary-Grove Community High School,IL-44-063-1550-16-4406315500002,171137001366,10157A000,AP Computer Science A,unspecified,55,*,0,0,0,0,*,unspecified,unspecified
+Crystal Lake South High School,IL-44-063-1550-16-4406315500003,171137001368,10156A000,Computer Programming—Other Language,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Crystal Lake South High School,IL-44-063-1550-16-4406315500003,171137001368,10157A000,AP Computer Science A,unspecified,178,46,*,25,0,0,35,unspecified,unspecified
+Prairie Ridge High School,IL-44-063-1550-16-4406315500004,171137002154,10152A000,Computer Programming,unspecified,26,*,0,*,0,0,*,unspecified,unspecified
+Prairie Ridge High School,IL-44-063-1550-16-4406315500004,171137002154,10157A000,AP Computer Science A,unspecified,88,24,0,*,0,0,*,unspecified,unspecified
+McHenry High School-West Campus,IL-44-063-1560-16-4406315600001,172532002761,10152A001,Computer Operations and Programming I,unspecified,36,*,0,*,0,0,*,unspecified,unspecified
+McHenry High School-West Campus,IL-44-063-1560-16-4406315600001,172532002761,10156A000,Computer Programming—Other Language,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+McHenry East High School,IL-44-063-1560-16-4406315600002,172532002760,10152A001,Computer Operations and Programming I,unspecified,20,0,0,*,0,0,*,unspecified,unspecified
+Richmond-Burton High School,IL-44-063-1570-16-4406315700001,173351003463,10152A000,Computer Programming,unspecified,20,*,0,*,0,0,*,unspecified,unspecified
+Richmond-Burton High School,IL-44-063-1570-16-4406315700001,173351003463,10161A000,AP Computer Science Principles,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Huntley High School,IL-44-063-1580-22-4406315800002,171983002247,10152A001,Computer Operations and Programming I,unspecified,176,29,*,21,0,0,*,unspecified,unspecified
+Huntley High School,IL-44-063-1580-22-4406315800002,171983002247,10152A002,Computer Operations and Programming II,unspecified,68,18,0,*,0,0,0,unspecified,unspecified
+Huntley High School,IL-44-063-1580-22-4406315800002,171983002247,10161A000,AP Computer Science Principles,unspecified,55,14,0,*,0,0,*,unspecified,unspecified
+Woodstock High School,IL-44-063-2000-26-4406320000008,174333004335,10152A001,Computer Operations and Programming I,unspecified,53,*,0,*,0,0,12,unspecified,unspecified
+Woodstock High School,IL-44-063-2000-26-4406320000008,174333004335,10152A001,Computer Operations and Programming I,unspecified,53,*,0,*,0,0,12,unspecified,unspecified
+Columbia High School,IL-45-067-0040-26-4506700400001,171074001295,10152A001,Computer Operations and Programming I,unspecified,24,*,0,0,0,0,*,unspecified,unspecified
+Chester High School,IL-45-079-1390-26-4507913900001,170981000579,10152A000,Computer Programming,unspecified,*,*,0,0,*,0,*,unspecified,unspecified
+Chester High School,IL-45-079-1390-26-4507913900001,170981000579,10156A000,Computer Programming—Other Language,unspecified,*,*,0,0,*,0,*,unspecified,unspecified
+Oregon High School,IL-47-071-2200-26-4707122000001,173016003118,10152A000,Computer Programming,unspecified,31,*,0,*,0,0,11,unspecified,unspecified
+Oregon High School,IL-47-071-2200-26-4707122000001,173016003118,10155A000,Java Programming,unspecified,24,10,0,*,0,0,10,unspecified,unspecified
+Polo Comm High School,IL-47-071-2220-26-4707122200004,173210003360,10152A001,Computer Operations and Programming I,unspecified,*,*,*,0,0,0,*,unspecified,unspecified
+Stillman Valley High School,IL-47-071-2230-26-4707122300003,172569002781,10152A001,Computer Operations and Programming I,unspecified,18,*,0,*,0,0,*,unspecified,unspecified
+Erie High School,IL-47-098-0010-26-4709800100001,171435001773,10152A001,Computer Operations and Programming I,unspecified,*,0,0,*,0,0,*,unspecified,unspecified
+Fulton High School,IL-47-098-0020-26-4709800200001,173395003488,10152A001,Computer Operations and Programming I,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Sterling High School,IL-47-098-0050-26-4709800500014,174231004261,10156A000,Computer Programming—Other Language,unspecified,20,*,0,*,0,0,*,unspecified,unspecified
+Sterling High School,IL-47-098-0050-26-4709800500014,174231004261,10161A000,AP Computer Science Principles,unspecified,17,*,0,*,0,0,*,unspecified,unspecified
+Sterling High School,IL-47-098-0050-26-4709800500014,174231004261,10156A000,Computer Programming—Other Language,unspecified,20,*,0,*,0,0,*,unspecified,unspecified
+Sterling High School,IL-47-098-0050-26-4709800500014,174231004261,10161A000,AP Computer Science Principles,unspecified,17,*,0,*,0,0,*,unspecified,unspecified
+Peoria High School,IL-48-072-1500-25-4807215000024,173123003278,10157A000,AP Computer Science A,unspecified,22,*,*,*,0,0,15,unspecified,unspecified
+Richwoods High School,IL-48-072-1500-25-4807215000025,173123003280,10154A000,C++ Programming,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Quest Charter School Academy,IL-48-072-1500-25-480721500027C,173123006112,10156A000,Computer Programming—Other Language,unspecified,133,63,92,20,*,0,95,unspecified,unspecified
+Limestone Community High School,IL-48-072-3100-16-4807231000001,172295002535,10152A001,Computer Operations and Programming I,unspecified,33,*,*,0,0,0,13,unspecified,unspecified
+Limestone Community High School,IL-48-072-3100-16-4807231000001,172295002535,10161A000,AP Computer Science Principles,unspecified,25,*,*,0,0,0,*,unspecified,unspecified
+Elmwood High School,IL-48-072-3220-26-4807232200004,171405001758,10152A001,Computer Operations and Programming I,unspecified,*,*,0,0,0,0,0,unspecified,unspecified
+Elmwood High School,IL-48-072-3220-26-4807232200004,171405001758,10152A002,Computer Operations and Programming II,unspecified,*,*,0,0,0,0,0,unspecified,unspecified
+Dunlap High School,IL-48-072-3230-26-4807232300004,171270001522,10152A000,Computer Programming,unspecified,15,*,0,*,0,0,*,unspecified,unspecified
+Princeville High School,IL-48-072-3260-26-4807232600005,173277003396,10161A000,AP Computer Science Principles,unspecified,23,*,0,0,0,0,*,unspecified,unspecified
+Moline Sr High School,IL-49-081-0400-22-4908104000001,172640002824,10152A001,Computer Operations and Programming I,unspecified,39,*,*,*,0,0,15,unspecified,unspecified
+Moline Sr High School,IL-49-081-0400-22-4908104000001,172640002824,10152A002,Computer Operations and Programming II,unspecified,25,*,0,*,0,0,*,unspecified,unspecified
+Rock Island High School,IL-49-081-0410-25-4908104100001,173441003540,10157A000,AP Computer Science A,unspecified,11,*,0,*,0,0,*,unspecified,unspecified
+Mascoutah High School,IL-50-082-0190-26-5008201900001,172494002701,10152A001,Computer Operations and Programming I,unspecified,66,*,*,*,*,0,*,unspecified,unspecified
+Freeburg Community High Sch,IL-50-082-0770-16-5008207700001,171584001892,10152A001,Computer Operations and Programming I,unspecified,12,*,0,0,0,0,*,unspecified,unspecified
+East St Louis Senior High School,IL-50-082-1890-22-5008218900043,171332004975,10161A000,AP Computer Science Principles,unspecified,23,11,21,0,0,0,23,unspecified,unspecified
+Belleville High School-East,IL-50-082-2010-17-5008220100001,170564000242,10152A000,Computer Programming,unspecified,51,12,13,0,*,0,*,unspecified,unspecified
+Belleville High School-East,IL-50-082-2010-17-5008220100001,170564000242,10152A001,Computer Operations and Programming I,unspecified,42,*,*,*,0,0,13,unspecified,unspecified
+Belleville High School-West,IL-50-082-2010-17-5008220100002,170564000243,10152A000,Computer Programming,unspecified,51,12,*,*,0,0,*,unspecified,unspecified
+Belleville High School-West,IL-50-082-2010-17-5008220100002,170564000243,10152A001,Computer Operations and Programming I,unspecified,24,*,*,0,0,0,*,unspecified,unspecified
+O Fallon High School,IL-50-082-2030-17-5008220300001,172979003090,10152A001,Computer Operations and Programming I,unspecified,85,11,11,*,0,0,13,unspecified,unspecified
+Greenview Jr/Sr High School,IL-51-065-2000-26-5106520000001,171770002065,10152A000,Computer Programming,unspecified,*,*,0,0,0,0,0,unspecified,unspecified
+Glenwood High School,IL-51-084-0050-26-5108400500001,170492000184,10152A001,Computer Operations and Programming I,unspecified,20,*,0,*,0,0,*,unspecified,unspecified
+Glenwood High School,IL-51-084-0050-26-5108400500001,170492000184,10157A000,AP Computer Science A,unspecified,45,15,0,0,0,0,*,unspecified,unspecified
+Pleasant Plains High School,IL-51-084-0080-26-5108400800001,173192003349,10161A000,AP Computer Science Principles,unspecified,41,*,*,*,0,0,*,unspecified,unspecified
+Williamsville High School,IL-51-084-0150-26-5108401500001,174248004271,10152A000,Computer Programming,unspecified,12,0,0,0,0,0,0,unspecified,unspecified
+Williamsville High School,IL-51-084-0150-26-5108401500001,174248004271,10152A000,Computer Programming,unspecified,25,*,0,0,0,0,*,unspecified,unspecified
+Lanphier High School,IL-51-084-1860-25-5108418600001,173708003829,10155A000,Java Programming,unspecified,28,*,*,0,0,0,*,unspecified,unspecified
+Lanphier High School,IL-51-084-1860-25-5108418600001,173708003829,10157A000,AP Computer Science A,unspecified,*,*,0,0,0,0,0,unspecified,unspecified
+Springfield High School,IL-51-084-1860-25-5108418600002,173708003838,10155A000,Java Programming,unspecified,130,45,*,*,0,0,*,unspecified,unspecified
+Springfield High School,IL-51-084-1860-25-5108418600002,173708003838,10157A000,AP Computer Science A,unspecified,57,10,*,*,0,0,*,unspecified,unspecified
+Springfield Southeast High Sch,IL-51-084-1860-25-5108418600003,173708003839,10155A000,Java Programming,unspecified,16,0,0,0,0,0,0,unspecified,unspecified
+Springfield Southeast High Sch,IL-51-084-1860-25-5108418600003,173708003839,10157A000,AP Computer Science A,unspecified,*,*,0,0,0,0,*,unspecified,unspecified
+Springfield Southeast High Sch,IL-51-084-1860-25-5108418600003,173708003839,10155A000,Java Programming,unspecified,16,0,0,0,0,0,0,unspecified,unspecified
+Springfield Southeast High Sch,IL-51-084-1860-25-5108418600003,173708003839,10157A000,AP Computer Science A,unspecified,*,*,0,0,0,0,*,unspecified,unspecified
+Pekin Community High School,IL-53-090-3030-16-5309030300002,173111003245,10152A001,Computer Operations and Programming I,unspecified,24,*,0,0,0,0,12,unspecified,unspecified
+Washington Comm High School,IL-53-090-3080-16-5309030800001,174098004105,10152A001,Computer Operations and Programming I,unspecified,30,*,0,*,0,0,*,unspecified,unspecified
+Washington Comm High School,IL-53-090-3080-16-5309030800001,174098004105,10152A002,Computer Operations and Programming II,unspecified,19,*,0,*,0,0,*,unspecified,unspecified
+Washington Comm High School,IL-53-090-3080-16-5309030800001,174098004105,10152A001,Computer Operations and Programming I,unspecified,30,*,0,*,0,0,*,unspecified,unspecified
+Washington Comm High School,IL-53-090-3080-16-5309030800001,174098004105,10152A002,Computer Operations and Programming II,unspecified,19,*,0,*,0,0,*,unspecified,unspecified
+East Peoria High School,IL-53-090-3090-16-5309030900001,171323001567,10152A001,Computer Operations and Programming I,unspecified,30,*,0,*,0,0,14,unspecified,unspecified
+East Peoria High School,IL-53-090-3090-16-5309030900001,171323001567,10152A002,Computer Operations and Programming II,unspecified,17,*,0,0,0,0,*,unspecified,unspecified
+Dee-Mack High School,IL-53-090-7010-26-5309070100001,171188001434,10152A001,Computer Operations and Programming I,unspecified,12,*,0,0,0,0,*,unspecified,unspecified
+Tremont High School,IL-53-090-7020-26-5309070200001,173939003985,10152A000,Computer Programming,unspecified,17,0,0,0,0,0,0,unspecified,unspecified
+Tremont High School,IL-53-090-7020-26-5309070200001,173939003985,10157A000,AP Computer Science A,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Tremont High School,IL-53-090-7020-26-5309070200001,173939003985,10152A000,Computer Programming,unspecified,17,0,0,0,0,0,0,unspecified,unspecified
+Tremont High School,IL-53-090-7020-26-5309070200001,173939003985,10157A000,AP Computer Science A,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Morton High School,IL-53-090-7090-26-5309070900006,172680002864,10161A000,AP Computer Science Principles,unspecified,37,*,0,*,0,0,*,unspecified,unspecified
+Metamora High School,IL-53-102-1220-17-5310212200001,172577002784,10152A000,Computer Programming,unspecified,33,*,0,0,0,0,*,unspecified,unspecified
+Eureka High School,IL-53-102-1400-26-5310214000001,171443001781,10152A000,Computer Programming,unspecified,18,*,0,0,0,0,*,unspecified,unspecified
+Danville High School,IL-54-092-1180-24-5409211800022,171179001382,10152A000,Computer Programming,unspecified,56,36,34,*,0,0,29,unspecified,unspecified
+Danville High School,IL-54-092-1180-24-5409211800022,171179001382,10152A001,Computer Operations and Programming I,unspecified,55,30,18,*,0,0,35,unspecified,unspecified
+Danville High School,IL-54-092-1180-24-5409211800022,171179001382,10152A002,Computer Operations and Programming II,unspecified,50,28,16,*,0,0,32,unspecified,unspecified
+Crete-Monee High School,IL-56-099-201U-26-56099201U0001,171125001344,10157A000,AP Computer Science A,unspecified,29,12,12,*,0,0,19,unspecified,unspecified
+Plainfield High School,IL-56-099-2020-22-5609920200001,173174003339,10156A000,Computer Programming—Other Language,unspecified,31,*,*,*,0,0,10,unspecified,unspecified
+Plainfield High School,IL-56-099-2020-22-5609920200001,173174003339,10161A000,AP Computer Science Principles,unspecified,22,*,0,*,0,0,0,unspecified,unspecified
+Plainfield South High School,IL-56-099-2020-22-5609920200002,173174004524,10156A000,Computer Programming—Other Language,unspecified,133,16,13,26,0,*,29,unspecified,unspecified
+Plainfield South High School,IL-56-099-2020-22-5609920200002,173174004524,10157A000,AP Computer Science A,unspecified,44,*,*,*,0,0,10,unspecified,unspecified
+Plainfield South High School,IL-56-099-2020-22-5609920200002,173174004524,10161A000,AP Computer Science Principles,unspecified,26,*,*,*,0,0,*,unspecified,unspecified
+Plainfield North High School,IL-56-099-2020-22-5609920200003,173174005747,10156A000,Computer Programming—Other Language,unspecified,84,18,11,*,*,0,*,unspecified,unspecified
+Plainfield North High School,IL-56-099-2020-22-5609920200003,173174005747,10157A000,AP Computer Science A,unspecified,46,*,*,10,0,0,*,unspecified,unspecified
+Plainfield North High School,IL-56-099-2020-22-5609920200003,173174005747,10161A000,AP Computer Science Principles,unspecified,53,18,0,*,0,0,10,unspecified,unspecified
+Plainfield East High School,IL-56-099-2020-22-5609920200004,173174006027,10156A000,Computer Programming—Other Language,unspecified,93,*,11,15,*,0,11,unspecified,unspecified
+Plainfield East High School,IL-56-099-2020-22-5609920200004,173174006027,10161A000,AP Computer Science Principles,unspecified,37,*,*,*,0,0,*,unspecified,unspecified
+Joliet Central High School,IL-56-099-2040-17-5609920400001,172061002350,10157A000,AP Computer Science A,unspecified,51,*,*,29,0,0,22,unspecified,unspecified
+Joliet West High School,IL-56-099-2040-17-5609920400003,172061002352,10157A000,AP Computer Science A,unspecified,49,*,*,12,0,0,18,unspecified,unspecified
+Lockport Township High Sch East,IL-56-099-2050-17-5609920500001,172335002571,10152A001,Computer Operations and Programming I,unspecified,42,*,*,*,0,0,*,unspecified,unspecified
+Lockport Township High Sch East,IL-56-099-2050-17-5609920500001,172335002571,10152A002,Computer Operations and Programming II,unspecified,27,*,*,*,0,0,*,unspecified,unspecified
+Lockport Township High Sch East,IL-56-099-2050-17-5609920500001,172335002571,10161A000,AP Computer Science Principles,unspecified,231,84,*,33,0,0,25,unspecified,unspecified
+Bolingbrook High School,IL-56-099-365U-26-56099365U0007,174007004025,10152A001,Computer Operations and Programming I,unspecified,32,*,11,16,0,0,18,unspecified,unspecified
+Bolingbrook High School,IL-56-099-365U-26-56099365U0007,174007004025,10152A002,Computer Operations and Programming II,unspecified,59,*,11,12,0,0,24,unspecified,unspecified
+Bolingbrook High School,IL-56-099-365U-26-56099365U0007,174007004025,10152A001,Computer Operations and Programming I,unspecified,32,*,11,16,0,0,18,unspecified,unspecified
+Bolingbrook High School,IL-56-099-365U-26-56099365U0007,174007004025,10152A002,Computer Operations and Programming II,unspecified,59,*,11,12,0,0,24,unspecified,unspecified
+Illinois School for the Deaf,IL-65-108-9000-80-6510890003001,170009805218,10152A000,Computer Programming,unspecified,13,*,*,*,0,0,*,unspecified,unspecified
+Il Sch for the Visually Impaired,IL-65-108-9000-80-6510890003002,170009805219,10156A000,Computer Programming—Other Language,unspecified,16,0,0,0,0,0,10,unspecified,unspecified
+University High School,IL-65-108-9010-80-6510890100001,170009904506,10152A001,Computer Operations and Programming I,unspecified,25,*,*,*,0,0,*,unspecified,unspecified
+University High School,IL-65-108-9010-80-6510890100001,170009904506,10152A002,Computer Operations and Programming II,unspecified,61,15,*,*,0,0,*,unspecified,unspecified
+GlenOaks Therapeutic Day-North,IL-19-022-0242-00-1902202420001,unspecified,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Allendale-Stepping Stone-LINC,IL-34-049-0006-00-3404900060017,unspecified,10152A000,Computer Programming,unspecified,*,0,*,0,0,0,*,unspecified,unspecified
+Bismarck Henning Rossville Alvin Cooperative High School,IL-54-092-8000-80-5409280000001,unspecified,10152A001,Computer Operations and Programming I,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Okaw Area Vocational Center,IL-30-262-0304-14-3026203044100,unspecified,10152A001,Computer Operations and Programming I,unspecified,28,12,0,0,0,0,*,unspecified,unspecified
+Camelot of Belvidere,IL-50-160-2700-00-5016027000304,unspecified,10152A000,Computer Programming,unspecified,*,*,*,*,0,0,*,unspecified,unspecified
+Thomas Kelly College Preparatory,IL-15-016-2990-25-1501629900022,unspecified,10152A000,Computer Programming,unspecified,1399,591,60,1092,*,0,1310,unspecified,unspecified
+Noble St Chtr-Pritzker College Prep,IL-15-016-2990-25-150162990028C,unspecified,10155A000,Java Programming,unspecified,17,*,*,16,0,0,17,unspecified,unspecified
+Noble St Chtr-Pritzker College Prep,IL-15-016-2990-25-150162990028C,unspecified,10161A000,AP Computer Science Principles,unspecified,72,24,*,70,0,0,68,unspecified,unspecified
+Noble St Chtr-Johnson College Prep,IL-15-016-2990-25-150162990036C,unspecified,10161A000,AP Computer Science Principles,unspecified,62,35,60,0,0,*,50,unspecified,unspecified
+YCCS-Westside Holistic Ldr Acad HS,IL-15-016-2990-25-150162990071C,unspecified,10152A000,Computer Programming,unspecified,43,22,32,11,0,0,43,unspecified,unspecified
+ASPIRA Charter - Early College Prep HS,IL-15-016-2990-25-150162990074C,unspecified,10161A000,AP Computer Science Principles,unspecified,142,86,*,134,0,0,139,unspecified,unspecified
+Multicultural Acad of Scholarshp HS,IL-15-016-2990-25-1501629900836,unspecified,10152A000,Computer Programming,unspecified,157,74,*,150,0,0,150,unspecified,unspecified
+Austin College and Career Academy High School,IL-15-016-2990-25-1501629900844,unspecified,10152A000,Computer Programming,unspecified,227,121,223,*,0,0,215,unspecified,unspecified
+Alcott College Prep,IL-15-016-2990-25-1501629900849,unspecified,10152A000,Computer Programming,unspecified,165,72,32,118,0,*,126,unspecified,unspecified
+Alcott College Prep,IL-15-016-2990-25-1501629900849,unspecified,10157A000,AP Computer Science A,unspecified,36,*,*,22,0,0,26,unspecified,unspecified
+Cook Co Juvenile Detention Ctr - Jefferson Alt HS,IL-15-016-2990-25-1501629903075,unspecified,10152A000,Computer Programming,unspecified,230,0,206,16,0,0,187,unspecified,unspecified
+Cove School,IL-50-160-0630-00-5016006300084,unspecified,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Indian Valley Area Voc Ctr,IL-16-019-4300-40-1601943004000,unspecified,10152A001,Computer Operations and Programming I,unspecified,32,*,0,*,0,0,*,unspecified,unspecified
+Indian Valley Area Voc Ctr,IL-16-019-4300-40-1601943004000,unspecified,10152A002,Computer Operations and Programming II,unspecified,*,*,0,*,0,0,*,unspecified,unspecified
+Technology Center of DuPage,IL-19-022-5020-40-1902250204000,unspecified,10152A000,Computer Programming,unspecified,20,0,*,*,0,*,*,unspecified,unspecified
+Technology Center of DuPage,IL-19-022-5020-40-1902250204000,unspecified,10152A001,Computer Operations and Programming I,unspecified,103,*,*,30,0,0,29,unspecified,unspecified
+Horizon Science Acad-McKinley Park Charter Sch,IL-15-016-9000-25-150169000201C,unspecified,10161A000,AP Computer Science Principles,unspecified,*,0,0,*,0,0,*,unspecified,unspecified
+Fox Valley Career Center,IL-31-045-3020-41-3104530204100,unspecified,10152A002,Computer Operations and Programming II,unspecified,23,*,0,*,0,0,*,unspecified,unspecified
+La Salle-Peru Area Career Ctr,IL-35-050-1200-40-3505012004000,unspecified,10152A001,Computer Operations and Programming I,unspecified,16,*,0,*,0,0,*,unspecified,unspecified
+Lake Co High Schools Tech Campus,IL-34-049-7900-40-3404979004000,unspecified,10152A001,Computer Operations and Programming I,unspecified,96,20,*,32,0,0,26,unspecified,unspecified
+Lake Co High Schools Tech Campus,IL-34-049-7900-40-3404979004000,unspecified,10152A002,Computer Operations and Programming II,unspecified,108,*,*,35,0,0,27,unspecified,unspecified
+Safe Haven School Lake Bluff,IL-50-160-0870-00-5016008700303,unspecified,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+School of Exp Arts & Learn (SEAL),IL-19-022-0282-00-1902202820142,unspecified,10152A000,Computer Programming,unspecified,*,0,0,*,0,0,*,unspecified,unspecified
+School of Exp Arts & Learn - South,IL-19-022-0282-00-1902202820197,unspecified,10152A000,Computer Programming,unspecified,13,*,*,*,0,0,*,unspecified,unspecified
+WCSEA Black Partridge Pub Day Prog,IL-53-102-0690-61-5310206906101,unspecified,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+Vermilion Voc Ed Deliver System,IL-54-092-7400-45-5409274004500,unspecified,10152A001,Computer Operations and Programming I,unspecified,10,*,0,0,0,0,*,unspecified,unspecified
+Vermilion Voc Ed Deliver System,IL-54-092-7400-45-5409274004500,unspecified,10152A002,Computer Operations and Programming II,unspecified,28,*,*,0,0,0,16,unspecified,unspecified
+Virtual Connections Academy,IL-50-160-2000-00-5016020000344,unspecified,10152A001,Computer Operations and Programming I,unspecified,*,0,0,0,0,0,0,unspecified,unspecified
+Wilco Area Career Center,IL-56-000-0000-40-5600000004000,unspecified,10152A001,Computer Operations and Programming I,unspecified,120,*,17,24,0,0,44,unspecified,unspecified
+WCSEA Black Partridge Pub Day Prog,IL-53-102-0690-61-5310206906101,unspecified,10152A000,Computer Programming,unspecified,*,0,0,0,0,0,*,unspecified,unspecified
+WCSEA Black Partridge Pub Day Prog,IL-53-102-0690-61-5310206906101,unspecified,10152A002,Computer Operations and Programming II,unspecified,*,0,0,0,0,0,*,unspecified,unspecified

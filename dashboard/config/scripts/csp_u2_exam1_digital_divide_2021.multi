@@ -1,0 +1,16 @@
+name 'csp-u2-exam1-digital-divide_2021'
+height 'auto'
+
+question 'Which of the following situations is most likely to cause issues arising from the digital divide?'
+right 'A state makes voter registration forms available only by visiting a government website'
+wrong 'Two internet-connected devices located in different countries and thousands of miles apart attempt to communicate with one another’
+wrong 'Packets sent from one router to another begin arriving in a different order than they were sent'
+wrong 'A smartphone attempts to communicate over the Internet with another type of device, like a tablet or laptop'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

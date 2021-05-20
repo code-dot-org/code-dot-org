@@ -6,16 +6,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-const styles = {
-  toggleAllTutorialsBlock: {
-    width: '100%',
-    clear: 'both',
-    textAlign: 'center',
-    paddingTop: 30,
-    paddingBottom: 30
-  }
-};
-
 export default class ToggleAllTutorialsButton extends React.Component {
   static propTypes = {
     showAllTutorials: PropTypes.func.isRequired,
@@ -45,3 +35,13 @@ export default class ToggleAllTutorialsButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  toggleAllTutorialsBlock: {
+    width: '100%',
+    clear: 'both',
+    textAlign: 'center',
+    paddingTop: 30,
+    paddingBottom: 30
+  }
+};

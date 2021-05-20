@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RacesTest < ActiveSupport::TestCase
+class Policies::RacesTest < ActiveSupport::TestCase
   test 'any_urm? with nil' do
     assert_nil Policies::Races.any_urm?(nil)
   end

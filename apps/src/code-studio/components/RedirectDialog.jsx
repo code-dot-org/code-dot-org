@@ -6,15 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const styles = {
-  dialog: {
-    padding: 20
-  },
-  dialogHeader: {
-    marginTop: 0
-  }
-};
-
 export default class RedirectDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -44,11 +35,13 @@ export default class RedirectDialog extends React.Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.stayHere()}
             onClick={handleClose}
             color={Button.ButtonColor.gray}
           />
           <Button
+            __useDeprecatedTag
             text={redirectButtonText}
             onClick={this.redirect}
             color={Button.ButtonColor.orange}
@@ -58,3 +51,12 @@ export default class RedirectDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: 20
+  },
+  dialogHeader: {
+    marginTop: 0
+  }
+};

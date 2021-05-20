@@ -1,4 +1,5 @@
 name 'U6 Create PT - Make a Plan - Student Links'
+editor_experiment ''
 css 'unplugged'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
@@ -34,7 +35,7 @@ The lesson concludes by providing students with resources to make a plan to comp
 
 **Review and Planning Documents**
 
-* [Create PT Survival Guide](https://docs.google.com/document/d/14hzkBeqpBEPHamqvLslGjnh9Js4ZCF61f1wHo8U9Puw/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/14hzkBeqpBEPHamqvLslGjnh9Js4ZCF61f1wHo8U9Puw/export?format=doc), [Google Doc](https://docs.google.com/document/d/14hzkBeqpBEPHamqvLslGjnh9Js4ZCF61f1wHo8U9Puw/copy))
+* [Create PT Survival Guide](https://docs.google.com/document/d/1ZRx_vnMNR3Aro8MR8mjFAw8Rr3zG0CTz8C5fU4WKA9s/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/1ZRx_vnMNR3Aro8MR8mjFAw8Rr3zG0CTz8C5fU4WKA9s/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ZRx_vnMNR3Aro8MR8mjFAw8Rr3zG0CTz8C5fU4WKA9s/copy))
     * [Create PT Check-In Organizer](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Create-PT---Survival-Guide---CheckinOrganizer---hi-res.pdf) - High Resolution PDF ([download](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Create-PT---Survival-Guide---CheckinOrganizer---hi-res.pdf))
 MARKDOWN
 
@@ -52,43 +53,5 @@ Please note: the Review and Planning documents are **new resources** for this le
 [/key]
 
 We've included links to college board documents from the previous lesson for reference so they don't have to go back and forth.
-
----
-
-**Deprecated - old content from this page**
-
-On Dec. 13, 2017 we updated this page with new resources and links.  If you're looking for the old stuff, it is copied below, but should be considered out of date.
-
-## Background
-
-Make a plan to prioritize what you will do and when in order to complete the Create PT within the allotted time.
-
-## Lesson
-
-* Review the Practice PTs.
-* Make a plan
-* Review collaboration practices.
-* Check in on the student preparedness guidelines.
-
-## Resources
-
-**Review and Planning Documents**
-
-* Create PT - Checklist ([PDF](https://docs.google.com/document/d/12v0nIV6Fh-wwMPgGt-8b8VVHhWsxPSH7o7NoHJDYRPU/export?format=pdf) |  [DOCX](https://docs.google.com/document/d/12v0nIV6Fh-wwMPgGt-8b8VVHhWsxPSH7o7NoHJDYRPUs/export?format=doc))
-* Create PT - Sample Timeline ([PDF](https://docs.google.com/document/d/1PYINL-5DgAFJiZuGJ0mZ2prXDN2zANbl8CH5xFpz8lg/export?format=pdf) |  [DOCX](https://docs.google.com/document/d/1PYINL-5DgAFJiZuGJ0mZ2prXDN2zANbl8CH5xFpz8lg/export?format=doc))
-* (Optional) Create PT - Template for written responses ([PDF](https://docs.google.com/document/d/1p_fwDMYW0b95Nc9-0M-Cb34eMGOd-Io1OhcOkyk6qOI/export?format=pdf) |  [DOCX](https://docs.google.com/document/d/1p_fwDMYW0b95Nc9-0M-Cb34eMGOd-Io1OhcOkyk6qOI/export?format=doc))
-
-
-**College Board Documents**
-
-* Create PT - [Guidelines before starting](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=14)
-* [Create Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=11) - Task Description
-* [Scoring Guidelines](https://apcentral.collegeboard.org/pdf/2018-create-performance-tasks-sg.pdf) - Create Performance Task
-* **Student Samples**
-    
-* Create PT Samples -  Sample A ([video](https://youtu.be/suZL5PnpD8Y) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-a.pdf)) | Sample B ([video](https://youtu.be/Mh6Zp3kttEA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-b.pdf)) |  Sample C ([video](https://youtu.be/uKVGOZv4H1g) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-c.pdf)) | Sample D ([video](https://youtu.be/zT1XNAS4oGE) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-d.pdf)) | Sample E ([video](https://youtu.be/fjwPSa-8bdA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-e.pdf)) | Sample F ([video](https://youtu.be/ntgPW8mQBR4) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-f.pdf)) | Sample G ([video](https://youtu.be/xj9p8XCXpZc) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-g.pdf)) | Sample H ([video](https://youtu.be/yE1xSV8LNhE) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-h.pdf)) | Sample I ([video](https://youtu.be/_hNSzslOCAA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-i.pdf)) | Sample J ([video](https://youtu.be/N_R3T1_deAo) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-j.pdf))
-    
-* Create Scoring Commentary: For all samples - [Sample Create PTs Scoring Commentary](https://apcentral.collegeboard.org/pdf/ap-csp-create-commentary-sg18.pdf)
-
 
 MARKDOWN

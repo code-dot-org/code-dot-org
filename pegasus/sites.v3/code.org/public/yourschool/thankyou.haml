@@ -9,8 +9,8 @@ social:
 - twitter = {:url=>'https://code.org/yourschool', :related=>'codeorg', :text=>'Does your school teach computer science? Expand computer science at your school or district. @codeorg'}
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: minifiable_asset_path('js/code.org/public/yourschool/thankyou.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/yourschool/thankyou.js')}
 
 %h1 Thank you for telling us about your school
 You should see your school

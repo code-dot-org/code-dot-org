@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:51:38.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_gamelab_if_else",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "display_name": "Video: If/Else Statements",
+    "parent_level_id": 20772,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n\r\n* What’s an example of when you would need an “if/else” statement?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nMake sure students are thinking of situations in which they want two different things to happen, depending on the situation.  For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right.  Challenge the students to think about when they would just use an `if` block, and when an `if/else` block is necessary.  "
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 22:37:26 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-13 00:14:50 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 17:18:40 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-18 23:41:43 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

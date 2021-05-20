@@ -1,5 +1,5 @@
 ---
-title: How-to Guide
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,9 +8,15 @@ nav: how_to_nav
 
 # Como ensinar uma Hora de Código em atividades extracurriculares ou em clubes
 
-### Junte-se à iniciativa e use estes passos para iniciar um grupo de estudantes na sua primeira hora de ciência computacional. A Hora de Código é fácil de concretizar - mesmo para principiantes! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
 
----
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+* * *
 
 ## 1. Assista a este vídeo prático <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -36,7 +42,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Não tem dispositivos suficientes?** Use a [programação em par](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. Eles irão perceber que a ciência computacional é uma atividade social e colaborativa.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. Eles irão perceber que a ciência computacional é uma atividade social e colaborativa.
 
 ## 5. Start your Hour of Code off with an inspiring video
 
@@ -81,6 +87,6 @@ Comece seu evento da Hora de Código inspirando os participantes e discutindo o 
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

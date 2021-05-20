@@ -1,0 +1,14 @@
+name 'CSD Physical Computing Post-Project Test_2021'
+title 'Physical Computing Post-Project Test'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'CSD U6 test hardware multi2_2021'
+level 'CSD U6 test parameters multi_2021'
+level 'CSD U6 test debugging multi_2021'
+level 'CSD U6 test algorithms multi2_2021'
+level 'CSD U6 test events multi_2021'
+level 'CSD U6 test feedback FR_2021'
+level 'CSD U6 test design FR_2021'
+level 'CSD U6 test challenge FR_2021'

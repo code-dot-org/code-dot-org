@@ -1,0 +1,195 @@
+{
+  "script": {
+    "name": "virustest",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:52 UTC",
+    "seeding_key": {
+      "script.name": "virustest"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csf_data",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Virus Simulation for Code Bytes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Virus Simulation for Code Bytes",
+      "name": "Virus Simulation for Code Bytes",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virus_1_codebytes"
+        ],
+        "progression": "Create your sprites"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virus_1_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      },
+      "level_keys": [
+        "virus_1_codebytes"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virus_2_codebytes"
+        ],
+        "progression": "Simulating an outbreak"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virus_2_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      },
+      "level_keys": [
+        "virus_2_codebytes"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virus_3_codebytes"
+        ],
+        "progression": "Simulating masks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virus_3_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      },
+      "level_keys": [
+        "virus_3_codebytes"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "virus_1_codebytes",
+        "script_level.level_keys": [
+          "virus_1_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virus_2_codebytes",
+        "script_level.level_keys": [
+          "virus_2_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virus_3_codebytes",
+        "script_level.level_keys": [
+          "virus_3_codebytes"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

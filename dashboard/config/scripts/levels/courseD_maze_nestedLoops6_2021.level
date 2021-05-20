@@ -1,0 +1,113 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:28:20.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "pvz",
+    "short_instructions": "Get the zombie to the sunflower using only the blocks available.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "1",
+    "maze": "[[0,0,0,0,0,0,0,0],[4,1,1,1,1,1,1,0],[0,1,0,0,0,4,1,0],[0,1,0,0,0,0,1,0],[0,1,1,1,3,0,1,0],[0,0,0,4,0,0,1,0],[0,2,1,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "9",
+    "step_speed": "2",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "long_instructions": "*\"Must eat sunflower!\"*\r\n\r\nGet the zombie to the sunflower using only the blocks available.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are stuck, try writing out the code out on paper without loops first and look for patterns.\",\"hint_id\":\"courseD_maze_nestedLoops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a504f8bd02af09a1a25b6dd03716966/courseD_maze_nestedLoops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Nesting `repeat` loops can help decrease the number of blocks used.\",\"hint_id\":\"courseD_maze_nestedLoops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cd62d80b6bf7b68b9c84e3f04402057c/courseD_maze_nestedLoops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"It will take two sets of nested `repeat` loops to solve this puzzle.\",\"hint_id\":\"courseD_maze_nestedLoops6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cc0fc9f058c019c99fbda24b8e009d40/courseD_maze_nestedLoops6.mp3\"}]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "name_suffix": "_2021",
+    "parent_level_id": 21357,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-30 21:17:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-12-13 20:45:46 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward"/>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="2"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat" limit="4">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

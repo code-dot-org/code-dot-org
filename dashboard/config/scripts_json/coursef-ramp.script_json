@@ -1,0 +1,1849 @@
+{
+  "script": {
+    "name": "coursef-ramp",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:59 UTC",
+    "seeding_key": {
+      "script.name": "coursef-ramp"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Algorithms: Tangrams",
+      "name": "Algorithms: Tangrams",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms: Tangrams",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "key": "Introduction",
+      "name": "Introduction",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "key": "Ice Age Play Lab",
+      "name": "Ice Age Play Lab",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "key": "Conditionals and Functions in Bee",
+      "name": "Conditionals and Functions in Bee",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "TangramAlgorithms"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "TangramAlgorithms"
+        ],
+        "lesson.key": "Algorithms: Tangrams",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "TangramAlgorithms"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_ramp1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseE_video_ramp1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_maze_ramp1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_maze_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_maze_ramp1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_maze_ramp2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_maze_ramp2"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_maze_ramp2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursef_maze_ramp3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursef_maze_ramp3"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "coursef_maze_ramp3"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_maze_ramp4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_maze_ramp4"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_maze_ramp4"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_maze_ramp5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_maze_ramp5"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_maze_ramp5"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_maze_ramp6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_maze_ramp6"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_maze_ramp6"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_ramp8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_ramp8"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_artist_ramp8"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_angles"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_angles"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseC_video_angles"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_ramp9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_ramp9"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_artist_ramp9"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_predict1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_artist_predict1"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseD_video_nestedLoopsArtist"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_ramp10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_ramp10"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_artist_ramp10"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_farmer_ramp11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_farmer_ramp11"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_farmer_ramp11"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_maze_ramp13"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_maze_ramp13"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_maze_ramp13"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseF_maze_ramp7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_maze_ramp7"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_maze_ramp7"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_external_ramp14"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_external_ramp14"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_external_ramp14"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_hello1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_hello1"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_hello1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_hello2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_hello2"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_hello2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_move_to_flag"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_move_to_flag"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_move_to_flag"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_move_to_actor"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_move_to_actor"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_move_to_actor"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_repeat"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_repeat"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_repeat"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_click_hello"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_click_hello"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_click_hello"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_move_events"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_move_events"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_move_events"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_sound_and_points"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_sound_and_points"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_sound_and_points"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_warn_ice_age"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_warn_ice_age"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_warn_ice_age"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_throw_hearts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_throw_hearts"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_throw_hearts"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iceage_free_play"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iceage_free_play"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "iceage_free_play"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVid1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_conditionals1_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_conditionals1_predict1"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_conditionals1_predict1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_conditionals2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_conditionals2"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_conditionals2"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_conditionals3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_conditionals3"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_conditionals3"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_conditionals4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_conditionals4"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_conditionals4"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_conditionals5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_conditionals5"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_conditionals5"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVidIfElse"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVidIfElse"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_conditionals7_predict2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_conditionals7_predict2"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_conditionals7_predict2"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseF_bee_conditionals8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_conditionals8"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_conditionals8"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_conditionals10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_conditionals10"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_conditionals10"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_functionsBee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_functionsBee"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseE_video_functionsBee"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_functions2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_functions2"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_functions2"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_functions3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_functions3"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_functions3"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_functions3a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_functions3a"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_functions3a"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_functions4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_functions4"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_functions4"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_functions5a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_functions5a"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_functions5a"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_video_createFunctions"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_video_createFunctions"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_video_createFunctions"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_functions6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_functions6"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_functions6"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 19,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_functions7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_functions7"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_functions7"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 20,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_bee_functions8a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_functions8a"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      },
+      "level_keys": [
+        "courseF_bee_functions8a"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "TangramAlgorithms",
+        "script_level.level_keys": [
+          "TangramAlgorithms"
+        ],
+        "lesson.key": "Algorithms: Tangrams",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_ramp1",
+        "script_level.level_keys": [
+          "courseE_video_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_maze_ramp1",
+        "script_level.level_keys": [
+          "courseF_maze_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_maze_ramp2",
+        "script_level.level_keys": [
+          "courseF_maze_ramp2"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursef_maze_ramp3",
+        "script_level.level_keys": [
+          "coursef_maze_ramp3"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_maze_ramp4",
+        "script_level.level_keys": [
+          "courseF_maze_ramp4"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_maze_ramp5",
+        "script_level.level_keys": [
+          "courseF_maze_ramp5"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_maze_ramp6",
+        "script_level.level_keys": [
+          "courseF_maze_ramp6"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_ramp8",
+        "script_level.level_keys": [
+          "courseF_artist_ramp8"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_angles",
+        "script_level.level_keys": [
+          "courseC_video_angles"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_ramp9",
+        "script_level.level_keys": [
+          "courseF_artist_ramp9"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_predict1",
+        "script_level.level_keys": [
+          "courseF_artist_predict1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_nestedLoopsArtist",
+        "script_level.level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_ramp10",
+        "script_level.level_keys": [
+          "courseF_artist_ramp10"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_farmer_ramp11",
+        "script_level.level_keys": [
+          "courseF_farmer_ramp11"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_maze_ramp13",
+        "script_level.level_keys": [
+          "courseF_maze_ramp13"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_maze_ramp7",
+        "script_level.level_keys": [
+          "courseF_maze_ramp7"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_external_ramp14",
+        "script_level.level_keys": [
+          "courseF_external_ramp14"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_hello1",
+        "script_level.level_keys": [
+          "iceage_hello1"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_hello2",
+        "script_level.level_keys": [
+          "iceage_hello2"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_move_to_flag",
+        "script_level.level_keys": [
+          "iceage_move_to_flag"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_move_to_actor",
+        "script_level.level_keys": [
+          "iceage_move_to_actor"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_repeat",
+        "script_level.level_keys": [
+          "iceage_repeat"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_click_hello",
+        "script_level.level_keys": [
+          "iceage_click_hello"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_move_events",
+        "script_level.level_keys": [
+          "iceage_move_events"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_sound_and_points",
+        "script_level.level_keys": [
+          "iceage_sound_and_points"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_warn_ice_age",
+        "script_level.level_keys": [
+          "iceage_warn_ice_age"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_throw_hearts",
+        "script_level.level_keys": [
+          "iceage_throw_hearts"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_free_play",
+        "script_level.level_keys": [
+          "iceage_free_play"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVid1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_conditionals1_predict1",
+        "script_level.level_keys": [
+          "courseF_bee_conditionals1_predict1"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_conditionals2",
+        "script_level.level_keys": [
+          "courseF_bee_conditionals2"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_conditionals3",
+        "script_level.level_keys": [
+          "courseF_bee_conditionals3"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_conditionals4",
+        "script_level.level_keys": [
+          "courseF_bee_conditionals4"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_conditionals5",
+        "script_level.level_keys": [
+          "courseF_bee_conditionals5"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVidIfElse",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVidIfElse"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_conditionals7_predict2",
+        "script_level.level_keys": [
+          "courseF_bee_conditionals7_predict2"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_conditionals8",
+        "script_level.level_keys": [
+          "courseF_bee_conditionals8"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_conditionals10",
+        "script_level.level_keys": [
+          "courseF_bee_conditionals10"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_functionsBee",
+        "script_level.level_keys": [
+          "courseE_video_functionsBee"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_functions2",
+        "script_level.level_keys": [
+          "courseF_bee_functions2"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_functions3",
+        "script_level.level_keys": [
+          "courseF_bee_functions3"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_functions3a",
+        "script_level.level_keys": [
+          "courseF_bee_functions3a"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_functions4",
+        "script_level.level_keys": [
+          "courseF_bee_functions4"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_functions5a",
+        "script_level.level_keys": [
+          "courseF_bee_functions5a"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_video_createFunctions",
+        "script_level.level_keys": [
+          "courseF_video_createFunctions"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_functions6",
+        "script_level.level_keys": [
+          "courseF_bee_functions6"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_functions7",
+        "script_level.level_keys": [
+          "courseF_bee_functions7"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_functions8a",
+        "script_level.level_keys": [
+          "courseF_bee_functions8a"
+        ],
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursef-ramp"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

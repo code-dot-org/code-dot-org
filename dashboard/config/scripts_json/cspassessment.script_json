@@ -1,0 +1,206 @@
+{
+  "script": {
+    "name": "cspassessment",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "seeding_key": {
+      "script.name": "cspassessment"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+      "name": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      }
+    },
+    {
+      "key": "RQB Questions test",
+      "name": "RQB Questions test",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "RQB Questions test",
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP_Final_instructions"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP_Final_instructions"
+        ],
+        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      },
+      "level_keys": [
+        "CSP_Final_instructions"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Culminating Assessment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Culminating Assessment"
+        ],
+        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      },
+      "level_keys": [
+        "CSP Culminating Assessment"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "RQB test levelgroup"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "RQB test levelgroup"
+        ],
+        "lesson.key": "RQB Questions test",
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      },
+      "level_keys": [
+        "RQB test levelgroup"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP_Final_instructions",
+        "script_level.level_keys": [
+          "CSP_Final_instructions"
+        ],
+        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Culminating Assessment",
+        "script_level.level_keys": [
+          "CSP Culminating Assessment"
+        ],
+        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "RQB test levelgroup",
+        "script_level.level_keys": [
+          "RQB test levelgroup"
+        ],
+        "lesson.key": "RQB Questions test",
+        "lesson_group.key": "",
+        "script.name": "cspassessment"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,6 +1,6 @@
 hidden false
 
-stage 'Artist'
+lesson 'Artist', display_name: 'Artist', has_lesson_plan: false
 level 'frozen line'
 level 'frozen perpendicular'
 level 'frozen square iterative'
@@ -21,3 +21,4 @@ level 'frozen snowflower'
 level 'frozen snowflake branch'
 level 'frozen snowflake full'
 level 'frozen freeplay'
+

@@ -38,17 +38,20 @@ module Pd::Application
   class PrincipalApproval1819Application < PrincipalApprovalApplicationBase
     include Pd::PrincipalApproval1819ApplicationConstants
 
+    REPLACE_COURSE_NO = "No, this course will be added to the schedule, but it won't replace an existing computer science course"
+
+    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1819Application',
+               primary_key: :application_guid, foreign_key: :application_guid
+
+    validates_presence_of :teacher_application
+
     # @override
     def year
       YEAR_18_19
     end
 
-    validates_presence_of :teacher_application
-    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1819Application',
-      primary_key: :application_guid, foreign_key: :application_guid
-
     def self.create_placeholder_and_send_mail(teacher_application)
-      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(teacher_application).deliver_now
+      ::Pd::Application::TeacherApplicationMailer.principal_approval(teacher_application).deliver_now
 
       Pd::Application::PrincipalApproval1819Application.create(
         form_data: {}.to_json,
@@ -63,7 +66,6 @@ module Pd::Application
       (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
 
-    REPLACE_COURSE_NO = "No, this course will be added to the schedule, but it won't replace an existing computer science course"
     def self.options
       {
         title: COMMON_OPTIONS[:title],

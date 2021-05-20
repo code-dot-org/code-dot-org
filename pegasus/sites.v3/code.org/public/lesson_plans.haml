@@ -22,7 +22,7 @@ theme: responsive
     %a{href: CDO.code_org_url('/curriculum/docs/k-5/complete.pdf'), target: '_blank'}
       = I18n.t :dashboard_view_all_lesson_plans
   %p
-    = I18n.t :dashboard_unplugged, unplugged_url: CDO.code_org_url('/curriculum/unplugged')
+    != I18n.t :dashboard_unplugged_markdown, unplugged_url: CDO.code_org_url('/curriculum/unplugged'), markdown: :inline
 
   %h2= I18n.t :dashboard_curriculum_middle_title
   %p

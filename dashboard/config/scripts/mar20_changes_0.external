@@ -1,0 +1,21 @@
+name 'Mar20 Changes_0'
+editor_experiment ''
+title 'Overview of the AP Changes and the Curriculum'
+description 'description here'
+
+markdown <<MARKDOWN
+##This section focuses on an high-level overview of the changes to the CS Principles curriculum for the 2020-21 school year.  Based on feedback from CS teachers, ... 
+
+We are excited to share these changes with you!
+
+
+###Objectives:
++ Participants understand the AP changes that impacted curriculum changes
++ Participants can explain the broad changes to the structure of the Code.org course.
++ Participants can explain the changes to the pedagogies of the course. 
++ Participants can explain the structure of a lesson plan
+
+###Resources
+
+
+MARKDOWN

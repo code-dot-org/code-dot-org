@@ -27,8 +27,6 @@ mi-NZ:
     rorohiko
   petition_sign_message: Mēnā e whakaae ana koe i te mātou, waitohungia. Whakapiri
     mai ki te hia tāngata kua piri kē mai.
-  petition_sign_message_support: Mēnā e tautoko ana koe i te mātou, waitohungia. Whakapiri
-    mai ki te hia tāngata kua piri kē mai.
   petition_join_others: Whakapiri mai ki te hia tāngata kua piri kē mai
   name: Ingoa
   email: Īmēra
@@ -73,6 +71,7 @@ mi-NZ:
   flappy_heading: Hari Flappy-tau ki Code.org
   gender: Ira
   learn_back_to_minecraft: Kia kaha tonu ki te ako me Mahimaina
+  studiobar_dance_title: Te Pāti Kanikani
   studiobar_flappy_title: Waehere Flappy
   studiobar_donate_title: Tāpaetia he koha
   homepage_hero_text_malala: "&ldquo;E whakatara ana ahau i ngā kōtiro puta noa i
@@ -199,6 +198,7 @@ mi-NZ:
   volunteer_engineer_submission_field_email_preference_yes: Āe
   volunteer_engineer_submission_field_email_preference_no: Kāore
   volunteer_engineer_submission_submit: Tāpaetia
+  volunteer_engineer_submission_commitment_more: Nui ake
   petition_age: Pakeke
   dashboard_announce_learn_more_button: Me ako tonu
   dashboard_landing_print_certificates: Tāngia ngā tiwhikete mō ngā ākonga ka oti
@@ -279,17 +279,28 @@ mi-NZ:
     titiro ki te whārangi, heoi anō, kia takatū i te whatinga o te taumahinga.
   flappy_shortcode: paki
   header_courses: Akoranga
+  header_course_catalog: Whārangi Akoranga
   header_project_gallery: Ngā Tūmahi
+  header_about: Whakamārama
+  header_help_support: 'Māngai tautoko '
+  header_report_bug: Pūrongo mai to raru
+  header_legal_privacy: Kaupapahere Tūmataitinga
+  header_legal_tos: Ngā Ture Ratonga
   user_header_label: Tēnā koe %{username}
   user_header_team: Tīma
   user_header_settings: Taku pūkete
   user_header_logout: Takiputa
   user_header_signin: Takiuru
+  user_header_create: 'Waihanga '
   user_header_playlab: Taiwhanga Tākaro
+  user_header_dance: Te Pāti Kanikani
   user_header_minecraft: Mahimaina
   user_header_flappy: Flappy
   applab_tile_teacher_guide: Tirohia te aratohu kaiako
   aquatic_name: 'Toihuke: Rerenga Moana'
+  hoc_overview_dance_title: Te Pāti Kanikani
+  hoc_overview_dance_subtitle: Waeheretia he Pāti Kanikani ki te tohatoha ki o hoa.
+    Me ngā waiata a Katy Perry, Madonna, J. Balvin, Keith Urban, Ciara me etahi atu!
   hoc_overview_view_teacher_guide: Tirohia te aratohu kaiako
   hoc2018_creativity_create: Waihanga
   hoc2018_mc_page_title: Whakaakoranga Hour of Code Mahimaina
@@ -344,6 +355,49 @@ mi-NZ:
   hoc2018_mc_short_description_shorter: Me whakamahi i to whakaaro hangarau me nga
     pukenga whakaoti ki te torotoro, ki te hanga ao ki raro moana i te waehere.
   hoc2018_mc_journey: Hāereere ki te ao Toihuke ki te waehere.
+  hoc2018_dance_party_main_heading: Te Pāti Kanikani
+  hoc2018_dance_party_landing_title: Kanikani
+  hoc2018_dance_party_subheading: Āwhina mai ki te whakamaoritia i te Pati Kanikani
+  hoc2018_dance_create_your_own_dance_title: Hangaia tōu ake Pati Kanikani
+  hoc2018_dance_party_box_title: Te Pāti Kanikani
+  hoc2018_dance_party_box_description: Waeheretia he Pati Kanikani ki te toharoha
+    atu ki o hoa!
+  hoc2018_dance_party_specs: Reo | Whakatakotoranga | Tau 6-106
+  hoc2018_dance_keep_on_dancing_box_title: Me Kanikani Tonu
+  hoc2018_dance_keep_on_dancing_description: Neke atu i te kotahi haora, anei ethahi
+    wero ano.
+  hoc2018_dance_keep_on_dancing_specs: Reo | Whakatakotoranga | Tau 13+
+  hoc2018_dance_keep_on_dancing_button: Timata te Wāhanga tuarua
+  hoc2018_dance_teacher_resources_title: Ngā Rauemi Kaiako
+  hoc2018_dance_teacher_resources_tile1_description: "Ngā Mahereakoranga, Ngā tiwhikete
+    me ngā \ntātari waiata."
   hoc2018_dance_teacher_resources_tile1_button: Mahere Akoranga
+  hoc2018_dance_teacher_resources_tile2_title: Te Pāti Kanikani Purukore
+  hoc2018_dance_teacher_resources_tile2_description: Hei aha ngā rorohiko! Me ako
+    ngā aroro waehere ki te hanga he pati kanikani.
   hoc2018_dance_teacher_resources_tile2_button: Ngohe Momotu
+  hoc2018_dance_featured_student_creations_title: Ngā Waihanga o ngā Tauira
+  hoc2018_dance_videos_section_heading: Whakaohoho ia koe
+  hoc2018_dance_video_title_what_is_creativity: He aha te Auahatanga?
+  hoc2018_dance_view_creativity_video_playlist: He aha te Auahatanga? Tirohia ki te
+    Ratonga katoa (5 miniti)
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Ako atu ngā mahi
+    a Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: Ngā mahi a Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_button: Me ako tonu
+  hoc2018_dance_amazon_try_coding_this_summer_title: I te Raumati nei me tarai ki
+    te waehere
+  hoc2018_dance_amazon_scholarship_programs_title: Ngā Karahipi akoranga
+  hoc2018_dance_amazon_scholarship_programs_button: Tono inaianei
+  hoc2018_dance_measure: Wāhanga
+  hoc2018_dance_measure_colon: 'Wāhanga:'
+  hoc2018_dance_video1: Te Pāti Kanikani - He timata kōrero
+  hoc2018_dance_video2: Te Pāti Kanikani - Ngā Takunetanga
+  hoc2018_dance_video3: Te Pāti Kanikani - Ngā Auaha
+  hoc2018_dance_video4: Te Pāti Kanikani - E mihi ana
+  footer_powered_by_aws: He mea whakahiko e Ratonga Tukutuku Amazon
+  footer_privacy_policy: Kaupapahere Tūmataitinga
+  footer_about: Whakamārama
+  footer_donate: Tāpaetia he koha
+  footer_support: Tautoko
+  footer_terms: Ngā Ture

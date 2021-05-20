@@ -1,0 +1,38 @@
+name 'OPD-K5 sequencing introduced'
+title 'Sequencing Introduced'
+description 'description here'
+markdown <<MARKDOWN
+# Sequencing: Where is it introduced?
+
+This gives you a sense of when sequencing is introduced in Courses A-F. You don't need to go look at all of these lessons – we will dive into some in this part of the online course – but feel free to reference this as needed.
+
+## <a href="https://curriculum.code.org/csf-19/coursea/" target="blank" rel="noopener noreferrer">Course A</a>
+- Lesson 2: Learn to Drag and Drop
+- Lesson 3 (Unplugged): Happy Maps
+- Lesson 4: Sequencing with Scrat
+- Lesson 5 (Programming with Scrat)
+- Lesson 6: Programming with Rey and BB-8
+
+## <a href="https://curriculum.code.org/csf-19/courseb/" target="blank" rel="noopener noreferrer">Course B</a>
+- Lesson 2 (Unplugged): Move It, Move It
+- Lesson 3: Sequencing with Angry Birds
+- Lesson 4: Programming with Angry Birds
+- Lesson 5: Programming with Harvester
+
+## <a href="https://curriculum.code.org/csf-19/coursec/" target="blank" rel="noopener noreferrer">Course C</a>
+- Lesson 3: (Unplugged): My Robotic Friends, Jr.
+- Lesson 4: Programming with Angry Birds
+- Lesson 5: Debugging in Maze
+- Lesson 6: Collecting Treasure with Laurel
+- Lesson 7: Creating Art with Code
+
+## <a href="https://curriculum.code.org/csf-19/coursed/" target="blank" rel="noopener noreferrer">Course D</a>
+- Lesson 1 (Unplugged): Graph Paper Programming
+- Lesson 2: Introduction to Online Puzzles
+- Lesson 3: Relay Programming
+- Lesson 4: Debugging with Laurel
+
+## <a href="https://curriculum.code.org/csf-19/coursee/" target="blank" rel="noopener noreferrer">Course E</a>
+- Lesson 1: Sequencing in the Maze
+
+MARKDOWN

@@ -55,6 +55,7 @@ Given /^I select the "([^"]*)" facilitator at index (\d+)$/ do |name, index|
   facilitator = "#{name} (#{email})"
 
   steps %Q{
+    And I wait until element "#facilitator#{index}" is visible
     And I select the "#{facilitator}" option in dropdown "facilitator#{index}"
   }
 end
@@ -100,7 +101,12 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
     And I create a workshop for course "CS Principles" attended by "#{test_teacher_name}" with 3 facilitators and end it
   }
 
-  enrollment = Pd::Enrollment.find_by(first_name: test_teacher_name)
+  enrollment = FactoryGirl.create(
+    :pd_enrollment,
+    :with_attendance,
+    :from_user,
+    user: find_test_user_by_name(test_teacher_name)
+  )
   steps %Q{
     And I am on "http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}"
   }
@@ -109,8 +115,8 @@ end
 Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
   require_rails_env
 
-  user = User.find_by_email @users[name][:email]
-  application = Pd::Application::Teacher1920Application.find_by(user: user)
+  user = find_test_user_by_name(name)
+  application = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.find_by(user: user)
 
   # TODO(Andrew) ensure regional partner in the original application, and remove this:
   application.update!(regional_partner: RegionalPartner.first)
@@ -120,28 +126,10 @@ Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
   }
 end
 
-Given(/^I am a facilitator with completed courses$/) do
-  random_name = "TestFacilitator" + SecureRandom.hex[0..9]
-  steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it and answer surveys
-  }
-end
-
-Given(/^I am an organizer with completed courses$/) do
-  random_name = "TestOrganizer" + SecureRandom.hex[0..9]
-  steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a workshop organizer
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it and answer surveys
-  }
-end
-
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
   require_rails_env
 
-  user = User.find_by(email: @users[name][:email])
+  user = find_test_user_by_name(name)
   user.permission = UserPermission::FACILITATOR
   Pd::CourseFacilitator.create(facilitator_id: user.id, course: course)
 end
@@ -149,14 +137,14 @@ end
 And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
   require_rails_env
 
-  user = User.find_by(email: @users[name][:email])
+  user = find_test_user_by_name(name)
   user.permission = UserPermission::WORKSHOP_ORGANIZER
 end
 
 And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
   require_rails_env
 
-  user = User.find_by(email: @users[name][:email])
+  user = find_test_user_by_name(name)
   user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
@@ -165,25 +153,25 @@ And(/^I create some fake applications of each type and status$/) do
   time_start = Time.now
 
   # There's no need to create more applications if a lot already exist in the system
-  if Pd::Application::Facilitator1920Application.count < 100
+  if Pd::Application::ActiveApplicationModels::FACILITATOR_APPLICATION_CLASS.count < 100
     %w(csf csd csp).each do |course|
       Pd::Application::ApplicationBase.statuses.each do |status|
         10.times do
           teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application = FactoryGirl.create(:pd_facilitator1920_application, course: course, user: teacher)
+          application = FactoryGirl.create(Pd::Application::ActiveApplicationModels::FACILITATOR_APPLICATION_FACTORY, course: course, user: teacher)
           application.update(status: status)
         end
       end
     end
   end
 
-  if Pd::Application::Teacher1920Application.count < 100
+  if Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.count < 100
     %w(csd csp).each do |course|
       (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
         10.times do
           teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application_hash = FactoryGirl.build(:pd_teacher1920_application_hash, course.to_sym, school: School.first)
-          application = FactoryGirl.create(:pd_teacher1920_application, form_data_hash: application_hash, course: course, user: teacher)
+          application_hash = FactoryGirl.build(Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_HASH_FACTORY, course.to_sym, school: School.first)
+          application = FactoryGirl.create(Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY, form_data_hash: application_hash, course: course, user: teacher)
           application.update(status: status)
         end
       end
@@ -196,13 +184,12 @@ end
 And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
-  workshop = FactoryGirl.create :summer_workshop, :ended,
-    organizer: FactoryGirl.create(:workshop_organizer, email: "test_organizer#{SecureRandom.hex}@code.org"),
-    num_sessions: 5, enrolled_and_attending_users: 10,
-    facilitators: [
-      (FactoryGirl.create :facilitator, email: "test_facilitator#{SecureRandom.hex}@code.org", name: 'F1'),
-      (FactoryGirl.create :facilitator, email: "test_facilitator#{SecureRandom.hex}@code.org", name: 'F2')
-    ]
+  workshop = FactoryGirl.create :summer_workshop,
+    :ended,
+    num_sessions: 5,
+    enrolled_and_attending_users: 10,
+    num_facilitators: 2
+
   create_fake_survey_questions workshop
   create_fake_daily_survey_results workshop
 
@@ -465,7 +452,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
   # Organizer
   organizer =
     if role == 'organized'
-      User.find_by(name: name)
+      find_test_user_by_name(name)
     else
       User.find_or_create_teacher(
         {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
@@ -491,7 +478,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       workshop.facilitators << create_facilitator(course)
     end
   else
-    facilitator = role == 'facilitated' ? User.find_by(name: name) : create_facilitator(course)
+    facilitator = role == 'facilitated' ? find_test_user_by_name(name) : create_facilitator(course)
     workshop.facilitators << facilitator
   end
 
@@ -509,37 +496,6 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
   if post_create_actions.include?('and end it')
     workshop.update!(started_at: DateTime.new(2016, 3, 15))
     workshop.update!(ended_at: DateTime.new(2016, 3, 15))
-
-    if post_create_actions.include?('and answer surveys')
-      responses = {'consent_b' => '1'}
-
-      [
-        Api::V1::Pd::WorkshopScoreSummarizer::FACILITATOR_EFFECTIVENESS_QUESTIONS,
-        Api::V1::Pd::WorkshopScoreSummarizer::TEACHER_ENGAGEMENT_QUESTIONS,
-      ].flatten.each do |question|
-        responses[question] = PdWorkshopSurvey::OPTIONS[question].last
-      end
-
-      Api::V1::Pd::WorkshopScoreSummarizer::OVERALL_SUCCESS_QUESTIONS.each do |question|
-        responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
-      end
-
-      responses['workshop_id_i'] = workshop.id
-
-      workshop.enrollments.each do |enrollment|
-        PEGASUS_DB[:forms].insert(
-          secret: SecureRandom.hex,
-          source_id: enrollment.id,
-          kind: 'PdWorkshopSurvey',
-          email: enrollment.email,
-          data: responses.to_json,
-          created_at: Time.now,
-          created_ip: '',
-          updated_at: Time.now,
-          updated_ip: ''
-        )
-      end
-    end
   elsif post_create_actions.include?('and start it')
     workshop.update!(started_at: DateTime.new(2016, 3, 15))
   else

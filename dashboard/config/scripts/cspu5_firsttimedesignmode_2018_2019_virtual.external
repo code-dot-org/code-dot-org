@@ -1,0 +1,30 @@
+name 'CSPU5_FirstTimeDesignMode_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Welcome to Design Mode
+
+In App Lab "Design Mode" lets you drag and drop **User Interface (UI)** elements into the app and then add code to respond when a user interacts with those elements.  It's kind of two-step process, but we'll learn all about it in this lesson.
+
+To start let's just look at Design Mode and add a single UI element (a button) to our app.  We'll add code later on.
+
+| 1 | 2 | 3 | 4 |
+| :-------------: | :-------------: | :-------------: | :-------------: |
+| You'll see a new set of switches above the app area that let you flip back and forth between "Design Mode" and Code Mode". | Adding an element is as easy as dragging and dropping it into the app where ever you want. Once it's on the app screen you can reposition it, resize it and change lots of other properties about it | The **Properties** tab shows you everything you can change about the look and feel of a UI element. **Note:** the properties tab is *context sensitive* which means that the set of properties you see depends on what you click on in the app. | The **element ID** is important because it's how you refer to the element in your code. We'll discuss element IDs later on. |
+
+![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+| 5 | 6 |
+| :-------------: | :-------------: |
+| You can make the text that the user sees on the button text be whatever you like. | Scroll down to see other properties for a UI element that might be "hiding" down below. | 
+
+### Vocabulary
+**User Interface (UI)** - The "User Interface" or **UI** of an app refers to how a person (user) interacts with the computer or app.  There are common patterns to user interfaces that you probably know about just from experience:
+
+* **UI Elements** or objects, like buttons, images, text boxes, pull down menus, screens and so on.
+* **UI Events** or controls, like *click*, *scroll*, *move mouse*, *type keyboard key*, etc.
+
+MARKDOWN

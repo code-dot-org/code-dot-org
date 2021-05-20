@@ -1,0 +1,86 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-12-04T22:03:59.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "comment": null,
+      "onEvent": null,
+      "setText": null,
+      "setPosition": null,
+      "ifElseBlock": null,
+      "ifBlock": null,
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "callMyFunction": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
+      "randomNumber_min_max": null,
+      "callMyFunction_n": null,
+      "functionParams_none": null
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "<img src=\"https://images.code.org/470bf70e74bc0d450747b3af891a46d2-image-1551908353339.38.41 PM.png\" style=\"float:right\">\r\n\r\n# Do This\r\n\r\nThis program will draw a building in the Debug Console.\r\n\r\n* Run the program to see how it works\r\n* Add code to the program to draw at least three more floors to the building.",
+    "submittable": "false",
+    "start_blocks": "// Function calls\r\nroof();\r\nfloor();\r\nlobby();\r\n\r\n// Function declarations\r\nfunction roof() {\r\n  console.log(\"  ==============\");\r\n  console.log(\"  |------------|\");\r\n}\r\n\r\nfunction floor() {\r\n  console.log(\"  |-[]--[]--[]-|\");\r\n  console.log(\"  |------------|\");\r\n}\r\n\r\nfunction lobby() {\r\n  console.log(\"  |----____----|\");\r\n  console.log(\"  |----|  ,|---|\");\r\n  console.log(\"  |----|   |---|\");\r\n}",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "true",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "validation_enabled": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "true",
+    "makerlab_enabled": "false",
+    "parent_level_id": 17691,
+    "palette_category_at_start": "control",
+    "mini_rubric": "false",
+    "slider_speed": "0.1",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"></div></div>",
+    "encrypted": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "floor"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "You need to call \"function floor()\" at least 4 times - once to draw each floor in the building. One was already done for you. Did you add three more calls? Check your spelling!"
+      }
+    ],
+    "encrypted_examples": "Hx8C2f6pMrwnp5yUIFlCW3wxElu4k5QkeTccdZjXgIcefxsUkkofwbT7fzyy\n3gRL7NbbxSpV5Weg9cuT6jHS8w==\n",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-07 17:50:22 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:51:56 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:52:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"slider_speed\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:57:12 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"expand_debugger\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-08 00:16:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 19:25:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"watchers_prepopulated\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 19:38:55 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"text_mode_at_start\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 19:40:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 23:09:05 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 23:09:08 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 23:12:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 23:27:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-13 16:00:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-28 22:18:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-28 22:20:54 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-06 14:48:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-03-06 14:48:45 +0000\",\"changed\":[\"code_functions\",\"slider_speed\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-03-06 14:52:16 +0000\",\"changed\":[\"code_functions\",\"palette_category_at_start\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-03-06 14:53:47 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-03-06 14:54:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-03-06 19:32:55 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-06 21:22:39 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-06 21:25:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_html\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-06 21:39:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-06 21:40:55 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-11 22:28:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-18 16:33:07 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-20 14:09:34 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-02 18:17:12 +0000\",\"changed\":[\"code_functions\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

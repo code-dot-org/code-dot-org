@@ -15,33 +15,11 @@ import SettingsCog from '../lib/ui/SettingsCog';
 import ShowCodeToggle from './ShowCodeToggle';
 import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
-
-const styles = {
-  headerIcon: {
-    fontSize: 18
-  },
-  chevron: {
-    fontSize: 18,
-    ':hover': {
-      color: color.white
-    }
-  },
-  runningIcon: {
-    color: color.dark_charcoal
-  },
-  studentNotStartedWarning: {
-    zIndex: 99,
-    backgroundColor: color.lightest_red,
-    width: '100%',
-    height: 20,
-    padding: 5,
-    opacity: 0.9
-  }
-};
+import {queryParams} from '../code-studio/utils';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
-    studentHasNotStartedLevel: PropTypes.bool,
+    displayNotStartedBanner: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -53,7 +31,8 @@ class CodeWorkspace extends React.Component {
     isMinecraft: PropTypes.bool.isRequired,
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
-    showMakerToggle: PropTypes.bool
+    showMakerToggle: PropTypes.bool,
+    autogenerateML: PropTypes.func
   };
 
   shouldComponentUpdate(nextProps) {
@@ -107,7 +86,8 @@ class CodeWorkspace extends React.Component {
       runModeIndicators,
       readonlyWorkspace,
       withSettingsCog,
-      showMakerToggle
+      showMakerToggle,
+      autogenerateML
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
@@ -117,8 +97,11 @@ class CodeWorkspace extends React.Component {
     ];
 
     const settingsCog = showSettingsCog && (
-      <SettingsCog {...{isRunning, runModeIndicators, showMakerToggle}} />
+      <SettingsCog
+        {...{isRunning, runModeIndicators, showMakerToggle, autogenerateML}}
+      />
     );
+
     return [
       <PaneSection id="toolbox-header" key="toolbox-header">
         <i
@@ -161,6 +144,9 @@ class CodeWorkspace extends React.Component {
     // is enabled, remove focus while running.
     const hasFocus = !(props.runModeIndicators && props.isRunning);
     const isRtl = this.props.isRtl;
+
+    //TODO: When CSF example solutions are no longer rendered with solution=true in url remove this
+    const inCsfExampleSolution = queryParams('solution') === 'true';
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
@@ -206,6 +192,7 @@ class CodeWorkspace extends React.Component {
                   : i18n.workspaceHeaderShort()}
               </span>
               <div id="blockCounter" ref={el => (this.blockCounterEl = el)}>
+                <span>: </span>
                 <ProtectedStatefulDiv
                   id="blockUsed"
                   className="block-counter-default"
@@ -224,7 +211,7 @@ class CodeWorkspace extends React.Component {
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
           />
         )}
-        {this.props.studentHasNotStartedLevel && (
+        {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
           <div style={styles.studentNotStartedWarning}>
             {i18n.levelNotStartedWarning()}
           </div>
@@ -240,9 +227,32 @@ class CodeWorkspace extends React.Component {
   }
 }
 
+const styles = {
+  headerIcon: {
+    fontSize: 18
+  },
+  chevron: {
+    fontSize: 18,
+    ':hover': {
+      color: color.white
+    }
+  },
+  runningIcon: {
+    color: color.dark_charcoal
+  },
+  studentNotStartedWarning: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    height: 20,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative'
+  }
+};
+
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
 export default connect(state => ({
-  studentHasNotStartedLevel: state.pageConstants.isNotStartedLevel,
+  displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
   editCode: state.pageConstants.isDroplet,
   isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,

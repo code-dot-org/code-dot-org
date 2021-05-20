@@ -1,0 +1,23 @@
+{
+  "func": "shape",
+  "category": "Drawing",
+  "paramButtons": {
+    "minArgs": 6
+  },
+  "paletteParams": [
+    "x1",
+    "y1",
+    "x2",
+    "y2",
+    "x3",
+    "y3"
+  ],
+  "params": [
+    "200",
+    "0",
+    "0",
+    "400",
+    "400",
+    "400"
+  ]
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressPill from './ProgressPill';
+import {UnconnectedProgressPill as ProgressPill} from './ProgressPill';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 export default storybook => {
@@ -10,8 +10,10 @@ export default storybook => {
         <ProgressPill
           levels={[
             {
+              id: '1',
               url: '/level1',
-              status: LevelStatus.perfect
+              status: LevelStatus.perfect,
+              isLocked: false
             }
           ]}
           icon="desktop"
@@ -25,12 +27,16 @@ export default storybook => {
         <ProgressPill
           levels={[
             {
+              id: '1',
               url: '/level1',
-              status: LevelStatus.perfect
+              status: LevelStatus.perfect,
+              isLocked: false
             },
             {
+              id: '2',
               url: '/level2',
-              status: LevelStatus.not_tried
+              status: LevelStatus.not_tried,
+              isLocked: false
             }
           ]}
           icon="desktop"
@@ -44,12 +50,13 @@ export default storybook => {
         <ProgressPill
           levels={[
             {
+              id: '1',
               url: '/level1',
-              status: LevelStatus.perfect
+              status: LevelStatus.perfect,
+              isLocked: false
             }
           ]}
           text="Unplugged Activity"
-          fontSize={12}
         />
       )
     }

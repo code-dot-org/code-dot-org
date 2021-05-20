@@ -1,0 +1,15 @@
+{
+  "name": "time4cs-control",
+  "script_names": [
+    "time4cs-control-unit-1",
+    "time4cs-control-unit-2"
+  ],
+  "properties": {
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

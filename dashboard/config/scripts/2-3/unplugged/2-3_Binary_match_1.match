@@ -6,14 +6,14 @@ banner 'Use the key to match each code to its letter'
 content1 '/script_assets/2-3_images/unplugged/binary_1_q.png, 250'
 height '20'
 
-question '<strong>N</strong>'
+question '**N**'
 answer '/script_assets/2-3_images/unplugged/binary_1_a3.png'
 
-question '<strong>O</strong>'
+question '**O**'
 answer '/script_assets/2-3_images/unplugged/binary_1_a1.png'
 
-question '<strong>P</strong>'
+question '**P**'
 answer '/script_assets/2-3_images/unplugged/binary_1_a2.png'
 
-question '<strong>Q</strong>'
+question '**Q**'
 answer '/script_assets/2-3_images/unplugged/binary_1_a4.png'

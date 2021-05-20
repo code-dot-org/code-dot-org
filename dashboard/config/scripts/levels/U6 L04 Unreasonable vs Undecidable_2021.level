@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:06:06.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "Problems that are undecidable and algorithms that are unreasonable both touch on the limits of the kinds of computing that a computer can accomplish. **In your own words, explain the difference between undecidable problems and unreasonable time algorithms.**",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19308,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Check Your Understanding",
+    "encrypted_solution": "kD4NFlDc//zDtmelZlVZuKil9BBChGFdZFW/NaLprxAZSiC3grShn6l2LkQT\nK31NTTLDtFwinq7RAyxlKDdxAjW2fpLtVGN09WGJqlllVTyjXPZocFquO/b2\n3U4TVQXmh62YRfqn+yVytWqmGoajiZlvdU5XzaIeOfJhZbby/imGS/KzTEam\nQC/A+PlbPAWqWm/jPS8pPYDnglCV1pCXjZuAtLLKk0EzICu3fkOzrIP9LqJB\npghT8HhTTRXuViaGgBUD6Tr/I2Kt+AEALgpUqfMC1bYmGjWWQCIwpnpJVlWz\nFLVBjQ957WjhGxOgGqM3J3x9wtyaDpQoM5tDS+EtlqSUHQw/IiV31w32QT2j\n3GggEeVCTCCNsqV4o3wu9vkVYtHjcAC1r7o5MsAWI9SesVlW8hLWjkqWwGUq\nORaEi8zqWyqoIHyfYhRJ4meYZ3CiHAM0uKD9ntpsJeJeI/xTw/81q+tLy7T0\nClyljsvFSqUDguzaZmJTwanDLeU/Adhadk/C+cD1P+e3FEPwfqIy67FjbkYY\n3GknnpF0fgZLQJAkSy1022A6cfC/RtZlB7afLspeHgN/i/bnrhtGVtxirJ5i\nW3KJ/W7WxFPn7qugHDiGWvke8F27vM93Magk9ODrBVMgJlaLWZ9xCmmhjVdw\nMeyBTnOJc9sMeZMRuIz5fDquYdvbwCaO03kVk97Kyo97Y/Fv2R1Y9PktD8zO\nHj7XuZpK+mDCicqJWX488mqKzFSCAPRvgLY0aTvjlzIfu5Pmt1mC05avaP1Z\nXNEWHPH7Gu04dJhdXekEVG2FhjTP6d/tYQRTnH8kjckc1qsl0Z1OPVeujMjs\n2OU2Kf1sM9eXdzx17SpBKS1PhXtVe5MLK//Cdx16CKE34cKii9PdmvjeAZ8I\n3j36QUZ0QQTstv8kAXZve1A0dZbBI6gyrqF+Ge0rJt2r4Z0W4vS/pfwBdPgZ\nHR6seu1AdqIgMnjxoZ63TA==\n",
+    "optional": "false",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-21 20:36:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-10-03 21:13:32 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-10-03 21:14:03 +0000\",\"changed\":[\"title\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-10-03 21:47:30 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</FreeResponse>

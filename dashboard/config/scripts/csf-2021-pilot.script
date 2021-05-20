@@ -1,0 +1,55 @@
+login_required true
+hideable_lessons true
+teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"]]
+announcements [{"notice"=>"Attention pilot teachers!", "details"=>"Lesson plans for this course are currently available in Google Doc format only. Click the button to access the lesson plans.", "link"=>"https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing", "type"=>"information", "visibility"=>"Teacher-only"}]
+pilot_experiment 'csf-2021-pilot'
+
+lesson_group 'Sprites', display_name: 'Sprites'
+lesson_group_description 'Learn the basics of coding with sprites!'
+lesson 'introducing-spritelab', display_name: 'Introducing Sprite Lab', has_lesson_plan: false
+level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Sprite Lab'
+level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
+
+lesson 'Making Sprites', display_name: 'Making Sprites', has_lesson_plan: false
+level 'courseF_sprites_predict', progression: 'Prediction'
+level 'CourseEF_video_MakeSprite_2020', progression: 'Video: How to Make a Sprite'
+level 'courseF_sprites_make', progression: 'Skill Building'
+level 'courseF_sprites_positioning', progression: 'Skill Building'
+level 'courseF_sprites_moreSprites', progression: 'Skill Building'
+level 'courseF_sprites_properties', progression: 'Skill Building'
+level 'courseF_sprites_behaviors', progression: 'Skill Building'
+level 'courseF_sprites_practice', progression: 'Practice'
+level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
+
+lesson 'Sprites in Action', display_name: 'Sprites in Action', has_lesson_plan: false
+level 'courseF_events_predict', progression: 'Prediction'
+level 'courseF_pilotVideo_events', progression: 'Video: Sprites in Action'
+level 'courseF_events_review', progression: 'Skill Building'
+level 'courseF_events_time', progression: 'Skill Building'
+level 'courseF_events_key', progression: 'Skill Building'
+level 'courseF_events_conflict', progression: 'Skill Building'
+level 'courseF_events_practice', progression: 'Practice'
+level 'courseF_events_freeplay', progression: 'Free Play: Make an Interactive Scene'
+
+lesson_group 'variables', display_name: 'Variables'
+lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
+lesson 'blank-space-stories', display_name: 'Blank Space Stories', has_lesson_plan: false, unplugged: true
+level 'EnvelopeVariables-Unplugged_2021', progression: 'Video: Variables in Envelopes'
+
+lesson 'texts-and-prompts', display_name: 'Text and Prompts', has_lesson_plan: false
+level 'courseF_variables_predict', progression: 'Prediction'
+level 'courseF_pilotVideo_prompts', progression: 'Video: Text and Prompts'
+level 'courseF_text_review', progression: 'Skill Building'
+level 'courseF_text_print', progression: 'Skill Building'
+level 'courseF_text_events', progression: 'Skill Building'
+level 'courseF_text_prompts', progression: 'Skill Building'
+level 'courseF_text_answer', progression: 'Skill Building'
+level 'courseF_text_concat', progression: 'Skill Building'
+level 'courseF_text_practice', progression: 'Practice'
+
+lesson 'user-input-programs', display_name: 'Mini-Project: User Input Programs', has_lesson_plan: false
+level 'courseF_label_predict', progression: 'Prediction'
+level 'courseF_variables_samples', progression: 'Exploration: Sample Programs'
+level 'courseF_variables_stop', progression: 'Planning'
+level 'courseF_variables_projects', progression: 'Mini-Project: User Input Programs'
+

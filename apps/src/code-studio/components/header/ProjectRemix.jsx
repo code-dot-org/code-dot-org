@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-
+import * as utils from '../../../utils';
 import {refreshProjectName} from '../../headerRedux';
+import {styles} from './EditableProjectName';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
@@ -21,7 +22,7 @@ class ProjectRemix extends React.Component {
     ) {
       dashboard.project.serverSideRemix();
     } else if (!this.props.isSignedIn) {
-      window.location.assign(
+      utils.navigateToHref(
         `/users/sign_in?user_return_to=${window.location.pathname}`
       );
     } else {
@@ -41,14 +42,19 @@ class ProjectRemix extends React.Component {
   };
 
   render() {
-    let className = 'project_remix header_button';
+    let className = 'project_remix header_button no-mc';
     if (this.props.lightStyle) {
       className += ' header_button_light';
     }
     return (
-      <div className={className} onClick={this.remixProject}>
+      <button
+        type="button"
+        className={className}
+        onClick={this.remixProject}
+        style={styles.buttonSpacing}
+      >
         {i18n.remix()}
-      </div>
+      </button>
     );
   }
 }

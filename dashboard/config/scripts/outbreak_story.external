@@ -1,0 +1,54 @@
+name 'outbreak_story'
+title 'Outbreak: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Outbreak: Code Your Own Simulation
+
+## Welcome to Monster Town!
+Monster Town was usually a happy and healthy place. The monsters of Monster town loved to wander around to visit their friends. 
+
+<img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+One day, one of the monsters started feeling sick. The monster had caught a **virus**! A virus is a tiny germ that can make you sick. The other monsters were not too worried. They kept visiting their friends.
+
+<img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+Soon after, two more monsters got sick. It was the same virus! It seems they got the virus from their friend.
+
+<img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+The virus slowly spread to other monsters who were nearby. The healthy monsters began to worry that they were all going to get sick. The sick monsters began to worry that they were going to give the virus to everyone else.
+
+<img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+<div style="display: inline-block">
+<img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+## Stopping the spread
+Fortunately, after studying the virus, the neighbors of Monster Town made an important discovery. They realized that they were less likely to spread the virus if they wore masks over their mouths. With face masks on, sick monsters were less likely to give the virus to healthy monsters.
+
+<img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+</div>
+
+<img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+## What will happen next?
+
+Today, you're going to write code to create and run your own **simulation** of the virus outbreak at Monster Town.  A simulation is a computer model of a process or system. Learn to code and make predictions about what will happen to the neighbors of Monster Town.
+
+<img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+* *How quickly will the virus spread?*
+
+* *Will everyone get sick?*
+
+* *How will face masks help?*
+
+
+When you're finished, share your simulation with others. Share your message about what you think we can do to help keep others healthy when a virus comes to town. 
+
+<img src="https://images.code.org/5e41169fcaf0e949b09ab225d183c165-image-1617128998517.png" style="float:left;width:30%">
+MARKDOWN

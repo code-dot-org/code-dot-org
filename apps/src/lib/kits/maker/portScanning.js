@@ -2,6 +2,8 @@
 /* global SerialPort */ // Maybe provided by the Code.org Browser
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
+import applabI18n from '@cdo/applab/locale';
+import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -23,6 +25,12 @@ export const CIRCUIT_PLAYGROUND_PID = 0x8011;
 /** @const {string} The Circuit Playground Express product id */
 export const CIRCUIT_PLAYGROUND_EXPRESS_PID = 0x8018;
 
+/** @const {string} The micro:bit vendor id as reported by micro:bit boards */
+export const MICROBIT_VID = 0x0d28;
+
+/** @const {string} The micro:bit product id */
+export const MICROBIT_PID = 0x0204;
+
 /**
  * Scan system serial ports for a device compatible with Maker Toolkit.
  * @returns {Promise.<string>} resolves to a serial port object for a viable
@@ -39,9 +47,7 @@ export function findPortWithViableDevice() {
       } else {
         return Promise.reject(
           new ConnectionFailedError(
-            'Did not find a usable device on a serial port. ' +
-              '\n\nFound devices: ' +
-              JSON.stringify(list)
+            applabI18n.foundDevices({deviceList: JSON.stringify(list)})
           )
         );
       }
@@ -53,7 +59,7 @@ export function findPortWithViableDevice() {
  * @returns {Promise} Resolves if installed, rejects if not.
  */
 export function ensureAppInstalled() {
-  if (isNodeSerialAvailable()) {
+  if (!isChromeOS()) {
     return Promise.resolve();
   }
 
@@ -68,22 +74,18 @@ export function ensureAppInstalled() {
  * @returns {Promise.<Array.<SerialPortInfo>>}
  */
 function listSerialDevices() {
-  const SerialPortType = isNodeSerialAvailable()
-    ? SerialPort
-    : ChromeSerialPort;
-  return new Promise((resolve, reject) => {
-    SerialPortType.list((error, list) =>
-      error ? reject(error) : resolve(list)
-    );
-  });
-}
-
-/**
- * @returns {boolean} Whether node SerialPort is available on window, where it
- * is provided if we're using the Code.org Browser.
- */
-export function isNodeSerialAvailable() {
-  return typeof SerialPort === 'function';
+  let SerialPortType;
+  if (!isChromeOS()) {
+    SerialPortType = SerialPort;
+    return SerialPortType.list();
+  } else {
+    SerialPortType = ChromeSerialPort;
+    return new Promise((resolve, reject) => {
+      SerialPortType.list((error, list) =>
+        error ? reject(error) : resolve(list)
+      );
+    });
+  }
 }
 
 /**
@@ -113,7 +115,17 @@ export function getPreferredPort(portList) {
     return adafruitExpress;
   }
 
-  // 3. Next best case: Some other Adafruit product that might also work
+  // 3. Next-best case: micro:bit
+  const microbit = portList.find(
+    port =>
+      parseInt(port.vendorId, 16) === MICROBIT_VID &&
+      parseInt(port.productId, 16) === MICROBIT_PID
+  );
+  if (microbit) {
+    return microbit;
+  }
+
+  // 4. Next best case: Some other Adafruit product that might also work
   const otherAdafruit = portList.find(
     port => parseInt(port.vendorId, 16) === ADAFRUIT_VID
   );
@@ -121,7 +133,7 @@ export function getPreferredPort(portList) {
     return otherAdafruit;
   }
 
-  // 4. Last-ditch effort: Anything with a probably-usable port name and
+  // 5. Last-ditch effort: Anything with a probably-usable port name and
   //    a valid vendor id and product id
   const comNameRegex = /usb|acm|^com/i;
   return portList.find(port => {

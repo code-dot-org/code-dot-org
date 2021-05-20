@@ -1,0 +1,8 @@
+name 'outbreak_freeplay_choice'
+editor_experiment ''
+display_name 'Free Play'
+description 'You finished the tutorial! Keep making changes or improvements to your project. You can choose to keep working with the same blocks or try an expanded toolbox.'
+
+sublevels
+level 'outbreak_freeplay_basic'
+level 'outbreak_freeplay'

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -40,7 +40,7 @@ describe('SchoolInfoInterstitial', () => {
               ncesSchoolId={''}
               schoolName={''}
               schoolLocation={''}
-              useGoogleLocationSearch={true}
+              useLocationSearch={true}
               showErrors={false}
               showRequiredIndicator={true}
               onCountryChange={wrapper.instance().onCountryChange}
@@ -51,12 +51,14 @@ describe('SchoolInfoInterstitial', () => {
           </div>
           <div>
             <Button
+              __useDeprecatedTag
               text={i18n.dismiss()}
               onClick={wrapper
                 .find('Button[id="dismiss-button"]')
                 .prop('onClick')}
             />
             <Button
+              __useDeprecatedTag
               text={i18n.save()}
               onClick={wrapper.find('Button[id="save-button"]').prop('onClick')}
             />
@@ -136,7 +138,7 @@ describe('SchoolInfoInterstitial', () => {
         ncesSchoolId={''}
         schoolName={''}
         schoolLocation={''}
-        useGoogleLocationSearch={true}
+        useLocationSearch={true}
         onCountryChange={wrapper.instance().onCountryChange}
         onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
         onSchoolChange={wrapper.instance().onSchoolChange}
@@ -168,7 +170,7 @@ describe('SchoolInfoInterstitial', () => {
         ncesSchoolId={'123'}
         schoolName={'Test School'}
         schoolLocation={'Seattle'}
-        useGoogleLocationSearch={true}
+        useLocationSearch={true}
         onCountryChange={wrapper.instance().onCountryChange}
         onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
         onSchoolChange={wrapper.instance().onSchoolChange}

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {assert, expect} from '../util/configuredChai';
+import {assert, expect} from '../util/deprecatedChai';
 import sinon from 'sinon';
 import * as testUtils from './../util/testUtils';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
@@ -89,6 +89,11 @@ const BASE_DROPLET_CONFIG = Object.freeze({
       value: true,
       color: '#FFB74D',
       title: 'Math.pow'
+    },
+    'Math.sqrt': {
+      value: true,
+      color: '#FFB74D',
+      title: 'Math.sqrt'
     }
   },
   categories: {

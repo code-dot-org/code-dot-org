@@ -1,0 +1,918 @@
+{
+  "script": {
+    "name": "ECSPD1",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "ECS Support Legacy"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:49 UTC",
+    "seeding_key": {
+      "script.name": "ECSPD1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome to Phase 1!",
+      "name": "Welcome to Phase 1!",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "key": "Background and Context",
+      "name": "Background and Context",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "key": "ECS Curriculum",
+      "name": "ECS Curriculum",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "key": "Classroom and workshop style ",
+      "name": "Classroom and workshop style ",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "key": "Wrap Up",
+      "name": "Wrap Up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS Welcome Video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS Welcome Video"
+        ],
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "PDECS Welcome Video"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "PDECS tour"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 professional learning program phases"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 professional learning program phases"
+        ],
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 professional learning program phases"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECS Matching Program Commitment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECS Matching Program Commitment"
+        ],
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECS Matching Program Commitment"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 cs is about"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 cs is about"
+        ],
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 cs is about"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 dikjstra"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 dikjstra"
+        ],
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 dikjstra"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 equity in cs education"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 equity in cs education"
+        ],
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 equity in cs education"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 background reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 background reflection"
+        ],
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 background reflection"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 curriculum design"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 curriculum design"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 curriculum design"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 unit overviews"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 unit overviews"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 unit overviews"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 Matching Unit Descriptions and Numbers"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 Matching Unit Descriptions and Numbers"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 Matching Unit Descriptions and Numbers"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 unit 1 overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 unit 1 overview"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 unit 1 overview"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 unit 2 overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 unit 2 overview"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 unit 2 overview"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 curriculum connections"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 curriculum connections"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 curriculum connections"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 computational thinker"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 computational thinker"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 computational thinker"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 unifying themes"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 unifying themes"
+        ],
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 unifying themes"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECS PD1 classroom culture"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECS PD1 classroom culture"
+        ],
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECS PD1 classroom culture"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 your role"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 your role"
+        ],
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 your role"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 student centered learning"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 student centered learning"
+        ],
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 student centered learning"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 Forum"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 Forum"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 Forum"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 post survey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 post survey"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 post survey"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD1 congratulations end"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD1 congratulations end"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      },
+      "level_keys": [
+        "ECSPD1 congratulations end"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PDECS Welcome Video",
+        "script_level.level_keys": [
+          "PDECS Welcome Video"
+        ],
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS tour",
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 professional learning program phases",
+        "script_level.level_keys": [
+          "ECSPD1 professional learning program phases"
+        ],
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECS Matching Program Commitment",
+        "script_level.level_keys": [
+          "ECS Matching Program Commitment"
+        ],
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 cs is about",
+        "script_level.level_keys": [
+          "ECSPD1 cs is about"
+        ],
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 dikjstra",
+        "script_level.level_keys": [
+          "ECSPD1 dikjstra"
+        ],
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 equity in cs education",
+        "script_level.level_keys": [
+          "ECSPD1 equity in cs education"
+        ],
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 background reflection",
+        "script_level.level_keys": [
+          "ECSPD1 background reflection"
+        ],
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 curriculum design",
+        "script_level.level_keys": [
+          "ECSPD1 curriculum design"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 unit overviews",
+        "script_level.level_keys": [
+          "ECSPD1 unit overviews"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 Matching Unit Descriptions and Numbers",
+        "script_level.level_keys": [
+          "ECSPD1 Matching Unit Descriptions and Numbers"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 unit 1 overview",
+        "script_level.level_keys": [
+          "ECSPD1 unit 1 overview"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 unit 2 overview",
+        "script_level.level_keys": [
+          "ECSPD1 unit 2 overview"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 curriculum connections",
+        "script_level.level_keys": [
+          "ECSPD1 curriculum connections"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 computational thinker",
+        "script_level.level_keys": [
+          "ECSPD1 computational thinker"
+        ],
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 unifying themes",
+        "script_level.level_keys": [
+          "ECSPD1 unifying themes"
+        ],
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECS PD1 classroom culture",
+        "script_level.level_keys": [
+          "ECS PD1 classroom culture"
+        ],
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 your role",
+        "script_level.level_keys": [
+          "ECSPD1 your role"
+        ],
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 student centered learning",
+        "script_level.level_keys": [
+          "ECSPD1 student centered learning"
+        ],
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 Forum",
+        "script_level.level_keys": [
+          "ECSPD1 Forum"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 post survey",
+        "script_level.level_keys": [
+          "ECSPD1 post survey"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD1 congratulations end",
+        "script_level.level_keys": [
+          "ECSPD1 congratulations end"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

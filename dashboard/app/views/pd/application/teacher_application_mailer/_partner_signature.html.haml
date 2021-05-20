@@ -1,0 +1,15 @@
+- if @application.regional_partner
+  - if @application.regional_partner.contact_email.present?
+    = @application.regional_partner.contact_name
+    %br
+    = mail_to @application.regional_partner.contact_email
+    %br
+    = @application.regional_partner.name
+  - else
+    = link_to @application.regional_partner.name, CDO.code_org_url('educate/professional-learning/contact-regional-partner', CDO.default_scheme)
+- else
+  Jared Fritz
+  %br
+  Program Manager, District & School Recruitment
+  %br
+  Code.org

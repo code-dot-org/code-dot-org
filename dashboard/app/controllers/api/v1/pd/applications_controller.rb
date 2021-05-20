@@ -63,12 +63,8 @@ module Api::V1::Pd
 
       respond_to do |format|
         format.json do
-          serialized_applications = prefetch_and_serialize(
-            applications,
-            role: role,
-            serializer: ApplicationQuickViewSerializer
-          )
-          render json: serialized_applications
+          prefetched_applications = prefetch(applications, role: role)
+          render json: prefetched_applications, each_serializer: ApplicationQuickViewSerializer
         end
         format.csv do
           csv_text = get_csv_text applications, role
@@ -97,13 +93,8 @@ module Api::V1::Pd
 
       respond_to do |format|
         format.json do
-          serialized_applications = prefetch_and_serialize(
-            applications,
-            role: role,
-            serializer: serializer,
-            scope: {user: current_user}
-          )
-          render json: serialized_applications
+          prefetched_applications = prefetch(applications, role: role)
+          render json: prefetched_applications, each_serializer: serializer, scope: {user: current_user}
         end
         format.csv do
           csv_text = get_csv_text applications, role
@@ -204,13 +195,12 @@ module Api::V1::Pd
       email = params[:email]
       user = User.find_by_email email
       filtered_applications = @applications.where(
-        application_year: YEAR_19_20,
+        application_year: APPLICATION_CURRENT_YEAR,
         application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
         user: user
       )
 
-      serialized_applications = filtered_applications.map {|a| ApplicationSearchSerializer.new(a).attributes}
-      render json: serialized_applications
+      render json: filtered_applications, each_serializer: ApplicationSearchSerializer
     end
 
     private
@@ -304,16 +294,10 @@ module Api::V1::Pd
       {registered_workshop: false}
     end
 
-    def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
-      prefetch applications, role: role
-      applications.map do |application|
-        serializer.new(application, scope: scope).attributes
-      end
-    end
-
     def prefetch(applications, role: nil)
       type = TYPES_BY_ROLE[role.try(&:to_sym)]
       type.prefetch_associated_models applications
+      applications
     end
   end
 end

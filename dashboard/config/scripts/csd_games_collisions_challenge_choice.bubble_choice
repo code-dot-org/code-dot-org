@@ -1,0 +1,10 @@
+name 'CSD games collisions challenge choice'
+editor_experiment ''
+display_name 'Collision Challenges'
+description 'Try out these new blocks and challenges with collisions.'
+
+sublevels
+level 'CSD U3 collisions debug_2020'
+level 'CSD U3 collisions setCollider_2020'
+level 'CSD U3 collisions bounciness_2020'
+level 'CSD U3 L18 Freeplay_2020'

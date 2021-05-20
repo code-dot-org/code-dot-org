@@ -19,7 +19,10 @@ class EditTableRow extends React.Component {
   static propTypes = {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
-    record: PropTypes.object.isRequired
+    record: PropTypes.object.isRequired,
+    readOnly: PropTypes.bool,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -47,14 +50,22 @@ class EditTableRow extends React.Component {
   }
 
   handleSave = () => {
-    this.setState({isSaving: true});
-    const newRecord = _.mapValues(this.state.newInput, castValue);
-    FirebaseStorage.updateRecord(
-      this.props.tableName,
-      newRecord,
-      this.resetState,
-      msg => console.warn(msg)
-    );
+    this.props.hideError();
+    try {
+      const newRecord = _.mapValues(this.state.newInput, inputString =>
+        castValue(inputString, /* allowUnquotedStrings */ false)
+      );
+      this.setState({isSaving: true});
+      FirebaseStorage.updateRecord(
+        this.props.tableName,
+        newRecord,
+        this.resetState,
+        msg => console.warn(msg)
+      );
+    } catch (e) {
+      this.setState({isSaving: false});
+      this.props.showError();
+    }
   };
 
   resetState = () => {
@@ -91,7 +102,7 @@ class EditTableRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr style={dataStyles.row} className="uitest-data-table-row">
         {this.props.columnNames.map(columnName => (
           <td key={columnName} style={dataStyles.cell}>
             {this.state.isEditing && columnName !== 'id' ? (
@@ -107,39 +118,41 @@ class EditTableRow extends React.Component {
           </td>
         ))}
 
-        <td style={dataStyles.cell} />
+        {!this.props.readOnly && <td style={dataStyles.cell} />}
 
-        <td style={dataStyles.editButtonCell}>
-          {!this.state.isDeleting &&
-            (this.state.isEditing ? (
+        {!this.props.readOnly && (
+          <td style={dataStyles.editButtonCell}>
+            {!this.state.isDeleting &&
+              (this.state.isEditing ? (
+                <PendingButton
+                  isPending={this.state.isSaving}
+                  onClick={this.handleSave}
+                  pendingText="Saving..."
+                  style={dataStyles.saveButton}
+                  text="Save"
+                />
+              ) : (
+                <button
+                  type="button"
+                  style={dataStyles.editButton}
+                  onClick={this.handleEdit}
+                >
+                  Edit
+                </button>
+              ))}
+
+            {!this.state.isSaving && (
               <PendingButton
-                isPending={this.state.isSaving}
-                onClick={this.handleSave}
-                pendingText="Saving..."
-                style={dataStyles.saveButton}
-                text="Save"
+                isPending={this.state.isDeleting}
+                onClick={this.handleDelete}
+                pendingStyle={{float: 'right'}}
+                pendingText="Deleting..."
+                style={dataStyles.redButton}
+                text="Delete"
               />
-            ) : (
-              <button
-                type="button"
-                style={dataStyles.editButton}
-                onClick={this.handleEdit}
-              >
-                Edit
-              </button>
-            ))}
-
-          {!this.state.isSaving && (
-            <PendingButton
-              isPending={this.state.isDeleting}
-              onClick={this.handleDelete}
-              pendingStyle={{float: 'right'}}
-              pendingText="Deleting..."
-              style={dataStyles.redButton}
-              text="Delete"
-            />
-          )}
-        </td>
+            )}
+          </td>
+        )}
       </tr>
     );
   }

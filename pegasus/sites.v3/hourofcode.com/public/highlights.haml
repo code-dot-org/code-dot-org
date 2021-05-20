@@ -1,7 +1,9 @@
 ---
-title: <%= hoc_s(:highlights_title) %>
 layout: wide
 ---
+
+:ruby
+  @header["title"] = hoc_s(:highlights_title)
 
 #signup-button{style: 'margin-right: 40px;'}
   = view :signup_button

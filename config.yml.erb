@@ -52,8 +52,88 @@ twilio_sid_test:           !Secret
 
 # Jotform
 jotform_api_key: !Secret
-jotform_forms:
 jotform_min_dates:
+jotform_forms:
+  academic_year_1:
+    day_1:         92125650301142
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_2:
+    day_1:         92125614667157
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_3:
+    day_1:         92125413150141
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_4:
+    day_1:         92125122319145
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_1_2:
+    day_1:         92125650301142
+    day_2:         92125614667157
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_3_4:
+    day_1:         92125413150141
+    day_2:         92125122319145
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  virtual_1:
+    day_1:         92175136628158
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_2:
+    day_1:         92175665906164
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_3:
+    day_1:         92175784085164
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_4:
+    day_1:         92175722303149
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_5:
+    day_1:         92175483700154
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_6:
+    day_1:         92175857756170
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_7:
+    day_1:         92175683174161
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_8:
+    day_1:         92175542003146
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  local:
+    day_0:       81307473693159
+    day_1:       81236323593153
+    day_2:       81368536787170
+    day_3:       81368909887175
+    day_4:       81368069687170
+    day_5:       81495142793161
+    facilitator: 81276605393158
+  local_summer:
+    day_0:       90986490369171
+    day_1:       90986506471163
+    day_2:       90986458251165
+    day_3:       90986477669179
+    day_4:       90986953273169
+    day_5:       90986517815167
+    facilitator: 91372090131144
+  post_course:
+    2018-2019: 90486182774164
+  csf:
+    pre201:      90066184161150
+    post201:     90065524560150
+    facilitator: 91405279991164
 
 # Learning Tools Interoperability (LTI)
 lti_credentials: !Secret
@@ -73,7 +153,6 @@ dashboard_honeybadger_api_key: !Secret
 pegasus_honeybadger_api_key:   !Secret
 
 # Zendesk
-zendesk_secret:    !Secret
 zendesk_dev_token: !Secret
 
 # Webpurify
@@ -87,11 +166,10 @@ github_webhook_secret:
 google_maps_client_id:    !Secret
 google_maps_api_key:
 google_maps_secret:       !Secret
-hoc_map_account:
-hoc_map_table_id:
 ga_account:               !Secret
 ga_profile_id:            !Secret
 google_safe_browsing_key: !Secret
+gdrive_export_secret:     !Secret
 
 # Mapbox
 mapbox_upload_token:
@@ -127,6 +205,7 @@ slack_endpoint_broken_links:
 # in Applab.
 firebase_name: cdo-v3-<%=env%>
 firebase_secret: !Secret
+firebase_shared_secret: !Secret
 firebase_channel_id_suffix: ''
 firebase_max_channel_writes_per_15_sec: 300
 firebase_max_channel_writes_per_60_sec: 600
@@ -134,6 +213,10 @@ firebase_max_table_count: 10
 firebase_max_table_rows: 20000
 firebase_max_record_size: 4096
 firebase_max_property_size: 4096
+
+# Azure keys for speech service
+azure_speech_service_key: !Secret
+azure_speech_service_region: !Secret
 
 # Configuration Options for Pusher.com integration
 # Optional for most devs, very useful if working on Internet Simulator
@@ -155,14 +238,18 @@ new_relic_license_key:
 newrelic_logging: false
 
 # Credentials for Google-federated AWS access.
+# (Deprecated: move these configuration values to AWS config file)
 aws_role:
 google_client_id:
 google_client_secret:
 
-# Static AWS SDK credentials (prefer Google-federated authentication if possible).
+# Default AWS region for the application.
 aws_region: us-east-1
-aws_access_key:
-aws_secret_key:
+
+# Amazon Future Engineer integration
+afe_pardot_form_handler_url:
+csta_jotform_api_key: !Secret
+csta_jotform_form_id: !Secret
 
 ### Service configurations (urls, endpoints, etc)
 
@@ -181,6 +268,8 @@ assets_s3_bucket:          cdo-v3-assets
 assets_s3_directory:       assets<%=_env%>
 sources_s3_bucket:         cdo-v3-sources
 sources_s3_directory:      sources<%=_env%>
+libraries_s3_bucket:       cdo-v3-libraries
+libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
 
@@ -198,11 +287,6 @@ netsim_redis_groups:
 netsim_enable_metrics: false
 netsim_max_routers: 20
 netsim_shard_expiry_seconds: 7200
-
-# The Fusion Table ID for the census map shown at code.org/yourschool.  If this
-# is set to the ID for the production site, be careful not to run
-# update_census_map as it will overwrite that table.
-census_map_table_id: '1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13'
 
 # DynamoDB table names for dcdo/gatekeeper
 dcdo_table_name:       dcdo_<%=env%>
@@ -242,7 +326,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net <%=pegasus_hostname%> <%=dashboard_hostname%>
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
 skip_locales:
 secret_pictures_csv:
 no_https_store:
@@ -259,6 +343,10 @@ build_apps: false
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
 use_my_apps:
+
+optimize_webpack_assets: true
+
+optimize_rails_assets: true
 
 # Allows your local server to render non-English locales, defaults to false in development.
 # If false, choosing a locale other than English will have no effect.
@@ -280,17 +368,6 @@ cache_assets_in_memory:
 # Contributors should ask a Code.org engineer for this if needed.
 properties_encryption_key: !Secret
 
-# NOTE: When a new language is added to this set, make sure to also update
-# the redirection rules for the cdo-curriculum S3 bucket by running the
-# aws/s3/cdo-curriculum/redirection_rules.rb script. Otherwise, all links to
-# CB for that language will attempt to point to the language-specific version
-# of that content, even if we haven't translated that content yet.
-#
-# See the LANGUAGES setting in
-# https://github.com/mrjoshida/curriculumbuilder/blob/master/curriculumBuilder/settings.py
-# for the languages currently supported in CurriculumBuilder itself
-curriculum_languages: ['es-mx', 'it-it', 'th-th', 'sk-sk']
-
 start_circle_builds_branch:
 start_circle_builds_token:
 circle_build_num: <%=ENV['CIRCLE_BUILD_NUM']%>
@@ -307,7 +384,6 @@ build_pegasus: true
 
 # Dashboard
 override_dashboard:
-dashboard_assets_dir: <%=root_dir%>/dashboard/public/assets
 dashboard_devise_secret:   !Secret
 dashboard_devise_pepper:   !Secret
 dashboard_secret_key_base: !Secret
@@ -328,7 +404,6 @@ pegasus_sock:
 pegasus_port: 3000
 pegasus_unicorn_name: pegasus
 pegasus_workers: 8
-pegasus_skip_asset_map: false
 sinatra_session_secret:
 
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
@@ -339,8 +414,13 @@ proxy: false # If true, generated URLs will not include explicit port numbers in
 # Run dashboard-server with the level editing interface enabled (for admins)
 levelbuilder_mode:
 
-default_hoc_mode:   pre-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode:   post-hoc # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''       # overridden by 'hoc_launch' DCDO param, except in :test
+
+# teacher_application_mode values: 'open', 'closing-soon', 'closed'
+default_teacher_application_mode: 'closed' # overridden by 'teacher_application_mode' DCDO param, except in :test
+
+default_courses_show_csa: true # overridden by 'courses_show_csa' DCDO param, except in :test
 
 localize_apps: false
 
@@ -363,8 +443,6 @@ lint: false
 # saving a total of 4 min 30 sec during rake seed. Default: true (in development).
 stub_school_data: false
 
-pretty_js: false
-
 disable_s3_image_uploads: false
 
 channels_api_secret: <%=poste_secret%>
@@ -376,11 +454,11 @@ bundler_use_sudo: <%=chef_managed%>
 daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>
 
-# Referenced in CI config, but not sure if they are still used anywhere?
-# TODO verify these are intentionally no longer used and remove references from CI config.
-build_shared_js:
-use_my_shared_js:
-build_blockly_core:
+# Used to export data on professional learning to gsheets
+applications_2020_2021_gsheet_key: !Secret
+enrollments_summer_2020_gsheet_key:
+applications_2021_2022_gsheet_key: !Secret
+csf_workshop_attendance_gsheet_key: !Secret
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
@@ -408,9 +486,6 @@ level_sources_redis_url:
 discourse_sso_url:
 discourse_url:
 pledge_map_table_id:
-hoc_map_service_account_email:
-hoc_map_api_secret:
-hoc_map_api_key:
 
 #### Parameters related to CloudFormation-stack deployment
 stack_name: <%=env%>
@@ -441,6 +516,7 @@ devinternal_db_writer: !Secret
 db_cluster_id:
 db_admin: !Secret
 reporting_db_admin:
+db_proxy_admin:
 
 db_writer: !Secret
 reporting_db_writer: <%=db_writer%>
@@ -461,3 +537,12 @@ dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%
 dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
 pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
 pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
+
+# Configurations for making calls to the Immersive Reader API on Azure
+imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
+imm_reader_client_id:
+imm_reader_client_secret: !Secret
+imm_reader_subdomain:     cdo-immersive-reader-<%=env%>
+
+javabuilder_private_key: !Secret
+javabuilder_key_password: !Secret

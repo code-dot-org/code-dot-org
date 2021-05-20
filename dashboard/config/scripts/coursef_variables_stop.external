@@ -1,0 +1,23 @@
+name 'courseF_variables_stop'
+title 'Contagion: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Stop!
+
+## Are you sure you're ready to move on? 
+
+
+In the next level, you will begin writing the code for your project. This works best if you already have a plan.
+
+Your completed plan should include:
+
+<img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+* The type of project you're building. For example, a greeting card, chatbot, or blank space story.
+* A list of questions you will ask the user.
+* The other text you will display to the screen.
+* A description or drawing of the sprites you will need (and their behaviors).
+
+If you are not sure if you are ready to move on, check with your teacher!
+MARKDOWN

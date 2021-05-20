@@ -1,0 +1,71 @@
+  AuroraCluster:
+    Type: AWS::RDS::DBCluster
+    Properties:
+      DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
+      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
+      Engine: aurora-mysql
+      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with cluster.
+      EngineVersion: 5.7.12
+      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
+      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+
+<% 2.times do |i| %>
+  Aurora<%=i%>:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
+      DBClusterIdentifier: !Ref AuroraCluster
+      DBInstanceClass: db.r4.large
+      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      Engine: aurora-mysql
+      # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
+<% end -%>
+
+  AuroraClusterDBParameters:
+    Type: AWS::RDS::DBClusterParameterGroup
+    Properties:
+      Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: {'innodb_monitor_enable': 'all'}
+
+  DatabaseSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
+      Name: !Sub "CfnStack/${AWS::StackName}/database-secret"
+
+  DBProxy:
+    Type: AWS::RDS::DBProxy
+    Properties:
+      DBProxyName: !Ref AWS::StackName
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth: [{AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret, IAMAuth: DISABLED}]
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  DBProxyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'rds'%>
+      Policies:
+        - PolicyName: RDSProxy
+          PolicyDocument:
+            Statement:
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret}
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  DBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+    DependsOn: [Aurora0, Aurora1]
+    Properties:
+      DBProxyName: !Ref DBProxy
+      DBClusterIdentifiers: [!Ref AuroraCluster]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10

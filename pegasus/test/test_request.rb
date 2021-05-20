@@ -24,9 +24,14 @@ class RequestTest < Minitest::Test
   end
 
   def test_unknown_ip
-    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/unknown").to_return(status: 404, body: '<html><title>404')
     req = Rack::Request.new({'HTTP_X_FORWARDED_FOR' => 'unknown'})
     assert_nil req.location
+  end
+
+  def test_saucelabs_ip
+    # This override is hard-coded in cdo/geocoder.
+    req = Rack::Request.new({'HTTP_X_FORWARDED_FOR' => '66.85.52.120'})
+    assert_equal 'US', req.location.country_code
   end
 
   def test_gdpr
@@ -35,10 +40,15 @@ class RequestTest < Minitest::Test
 
     # If the CloudFront-Viewer-Country header is not set, IP-based geolocation is used as a fallback.
     user_ip = '89.151.64.0' # Great Britain IP address range
-    # The geocoder gem resolves the IP using freegeoip, this mocks the underlying HTTP requests.
-    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{user_ip}").to_return(
-      body: {ip: user_ip, country_code: 'GB'}.to_json
-    )
+    Geocoder.stubs(:search).with(user_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'GB')])
     assert Rack::Request.new('REMOTE_ADDR' => user_ip).gdpr?
+  end
+
+  def test_x_forwarded_host
+    request = Rack::Request.new(
+      'HTTP_X_FORWARDED_HOST' => 'code.org',
+      'HTTP_HOST' => 'hourofcode.com'
+    )
+    assert_equal 'hourofcode.com', request.site
   end
 end

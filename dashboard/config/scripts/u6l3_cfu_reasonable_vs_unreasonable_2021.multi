@@ -1,0 +1,6 @@
+name 'U6L3 CFU Reasonable vs Unreasonable_2021'
+question 'Which of the follow efficiencies would be considered unreasonable?'
+right '2^n'
+wrong '2n'
+wrong 'n^2'
+wrong 'n^20'

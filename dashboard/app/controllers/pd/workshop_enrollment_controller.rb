@@ -75,14 +75,17 @@ class Pd::WorkshopEnrollmentController < ApplicationController
             {
               organizer: @workshop.organizer,
               regional_partner: @workshop.regional_partner,
-              course_url: @workshop.course_url
+              course_url: @workshop.course_url,
+              fee: @workshop.fee,
+              properties: nil,
+              virtual: @workshop.virtual
             }
           ),
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
           workshop_enrollment_status: "unsubmitted",
-          previous_courses: Pd::TeacherCommonApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
+          previous_courses: Pd::Teacher2021ApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
           collect_demographics: collect_demographics
         }.to_json
       }

@@ -86,7 +86,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "start_blocks": "for (var i = 0; i < 8; i = i++) {\r\n  console.log(i);\r\n}",
+    "start_blocks": "for (var i = 0; i < 8; i++) {\r\n  console.log(i);\r\n}",
     "disable_if_else_editing": "false",
     "contained_level_names": [
       "Predict Loop I_2019"
@@ -96,15 +96,17 @@
     "map_reference": "/docs/concepts/javascript/for-loops/",
     "mini_rubric": "false",
     "expand_debugger": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
+    "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-11 07:42:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-16 21:50:46 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-07-16 22:19:06 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-11 07:42:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-16 21:50:46 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-07-16 22:19:06 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-11-21 17:43:46 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,0 +1,1794 @@
+{
+  "script": {
+    "name": "csp4-support",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "professional_learning_course": "CSP Support",
+      "peer_reviews_to_complete": 4,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:56 UTC",
+    "seeding_key": {
+      "script.name": "csp4-support"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "practice",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Teaching Practices"
+      },
+      "seeding_key": {
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Unit 4 Overview",
+      "name": "Unit 4 Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "Lessons 1 - 4: Data in the Real World",
+      "name": "Lessons 1 - 4: Data in the Real World",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+      "name": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "Lessons 8 - 9: Practice PT",
+      "name": "Lessons 8 - 9: Practice PT",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 8 - 9: Practice PT",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "Group Work and Peer Learning",
+      "name": "Group Work and Peer Learning",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "Balancing Teachers and Tools",
+      "name": "Balancing Teachers and Tools",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "Discovery Learning",
+      "name": "Discovery Learning",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "key": "Measuring Student Learning",
+      "name": "Measuring Student Learning",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What's inside and how is it organized?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What's inside and how is it organized?"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "What's inside and how is it organized?"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to Unit 4"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Unit 4"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Introduction to Unit 4"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 4 Tool Talk"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 4 Tool Talk"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Unit 4 Tool Talk"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 4: Practice PT highlights"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 4: Practice PT highlights"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Unit 4: Practice PT highlights"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 4 Self-Assessment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 4 Self-Assessment"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Unit 4 Self-Assessment"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "4.1 - 4.4 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4.1 - 4.4 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "4.1 - 4.4 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is \"Big\" Data?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is \"Big\" Data?"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "What is \"Big\" Data?"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Website: Data Breaches"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Website: Data Breaches"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Website: Data Breaches"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Raw Data Podcast: Gold or Pyrite"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Raw Data Podcast: Gold or Pyrite"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Raw Data Podcast: Gold or Pyrite"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Big Data in the CSP Framework"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Big Data in the CSP Framework"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Big Data in the CSP Framework"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L1 - 4: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L1 - 4: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "U4 L1 - 4: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "4.5 - 4.7 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4.5 - 4.7 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "4.5 - 4.7 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Encryption in CS"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Encryption in CS"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Encryption in CS"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Crack a Caesar Cipher"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Terminology Recap"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Terminology Recap"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Terminology Recap"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "New Challenge Introduction"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "New Challenge Introduction"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "New Challenge Introduction"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crack Random Substitution"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack Random Substitution"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Crack Random Substitution"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Technique: Frequency Analysis"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Technique: Frequency Analysis"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Technique: Frequency Analysis"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Modular Arithmetic"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Modular Arithmetic"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Modular Arithmetic"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Looking at More Encryption Algorithms"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Looking at More Encryption Algorithms"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Looking at More Encryption Algorithms"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Raw Data Podcast: Data Confidential"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Raw Data Podcast: Data Confidential"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Raw Data Podcast: Data Confidential"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L5 - 7: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L5 - 7: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "U4 L5 - 7: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "4.8 - 4.9 Lesson Connections"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4.8 - 4.9 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 8 - 9: Practice PT",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "4.8 - 4.9 Lesson Connections"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "A Closer Look at the Final Practice for the Explore PT"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "A Closer Look at the Final Practice for the Explore PT"
+        ],
+        "lesson.key": "Lessons 8 - 9: Practice PT",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "A Closer Look at the Final Practice for the Explore PT"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L8 - 9: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L8 - 9: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 8 - 9: Practice PT",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "U4 L8 - 9: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Overview: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Collaborative Learning and Group Work: Description and Strategies"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "The Official Peer Instruction Blog"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "the Journal of Peer Learning"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 4 Teaching Practice Plan: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 4 Teaching Practice Plan: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Unit 4 Teaching Practice Plan: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Overview: Balancing Teachers and Tools"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Balancing Teacher and Tools in Unit 4"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Balancing Teacher and Tools in Unit 4"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Balancing Teacher and Tools in Unit 4"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Classroom Management Tips for School Computer Labs"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Considerations for the 1-to-1 Classroom"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 4 Teaching Practice Plan: Balancing Teacher and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 4 Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Unit 4 Teaching Practice Plan: Balancing Teacher and Tools"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Overview: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Discovery learning definition and history"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Discovery learning techniques"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 4 Teaching Practice Plan: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 4 Teaching Practice Plan: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Unit 4 Teaching Practice Plan: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Overview: Capturing Student Learning"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Assessing Student Learning in Unit 4"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Assessing Student Learning in Unit 4"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Assessing Student Learning in Unit 4"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "What is the difference between formative and summative assessment?"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Designing Assessment Questions"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Designing Assessment Questions"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Designing Assessment Questions"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Classroom Assessment Techniques"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 4 Teaching Practice Plan: Assessing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 4 Teaching Practice Plan: Assessing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      },
+      "level_keys": [
+        "Unit 4 Teaching Practice Plan: Assessing Student Learning"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "What's inside and how is it organized?",
+        "script_level.level_keys": [
+          "What's inside and how is it organized?"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Unit 4",
+        "script_level.level_keys": [
+          "Introduction to Unit 4"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 4 Tool Talk",
+        "script_level.level_keys": [
+          "Unit 4 Tool Talk"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 4: Practice PT highlights",
+        "script_level.level_keys": [
+          "Unit 4: Practice PT highlights"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 4 Self-Assessment",
+        "script_level.level_keys": [
+          "Unit 4 Self-Assessment"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4.1 - 4.4 Lesson Connections",
+        "script_level.level_keys": [
+          "4.1 - 4.4 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is \"Big\" Data?",
+        "script_level.level_keys": [
+          "What is \"Big\" Data?"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Website: Data Breaches",
+        "script_level.level_keys": [
+          "Website: Data Breaches"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Raw Data Podcast: Gold or Pyrite",
+        "script_level.level_keys": [
+          "Raw Data Podcast: Gold or Pyrite"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Big Data in the CSP Framework",
+        "script_level.level_keys": [
+          "Big Data in the CSP Framework"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L1 - 4: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U4 L1 - 4: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 1 - 4: Data in the Real World",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4.5 - 4.7 Lesson Connections",
+        "script_level.level_keys": [
+          "4.5 - 4.7 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Encryption in CS",
+        "script_level.level_keys": [
+          "Encryption in CS"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack a Caesar Cipher",
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Terminology Recap",
+        "script_level.level_keys": [
+          "Terminology Recap"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "New Challenge Introduction",
+        "script_level.level_keys": [
+          "New Challenge Introduction"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack Random Substitution",
+        "script_level.level_keys": [
+          "Crack Random Substitution"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Technique: Frequency Analysis",
+        "script_level.level_keys": [
+          "Technique: Frequency Analysis"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Modular Arithmetic",
+        "script_level.level_keys": [
+          "Modular Arithmetic"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Looking at More Encryption Algorithms",
+        "script_level.level_keys": [
+          "Looking at More Encryption Algorithms"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Raw Data Podcast: Data Confidential",
+        "script_level.level_keys": [
+          "Raw Data Podcast: Data Confidential"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L5 - 7: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U4 L5 - 7: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4.8 - 4.9 Lesson Connections",
+        "script_level.level_keys": [
+          "4.8 - 4.9 Lesson Connections"
+        ],
+        "lesson.key": "Lessons 8 - 9: Practice PT",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "A Closer Look at the Final Practice for the Explore PT",
+        "script_level.level_keys": [
+          "A Closer Look at the Final Practice for the Explore PT"
+        ],
+        "lesson.key": "Lessons 8 - 9: Practice PT",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L8 - 9: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "U4 L8 - 9: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 8 - 9: Practice PT",
+        "lesson_group.key": "content",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Collaborative Learning and Group Work: Description and Strategies",
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Official Peer Instruction Blog",
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "the Journal of Peer Learning",
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 4 Teaching Practice Plan: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Unit 4 Teaching Practice Plan: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Balancing Teachers and Tools",
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Balancing Teacher and Tools in Unit 4",
+        "script_level.level_keys": [
+          "Balancing Teacher and Tools in Unit 4"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Management Tips for School Computer Labs",
+        "script_level.level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Considerations for the 1-to-1 Classroom",
+        "script_level.level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 4 Teaching Practice Plan: Balancing Teacher and Tools",
+        "script_level.level_keys": [
+          "Unit 4 Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Discovery Learning",
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning definition and history",
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning techniques",
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 4 Teaching Practice Plan: Discovery Learning",
+        "script_level.level_keys": [
+          "Unit 4 Teaching Practice Plan: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Capturing Student Learning",
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Assessing Student Learning in Unit 4",
+        "script_level.level_keys": [
+          "Assessing Student Learning in Unit 4"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is the difference between formative and summative assessment?",
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Designing Assessment Questions",
+        "script_level.level_keys": [
+          "Designing Assessment Questions"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Assessment Techniques",
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 4 Teaching Practice Plan: Assessing Student Learning",
+        "script_level.level_keys": [
+          "Unit 4 Teaching Practice Plan: Assessing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp4-support"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

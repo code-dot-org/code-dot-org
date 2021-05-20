@@ -40,6 +40,39 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, !!@user.using_text_mode
   end
 
+  test 'a get request to using_dark_mode returns using_dark_mode attribute of user object' do
+    sign_in(@user)
+    get :get_using_dark_mode, params: {user_id: 'me'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal false, response["using_dark_mode"]
+  end
+
+  test_user_gets_response_for(
+    :update_using_dark_mode,
+    user: nil,
+    params: {user_id: 'me', using_dark_mode: 'true'},
+    response: :forbidden
+  )
+
+  test 'a post request to using_dark_mode updates using_dark_mode' do
+    sign_in(@user)
+    assert !@user.using_dark_mode
+    post :update_using_dark_mode, params: {user_id: 'me', using_dark_mode: 'true'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert response["using_dark_mode"]
+    @user.reload
+    assert @user.using_dark_mode
+
+    post :update_using_dark_mode, params: {user_id: 'me', using_dark_mode: 'false'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal false, response["using_dark_mode"]
+    @user.reload
+    assert_equal false, !!@user.using_dark_mode
+  end
+
   test 'will 403 if given a user id other than the person logged in' do
     sign_in(@user)
     post :post_using_text_mode, params: {user_id: '12345', using_text_mode: 'true'}
@@ -110,6 +143,35 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal response["next_census_display"], test_user.next_census_display
   end
 
+  test 'a post request to dismiss_donor_teacher_banner' do
+    test_user = create :user
+    sign_in(test_user)
+    post :dismiss_donor_teacher_banner, params: {user_id: 'me', participate: true, source: 'marketing'}
+    assert_response :success
+    test_user.reload
+    dismissed_value = {'participate' => true, 'source' => 'marketing'}
+    assert_equal dismissed_value, test_user.donor_teacher_banner_dismissed
+  end
+
+  test 'a post request to dismiss_parent_email_banner' do
+    test_user = create :student
+    sign_in(test_user)
+    post :dismiss_parent_email_banner, params: {user_id: 'me'}
+    assert_response :success
+    test_user.reload
+    assert_equal "true", test_user.parent_email_banner_dismissed
+  end
+
+  test 'a post request to set_standards_report_info_to_seen' do
+    test_user = create :user
+    sign_in(test_user)
+    assert_nil test_user.has_seen_standards_report_info_dialog
+    post :set_standards_report_info_to_seen, params: {user_id: 'me'}
+    assert_response :success
+    test_user.reload
+    assert_equal true, test_user.has_seen_standards_report_info_dialog
+  end
+
   test "a get request to get school_name returns school object" do
     sign_in(@user)
     get :get_school_name, params: {user_id: @user.id}
@@ -133,5 +195,27 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(@user)
     get :get_school_name, params: {user_id: '-1'}
     assert_response 403
+  end
+
+  test "get_school_donor_name 403s when not signed in" do
+    get :get_school_donor_name, params: {user_id: 'me'}
+    assert_response 403
+  end
+
+  test "get_school_donor_name returns null when no donor is found" do
+    sign_in create :teacher
+    get :get_school_donor_name, params: {user_id: 'me'}
+    assert_response 200
+    assert_equal 'null', response.body
+  end
+
+  test "get_school_donor_name returns donor name" do
+    usi = create :user_school_info
+    create :donor_school, name: 'DonorName', nces_id: usi.school_info.school_id
+
+    sign_in usi.user
+    get :get_school_donor_name, params: {user_id: 'me'}
+    assert_response 200
+    assert_equal '"DonorName"', response.body
   end
 end

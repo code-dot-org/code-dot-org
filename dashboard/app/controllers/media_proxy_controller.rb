@@ -5,7 +5,7 @@
 # to reduce the scale impact on Rails servers.
 #
 # To reduce the likelihood of abuse, the code only proxies content with an
-# allowed whitelist of media types. We will need to monitor usage to detect
+# allowed list of media types. We will need to monitor usage to detect
 # abuse and potentially add other abuse prevention measures (e.g. a signature
 # based on a secret.)
 
@@ -21,6 +21,8 @@ class MediaProxyController < ApplicationController
       'image/x-windows-bmp',
       'image/gif',
       'image/jpeg',
+      # image/jpg is not a valid content type but is used by some content providers, so we are supporting it.
+      'image/jpg',
       'image/png',
       'image/svg+xml',
       'audio/basic',

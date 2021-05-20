@@ -1,50 +1,65 @@
 hidden false
-hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursea/standards/"]]
-stage_extras_available true
-has_lesson_plan true
+hideable_lessons true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursea/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
+lesson_extras_available true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course A!", "link"=>"https://curriculum.code.org/csf-19/coursea", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursea'
 version_year '2019'
 is_stable true
+supported_locales ["cs-CZ", "sk-SK"]
 curriculum_umbrella 'CSF'
+tts true
+is_course true
 
-stage 'Going Places Safely', flex_category: 'csf_digcit'
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
+lesson 'Going Places Safely', display_name: 'Going Places Safely', has_lesson_plan: true, unplugged: true
 level 'GoingPlacesSafely-unplugged'
 
-stage 'Learn to Drag and Drop', flex_category: 'csf_sequencing'
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
+lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop', has_lesson_plan: true
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:1', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:2', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:4', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:5', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:6', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:7', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:8', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:9', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:10', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:11', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12', progression: 'Practice'
 
-stage 'Programming: Happy Maps', flex_category: 'csf_sequencing'
+lesson 'Programming: Happy Maps', display_name: 'Happy Maps', has_lesson_plan: true, unplugged: true
 level 'HappyMaps-Unplugged'
 
-stage 'Sequencing with Scrat', flex_category: 'csf_sequencing'
+lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat', has_lesson_plan: true
 level 'courseAB_video_NewIntro_2019', progression: 'Maze Intro: Programming with Blocks'
 level 'courseB_Scrat_ramp1_2019', progression: 'Practice'
 level 'courseB_Scrat_ramp2_2019', progression: 'Practice'
@@ -53,7 +68,7 @@ level 'courseB_Scrat_ramp3b_2019', progression: 'Practice'
 level 'courseB_Scrat_ramp4a_2019', progression: 'Practice'
 level 'courseB_Scrat_ramp5a_2019', progression: 'Practice'
 
-stage 'Programming in Ice Age', flex_category: 'csf_sequencing'
+lesson 'Programming in Ice Age', display_name: 'Programming with Scrat', has_lesson_plan: true
 level 'elementary_video_pairProgramming_2019', progression: 'Pair Programming'
 level 'courseB_maze_seq1_2019', progression: 'Practice'
 level 'courseB_maze_seq4_2019', progression: 'Practice'
@@ -69,7 +84,7 @@ level 'courseB_maze_seq12_2019', progression: 'Practice'
 bonus 'courseB_maze_seq_challenge1_2019'
 bonus 'courseB_maze_seq_challenge2_2019'
 
-stage 'Programming with Rey and BB-8', flex_category: 'csf_sequencing'
+lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8', has_lesson_plan: true
 level 'bb8_skinOverview_K-1_video_2019', progression: 'Programming with Rey and BB-8'
 level 'courseB_starWars_prog1_2019', progression: 'Practice'
 level 'courseB_starWars_prog2_2019', progression: 'Practice'
@@ -83,10 +98,11 @@ level 'courseB_starWars_prog9_2019', progression: 'Practice'
 level 'courseB_starWars_prog10_2019', progression: 'Practice'
 level 'courseB_starWars_prog11_2019', progression: 'Practice'
 
-stage 'Loops: Happy Loops', flex_category: 'csf_loops'
+lesson_group 'csf_loops', display_name: 'Loops'
+lesson 'Loops: Happy Loops', display_name: 'Happy Loops', has_lesson_plan: true, unplugged: true
 level 'HappyLoops-Unplugged'
 
-stage 'Loops in Ice Age', flex_category: 'csf_loops'
+lesson 'Loops in Ice Age', display_name: 'Loops with Scrat', has_lesson_plan: true
 level 'courseB_iceage_loops1_2019', progression: 'Practice'
 level 'courseB_iceage_loops2_2019', progression: 'Practice'
 level 'courseB_iceage_loops_video_2019', progression: 'Ice Age Loops'
@@ -100,7 +116,7 @@ level 'courseB_iceage_loops10_2019', progression: 'Challenge', challenge: true
 level 'courseB_iceage_loops11_2019', progression: 'Practice'
 level 'courseB_iceage_loops12_2019', progression: 'Practice'
 
-stage 'Loops in Collector', flex_category: 'csf_loops'
+lesson 'Loops in Collector', display_name: 'Loops with Laurel', has_lesson_plan: true
 level 'courseAB_video_collector_2019', progression: 'The Collector'
 level 'courseA_collector_loops1_2019', progression: 'Practice'
 level 'courseA_collector_loops2_2019', progression: 'Practice'
@@ -118,7 +134,7 @@ level 'courseA_collector_loops12_2019', progression: 'Practice'
 bonus 'courseA_collector_loops_challenge2kp_2019'
 bonus 'courseA_collector_loops_challenge1_2019'
 
-stage 'Ocean Scene with Loops', flex_category: 'csf_loops'
+lesson 'Ocean Scene with Loops', display_name: 'Ocean Scene with Loops', has_lesson_plan: true
 level 'courseB_video_ArtistIntro_2019', progression: 'The Artist in Code Studio'
 level 'courseA_artist_loops1_2019', progression: 'Practice'
 level 'courseA_artist_loops2_2019', progression: 'Practice'
@@ -136,10 +152,11 @@ level 'courseA_artist_loops12_2019', progression: 'Free Play'
 bonus 'courseA_artist_loops_challenge2a_2019'
 bonus 'courseA_artist_loops_challenge1_2019'
 
-stage 'Events: The Big Event', flex_category: 'csf_events'
+lesson_group 'csf_events', display_name: 'Events'
+lesson 'Events: The Big Event', display_name: 'The Big Event Jr.', has_lesson_plan: true, unplugged: true
 level 'BigEvent-Unplugged'
 
-stage 'Events in Play Lab', flex_category: 'csf_events'
+lesson 'Events in Play Lab', display_name: 'On the Move with Events', has_lesson_plan: true
 level 'courseA_video_events_2019', progression: 'Create a Story'
 level 'courseA_playLab_events1_2019', progression: 'Free Play'
 level 'courseA_playLab_events2_2019', progression: 'Practice'
@@ -150,3 +167,4 @@ level 'courseA_playLab_events6_2019', progression: 'Mini-project: Jorge the Dog'
 level 'courseA_playLab_events7_2019', progression: 'Mini-project: Jorge the Dog'
 bonus 'courseA_playlab_events_challenge2_2019'
 bonus 'courseA_playlab_events_challenge1_2019'
+

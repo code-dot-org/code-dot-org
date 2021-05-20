@@ -3,27 +3,6 @@ import React from 'react';
 import color from '../../../../util/color';
 import ModuleAssignment from './ModuleAssignment';
 
-const styles = {
-  courseUnitSection: {
-    border: '1px solid #bbbbbb',
-    borderRadius: '5px',
-    margin: '1em',
-    padding: '1em',
-    width: '400px'
-  },
-  courseUnitSectionHeader: {
-    color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r"',
-    fontSize: '18px'
-  },
-  comingSoonMessage: {
-    textAlign: 'center',
-    fontSize: '16px',
-    paddingTop: '20px',
-    color: color.dark_charcoal
-  }
-};
-
 export default class EnrollmentUnitAssignment extends React.Component {
   static propTypes = {
     courseUnitData: PropTypes.object
@@ -58,3 +37,24 @@ export default class EnrollmentUnitAssignment extends React.Component {
     );
   }
 }
+
+const styles = {
+  courseUnitSection: {
+    border: '1px solid #bbbbbb',
+    borderRadius: '5px',
+    margin: '1em',
+    padding: '1em',
+    width: '400px'
+  },
+  courseUnitSectionHeader: {
+    color: color.dark_charcoal,
+    fontFamily: '"Gotham 4r"',
+    fontSize: '18px'
+  },
+  comingSoonMessage: {
+    textAlign: 'center',
+    fontSize: '16px',
+    paddingTop: '20px',
+    color: color.dark_charcoal
+  }
+};

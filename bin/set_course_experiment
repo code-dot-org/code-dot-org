@@ -21,7 +21,7 @@ unless user.teacher?
   exit 1
 end
 
-unless CourseScript.find_by(experiment_name: experiment_name)
+unless UnitGroupUnit.find_by(experiment_name: experiment_name)
   puts "no course experiment exists with name: #{experiment_name.dump}"
   exit 1
 end

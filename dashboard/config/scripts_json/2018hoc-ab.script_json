@@ -1,0 +1,156 @@
+{
+  "script": {
+    "name": "2018hoc-ab",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:25 UTC",
+    "seeding_key": {
+      "script.name": "2018hoc-ab"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "2018hoc-ab"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Labyrinth",
+      "name": "Labyrinth",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Labyrinth",
+        "lesson_group.key": "",
+        "script.name": "2018hoc-ab"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "HoCAB_labyrinth1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoCAB_labyrinth1"
+        ],
+        "lesson.key": "Labyrinth",
+        "lesson_group.key": "",
+        "script.name": "2018hoc-ab"
+      },
+      "level_keys": [
+        "HoCAB_labyrinth1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "HoCAB_labyrinth2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoCAB_labyrinth2"
+        ],
+        "lesson.key": "Labyrinth",
+        "lesson_group.key": "",
+        "script.name": "2018hoc-ab"
+      },
+      "level_keys": [
+        "HoCAB_labyrinth2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "HoCAB_labyrinth1",
+        "script_level.level_keys": [
+          "HoCAB_labyrinth1"
+        ],
+        "lesson.key": "Labyrinth",
+        "lesson_group.key": "",
+        "script.name": "2018hoc-ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoCAB_labyrinth2",
+        "script_level.level_keys": [
+          "HoCAB_labyrinth2"
+        ],
+        "lesson.key": "Labyrinth",
+        "lesson_group.key": "",
+        "script.name": "2018hoc-ab"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -29,6 +29,8 @@ class FilesApi < Sinatra::Base
       FileBucket
     when 'sources'
       SourceBucket
+    when 'libraries'
+      LibraryBucket
     else
       not_found
     end
@@ -52,11 +54,16 @@ class FilesApi < Sinatra::Base
 
   def codeprojects_can_view?(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+
+    # Attempt to find active project in database. This will raise StorageApps::NotFound if
+    # no active project exists, which is handled below.
+    StorageApps.new(owner_storage_id).get(encrypted_channel_id)
+
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
     !get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
+  rescue StorageApps::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
   end
 
@@ -107,7 +114,7 @@ class FilesApi < Sinatra::Base
   end
 
   helpers do
-    %w(core.rb bucket_helper.rb animation_bucket.rb file_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
+    %w(core.rb bucket_helper.rb animation_bucket.rb file_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb library_bucket.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -119,11 +126,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(animations|assets|sources)/<channel-id>
+  # GET /v3/(animations|assets|sources|libraries)/<channel-id>
   #
   # List filenames and sizes.
   #
-  get %r{/v3/(animations|assets|sources)/([^/]+)$} do |endpoint, encrypted_channel_id|
+  get %r{/v3/(animations|assets|sources|libraries)/([^/]+)$} do |endpoint, encrypted_channel_id|
     dont_cache
     content_type :json
 
@@ -135,11 +142,14 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(animations|assets|sources|files)/<channel-id>/<filename>?version=<version-id>
+  # GET /v3/(animations|assets|sources|files|libraries)/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   #
-  get %r{/v3/(animations|assets|sources|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    if endpoint == 'libraries'
+      dont_cache
+    end
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -299,6 +309,45 @@ class FilesApi < Sinatra::Base
     headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
   end
 
+  def html_file?(filename)
+    File.extname(filename&.downcase) == '.html'
+  end
+
+  def valid_html_content?(body)
+    disallowed_tags = DCDO.get('disallowed_html_tags', [])
+
+    # Applicable Nokogiri selector rules:
+    #   Element selectors must start with //
+    #   Attribute selectors must start with @
+    #   (Example: "//div[@name]" will return all <div>s that have a 'name' attribute.)
+    disallowed_tag_selectors = disallowed_tags.map do |tag|
+      tag_dup = tag.dup
+      attr_selector_index = tag_dup.index('[')
+      tag_dup.insert(attr_selector_index + 1, '@') if attr_selector_index
+      '//' + tag_dup
+    end
+
+    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+  end
+
+  # Determine whether or not a file is a valid HTML file.
+  # Returns true if:
+  #   1. It does not belong to a WebLab project.
+  #   2. It belongs to a WebLab project and does not contain disallowed HTML tags.
+  # Returns false if the file is not an HTML file, does not belong to a project, or
+  # is a WebLab HTML file that contains disallowed HTML tags.
+  def valid_html_file?(encrypted_channel_id, filename, body)
+    return false unless html_file?(filename)
+
+    # Only validate WebLab HTML files. We need to get the project from the database
+    # in order to check whether or not the file belongs to a WebLab project.
+    project = StorageApps.new(get_storage_id).get(encrypted_channel_id)
+    return false unless project
+    return true unless project[:projectType]&.downcase == 'weblab'
+
+    valid_html_content?(body)
+  end
+
   #
   # Set appropriate cache headers for making the retrieved object cached
   # for the given number of seconds
@@ -318,7 +367,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
-    # verify that file type is in our whitelist, and that the user-specified
+    # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
@@ -330,6 +379,19 @@ class FilesApi < Sinatra::Base
       app_size = buckets.app_size(encrypted_channel_id)
       quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
+    end
+
+    # Block libraries with PII/profanity from being published.
+    if endpoint == 'libraries'
+      begin
+        share_failure = ShareFiltering.find_failure(body, request.locale)
+      rescue OpenURI::HTTPError => e
+        return file_too_large(endpoint) if e.message == "414 Request-URI Too Large"
+      end
+      # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
+      # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
+      # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
+      return bad_request if share_failure && share_failure[:type] != "address"
     end
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
@@ -373,7 +435,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
-    # verify that file type is in our whitelist, and that the user-specified
+    # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
@@ -394,11 +456,11 @@ class FilesApi < Sinatra::Base
 
   #
   # PUT /v3/(sources)/<channel-id>/<filename>?version=<version-id>
-  # PUT /v3/(assets)/<channel-id>/<filename>
+  # PUT /v3/(assets|libraries)/<channel-id>/<filename>
   #
   # Create or replace a file. For sources endpoint, optionally overwrite a specific version.
   #
-  put %r{/v3/(sources|assets)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(sources|assets|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -487,11 +549,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PATCH /v3/(animations|assets|sources|files)/<channel-id>?abuse_score=<abuse_score>
+  # PATCH /v3/(animations|assets|sources|files|libraries)/<channel-id>?abuse_score=<abuse_score>
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(animations|assets|sources|files)/([^/]+)/$} do |endpoint, encrypted_channel_id|
+  patch %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/$} do |endpoint, encrypted_channel_id|
     dont_cache
 
     abuse_score = request.GET['abuse_score']
@@ -514,11 +576,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # DELETE /v3/(animations|assets|sources)/<channel-id>/<filename>
+  # DELETE /v3/(animations|assets|sources|libraries)/<channel-id>/<filename>
   #
   # Delete a file.
   #
-  delete %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  delete %r{/v3/(animations|assets|sources|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
 
     not_authorized unless owns_channel?(encrypted_channel_id)
@@ -528,12 +590,12 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(animations|sources)/<channel-id>/<filename>/versions
+  # GET /v3/(animations|sources|files|libraries)/<channel-id>/<filename>/versions
   #
   # List versions of the given file.
   # NOTE: Not yet implemented for assets.
   #
-  get %r{/v3/(animations|sources|files)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
+  get %r{/v3/(animations|sources|files|libraries)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -566,25 +628,22 @@ class FilesApi < Sinatra::Base
 
     bucket = FileBucket.new
     result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'], params['version'])
+    not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
-    if result[:status] == 'NOT_FOUND'
-      {"filesVersionId": "", "files": []}.to_json
-    else
-      # {
-      #   "filesVersionId": "sadfhkjahfsdj",
-      #   "files": [
-      #     {
-      #       "filename": "name.jpg",
-      #       "category": "image",
-      #       "size": 100,
-      #       "versionId": "asldfklsakdfj"
-      #     }
-      #   ]
-      # }
-      {"filesVersionId": result[:version_id], "files": JSON.load(result[:body])}.to_json
-    end
+    # {
+    #   "filesVersionId": "sadfhkjahfsdj",
+    #   "files": [
+    #     {
+    #       "filename": "name.jpg",
+    #       "category": "image",
+    #       "size": 100,
+    #       "versionId": "asldfklsakdfj"
+    #     }
+    #   ]
+    # }
+    {"filesVersionId": result[:version_id], "files": JSON.load(result[:body])}.to_json
   end
 
   #
@@ -593,10 +652,15 @@ class FilesApi < Sinatra::Base
   # manifest.
   #
   def files_put_file(encrypted_channel_id, filename, body)
+    # Rename .jfif file extensions to .jpg because Sinatra does not support .jfif file types.
+    # .jfif files use the same protocol as .jpg files, which is why rename-only is sufficient.
+    filename.gsub!(/(.jfif|.JFIF)/, '.jpg') if File.extname(filename.downcase) == '.jfif'
+
     unescaped_filename = CGI.unescape(filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+    bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
@@ -723,18 +787,12 @@ class FilesApi < Sinatra::Base
     # read the manifest
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
-    return {filesVersionId: ""}.to_json if manifest_result[:status] == 'NOT_FOUND'
+    not_found if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
-    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
-
-    # overwrite the manifest file with an empty list
-    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'], abuse_score)
-
-    # delete the files
-    bucket.delete_multiple(encrypted_channel_id, manifest.map {|e| e['filename'].downcase}) unless manifest.empty?
-
-    {filesVersionId: response.version_id}.to_json
+    # delete the manifest and all of the files it referenced
+    bucket.delete_multiple(encrypted_channel_id, [FileBucket::MANIFEST_FILENAME].concat(manifest.map {|e| e['filename'].downcase})) unless manifest.empty?
+    no_content
   end
 
   #
@@ -888,13 +946,23 @@ class FilesApi < Sinatra::Base
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
         rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-        if %i(adult racy).include? rating
+
+        case rating
+        when :adult, :racy
           # Incrementing abuse score by 15 to differentiate from manually reported projects
           new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
           FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
           response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
           not_found
+          return
+        when :unknown
+          # Content moderation was unable to scan the image, usually because we've exceeded
+          # the moderation service's request limit.  Return the default image for now and
+          # cache for 1-2 minutes to spread out future requests to the moderation service.
+          cache_for rand(60..120).seconds
+          send_file apps_dir('/static/projects/project_default.png'), type: 'image/png'
+          return
         end
       end
     end

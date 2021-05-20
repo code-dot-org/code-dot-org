@@ -23,29 +23,26 @@ social:
 - census_announcement['school_name'] = request.params["schoolName"] if request.params["schoolName"]
 - census_announcement['school_state'] = request.params["state"] if request.params["state"]
 - census_announcement['school_zip'] = request.params["zip"] if request.params["zip"]
-- census_announcement['table-id'] = CDO.census_map_table_id
 - census_announcement['school_year'] = current_census_year
+- census_announcement['locale'] = request.locale
+- teacher_application_mode  = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
+- census_announcement['show_professional_learning_banner'] = (request.locale == 'en-US' && %w(open closing-soon).include?(teacher_application_mode)).to_s
+- census_announcement['teacher_application_mode'] = teacher_application_mode
 
 = inline_css 'trophy_announcement_sparkle.css'
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}
 %link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
 %script{type: "text/javascript", src: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"}
 :javascript
   mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
-%script{src: minifiable_asset_path('js/code.org/public/yourschool.js')}
+%script{src: webpack_asset_path('js/code.org/public/yourschool.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/census-map.css"}
 
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
-
-- unless census_announcement && census_announcement['hide_map'] == 'true'
-  %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
-  %script{type: "text/javascript", src: "https://www.google.com/jsapi"}
-  %script{type: "text/javascript"}
-    google.load('visualization', '1');
 
 %br/
 
@@ -54,7 +51,12 @@ social:
 #partners
   %hr
   %center
-    %h3{style: 'margin: 40px 0 50px 0; font-size: 16px;'} Your pledge and information about your school helps expand computer science education across the United States.
+    %h3{style: 'margin: 40px 0 50px 0; font-size: 16px;'}
+      Your pledge and information about your school helps expand computer science education across the United States.
+      See K-12 Computer Science Access Report data in the
+      = " "
+      %a{href: CDO.advocacy_url("/stateofcs"), target: "_blank"}> annual State of Computer Science Education
+      , published each fall.
     %span{style: "font-family: 'Gotham 7r', sans-serif; font-size: 20px; margin: 0 25px 0 25px;"} In partnership with
     %img{src: '/images/fit-200/avatars/computer_science_teachers_association.png'}
 

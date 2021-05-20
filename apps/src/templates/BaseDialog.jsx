@@ -25,7 +25,8 @@ export default class BaseDialog extends React.Component {
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
     style: PropTypes.object,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
+    overflow: PropTypes.string
   };
 
   componentDidMount() {
@@ -84,7 +85,12 @@ export default class BaseDialog extends React.Component {
     }
     if (this.props.fullHeight) {
       bodyStyle = {
+        ...bodyStyle,
         height: '80%'
+      };
+      modalBodyStyle = {
+        ...modalBodyStyle,
+        boxSizing: 'border-box'
       };
     }
 
@@ -92,6 +98,10 @@ export default class BaseDialog extends React.Component {
     let modalClassNames = 'modal';
     let modalBodyClassNames = 'modal-body';
     let modalBackdropClassNames = 'modal-backdrop';
+    const overflowX = this.props.overflow || 'hidden';
+    const overflowY =
+      this.props.overflow ||
+      (this.props.fixedHeight || this.props.fullHeight ? 'hidden' : 'auto');
 
     if (this.props.useUpdatedStyles) {
       wrapperClassNames = 'dashboard-styles';
@@ -100,9 +110,8 @@ export default class BaseDialog extends React.Component {
         background: '#fff',
         height: this.props.fixedHeight,
         maxHeight: !this.props.fixedHeight && '80vh',
-        overflowX: 'hidden',
-        overflowY:
-          this.props.fixedHeight || this.props.fullHeight ? 'hidden' : 'auto',
+        overflowX: overflowX,
+        overflowY: overflowY,
         borderRadius: 4
       };
       bodyStyle = {

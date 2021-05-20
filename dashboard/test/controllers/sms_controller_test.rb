@@ -2,6 +2,7 @@ require 'test_helper'
 
 class SmsControllerTest < ActionController::TestCase
   setup do
+    Gatekeeper.clear
     CDO.stubs(:twilio_sid).returns('fake')
     CDO.stubs(:twilio_auth).returns('fake')
     CDO.stubs(:twilio_messaging_service).returns('fake_messaging_service_sid')
@@ -89,6 +90,24 @@ class SmsControllerTest < ActionController::TestCase
 
     post :send_to_phone, params: {
       level_source: create(:level_source).id,
+      phone: 'xxxxxx'
+    }
+
+    assert_response :ok
+  end
+
+  test "send to phone with project pretends to succeed when twilio is disabled by gatekeeper flag" do
+    Gatekeeper.set('twilio', where: {}, value: false)
+
+    channel_id = "xxproject_channelxx"
+
+    twilio_messages_mock = stub(:messages)
+    Twilio::REST::Client.any_instance.stubs(:messages).returns(twilio_messages_mock)
+    twilio_messages_mock.expects(:create).never
+
+    post :send_to_phone, params: {
+      type: 'applab',
+      channel_id: channel_id,
       phone: 'xxxxxx'
     }
 

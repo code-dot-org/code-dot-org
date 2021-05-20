@@ -20,15 +20,15 @@ class SectionsControllerTest < ActionController::TestCase
 
   setup do
     # Expect any scripts/courses to be valid unless specified by test
-    Course.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:valid_course_id?).returns(true)
     Script.stubs(:valid_script_id?).returns(true)
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @course = create(:course)
+    @unit_group = create(:unit_group)
     @script_in_course = create(:script)
-    create(:course_script, script: @script_in_course, course: @course, position: 1)
-    @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
+    create(:unit_group_unit, script: @script_in_course, unit_group: @unit_group, position: 1)
+    @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
   end
 
@@ -80,6 +80,22 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @picture_section.code)
   end
 
+  test "former picture section member cannot log in with picture" do
+    former_picture_section_user = create(:follower, section: @picture_section).student_user
+    follower = Follower.where(section: @picture_section.id, student_user_id: former_picture_section_user.id).first
+    @picture_section.remove_student(former_picture_section_user, follower, {})
+
+    assert_no_difference 'former_picture_section_user.reload.sign_in_count' do # devise Trackable fields are not updated
+      post :log_in, params: {
+        id: @picture_section.code,
+        user_id: former_picture_section_user.id,
+        secret_picture_id: former_picture_section_user.secret_picture_id
+      }
+    end
+
+    assert_redirected_to section_path(id: @picture_section.code)
+  end
+
   test "valid log_in wih word" do
     assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
@@ -104,6 +120,22 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @word_section.code)
   end
 
+  test "former word section member cannot log in with word" do
+    former_word_section_user = create(:follower, section: @word_section).student_user
+    follower = Follower.where(section: @word_section.id, student_user_id: former_word_section_user.id).first
+    @word_section.remove_student(former_word_section_user, follower, {})
+
+    assert_no_difference 'former_word_section_user.reload.sign_in_count' do # devise Trackable fields are not updated
+      post :log_in, params: {
+        id: @word_section.code,
+        user_id: former_word_section_user.id,
+        secret_words: former_word_section_user.secret_words
+      }
+    end
+
+    assert_redirected_to section_path(id: @word_section.code)
+  end
+
   test "login to section with a script redirects to script" do
     post :log_in, params: {
       id: @flappy_section.code,
@@ -121,7 +153,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @section_with_course_user_1.secret_words
     }
 
-    assert_redirected_to "/courses/#{@section_with_course.course.name}"
+    assert_redirected_to "/courses/#{@section_with_course.unit_group.name}"
   end
 
   test "login with show_pairing_dialog shows pairing dialog" do

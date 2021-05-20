@@ -1,0 +1,39 @@
+name 'U10 SSQRP2 part 1'
+editor_experiment ''
+
+
+
+
+wrong 'The user\'s current location.'
+wrong 'Access to photos from the user\'s device'
+right 'Photos tagged by location that are submitted by any user.'
+wrong 'Ratings for each photo.'
+
+markdown <<MARKDOWN
+## Single-Select Questions with Reading Passage #2
+
+### Snappy
+
+*The following passage will be used to answer questions #6 - #10*
+<br><br><br>
+*Snappy* is a crowdsourcing app designed with the purpose of making the world a happier place. The app collects photos users submit of "Happy Moments". Photos are tagged with the location where they were taken. Users have access to a map where they can zoom in to photos submitted at specific locations. A leaderboard displays the locations with the most "Happiness Moments" and the users who are the "snappiest" in each city due to the volume and rating of "Happiness Moments" they have submitted. Users can rate other "Happiness Moments" using a limited set of emojis and can also leave comments which are moderated using machine learning in an effort to only allow positive comments, by checking each comment for common negative words learned through a training set. 
+
+**Question:**
+
+Which of the following data is necessary for Snappy to display "Happy Moments" for a particular city?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** The location of the photo would be contained in the metadata for each photo and allow the app to determine which photos were taken in each city.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CRD-2.C.1 - Program input is data sent to a computer for processing by a program. Input can come in a variety of forms, such as tactile, audio, visual, or text.
+* CRD-2.C.4 - Inputs usually affect the output produced by a program.
+* CRD-2.C.6 - Input can come from a user or other programs.
+:::
+
+
+MARKDOWN

@@ -1,28 +1,33 @@
 - hide_keep_on_dancing_tile = DCDO.get('hide_dance_followup', nil)
 
-%link{href: "/css/tutorial-promo.css", type: "text/css", rel: "stylesheet"}
-
 .dance-clear-element
 .tutorial-promo-container.dance-party-container
   .img-container
-    %img.background-img.desktop-only.tablet-only{src:"/images/dance-hoc/dance_party_tutorial_hero_400px.png"}
-    %img.img-dance-stars.desktop-only{src: "/images/fit-300x300/homepage/hoc2018_dance_stars_mobile.png"}
-    %img.img-dance-stars.tablet-only{src: "/images/fit-520/homepage/hoc2018_dance_stars.png"}
-    %img.img-dance-stars.mobile-only{src: "/images/fit-300x300/homepage/hoc2018_dance_stars_mobile.png"}
-  .col-25.specific-tutorial.right-tutorial.dance-tutorial
+    %img.background-img.desktop-only.tablet-only{src: "/images/dance-hoc/dance_party_2019_tutorial_hero.png" }
+    %img.img-dance-stars.desktop-only{src: "/images/fit-300x300/homepage/hoc2019_dance_stars_mobile.png"}
+    %img.img-dance-stars.tablet-only{src: "/images/fit-520/homepage/hoc2019_dance_stars.png"}
+    %img.img-dance-stars.mobile-only{src: "/images/fit-300x300/homepage/hoc2019_dance_stars_mobile.png"}
+    .new-announcement.desktop-only.highlight-strong
+      != hoc_s(:codeorg_homepage_hoc2019_dance_heading_markdown, markdown: :inline)
+    .new-announcement-tablet.tablet-only.highlight-strong
+      != hoc_s(:codeorg_homepage_hoc2019_dance_heading_markdown, markdown: :inline)
+    .new-announcement-mobile.mobile-only.highlight-strong
+      != hoc_s(:codeorg_homepage_hoc2019_dance_heading_markdown, markdown: :inline)
+
+  .col-25.specific-tutorial.right-tutorial.dance-tutorial{:class => ('right-to-left' if language_dir_class == 'rtl' )}
     .tutorial-box
       %h2.specific-tutorial-heading.dance-party-h2= I18n.t(:hoc2018_dance_party_box_title)
       .tutorial-details
         %p.tutorial-description= I18n.t(:hoc2018_dance_party_box_description)
-      %a{href: CDO.studio_url('/s/dance/reset'), target: '_self'}
+      %a{href: CDO.studio_url('/s/dance-2019/reset'), target: '_self'}
         %button.tutorial-button.dance-try-button= I18n.t(:hoc2018_dance_party_button)
-  .col-25.specific-tutorial.left-tutorial.dance-tutorial
+  .col-25.specific-tutorial.left-tutorial.dance-tutorial{:class => ('right-to-left' if language_dir_class == 'rtl' )}
     - unless hide_keep_on_dancing_tile
       .tutorial-box
         %h2.specific-tutorial-heading.dance-party-h2= I18n.t(:hoc2018_dance_keep_on_dancing_box_title)
         .tutorial-details
           %p.tutorial-description= I18n.t(:hoc2018_dance_keep_on_dancing_description)
-        %a{href: CDO.studio_url('/s/dance-extras/reset'), target: '_self'}
+        %a{href: CDO.studio_url('/s/dance-extras-2019/reset'), target: '_self'}
           %button.tutorial-button.dance-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
   .dance-text-icon-container.tablet-only.mobile-only
     %a.translate-link{href: "/translate/dance"}

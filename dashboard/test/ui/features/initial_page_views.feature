@@ -16,10 +16,10 @@ Feature: Looking at a few things with Applitools Eyes - Part 1
     And I sign out
     Examples:
       | url                                                                     | test_name                 |
-      | http://studio.code.org/s/allthethings/stage/3/puzzle/6?noautoplay=true  | auto open function editor |
-      | http://studio.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true      | auto open contract editor |
-      | http://studio.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true       | auto open variable editor |
-      | http://studio.code.org/s/allthethings/stage/24/puzzle/1?noautoplay=true | star wars                 |
-      | http://studio.code.org/s/allthethings/stage/24/puzzle/2?noautoplay=true | star wars blocks          |
-      | http://studio.code.org/s/allthethings/stage/25/puzzle/1?noautoplay=true | minecraft                 |
-      | http://studio.code.org/s/mc/stage/1/puzzle/6                            | minecraft house dialog    |
+      | http://studio.code.org/s/allthethings/lessons/3/levels/6?noautoplay=true  | auto open function editor |
+      | http://studio.code.org/s/algebra/lessons/10/levels/6?noautoplay=true      | auto open contract editor |
+      | http://studio.code.org/s/algebra/lessons/6/levels/4?noautoplay=true       | auto open variable editor |
+      | http://studio.code.org/s/allthethings/lessons/24/levels/1?noautoplay=true | star wars                 |
+      | http://studio.code.org/s/allthethings/lessons/24/levels/2?noautoplay=true | star wars blocks          |
+      | http://studio.code.org/s/allthethings/lessons/25/levels/1?noautoplay=true | minecraft                 |
+      | http://studio.code.org/s/mc/lessons/1/levels/6                            | minecraft house dialog    |

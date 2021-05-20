@@ -1,0 +1,25 @@
+name 'CSP - Understanding the context for the Model Lesson overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Introducing the concept of lists in CS Principles
+**Goals:** The purpose of this section is to understand how the concept of a list is presented to students in the Code.org curriculum. *(Estimated time: ~55 minutes.)*
+
+## Context
+In your synchronous workshop, a facilitator will lead a modified “Model Lesson” and you will be acting as a learner.  This Model Lesson will be for U5L2 - Lists Investigate.  In preparation for this experience, you should first understand the content that precedes the Model Lesson as well as have a broad understanding of the unit as a whole.
+
+As you do these activities, consider how the content connects between units and anticipate what aspects of this content may be challenging for students.
+
+
+## Do this: 
+
+1. Read the unit landing page for <a href="https://curriculum.code.org/csp-20/unit4/" target="blank" rel="noopener noreferrer">Unit 4</a>. This will help you understand what experiences students will have leaving Unit 4 and entering into Unit 5.
+2. Read the unit landing page for <a href="https://curriculum.code.org/csp-20/unit5/" target="blank" rel="noopener noreferrer">Unit 5</a>. This will give you context for the lessons you will see over the course of the next two modules.
+3. Read the <a href="https://curriculum.code.org/csp-20/unit5/1/" target="blank" rel="noopener noreferrer">U5L1 - Lists Explore lesson plan</a>.  As you read the lesson plan, match the lesson plan with the slides for the lesson.
+4. Watch the <a href="https://drive.google.com/file/d/1YAJNbeZtgmT8aZyVg9ZI82nxqgknxVuZ/view?usp=sharing" target="blank" rel="noopener noreferrer">U5L1 - Lists Explore video</a>.  This is found under the “Lesson Modifications” in the lesson plan. We recommend using the <a href="https://docs.google.com/presentation/d/1i4f64rzZlaL_OxaNtXgfWcdp4hFcWXgsUvBClhTsHyM/edit?usp=sharing" target="blank" rel="noopener noreferrer">digital manipulatives</a> to get a better feel for how students will engage in the concept of a list. (See the note below about the purpose behind this video).
+5. When finished with the above tasks, complete the two following reflections in this module.
+
+*Note: This video is included as a “Lesson Modification” for teachers who are unable to teach in person.  If you are able to teach in-person or in a virtual synchronous environment, we do not recommend showing the video to students but rather having students engage with the content in a hands-on way as described in the original lesson plan.*
+MARKDOWN

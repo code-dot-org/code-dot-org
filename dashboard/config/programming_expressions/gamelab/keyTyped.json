@@ -1,0 +1,7 @@
+{
+  "func": "keyTyped",
+  "block": "function keyTyped() {}",
+  "expansion": "function keyTyped() {\n  __;\n}",
+  "category": "World",
+  "noAutocomplete": true
+}

@@ -1,0 +1,943 @@
+{
+  "script": {
+    "name": "csd1-old",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:59 UTC",
+    "seeding_key": {
+      "script.name": "csd1-old"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Intro to Problem Solving",
+      "name": "Intro to Problem Solving",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "key": "The Problem Solving Process",
+      "name": "The Problem Solving Process",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "key": "Exploring Problem Solving",
+      "name": "Exploring Problem Solving",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "key": "What is a Computer?",
+      "name": "What is a Computer?",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "key": "Representing Information",
+      "name": "Representing Information",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "key": "Processing with Bits",
+      "name": "Processing with Bits",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "key": "Human vs Computer Processing",
+      "name": "Human vs Computer Processing",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Human vs Computer Processing",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "key": "Processing with Apps",
+      "name": "Processing with Apps",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "key": "Project: Apps and Problem Solving",
+      "name": "Project: Apps and Problem Solving",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Apps and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 1 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 1 Overview"
+        ],
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 1 Overview"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 2 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 2 Overview"
+        ],
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 2 Overview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 3 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 3 Overview"
+        ],
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 3 Overview"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 4 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 4 Overview"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 4 Overview"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 5 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 5 Overview"
+        ],
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 5 Overview"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 6 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 6 Overview"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 6 Overview"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter 1x1 intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter 1x1 intro"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter 1x1 intro"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter Filter Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Filter Intro"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter Filter Intro"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter Mushroom"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Mushroom"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter Mushroom"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter Filter Revisit"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Filter Revisit"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter Filter Revisit"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter Mario"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Mario"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter Mario"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter UnFilter"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter UnFilter"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter UnFilter"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter FreePlay"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter FreePlay"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 - PixFilter FreePlay"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 7 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 7 Overview"
+        ],
+        "lesson.key": "Human vs Computer Processing",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 7 Overview"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 8 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 8 Overview"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 8 Overview"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Input Output Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Input Output Intro"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 Input Output Intro"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Input Output C1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Input Output C1"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 Input Output C1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Input Output C2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Input Output C2"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 Input Output C2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Input Output C3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Input Output C3"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 Input Output C3"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Input Output C4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Input Output C4"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "CSD U1 Input Output C4"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 9 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 9 Overview"
+        ],
+        "lesson.key": "Project: Apps and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 9 Overview"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 1 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 1 Overview"
+        ],
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 2 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 2 Overview"
+        ],
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 3 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 3 Overview"
+        ],
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 4 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 4 Overview"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 5 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 5 Overview"
+        ],
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 6 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 6 Overview"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter 1x1 intro",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter 1x1 intro"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter Filter Intro",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Filter Intro"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter Mushroom",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Mushroom"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter Filter Revisit",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Filter Revisit"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter Mario",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter Mario"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter UnFilter",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter UnFilter"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 - PixFilter FreePlay",
+        "script_level.level_keys": [
+          "CSD U1 - PixFilter FreePlay"
+        ],
+        "lesson.key": "Processing with Bits",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 7 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 7 Overview"
+        ],
+        "lesson.key": "Human vs Computer Processing",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 8 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 8 Overview"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Input Output Intro",
+        "script_level.level_keys": [
+          "CSD U1 Input Output Intro"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Input Output C1",
+        "script_level.level_keys": [
+          "CSD U1 Input Output C1"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Input Output C2",
+        "script_level.level_keys": [
+          "CSD U1 Input Output C2"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Input Output C3",
+        "script_level.level_keys": [
+          "CSD U1 Input Output C3"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Input Output C4",
+        "script_level.level_keys": [
+          "CSD U1 Input Output C4"
+        ],
+        "lesson.key": "Processing with Apps",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 9 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 9 Overview"
+        ],
+        "lesson.key": "Project: Apps and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd1-old"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

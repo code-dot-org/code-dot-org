@@ -1,0 +1,6 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#defaultSong"}}
+  Default Song
+
+#defaultSong.in.collapse
+  = f.label :default_song, 'Default Song'
+  = f.select :default_song, options_for_select(@level.class.hoc_songs, @level.default_song)

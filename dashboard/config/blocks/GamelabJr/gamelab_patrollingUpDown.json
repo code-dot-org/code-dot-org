@@ -1,0 +1,13 @@
+{
+  "category": "SL1",
+  "config": {
+    "func": "patrollingUpDown",
+    "blockText": "patrolling up and down",
+    "returnType": "Behavior",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ]
+  }
+}

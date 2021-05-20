@@ -1,20 +1,13 @@
 name 'csp-20-21-u5-mini-assessment-3'
-encrypted 'twei4tB+Vx4qMiiwIPosWIOvUOIP4VwGcMMI22lZPb/f6B9wZ9/Xt94EWp6g
-3PLut2T+2OvXkw0Y+IGwqPnqqrqV2Ow1b+smCYeadvjY8JppGNcMTjrf1/dB
-4Zj8j8vFMHkraINNI8cP8neWoZ+iNZt087c/mP6M7MqTUxYcQEmYJdtF3WVw
-uSyv5ElNpeRV+sBXM/9n+UaJGbWGXmzQxvTLtXqESnbfvx70M9yRHhUc0ZLq
-8qxUBwBA+RETAVCGOuihZwg1u5AUFM2G3K0goOZRdsL2rwEa7uf2QRLerssR
-PxxL5zw0xXS5L8R9tSWNufomMa7SBevDhJ4jQ2kGaMmJT6L01OB6uFbdw5A4
-c9FDFgI2wpbu10ezq8lU8vyV226HqEXY98sYSLVcTwSUQn2oBKKcZ8nmhvAF
-C8CVqb345WSaxb3tWg2pUO9+Ux2RlezXZYo/zNFZxkeGvyGBXnJg076sDO4C
-mPEnALr4UIWBEJsse2jrdcamiVzKTWhC935vFQnxw7MW0QIQCLIHiK/YvBAd
-xJow2egMOrrUvGFCYEHMqNq479OpEfnG2i4bjX1n9iZoHuhzSCO2XfjNJCRU
-wgLwfVDowV9vKaOCBRfxSNMX/1EP1wCOmvwfgCdPrxsyMnrK1n3BdZcFVg36
-eoWshzDV7Zoo6sq27ZpHHSXjOMxz1e897eAD/zXk3VPJteonTTJoZWv98apc
-WsyRCuThrlgayo32FDm/l1/qVIXKMsm9D+/sg4yTYY4bHFdFXcnwkR1iISta
-Z2pvIOaRCW8cEdURBV2bAQPhNZcxcFd2c9QOtjByzSvdfSO38UN1QvaSIc4c
-DkK2qBS4CYXPEEFooYBfJJToXC5Qiw/CGgMqA7nQ+8OOMXphpqZaWzo/OIQi
-u3owhEqk+mK5CaNY7i/ecjBl+Py9NfGC+artgNCEyHb4MZVI3yykfr+vBW5p
-Obh5tkoijx4niQA10404tsm1jZB2IAm7yFg5ruWdUlD6BtUUsWfPoxRouqqN
-p+yJ
-'
+editor_experiment ''
+wrong '![](https://images.code.org/3daf2e7b052bfa98c131c2924f51e882-image-1557848009506.PNG)'
+wrong ' ![](https://images.code.org/76b1e19cac80c49be608d50c05c3739b-image-1557848022941.PNG) '
+right ' ![](https://images.code.org/e2b2cf74e5af9a3c09fce5514730a3d9-image-1557848051347.PNG)'
+
+markdown <<MARKDOWN
+I want to create filtered lists of student names and ages based on their **grade**. My filtered lists contain student names and ages for students who are above grade 10. What is the traversal to set up these filtered lists?
+
+![](https://images.code.org/c2252372db5bad3c2685007af80a4b2d-image-1557847896048.PNG)
+
+**Note:** One of the filtered lists will not be used. 
+MARKDOWN

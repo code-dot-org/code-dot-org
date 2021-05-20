@@ -1,0 +1,125 @@
+{
+  "script": {
+    "name": "csp3-recovery",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:12 UTC",
+    "seeding_key": {
+      "script.name": "csp3-recovery"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csp3-recovery"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Under the sea recovery",
+      "name": "Under the sea recovery",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Under the sea recovery",
+        "lesson_group.key": "",
+        "script.name": "csp3-recovery"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - introUnderTheSea - clone for recovery"
+        ],
+        "progression": "Click here for instructions on how to recover your Under the Sea project code."
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - introUnderTheSea - clone for recovery"
+        ],
+        "lesson.key": "Under the sea recovery",
+        "lesson_group.key": "",
+        "script.name": "csp3-recovery"
+      },
+      "level_keys": [
+        "U3L08 - introUnderTheSea - clone for recovery"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - introUnderTheSea - clone for recovery",
+        "script_level.level_keys": [
+          "U3L08 - introUnderTheSea - clone for recovery"
+        ],
+        "lesson.key": "Under the sea recovery",
+        "lesson_group.key": "",
+        "script.name": "csp3-recovery"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

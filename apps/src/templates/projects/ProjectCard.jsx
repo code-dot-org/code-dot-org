@@ -8,6 +8,102 @@ const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
 import {UnlocalizedTimeAgo} from '../TimeAgo';
 
+export default class ProjectCard extends React.Component {
+  static propTypes = {
+    projectData: PropTypes.object.isRequired,
+    currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
+    showFullThumbnail: PropTypes.bool,
+    isDetailView: PropTypes.bool
+  };
+
+  render() {
+    const {projectData, currentGallery, isDetailView} = this.props;
+    const {type, channel} = this.props.projectData;
+    const isPersonalGallery = currentGallery === 'personal';
+    const isPublicGallery = currentGallery === 'public';
+    const url = isPersonalGallery
+      ? `/projects/${type}/${channel}/edit`
+      : `/projects/${type}/${channel}`;
+
+    const thumbnailStyle = styles.thumbnail;
+    if (this.props.showFullThumbnail) {
+      Object.assign(thumbnailStyle, styles.fullThumbnail);
+    }
+
+    const shouldShowPublicDetails =
+      isPublicGallery && isDetailView && projectData.publishedAt;
+    const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
+
+    return (
+      <div className="project_card">
+        <div style={styles.card}>
+          <div style={thumbnailStyle}>
+            <a
+              href={studio(url)}
+              style={{width: '100%'}}
+              target={isPublicGallery ? '_blank' : undefined}
+            >
+              <img
+                src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
+                style={styles.image}
+              />
+            </a>
+          </div>
+          <a
+            style={styles.titleLink}
+            href={studio(url)}
+            target={isPublicGallery ? '_blank' : undefined}
+          >
+            <div
+              style={styles.title}
+              className={`ui-project-name-${projectData.type}`}
+            >
+              {projectData.name}
+            </div>
+          </a>
+          <div style={noTimeOnCardStyle}>
+            {isPublicGallery && projectData.studentName && (
+              <span style={styles.firstInitial}>
+                {i18n.by()}:&nbsp;
+                <span style={styles.bold}>{projectData.studentName}</span>
+              </span>
+            )}
+            {isPublicGallery && projectData.studentAgeRange && (
+              <span style={styles.ageRange}>
+                {i18n.age()}:&nbsp;
+                <span style={styles.bold}>{projectData.studentAgeRange}</span>
+              </span>
+            )}
+          </div>
+          {shouldShowPublicDetails && !projectData.isFeatured && (
+            <div style={styles.lastEdit}>
+              {i18n.published()}:&nbsp;
+              <UnlocalizedTimeAgo
+                style={styles.bold}
+                dateString={projectData.publishedAt}
+              />
+            </div>
+          )}
+          {shouldShowPublicDetails && projectData.isFeatured && (
+            <div style={styles.lastEdit}>
+              <span style={styles.bold}>{i18n.featuredProject()}</span>
+            </div>
+          )}
+          {isPersonalGallery && projectData.updatedAt && (
+            <div style={styles.lastEdit}>
+              {i18n.projectLastUpdated()}:&nbsp;
+              <UnlocalizedTimeAgo
+                style={styles.bold}
+                dateString={projectData.updatedAt}
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   card: {
     border: '1px solid #bbbbbb',
@@ -33,7 +129,7 @@ const styles = {
     color: color.charcoal
   },
   lastEdit: {
-    paddingLeft: 15,
+    paddingLeft: 30,
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 11,
@@ -51,6 +147,7 @@ const styles = {
     paddingTop: 5,
     fontSize: 11,
     paddingLeft: 15,
+    paddingRight: 15,
     fontFamily: '"Gotham", sans-serif',
     color: color.charcoal
   },
@@ -77,94 +174,3 @@ const styles = {
     paddingBottom: 10
   }
 };
-
-export default class ProjectCard extends React.Component {
-  static propTypes = {
-    projectData: PropTypes.object.isRequired,
-    currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
-    showFullThumbnail: PropTypes.bool,
-    isDetailView: PropTypes.bool
-  };
-
-  render() {
-    const {projectData, currentGallery, isDetailView} = this.props;
-    const {type, channel} = this.props.projectData;
-    const isPersonalGallery = currentGallery === 'personal';
-    const isPublicGallery = currentGallery === 'public';
-    const url = isPersonalGallery
-      ? `/projects/${type}/${channel}/edit`
-      : `/projects/${type}/${channel}`;
-
-    const thumbnailStyle = styles.thumbnail;
-    if (this.props.showFullThumbnail) {
-      Object.assign(thumbnailStyle, styles.fullThumbnail);
-    }
-
-    const shouldShowPublishedAt =
-      isPublicGallery && isDetailView && projectData.publishedAt;
-    const noTimeOnCardStyle = shouldShowPublishedAt ? {} : styles.noTime;
-
-    return (
-      <div className="project_card">
-        <div style={styles.card}>
-          <div style={thumbnailStyle}>
-            <a
-              href={studio(url)}
-              style={{width: '100%'}}
-              target={isPublicGallery ? '_blank' : undefined}
-            >
-              <img
-                src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
-                style={styles.image}
-              />
-            </a>
-          </div>
-          <a
-            style={styles.titleLink}
-            href={url}
-            target={isPublicGallery ? '_blank' : undefined}
-          >
-            <div
-              style={styles.title}
-              className={`ui-project-name-${projectData.type}`}
-            >
-              {projectData.name}
-            </div>
-          </a>
-          <div style={noTimeOnCardStyle}>
-            {isPublicGallery && projectData.studentName && (
-              <span style={styles.firstInitial}>
-                {i18n.by()}:&nbsp;
-                <span style={styles.bold}>{projectData.studentName}</span>
-              </span>
-            )}
-            {isPublicGallery && projectData.studentAgeRange && (
-              <span style={styles.ageRange}>
-                {i18n.age()}:&nbsp;
-                <span style={styles.bold}>{projectData.studentAgeRange}</span>
-              </span>
-            )}
-          </div>
-          {shouldShowPublishedAt && (
-            <div style={styles.lastEdit}>
-              {i18n.published()}:&nbsp;
-              <UnlocalizedTimeAgo
-                style={styles.bold}
-                dateString={projectData.publishedAt}
-              />
-            </div>
-          )}
-          {isPersonalGallery && projectData.updatedAt && (
-            <div style={styles.lastEdit}>
-              {i18n.projectLastUpdated()}:&nbsp;
-              <UnlocalizedTimeAgo
-                style={styles.bold}
-                dateString={projectData.updatedAt}
-              />
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  }
-}

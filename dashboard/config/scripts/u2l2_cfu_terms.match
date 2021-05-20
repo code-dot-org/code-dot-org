@@ -1,11 +1,11 @@
 name 'U2L2 CFU terms'
 title 'Terminology Matching'
 
-question 'Computing Devices'
-answer 'The Internet, A Mobile Hotspot, School Computer Lab'
 question 'Computing Network'
-answer 'Ethernet Cable, Fiber Optic Cable, Wireless Signal'
+answer 'The Internet, A Mobile Hotspot, School Computer Lab'
 question 'Path'
+answer 'Ethernet Cable, Fiber Optic Cable, Wireless Signal'
+question 'Computing Devices'
 answer 'Laptops, Mobile Phones, Tablets, Smart Devices'
 
 

@@ -1,0 +1,1168 @@
+{
+  "script": {
+    "name": "csd-tests",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:35 UTC",
+    "seeding_key": {
+      "script.name": "csd-tests"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Computers and Problem Solving",
+      "name": "Computers and Problem Solving",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "key": "Web Development",
+      "name": "Web Development",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "key": "Interactive Animations and Games",
+      "name": "Interactive Animations and Games",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Test define a computer"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test define a computer"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 Test define a computer"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Test PSP match"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test PSP match"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 Test PSP match"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 IOSP match"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 IOSP match"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 IOSP match"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Test define problem"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test define problem"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 Test define problem"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Test storage FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test storage FR"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 Test storage FR"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Test Feedback FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test Feedback FR"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 Test Feedback FR"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Test Collaborate FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test Collaborate FR"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 Test Collaborate FR"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Test Iteration FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test Iteration FR"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 Test Iteration FR"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Test"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U1 Test"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test HTML Usage"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test HTML Usage"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test HTML Usage"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test ContentStructureStyle"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test ContentStructureStyle"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test ContentStructureStyle"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test Classes"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test Classes"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test Classes"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test Debug"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test Debug"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test Debug"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test code stylesheet"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test code stylesheet"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test code stylesheet"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test code styles"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test code styles"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test code styles"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test Copyright"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test Copyright"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test Copyright"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test Bug FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test Bug FR"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test Bug FR"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test Copyright FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test Copyright FR"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test Copyright FR"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Test DigCit FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Test DigCit FR"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U2 Test DigCit FR"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD Web Development Post-Project Test"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Development Post-Project Test"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD Web Development Post-Project Test"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test clean code"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test clean code"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test clean code"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test functions"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test functions"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test functions"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test variables"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test variables"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test variables"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test planning"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test planning"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test planning"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test debugging"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test debugging"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test debugging"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test comment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test comment"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test comment"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test debug FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test debug FR"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test debug FR"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test parameter FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test parameter FR"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test parameter FR"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Test collaboration FR"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Test collaboration FR"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD U3 Test collaboration FR"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD Interactive Animations and Games Post-Project Test"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Interactive Animations and Games Post-Project Test"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      },
+      "level_keys": [
+        "CSD Interactive Animations and Games Post-Project Test"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test define a computer",
+        "script_level.level_keys": [
+          "CSD U1 Test define a computer"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test PSP match",
+        "script_level.level_keys": [
+          "CSD U1 Test PSP match"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 IOSP match",
+        "script_level.level_keys": [
+          "CSD U1 IOSP match"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test define problem",
+        "script_level.level_keys": [
+          "CSD U1 Test define problem"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test storage FR",
+        "script_level.level_keys": [
+          "CSD U1 Test storage FR"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test Feedback FR",
+        "script_level.level_keys": [
+          "CSD U1 Test Feedback FR"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test Collaborate FR",
+        "script_level.level_keys": [
+          "CSD U1 Test Collaborate FR"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test Iteration FR",
+        "script_level.level_keys": [
+          "CSD U1 Test Iteration FR"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test",
+        "script_level.level_keys": [
+          "CSD U1 Test"
+        ],
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test HTML Usage",
+        "script_level.level_keys": [
+          "CSD U2 Test HTML Usage"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test ContentStructureStyle",
+        "script_level.level_keys": [
+          "CSD U2 Test ContentStructureStyle"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test Classes",
+        "script_level.level_keys": [
+          "CSD U2 Test Classes"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test Debug",
+        "script_level.level_keys": [
+          "CSD U2 Test Debug"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test code stylesheet",
+        "script_level.level_keys": [
+          "CSD U2 Test code stylesheet"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test code styles",
+        "script_level.level_keys": [
+          "CSD U2 Test code styles"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test Copyright",
+        "script_level.level_keys": [
+          "CSD U2 Test Copyright"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test Bug FR",
+        "script_level.level_keys": [
+          "CSD U2 Test Bug FR"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test Copyright FR",
+        "script_level.level_keys": [
+          "CSD U2 Test Copyright FR"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Test DigCit FR",
+        "script_level.level_keys": [
+          "CSD U2 Test DigCit FR"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Development Post-Project Test",
+        "script_level.level_keys": [
+          "CSD Web Development Post-Project Test"
+        ],
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test clean code",
+        "script_level.level_keys": [
+          "CSD U3 Test clean code"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test functions",
+        "script_level.level_keys": [
+          "CSD U3 Test functions"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test variables",
+        "script_level.level_keys": [
+          "CSD U3 Test variables"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test planning",
+        "script_level.level_keys": [
+          "CSD U3 Test planning"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test debugging",
+        "script_level.level_keys": [
+          "CSD U3 Test debugging"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test comment",
+        "script_level.level_keys": [
+          "CSD U3 Test comment"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test debug FR",
+        "script_level.level_keys": [
+          "CSD U3 Test debug FR"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test parameter FR",
+        "script_level.level_keys": [
+          "CSD U3 Test parameter FR"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Test collaboration FR",
+        "script_level.level_keys": [
+          "CSD U3 Test collaboration FR"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Interactive Animations and Games Post-Project Test",
+        "script_level.level_keys": [
+          "CSD Interactive Animations and Games Post-Project Test"
+        ],
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

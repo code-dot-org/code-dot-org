@@ -1,0 +1,26 @@
+name 'csp-u1-exam1-compression-choice_2021'
+height 'auto'
+
+question 'Ryan is designing an app that needs to quickly send low quality photos between users. Most smartphones take much higher quality photos than Ryan needs for his app. Which answer best describes the type of compression Ryan should choose and why?'
+wrong ‘Lossless compression since it ensures perfect reconstruction of the photo.’
+wrong ‘Lossy compression since it ensures perfect reconstruction of the photo.’
+wrong ‘Lossless compression since it typically results in smaller data sizes.’
+right ‘Lossy compression since it typically results in smaller data sizes.’
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Since Ryan’s priority is how quickly these photos are sent, he wants to minimize the number of bits being transmitted.
+
+[Lesson 9 - Lossless Compression](https://curriculum.code.org/csp-20/unit1/9/) and [Lesson 10 - Lossy Compression](https://curriculum.code.org/csp-20/unit1/10/) discussed the benefits and drawbacks to each type of compression.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-1.D.7: In situations where quality or ability to reconstruct the original is maximally important, lossless compression algorithms are typically chosen.
+
+* DAT-1.D.8: In situations where minimizing data size or transmission time is maximally important, lossy compression algorithms are typically chosen.
+:::
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

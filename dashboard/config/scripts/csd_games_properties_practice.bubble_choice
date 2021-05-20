@@ -1,9 +1,9 @@
 name 'CSD Games Properties practice'
+editor_experiment ''
 display_name 'Sprite Properties'
 description 'Try out the sprite properties you have learned here'
 
 sublevels
-
-level 'CSD U3 properties tint_pilot'
-level 'CSD U3 properties depth_pilot'
-level 'CSD U3 properties pointto_pilot'
+level 'CSD Games bubble choice properties xy'
+level 'CSD Games bubble choice properties scale'
+level 'CSD Games bubble choice properties rotation'

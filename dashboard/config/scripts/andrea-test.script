@@ -1,20 +1,24 @@
 professional_learning_course 'Andrea Test'
-peer_reviews_to_complete 6
+only_instructor_review_required true
 login_required true
 student_detail_progress_view true
+announcements [{"notice"=>"Announcing", "details"=>"the announcement", "link"=>"", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 
-stage 'Deeper Learning Overview', flex_category: 'required'
+lesson_group 'required', display_name: 'Overview'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview', has_lesson_plan: false
 level 'andrea_test1', progression: 'What is Deeper Learning', named: true
 
-stage 'Part 1'
+lesson_group 'content', display_name: 'Content'
+lesson 'Part 1', display_name: 'Part 1', has_lesson_plan: false
 level 'andrea-test2', progression: 'President Question'
-level 'andrea-test3', progression: 'President Question'
+level 'andrea-test3', progression: 'Vice President Question'
 
-stage 'Part 2'
+lesson 'Part 2', display_name: 'Part 2', has_lesson_plan: false
 variants
   level 'andrea_test1', named: true
   level 'andrea-test2', named: true
 endvariants
 
-stage 'part 3'
-level 'dlp-hold1', progression: 'In Construction', named: true
+lesson 'part 3', display_name: 'part 3', has_lesson_plan: false
+level 'dlp-hold1', progression: 'Sandwich', named: true
+

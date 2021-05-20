@@ -1,9 +1,10 @@
-hideable_stages true
+hideable_lessons true
 
-stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
+lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_MRF'
 
-stage 'Sequence in Maze', flex_category: 'csf_e_1'
+lesson 'Sequence in Maze', display_name: 'Sequence in Maze', has_lesson_plan: false
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -15,10 +16,10 @@ level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
-stage 'Building a Foundation', flex_category: 'csf_e_1'
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false, unplugged: true
 level 'BuildingAFoundation'
 
-stage 'Debugging with Scrat', flex_category: 'csf_e_1'
+lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: false
 level 'courseC_video_debugging'
 level 'courseC_maze_debugging1'
 level 'courseC_maze_debugging2'
@@ -30,7 +31,7 @@ level 'courseC_maze_debugging7', challenge: true
 level 'courseC_maze_debugging8_predict1', assessment: true
 level 'courseC_maze_debugging9'
 
-stage 'Programming in Artist', flex_category: 'csf_e_1'
+lesson 'Programming in Artist', display_name: 'Programming in Artist', has_lesson_plan: false
 level 'courseC_video_artist'
 level 'courseC_artist_prog1'
 level 'courseC_artist_prog2'
@@ -44,10 +45,10 @@ level 'courseC_artist_prog6_predict1', assessment: true
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2'
 
-stage 'Loops: My Loopy Robotic Friends', flex_category: 'csf_e_1'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_loopyMRF'
 
-stage 'Loops in Artist', flex_category: 'csf_e_1'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: false
 level 'ramp_video_artistIntro'
 level 'ramp_artist_loops1'
 level 'ramp_artist_loops2'
@@ -60,7 +61,7 @@ level 'ramp_artist_loops7'
 level 'ramp_artist_loops8', challenge: true
 level 'ramp_artist_loops9'
 
-stage 'Nested Loops in Bee/Zombie', flex_category: 'csf_e_1'
+lesson 'Nested Loops in Bee/Zombie', display_name: 'Nested Loops in Bee/Zombie', has_lesson_plan: false
 level 'courseD_bee_nestedLoops1a'
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
@@ -75,7 +76,7 @@ level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
 level 'courseD_bee_nestedLoops9_predict2', assessment: true
 
-stage 'Nested Loops with Frozen', flex_category: 'csf_e_1'
+lesson 'Nested Loops with Frozen', display_name: 'Nested Loops with Frozen', has_lesson_plan: false
 level 'courseD_artist_project1'
 level 'courseD_artist_project2'
 level 'courseD_artist_project3'
@@ -86,10 +87,11 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
-stage 'Algorithms: Dice Race', flex_category: 'csf_e_2'
+lesson_group 'csf_e_2', display_name: 'Course E Content'
+lesson 'Algorithms: Dice Race', display_name: 'Algorithms: Dice Race', has_lesson_plan: false, unplugged: true
 level 'DiceRace'
 
-stage 'Course E Introduction', flex_category: 'csf_e_2'
+lesson 'Course E Introduction', display_name: 'Course E Introduction', has_lesson_plan: false
 level 'courseE_video_ramp1'
 level 'courseD_scrat_ramp1'
 level 'courseD_scrat_ramp2'
@@ -106,7 +108,7 @@ level 'courseE_artist_ramp8'
 level 'courseC_video_angles'
 level 'courseE_artist_ramp9'
 
-stage 'Conditionals', flex_category: 'csf_e_2'
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false
 level 'courseD_video_whileIntro'
 level 'courseE_farmer_ramp11a'
 level 'courseE_farmer_ramp11b'
@@ -120,35 +122,43 @@ level 'courseE_video_BeeifElse'
 level 'courseE_farmer_ramp12f'
 level 'courseE_farmer_ramp12g'
 
-stage 'Private and Personal Information', flex_category: 'csf_e_2'
+lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: false, unplugged: true
 level 'courseE_unplugged_privateInformation'
 
-stage 'Build a Star Wars Game', flex_category: 'csf_e_2'
+lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game', has_lesson_plan: false
 level 'elementary_video_pairProgramming'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_8'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_9'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_10'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_11'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_12'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_13'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_14'
 skin 'hoc2015'
 video_key_for_next_level 'starwars_blocks_congrats'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-stage 'Functions: Songwriting', flex_category: 'csf_e_2'
+lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: false, unplugged: true
 level 'SongwritingParameters'
 
-stage 'Functions in Bee', flex_category: 'csf_e_2'
+lesson 'Functions in Bee', display_name: 'Functions in Bee', has_lesson_plan: false
 level 'courseE_bee_functions1'
 level 'courseE_video_functionsBee'
 level 'courseE_bee_functions2'
@@ -165,7 +175,7 @@ level 'courseE_bee_functions11_predict1', assessment: true
 bonus 'courseE_bee_functions_challenge1'
 bonus 'courseE_bee_functions_challenge2'
 
-stage 'Functions in Artist', flex_category: 'csf_e_2'
+lesson 'Functions in Artist', display_name: 'Functions in Artist', has_lesson_plan: false
 level 'courseE_artist_functions1'
 level 'courseE_video_functionsArtist'
 level 'courseE_artist_functions_predict1'
@@ -182,7 +192,7 @@ level 'courseE_artist_functions_predict2', assessment: true
 bonus 'courseE_artist_functions_challenge1'
 bonus 'courseE_artist_functions_challenge2'
 
-stage 'Functions in Farmer', flex_category: 'csf_e_2'
+lesson 'Functions in Farmer', display_name: 'Functions in Farmer', has_lesson_plan: false
 level 'courseE_farmer_functions1'
 level 'courseE_farmer_functions1a'
 level 'courseE_farmer_functions2b'
@@ -198,7 +208,7 @@ level 'courseE_farmer_functions9b'
 level 'courseE_farmer_functions10b'
 level 'courseE_farmer_functions11_predict', assessment: true
 
-stage 'Determine the Concept', flex_category: 'csf_e_2'
+lesson 'Determine the Concept', display_name: 'Determine the Concept', has_lesson_plan: false
 level 'courseE_bee_concept1'
 level 'courseE_farmer_concept1'
 level 'courseE_bee_concept2'
@@ -212,7 +222,7 @@ level 'courseE_artist_concept4'
 bonus 'courseE_artist_concept_challenge1'
 bonus 'courseE_artist_concept_challenge2'
 
-stage 'Build a Play Lab Game', flex_category: 'csf_e_2'
+lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game', has_lesson_plan: false
 level 'courseE_playLab_scaffold1'
 level 'courseE_playLab_scaffold2'
 level 'courseE_playLab_scaffold3'
@@ -221,25 +231,28 @@ level 'courseE_playLab_scaffold5'
 level 'courseE_playLab_scaffold6'
 bonus 'courseE_playLab_challenge1'
 
-stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas', has_lesson_plan: false
 level 'courseF_video_csMatters', named: true
 level 'Geometric Sun', named: true
 level 'Robot Doodle', named: true
 level 'Alien Defender', named: true
 level 'Find the Wizard', named: true
 
-stage 'The Design Process', flex_category: 'end_of_course_project'
+lesson 'The Design Process', display_name: 'The Design Process', has_lesson_plan: false
 level 'Begin planning your project', named: true
 
-stage 'Build Your Project', flex_category: 'end_of_course_project'
+lesson 'Build Your Project', display_name: 'Build Your Project', has_lesson_plan: false
 level 'Course E: Play Lab Project', named: true
 level 'Course E: Artist Project', named: true
 
-stage 'Present Your Project', flex_category: 'end_of_course_project'
+lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: false
 level 'Prepare for your presentation', named: true
 
-stage 'Internet', flex_category: 'extra_course_content'
+lesson_group 'extra_course_content', display_name: 'Extra Course Content'
+lesson 'Internet', display_name: 'Internet', has_lesson_plan: false, unplugged: true
 level 'Internet'
 
-stage 'Crowdsourcing', flex_category: 'extra_course_content'
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: false, unplugged: true
 level 'Crowdsourcing'
+

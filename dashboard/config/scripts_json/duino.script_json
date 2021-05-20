@@ -1,0 +1,411 @@
+{
+  "script": {
+    "name": "duino",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:45 UTC",
+    "seeding_key": {
+      "script.name": "duino"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Basic Circuits",
+      "name": "Basic Circuits",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Basic Circuits",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "key": "Blinky Lights",
+      "name": "Blinky Lights",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Blinky Lights",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "key": "Making Music",
+      "name": "Making Music",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "key": "JunkBot",
+      "name": "JunkBot",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "JunkBot",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "duino battery led"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "duino battery led"
+        ],
+        "lesson.key": "Basic Circuits",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      },
+      "level_keys": [
+        "duino battery led"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "duino button led"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "duino button led"
+        ],
+        "lesson.key": "Basic Circuits",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      },
+      "level_keys": [
+        "duino button led"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "duino multi leds"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "duino multi leds"
+        ],
+        "lesson.key": "Blinky Lights",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      },
+      "level_keys": [
+        "duino multi leds"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "duino pov"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "duino pov"
+        ],
+        "lesson.key": "Blinky Lights",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      },
+      "level_keys": [
+        "duino pov"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "duino music"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "duino music"
+        ],
+        "lesson.key": "Making Music",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      },
+      "level_keys": [
+        "duino music"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "duino auduino"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "duino auduino"
+        ],
+        "lesson.key": "Making Music",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      },
+      "level_keys": [
+        "duino auduino"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "duino junkbot build"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "duino junkbot build"
+        ],
+        "lesson.key": "JunkBot",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      },
+      "level_keys": [
+        "duino junkbot build"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "duino junkbot software"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "duino junkbot software"
+        ],
+        "lesson.key": "JunkBot",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      },
+      "level_keys": [
+        "duino junkbot software"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "duino battery led",
+        "script_level.level_keys": [
+          "duino battery led"
+        ],
+        "lesson.key": "Basic Circuits",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "duino button led",
+        "script_level.level_keys": [
+          "duino button led"
+        ],
+        "lesson.key": "Basic Circuits",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "duino multi leds",
+        "script_level.level_keys": [
+          "duino multi leds"
+        ],
+        "lesson.key": "Blinky Lights",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "duino pov",
+        "script_level.level_keys": [
+          "duino pov"
+        ],
+        "lesson.key": "Blinky Lights",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "duino music",
+        "script_level.level_keys": [
+          "duino music"
+        ],
+        "lesson.key": "Making Music",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "duino auduino",
+        "script_level.level_keys": [
+          "duino auduino"
+        ],
+        "lesson.key": "Making Music",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "duino junkbot build",
+        "script_level.level_keys": [
+          "duino junkbot build"
+        ],
+        "lesson.key": "JunkBot",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "duino junkbot software",
+        "script_level.level_keys": [
+          "duino junkbot software"
+        ],
+        "lesson.key": "JunkBot",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

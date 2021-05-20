@@ -13,11 +13,12 @@ dashboard/brakeman_security_report.htm
 .tmputils
 .rakeTasks
 .idea/
+jsconfig.json
 /bin/i18n/*_credentials.yml
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
-/.ruby-version
+.ruby-version
 /apps/.babel-cache
 /apps/build
 /apps/build-times.log
@@ -66,5 +67,5 @@ npm-debug.log
 /rebuild-apps
 /rebuild-shared
 /rebuild-code-studio
-/shared/js/node_modules/
 /tools/scripts/brokenLinkChecker/node_modules/
+/i18n/locales/*/codeorg-markdown/

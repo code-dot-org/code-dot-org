@@ -1,0 +1,34 @@
+{
+  "name": "csd-2020",
+  "script_names": [
+    "csd1-2020",
+    "csd2-2020",
+    "csd3-2020",
+    "csd4-2020",
+    "csd5-2020",
+    "csd6-2020"
+  ],
+  "properties": {
+    "teacher_resources": [
+      [
+        "curriculum",
+        "https://curriculum.code.org/csd-20/"
+      ],
+      [
+        "teacherForum",
+        "https://forum.code.org/c/csd"
+      ]
+    ],
+    "has_verified_resources": true,
+    "family_name": "csd",
+    "version_year": "2020",
+    "visible": true,
+    "is_stable": true
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

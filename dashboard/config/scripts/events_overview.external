@@ -7,7 +7,7 @@ Event-Based programming can be a useful tool when a programmer wants to develop 
 
 In unit 3, students began programming by drawing images with the turtle.  This is *not* event driven because the program does a single set of commands in a prescribed order.  The result will never change.  An example of a highly event-driven software is a word processor: nothing occurs until the user presses keys or clicks a button.  These keypresses are events that trigger the computer to process the action and update the screen with the appropriate letter. The characters written on the screen are not predetermined by the programmer, so the application must be event-driven.
 
-In App Lab, students will use event handlers to listen for and respond to user events.  
+In App Lab, students will use event handlers to listen for and respond to user events.
 
 <img style = "margin: 0 auto" src="https://images.code.org/a4cf535f00b0b77737d5259386b4442d-image-1476884080311.png">
 
@@ -16,9 +16,9 @@ Students will use Design Mode to create UI elements and give them names.  They t
 
 The following links provide additional links and information about event driven programming.  Many of these links are also found in the curriculum, but are consolidated here for convenience.
 
-- <a href = “https://studio.code.org/s/csp5/stage/1/puzzle/5” target=_blank>Event Driven Programming <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/1/puzzle/8” target=_blank>Event Driven Programming Patterns <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/1/puzzle/9” target=_blank>Choosing Good IDs <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5/stage/3/puzzle/2” target=_blank>Event Driven Programming Recap <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/lessons/1/levels/5” target=_blank>Event Driven Programming <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/lessons/1/levels/8” target=_blank>Event Driven Programming Patterns <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/lessons/1/levels/9” target=_blank>Choosing Good IDs <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/lessons/3/levels/2” target=_blank>Event Driven Programming Recap <i class="fa fa-external-link-square"></i></a>
 
 MARKDOWN

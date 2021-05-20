@@ -1,0 +1,30 @@
+name 'Episode 4 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+Choose to encrypt messages with your Ceasear Cipher wheel, or update the Random Password Generator app (App Lab). We can't wait to see what you make!
+
+### Encryption Challenge
+
+* [Challenge Guide](https://docs.google.com/document/d/1yWlQbCuSls02BQBHi_eztF1MUWd3naiLpAnqh9HjZOg/edit?usp=sharing)
+* Don't forget to share your encrypted messages for the Code.org team (and our friends around the world!) to solve. 
+
+![](https://images.code.org/8fd5d9ad1d773ea2f5fde2c0a5d0f49c-image-1586313341107.gif)
+
+
+### Random Password Generator App
+
+* On the next level, update the app we started during this week's Code Break. Here are some modifications you could make. Choose the ones that interest you!
+	* Go into Design Mode (the button on the top left) and change the User Interface. Update the colors, pick a different theme, and make the app look its best!
+    * Using the math we discussed during the episode, display the number of possible passwords at the bottom of the screen. For example, if our list of passwords has three words, and the user sets the password to be two words long, the number of possibilities is 9.
+    * Add a password "strength meter" that displays if the password is weak, medium, or strong. 
+    * Update the slider so the password can be more than five words long. 
+    
+![](https://images.code.org/c38ff3bd2736cace4eb8463aaa588c7f-image-1586313913280.gif)
+MARKDOWN

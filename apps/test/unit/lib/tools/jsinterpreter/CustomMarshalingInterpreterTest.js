@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
 import {
@@ -381,6 +381,34 @@ describe('The CustomMarshalingInterpreter', () => {
     expect(() => interpreter.run()).to.throw(
       'someUndeclaredVariable is not defined'
     );
+  });
+
+  describe('step method', () => {
+    it('does not hit call stack size exceptions with simple polyfill Array.sort code', () => {
+      const interpreter = new CustomMarshalingInterpreter(
+        `var myArray = [];
+         var ARRAY_SIZE = 15;
+         for (var i = 0; i < ARRAY_SIZE; i++) {
+           myArray[i] = ARRAY_SIZE - 1 - i;
+         }
+         myArray.sort();
+        `,
+        new CustomMarshaler({
+          globalProperties: {}
+        })
+      );
+      interpreter.run();
+      const expectedSortedArray = [];
+      const ARRAY_SIZE = 15;
+      for (var i = 0; i < ARRAY_SIZE; i++) {
+        expectedSortedArray[i] = i;
+      }
+      expect(
+        interpreter.marshalInterpreterToNative(
+          interpreter.getValueFromScope('myArray')
+        )
+      ).to.eql(expectedSortedArray);
+    });
   });
 
   describe('getProperty method', () => {
@@ -774,9 +802,7 @@ describe('The CustomMarshalingInterpreter', () => {
       });
 
       it('will skip the inherits and trigger properties if present', () => {
-        expect(nativeFunc.inherits).to.be.defined;
         value.assert(`assert(value.inherits === undefined)`);
-        expect(nativeFunc.trigger).to.be.defined;
         value.assert(`assert(value.trigger === undefined)`);
       });
     });

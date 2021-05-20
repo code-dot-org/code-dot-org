@@ -1,0 +1,348 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Baker High School,,410171000009,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker Web Academy,,410171001767,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baker Web Academy,,410171001767,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Huntington School,,410660000011,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe High School,,410843000050,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe Grade School,,410843000027,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alsea Charter School,,410120000019,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corvallis High School,,410348000047,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corvallis High School,,410348000047,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crescent Valley High School,,410348000048,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Linn High School,,411317000058,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Linn High School,,411317000058,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Linn High School,,411317000058,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilsonville High School,,411317000574,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilsonville High School,,411317000574,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arts and Technology High School,,411317001786,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arts and Technology High School,,411317001786,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Oswego Middle School,,410723000066,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeridge Middle School,,410723000067,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Oswego Senior High School,,410723000068,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Oswego Senior High School,,410723000068,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeridge High School,,410723000069,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeridge High School,,410723000069,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clackamas High School,,410883000093,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clackamas High School,,410883000093,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milwaukie High School,,410883000094,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milwaukie High School,,410883000094,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Putnam High School,,410883000095,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Putnam High School,,410883000095,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sandy High School,,411089000149,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sandy High School,,411089000149,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sandy High School,,411089000149,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon City Senior High School,,410933000126,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon City Senior High School,,410933000126,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alliance Charter Academy,,410933001725,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alliance Charter Academy,,410933001725,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alliance Charter Academy,,410933001725,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clackamas Academy of Industrial Sciences,,410933001793,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clackamas Academy of Industrial Sciences,,410933001793,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canby High School,,410264000148,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canby High School,,410264000148,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit Learning Charter,,410470001766,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit Learning Charter,,410470001766,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jewell School,,410675000158,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seaside High School,,411110000163,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seaside High School,,411110000163,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Scappoose High School,,411098000172,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Scappoose High School,,411098000172,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clatskanie Middle/High School,,410326000178,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St Helens High School,,411172000196,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marshfield Senior High School,,410366000216,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Bend Senior High School,,410882000225,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Bend Senior High School,,410882000225,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crook County High School,,410372000244,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Driftwood Elementary School,,411002000246,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pacific High School,,411002000247,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Azalea Middle School,,410231000253,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brookings-Harbor High School,,410231000255,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brookings-Harbor High School,,410231000255,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade Middle School,,410198000259,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View Senior High School,,410198000271,10013,PLTW Introduction to Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View Senior High School,,410198000271,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaPine Senior High School,,410198000272,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaPine Middle School,,410198000264,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marshall High School,,410198000688,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit High School,,410198001451,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Summit High School,,410198001451,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Redmond Proficiency Academy,,411035001785,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Redmond Proficiency Academy,,411035001785,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Redmond Proficiency Academy,,411035001785,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeview High School,,411035001820,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgeview High School,,411035001820,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John C Fremont Middle School,,411071000298,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John C Fremont Middle School,,411071000298,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Joseph Lane Middle School,,411071000299,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roseburg High School,,411071000300,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Days Creek Charter School,,410396000308,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coffenberry Middle School,,411161000311,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coffenberry Middle School,,411161000311,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Umpqua High School,,411161000313,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glendale Community Charter School,,410564000327,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glendale Community Charter School,,410564000327,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Winston Middle School,,411349000335,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sutherlin Middle School,,411194000339,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sutherlin High School,,411194000341,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WyEast Middle School,,410651000388,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hood River Valley High School,,410651000390,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hood River Valley High School,,410651000390,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hood River Valley High School,,410651000390,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hood River Valley High School,,410651000390,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Talent Middle School,,410963000393,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ashland High School,,410156000401,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crater School of Business Innovation and Science,,410294001728,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shady Cove School,,410450000413,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eagle Point High School,,410450000417,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+White Mountain Middle School,,410450001587,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rogue River Junior/Senior High,,411068000421,10054,Data Systems/Processing,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rivers Edge Academy Charter School,,411068001811,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rivers Edge Academy Charter School,,411068001811,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Valley Academy,,411068001863,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butte Falls Charter School,,410258000426,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Medford High School,,410804000444,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Medford High School,,410804000444,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Medford High School,,410804000444,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Medford High School,,410804000445,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Medford High School,,410804000445,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Medford High School,,410804000445,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Culver High School,,410384000447,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Middle School,,410591000460,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grants Pass High School,,410591000464,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grants Pass High School,,410591000464,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grants Pass High School,,410591000464,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grants Pass High School,,410591000464,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Valley High School,,410690000481,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Klamath Union High School,,410708000512,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EagleRidge High School,,410708001687,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EagleRidge High School,,410708001687,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brixner Junior High School,,410702000505,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henley Middle School,,410702000506,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonanza Junior/Senior High School,,410702001466,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lost River High School,,410702000511,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mazama High School,,410702000513,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeview Senior High School,,410728000519,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Paisley School,,410943000521,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Hill High School,,410987000529,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Hill High School,,410987000529,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Hill High School,,410987000529,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Eugene High School,,410474000571,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Eugene High School,,410474000571,10206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eugene Education Options,,410474000567,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheldon High School,,410474000572,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheldon High School,,410474000572,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheldon High School,,410474000572,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Eugene High School,,410474000573,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Churchill High School,,410474000575,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arts and Technology Academy at Jefferson,,410474001737,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arts and Technology Academy at Jefferson,,410474001737,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy of Arts and Academics,,411167001641,10151,Business Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fern Ridge Middle School,,410495000600,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fern Ridge Middle School,,410495000600,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elmira High School,,410495000601,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Lane Technology Learning Center,,410495001595,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cottage Grove High School,,411158000615,10054,Data Systems/Processing,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cottage Grove High School,,411158000615,10206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Willamette High School,,410204000623,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Willamette High School,,410204000623,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McKenzie River Community School,,410798000629,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McKenzie River Community School,,410798000629,10206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Junction City High School,,410693000632,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lowell Junior/Senior High School,,410759000634,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lowell Junior/Senior High School,,410759000634,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bridge Charter Academy,,410759001846,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakridge Junior High School,,410915000636,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakridge High School,,410915000637,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marcola Elementary School,,410774000638,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mohawk High School,,410774000639,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mohawk High School,,410774000639,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TEACH-NW,,410774001872,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TEACH-NW,,410774001872,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Siuslaw Middle School,,410510000643,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Siuslaw High School,,410510000645,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Siuslaw High School,,410510000645,10206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newport Middle School,,410750000661,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newport Middle School,,410750000661,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Taft Middle School,,410750000984,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Taft Middle School,,410750000984,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newport High School,,410750000663,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Taft High School,,410750000665,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eddyville Charter School,,410750001582,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrisburg High School,,410001900731,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Albany High School,,410112000736,10054,Data Systems/Processing,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Albany Options School,,410112001577,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High School,,410738000730,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High School,,410738000730,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High School,,410738000730,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon High School,,410738000730,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon Connections Academy,,410810001680,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon Connections Academy,,410810001680,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon Connections Academy,,410810001680,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oregon Connections Academy,,410810001680,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jordan Valley High School,,410682000760,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ontario Middle School,,410927000745,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ontario High School,,410927000746,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ontario High School,,410927000746,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ontario SD 8C,,411004000867,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Adrian High School,,410102000756,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vale High School,,410001400761,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gervais Middle School,,410001500831,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gervais High School,,410001500853,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silverton Middle School,,411145000763,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silverton High School,,411145000857,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silverton High School,,411145000857,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silverton High School,,411145000857,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silverton High School,,411145000857,10206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silverton High School,,411145000857,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade Junior High School,,410278000855,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade Senior High School,,410278000856,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade Senior High School,,410278000856,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Judson Middle School,,411082000811,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waldo Middle School,,411082000814,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walker Middle School,,411082000815,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McKay High School,,411082001296,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McKay High School,,411082001296,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Salem High School,,411082000818,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Salem High School,,411082000818,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Salem High School,,411082000818,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sprague High School,,411082000819,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sprague High School,,411082000819,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Salem High School,,411082000820,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Salem High School,,411082000820,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Salem High School,,411082000820,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crossler Middle School,,411082000659,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Houck Middle School,,411082000664,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stephens Middle School,,411082000668,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Salem High School,,411082004191,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Salem High School,,411082004191,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Salem High School,,411082004191,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jane Goodall Environmental Middle Charter School,,411082001536,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Early College High School,,411082001717,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt Angel Middle School,,410855000837,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John F Kennedy High School,,410855000839,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Irrigon Junior/Senior High School,,410852001312,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heppner Junior/Senior High School,,410852000861,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roseway Heights School,,411004000932,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roseway Heights School,,411004000932,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harriet Tubman Middle School,,411004001315,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Benson Polytechnic High School,,411004000956,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cleveland High School,,411004000958,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cleveland High School,,411004000958,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High School,,411004000960,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grant High School,,411004000962,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grant High School,,411004000962,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grant High School,,411004000962,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln High School,,411004000966,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln High School,,411004000966,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln High School,,411004000966,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison High School,,411004000968,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Madison High School,,411004000968,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roosevelt High School,,411004001821,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkrose High School,,410948000987,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkrose High School,,410948000987,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkrose High School,,410948000987,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Reynolds High School,,411052001009,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Reynolds Middle School,,411052001010,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walt Morey Middle School,,411052001397,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gordon Russell Middle School,,410600000990,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Center for Advanced Learning,,410600001571,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springwater Trail High School,,410600004183,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial High School,,410280001020,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centennial Park School,,410280001221,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corbett School,,410342001729,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Corbett School,,410342001729,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+David Douglas High School,,410394001037,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+David Douglas High School,,410394001037,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverdale High School,,411056000892,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverdale High School,,411056000892,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverdale High School,,411056000892,10206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverdale High School,,411056000892,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaCreole Middle School,,410386001049,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LaCreole Middle School,,410386001049,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dallas High School,,410386001050,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Talmadge Middle School,,410284001057,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tillamook High School,,411232001075,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tillamook High School,,411232001075,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Neah-Kah-Nie High School,,410865001081,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nestucca High School,,410870001082,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nestucca High School,,410870001082,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Echo School,,410453001089,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Echo School,,410453001089,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Armand Larive Middle School,,410630001096,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hermiston High School,,410630001097,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hermiston High School,,410630001097,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sandstone Middle School,,410630000677,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunridge Middle School,,410951001327,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pendleton High School,,410951001111,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nixyaawii Community School,,410951001534,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stanfield Secondary School,,411179001120,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ukiah School,,411254001122,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ukiah School,,411254001122,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+La Grande SD 1,,410720001125,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Powder Charter School,,410894001135,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elgin High School,,410459001141,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glencoe High School,,410002301306,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glencoe High School,,410002301306,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glencoe High School,,410002301306,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro High School,,410002301252,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro High School,,410002301252,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro High School,,410002301252,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Century High School,,410002301248,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Century High School,,410002301248,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Century High School,,410002301248,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty High School,,410002301585,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty High School,,410002301585,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro Online Academy,,410002301824,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillsboro Online Academy,,410002301824,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Neil Armstrong Middle School,,410516001188,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Grove High School,,410516001189,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Grove High School,,410516001189,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Grove High School,,410516001189,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas R Fowler Middle School,,411224001196,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tigard High School,,411224001198,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tigard High School,,411224001198,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tigard High School,,411224001198,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tigard High School,,411224001198,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tigard High School,,411224001198,10206,Mobile Applications,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tualatin High School,,411224000440,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tualatin High School,,411224000440,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tualatin High School,,411224000440,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Aloha High School,,410192001239,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Aloha High School,,410192001239,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Aloha High School,,410192001239,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beaverton High School,,410192001240,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beaverton High School,,410192001240,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunset High School,,410192001241,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunset High School,,410192001241,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunset High School,,410192001241,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Community School,,410192000220,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+School of Science & Technology,,410192000536,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+School of Science & Technology,,410192000536,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westview High School,,410192000554,10019,AP Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westview High School,,410192000554,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westview High School,,410192000554,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southridge High School,,410192001432,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southridge High School,,410192001432,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountainside High School,,410192001855,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountainside High School,,410192001855,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sherwood High School,,411129001246,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sherwood High School,,411129001246,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gaston Jr/Sr High School,,410543001249,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fossil Charter School,,410525001375,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Insight School of Oregon Painted Hills,,410828001813,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Destinations Career Academy of Oregon,,410828001864,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Yamhill Carlton High School,,410001601288,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Amity High School,,410123001263,10156,Computer Programming—Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dayton High School,,410399001265,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newberg Senior High School,,410872001274,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newberg Senior High School,,410872001274,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Willamina High School,,411335001277,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McMinnville High School,,410801001284,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McMinnville High School,,410801001284,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McMinnville High School,,410801001284,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McMinnville High School,,410801001284,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheridan High School,,411122001287,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sheridan AllPrep Academy,,411122001803,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Four Rivers Community School,,410000901592,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Four Rivers Community School,,410000901592,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ione Community Charter School,,410004700862,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

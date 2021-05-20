@@ -1,0 +1,45 @@
+name 'csd-post-survey-2017-levelgroup_2018_2019_pilot_2020_virtual_2020'
+title 'CS Discoveries End of Semester Student Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csp-post-survey-2017 preamble 1_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q1_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q2_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q3_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q4_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q6_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q8_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q9_2019_pilot_2020_virtual_2020'
+
+page
+text 'csp-pre-survey-2017 preamble 2 cs in general_2019_pilot_2_virtual_2020'
+level 'csp-post-survey-2017-q11_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q13_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q14_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q16_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q17_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q18_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q28_2019_pilot_2020_virtual_2020'
+
+page
+text 'csp-pre-survey-2017 preamble 3 this class_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q22_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q23_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q24_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q26_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q29_2019_pilot_2020_virtual_2020'
+level 'csp-post-survey-2017-q30_2019_pilot_2020_virtual_2020'
+
+page
+text 'csd-post-survey-2017-implementation-teacher_2019_pilot_20_virtual_2020'
+level 'csd-post-survey-q26_2019_pilot_2020_virtual_2020'
+level 'csd-post-survey-q27_2019_pilot_2020_virtual_2020'
+level 'csd-post-survey-q28_2019_pilot_2020_virtual_2020'
+level 'csd-post-survey-q29_2019_pilot_2020_virtual_2020'
+text 'csd-post-survey-2017-implementation-student_2019_pilot_20_virtual_2020'
+level 'csd-post-survey-q30_2019_pilot_2020_virtual_2020'
+level 'csd-post-survey-q31_2019_pilot_2020_virtual_2020'
+level 'csd-post-survey-q32_2019_pilot_2020_virtual_2020'
+level 'csd-post-survey-2017-FR_virtual_2020'

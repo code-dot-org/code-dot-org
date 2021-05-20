@@ -4,10 +4,89 @@ import Radium from 'radium';
 import Button from '../Button';
 import color from '../../util/color';
 import {connect} from 'react-redux';
-
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 // If you want to include an image, you're probably looking for a ImageResourceCard.
+class ResourceCard extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    callout: PropTypes.string,
+    description: PropTypes.string,
+    buttonText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    responsiveSize: PropTypes.string.isRequired,
+    allowWrap: PropTypes.bool,
+    allowMarkdown: PropTypes.bool,
+    linkId: PropTypes.string,
+    linkClass: PropTypes.string
+  };
+
+  render() {
+    const {
+      title,
+      callout,
+      description,
+      buttonText,
+      link,
+      isRtl,
+      allowWrap,
+      allowMarkdown,
+      linkId,
+      linkClass,
+      responsiveSize
+    } = this.props;
+    const localeStyle = isRtl ? styles.rtl : styles.ltr;
+
+    const buttonStyles = [styles.button];
+    const cardStyles = [styles.card, localeStyle];
+    const titleStyles = [styles.title, localeStyle];
+    const descriptionStyles = [styles.text, styles.description, localeStyle];
+
+    if (['sm', 'xs'].includes(responsiveSize)) {
+      cardStyles.push(styles.cardSmall);
+      titleStyles.push(styles.titleSmall);
+      descriptionStyles.push(styles.descriptionSmall);
+    }
+
+    if (allowWrap) {
+      buttonStyles.push(styles.buttonAllowWrap);
+      cardStyles.push(styles.cardAllowWrap);
+      titleStyles.push(styles.titleAllowWrap);
+    } else {
+      titleStyles.push(styles.titleNoWrap);
+    }
+
+    let descriptionContent = description;
+    if (allowMarkdown) {
+      descriptionContent = <SafeMarkdown markdown={description} />;
+    }
+
+    return (
+      <div style={cardStyles}>
+        <div style={styles.titleContainer}>
+          <div style={titleStyles}>{title}</div>
+          {callout && (
+            <div style={styles.callout}>
+              <i>{callout}</i>
+            </div>
+          )}
+        </div>
+        <div style={descriptionStyles}>{descriptionContent}</div>
+        <br />
+        <Button
+          __useDeprecatedTag
+          id={linkId}
+          className={linkClass}
+          href={link}
+          color={Button.ButtonColor.gray}
+          text={buttonText}
+          style={buttonStyles}
+        />
+      </div>
+    );
+  }
+}
 
 const styles = {
   card: {
@@ -26,17 +105,19 @@ const styles = {
     paddingRight: 20,
     color: color.white
   },
+  titleContainer: {
+    display: 'flex',
+    alignItems: 'baseline',
+    padding: '14px 20px 10px 20px'
+  },
   title: {
+    color: color.white,
     fontFamily: '"Gotham 7r", sans-serif',
-    paddingTop: 20,
-    paddingBottom: 15,
     fontSize: 27,
-    width: '100%',
-    display: 'inline',
+    lineHeight: '29px',
     boxSizing: 'border-box'
   },
   titleSmall: {
-    width: '100%',
     boxSizing: 'border-box'
   },
   titleNoWrap: {
@@ -46,6 +127,13 @@ const styles = {
   },
   titleAllowWrap: {
     lineHeight: '1.1'
+  },
+  callout: {
+    flex: 'none',
+    fontSize: 14,
+    margin: '0px 8px',
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.white
   },
   description: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -75,77 +163,6 @@ const styles = {
     float: 'right'
   }
 };
-
-class ResourceCard extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    buttonText: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    responsiveSize: PropTypes.string.isRequired,
-    allowWrap: PropTypes.bool,
-    allowMarkdown: PropTypes.bool,
-    linkId: PropTypes.string,
-    linkClass: PropTypes.string
-  };
-
-  render() {
-    const {
-      title,
-      description,
-      buttonText,
-      link,
-      isRtl,
-      allowWrap,
-      allowMarkdown,
-      linkId,
-      linkClass,
-      responsiveSize
-    } = this.props;
-    const localeStyle = isRtl ? styles.rtl : styles.ltr;
-
-    const buttonStyles = [styles.button];
-    const cardStyles = [styles.card, localeStyle];
-    const titleStyles = [styles.title, styles.text, localeStyle];
-    const descriptionStyles = [styles.text, styles.description, localeStyle];
-
-    if (['sm', 'xs'].includes(responsiveSize)) {
-      cardStyles.push(styles.cardSmall);
-      titleStyles.push(styles.titleSmall);
-      descriptionStyles.push(styles.descriptionSmall);
-    }
-
-    if (allowWrap) {
-      buttonStyles.push(styles.buttonAllowWrap);
-      cardStyles.push(styles.cardAllowWrap);
-      titleStyles.push(styles.titleAllowWrap);
-    } else {
-      titleStyles.push(styles.titleNoWrap);
-    }
-
-    let descriptionContent = description;
-    if (allowMarkdown) {
-      descriptionContent = <SafeMarkdown markdown={description} />;
-    }
-
-    return (
-      <div style={cardStyles}>
-        <div style={titleStyles}>{title}</div>
-        <div style={descriptionStyles}>{descriptionContent}</div>
-        <br />
-        <Button
-          id={linkId}
-          className={linkClass}
-          href={link}
-          color={Button.ButtonColor.gray}
-          text={buttonText}
-          style={buttonStyles}
-        />
-      </div>
-    );
-  }
-}
 
 export default connect(state => ({
   isRtl: state.isRtl,

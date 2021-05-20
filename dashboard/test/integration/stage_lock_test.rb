@@ -12,11 +12,12 @@ class StageLockTest < ActionDispatch::IntegrationTest
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
     @script = create :script
-    @lockable_stage = create(:stage, script: @script, name: 'Lockable Stage', lockable: true)
+    @lesson_group = create :lesson_group, script: @script
+    @lockable_stage = create(:lesson, script: @script, name: 'Lockable Stage', lockable: true, lesson_group: @lesson_group)
     external = create(:external, name: 'markdown level')
-    @lockable_external_sl = create(:script_level, script: @script, stage: @lockable_stage, levels: [external])
+    @lockable_external_sl = create(:script_level, script: @script, lesson: @lockable_stage, levels: [external])
     @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
-    @lockable_level_group_sl = create(:script_level, script: @script, stage: @lockable_stage, levels: [@level_group], assessment: true)
+    @lockable_level_group_sl = create(:script_level, script: @script, lesson: @lockable_stage, levels: [@level_group], assessment: true)
   end
 
   test 'authorized teacher viewing lockable stage contents' do

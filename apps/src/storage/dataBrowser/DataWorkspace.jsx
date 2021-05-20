@@ -1,8 +1,7 @@
 import {ApplabInterfaceMode} from '../../applab/constants';
 import {DataView} from '../constants';
 import DataOverview from './DataOverview';
-import DataProperties from './DataProperties';
-import DataTable from './DataTable';
+import DataTableView from './DataTableView';
 import Dialog from '../../templates/Dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -11,30 +10,6 @@ import {connect} from 'react-redux';
 import {clearWarning} from '../redux/data';
 import msg from '@cdo/locale';
 import color from '../../util/color';
-import experiments from '../../util/experiments';
-
-const styles = {
-  container: {
-    position: 'absolute',
-    top: 30,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    padding: experiments.isEnabled(experiments.APPLAB_DATASETS) ? 0 : 10,
-    backgroundColor: color.white,
-    boxSizing: 'border-box',
-    borderLeft: '1px solid gray',
-    borderRight: '1px solid gray',
-    borderBottom: '1px solid gray',
-    overflowY: 'auto'
-  },
-  libraryHeader: {
-    display: 'block',
-    width: 270,
-    borderRight: '1px solid gray',
-    float: 'left'
-  }
-};
 
 class DataWorkspace extends React.Component {
   static propTypes = {
@@ -64,13 +39,12 @@ class DataWorkspace extends React.Component {
           hasFocus={!this.props.isRunning}
           className={this.props.isRunning ? 'is-running' : ''}
         >
-          {experiments.isEnabled(experiments.APPLAB_DATASETS) &&
-            (this.props.view === DataView.OVERVIEW ||
-              this.props.view === DataView.PROPERTIES) && (
-              <PaneSection id="library-header" style={styles.libraryHeader}>
-                <span id="library-header-span">{msg.dataLibraryHeader()}</span>
-              </PaneSection>
-            )}
+          {(this.props.view === DataView.OVERVIEW ||
+            this.props.view === DataView.PROPERTIES) && (
+            <PaneSection id="library-header" style={styles.libraryHeader}>
+              <span id="library-header-span">{msg.dataLibraryHeader()}</span>
+            </PaneSection>
+          )}
           <div id="dataModeHeaders">
             <PaneButton
               id="data-mode-versions-header"
@@ -90,8 +64,7 @@ class DataWorkspace extends React.Component {
 
         <div id="data-mode-container" style={styles.container}>
           <DataOverview />
-          <DataProperties />
-          <DataTable />
+          <DataTableView />
         </div>
         <Dialog
           body={this.props.warningMsg}
@@ -105,6 +78,29 @@ class DataWorkspace extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    position: 'absolute',
+    top: 30,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    padding: 0,
+    backgroundColor: color.white,
+    boxSizing: 'border-box',
+    borderLeft: '1px solid gray',
+    borderRight: '1px solid gray',
+    borderBottom: '1px solid gray',
+    overflowY: 'auto'
+  },
+  libraryHeader: {
+    display: 'block',
+    width: 270,
+    borderRight: '1px solid gray',
+    float: 'left'
+  }
+};
 
 export default connect(
   state => ({

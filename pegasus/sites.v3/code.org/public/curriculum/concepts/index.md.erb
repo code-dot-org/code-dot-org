@@ -5,11 +5,11 @@ video_player: true
 ---
 
 
-<link rel="stylesheet" type="text/css" href="/curriculum/unplugged/css/jumbotron-banner.css"/>
+<link rel="stylesheet" type="text/css" href="/css/unplugged/jumbotron-banner.css"/>
 
 <div class="jumbo-container">
   <div class="img-container">
-    <img class="jumbo-img" src="/curriculum/unplugged/images/unplugged-hero.png">
+    <img class="jumbo-img" src="/images/unplugged-hero.png">
   </div>
 
   <div class="jumbo-tutorial">
@@ -25,40 +25,7 @@ video_player: true
   </div>
 </div>
 
-<%
-def youtube_embed(youtube_url)
-  if youtube_url[/youtu\.be\/([^\?]*)/]
-    youtube_id = $1
-  else
-    # Regex from # http://stackoverflow.com/questions/3452546/javascript-regex-how-to-get-youtube-video-id-from-url/4811367#4811367
-    youtube_url[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
-    youtube_id = $5
-  end
-
-  %Q{<iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
-end
-
-# => <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/jJrzIdDUfT4" frameborder="0" allowfullscreen></iframe>
-
-
-
-
-
-
-
-
-concept = 'Algorithms'
-# lessons = DB[:cdo_concepts_csf].where(mainConcept_s:concept)
-lessons = DB[:cdo_concepts_csf]
-words = DB[:cdo_concepts_csf]
-counts = Hash.new 0
-	words.each do |mainConcept_s|
-  	counts[mainConcept_s] += 1
-end
-%>
-
 [content]
-
 
 <!-- Use this only if we have extra info to share
 <table>
@@ -102,7 +69,7 @@ Each of these activities can either be used alone or with other computer science
     </tr>
   </thead>
 
-   <% lessons.each_with_index do |lesson, index|
+   <% DB[:cdo_concepts_csf].each_with_index do |lesson, index|
     	# Get the course number formatted well
 
      theCourse = lesson[:courseLesson_s]
@@ -119,14 +86,14 @@ Each of these activities can either be used alone or with other computer science
     <tr>
       <td rowspan="2" style="color: white; border:1px solid white; text-align: center;"><%= lesson[:mainConcept_s] %></td>
       <td style="border:1px solid #999999;"> <h3><a href="<%= lesson[:lessonURL_t] %>" target="_new"><%= lesson[:name_t] %></a></h3>
-      	<div style="font-size: 11px; line-height: 120%;"><%= "<b>" + theCourse + "<br/> (age " + lesson[:age_s] +") </b>" %><br/><br/></div>
+        <div style="font-size: 11px; line-height: 120%;"><b><%= theCourse.html_safe %><br/> <%= "(age #{lesson[:age_s]})" %> </b><br/><br/></div>
      	<div style="font-size: 12px; line-height: 110%;"><%= lesson[:overview_t] %><br/><br/></div>
         <a href="<%= lesson[:lessonPlan_t] %>" target="_new">Lesson Plan</a>
         <%	if lesson[:teacherVid_t].present? %>
 		  | <a href="<%= lesson[:teacherVid_t] %>">Teacher Video</a><br/>
 		<% end %>
 		 <%	if lesson[:answers_t].present? %>
-		   <%= lesson[:answers_t] %>
+		   <%= lesson[:answers_t].html_safe %>
 		<% end %>
 
       </td>
@@ -142,17 +109,10 @@ Each of these activities can either be used alone or with other computer science
           <%= youtube_embed(lesson[:sampleTeachingVid_t])%>
 		  <a href="<%= lesson[:sampleTeachingVid_t] %>">See Lesson in Action</a>
 		<% end %>
-      <%= lesson[:additional_t] %></td>
+      <%= lesson[:additional_t].html_safe if lesson[:additional_t].present? %></td>
     </tr>
     <% end %>
 </table>
-
-
-
-
-
-
-
 
 [/content]
 

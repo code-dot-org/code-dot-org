@@ -1,38 +1,8 @@
-:scss
-  $cyan: #0094ca;
-  $light_cyan: #59b9dc;
-  $lighter_cyan: #a6daed;
-  $lightest_cyan: #d9eff7;
-
-  .script_text textarea { width: 100%; height: 100px}
-  .markdown {
-    border: 5px solid gray;
-    border-radius: 5px;
-    padding: 10px;
-  }
-
-  .markdown.teacher {
-    border: 5px solid $cyan;
-    background-color: $lightest_cyan;
-  }
-
-- if @level.filename
-  = "Filename: #{@level.filename}"
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this entire file"}
-  %p Use this if you want to prevent devious students from finding answers in our git repo
-
-.script_text
-  = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
-
 - if @level.supports_markdown?
   - content_for(:head) do
-    %script{src: minifiable_asset_path('js/levels/editors/_dsl.js')}
+    %script{src: webpack_asset_path('js/levels/editors/_dsl.js')}
 
-  .markdown
-    %p Edit Markdown:
-
-    %textarea#level_markdown_textarea
-    #level_markdown_textarea_preview
-
-  = render partial: 'levels/editors/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/dsl_fields', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f} if @level.is_a?(External)
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f} if @level.is_a?(LevelGroup) || @level.is_a?(Match)
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}

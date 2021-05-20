@@ -7,12 +7,13 @@ theme: responsive
 # Evaluation Reports
 <img src="/images/impact-hero.png" width="100%"/>
 
-Code.org is is a nonprofit dedicated to expanding participation in computer science by making it available in more schools and increasing participation by women and underrepresented students of color. 
+Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science.
 
 Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to understand our impact and progress towards meeting our mission. In the spirit of transparency and in an effort to share best practices with the field, we are pleased to share the results of our evaluation work with the general public.  
 
 ## Available reports
 
+- [Estimating the Causal Effect of Code.org Teacher Training Program on Advanced Placement Outcomes 2018 (PDF) ](http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/wca_code_final_report_2018.pdf)
 - [Associations Between the Race and Gender of Computer Science Principles Teachers and Classroom Diversity 2018 (PDF)](/files/associations-teacher-student-demographics-in-csp.pdf)
 - [Measuring student proficiency: 2015-16 ](/about/evaluation/proficiency2016)
 - [Hour of Code impact study 2016 (PDF)](/files/HourOfCodeImpactStudy_Jan2017.pdf)

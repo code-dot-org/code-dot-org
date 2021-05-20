@@ -1,38 +1,51 @@
 namespace :adhoc do
   task :environment do
     require_relative '../../deployment'
-    ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
-    unless ENV['CHEF_SERVER']
-      raise "RAILS_ENV=adhoc required to deploy adhoc instance." unless rack_env?(:adhoc)
-    end
+    raise "RAILS_ENV=adhoc required to deploy adhoc instance." unless rack_env?(:adhoc)
+    Dir.chdir aws_dir('cloudformation')
     require 'cdo/aws/cloud_formation'
+    require 'cdo/cloud_formation/cdo_app'
+    @cfn = AWS::CloudFormation.new(
+      stack: (@template = Cdo::CloudFormation::CdoApp.new(
+        filename: ENV['TEMPLATE'],
+        stack_name: ENV['STACK_NAME'].dup,
+        branch: ENV['BRANCH'] || ENV['branch'],
+        database: ENV['DATABASE'],
+        frontends: ENV['FRONTENDS'],
+        cdn_enabled: ENV['CDN_ENABLED'],
+        alarms: ENV['ALARMS']
+      )),
+      log: CDO.log,
+      verbose: ENV['VERBOSE'],
+      quiet: ENV['QUIET'],
+      import_resources: ENV['IMPORT_RESOURCES'],
+    )
   end
 
   desc 'Launch/update an adhoc server.
 Note: Consumes AWS resources until `adhoc:stop` is called.'
   task start: :environment do
-    raise "adhoc name must not include 'dashboard'" if AWS::CloudFormation.stack_name.include?('dashboard')
-    AWS::CloudFormation.create_or_update
+    @cfn.create_or_update
   end
 
   desc 'Start an inactive adhoc server'
   task start_inactive_instance: :environment do
-    AWS::CloudFormation.start_inactive_instance
+    @cfn.start_inactive_instance
   end
 
   desc 'Stop an adhoc environment\'s EC2 Instance '
   task stop: :environment do
-    AWS::CloudFormation.stop
+    @cfn.stop
   end
 
   desc 'Delete an adhoc environment and all of its AWS Resources.  '
   task delete: :environment do
-    AWS::CloudFormation.delete
+    @cfn.delete
   end
 
   desc 'Validate adhoc CloudFormation template.'
   task validate: :environment do
-    AWS::CloudFormation.validate
+    @cfn.validate
   end
 
   namespace :full_stack do
@@ -55,8 +68,8 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   end
 
   namespace :cdn do
-    task :environment do
-      ENV['CDN_ENABLED'] = '1'
+    task environment: 'adhoc:environment' do
+      @template.options[:cdn_enabled] = true
     end
 
     desc 'Launch an adhoc server, with CloudFront CDN enabled.

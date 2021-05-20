@@ -1,0 +1,7 @@
+name 'taken-other-cs_2021'
+editor_experiment ''
+question 'Have you taken any other computer science classes at school?'
+right 'No'
+right 'Yes, a little bit in another class'
+right 'Yes, a semester-long class'
+right 'Yes, a year-long class'

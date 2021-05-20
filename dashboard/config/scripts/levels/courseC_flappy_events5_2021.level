@@ -1,0 +1,96 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2020-12-04T22:23:58.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "default_flap": "SMALL",
+    "obstacles": "true",
+    "ground": "true",
+    "score": "true",
+    "goal": "{}",
+    "scale": "{\"snapRadius\":2}",
+    "success_condition": "function successCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (!obstacle.hitAvatar && obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore > 0;\r\n\t      }",
+    "failure_condition": "function failureCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (!obstacle.hitAvatar && obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore === 0;\r\n\t      }",
+    "short_instructions": "Add a block to the `when pass an obstacle` event, then press \"Run\" to score a point by flying Flappy through the first set of pipes.",
+    "embed": "false",
+    "long_instructions": "We've added a scoreboard to count points when Flappy passes obstacles.  \r\n\r\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to use the `score a point` block to pass this level.\",\"hint_id\":\"courseC_flappy_events5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78901d9992e8d0a18f5c1dd3ab71bcd3/courseC_flappy_events5.mp3\"}]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "shareable": "false",
+    "project_template_level_name": "courseC_flappy_events_template_2021",
+    "parent_level_id": 21263,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-27 20:02:45 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"failure_condition\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 20:06:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:40:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:43:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:59:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:59:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:00:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:03:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="flappy_setSpeed">
+              <title name="VALUE">Flappy.LevelSpeed.NORMAL</title>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideGround" deletable="false">
+          <next>
+            <block type="flappy_endGame"/>
+          </next>
+        </block>
+        <block type="flappy_whenClick" deletable="false">
+          <next>
+            <block type="flappy_flap_height">
+              <title name="VALUE">Flappy.FlapHeight.NORMAL</title>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideObstacle" deletable="false">
+          <next>
+            <block type="flappy_endGame"/>
+          </next>
+        </block>
+        <block type="flappy_whenEnterObstacle" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="flappy_flap_height"/>
+        <block type="flappy_endGame"/>
+        <block type="flappy_incrementPlayerScore"/>
+        <block type="flappy_playSound"/>
+        <block type="flappy_setSpeed"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="flappy_incrementPlayerScore"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Flappy>

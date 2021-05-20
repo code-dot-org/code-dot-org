@@ -1,0 +1,28 @@
+:scss
+  .guidestar {
+    a {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 40px;
+    }
+    object {
+      position: relative;
+      z-index: -1;
+    }
+  }
+
+%a{href:"https://www.guidestar.org/profile/46-0858543", 
+    target: "_blank", 
+    rel: "noopener noreferrer", 
+    class: "guidestar"}
+  %span
+    %object{data: "https://widgets.guidestar.org/gximage2?o=9218725&l=v4", 
+      type: "image/svg+xml"}
+      %img{src: "/images/guidestar-logo.svg"}
+%a{href: "http://studentprivacypledge.org"}
+  %img{src: "/images/fit-150/student_privacy_pledge.png"}

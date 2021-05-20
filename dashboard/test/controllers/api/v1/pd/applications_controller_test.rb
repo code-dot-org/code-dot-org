@@ -653,11 +653,11 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         workshop = create :summer_workshop,
-          sessions_from: Date.new(2017, 1, 1),
+          sessions_from: Date.new(2020, 1, 1),
           processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
@@ -680,13 +680,14 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-5, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
+            registered_workshop_id: workshop.id,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -701,7 +702,7 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher without a workshop' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -722,13 +723,14 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
+            registered_workshop_id: nil,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -743,7 +745,7 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a facilitator' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -765,7 +767,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
@@ -787,11 +789,11 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a teacher' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         workshop = create :summer_workshop,
-          sessions_from: Date.new(2017, 1, 1),
+          sessions_from: Date.new(2020, 1, 1),
           processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
@@ -816,27 +818,29 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-5, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
+            registered_workshop_id: workshop.id,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
             notes_4: nil,
             notes_5: nil,
-            friendly_scholarship_status: 'No'
+            friendly_scholarship_status:
+              Pd::ScholarshipInfo.get_scholarship_label(Pd::ScholarshipInfoConstants::NO, 'csp')
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
     end
 
     test 'cohort view returns expected columns for a teacher without a workshop' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -857,13 +861,14 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
+            registered_workshop_id: nil,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -877,7 +882,7 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a facilitator' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -899,7 +904,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
@@ -922,7 +927,7 @@ module Api::V1::Pd
 
     test 'cohort csv download returns expected columns for teachers' do
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
-      create :pd_principal_approval1920_application, teacher_application: application
+      create PRINCIPAL_APPROVAL_FACTORY, teacher_application: application
       application.update(status: 'accepted_not_notified')
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csp_teachers'}
@@ -936,7 +941,6 @@ module Api::V1::Pd
         "Meets minimum requirements?",
         "Meets scholarship requirements?",
         "Scholarship teacher?",
-        "Bonus Points",
         "General Notes",
         "Notes 2",
         "Notes 3",
@@ -968,25 +972,20 @@ module Api::V1::Pd
         "Current role",
         "Are you completing this application on behalf of someone else?",
         "If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.",
-        "Which professional learning program would you like to join for the 2018-19 school year?",
-        "To which grades does your school plan to offer CS Principles in the 2019-20 school year?",
+        "Which professional learning program would you like to join for the #{APPLICATION_CURRENT_YEAR} school year?",
+        "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?",
         "How will you offer CS Principles?",
         "How many minutes will your CS Program class last?",
         "How many days per week will your CS program class be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
-        "How will you be offering this CS program course to students?",
-        "Do you plan to personally teach this course in the 2019-20 school year?",
+        "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "If yes, please describe the course it will be replacing and why:",
-        "What subjects are you teaching this year (2018-19)?",
-        "Have you taught computer science courses or activities in the past?",
+        "Which existing course or curriculum will it replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
-        "If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?",
-        "How far would you be willing to travel to academic year workshops?",
-        "Do you want to be considered for the virtual academic year workshop track?",
+        "Do you want to be considered for Code.org’s national virtual academic year workshops?",
         "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
@@ -999,39 +998,38 @@ module Api::V1::Pd
         "Principal's email address (provided by principal)",
         "School name (provided by principal)",
         "School district (provided by principal)",
-        "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
-        "Is this teacher planning to teach this course in the 2019-20 school year?",
+        "Do you approve of this teacher participating in Code.org's #{APPLICATION_CURRENT_YEAR} Professional Learning Program?",
         "Total student enrollment",
-        "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
-        "Percentage of underrepresented minority students (Principal's response)",
-        "Percentage of student enrollment by race - White",
-        "Percentage of student enrollment by race - Black or African American",
-        "Percentage of student enrollment by race - Hispanic or Latino",
-        "Percentage of student enrollment by race - Asian",
-        "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander",
-        "Percentage of student enrollment by race - American Indian or Native Alaskan",
-        "Percentage of student enrollment by race - Other",
-        "Are you committed to including this course on the master schedule in 2019-20 if this teacher is accepted into the program?",
+        "Percent of students who are eligible to receive free or reduced lunch (Principal's response)",
+        "Percent of students from underrepresented racial and ethnic groups (Principal's response)",
+        "Percent of student enrollment by race - White",
+        "Percent of student enrollment by race - Black or African American",
+        "Percent of student enrollment by race - Hispanic or Latino",
+        "Percent of student enrollment by race - Asian",
+        "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander",
+        "Percent of student enrollment by race - American Indian or Native Alaskan",
+        "Percent of student enrollment by race - Other",
+        "Are you committed to including this course on the master schedule in #{APPLICATION_CURRENT_YEAR} if this teacher is accepted into the program?",
         "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         "Which existing course or curriculum will CS Principles replace?",
         "How will you implement CS Principles at your school?",
         "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        "How did you hear about this program? (Principal's response)",
         "Principal authorizes college board to send AP Scores",
         "Contact name for invoicing",
         "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
+        "Rural Status",
         "Total student enrollment (NCES data)",
-        "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
-        "Percentage of underrepresented minority students (NCES data)",
-        "Percentage of student enrollment by race - White (NCES data)",
-        "Percentage of student enrollment by race - Black or African American (NCES data)",
-        "Percentage of student enrollment by race - Hispanic or Latino (NCES data)",
-        "Percentage of student enrollment by race - Asian (NCES data)",
-        "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander (NCES data)",
-        "Percentage of student enrollment by race - American Indian or Native Alaskan (NCES data)",
-        "Percentage of student enrollment by race - Two or more races (NCES data)"
+        "Percent of students who are eligible to receive free or reduced lunch (NCES data)",
+        "Percent of students from underrepresented racial and ethnic groups (NCES data)",
+        "Percent of student enrollment by race - White (NCES data)",
+        "Percent of student enrollment by race - Black or African American (NCES data)",
+        "Percent of student enrollment by race - Hispanic or Latino (NCES data)",
+        "Percent of student enrollment by race - Asian (NCES data)",
+        "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander (NCES data)",
+        "Percent of student enrollment by race - American Indian or Native Alaskan (NCES data)",
+        "Percent of student enrollment by race - Two or more races (NCES data)"
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length

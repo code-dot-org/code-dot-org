@@ -1,0 +1,7 @@
+name 'CSD Games Properties challenge_2020_virtual_2020'
+display_name 'Challenges: Sprite Properties'
+description 'Try these new challenges with sprite properties'
+
+sublevels
+level 'CSD U3 properties tint_virtual_2020'
+level 'CSD U3 properties depth_virtual_2020'

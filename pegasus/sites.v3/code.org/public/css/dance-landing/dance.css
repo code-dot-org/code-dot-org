@@ -4,12 +4,15 @@
 
 .img-dance-stars {
   position: absolute;
-  top: 10px;
+  top: 0px;
   left: 70px;
   width: 330px;
   padding: 20px 10px 10px;
 }
-
+div[dir='rtl'] .img-dance-stars{
+  left: auto;
+  right: 70px;
+} 
 .desktop-only, .tablet-only, .mobile-only {
   display: none;
 }
@@ -19,7 +22,7 @@
 }
 
 .dance-try-button {
-  font-size: 18px;
+  font-size: 15px;
   height: 40px;
   background-color: white;
   border-color: white;
@@ -30,7 +33,7 @@
   text-align: center;
   position: absolute;
   bottom: 0;
-  color: #00adbc;
+  color: white;
   text-align: center;
   margin-bottom: 10px;
   font-family: 'Gotham 5r', sans-serif;
@@ -67,6 +70,11 @@ a.translate-link:hover {
   text-align: right;
 }
 
+.dance-text-versions-container {
+  margin-top: 10px;
+  text-align: right;
+}
+
 .dance-chevron-icon {
   display: inline;
   color: rgb(0, 173, 188);
@@ -74,7 +82,10 @@ a.translate-link:hover {
   font-weight: bold;
   margin-left: 10px;
 }
-
+div[dir='rtl'] .dance-chevron-icon{
+  float: right;
+  line-height: 20px;
+} 
 .dance-thumbnail-tile-img {
   width: 100%;
 }
@@ -93,9 +104,8 @@ a:hover {
 
 .sponsor-logo-with-text {
   display: flex;
-  justify-content: center;
   font-size: 24px;
-  margin-top: 60px;
+  margin-top: 10px;
   clear: both;
   padding-top: 30px;
   text-align: center;
@@ -112,6 +122,10 @@ a:hover {
 
 .artist-name, .and-more {
   white-space: nowrap;
+}
+
+.sponsor-logo-image {
+  margin-top: -5px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 512px) {
@@ -141,11 +155,18 @@ a:hover {
     background-image: url(/images/fit-1940/dance-hoc/dance_party_landing_main_nophotos.png)
   }
 
+  /* the background image must be flipped horizontally on mobile or else the text will blend into the background */
+  div[dir = 'rtl'] .img-container{
+    background-image: url(/images/fit-1940/dance-hoc/dance_party_2019_tutorial_hero_flipped.png)
+  }
   .img-container {
-    background: url(/images/dance-hoc/dance_party_tutorial_hero.png);
+    /* This background is only visible on mobile width.  It's covered by an image
+     * on wider widths. */
+    background: url(/images/dance-hoc/dance_party_2019_tutorial_hero.png);
     margin: 5px;
     border-radius: 5px;
     background-size: cover;
+    padding: initial;
   }
 
   .foot-note-text {
@@ -154,6 +175,12 @@ a:hover {
   }
 
   .dance-text-icon-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 5px;
+  }
+
+  .dance-text-versions-container {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-right: 5px;
@@ -191,7 +218,8 @@ a:hover {
     left: 50%;
     margin-left: -260px;
     padding: 0;
-    top: 50%;
+    /* A little above the middle while we're showing announcement text below. */
+    top: 40%;
     margin-top: -43px;
   }
 
@@ -242,4 +270,62 @@ a:hover {
   .dance-responsive-padding {
     text-align: center;
   }
+}
+
+/* New announcement text under the artist images, with variants for desktop,
+ * tablet, and mobile. */
+
+.new-announcement {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  top: 230px;
+  text-align: center;
+  width: 460px;
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.new-announcement .highlight-word {
+  color: rgb(89, 202, 211);
+}
+
+.highlight-strong strong  {
+  font-family: 'Gotham 5r', sans-serif;
+  color: rgb(89, 202, 211);
+}
+
+.new-announcement-tablet {
+  position: absolute;
+  bottom: 10%;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
+  font-family: 'Gotham 5r', sans-serif;
+  .highlight-word {
+    color: rgb(89, 202, 211);
+  }
+}
+
+.new-announcement-tablet .highlight-word {
+  color: rgb(89, 202, 211);
+}
+
+.new-announcement-mobile {
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+  font-family: 'Gotham 5r', sans-serif;
+  .highlight-word {
+    color: rgb(89, 202, 211);
+  }
+}
+
+.new-announcement-mobile .highlight-word {
+  color: rgb(89, 202, 211);
 }

@@ -1,40 +1,10 @@
-# == Schema Information
-#
-# Table name: pd_workshops
-#
-#  id                  :integer          not null, primary key
-#  organizer_id        :integer          not null
-#  location_name       :string(255)
-#  location_address    :string(255)
-#  processed_location  :text(65535)
-#  course              :string(255)      not null
-#  subject             :string(255)
-#  capacity            :integer          not null
-#  notes               :text(65535)
-#  section_id          :integer
-#  started_at          :datetime
-#  ended_at            :datetime
-#  created_at          :datetime
-#  updated_at          :datetime
-#  processed_at        :datetime
-#  deleted_at          :datetime
-#  regional_partner_id :integer
-#  on_map              :boolean
-#  funded              :boolean
-#
-# Indexes
-#
-#  index_pd_workshops_on_organizer_id         (organizer_id)
-#  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
-#
-
 class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   attributes :id, :organizer, :location_name, :location_address, :course,
-    :subject, :capacity, :notes, :state, :facilitators,
+    :subject, :capacity, :notes, :fee, :state, :facilitators,
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
-    :enrollment_code, :on_map, :funded, :funding_type, :ready_to_close?,
-    :date_and_location_name, :regional_partner_name, :regional_partner_id,
-    :scholarship_workshop?, :can_delete
+    :enrollment_code, :pre_workshop_survey_url, :attended, :on_map, :funded, :funding_type, :ready_to_close?,
+    :workshop_starting_date, :date_and_location_name, :regional_partner_name, :regional_partner_id,
+    :scholarship_workshop?, :can_delete, :created_at, :virtual, :suppress_email, :third_party_provider
 
   def sessions
     object.sessions.map do |session|
@@ -44,6 +14,9 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
 
   def organizer
     {id: object.organizer.id, name: object.organizer.name, email: object.organizer.email}
+  rescue
+    # Fallback value if workshop organizer, who is a user, no longer exists
+    {id: nil, name: nil, email: nil}
   end
 
   def facilitators
@@ -58,6 +31,18 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
 
   def enrollment_code
     @scope.try(:[], :enrollment_code)
+  end
+
+  def user_enrollment
+    object.enrollments.find_by(code: @scope.try(:[], :enrollment_code))
+  end
+
+  def pre_workshop_survey_url
+    user_enrollment&.pre_workshop_survey_url
+  end
+
+  def attended
+    user_enrollment&.attendances&.any?
   end
 
   def regional_partner_name

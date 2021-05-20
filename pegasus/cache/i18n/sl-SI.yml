@@ -20,13 +20,13 @@ sl-SI:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ste učitelj računalništva in informatike? Oglejte si tudi
     druge CSEdWeek vire</a>'
+  csedweek_banner_teachers_text: Ste učitelj računalništva in informatike? Oglejte
+    si tudi druge CSEdWeek vire
   n_have_learned_an_hoc: "<h1>Poizkusi</h1><h2>Uro za kodo</h2><h3># served</h3>"
   anybody_can_learn: Vsakdo se lahko nauči.
   learn_now: Nauči se zdaj
   petition_message: Vsak učenec v vsaki šoli bi moral imeti možnost učenja računalništva
   petition_sign_message: 'Če se strinjate, podpišite se.  Pridružite se # ostalim.'
-  petition_sign_message_support: 'Če nas podpirate, se podpišite. Pridružite se #
-    ostalim.'
   petition_join_others: 'Pridruži se # ostalim'
   name: Ime
   email: Elektronska pošta
@@ -271,6 +271,7 @@ sl-SI:
   homepage_action_text_learn: Začni z učenjem
   homepage_action_text_signpetition: Podpiši peticijo
   homepage_signpetition_dropdown: Strinjam se &#x25BE;
+  homepage_signpetition_dropdown_text: Strinjam se
   homepage_diversity_pledge: Naredite zaprisego za nediskriminatorno vključevanje
   homepage_banner_text_prizes: 'Zopet se bliža Ura za kodo, od 7. do 13. decembra. '
   homepage_banner_link_prizes: 'Pridružite se največji izobraževalni prireditvi doslej. '
@@ -821,6 +822,8 @@ sl-SI:
   coursee-2018_gradelevel: Starost 8-12
   coursed-2019_gradelevel: 8. razred in višje
   coursee-2019_gradelevel: Starost 8-12
+  coursed-2020_gradelevel: 8. razred in višje
+  coursee-2020_gradelevel: Starost 8-12
   accelerated_gradelevel: Starost 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
@@ -1374,6 +1377,8 @@ sl-SI:
   header_teach: Predavaj
   header_help_us: Pomagaj nam
   header_about: O programu
+  header_legal_privacy: Izjava o zasebnosti
+  header_legal_tos: Pogoje storitve
   user_header_label: Živjo %{username}
   user_header_team: Ekipa
   user_header_settings: Moj račun
@@ -1382,8 +1387,13 @@ sl-SI:
   user_header_playlab: Play Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_my_projects: Poglej si moje projekte
   applab_tile_start_tutorial: Začni
   hoc_overview_start_tutorial: Začni
+  hoc_overview_more_resources: Za več virov o sodelovanju z vašo oddaljeno učilnico
+    si oglejte naš vodnik za gostovanje [virtualne ure kode](https://hourofcode.com/us/how-to/virtual).
+    Študentom z omejeno tehnologijo ali brez povezave ali z njo delite ta paket [unplugged
+    Hour of Code activities](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc2018_creativity_create: Ustvari
   hoc2018_creativity_what_will_you_create: Kaj boš ustvaril?
   hoc2018_mc_page_title: Minecraft Ura za kodo vadnice
@@ -1415,3 +1425,10 @@ sl-SI:
   hoc2018_dance_teacher_resources_tile1_button: Učni načrt
   hoc2018_dance_teacher_resources_tile2_button: Dejavnost brez prijave
   hoc2018_dance_amazon_about_future_engineer_button: Več o tem
+  footer_powered_by_aws: Podprto s strani Amazon Web Services
+  footer_privacy_policy: Izjava o zasebnosti
+  footer_about: O programu
+  footer_partners: Partnerji
+  footer_donate: Prispevaj
+  footer_support: Pomoč in Skupnosti
+  footer_terms: Pravila

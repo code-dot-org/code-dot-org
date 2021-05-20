@@ -20,15 +20,26 @@ ga-IE:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">An múinteoir ríomhaireachta tú? Féach ar acmhainní eile
     ó Sheachtain an Oideachais Ríomheolaíochta</a>'
+  csedweek_banner_teachers_text: An múinteoir ríomheolaíochta thú? Féach ar acmhainní
+    eile le haghaidh CSEdWeek
   n_have_learned_an_hoc: "<h1>Bain triail as </h1><h2>An Uair Chódála</h2><h3># códálaí</h3>"
+  try_hoc_num_served: "<h1>Bain triail as</h1><h2>An Uair Chódála</h2><h3>%{num} códálaí</h3>"
+  try_hoc_num_served_markdown: |-
+    # Bain triail as
+
+    ## An Uair Chódála
+
+    ###%{num} dalta sásta #Try an
   anybody_can_learn: Is féidir le héinne foghlaim.
   learn_now: Foghlaim Anois
   petition_message: Ba cheart go mbeadh an deis ag gach dalta i ngach scoil an ríomheolaíocht
     a fhoghlaim
-  petition_sign_message: 'Má aontaíonn tú, sínigh d''ainm. Téir le # eile.'
-  petition_sign_message_support: 'Má aontaíonn tú linn, sínigh d''ainm. Téir le #
-    eile.'
+  petition_sign_message: 'Má aontaíonn tú, sínigh d''ainm agus glac páirt sa liosta
+    ríomhphoist in éindí le # eile.'
+  petition_sign_message_num: Má aontaíonn tú, sínigh d'ainm agus glac páirt sa liosta
+    ríomhphoist in éindí le %{num} eile.
   petition_join_others: 'Téir le # eile'
+  petition_join_others_num: Glac páirt le %{num} duine eile
   name: Ainm
   email: Ríomhphost
   zipcode: Cód poist nó tír
@@ -43,9 +54,8 @@ ga-IE:
     an ríomheolaíocht.
   og_description_celeb: Bain triail as na cúrsaí teagaisc nua agus b'fhéidir go mbuafaidh
     tú nó do rang físchomhrá le ceiliúrán!
-  csedweek_og_title: Tá an Uair Chódála anseo
-  csedweek_og_description: 3-9 Nollaig 2018. Ba chóir do gach dalta buntús na ríomheolaíochta
-    a fhoghlaim.
+  csedweek_og_title: Seachtain an Oideachais Ríomheolaíochta
+  csedweek_og_description: Ba chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim.
   csedweek_og_description_soon: Tá an Uair Chódála le teacht 3-9 Nollaig 2018. Ba
     chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim.
   csedweek_og_description_here: Tá an Uair Chódála anseo. Ba chóir do gach dalta buntús
@@ -57,9 +67,10 @@ ga-IE:
   hoc2014_teachers: Múinteoirí
   hoc2014_host: Óstáil an Uair Chódála
   hoc2014_everyone: Gach Duine
-  hoc2014_support: Sínigh an achainí &#x25BE;
+  hoc2014_support: Sínigh an achainí ▾
   hoc2014_whatishoc: Cad é An Uair Chódála?
   csedweek_map_header: 'Ócáidí #CSEdWeek / Uair Chódála ar fud an domhain'
+  csedweek_map_header_num: "%{num} ócáid CSEdWeek / Uair Chódála timpeall an domhain"
   csedweek_map_signup: Cláraigh d'imeacht féin
   csedweek_map_search_placeholder: Cuardaigh ócáidí Uair Chódála
   csedweek_map_search_search: Cuardaigh
@@ -96,6 +107,7 @@ ga-IE:
   congratulations_on_completing_hoc: Comhghairdeas! Chríochnaigh tú Uair Amháin Chódála
   congratulations_volunteer: Comhghairdeas! Agus An Uair Chódála déanta agat, <a href="https://code.org/volunteer">cláraigh
     mar shaorálaí i seomra ranga</a> agus cabhraigh le daltaí Uair Chódála a fhoghlaim!
+  congratulations_on_completing_course: Comhghairdeas as %{course} a chríochnú
   congrats_next_tutorials_title: Téigh ar aghaidh go dtí an chéad leibhéal eile
   congrats_next_tutorials_desc: Bain triail as na gearrchúrsaí teagaisc uair an chloig
     seo, nó <a href="%{current_path}/next">cúrsa beirte</a>.
@@ -215,13 +227,30 @@ ga-IE:
   get_a_certificate_message_after: Cliceáil an teastas chun é a íoslódáil nó a phriontáil.
     Anois, lean ar aghaidh lenár <a href='http://studio.code.org'>gcúrsaí eile</a>,
     nó féach tuilleadh roghanna le <a href='/learn/beyond'>Foghlaim thar an Uair Chódála</a>.
+  get_a_certificate_message_after_markdown: Cliceáil an teastas chun é a íoslódáil
+    nó a phriontáil. Anois, lean ar aghaidh lenár [gcúrsaí eile](http://studio.code.org),
+    nó féach tuilleadh roghanna le [Foghlaim thar an Uair Chódála](/learn/beyond).
   thanks_for_submitting: Go raibh maith agat!
   if_you_enjoyed: Má bhain tú taitneamh as, iarr ar chairde triail a bhaint as freisin!
     Ba mhaith linn an saol ar fad a mhúineadh.
   personalize_certificate: Cuir d'ainm ar do theastas
+  print_batch_certificates: Priontáil dornán teastas
+  print_certificates: Priontáil teastais
+  certificate_sponsor_message: Is é %{sponsor_name} a rinne urraíocht ar na ceachtanna
+    seo.
+  print_ice_art_from_frozen: Priontáil ealaín oighir ón gcúrsa Frozen
+  want_a_blank_certificate_template: Ar mhaith leat teimpléad teastais lenar féidir
+    ainmneacha do dhaltaí a líonadh isteach?
+  landscape_recommended_certificates: Moltar duit na teastais a phriontáil sa mód
+    **Tírdhreach**.
+  print_one_here_certificates: Priontáil teastas anseo.
+  enter_certificate_names: Cuir isteach suas le 30 ainm, **ceann amháin ar gach líne**.
+    Cruthófar leathanach inphriontáilte le teastais phearsantaithe %{script_name}.
   share_achievement: Comhroinn a bhfuil déanta agat
   beyond_hour_message: Lean ort leis <a href='http://studio.code.org'>na cúrsaí eile
     atá againn</a>, nó <a href='/learn/beyond'>Foghlaim thar Uair an Chloig</a>.
+  beyond_hour_message_markdown: Lean ar aghaidh lenár [gcúrsaí eile](http://studio.code.org),
+    nó féach tuilleadh roghanna le [Foghlaim thar an Uair Chódála](/learn/beyond).
   leaderboards_for_hoc: 'An Uair Chódála: Barr an Tábla'
   support_url: http://support.code.org/
   country: Tír
@@ -284,6 +313,8 @@ ga-IE:
     as! @codeorg
   just_did_hoc_donor: 'Tá mé go díreach tar éis an #HourOfCode a dhéanamh! (Tá mé
     buíoch de %{donor_twitter} as tacaíocht a thabhairt do @codeorg)'
+  just_did_course_donor: Tá mé go díreach tar éis %{course} a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
   twitter_teach_cs: Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht
     a mhúineadh. http://youtu.be/nKIu9yen5nc. Féach https://code.org/.
   twitter_cs_foundational: Ba chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim.
@@ -311,10 +342,18 @@ ga-IE:
     Alzate, 5ú bliain'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     - Frank Martinez, Múinteoir'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement."
+    - Nina Nichols Peery, Múinteoir'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana
+    Alzate, 5ú bliain'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about
+    learning." - Frank Martinez, Múinteoir'
   studiobar_title: Taiscéal an <a href='http://studio.code.org'>Stiúideo Códála</a>
   studiobar_title_nolink: Taiscéal an Stiúideo Códála
   studiobar_elementary_title: Bunchúrsaí
   studiobar_elementary_body: Trí chúrsa nua don 1ú-5ú bliain
+  studiobar_dance_title: Cóisir Dhamhsa
+  studiobar_dance_body: Cruthaigh agus comhroinn do Chóisir Dhamhsa féin
   studiobar_hoc_title: An Uair Chódála
   studiobar_hoc_body: Foghlaim an chódáil le Angry Birds
   studiobar_flappy_title: Cód Flappy
@@ -410,6 +449,7 @@ ga-IE:
   homepage_action_text_signpetition: Sínigh an achainí
   homepage_action_text_wincelebritychat: Buaigh físchomhrá le ceiliúrán
   homepage_signpetition_dropdown: Aontaím &#x25BE;
+  homepage_signpetition_dropdown_text: Glacaim leis
   homepage_diversity_pledge: Tabhair d'fhíor leis an éagsúlacht
   homepage_banner_text_prizes: 'Tá an Uair Chódála ag teacht arís, 7-13 Nollaig. '
   homepage_banner_link_prizes: 'Glac páirt san ócáid fhoghlamtha is mó riamh. '
@@ -455,9 +495,14 @@ ga-IE:
   homepage_slot_text_link_donate: Tabhair bronntanas
   homepage_slot_text_link_shop: T-léinte, hataí agus tuilleadh
   homepage_slot_text_link_administrators: Tosaigh cúrsa ríomheolaíochta i do scoil
+  homepage_gallery_header: Níos mó ná %{project_count} milliún tionscadal cruthaithe
+    ar Code.org
   homepage_header_donors: Tá Code.org fíorbhuíoch dá thacadóirí
   homepage_donors_seall: Féach uile
   homepage_donors_donate: Bronn
+  homepage_below_hero_announcement_text: Is é do phríobháideachas an chloch is mó
+    ar ár bpaidrín. Rinneamar nuashonrú ar ár bpolasaí príobháideachais, ó 25 Bealtaine
+    amach.
   homepage_below_hero_announcement_link_text: Tuilleadh eolais
   contact_form_topic_student: Is dalta mé
   contact_form_topic_parent: Is tuismitheoir mé
@@ -500,8 +545,12 @@ ga-IE:
   class_submission_languages_other: Teanga(cha) eile
   videos_more: Tuilleadh <a href='%{inspiring_videos_playlist}'>físeán spreagúil</a>
     ina bhfuil daoine cáiliúla agus eiseamláirí do dhaoine óga
+  videos_more_markdown: "[Tuilleadh físeán spreagúil](%{inspiring_videos_playlist})
+    ina bhfuil ceiliúráin agus daoine mór-le-rá"
   careers_page_more: Tuilleadh <a href='%{careers_url}' target='_blank'>físeán spreagúil</a>
     ina bhfuil saineolaithe sna réimsí teicneolaíochta
+  careers_page_more_markdown: "[Tuilleadh físeán spreagúil](%{careers_url}) ina bhfuil
+    saineolaithe sna réimsí teicneolaíochta"
   playlab_choose_theme: Roghnaigh téama don Spraotharlann
   playlab_classic_title: Clasaiceach
   playlab_gumball_title: Saol Iontach Gumball
@@ -531,6 +580,9 @@ ga-IE:
   minecraft_tutorials: Cúrsaí Teagaisc Minecraft don Uair Chódála
   minecraft_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid
     | Aois 7+
+  minecraft_start_tutorial: Tosaigh an cúrsa teagaisc
+  minecraft_agent_description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair
+    Chódála! Téigh ar aistear trí Minecraft le cód.
   minecraft_agent_button: Tosaigh
   minecraft_designer_description: Códáil ainmhithe agus créatúir eile i do leagan
     féin de Minecraft.
@@ -622,6 +674,7 @@ ga-IE:
     agus curadh NBA, Dallas Mavericks
   watch_inspirational_videos: Sula dtosóidh tú, féach ar cheann de na físeáin spreagúla
     seo
+  video_title_cs_is_everything: Tá an Ríomheolaíocht ag athrú an domhain
   video_title_inspire_girl: Cuir misneach ar chailín
   video_title_cs_intro: Buntús na ríomheolaíochta
   video_title_schools_dont_teach: Na rudaí nach múintear i bhformhór na scoileanna
@@ -662,13 +715,31 @@ ga-IE:
     ann <span style="font-family: ''Gotham 7r'', sans-serif;">daltaí a spreagadh</span>
     faoi na rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí
     fhíschomhrá).'
+  volunteer_engineer_submission_intro_recruit_markdown: Ba bhreá le go leor múinteoirí
+    dul i dteagmháil le saorálaí atá **díograiseach i dtaobh na ríomheolaíochta**
+    chun cabhrú sa seomra ranga, nó a bheadh in ann daltaí a **spreagadh** faoi na
+    rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí fhíschomhrá).
   volunteer_engineer_submission_intro_guide: Faigh tuilleadh eolais faoi <a href="%{volunteer_guide}">oibriú
     deonach anseo</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Gheobhaidh tú tuilleadh eolais
+    faoi obair dheonach [anseo](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Líon isteach na réimsí seo a leanas
-    más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Is gá na
-    réimsí marcáilte le <span class="form-required-field">*</span> a líonadh isteach.
+    más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Ní mór duit
+    a bheith ar a laghad 18 mbliana d'aois chun clárú mar shaorálaí. Tabhair faoi
+    deara go mbeidh na sonraí a chuireann tú isteach sa rannán seo ar fáil go poiblí
+    d'aon duine ag féachaint ar <a href="/volunteer/local">léarscáil na saorálaithe</a>.
+    Tá na réimsí marcáilte le <span class="form-required-field">*</span> riachtanach.
+  volunteer_engineer_submission_intro_signup_markdown: Líon isteach na réimsí seo
+    a leanas más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú.
+    Ní mór duit a bheith ar a laghad 18 mbliana d'aois chun clárú mar shaorálaí. Tabhair
+    faoi deara go mbeidh na sonraí a chuireann tú isteach sa rannán seo ar fáil go
+    poiblí d'aon duine ag féachaint ar [léarscáil na saorálaithe](/volunteer/local).
+    Tá na réimsí marcáilte le _*_ riachtanach.
   volunteer_engineer_submission_intro_links: An múinteoir thú? An bhfuil tú ag lorg
     cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an <a href="%{volunteer_local}">léarscáil</a>
+    atá againn.
+  volunteer_engineer_submission_intro_links_markdown: An múinteoir thú? An bhfuil
+    tú ag lorg cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an [léarscáil](%{volunteer_local})
     atá againn.
   volunteer_engineer_submission_update_information: Nuashonraigh d'fhaisnéis phearsanta
   volunteer_engineer_submission_header_shared: Eolas comhroinnte le múinteoirí ar
@@ -680,9 +751,9 @@ ga-IE:
   volunteer_engineer_submission_field_experience_level: Taithí
   volunteer_engineer_submission_field_location: Áit
   volunteer_engineer_submission_field_location_desc: Baintear úsáid as d'áit chónaithe
-    chun cuidiú le múinteoirí teacht ar shaorálaithe i ngar dóibh. Má tá imní ort
-    faoin phríobháideachas, bain úsáid as do sheoladh ollscoile/oibre nó fiú do chathair
-    amháin.
+    chun cuidiú le múinteoirí teacht ar shaorálaithe i ngar dóibh, agus taispeánfar
+    mar phionna ar léarscáil í. Ná cuir isteach ach do chathair nó do chód poist le
+    do príobháideachas a chosaint.
   volunteer_engineer_submission_field_location_placeholder: Cód poist, cathair agus
     stát/contae/tír, nó seoladh poist
   volunteer_engineer_submission_field_location_flexibility: Is féidir liom... (roghnaigh
@@ -705,6 +776,10 @@ ga-IE:
   volunteer_engineer_submission_field_email_desc: Ní fhoilseoimid do sheoladh ríomhphoist
     riamh, ach seolfaimid iarratais ó mhúinteoirí chugat.
   volunteer_engineer_submission_field_email_placeholder: Seoladh ríomhphoist
+  volunteer_engineer_submission_field_email_preference: An bhfuil cead againn ríomhphost
+    a sheoladh chugat maidir lenár gcúrsaí, obair dheonach, nó nuacht eile faoin ríomheolaíocht?
+  volunteer_engineer_submission_field_email_preference_privacy: "(Féach ár bpolasaí
+    príobháideachais)"
   volunteer_engineer_submission_field_email_preference_yes: Tá
   volunteer_engineer_submission_field_email_preference_no: Níl
   volunteer_engineer_submission_final_paragraph: Cuirfimid ar léarscáil thú atá dírithe
@@ -722,6 +797,10 @@ ga-IE:
     shaorálaí anois. Bainfidh múinteoirí úsáid as <a href="%{url}">an léarscáil seo</a>
     chun teacht ar shaorálaithe cosúil leatsa. Tabhair 48 uair an chloig sula mbeidh
     d'fhaisnéis ar an léarscáil mar is ceart.
+  volunteer_engineer_submission_thankyou_markdown: Go raibh maith agat! Tá tú cláraithe
+    mar shaorálaí anois. Bainfidh múinteoirí úsáid as [an léarscáil seo](%{url}) chun
+    teacht ar shaorálaithe cosúil leatsa. Tabhair 48 uair an chloig sula mbeidh d'fhaisnéis
+    ar an léarscáil mar is ceart.
   volunteer_engineer_submission_commitment_uncertain: Nílim cinnte
   volunteer_engineer_submission_commitment_one_hr_per_week: Uair amháin sa tseachtain
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 huaire an chloig
@@ -874,7 +953,7 @@ ga-IE:
   dashboard_navigation_section_student_progress: Cuntais agus Dul Chun Cinn na nDaltaí
   dashboard_navigation_section_teacher_progress: Do Dhul Chun Cinn
   dashboard_navigation_section_lesson_plans: Pleananna Ceachta agus Acmhainní
-  dashboard_navigation_section_community: Cabhair agus Pobal
+  dashboard_navigation_section_community: Tacaíocht
   dashboard_navigation_section_pd: Forbairt Ghairmiúil
   dashboard_navigation_section_speakers: Aoichainteoirí <br/> Ríomheolaíochta
   dashboard_navigation_all_sections: Cuntais agus Dul Chun Cinn na nDaltaí
@@ -898,7 +977,7 @@ ga-IE:
   dashboard_progress_view: 'Féach dul chun cinn i:'
   dashboard_progress_student_in_script: Dul chun cinn déanta ag %{student_name} in
     %{script_name}
-  dashboard_progress_pair_programming: códáil sealaíochta
+  dashboard_progress_pair_programming: códáil bheirte
   dashboard_responses_view: 'Féach na freagraí téacs i:'
   dashboard_responses_none: Tá formhór na ranganna s'againn dírithe ar pháistí níos
     óige agus ní gá dóibh freagraí téacs a thabhairt ar cheisteanna. Mar sin, ní fheicfidh
@@ -1031,6 +1110,8 @@ ga-IE:
   dashboard_express: 'Luaschúrsa: '
   dashboard_unplugged: Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na
     ceachtanna "díphlugáilte" seo</a> i do sheomra ranga.
+  dashboard_unplugged_markdown: Mura bhfuil ríomhairí agat, bain triail as [na ceachtanna
+    díphlugáilte seo](%{unplugged_url}) i do sheomra ranga.
   dashboard_tools: 'Uirlisí: '
   dashboard_curriculum: Curaclam
   dashboard_curriculum_overview: Foramharc ar an gCuraclam Bunscoile
@@ -1146,7 +1227,8 @@ ga-IE:
     eile
   carousel_heading_beyond_languages: Foghlaim teangacha ríomhchláraithe eile
   carousel_heading_apps_games: Déan do chluiche nó aip féin
-  carousel_heading_university: Cúrsaí ollscoile ar líne
+  carousel_heading_university: Cúrsaí agus scoileanna ar líne
+  carousel_heading_online_university: Cúrsaí Ollscoile ar fáil ar líne
   carousel_heading_webpages: Foghlaim le leathanaigh Ghréasáin a chruthú
   carousel_heading_robots: Foghlaim an ríomhchlárúchán le róbait agus le gléasanna
   carousel_heading_ide: Ardáin a thaitníonn le múinteoirí
@@ -1241,10 +1323,21 @@ ga-IE:
   coursee_name: Cúrsa E
   coursef-draft_name: Cúrsa F
   coursef_name: Cúrsa F
+  coursea-2017_name: Cúrsa A (2017)
+  courseb-2017_name: Cúrsa B (2017)
+  coursec-2017_name: Cúrsa C (2017)
+  coursed-2017_name: Cúrsa D (2017)
+  coursee-2017_name: Cúrsa E (2017)
+  coursef-2017_name: Cúrsa F (2017)
+  express-2018_name: Luaschúrsa (2018)
+  pre-express-2018_name: Luaschúrsa do Réamhléitheoirí (2018)
+  pre-express-2019_name: Luaschúrsa do Réamhléitheoirí (2019)
+  csd2_name: 'Aonad 2: Forbairt Gréasáin'
+  csd3_name: 'Aonad 3: Beochan agus Cluichí'
   accelerated_name: Cúrsa Luathaithe
-  express_name: Luaschúrsa
+  pre-express_name: Luaschúrsa do Réamhléitheoirí
   20-hour_name: Cúrsa Luathaithe
-  algebra_name: Ríomheolaíocht san Ailgéabar
+  algebra_name: 'Ríomheolaíocht san Ailgéabar: Cúrsa Iomlán'
   AlgebraA_name: Ríomheolaíocht san Ailgéabar, Cúrsa A
   AlgebraB_name: Ríomheolaíocht san Ailgéabar, Cúrsa B
   gumball_name: Gumball
@@ -1318,7 +1411,7 @@ ga-IE:
   courseb_gradelevel: Aois 5-8
   coursec_gradelevel: Aois 6-10
   coursed_gradelevel: Aois 13+
-  coursee_gradelevel: Aois 14+
+  coursee_gradelevel: Aois 8-12
   coursef_gradelevel: Aois 9-13
   coursea-2017_gradelevel: Aois 4-7
   courseb-2017_gradelevel: Aois 5-8
@@ -1338,6 +1431,12 @@ ga-IE:
   coursed-2019_gradelevel: Aois 13+
   coursee-2019_gradelevel: Aois 8-12
   coursef-2019_gradelevel: Aois 9-13
+  coursea-2020_gradelevel: Aois 4-7
+  courseb-2020_gradelevel: Aois 5-8
+  coursec-2020_gradelevel: Aois 6-10
+  coursed-2020_gradelevel: Aois 13+
+  coursee-2020_gradelevel: Aois 8-12
+  coursef-2020_gradelevel: Aois 9-13
   accelerated_gradelevel: Aois 10-18
   codeorg_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeintl_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -1478,35 +1577,51 @@ ga-IE:
     an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir
     a chomhroinnt le héinne. Dírithe ar aois 9-13.
   coursea_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  courseb_shortdescription_congrats: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
+    (Cosúil le Cúrsa A, ach le tuilleadh éagsúlachta le haghaidh daltaí níos sine.)
   coursec_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus cruthaigh
     ealaín, scéalta, agus cluichí.
   coursed_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
     ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
     tuilleadh.
+  coursee_shortdescription_congrats: Iniúchadh sciobtha ar na coincheapa i gCúrsaí
+    C agus D, ansin tuilleadh ábhair a bhaineann le feidhmeanna.
   coursef_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
     agus cruthaigh ealaín, scéal, nó cluiche.
   coursea-2017_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  courseb-2017_shortdescription_congrats: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
+    (Cosúil le Cúrsa A, ach le tuilleadh éagsúlachta le haghaidh daltaí níos sine.)
   coursec-2017_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus
     cruthaigh ealaín, scéalta, agus cluichí.
   coursed-2017_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
     ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
     tuilleadh.
+  coursee-2017_shortdescription_congrats: Iniúchadh sciobtha ar na coincheapa i gCúrsaí
+    C agus D, ansin tuilleadh ábhair a bhaineann le feidhmeanna.
   coursef-2017_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús
     na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
   coursea-2018_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  courseb-2018_shortdescription_congrats: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
+    (Cosúil le Cúrsa A, ach le tuilleadh éagsúlachta le haghaidh daltaí níos sine.)
   coursec-2018_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus
     cruthaigh ealaín, scéalta, agus cluichí.
   coursed-2018_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
     ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
     tuilleadh.
+  coursee-2018_shortdescription_congrats: Iniúchadh sciobtha ar na coincheapa i gCúrsaí
+    C agus D, ansin tuilleadh ábhair a bhaineann le feidhmeanna.
   coursef-2018_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús
     na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
   coursea-2019_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  courseb-2019_shortdescription_congrats: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
+    (Cosúil le Cúrsa A, ach le tuilleadh éagsúlachta le haghaidh daltaí níos sine.)
   coursec-2019_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus
     cruthaigh ealaín, scéalta, agus cluichí.
   coursed-2019_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
     ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
     tuilleadh.
+  coursee-2019_shortdescription_congrats: Iniúchadh sciobtha ar na coincheapa i gCúrsaí
+    C agus D, ansin tuilleadh ábhair a bhaineann le feidhmeanna.
   coursef-2019_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús
     na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
   codeorg_longdescription: Foghlaim buntús na ríomheolaíochta trí ríomhchlárú "tarraingt
@@ -2038,9 +2153,9 @@ ga-IE:
     tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans
     go mbeidh roinnt gnéithe ar an leathanach briste.
   compatibility_unsupported_browser_markdown: Ní thacaímid le do bhrabhsálaí. Ba chóir
-    duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe
-    tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans
-    go mbeidh roinnt gnéithe ar an leathanach briste.
+    duit [ceann de na brabhsálaithe tacaithe](%{supported_browsers_url}) a shuiteáil.
+    Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe
+    ar an leathanach briste.
   flappy_shortcode: gread
   header_home: Baile
   header_my_dashboard: Mo Phainéal
@@ -2077,17 +2192,33 @@ ga-IE:
   header_teacher_community: Comhphobal múinteoirí
   header_help_support: 'Cabhair agus tacaíocht '
   header_report_bug: Déan tuairisc ar fhadhb
+  header_legal_privacy: Polasaí Príobháideachais
+  header_legal_tos: Téarmaí Seirbhíse
   header_tutorials: Cúrsaí Teagaisc
+  app_lab_documentation: 'Saotharlann Aipeanna: Doiciméadú'
+  app_lab_tutorials: 'Saotharlann Aipeanna: Cúrsaí Teagaisc'
+  game_lab_documentation: 'Saotharlann Cluichíochta: Doiciméadú'
+  game_lab_tutorials: 'Saotharlann Cluichíochta: Cúrsaí Teagaisc'
+  sprite_lab_documentation: 'Saotharlann na Sprideanna: Doiciméadú'
+  sprite_lab_tutorials: 'Saotharlann na Sprideanna: Cúrsaí Teagaisc'
   header_documentation: Doiciméadú
   user_header_label: Dia dhuit a %{username}
   user_header_team: Foireann
+  user_header_my_projects: Mo chuid tionscadal
   user_header_settings: Mo chuntas
   user_header_logout: Logáil amach
   user_header_signin: Logáil isteach
+  user_header_create: 'Cruthaigh '
+  user_header_applab: 'Saotharlann Aipeanna '
+  user_header_artist: 'Ealaíontóir '
   user_header_gamelab: An tSaotharlann Cluichíochta
   user_header_playlab: Spraotharlann
+  user_header_dance: Cóisir Dhamhsa
+  user_header_spritelab: Saotharlann na Sprideanna
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_all: Gach Tionscadal...
+  user_header_view_project_gallery: Gailearaí na dtionscadal
   user_header_view_my_projects: Mo chuid tionscadal
   view_all_sections: Féach ar an rannán go léir
   view_section: Féach ar an Rannán
@@ -2141,16 +2272,69 @@ ga-IE:
   google_sign_in_instruct: 'Ansin ag an bpointe sin, roghnaigh “Sign in with Google
     Account”:'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
+  applab_tile_title: Buneolas ar an tSaotharlann Aipeanna (Aois 13+)
+  applab_tile_subtitle: Cruithaigh d'aip féin in JavaScript le códáil bunaithe ar
+    bhlocanna. Nó tabhair céim chun tosaigh le códáil téacsbhunaithe. (Béarla amháin)
   applab_tile_start_tutorial: Tosaigh
+  applab_tile_teacher_guide: Eolas do mhúinteoirí
   account_sign_up_email_opt_in: An bhfuil cead againn ríomhphost a sheoladh chugat
     maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?
+    (uair amháin sa mhí, nó thart air sin)
+  account_sign_up_child_accept_terms: Dearbhaím gur thug tuismitheoir nó caomhnóir
+    dlíthiúil cead dom seirbhísí Code.org a úsáid.
+  hoc_overview_dance_title: Cóisir Dhamhsa
+  hoc_overview_dance_subtitle: Códáil Cóisir Dhamhsa agus comhroinn le cairde í. Ceol
+    le Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, agus 25 réalta eile!
+  hoc_overview_dance_2019_subtitle: Códáil Cóisir Dhamhsa agus comhroinn le cairde
+    í. Ceol le Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, agus 34 réalta eile!
+  hoc_overview_title: Gníomhaíochtaí don Uair Chódála ó Code.org
+  hoc_overview_subtitle: Is éard atá san <a href="https://hourofcode.com">Uair Chódála</a>
+    ná gluaiseacht dhomhanda a shroicheann na milliúin dalta i níos mó ná 180 tír.
+    Is féidir le haon duine in aon áit ócáid don Uair Chódála a eagrú, nó triail a
+    bhaint as aon cheann de na 500+ cúrsa teagaisc, ar fáil i níos mó ná 45 teanga.
+  hoc_overview_subtitle_markdown: Is éard atá san [Uair Chódála](https://hourofcode.com)
+    ná gluaiseacht dhomhanda a shroicheann na milliúin dalta i níos mó ná 180 tír.
+    Is féidir le haon duine in aon áit ócáid don Uair Chódála a eagrú, nó triail a
+    bhaint as aon cheann de na 500+ cúrsa teagaisc, ar fáil i níos mó ná 45 teanga.
+  hoc_overview_partner_activities_title: Tuilleadh gníomhaíochtaí ó pháirtnéirí
+  hoc_overview_partner_activities_body: Tá níos mó ná 500 gníomhaíochtaí ríomheolaíochta
+    ar shuíomh na hUaire Códála, do dhaoine ag gach leibhéal agus gach aois, forbartha
+    ag Code.org agus ár gcomhpháirtithe.
+  hoc_overview_partner_activities_link: Féach ar na gníomhaíochtaí
   hoc_overview_start_tutorial: Tosaigh
+  hoc_overview_view_teacher_guide: Eolas do mhúinteoirí
+  hoc2018_creativity: cruthaitheacht
   hoc2018_creativity_create: Cruthaigh
+  hoc2018_creativity_hoc_coming: Tá an Uair Chódála le teacht…
   hoc2018_creativity_what_will_you_create: Céard a chruthóidh tú?
+  hoc2018_creativity_homepage: Lig lán scóid le do shamhlaíocht agus le do scileanna
+    nuálaíochta. Tosaigh leis an Uair Chódála agus le do chineál féin cruthaitheachta,
+    cibé in Éirinn é sin. Breathnaigh ar an bhfíseán.
+  hoc2018_creativity_hoc_about: 'Is é an chruthaitheacht téama na hUaire Códála i
+    mbliana. '
+  hoc2018_creativity_social_media: 'Is é an chruthaitheacht téama na #HourOfCode i
+    mbliana. Cuir mise san áireamh! Céard fútsa?'
+  hoc2018_creativity_social_media_2: 'Is é an chruthaitheacht téama na #HourOfCode
+    i mbliana. Céard a chruthóidh tusa?'
+  hoc2018_creativity_courses: Téigh nios faide le cúrsaí Code.org
+  hoc2018_creativity_courses_link: Téigh níos faide le <a href="https://studio.code.org/courses">cúrsaí
+    Code.org</a>
+  hoc2018_homepage: Cláraigh do rang le ceann de na 150+ gníomhaíocht ÚRNUA don Uair
+    Chódála (3-9 Nollaig)!
   hoc2018_mc_page_title: Cúrsaí Teagaisc Minecraft don Uair Chódála
   hoc2018_mc_details: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid
     | Aois 7+
+  hoc2018_mc_aquatic_announcement: Cláraigh do rang anois agus bain triail as ceann
+    de na 150 gníomhaíocht ÚRNUA mar chuid den Uair Chódála (3-9 Nollaig), ina measc,
+    ár ngníomhaíocht nua Minecraft, an Turas Uisceach! Cláraigh inniu.
+  hoc2018_mc_aquatic_title: 'Minecraft: Turas Uisceach'
+  hoc2018_mc_aquatic_description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an
+    Uair Chódála! Téigh ar aistear trí Minecraft le cód.
+  hoc2019_mc_aquatic_description: Tóg agus taiscéal domhain faoi uisce le cód.
   hoc2018_mc_hero_title: 'Minecraft: Scéal Gaisce'
+  hoc2018_mc_hero_description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair
+    Chódála! Téigh ar aistear trí Minecraft le cód.
   hoc2018_mc_designer_title: Dearthóir Minecraft
   hoc2018_mc_designer_description: Códáil ainmhithe agus créatúir eile i do leagan
     féin de Minecraft.
@@ -2160,7 +2344,24 @@ ga-IE:
   hoc2018_mc_start: Tosaigh
   hoc2018_mc_no_internet: Gan cheangal Idirlín?
   hoc2018_mc_download_adventurer: Íoslódáil an leagan as líne d'Eachtránaí Minecraft.
+  hoc2018_mc_educators: Do Mhúinteoirí
+  hoc2018_mc_educators_box1_title: Códáil le Minecraft
+  hoc2018_mc_educators_box1_desc: 'Soláthraíonn Minecraft: Education Edition curaclam,
+    traenáil, agus ceachtanna códála in Minecraft, ailínithe le caighdeáin.'
+  hoc2018_mc_educators_box1_button: Tosaigh
+  hoc2018_mc_educators_box2_title: Íoslódáil an Lámhleabhar d'Éascaitheoirí
+  hoc2018_mc_educators_box2_desc: Cabhróidh na hacmhainní seo leat Uair Chódála a
+    óstáil agus do dhaltaí a spreagadh chun ríomheolaíochta.
   hoc2018_mc_educators_box2_button: Íoslódáil
+  hoc2018_mc_educators_box3_title: Freastail ceardlann shaor in aisce do dhaltaí
+  hoc2018_mc_educators_box3_desc: Tabhair cuairt ar Siopa Microsoft áitiúil le freastal
+    ar cheardlann shaor in aisce. Do dhaoine ag gach leibhéal, sé bliana d'aois nó
+    níos sine.
+  hoc2018_mc_educators_box3_button: Aimsigh ceardlann
+  hoc2018_mc_educators_box4_title: Tuilleadh acmhainní ríomheolaíochta
+  hoc2018_mc_educators_box4_desc: Feabhsaigh an saol i do phobal le scileanna digiteacha
+    agus le hacmhainní oideachais ríomheolaíochta ó Microsoft.
+  hoc2018_mc_educators_box4_button: Tuilleadh acmhainní
   hoc2018_mc_watch_videos: Sula dtosóidh tú, féach ar cheann de na físeáin spreagúla
     seo
   hoc2018_mc_videos_more: Tuilleadh <a href='%{inspiring_videos_playlist}'>físeán
@@ -2173,6 +2374,7 @@ ga-IE:
   hoc2018_mc_video_5min: 5 nóim
   hoc2018_mc_video_title_steph_curry: An Uair Chódála le Steph Curry
   hoc2018_mc_video_title_sports: Do dhúshlán é a dhéanamh. Is féidir le héinne foghlaim.
+  hoc2018_mc_video_title_cs_is_everything: Tá an Ríomheolaíocht ag athrú an domhain
   hoc2018_mc_video_title_inspire_girl: Cuir misneach ar chailín
   hoc2018_mc_video_title_cs_intro: Buntús na ríomheolaíochta
   hoc2018_mc_video_title_schools_dont_teach: Na rudaí nach múintear i bhformhór na
@@ -2182,14 +2384,134 @@ ga-IE:
     foghlaim
   hoc2018_mc_video_title_anybody_can_learn: Is féidir le héinne foghlaim
   hoc2018_mc_video_title_my_name_is_aracely: Is mise Aracely
+  hoc2018_mc_homepage_hoc_coming: Tá an Uair Chódála le teacht...
   hoc2018_mc_homepage_what_create: Céard a chruthóidh tú?
+  hoc2018_mc_homepage_give_flight: Lig lán scóid le do shamhlaíocht agus le do scileanna
+    nuálaíochta. Tosaigh leis an Uair Chódála agus le do chineál féin cruthaitheachta,
+    cibé in Éirinn é sin.
+  hoc2018_mc_homepage_watch_video: Féach ar an bhfíseán
   hoc2018_mc_homepage_join_us: Bí linn
   hoc2018_mc_homepage_try_it: Bain triail as
+  hoc2018_mc_back: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair Chódála!
+  hoc2018_mc_back_journey: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair Chódála!
+    Téigh ar aistear trí Minecraft le cód.
+  hoc2018_mc_teacher_guide: Eolas do mhúinteoirí
   hoc2018_mc_minecraft_education: Oideachas Minecraft
   hoc2018_mc_continue_learning: Lean ort ag foghlaim le Minecraft.
   hoc2018_mc_go_to_mc_education: Oscail Oideachas Minecraft
+  hoc2018_mc_short_description: Úsáid cruthaitheacht agus scileanna réitithe fadhbanna
+    le bheith ag tóraíocht ciste, agus úsáid cumhacht na códála chun domhain faoi
+    uisce a thaiscéaladh.
+  hoc2018_mc_short_description_shorter: Úsáid cruthaitheacht agus scileanna réitithe
+    fadhbanna chun domhan faoi uisce a thógáil agus a thaiscéaladh le cód.
+  hoc2018_mc_journey: Téigh ar turas trí Minecraft le cód.
+  hoc2018_dance_party_main_heading: Cóisir Dhamhsa
+  hoc2018_dance_party_landing_title: Damhsa
+  hoc2018_dance_party_subheading: Cabhraigh linn An Chóisir Dhamhsa a aistriú
+  hoc2018_dance_create_your_own_dance_title: Cruthaigh do Chóisir Dhamhsa féin
+  hoc2018_dance_party_box_title: Cóisir Dhamhsa
+  hoc2018_dance_party_box_description: Códáil Cóisir Dhamhsa agus comhroinn le cairde
+    í!
+  hoc2018_dance_party_specs: Teanga | Formáid | Aois 6-106
   hoc2018_dance_party_button: Tosaigh
+  hoc2018_dance_keep_on_dancing_box_title: Lean ort ag damhsa
+  hoc2018_dance_keep_on_dancing_description: Thar an uair chódála le tionscadail níos
+    uaillmhianaí.
+  hoc2018_dance_keep_on_dancing_specs: Teanga | Formáid | Aois 13+
+  hoc2018_dance_keep_on_dancing_button: Tosaigh Cuid 2
+  hoc2018_dance_teacher_resources_title: Acmhainní do mhúinteoirí
+  hoc2018_dance_teacher_resources_tile1_description: Pleananna ceachta, teastais,
+    agus scagadh ceoil.
   hoc2018_dance_teacher_resources_tile1_button: Plean Ceachta
+  hoc2018_dance_teacher_resources_tile2_title: Cóisir Dhamhsa Dhíphlugáilte
+  hoc2018_dance_teacher_resources_tile2_description: Níl aon ríomhairí de dhíth! Foghlaim
+    coincheapa códála le linn duit cóiréagrafaíocht a dhéanamh ar chóisir dhamhsa.
   hoc2018_dance_teacher_resources_tile2_button: Gníomhaíocht Dhíphlugáilte
+  hoc2018_dance_featured_student_creations_title: Tionscadail ar Taispeáint
+  hoc2018_dance_videos_section_heading: Spreagadh
+  hoc2018_dance_video_title_what_is_creativity: Cad is Cruthaitheacht ann?
+  hoc2018_dance_view_creativity_video_playlist: Cad is Cruthaitheacht ann? Breathnaigh
+    ar an tsraith iomlán (5 nóiméad)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: I gcomhar le
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Is éard atá
+    in Amazon Future Engineer* ná clár cuimsitheach óige-go-gairm a bhfuil an sprioc
+    aige gasúir bhochta agus gasúir faoi mhíbhuntáiste a spreagadh, a mhúineadh, agus
+    a thraenáil chun gairmeacha sa ríomheolaíocht a chleachtadh. <a href='%{amazon_future_engineer_link}'
+    target='_blank'>Tuilleadh eolais</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Is
+    éard atá in Amazon Future Engineer* ná clár cuimsitheach óige-go-gairm a bhfuil
+    an sprioc aige gasúir bhochta agus gasúir faoi mhíbhuntáiste a spreagadh, a mhúineadh,
+    agus a thraenáil chun gairmeacha sa ríomheolaíocht a chleachtadh. [Tuilleadh eolais](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Tuilleadh eolais
+    faoi Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: Maidir le hAmazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Foghlaim faoi chlár ó naíscoil-go-hollscoil
+    de chuid Amazon a chuireann acmhainní oideachasúla sa ríomheolaíocht ar fáil.
+    Gheobhaidh tú tuilleadh eolais faoi champaí samhraidh, ranganna ríomheolaíochta
+    ag an dara leibhéal, scoláireachtaí, agus intéirneachtaí.
   hoc2018_dance_amazon_about_future_engineer_button: Tuilleadh eolais
+  hoc2018_dance_amazon_try_coding_this_summer_title: Bain triail as an gcódáil an
+    samhradh seo
+  hoc2018_dance_amazon_try_coding_this_summer_description: Glac páirt i gcampa ríomheolaíochta
+    spraíúil, uileghabhálach, agus saor in aisce faoi scáth Amazon Future Engineer.
+    Tá campaí samhraidh ar fáil anois do dhaltaí ó chiondargairdín go dtí an t-ochtú
+    bliain in áiteanna éagsúla sna Stáit Aontaithe.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Glac páirt i gcampa samhraidh
+  hoc2018_dance_amazon_scholarship_programs_title: Scoláireachtaí
+  hoc2018_dance_amazon_scholarship_programs_description: Tá Amazon ag tairiscint scoláireachtaí
+    suas le $10,000 sa bhliain do dhaltaí nach bhfuil dóthain acmhainní acu, atá cláraithe
+    le cúrsa AP CS nó atá tar éis an chúrsa sin a chríochnú, agus ar mhian leo céim
+    sa ríomheolaíocht a dhéanamh i gcoláiste nó in ollscoil ceithre bliana sna Stáit
+    Aontaithe.
   hoc2018_dance_amazon_scholarship_programs_button: Cuir iarratas isteach
+  hoc2018_dance_amazon_internships_title: Intéirneacht in Amazon
+  hoc2018_dance_amazon_internships_description: Táthar ag glacadh le hiarratais ar
+    intéirneachtaí Amazon Future Engineer le haghaidh samhradh 2019 faoi láthair.
+    Mar intéirneach, beidh tú i do pháirtí le bainisteoir, le meantóir teicniúil,
+    agus le hintéirnigh eile chun gnéithe agus seirbhísí nua a chruthú ar son custaiméirí
+    Amazon. Tá intéirneachtaí ar fáil sna Stáit Aontaithe agus i gCeanada.
+  hoc2018_dance_amazon_internships_button: Aimsigh intéirneacht
+  hoc2018_dance_amazon_k8_programs_title: Cláir bhunscoile
+  hoc2018_dance_amazon_funding_title: Aimsigh maoiniú do do chéim ríomheolaíochta
+  hoc2018_dance_amazon_future_engineer_footer: "* Thug go leor ealaíontóirí cead dúinn
+    a gcuid ceoil a úsáid sa gcúrsa seo ar Code.org, ach níl aon ráiteas tacaíochta
+    le hAmazon ag dul leis an gceadúnas seo."
+  hoc2018_dance_measure: Tomhas
+  hoc2018_dance_measure_colon: 'Tomhas:'
+  hoc2018_aquatic_video1: 'Minecraft: Turas Uisceach - Réamheolas'
+  hoc2018_aquatic_video2: 'Minecraft: Turas Uisceach - Lúba'
+  hoc2018_aquatic_video3: 'Minecraft: Turas Uisceach - Coinníollacha'
+  hoc2018_aquatic_video4: 'Minecraft: Turas Uisceach - Comhghairdeas'
+  hoc2018_dance_video1: Cóisir Dhamhsa - Buneolas
+  hoc2018_dance_video2: Cóisir Dhamhsa - Teagmhais
+  hoc2018_dance_video3: Cóisir Dhamhsa - Airíonna
+  hoc2018_dance_video4: Cóisir Dhamhsa - Comhghairdeas
+  page_not_found_title: Níor aimsíodh an leathanach
+  page_not_found_header: '404: Níor aimsíodh an leathanach'
+  page_not_found_description: Níl aon leathanach ag an seoladh seo. Deimhnigh go bhfuil
+    an seoladh ceart agat agus bain triail eile as. Nó, fill ar an leathanach baile.
+  page_not_found_button: Baile
+  hoc2018_mc_with_microsoft: I gcomhar le
+  hoc2018_mc_thank_microsoft: 'Táimid buíoch de Microsoft as tacaíocht a thabhairt
+    dár bhfís agus dár misean: deis a thabhairt do gach gasúr an ríomheolaíocht a
+    fhoghlaim chomh maith le scileanna tábhachtacha don saol sa 21ú haois.'
+  hoc2019_mc_mee_title: Minecraft AI ar son na Maitheasa
+  hoc2019_mc_mee_description1: 'Tá an cúrsa teagaisc nua Minecraft don Uair Chódála
+    ar fáil anois mar chuid de Minecraft: Education Edition ar Windows, Mac, agus
+    iPad. Foghlaim an chódáil agus buneolas ar intleacht shaorga in éineacht le do
+    dhaltaí!'
+  hoc2019_mc_mee_description2: Acmhainní saor in aisce, mar shampla pleananna ceachta,
+    físeáin, curaclam ríomheolaíochta, agus deiseanna traenála do mhúinteoirí.
+  hoc2019_mc_more_coding_resources: Tuilleadh Acmhainní Códála
+  hoc2019_dance_previous_versions: "An bhfuil tú ag lorg leagan níos sine den Chóisir
+    Dhamhsa?  \nCliceáil anseo chun [Cuid 1](%{dance_2018_link}) agus [Cuid 2](%{dance_extras_2018_link})
+    ón bhliain seo caite a thosú."
+  page_not_available_button: Baile
+  footer_powered_by_aws: Á chumhachtú ag Amazon Web Services
+  codebytes_skinny_banner_english_only: Béarla amháin
+  footer_privacy_policy: Polasaí Príobháideachais
+  footer_about: Maidir Linn
+  footer_partners: Comhpháirtithe
+  footer_donate: Bronn
+  footer_support: Cabhair
+  footer_terms: Téarmaí

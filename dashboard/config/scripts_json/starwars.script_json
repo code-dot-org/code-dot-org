@@ -1,0 +1,611 @@
+{
+  "script": {
+    "name": "starwars",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:46 UTC",
+    "seeding_key": {
+      "script.name": "starwars"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Hour of Code 2015",
+      "name": "Hour of Code 2015",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_move_right"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right_down"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right_down"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_move_right_down"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_backtrack"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_backtrack"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_move_backtrack"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_diagonal"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_diagonal"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_move_diagonal"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_around"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_around"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_move_around"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_finale"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_finale"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_move_finale"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_two_items"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_two_items"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_event_two_items"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_four_items"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_four_items"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_event_four_items"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_score"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_score"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_score"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_win_lose"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_win_lose"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_win_lose"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_add_characters"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_add_characters"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_add_characters"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_chain_characters"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_chain_characters"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_chain_characters"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_multiply_characters"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_multiply_characters"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_multiply_characters"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_change_setting"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_change_setting"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_change_setting"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_free"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_free"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      },
+      "level_keys": [
+        "blockly:StudioEC:js_hoc2015_event_free"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_move_right",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_move_right_down",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right_down"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_move_backtrack",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_backtrack"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_move_diagonal",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_diagonal"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_move_around",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_around"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_move_finale",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_finale"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_event_two_items",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_two_items"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_event_four_items",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_four_items"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_score",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_score"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_win_lose",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_win_lose"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_add_characters",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_add_characters"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_chain_characters",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_chain_characters"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_multiply_characters",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_multiply_characters"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_change_setting",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_change_setting"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:StudioEC:js_hoc2015_event_free",
+        "script_level.level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_free"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "starwars"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,0 +1,29 @@
+name 'CSP-PL Module 7 - Workshop Overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 7: CS Principles Virtual Professional Learning 
+
+## Module 7 Overview
+
+Welcome to the Module 7 asynchronous work for CS Principles! These experiences will help prepare you for the following synchronous workshop and also help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+**This asynchronous work is focused on Unit 9 - Data.  You will:**
+
+* Learn about the big picture context for lessons in Unit 9.
+* Use tools from specific Unit 9 lessons to understand the content. 
+* Explore the end of unit project for Unit 9.
+
+
+**After this asynchronous work you will:**
+
+* Have familiarity with the content and structure of Unit 9.
+* Be prepared to use the tools in Unit 9 with your students.
+
+
+
+Let's get started!
+
+MARKDOWN

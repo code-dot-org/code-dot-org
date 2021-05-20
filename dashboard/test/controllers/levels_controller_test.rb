@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'webmock/minitest'
 
 class LevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -24,6 +25,8 @@ class LevelsControllerTest < ActionController::TestCase
       type: 'toolbox_blocks',
       program: @program,
     }
+    stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
+      to_return({"status" => 200, "body" => "{}", "headers" => {}})
   end
 
   test "should get rubric" do
@@ -67,6 +70,40 @@ class LevelsControllerTest < ActionController::TestCase
       rubric_performance_level_3: 'This is okay',
       rubric_performance_level_4: 'This is bad'
     )
+  end
+
+  test "should get filtered levels with just page param" do
+    get :get_filtered_levels, params: {page: 1}
+    assert_equal 7, JSON.parse(@response.body)['levels'].length
+    assert_equal 22, JSON.parse(@response.body)['numPages']
+  end
+
+  test "should get filtered levels with level_type" do
+    get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
+    assert_equal 1, JSON.parse(@response.body)['levels'].length
+    assert_equal "Odometer", JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal 1, JSON.parse(@response.body)['numPages']
+  end
+
+  test "should get filtered levels with script_id" do
+    get :get_filtered_levels, params: {page: 1, script_id: 2}
+    assert_equal 7, JSON.parse(@response.body)['levels'].length
+    assert_equal 3, JSON.parse(@response.body)['numPages']
+  end
+
+  test "should get filtered levels with owner_id" do
+    Level.where(user_id: @levelbuilder.id).destroy_all
+    level = create :level, user: @levelbuilder
+    get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
+    assert_equal level[:name], JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal 1, JSON.parse(@response.body)['numPages']
+  end
+
+  test "get_filtered_levels gets no content if not levelbuilder" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    get :get_filtered_levels, params: {page: 1}
+    assert_response :forbidden
   end
 
   test "should get index" do
@@ -308,6 +345,21 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
 
+  test "should return newly created level when do_not_redirect" do
+    game = Game.find_by_name("Custom")
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: "NewCustomLevel", type: 'Artist'},
+        game_id: game.id,
+        program: @program,
+        do_not_redirect: true
+      }
+    end
+
+    assert_equal 'NewCustomLevel', JSON.parse(@response.body)['name']
+    assert_equal 'Artist', JSON.parse(@response.body)['type']
+  end
+
   test "should create studio level" do
     game = Game.find_by_name("CustomStudio")
     assert_creates(Level) do
@@ -451,6 +503,15 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "should not be able to edit on levelbuilder in locale besides en-US" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    with_default_locale(:de) do
+      get :edit, params: {id: @level}
+    end
+    assert_redirected_to "/"
+  end
+
   test "should not create level if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
@@ -463,7 +524,8 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   # This should represent the behavior on production.
-  test "should not modify level if not in levelbuilder mode" do
+  test "should not modify level in production" do
+    CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
     post :create, params: {name: "NewCustomLevel", program: @program}
@@ -472,6 +534,13 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should show level" do
     get :show, params: {id: @level}
+    assert_response :success
+  end
+
+  test "should show level group" do
+    level_group = create :level_group, :with_sublevels, name: 'lg'
+    level_group.save!
+    get :show, params: {id: level_group.id}
     assert_response :success
   end
 
@@ -512,6 +581,50 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
     assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
     assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
+  end
+
+  test "should allow rename of new level" do
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_includes @response.body, @level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
+  end
+
+  test "should prevent rename of level in visible or pilot script" do
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.level
+    assert_equal script.hidden, false
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+
+    script.hidden = true
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
+
+    script.pilot_experiment = 'platformization-partners'
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+  end
+
+  test "should prevent rename of stanadalone project level" do
+    level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
+    # standalone project levels are created when we generate fixtures
+    level = Level.find_by(name: level_name)
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
   end
 
   test "should update level" do
@@ -747,6 +860,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
   end
 
+  test "should clone without redirect" do
+    game = Game.find_by_name("Custom")
+    old = create(:level, game_id: game.id, name: "Fun Level")
+    assert_creates(Level) do
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)", do_not_redirect: true}
+    end
+
+    new_level = assigns(:new_level)
+    assert_equal old.game, new_level.game
+    assert_equal "Fun Level (copy 1)", new_level.name
+    assert_equal "Fun Level (copy 1)", JSON.parse(@response.body)['name']
+  end
+
   test "cannot clone hard-coded levels" do
     old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
     refute old.custom?
@@ -877,7 +1003,7 @@ DSL
     sign_in @not_admin
     get :show, params: {id: level}
     assert_response :success
-    assert_select '#markdown', "this is the markdown for #{@not_admin.id}"
+    assert_select '.markdown-container[data-markdown=?]', "this is the markdown for #{@not_admin.id}"
   end
 
   # test_platformization_partner_calling_get_new_should_receive_success

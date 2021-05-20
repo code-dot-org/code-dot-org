@@ -1,18 +1,8 @@
 name 'AP_practice_Qs_rqb_33_CSP_2_1_1'
-wrong 'Binary 11010
-Hexadecimal FF
-Decimal 32
-'
-wrong 'Binary 1010
-Hexadecimal A
-Decimal 11'
-wrong 'Binary 1101
-Hexadecimal BB
-Decimal 13'
-right 'Binary 1110
-Hexadecimal E
-Decimal 14 
-'
+wrong 'Binary 11010 Hexadecimal FF Decimal 32'
+wrong 'Binary 1010 Hexadecimal A Decimal 11'
+wrong 'Binary 1101 Hexadecimal BB Decimal 13'
+right 'Binary 1110 Hexadecimal E Decimal 14'
 markdown <<MARKDOWN
 Which of the following are equivalent representations of the same number?
 MARKDOWN

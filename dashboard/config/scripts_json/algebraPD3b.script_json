@@ -1,0 +1,1298 @@
+{
+  "script": {
+    "name": "algebraPD3b",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS in Algebra Legacy"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:45 UTC",
+    "seeding_key": {
+      "script.name": "algebraPD3b"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Getting Started",
+      "name": "Getting Started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "key": "Teaching Support - Lessons 1-3",
+      "name": "Teaching Support - Lessons 1-3",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Support - Lessons 1-3",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "key": "Teaching Support - Lessons 4-7",
+      "name": "Teaching Support - Lessons 4-7",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "key": "Teaching Support - Lessons 8-12",
+      "name": "Teaching Support - Lessons 8-12",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "key": "Teaching Support - Lessons 13-16",
+      "name": "Teaching Support - Lessons 13-16",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "key": "Teaching Support - Lessons 17-20",
+      "name": "Teaching Support - Lessons 17-20",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "key": "Close and Next Steps",
+      "name": "Close and Next Steps",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Close and Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3BWelcome"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3BWelcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3BWelcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3BAbout"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3BAbout"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3BAbout"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 CS Tips"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CS Tips"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "OPD-K5 CS Tips"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3BPlanning"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3BPlanning"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3BPlanning"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3BGo"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3BGo"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3BGo"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3B Lessons1-3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons1-3"
+        ],
+        "lesson.key": "Teaching Support - Lessons 1-3",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3B Lessons1-3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 1-3 Circles"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 1-3 Circles"
+        ],
+        "lesson.key": "Teaching Support - Lessons 1-3",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 1-3 Circles"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 1-3 Circles Practice"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 1-3 Circles Practice"
+        ],
+        "lesson.key": "Teaching Support - Lessons 1-3",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 1-3 Circles Practice"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3B Lessons4-7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons4-7"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3B Lessons4-7"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 4-7 Contracts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 4-7 Contracts"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 4-7 Contracts"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 4-7 Contracts Match"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 4-7 Contracts Match"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 4-7 Contracts Match"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 4-7 Variables"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 4-7 Variables"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 4-7 Variables"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 4-7 Big Game"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 4-7 Big Game"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 4-7 Big Game"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3B Lessons8-12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons8-12"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3B Lessons8-12"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 8-12 Design Recipe"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 8-12 Design Recipe"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 8-12 Design Recipe"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 8-12 Examples"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 8-12 Examples"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 8-12 Examples"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 8-12 ex dr 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 8-12 ex dr 1"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 8-12 ex dr 1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 8-12 ex dr 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 8-12 ex dr 2"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 8-12 ex dr 2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 8-12 Rocket Height"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 8-12 Rocket Height"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 8-12 Rocket Height"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 8-12 Rocket Height Puzzle"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 8-12 Rocket Height Puzzle"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 8-12 Rocket Height Puzzle"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3B Lessons13-16"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons13-16"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3B Lessons13-16"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 13-16 Booleans"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 13-16 Booleans"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 13-16 Booleans"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 13-16 Simple Sam"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 13-16 Simple Sam"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 13-16 Simple Sam"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 13-16 Sam Extension"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 13-16 Sam Extension"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 13-16 Sam Extension"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 13-16 Sam Extension Puzzle"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 13-16 Sam Extension Puzzle"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 13-16 Sam Extension Puzzle"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3B Lessons17-20"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons17-20"
+        ],
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3B Lessons17-20"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 17-20 Luigi Extensions"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 17-20 Luigi Extensions"
+        ],
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 17-20 Luigi Extensions"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 17-20 Luigi Extension Puzzle"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 17-20 Luigi Extension Puzzle"
+        ],
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 17-20 Luigi Extension Puzzle"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg phase 3b survey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg phase 3b survey"
+        ],
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg phase 3b survey"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3B Review"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3B Review"
+        ],
+        "lesson.key": "Close and Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3B Review"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3B KeepLearning"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3B KeepLearning"
+        ],
+        "lesson.key": "Close and Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3B KeepLearning"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg 3B Survey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg 3B Survey"
+        ],
+        "lesson.key": "Close and Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      },
+      "level_keys": [
+        "PDAlg 3B Survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3BWelcome",
+        "script_level.level_keys": [
+          "PDAlg 3BWelcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3BAbout",
+        "script_level.level_keys": [
+          "PDAlg 3BAbout"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CS Tips",
+        "script_level.level_keys": [
+          "OPD-K5 CS Tips"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3BPlanning",
+        "script_level.level_keys": [
+          "PDAlg 3BPlanning"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3BGo",
+        "script_level.level_keys": [
+          "PDAlg 3BGo"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3B Lessons1-3",
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons1-3"
+        ],
+        "lesson.key": "Teaching Support - Lessons 1-3",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 1-3 Circles",
+        "script_level.level_keys": [
+          "PDAlg 1-3 Circles"
+        ],
+        "lesson.key": "Teaching Support - Lessons 1-3",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 1-3 Circles Practice",
+        "script_level.level_keys": [
+          "PDAlg 1-3 Circles Practice"
+        ],
+        "lesson.key": "Teaching Support - Lessons 1-3",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3B Lessons4-7",
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons4-7"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 4-7 Contracts",
+        "script_level.level_keys": [
+          "PDAlg 4-7 Contracts"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 4-7 Contracts Match",
+        "script_level.level_keys": [
+          "PDAlg 4-7 Contracts Match"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 4-7 Variables",
+        "script_level.level_keys": [
+          "PDAlg 4-7 Variables"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 4-7 Big Game",
+        "script_level.level_keys": [
+          "PDAlg 4-7 Big Game"
+        ],
+        "lesson.key": "Teaching Support - Lessons 4-7",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3B Lessons8-12",
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons8-12"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 8-12 Design Recipe",
+        "script_level.level_keys": [
+          "PDAlg 8-12 Design Recipe"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 8-12 Examples",
+        "script_level.level_keys": [
+          "PDAlg 8-12 Examples"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 8-12 ex dr 1",
+        "script_level.level_keys": [
+          "PDAlg 8-12 ex dr 1"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 8-12 ex dr 2",
+        "script_level.level_keys": [
+          "PDAlg 8-12 ex dr 2"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 8-12 Rocket Height",
+        "script_level.level_keys": [
+          "PDAlg 8-12 Rocket Height"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 8-12 Rocket Height Puzzle",
+        "script_level.level_keys": [
+          "PDAlg 8-12 Rocket Height Puzzle"
+        ],
+        "lesson.key": "Teaching Support - Lessons 8-12",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3B Lessons13-16",
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons13-16"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 13-16 Booleans",
+        "script_level.level_keys": [
+          "PDAlg 13-16 Booleans"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 13-16 Simple Sam",
+        "script_level.level_keys": [
+          "PDAlg 13-16 Simple Sam"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 13-16 Sam Extension",
+        "script_level.level_keys": [
+          "PDAlg 13-16 Sam Extension"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 13-16 Sam Extension Puzzle",
+        "script_level.level_keys": [
+          "PDAlg 13-16 Sam Extension Puzzle"
+        ],
+        "lesson.key": "Teaching Support - Lessons 13-16",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3B Lessons17-20",
+        "script_level.level_keys": [
+          "PDAlg 3B Lessons17-20"
+        ],
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 17-20 Luigi Extensions",
+        "script_level.level_keys": [
+          "PDAlg 17-20 Luigi Extensions"
+        ],
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 17-20 Luigi Extension Puzzle",
+        "script_level.level_keys": [
+          "PDAlg 17-20 Luigi Extension Puzzle"
+        ],
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg phase 3b survey",
+        "script_level.level_keys": [
+          "PDAlg phase 3b survey"
+        ],
+        "lesson.key": "Teaching Support - Lessons 17-20",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3B Review",
+        "script_level.level_keys": [
+          "PDAlg 3B Review"
+        ],
+        "lesson.key": "Close and Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3B KeepLearning",
+        "script_level.level_keys": [
+          "PDAlg 3B KeepLearning"
+        ],
+        "lesson.key": "Close and Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg 3B Survey",
+        "script_level.level_keys": [
+          "PDAlg 3B Survey"
+        ],
+        "lesson.key": "Close and Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3b"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -8,20 +8,6 @@ import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from './AssignmentVersionSelector';
 
-const styles = {
-  family: {
-    display: 'inline-block',
-    marginTop: 4,
-    marginRight: 6
-  },
-  secondary: {
-    marginTop: 6
-  },
-  dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
-};
-
 const noAssignment = assignmentId(null, null);
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
@@ -70,7 +56,8 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    locale: PropTypes.string
+    localeEnglishName: PropTypes.string,
+    isNewSection: PropTypes.bool
   };
 
   /**
@@ -100,7 +87,7 @@ export default class AssignmentSelector extends Component {
 
     return setRecommendedAndSelectedVersions(
       versions,
-      this.props.locale,
+      this.props.localeEnglishName,
       selectedVersionYear
     );
   };
@@ -217,7 +204,18 @@ export default class AssignmentSelector extends Component {
       selectedAssignmentFamily,
       selectedVersionYear
     );
-    const selectedSecondaryId = noAssignment;
+    const primary = this.props.assignments[selectedPrimaryId];
+    // If the user is setting up a new section and selects a course as the
+    // primary assignment, default the secondary assignment to the first
+    // script in the course.
+    const defaultSecondaryId =
+      this.props.isNewSection && primary && primary.scriptAssignIds
+        ? primary.scriptAssignIds[0]
+        : noAssignment;
+
+    const selectedSecondaryId = this.props.isNewSection
+      ? defaultSecondaryId
+      : noAssignment;
 
     this.setState(
       {
@@ -328,7 +326,6 @@ export default class AssignmentSelector extends Component {
               style={dropdownStyle}
               disabled={disabled}
             >
-              <option value={noAssignment} />
               {secondaryOptions.map(
                 scriptAssignId =>
                   assignments[scriptAssignId] && (
@@ -337,6 +334,7 @@ export default class AssignmentSelector extends Component {
                     </option>
                   )
               )}
+              <option value={noAssignment} />
             </select>
           </div>
         )}
@@ -344,3 +342,17 @@ export default class AssignmentSelector extends Component {
     );
   }
 }
+
+const styles = {
+  family: {
+    display: 'inline-block',
+    marginTop: 4,
+    marginRight: 6
+  },
+  secondary: {
+    marginTop: 6
+  },
+  dropdownLabel: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
+};

@@ -8,7 +8,7 @@
 #  from_instructor :boolean          default(FALSE), not null
 #  script_id       :integer          not null
 #  level_id        :integer          not null
-#  level_source_id :integer          unsigned, not null
+#  level_source_id :bigint           unsigned, not null
 #  data            :text(65535)
 #  status          :integer
 #  created_at      :datetime         not null
@@ -26,10 +26,18 @@
 
 require 'cdo/shared_constants'
 
-class PeerReview < ActiveRecord::Base
+class PeerReview < ApplicationRecord
   include SharedConstants
   include LevelsHelper
   include Rails.application.routes.url_helpers
+
+  SYSTEM_DELETED_DATA = ''.freeze
+
+  enum status: {
+    accepted: 0,
+    rejected: 1,
+    escalated: 2
+  }
 
   belongs_to :submitter, class_name: 'User'
   belongs_to :reviewer, class_name: 'User'
@@ -39,31 +47,24 @@ class PeerReview < ActiveRecord::Base
 
   validates :status, inclusion: {in: %w{accepted rejected}}, if: -> {from_instructor}
 
-  after_update :mark_user_level, if: -> {status_changed? || data_changed?}
-
-  SYSTEM_DELETED_DATA = ''.freeze
-
+  before_save :add_status_to_audit_trail, if: -> {reviewer_id? && (status_changed? || data_changed?)}
   before_save :add_assignment_to_audit_trail, if: :reviewer_id_changed?
+
+  after_save :send_review_completed_mail, if: -> {saved_change_to_status? && (accepted? || rejected?)}
+  after_update :mark_user_level, if: -> {saved_change_to_status? || saved_change_to_data?}
+
   def add_assignment_to_audit_trail
     message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'
     append_audit_trail message
   end
 
-  before_save :add_status_to_audit_trail, if: -> {reviewer_id? && (status_changed? || data_changed?)}
   def add_status_to_audit_trail
     append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
   end
 
-  after_save :send_review_completed_mail, if: -> {status_changed? && (accepted? || rejected?)}
   def send_review_completed_mail
     PeerReviewMailer.review_completed_receipt(self).deliver_now
   end
-
-  enum status: {
-    accepted: 0,
-    rejected: 1,
-    escalated: 2
-  }
 
   def user_level
     UserLevel.find_by!(user: submitter, level: level)
@@ -125,7 +126,7 @@ class PeerReview < ActiveRecord::Base
   end
 
   def localized_status_description
-    I18n.t("peer_review.#{status}.description").html_safe if status
+    I18n.t("peer_review.#{status}.description_markdown", markdown: true).html_safe if status
   end
 
   def self.create_for_submission(user_level, level_source_id)
@@ -146,15 +147,21 @@ class PeerReview < ActiveRecord::Base
         level: user_level.level,
       ).destroy_all
 
-      peer_review = create!(
+      base_peer_review_attributes = {
         submitter_id: user_level.user.id,
-        from_instructor: false,
         script: user_level.script,
         level: user_level.level,
         level_source_id: level_source_id
-      )
+      }
 
-      peer_review.create_escalated_duplicate
+      # First, create a placeholder Peer Review entry for someone else enrolled in the course to review.
+      # Only create it if this CourseUnit (PLC Courses equivalent of a Script) requires review from peers.
+      create!(base_peer_review_attributes) unless user_level.script&.only_instructor_review_required?
+
+      # Always create a Peer Review entry in order for the instructor to provide a review.
+      # The use of find_or_create_by here is legacy -- why we use it here but not when creating the
+      # Peer Review above is unknown.
+      find_or_create_by!(base_peer_review_attributes.merge({status: 2}))
     end
   end
 
@@ -278,17 +285,6 @@ class PeerReview < ActiveRecord::Base
   # the written section
   def review_completed?
     (status == 'accepted' || status == 'rejected') || data?
-  end
-
-  def create_escalated_duplicate
-    PeerReview.find_or_create_by!(
-      submitter: submitter,
-      reviewer: nil,
-      script: script,
-      level: level,
-      level_source_id: level_source_id,
-      status: 2
-    )
   end
 
   # Whether this peer review is a review of the latest version of the submitter's answer

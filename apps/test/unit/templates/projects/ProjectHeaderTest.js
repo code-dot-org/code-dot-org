@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
@@ -10,11 +10,13 @@ describe('ProjectHeader', () => {
       <ProjectHeader canViewAdvancedTools={true} projectCount={10000000} />
     );
 
-    // Note because we don't have a locale in the test we get an unformatted number
-    // Example 10000000 instead of 10,000,000
+    // Expect the number to be formatted to the appropriate client locale
+    // (which can change depending on the browser running this test)
+    const localeFormattedCount = Number(10000000).toLocaleString();
+
     assert.equal(
       wrapper.find(HeaderBanner).props().subHeadingText,
-      '10000000 projects created'
+      `${localeFormattedCount} projects created`
     );
   });
 });

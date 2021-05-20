@@ -1,7 +1,67 @@
-var extraArgs = null;
+var extraArgs = {};
+var other = [];
 
 function draw() {
   executeDrawLoopAndCallbacks();
+  for (var i = 0; i < other.length; i++) {
+    other[i]();
+  }
+}
+
+/**
+ * Must run in the interpreter, not natively, so that we can execute valueFn to get its value
+ * and be able to use that value within beginCollectingData. If beginCollectingData ran natively,
+ * calling valueFn would add a call into the interpreter on the call stack, but wouldn't execute
+ * immediately, so we wouldn't be able to use the value from within beginCollectingData.
+ */
+function beginCollectingData(valueFn, label) {
+  collectData(function() {
+    printText(['Time: ',getTime("seconds"),' sec. | ', label || '', ': ', valueFn()].join(''));
+  });
+}
+
+
+/**
+ * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
+ * rather than being added to the stack. For example, consider the following program:
+ * var i = 10;
+ * ifVarEquals(i, 10, function() {
+ *   printText("first");
+ * });
+ * printText("second");
+ *
+ * If ifVarEquals() executed natively, the print statements would happen out of order.
+ */
+function ifVarEquals(variableName, value, callback) {
+  if (variableName == value) {
+    callback();
+  }
+}
+
+/**
+ * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
+ * rather than being added to the stack. For example, consider the following program:
+ * var i = 0;
+ * for (var count = 0; count < 100; count++) {
+ *   withPercentChance(50, function () {
+ *     i = (typeof i == 'number' ? i : 0) + 1;
+ *   });
+ * }
+ * printText(i)
+ *
+ * If withPercentChance() executed natively, i would still be 0 because the callbacks wouldn't have executed yet.
+ * Instead, if we keep the whole execution within the interpreter, the callbacks will execute before printText(),
+ * as expected.
+ */
+
+function withPercentChance(num, callback) {
+  if (randomNumber(0, 100) < num) {
+    callback();
+  }
+}
+
+function withPercentChanceDropdown(num, callback) {
+  withPercentChance(num, callback);
 }
 
 /* Legacy code only. Do not add any new code below here */
@@ -11,6 +71,45 @@ function clickedOn(spriteId, callback) {
 
 function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
+}
+
+function avoidingTargets() {
+  return {func: avoidingTargetsFunc(), name: 'avoiding targets'};
+}
+
+function followingTargets() {
+  return {func: followingTargetsFunc(), name: 'following targets'};
+}
+
+function tumbling(spriteId) {
+  var behavior = function(spriteId) {
+    changePropBy(spriteId, 'rotation', -6);
+    changePropBy(spriteId, 'x', -3);
+  };
+  return {func: behavior, name: 'tumbling'};
+}
+
+function patrollingUpDown(spriteId) {
+  var behavior = function(spriteId) {
+    if (getProp(spriteId, 'patrollingDirection') == undefined) {
+      setProp(spriteId, 'patrollingDirection', 'up');
+    }
+    var patrollingDirection = getProp(spriteId, 'patrollingDirection');
+    if (patrollingDirection == 'up') {
+      changePropBy(spriteId, 'y', 6);
+    }
+    if (patrollingDirection == 'down') {
+      changePropBy(spriteId, 'y', -6);
+    }
+    var y = getProp(spriteId, 'y');
+    if (y <= 40) {
+      setProp(spriteId, 'patrollingDirection', 'up');
+    }
+    if (y >= 360) {
+      setProp(spriteId, 'patrollingDirection', 'down');
+    }
+  };
+  return {func: behavior, name: 'patrollingUpDown'};
 }
 
 function pointInDirection(spriteId, direction) {
@@ -104,71 +203,21 @@ function yLocationOf(spriteId) {
   return getProp(spriteId, 'y');
 }
 
-// Setup sim
-function setupSim(
-  s1number,
-  s1costume,
-  s1speed,
-  s2number,
-  s2costume,
-  s2speed,
-  s3number,
-  s3costume,
-  s3speed
-) {
-  World.sprite1score = 0;
-  World.sprite2score = 0;
+//Mike's follow/avoid behavior blocks
+function startFollowing(sprites,targets){
+  addTarget(sprites, targets, "follow");
+  addBehaviorSimple(sprites, followingTargets());
+}
 
-  function movementBehavior(speed) {
-    return function(spriteId) {
-      if (randomNumber(0, 5) == 0) {
-        changePropBy(spriteId, 'direction', randomNumber(-25, 25));
-      }
-      moveForward(spriteId, speed);
-      if (isTouchingEdges(spriteId)) {
-        edgesDisplace(spriteId);
-        changePropBy(spriteId, 'direction', randomNumber(135, 225));
-      }
-    };
-  }
+function stopFollowing(sprites){
+  removeBehaviorSimple(sprites, followingTargets());
+}
 
-  var counter_i = 0;
-  for (counter_i = 0; counter_i < s3number; counter_i++) {
-    makeNewSpriteAnon(s3costume, randomLocation());
-  }
-  setProp(s3costume, 'scale', 50);
+function startAvoiding(sprites,targets){
+  addTarget(sprites, targets, "avoid");
+  addBehaviorSimple(sprites, avoidingTargets());
+}
 
-  for (counter_i = 0; counter_i < s2number; counter_i++) {
-    makeNewSpriteAnon(s2costume, randomLocation());
-  }
-  addBehaviorSimple(s2costume, new Behavior(movementBehavior(s2speed)));
-
-  for (counter_i = 0; counter_i < s1number; counter_i++) {
-    makeNewSpriteAnon(s1costume, randomLocation());
-  }
-  addBehaviorSimple(s1costume, new Behavior(movementBehavior(s1speed)));
-
-  checkTouching('while', s1costume, s3costume, function(extraArgs) {
-    destroy(extraArgs.target);
-    World.sprite1score++;
-    printText(s1costume + ' has collected ' + World.sprite1score);
-    checkSimulationEnd();
-  });
-
-  checkTouching('while', s2costume, s3costume, function(extraArgs) {
-    destroy(extraArgs.target);
-    World.sprite2score++;
-    printText(s2costume + ' has collected ' + World.sprite2score);
-    checkSimulationEnd();
-  });
-
-  function checkSimulationEnd() {
-    if (countByAnimation(s3costume) === 0) {
-      destroy(s1costume);
-      destroy(s2costume);
-      printText('The simulation has ended after ' + World.seconds + ' seconds');
-      printText(s1costume + ' has collected ' + World.sprite1score);
-      printText(s2costume + ' has collected ' + World.sprite2score);
-    }
-  }
+function stopFollowing(sprites){
+  removeBehaviorSimple(sprites, avoidingTargets());
 }

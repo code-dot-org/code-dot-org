@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonContent';
@@ -13,7 +13,7 @@ describe('ProgressLessonContent', function() {
       />
     );
 
-    assert.equal(wrapper.find('ProgressBubbleSet').length, 1);
+    assert.equal(wrapper.find('Connect(ProgressBubbleSet)').length, 1);
   });
 
   it('renders a ProgressLevelSet when there is a single named progression', () => {
@@ -27,7 +27,7 @@ describe('ProgressLessonContent', function() {
       />
     );
 
-    assert.equal(wrapper.find('ProgressLevelSet').length, 1);
+    assert.equal(wrapper.find('Connect(ProgressLevelSet)').length, 1);
   });
 
   it('renders a ProgressLevelSet for each progression when there are multiple progressions', () => {
@@ -35,6 +35,6 @@ describe('ProgressLessonContent', function() {
       <ProgressLessonContent levels={fakeLevels(3)} disabled={false} />
     );
 
-    assert.equal(wrapper.find('ProgressLevelSet').length, 3);
+    assert.equal(wrapper.find('Connect(ProgressLevelSet)').length, 3);
   });
 });

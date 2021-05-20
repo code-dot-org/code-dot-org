@@ -1,0 +1,1496 @@
+{
+  "script": {
+    "name": "workshop-gamelab",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:57 UTC",
+    "seeding_key": {
+      "script.name": "workshop-gamelab"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction",
+      "name": "Introduction",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "key": "Sprites",
+      "name": "Sprites",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "key": "Input",
+      "name": "Input",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "key": "Project: Interactive Card",
+      "name": "Project: Interactive Card",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Game Lab Workshop: Introduction"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Game Lab Workshop: Introduction"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "Game Lab Workshop: Introduction"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD: Drawing in Game Lab 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Rectangle"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Rectangle"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Rectangle"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Order of Blocks"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Order of Blocks"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Order of Blocks"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Fill"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Fill"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Fill"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Game Lab Workshop: Random"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Game Lab Workshop: Random"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "Game Lab Workshop: Random"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Game Lab Workshop: Draw Loop"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Game Lab Workshop: Draw Loop"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "Game Lab Workshop: Draw Loop"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Introduction to the Draw Loop"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Introduction to the Draw Loop"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD: Introduction to the Draw Loop"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GameLab Workshop: Draw Loop Shapes"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GameLab Workshop: Draw Loop Shapes"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "GameLab Workshop: Draw Loop Shapes"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Random Animation"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Random Animation"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Random Animation"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Variables make a square"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variables make a square"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Variables make a square"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 Variables misconceptions try it"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 Variables misconceptions try it"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "U3 Variables misconceptions try it"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Counters counter square movement"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Counters counter square movement"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Counters counter square movement"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Game Lab Workshop: Variables to Sprites"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Game Lab Workshop: Variables to Sprites"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "Game Lab Workshop: Variables to Sprites"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Sprites in Game Lab"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Sprites in Game Lab"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD: Sprites in Game Lab"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro sprites"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites animating with sprites"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites animating with sprites"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Sprites animating with sprites"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites debug watchers"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites debug watchers"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Sprites debug watchers"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites debug background"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites debug background"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Sprites debug background"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Animation Tab"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Animation Tab"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD: Animation Tab"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - images - first sprite with image"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - images - first sprite with image"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 - images - first sprite with image"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - images - changing scene"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - images - changing scene"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 - images - changing scene"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Sprites and Mod - Mouse X and Y"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Sprites and Mod - Mouse X and Y"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "U3 - Sprites and Mod - Mouse X and Y"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - Booleans Video"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Booleans Video"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 - Booleans Video"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Boolean Modify"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Boolean Modify"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Boolean Modify"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - Matching"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - conditionals - Matching"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 - conditionals - Matching"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Boolean"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Keypress Boolean"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Keypress Boolean"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 UP_ARROW"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 UP_ARROW"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 UP_ARROW"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Direction Arrows"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Direction Arrows"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Direction Arrows"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 If Else"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 If Else"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 If Else"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Watchers"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Keypress Watchers"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Keypress Watchers"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Matching"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Keypress Matching"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Keypress Matching"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 SFLP Card Project"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 SFLP Card Project"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 SFLP Card Project"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Exemplar"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Exemplar"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Exemplar"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Background"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Background"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Background"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Sprites"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Sprites"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Sprites"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card User Input"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card User Input"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card User Input"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Other Conditionals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Other Conditionals"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Other Conditionals"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Final"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Final"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Final"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Game Lab Workshop: Introduction",
+        "script_level.level_keys": [
+          "Game Lab Workshop: Introduction"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Drawing in Game Lab 1",
+        "script_level.level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Rectangle",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Rectangle"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Order of Blocks",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Order of Blocks"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Fill",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Fill"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Game Lab Workshop: Random",
+        "script_level.level_keys": [
+          "Game Lab Workshop: Random"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Game Lab Workshop: Draw Loop",
+        "script_level.level_keys": [
+          "Game Lab Workshop: Draw Loop"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Introduction to the Draw Loop",
+        "script_level.level_keys": [
+          "CSD: Introduction to the Draw Loop"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GameLab Workshop: Draw Loop Shapes",
+        "script_level.level_keys": [
+          "GameLab Workshop: Draw Loop Shapes"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Random Animation",
+        "script_level.level_keys": [
+          "CSD U3 Random Animation"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variables make a square",
+        "script_level.level_keys": [
+          "CSD U3 Variables make a square"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 Variables misconceptions try it",
+        "script_level.level_keys": [
+          "U3 Variables misconceptions try it"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Counters counter square movement",
+        "script_level.level_keys": [
+          "CSD U3 Counters counter square movement"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Game Lab Workshop: Variables to Sprites",
+        "script_level.level_keys": [
+          "Game Lab Workshop: Variables to Sprites"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Sprites in Game Lab",
+        "script_level.level_keys": [
+          "CSD: Sprites in Game Lab"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites intro sprites",
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites animating with sprites",
+        "script_level.level_keys": [
+          "CSD U3 Sprites animating with sprites"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites debug watchers",
+        "script_level.level_keys": [
+          "CSD U3 Sprites debug watchers"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites debug background",
+        "script_level.level_keys": [
+          "CSD U3 Sprites debug background"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Animation Tab",
+        "script_level.level_keys": [
+          "CSD: Animation Tab"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - images - first sprite with image",
+        "script_level.level_keys": [
+          "CSD U3 - images - first sprite with image"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - images - changing scene",
+        "script_level.level_keys": [
+          "CSD U3 - images - changing scene"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Sprites and Mod - Mouse X and Y",
+        "script_level.level_keys": [
+          "U3 - Sprites and Mod - Mouse X and Y"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Booleans Video",
+        "script_level.level_keys": [
+          "CSD U3 - Booleans Video"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Boolean Modify",
+        "script_level.level_keys": [
+          "CSD U3 Boolean Modify"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - conditionals - Matching",
+        "script_level.level_keys": [
+          "CSD U3 - conditionals - Matching"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Keypress Boolean",
+        "script_level.level_keys": [
+          "CSD U3 Keypress Boolean"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 UP_ARROW",
+        "script_level.level_keys": [
+          "CSD U3 UP_ARROW"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Direction Arrows",
+        "script_level.level_keys": [
+          "CSD U3 Direction Arrows"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 If Else",
+        "script_level.level_keys": [
+          "CSD U3 If Else"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Keypress Watchers",
+        "script_level.level_keys": [
+          "CSD U3 Keypress Watchers"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Keypress Matching",
+        "script_level.level_keys": [
+          "CSD U3 Keypress Matching"
+        ],
+        "lesson.key": "Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 SFLP Card Project",
+        "script_level.level_keys": [
+          "CSD U3 SFLP Card Project"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Exemplar",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Exemplar"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Background",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Background"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Sprites",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Sprites"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card User Input",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card User Input"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Other Conditionals",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Other Conditionals"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Final",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Final"
+        ],
+        "lesson.key": "Project: Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "workshop-gamelab"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

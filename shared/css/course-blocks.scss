@@ -37,10 +37,52 @@
   height: 40px;
 }
 
-.betatext {
+/**
+ * betatext can be used to style a span directly, or betacontainer can be used
+ * on a node containing markdown to apply the beta styling to all **strong**
+ * nodes in the markdown
+ */
+.betatext, .betacontainer strong {
   color: $realyellow;
   background-color: $charcoal;
   border-radius: 5px;
+}
+
+/**
+ * New style of row for tutorials that uses display:flex instead of float:left so
+ * that all boxes will be the same height, but can grow when international text is
+ * too long.
+ */
+.tutorial-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tutorial-block, .tutorial-block-wide {
+  flex: 0 0 auto;
+  border: solid 1px #bbb;
+  border-radius: 5px;
+  margin: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.tutorial-block {
+  min-height: 300px;
+}
+
+.tutorial-block-wide {
+  min-height: 140px;
+}
+/**
+ * This overrides styles in the courseblock-tall class below. When all uses have
+ * migrated to use tutorial-row and tutorial-block, then these styles can be removed
+ * here and from .courseblock-tall below.
+ */
+.tutorial-block .courseblock-tall {
+  float: none;
+  height: 100%;
+  border: 0;
+  margin: 0;
 }
 
 /* COURSEBLOCKS */
@@ -160,17 +202,18 @@
 }
 
 .courseblock-wide-small {
+  margin: 0px;
+  border: none;
+  float: none;
   background-color: white;
   overflow: hidden;
-  position: relative;
-  float: left;
   box-sizing: border-box;
-  border: solid 1px #bbb;
-  border-radius: 5px;
-  margin-top: 20px;
+  height: 100%;
 
   .heading {
     width: 280px;
+    margin: 0;
+    padding: 8px 0 16px 16px;
   }
 
   a {
@@ -179,57 +222,46 @@
 
   img {
     box-sizing: content-box;
-    float: right;
   }
 
   .imgspan {
     margin-left: 0;
     float: right;
     text-align: right;
+
+    html[dir=rtl] & {
+      float: left;
+      text-align: left;
+    }
   }
 
   h3 {
-    margin: 10px 0 0 10px;
+    margin: 0 0 0 0;
     color: $charcoal;
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 24px;
+    line-height: 28px;
     font-family: $gotham-bold;
-    float: left;
+    float: none;
     width: 94%;
   }
 
   h4 {
-    margin-left: 10px;
-    color: $charcoal;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin: 0 0 0 0;
     font-size: 14px;
-    font-family: $gotham-bold;
-    float: left;
-
-    html[dir=rtl] & {
-      float: right;
-      margin-left: 0px;
-      margin-right: 10px;
-    }
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: $charcoal;
   }
 
   .smalltext {
-    margin-left: 10px;
+    margin: 12px 0 0 0;
     font-size: 13px;
     line-height: 17px;
     font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
-    float: left;
-    padding-right: 10px;
-  }
-
-  html[dir=rtl] & {
-    float: right;
   }
 }
 

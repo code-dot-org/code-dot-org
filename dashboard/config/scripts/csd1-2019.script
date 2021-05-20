@@ -1,11 +1,9 @@
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit1"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit1/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit1/{LESSON}'
 family_name 'csd1'
 version_year '2019'
@@ -13,35 +11,39 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
-stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true, has_lesson_plan: false
 level 'csd-pre-survey-levelgroup_2019', assessment: true
 
-stage 'Intro to Problem Solving', flex_category: 'csd1_1'
+lesson_group 'csd1_1', display_name: 'Chapter 1: The Problem Solving Process'
+lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving', has_lesson_plan: true
 level 'CSD U1L01 TFMD_2019', named: true
 
-stage 'The Problem Solving Process', flex_category: 'csd1_1'
+lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process', has_lesson_plan: true
 level 'CSD U1L02 TFMD_2019', named: true
 level 'CSD Problem Solving Process Video', named: true
 
-stage 'Exploring Problem Solving', flex_category: 'csd1_1'
+lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving', has_lesson_plan: true
 level 'CSD U1L03 TFMD_2019', named: true
 
-stage 'What is a Computer?', flex_category: 'csd1_2'
+lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
+lesson 'What is a Computer?', display_name: 'What is a Computer?', has_lesson_plan: true
 level 'CSD U1L04 TFMD_2019', named: true
 level 'CSD What Makes a Computer a Computer Video_2019', named: true
 
-stage 'Input and Output', flex_category: 'csd1_2'
+lesson 'Input and Output', display_name: 'Input and Output', has_lesson_plan: true
 level 'CSD U1L05 TFMD_2019', named: true
 
-stage 'Processing', flex_category: 'csd1_2'
+lesson 'Processing', display_name: 'Processing', has_lesson_plan: true
 level 'CSD U1L06 TFMD_2019', named: true
 
-stage 'Apps and Storage', flex_category: 'csd1_2'
+lesson 'Apps and Storage', display_name: 'Apps and Storage', has_lesson_plan: true
 level 'CSD U1L07 TFMD_2019', named: true
 
-stage 'Project - Propose an App', flex_category: 'csd1_2'
+lesson 'Project - Propose an App', display_name: 'Project - Propose an App', has_lesson_plan: true
 level 'CSD U1L09 TFMD_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019', progression: 'Reflection', assessment: true
 
-stage 'Post-Project Test', lockable: true, flex_category: 'csd1_2'
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD U1 Test', assessment: true
+

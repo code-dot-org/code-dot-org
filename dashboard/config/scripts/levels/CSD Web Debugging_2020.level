@@ -1,0 +1,25 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-17T23:24:03.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csd_debugging",
+    "instructions_important": "false",
+    "display_name": "Video: Debugging",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18984,
+    "name_suffix": "_2020",
+    "long_instructions": "## Questions to consider:\r\n* What is debugging?\r\n* What are the four steps to debugging?",
+    "teacher_markdown": "Students should identify debugging as the process of finding and fixing problems in their code.\r\nThe four steps of the debugging process are describe the bug, hunt for the bug, try out small solutions (or change your code), and document what you have learned.\r\n\r\nYou may also want to reference the [Guide to Debugging](https://docs.google.com/document/d/1gwTvGQ3ZG6_yjouEKJXpISV2VKMaeIQT7bkY7Hh6vQM/) found on the CS Discoveries curriculum page."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-15 18:42:53 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-08 00:56:00 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-08 00:57:42 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-08 00:58:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:53:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

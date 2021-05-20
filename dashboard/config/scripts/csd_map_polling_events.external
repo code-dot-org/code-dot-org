@@ -1,6 +1,6 @@
 name 'CSD Map: Polling Events'
 display_name 'Polling Events'
 markdown <<MARKDOWN
-<object data="https://docs.code.org/csd/polling_events/" type="text/html"  style="width: 100%; height: 700px;"></object>
+<object data="https://studio.code.org/docs/csd/polling_events/" type="text/html"  style="width: 100%; height: 700px;"></object>
 
 MARKDOWN

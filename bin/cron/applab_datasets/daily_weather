@@ -1,0 +1,208 @@
+#!/usr/bin/env ruby
+require_relative '../only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# This script fetches weather forecast data from api.openweathermap and uploads to the shared firebase channel.
+require_relative '../../../deployment'
+require 'net/http'
+require 'json'
+require 'ostruct'
+require 'date'
+require_relative '../../../shared/middleware/helpers/firebase_helper'
+
+WeatherForecastOffice = Struct.new(:city, :state, :zip)
+
+API_KEY = '6e86f0c363cd54b5645603030b2f0f76'
+NUM_DAYS = 5
+
+def cardinal_dir_from_degrees(degrees)
+  return '' unless degrees.is_a? Numeric
+  dirs = %w(N NE E SE S SW W NW N)
+  return dirs[(degrees / 45).round]
+end
+
+def get_weather_data
+  forecast_offices = [
+    WeatherForecastOffice.new('Anchorage', 'Alaska', '99502'),
+    WeatherForecastOffice.new('Fairbanks', 'Alaska', '99709'),
+    WeatherForecastOffice.new('Juneau', 'Alaska', '99801'),
+    WeatherForecastOffice.new('Denver/Boulder', 'Colorado', '80305'),
+    WeatherForecastOffice.new('Grand Junction', 'Colorado', '81506'),
+    WeatherForecastOffice.new('Pueblo', 'Colorado', '81001'),
+    WeatherForecastOffice.new('Chicago', 'Illinois', '60446'),
+    WeatherForecastOffice.new('Lincoln', 'Illinois', '62656'),
+    WeatherForecastOffice.new('Indianapolis', 'Indiana', '46241'),
+    WeatherForecastOffice.new('Northern Indiana', 'Indiana', '46567'),
+    WeatherForecastOffice.new('Davenport/Quad Cities', 'Iowa', '52806'),
+    WeatherForecastOffice.new('Des Moines', 'Iowa', '50131'),
+    WeatherForecastOffice.new('Dodge City', 'Kansas', '67801'),
+    WeatherForecastOffice.new('Goodland', 'Kansas', '67735'),
+    WeatherForecastOffice.new('Topeka', 'Kansas', '66616'),
+    WeatherForecastOffice.new('Wichita', 'Kansas', '67209'),
+    WeatherForecastOffice.new('Jackson', 'Kentucky', '41339'),
+    WeatherForecastOffice.new('Louisville', 'Kentucky', '40229'),
+    WeatherForecastOffice.new('Paducah', 'Kentucky', '42086'),
+    WeatherForecastOffice.new('Detroit/Pontiac', 'Michigan', '48386'),
+    WeatherForecastOffice.new('Gaylord', 'Michigan', '49735'),
+    WeatherForecastOffice.new('Grand Rapids', 'Michigan', '49512'),
+    WeatherForecastOffice.new('Marquette', 'Michigan', '49866'),
+    WeatherForecastOffice.new('Duluth', 'Minnesota', '55811'),
+    WeatherForecastOffice.new('Chanhassen/Twin Cities', 'Minnesota', '55317'),
+    WeatherForecastOffice.new('Kansas City/Pleasant Hill', 'Missouri', '64080'),
+    WeatherForecastOffice.new('Springfield', 'Missouri', '65802'),
+    WeatherForecastOffice.new('St. Louis', 'Missouri', '63304'),
+    WeatherForecastOffice.new('Hastings', 'Nebraska', '68901'),
+    WeatherForecastOffice.new('North Platte', 'Nebraska', '69101'),
+    WeatherForecastOffice.new('Omaha/Valley', 'Nebraska', '68064'),
+    WeatherForecastOffice.new('Bismarck', 'North Dakota', '58504'),
+    WeatherForecastOffice.new('Grand Forks', 'North Dakota', '58203'),
+    WeatherForecastOffice.new('Aberdeen', 'South Dakota', '57401'),
+    WeatherForecastOffice.new('Rapid City', 'South Dakota', '57701'),
+    WeatherForecastOffice.new('Sioux Falls', 'South Dakota', '57104'),
+    WeatherForecastOffice.new('Green Bay', 'Wisconsin', '54313'),
+    WeatherForecastOffice.new('La Crosse', 'Wisconsin', '54601'),
+    WeatherForecastOffice.new('Milwaukee/Sullivan', 'Wisconsin', '53118'),
+    WeatherForecastOffice.new('Cheyenne', 'Wyoming', '82001'),
+    WeatherForecastOffice.new('Riverton', 'Wyoming', '82501'),
+    WeatherForecastOffice.new('Caribou', 'Maine', '04736'),
+    WeatherForecastOffice.new('Gray/Portland', 'Maine', '04039'),
+    WeatherForecastOffice.new('Boston', 'Massachusetts', '02766'),
+    WeatherForecastOffice.new('Mount Holly/Philadelphia', 'New Jersey', '08060'),
+    WeatherForecastOffice.new('Albany', 'New York', '12203'),
+    WeatherForecastOffice.new('Binghamton', 'New York', '13790'),
+    WeatherForecastOffice.new('Buffalo', 'New York', '14225'),
+    WeatherForecastOffice.new('New York/Upton', 'New York', '11973'),
+    WeatherForecastOffice.new('Newport/Morehead City', 'North Carolina', '28570'),
+    WeatherForecastOffice.new('Raleigh', 'North Carolina', '27606'),
+    WeatherForecastOffice.new('Wilmington', 'North Carolina', '28405'),
+    WeatherForecastOffice.new('Cleveland', 'Ohio', '44135'),
+    WeatherForecastOffice.new('Wilmington', 'Ohio', '45177'),
+    WeatherForecastOffice.new('Pittsburgh', 'Pennsylvania', '15108'),
+    WeatherForecastOffice.new('State College', 'Pennsylvania', '16803'),
+    WeatherForecastOffice.new('Charleston', 'South Carolina', '29406'),
+    WeatherForecastOffice.new('Columbia', 'South Carolina', '29170'),
+    WeatherForecastOffice.new('Greenville-Spartanburg', 'South Carolina', '29651'),
+    WeatherForecastOffice.new('Burlington', 'Vermont', '05403'),
+    WeatherForecastOffice.new('Baltimore/Washington', 'Virginia', '20166'),
+    WeatherForecastOffice.new('Blacksburg/Roanoke', 'Virginia', '24060'),
+    WeatherForecastOffice.new('Wakefield', 'Virginia', '23888'),
+    WeatherForecastOffice.new('Charleston', 'West Virginia', '25309'),
+    WeatherForecastOffice.new('Guam', 'Guam', '96913'),
+    WeatherForecastOffice.new('Honolulu', 'Hawaii', '96822'),
+    WeatherForecastOffice.new('Birmingham', 'Alabama', '35040'),
+    WeatherForecastOffice.new('Huntsville', 'Alabama', '35805'),
+    WeatherForecastOffice.new('Mobile/Pensacola', 'Alabama', '36608'),
+    WeatherForecastOffice.new('Little Rock', 'Arkansas', '72118'),
+    WeatherForecastOffice.new('Jacksonville', 'Florida', '32218'),
+    WeatherForecastOffice.new('Key West', 'Florida', '33040'),
+    WeatherForecastOffice.new('Melbourne', 'Florida', '32901'),
+    WeatherForecastOffice.new('Miami', 'Florida', '33165'),
+    WeatherForecastOffice.new('Tallahassee', 'Florida', '32304'),
+    WeatherForecastOffice.new('Tampa', 'Florida', '33570'),
+    WeatherForecastOffice.new('Peachtree City/Atlanta', 'Georgia', '30269'),
+    WeatherForecastOffice.new('Lake Charles', 'Louisiana', '70607'),
+    WeatherForecastOffice.new('New Orleans/Baton Rouge', 'Louisiana', '70460'),
+    WeatherForecastOffice.new('Shreveport', 'Louisiana', '71109'),
+    WeatherForecastOffice.new('Jackson', 'Mississippi', '39232'),
+    WeatherForecastOffice.new('Albuquerque', 'New Mexico', '87106'),
+    WeatherForecastOffice.new('Norman/Oklahoma City', 'Oklahoma', '73072'),
+    WeatherForecastOffice.new('Tulsa', 'Oklahoma', '74128'),
+    WeatherForecastOffice.new('San Juan', 'Puerto Rico', '00979'),
+    WeatherForecastOffice.new('Memphis', 'Tennessee', '38120'),
+    WeatherForecastOffice.new('Morristown/Knoxville', 'Tennessee', '37877'),
+    WeatherForecastOffice.new('Nashville', 'Tennessee', '37138'),
+    WeatherForecastOffice.new('Amarillo', 'Texas', '79108'),
+    WeatherForecastOffice.new('Austin/San Antonio', 'Texas', '78130'),
+    WeatherForecastOffice.new('Brownsville', 'Texas', '78521'),
+    WeatherForecastOffice.new('Corpus Christi', 'Texas', '78406'),
+    WeatherForecastOffice.new('El Paso', 'Texas', '88008'),
+    WeatherForecastOffice.new('Fort Worth-Dallas', 'Texas', '76137'),
+    WeatherForecastOffice.new('Houston/Galveston', 'Texas', '77539'),
+    WeatherForecastOffice.new('Lubbock', 'Texas', '79423'),
+    WeatherForecastOffice.new('Midland/Odessa', 'Texas', '79706'),
+    WeatherForecastOffice.new('San Angelo', 'Texas', '76904'),
+    WeatherForecastOffice.new('Flagstaff', 'Arizona', '86015'),
+    WeatherForecastOffice.new('Phoenix', 'Arizona', '85281'),
+    WeatherForecastOffice.new('Tucson', 'Arizona', '85719'),
+    WeatherForecastOffice.new('Eureka', 'California', '95501'),
+    WeatherForecastOffice.new('Los Angeles/Oxnard', 'California', '93030'),
+    WeatherForecastOffice.new('Sacramento', 'California', '95821'),
+    WeatherForecastOffice.new('San Diego', 'California', '92127'),
+    WeatherForecastOffice.new('San Francisco Bay Area/Monterey', 'California', '93943'),
+    WeatherForecastOffice.new('San Joaquin Valley/Hanford', 'California', '93230'),
+    WeatherForecastOffice.new('Boise', 'Idaho', '83705'),
+    WeatherForecastOffice.new('Pocatello', 'Idaho', '83204'),
+    WeatherForecastOffice.new('Billings', 'Montana', '59102'),
+    WeatherForecastOffice.new('Glasgow', 'Montana', '59230'),
+    WeatherForecastOffice.new('Great Falls', 'Montana', '59404'),
+    WeatherForecastOffice.new('Missoula', 'Montana', '59808'),
+    WeatherForecastOffice.new('Elko', 'Nevada', '89801'),
+    WeatherForecastOffice.new('Las Vegas', 'Nevada', '89139'),
+    WeatherForecastOffice.new('Reno', 'Nevada', '89512'),
+    WeatherForecastOffice.new('Medford', 'Oregon', '97504'),
+    WeatherForecastOffice.new('Pendleton', 'Oregon', '97801'),
+    WeatherForecastOffice.new('Portland', 'Oregon', '97230'),
+    WeatherForecastOffice.new('Salt Lake City', 'Utah', '84116'),
+    WeatherForecastOffice.new('Seattle', 'Washington', '98115'),
+    WeatherForecastOffice.new('Spokane', 'Washington', '99224')
+  ]
+  records = {}
+  columns = ['id', 'State', 'City', 'Forecast Number', 'Date', 'Main Condition', 'Condition Description', 'Icon',
+             'Low Temperature', 'High Temperature', 'Humidity Percentage', 'Wind MPH', 'Wind Direction', 'Rain Inches',
+             'Snow Inches', 'Pressure', 'Cloud Percent', 'UTC Timestamp', 'Timezone Offset']
+
+  id = 1
+  forecast_offices.each do |office|
+    forecast_number = 1
+
+    url = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=#{office.zip},us&cnt=#{NUM_DAYS}&units=imperial&appid=#{API_KEY}"
+    response = Net::HTTP.get_response(URI(url))
+    next unless response.code == '200'
+
+    parsed_response = JSON.parse(response.body)
+    measurements = parsed_response['list']
+    measurements.each do |measurement|
+      record = OpenStruct.new
+      record.id = id
+      record.State = office.state
+      record.City = office.city
+      record['Forecast Number'] = forecast_number
+
+      # list.dt gives timestamp of forecast in UTC, city.timezone gives shift in seconds from UTC
+      parsed_date = Time.at(measurement['dt'] + parsed_response['city']['timezone'])
+      record.Date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
+
+      weather_condition = measurement['weather'][0]
+      record['Main Condition'] = weather_condition['main']
+      record['Condition Description'] = weather_condition['description']
+      record.Icon = format('http://openweathermap.org/img/wn/%s@2x.png', weather_condition['icon'])
+
+      record['Low Temperature'] = measurement['temp']['min']
+      record['High Temperature'] = measurement['temp']['max']
+      record['Humidity Percentage'] = measurement['humidity']
+      record['Wind MPH'] = measurement['speed'].round
+      record['Wind Direction'] = cardinal_dir_from_degrees(measurement['deg'])
+
+      record['Rain Inches'] = measurement['rain'] || 0
+      record['Snow Inches'] = measurement['snow'] || 0
+
+      record['Pressure'] = measurement['pressure']
+      record['Cloud Percent'] = measurement['clouds']
+      record['UTC Timestamp'] = measurement['dt']
+      record['Timezone Offset'] = parsed_response['city']['timezone']
+
+      records[id] = record.to_h.to_json
+      id += 1
+      forecast_number += 1
+    end
+  end
+  return records, columns
+end
+
+def main
+  fb = FirebaseHelper.new('shared')
+  records, columns = get_weather_data
+  fb.upload_live_table('Daily Weather', records, columns)
+end
+
+main

@@ -1,0 +1,615 @@
+{
+  "script": {
+    "name": "csa2-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "CSA",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-06 20:12:02 UTC",
+    "seeding_key": {
+      "script.name": "csa2-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lesson group",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "new lesson",
+      "name": "Defining Attributes",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.",
+        "preparation": "* Print copies of Defining Attributes - Classes Foldables for each student. These foldables should be printed two-sided, flip on short-edge.\n* Print copies of Defining Attributes - Main Method. Cut in half so each student receives a half sheet.\n* Print copies of the Defining Attributes handout for each student\n* Print and cut out a class set of Quiz, Quiz, Trade cards\n* Prepare 20-25 sticky notes per student\n* Designate an area in the classroom (on the board or a wall) for students to place their warm-up sticky notes\n",
+        "student_overview": "Through our experiences in The Neighborhood, we know that classes and objects are key components of the Java programming language. But just how exactly do classes create objects? In this lesson, you explore how an object is created and learn about a process called data encapsulation. \n"
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Using Variables",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Writing Constructors",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Adding Multiple Constructors",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Manipulating Variables and Object Data",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Minimizing Errors in Initialization",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Writing Constructors for Hierarchies",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Accessing Object Data",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Modifying Object Data",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Displaying Object Information",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "The Neighborhood Store Management Project - Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "The Neighborhood Store Management Project - Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "The Neighborhood Store Management Project - Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "FRQ Day",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Assessment Day",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "7d8895e9-ed73-4920-9c14-436cbdfcaa1b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d8895e9-ed73-4920-9c14-436cbdfcaa1b",
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5",
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "1b78fda7-b3b7-49d1-a122-38d373ed220e",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1b78fda7-b3b7-49d1-a122-38d373ed220e",
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "0a8f0d81-ba3d-4457-9ff8-04593ca20829",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give 3-5 sticky notes to each student.\n\n**Do This:** Have students respond to each of the following prompts on an individual sticky note.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What do we know about classes and objects?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What do we know about classes and objects?*\n     * This slide includes code snippets and imagery from Unit 1 to aid students in recalling concepts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  *What do we wonder about classes and objects?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, share one ‘know’ and one ‘wonder.’*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discussion Goal:** Students talk through what they remember and what questions they still have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate an area in the classroom for students to place their \"know\" and \"wonder\" sticky notes. Prompt students to post their sticky notes in the designated area. At the end of class, collect the \"wonder\" sticky notes to reference throughout the unit.",
+        "name": "What We Know, What We Wonder"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a8f0d81-ba3d-4457-9ff8-04593ca20829",
+        "lesson_activity.key": "7d8895e9-ed73-4920-9c14-436cbdfcaa1b"
+      }
+    },
+    {
+      "key": "6f182070-6ca4-45e1-aec8-42deace6db2a",
+      "position": 2,
+      "properties": {
+        "description": "During Unit 1, we explored the concept of classes and objects within The Neighborhood. As we move into Unit 2, we will look into classes and objects in more detail to understand how they form the basis for the Java programming language. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6f182070-6ca4-45e1-aec8-42deace6db2a",
+        "lesson_activity.key": "7d8895e9-ed73-4920-9c14-436cbdfcaa1b"
+      }
+    },
+    {
+      "key": "650f2ede-510d-4c0b-81c1-2de1c530439e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Defining Attributes - Classes Foldables, a Defining Attributes - Main Method, and approximately 20 sticky notes. \n\n**Do This:** Share with students that they will be working with the Shape class foldable first. Show the following slides:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instruct students to fold their `Shape` class foldable in half so that side A is facing them.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animation to review the concepts on the front of the foldable. Draw attention to the fact that the class header and the constructor are both `public`, meaning that they are accessible outside of the class.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Ask students to open the foldable and explore the inside of the foldable. What do they notice?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animation to identify that the `Shape` class has three instance variables. All three instance variables are `private`, meaning they are not accessible outside of the `Shape` class.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define data encapsulation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How do classes use data encapsulation?\n\n**Discussion Goal:** Students identify that designating instance variables of a class as private is an example of data encapsulation.",
+        "duration": "12",
+        "name": "`The Shape` Class"
+      },
+      "seeding_key": {
+        "activity_section.key": "650f2ede-510d-4c0b-81c1-2de1c530439e",
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5"
+      }
+    },
+    {
+      "key": "61fda186-1255-4547-89db-c93aab37b111",
+      "position": 2,
+      "properties": {
+        "description": "Now let’s see how Java uses a constructor to create an object of a given class through setting instance variables.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "61fda186-1255-4547-89db-c93aab37b111",
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5"
+      }
+    },
+    {
+      "key": "ee1da019-a070-44aa-8d73-84ca00873676",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Click through the animations on each slide to show students how they might create a `Shape` object called `mySquare`. Students should be encouraged to follow along on their foldable using the provided sticky notes.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Model calling the constructor to create a new `Shape` object called `mySquare`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through assigning values to each instance variable inside of `Shape`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Model the output of the object through a sketch of `mySquare`.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to demonstrate how the `Shape` class foldable works for the class. The slides demonstrate what is happening in a larger visual, but students may benefit from seeing a physical example. After walking through the animated slides, all students should have a square with a dotted outline drawn on their output sticky note.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ee1da019-a070-44aa-8d73-84ca00873676",
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5"
+      }
+    },
+    {
+      "key": "d56befdb-ce55-4cbe-9c42-3591abc69b1c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to remove all sticky notes from their `Shape` class foldable.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Share that their next task is to model how they would create a new `Shape` object called `myTriangle`. Instruct students to follow the same steps to create a `myTriangle` object using their `Shape` class foldable.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Though students have a partner, they should be working on individual foldables to model how `myTriangle` is created. As students work, monitor their progress to ensure they are hitting the following checkpoints:\n* They write a constructor on their sticky note that creates a new `Shape` object called `myTriangle` that takes three arguments: 3 for sides, \"triangle\" for type, and an outline of their choice.\n* They assign the appropriate values for the instance variables inside the foldable.\n* They return to the front of their foldable and add their implementation of `myTriangle` to reflect their given attributes on top of their constructor sticky note."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d56befdb-ce55-4cbe-9c42-3591abc69b1c",
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5"
+      }
+    },
+    {
+      "key": "ded790c2-f5ee-4e7e-8d7e-6e0e2e9bf372",
+      "position": 5,
+      "properties": {
+        "description": "Congratulations! You’ve all successfully implemented a new object of the `Shape` class. Now that we’ve walked through this process using the `Shape class`, you’re going to define your own class - `Dessert`.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ded790c2-f5ee-4e7e-8d7e-6e0e2e9bf372",
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5"
+      }
+    },
+    {
+      "key": "6dc994df-57a4-4ac2-a564-1d2d2ae743cd",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to fold their other foldable, the `Dessert` class foldable, similarly to how they created their `Shape` class foldable. Note that the `Dessert` class foldable includes blanks.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> With their partner, students choose three or four attributes that all desserts have in common. Instruct them to add these attributes to the `Dessert` constructor on the front of the foldable.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students open the foldable and add a `private` instance variable for each attribute. Remind students that each instance variable should be `private`, and that they should choose a different variable name than is used in the constructor.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> After setting up their foldable, instruct each student to write a call to the constructor on a sticky note. They then pass their constructor call to their partner, who will use their foldable and Main Method to create the object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Did your partner create the object you intended? If they were, why were they successful? If your partner was unable to successfully create the object, why not?*\n\n**Discussion Goal:** Students to articulate the process they went through using the foldable. Use prompting questions if necessary to guide students to use lesson vocabulary.",
+        "duration": "10",
+        "name": "Let's Build Our Dessert Menu",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will reuse their foldable in Lessons 8 and 9. Remind students to hang on to their foldable or you can collect for later use.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6dc994df-57a4-4ac2-a564-1d2d2ae743cd",
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5"
+      }
+    },
+    {
+      "key": "bd513aa1-e02d-4be6-a5de-a9c5952b4572",
+      "position": 7,
+      "properties": {
+        "duration": "8",
+        "name": "Challenge: Create Your Own Class",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Because this lesson introduces many new concepts, it is critical to leave the full ten minutes for the wrap up. If you find you are running short on time, use this challenge as extra practice at a later time.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bd513aa1-e02d-4be6-a5de-a9c5952b4572",
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5"
+      }
+    },
+    {
+      "key": "e1d2103a-aa57-45a4-96e7-947d80b1b795",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute the Defining Attributes Activity Guide to each student. Students should work in pairs to create a class and an object of that class. If time allows, allow students to share their classes and objects with another group.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1d2103a-aa57-45a4-96e7-947d80b1b795",
+        "lesson_activity.key": "e64e90f2-c7f2-4873-b482-3f84e02b10c5"
+      }
+    },
+    {
+      "key": "ffb57db8-75ac-4851-b881-8ea2cfb96c9e",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student one Quiz, Quiz, Trade card. Make sure students keep the answer side hidden.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for Quiz, Quiz, Trade. Students should find a partner, complete their Quiz, Quiz, Trade, and then raise their hand to find a new partner. They will repeat this process for 7-8 minutes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What concepts from today’s lesson clicked? What ideas need more clarification?*\n\n**Discussion Goal:** Address misconceptions or make a note of topics that may need to be revisited.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n---",
+        "duration": "10",
+        "name": "Quiz, Quiz, Trade"
+      },
+      "seeding_key": {
+        "activity_section.key": "ffb57db8-75ac-4851-b881-8ea2cfb96c9e",
+        "lesson_activity.key": "1b78fda7-b3b7-49d1-a122-38d373ed220e"
+      }
+    },
+    {
+      "key": "d7238055-daae-415e-a3ae-1d61decce65a",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Match the vocabulary words from this lesson with the correct definitions.",
+        "name": "Assessment: Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7238055-daae-415e-a3ae-1d61decce65a",
+        "lesson_activity.key": "1b78fda7-b3b7-49d1-a122-38d373ed220e"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "e3a98ec6-839d-4b69-adfd-d12fd528139e",
+      "properties": {
+        "description": "Create instance variables to represent attributes"
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "objective.key": "e3a98ec6-839d-4b69-adfd-d12fd528139e"
+      }
+    },
+    {
+      "key": "827bfee9-6bbe-4033-ae56-cb732dd40c5f",
+      "properties": {
+        "description": "Describe the process and purpose of encapsulation"
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "objective.key": "827bfee9-6bbe-4033-ae56-cb732dd40c5f"
+      }
+    },
+    {
+      "key": "d4740c9c-b407-488e-9dc8-8c1c15ffaa61",
+      "properties": {
+        "description": "Understand the difference between `public` and `private` variables"
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "objective.key": "d4740c9c-b407-488e-9dc8-8c1c15ffaa61"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.A.3"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

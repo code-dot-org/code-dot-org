@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T17:04:42.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "long_instructions": "# Make a Prediction: User Input\r\n\r\nSo far you've used `keyDown` as a way to let users control your programs, but that's just one of many ways to take input. In fact, just one of many ways _to detect keypresses_! Depending on how you want to react to a keypress, there are a few other blocks you might want to use.\r\n\r\nRead the program and predict below what will happen when you press each of the up, down, left, and right arrows.\r\n\r\nAfter making your prediction, run the code. Think about: \r\n\r\n* What seems to be the difference between `keyDown()`, `keyWentDown()`, and `keyWentUp()`?\r\n* What do you think the exclamation mark (`!`) on line 10 does?\r\n* How might you use the different keypress blocks in a game?",
+    "instructions_important": "false",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16111,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-18 20:29:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,5 +1,5 @@
 module Pd::SurveyPipeline
-  class DailySurveyDecoratorTest < ActiveSupport::TestCase
+  class SurveyPipelineWorkerTest < ActiveSupport::TestCase
     test 'raise if missing input key' do
       input = {key1: nil}
       required_keys = [:key1, :key2, :key3]

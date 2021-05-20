@@ -20,6 +20,8 @@ bn-BD:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> আপনি কি (CS) কম্পিউটার সায়েন্সের শিক্ষক ? CSEdWeek এর
     উপর অন্যান্য বিষয় গুলি জানুন</a>'
+  csedweek_banner_teachers_text: " আপনি কি (CS) কম্পিউটার সায়েন্সের শিক্ষক ? CSEdWeek
+    এর উপর অন্যান্য বিষয় গুলি জানুন"
   n_have_learned_an_hoc: "<h2>এক ঘণ্টা কোড করার </h2><h1> চেষ্টা করুন </h1><h3># সেবা</h3>"
   anybody_can_learn: যে কেউ শিখতে পারবে।
   learn_now: এবার শিখুন
@@ -27,8 +29,6 @@ bn-BD:
     থাকা উচিত
   petition_sign_message: 'আপনি যদি সহমত হন, তবে আপনার নাম সই করুন।  # অন্যদের যোগ
     দিতে বলুন।'
-  petition_sign_message_support: আমাদের সমর্থন করলে, আপনার নাম সই করুন। অন্যদের যোগ
-    দিতে বলুন।
   petition_join_others: "# অন্যদের যোগ দিন"
   name: নাম
   email: ই-মেইল
@@ -203,6 +203,9 @@ bn-BD:
   get_a_certificate_message_after: ডাউনলোড অথবা মুদ্রণ করার জন্য সার্টিফিকেট এ ক্লিক
     করুন। এখন আমাদের <a href='http://studio.code.org'> অন্যান্য কোর্সে</a> যান বা
     <a href='/learn/beyond'> অধিক শেখার জন্য </a> আরও বিকল্প দেখুন।
+  get_a_certificate_message_after_markdown: ডাউনলোড অথবা মুদ্রণ করার জন্য সার্টিফিকেট
+    এ ক্লিক করুন। এখন আমাদের [অন্যান্য কোর্সে](http://studio.code.org), যান বা অধিক
+    [শেখার জন্য](/learn/beyond) আরও বিকল্প দেখুন।
   thanks_for_submitting: জমা দেওয়ার জন্য ধন্যবাদ!
   if_you_enjoyed: আপনি যদি শিখে মজা পেয়েছেন, তবে আপনার বন্ধুদেরও বলুন এটা চেষ্টা করে
     দেখতে ! আমরা চাই সারা বিশ্বের সকলে যেন এটা শিখুন।
@@ -348,6 +351,7 @@ bn-BD:
   homepage_action_text_learn: শেখা শুরু করুন।
   homepage_action_text_signpetition: পিটিশন স্বাক্ষর করুন
   homepage_signpetition_dropdown: "▾ একমত;"
+  homepage_signpetition_dropdown_text: আমি একমত
   homepage_diversity_pledge: বৈচিত্রতার অঙ্গীকার নিন
   homepage_banner_text_prizes: এক ঘন্টা কোড অনুষ্ঠান আবার আসছে, ডিসেম্বর ৭ থেকে ১৩।
   homepage_banner_link_prizes: ইতিহাসের সবচেয়ে বড় ঘটনায় যোগ দিন।
@@ -1011,6 +1015,8 @@ bn-BD:
   coursee-2018_gradelevel: বয়স 8-12
   coursed-2019_gradelevel: গ্রেড ৮ +
   coursee-2019_gradelevel: বয়স 8-12
+  coursed-2020_gradelevel: গ্রেড ৮ +
+  coursee-2020_gradelevel: বয়স 8-12
   accelerated_gradelevel: বয়স ১০-১৮
   codeorg_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   codeintl_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
@@ -1605,6 +1611,8 @@ bn-BD:
   header_project_gallery: প্রকল্প
   header_educate_hoc: এক ঘন্টার কোড
   header_stats: পরিসংখ্যান
+  header_legal_privacy: গোপনীয়তার নীতি
+  header_legal_tos: সেবার শর্ত সমূহ
   user_header_label: হ্যালো %{username}
   user_header_settings: আমার একাউন্ট
   user_header_logout: সাইন আউট
@@ -1631,3 +1639,7 @@ bn-BD:
   hoc2018_dance_party_button: শুরু করুন
   hoc2018_dance_teacher_resources_tile1_button: পাঠ পরিকল্পনা
   hoc2018_dance_amazon_about_future_engineer_button: আরও জানুন
+  footer_privacy_policy: গোপনীয়তার নীতি
+  footer_donate: দান করুন
+  footer_support: সম্প্রদায় এবং সহায়তা
+  footer_terms: শর্তাবলী

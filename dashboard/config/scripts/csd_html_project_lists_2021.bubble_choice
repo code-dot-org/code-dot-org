@@ -1,0 +1,7 @@
+name 'CSD HTML project Lists_2021'
+display_name 'HTML Lists'
+description 'Check out these new tags that will let you add lists to your web page.'
+
+sublevels
+level 'CSD Web Dev choice level ul 1_2021'
+level 'CSD Web Dev choice level ol 1_2021'

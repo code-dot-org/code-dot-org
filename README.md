@@ -47,7 +47,6 @@ The server for [the **Code.org** website](https://code.org/), a [Sinatra](http:/
 * [code.org](https://code.org)
 * [hourofcode.com](https://hourofcode.com)
 * [csedweek.org](https://csedweek.org)
-* [Teacher Dashboard](http://code.org/teacher-dashboard)
 
 ### [apps](./apps)
 
@@ -65,3 +64,4 @@ Start here if you are looking for:
 * **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
 * **shared**: Source and assets used by many parts of our application.
 * **tools**: Git commit hooks.
+

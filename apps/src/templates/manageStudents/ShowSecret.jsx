@@ -8,15 +8,7 @@ import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {setSecretImage, setSecretWords} from './manageStudentsRedux';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-
-const styles = {
-  reset: {
-    marginRight: 10
-  },
-  image: {
-    width: 45
-  }
-};
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 class ShowSecret extends Component {
   static propTypes = {
@@ -38,18 +30,47 @@ class ShowSecret extends Component {
   };
 
   show = () => {
+    const {sectionId, id, loginType} = this.props;
     this.setState({
       isShowing: true
     });
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'show-secret',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id,
+          loginType: loginType
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   hide = () => {
+    const {sectionId, id, loginType} = this.props;
     this.setState({
       isShowing: false
     });
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'hide-secret',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id,
+          loginType: loginType
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   reset = () => {
+    const {sectionId, id, loginType} = this.props;
     const dataToUpdate = {
       secrets: 'reset_secrets',
       student: {id: this.props.id}
@@ -69,6 +90,19 @@ class ShowSecret extends Component {
         } else if (this.props.loginType === SectionLoginType.word) {
           this.props.setSecretWords(this.props.id, data.secret_words);
         }
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'manage-students',
+            event: 'reset-secret',
+            data_json: JSON.stringify({
+              sectionId: sectionId,
+              studentId: id,
+              loginType: loginType
+            })
+          },
+          {includeUserId: true}
+        );
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -81,14 +115,23 @@ class ShowSecret extends Component {
   render() {
     const {resetDisabled} = this.props;
     const tooltipId = resetDisabled && _.uniqueId();
+    const showButtonText =
+      this.props.loginType === SectionLoginType.word
+        ? i18n.showWords()
+        : i18n.showPicture();
+    const hideButtonText =
+      this.props.loginType === SectionLoginType.word
+        ? i18n.hideWords()
+        : i18n.hidePicture();
 
     return (
       <div>
         {!this.state.isShowing && (
           <Button
+            __useDeprecatedTag
             onClick={this.show}
             color={Button.ButtonColor.white}
-            text={i18n.showSecret()}
+            text={showButtonText}
           />
         )}
         {this.state.isShowing && (
@@ -104,6 +147,7 @@ class ShowSecret extends Component {
             )}
             <span data-for={tooltipId} data-tip>
               <Button
+                __useDeprecatedTag
                 onClick={this.reset}
                 color={Button.ButtonColor.blue}
                 text={i18n.reset()}
@@ -118,9 +162,10 @@ class ShowSecret extends Component {
               )}
             </span>
             <Button
+              __useDeprecatedTag
               onClick={this.hide}
               color={Button.ButtonColor.white}
-              text={i18n.hideSecret()}
+              text={hideButtonText}
             />
           </div>
         )}
@@ -128,6 +173,15 @@ class ShowSecret extends Component {
     );
   }
 }
+
+const styles = {
+  reset: {
+    marginRight: 10
+  },
+  image: {
+    width: 45
+  }
+};
 
 export const UnconnectedShowSecret = ShowSecret;
 

@@ -119,6 +119,13 @@ export const dropletBuiltinConfigBlocks = [
     type: 'value',
     params: ['__'],
     docFunc: 'mathPow'
+  },
+  {
+    func: 'Math.sqrt',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathSqrt'
   }
 ];
 
@@ -148,6 +155,7 @@ standardConfig.blocks = [
   {func: 'subtractOperator', block: '__ - __', category: 'Math'},
   {func: 'multiplyOperator', block: '__ * __', category: 'Math'},
   {func: 'divideOperator', block: '__ / __', category: 'Math'},
+  {func: 'moduloOperator', block: '__ % __', category: 'Math'},
   {func: 'equalityOperator', block: '__ == __', category: 'Math'},
   {func: 'inequalityOperator', block: '__ != __', category: 'Math'},
   {func: 'greaterThanOperator', block: '__ > __', category: 'Math'},
@@ -159,12 +167,10 @@ standardConfig.blocks = [
   {func: 'notOperator', block: '!__', category: 'Math'},
   // randomNumber_max has been deprecated
   // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
-  // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
   {
     func: 'randomNumber_min_max',
     block: 'randomNumber(1, 10)',
-    category: 'Math',
-    docFunc: 'randomNumber'
+    category: 'Math'
   },
   {func: 'mathRound', block: 'Math.round(__)', category: 'Math'},
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math'},
@@ -172,6 +178,9 @@ standardConfig.blocks = [
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math'},
   {func: 'mathRandom', block: 'Math.random()', category: 'Math'},
   {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math'},
+  {func: 'mathSqrt', block: 'Math.sqrt(__)', category: 'Math'},
+  {func: 'mathIncrement', block: '__++', category: 'Math'},
+  {func: 'mathDecrement', block: '__--', category: 'Math'},
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables'},

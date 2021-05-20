@@ -1,0 +1,29 @@
+name 'U10 SSQRP1 part 2'
+editor_experiment ''
+
+
+description 'Which of the following data is not obtained using data collection from the smartphone, but is necessary for _GroceryGrabbr_ to create the total cost of groceries on the list?'
+wrong 'the location of the grocery store'
+wrong 'the location of the user'
+right 'the cost of groceries'
+wrong 'the shelf location of the groceries'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** The data about the cost of each item would be obtained from _GroceryGrabbr’s_ own database.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+* CRD-2.C.1 - Program input is data sent to a computer for processing by a program. Input can come in a variety of forms, such as tactile, audio, visual, or text.
+* CRD-2.C.4 - Inputs usually affect the output produced by a program.
+
+
+:::
+
+
+MARKDOWN

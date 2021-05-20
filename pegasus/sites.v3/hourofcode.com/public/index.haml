@@ -1,10 +1,12 @@
 ---
 layout: wide_index
-title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year')) %>"
 social:
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://hourofcode.com"
+  twitter:site: "@codeorg"
+  twitter:url: https://hourofcode.com
 ---
+:ruby
+  @header["title"] = hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year'))
+
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -facebook = {:u=>"http://#{request.host}/us"}
@@ -14,26 +16,19 @@ social:
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
 -hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
-:ruby
-  HIGHLIGHTS_CONSTANTS = [
-    {:id=>64, :heading_s=>hoc_s(:highlights_constant_trudeau_heading), :short_heading_s=>hoc_s(:highlights_constant_trudeau_short_heading), :image_url_s=>"hoc-trudeau.jpg", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://www.youtube.com/watch?v=8QwT58VTj_g"},
-    {:id=>63, :heading_s=>hoc_s(:highlights_constant_ny_heading), :short_heading_s=>hoc_s(:highlights_constant_ny_short_heading), :image_url_s=>"chicago-2.png", :link_text_s=>hoc_s(:highlights_readmore), :url_s=>"http://www.brooklynpaper.com/stories/39/5/dtg-hour-of-code-challenge-2016-01-29-bk.html"},
-    {:id=>65, :heading_s=>hoc_s(:highlights_constant_athletes_heading), :short_heading_s=>hoc_s(:highlights_constant_athletes_short_heading), :image_url_s=>"athletes.png", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://code.org/athletes"}
-  ]
-
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{type: "text/javascript", src: minifiable_asset_path('js/hourofcode.com/public/index.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{type: "text/javascript", src: webpack_asset_path('js/hourofcode.com/public/index.js')}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 
 :css
-  html, body, #gmap {
+  html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -61,7 +56,7 @@ social:
   - slide1 = @country == 'ca' ? '/images/fit-1500/homepage_1_canada.jpg' : localized_image('/images/fit-1500/homepage_1.jpg')
   - slide3 = @country == 'ca' ? '/images/fit-1500/homepage_3_canada.jpg' : localized_image('/images/fit-1500/homepage_3.jpg')
 
-  #fullwidth0.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_hoc2018.jpg')}); opacity: 1; background-position: 50% 10%;"}
+  #fullwidth0.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_hoc2020.jpg')}); opacity: 1; background-position: 50% 50%;"}
 
   #fullwidth1.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_4.jpg')}); opacity: 0; background-position: 50% 10%;"}
 
@@ -85,12 +80,10 @@ social:
         .col-12
           #textbacking
             .front-header-banner
-              %h4
-                = hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+              .front-header-title
+                = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
               .front-header-description
                 = hoc_s(:hourofcode_homepage_hoc2018_header_line1)
-                %br/
-                = hoc_s(:hourofcode_homepage_hoc2018_header_line2)
             %br/
             %br/
             .ctabuttongroup
@@ -106,6 +99,25 @@ social:
 %br/
 
 .container
+  -# HoC Live Spanish banner
+  - if @language == 'es' || @language == 'la'
+    #hoclivebanner.row
+      %div.banner-box
+        %div.banner-image-box
+          %img.banner-image{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
+        %div.banner-message-box
+          %div.banner-title
+            = hoc_s(:hoc_live_learn_title)
+          %br/
+          %div.banner-message
+            = hoc_s(:hoc_live_learn_message)
+          %br/
+          %a#signuplivebutton.ctabuttonatag{href: 'https://code.org/envivo'}
+            %button.ctabutton-white
+              = hoc_s(:hoc_live_learn_more)
+
+    %br/
+    %br/
 
   -# Description
 
@@ -123,20 +135,15 @@ social:
 
   -# Map
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-    - use_mapbox = DCDO.get("use_mapbox", false)
     #maparea.full-width
-      -# During pre-Hour of Code season, show the embedded gmap.
-      -# All other times show a picture of the map.
-      -if hoc_mode == "pre-hoc"
-        - if use_mapbox
-          = view :hoc_events_map_replacement
-        -else
-          = view :hoc_events_map, max_height_percentage: 1
-        .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+      -# Show a picture of the map unless it is currently the week of HOC.
+      -if hoc_mode != "actual-hoc"
+        = view :hoc_events_map
+        .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
       -else
         %a{href: resolve_url('/map')}
-          %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
-        .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+          %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
+        .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
 
   -# Signup and Highlights
 
@@ -163,7 +170,7 @@ social:
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %p=hoc_s(:stats_global)
       -if @language == "en"
-        %img{src: "/images/fit-300/stats-400m.jpg", style: "width: 100%;"}
+        %img{src: "/images/fit-300/stats-1b.png", style: "width: 100%;"}
       -else
         %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
 
@@ -171,7 +178,7 @@ social:
       -if @language == "en"
         %p=hoc_s(:stats_females)
         %img{src: "/images/fit-300/stats-females.jpg", style: "width: 100%;"}
-        %p=hoc_s(:stats_females_more)
+        %p!=hoc_s(:stats_females_more_markdown, markdown: :inline)
       -else
         %p=hoc_s(:stats_girls_more)
         %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
@@ -205,7 +212,7 @@ social:
     // hoc2018: temporarily disable the cycling.
     //timerId = setInterval(cycleImage, 6000);
   });
-  
+
   $(function() {
     $('.highlight-item').mouseover(function() {
       var caption = $(this).find('.highlight-caption');

@@ -1,8 +1,5 @@
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
 
-import AWS from 'aws-sdk/lib/core';
-import 'aws-sdk/lib/config';
-import Firehose from 'aws-sdk/clients/firehose';
 import {
   createUuid,
   trySetLocalStorage,
@@ -56,6 +53,10 @@ const deliveryStreamName = 'analysis-events';
 // TODO(asher): Determine whether any of the utility functions herein should be
 // moved elsewhere, e.g., to apps/src/util.js.
 class FirehoseClient {
+  constructor(AWS, Firehose) {
+    this.firehose = createNewFirehose(AWS, Firehose);
+  }
+
   /**
    * Returns the current environment.
    * @return {string} The current environment, e.g., "staging" or "production".
@@ -147,6 +148,12 @@ class FirehoseClient {
     return device_info;
   }
 
+  getLocale() {
+    if (window.appOptions) {
+      return window.appOptions.locale;
+    }
+  }
+
   /**
    * Merge various key-value pairs into data.
    * @param {hash} data The data to add the key-value pairs to.
@@ -166,13 +173,17 @@ class FirehoseClient {
     data['environment'] = this.getEnvironment();
     data['uuid'] = this.getAnalyticsUuid();
     data['device'] = JSON.stringify(this.getDeviceInfo());
+    data['locale'] = this.getLocale();
 
     const state = getStore().getState();
     if (state) {
       if (includeUserId) {
         const constants = state.pageConstants;
+        const currentUserId = state.currentUser.userId;
         if (constants) {
           data['user_id'] = constants.userId;
+        } else if (currentUserId) {
+          data['user_id'] = currentUserId;
         }
       }
       const progress = state.progress;
@@ -237,7 +248,7 @@ class FirehoseClient {
       return;
     }
 
-    FIREHOSE.putRecord(
+    this.firehose.putRecord(
       {
         DeliveryStreamName: deliveryStreamName,
         Record: {
@@ -295,7 +306,7 @@ class FirehoseClient {
       };
     });
 
-    FIREHOSE.putRecordBatch(
+    this.firehose.putRecordBatch(
       {
         DeliveryStreamName: deliveryStreamName,
         Records: batch
@@ -308,35 +319,71 @@ class FirehoseClient {
 // This code sets up an AWS config against a very restricted user, so this is
 // not a concern, we just don't want to make things super obvious. For the
 // plaintext, contact asher or eric.
-// eslint-disable-next-line
-const _0x12ed = [
-  '\x41\x4b\x49\x41\x4a\x41\x41\x4d\x42\x59\x4d\x36\x55\x53\x59\x54\x34\x35\x34\x51',
-  '\x78\x4e\x4e\x39\x4e\x79\x32\x61\x6d\x39\x78\x75\x4b\x79\x57\x39\x53\x2b\x4e\x76\x41\x77\x33\x67\x68\x68\x74\x68\x72\x6b\x37\x6b\x6e\x51\x59\x54\x77\x6d\x4d\x48',
-  '\x75\x73\x2d\x65\x61\x73\x74\x2d\x31',
-  '\x63\x6f\x6e\x66\x69\x67'
-];
-(function(_0xb54a92, _0x4e682a) {
-  var _0x44f3e8 = function(_0x35c55a) {
-    while (--_0x35c55a) {
-      _0xb54a92['\x70\x75\x73\x68'](_0xb54a92['\x73\x68\x69\x66\x74']());
-    }
+function createNewFirehose(AWS, Firehose) {
+  // eslint-disable-next-line
+  const _0x12ed = [
+    '\x41\x4b\x49\x41\x4a\x41\x41\x4d\x42\x59\x4d\x36\x55\x53\x59\x54\x34\x35\x34\x51',
+    '\x78\x4e\x4e\x39\x4e\x79\x32\x61\x6d\x39\x78\x75\x4b\x79\x57\x39\x53\x2b\x4e\x76\x41\x77\x33\x67\x68\x68\x74\x68\x72\x6b\x37\x6b\x6e\x51\x59\x54\x77\x6d\x4d\x48',
+    '\x75\x73\x2d\x65\x61\x73\x74\x2d\x31',
+    '\x63\x6f\x6e\x66\x69\x67'
+  ];
+  (function(_0xb54a92, _0x4e682a) {
+    var _0x44f3e8 = function(_0x35c55a) {
+      while (--_0x35c55a) {
+        _0xb54a92['\x70\x75\x73\x68'](_0xb54a92['\x73\x68\x69\x66\x74']());
+      }
+    };
+    _0x44f3e8(++_0x4e682a);
+  })(_0x12ed, 0x127);
+  var _0xd12e = function(_0x2cedd5, _0x518781) {
+    _0x2cedd5 = _0x2cedd5 - 0x0;
+    var _0x4291ea = _0x12ed[_0x2cedd5];
+    return _0x4291ea;
   };
-  _0x44f3e8(++_0x4e682a);
-})(_0x12ed, 0x127);
-var _0xd12e = function(_0x2cedd5, _0x518781) {
-  _0x2cedd5 = _0x2cedd5 - 0x0;
-  var _0x4291ea = _0x12ed[_0x2cedd5];
-  return _0x4291ea;
-};
-AWS[_0xd12e('0x0')] = new AWS['\x43\x6f\x6e\x66\x69\x67']({
-  accessKeyId: _0xd12e('0x1'),
-  secretAccessKey: _0xd12e('0x2'),
-  region: _0xd12e('0x3')
-});
+  AWS[_0xd12e('0x0')] = new AWS['\x43\x6f\x6e\x66\x69\x67']({
+    accessKeyId: _0xd12e('0x1'),
+    secretAccessKey: _0xd12e('0x2'),
+    region: _0xd12e('0x3')
+  });
 
-const FIREHOSE = new Firehose({
-  apiVersion: '2015-08-04',
-  correctClockSkew: true
-});
-const firehoseClient = new FirehoseClient();
-export default firehoseClient;
+  return new Firehose({
+    apiVersion: '2015-08-04',
+    correctClockSkew: true
+  });
+}
+
+let promise;
+function getSingleton() {
+  if (!promise) {
+    promise = Promise.all([
+      import('aws-sdk/lib/core'),
+      import('aws-sdk/clients/firehose'),
+      import('aws-sdk/lib/config')
+    ])
+      .then(
+        ([{default: AWS}, {default: Firehose}]) =>
+          new Promise(resolve => resolve(new FirehoseClient(AWS, Firehose)))
+      )
+      .catch(() => {
+        // If the import() network request failed, make it look like we never
+        // requested the singleton object before so that the next call to
+        // firehose will try the import() call again.
+        promise = null;
+      });
+  }
+  return promise;
+}
+
+function putRecord(data, options) {
+  getSingleton().then(firehoseClient =>
+    firehoseClient.putRecord(data, options)
+  );
+}
+
+function putRecordBatch(data, options) {
+  getSingleton().then(firehoseClient =>
+    firehoseClient.putRecordBatch(data, options)
+  );
+}
+
+export default {putRecord, putRecordBatch};

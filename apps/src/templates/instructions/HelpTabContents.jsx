@@ -4,12 +4,6 @@ import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
 import NetworkResourceLink from './NetworkResourceLink';
 
-const styles = {
-  referenceArea: {
-    marginTop: 20
-  }
-};
-
 export default class HelpTabContents extends Component {
   static propTypes = {
     videoData: videoDataShape,
@@ -38,3 +32,9 @@ export default class HelpTabContents extends Component {
     );
   }
 }
+
+const styles = {
+  referenceArea: {
+    marginTop: 20
+  }
+};

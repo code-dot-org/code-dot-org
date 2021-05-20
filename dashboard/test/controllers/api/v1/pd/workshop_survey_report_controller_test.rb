@@ -19,25 +19,6 @@ module Api::V1::Pd
 
     API = '/api/v1/pd/workshops'
 
-    test_user_gets_response_for(
-      :workshop_survey_report,
-      user: :workshop_admin,
-      params: -> {{workshop_id: @workshop.id}}
-    )
-
-    test 'facilitators can view their survey' do
-      sign_in @facilitator
-      get :workshop_survey_report, params: {workshop_id: @workshop.id}
-      assert_response :success
-
-      @controller = WorkshopSurveyReportController.new
-
-      other_facilitator = create :facilitator
-      other_workshop = create(:workshop, organizer: @program_manager, facilitators: [other_facilitator])
-      get :workshop_survey_report, params: {workshop_id: other_workshop.id}
-      assert_response :forbidden
-    end
-
     test 'teachercon survey report for facilitator' do
       teachercon_1 = create :workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
       teachercon_2 = create :workshop, :teachercon, facilitators: teachercon_1.facilitators, num_sessions: 5, num_completed_surveys: 10
@@ -182,31 +163,6 @@ module Api::V1::Pd
       )
     end
 
-    test_user_gets_response_for(
-      :workshop_survey_report,
-      response: :forbidden,
-      user: :teacher,
-      params: -> {{workshop_id: @workshop.id}}
-    )
-
-    test 'facilitators can see results for local summer workshops' do
-      workshop = create :summer_workshop
-      sign_in workshop.facilitators.first
-
-      @controller.expects(:generate_workshop_daily_session_summary)
-      get :generic_survey_report, params: {workshop_id: workshop.id}
-      assert_response :success
-    end
-
-    test 'facilitators can see results for teachercons' do
-      workshop = create :workshop, :teachercon, facilitators: [@facilitator]
-      sign_in @facilitator
-
-      @controller.expects(:generate_workshop_daily_session_summary)
-      get :generic_survey_report, params: {workshop_id: workshop.id}
-      assert_response :success
-    end
-
     test 'facilitators cannot see results for other types of workshops' do
       workshop = create :csf_intro_workshop, facilitators: [@facilitator]
       sign_in @facilitator
@@ -221,80 +177,17 @@ module Api::V1::Pd
       )
     end
 
-    test 'facilitators see filtered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @facilitator,
-        expected_facilitator_name_filter: @facilitator.name
-      )
-    end
-
-    test 'workshop admins see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: create(:workshop_admin),
-        expected_facilitator_name_filter: nil
-      )
-    end
-
-    test 'workshop organizers see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @workshop.organizer,
-        expected_facilitator_name_filter: nil
-      )
-    end
-
-    test 'program managers see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @program_manager,
-        expected_facilitator_name_filter: nil
-      )
-    end
-
-    test 'experiment_survey_report: return empty result for workshop without responds' do
-      csf_201_ws = create :csf_deep_dive_workshop
-
-      # This test assumes there's one facilitator in the workshop
-      assert_equal 1, csf_201_ws.facilitators.count
-      f_id = csf_201_ws.facilitators.first.id.to_s
-      f_name = csf_201_ws.facilitators.first.name
+    test 'generic_survey_report: return empty result for workshop without responds' do
+      ayw_ws = create :csp_academic_year_workshop
 
       expected_result = {
         "course_name" => nil,
         "questions" => {},
         "this_workshop" => {},
-        "all_my_workshops" => {},
-        "facilitators" => {
-          f_id => f_name
-        },
-        "facilitator_averages" => {
-          f_name => {
-            "facilitator_effectiveness" => {
-              "this_workshop" => nil,
-              "all_my_workshops" => nil
-            },
-            "overall_success" => {
-              "this_workshop" => nil,
-              "all_my_workshops" => nil
-            },
-            "teacher_engagement" => {
-              "this_workshop" => nil,
-              "all_my_workshops" => nil
-            }
-          },
-          "questions" => {}
-        },
-        "facilitator_response_counts" => {
-          "this_workshop" => {
-            f_id => {}
-          },
-          "all_my_workshops" => {
-            f_id => {}
-          }
-        },
-        "experiment" => true
       }
 
       sign_in @admin
-      get :experiment_survey_report, params: {workshop_id: csf_201_ws.id}
+      get :generic_survey_report, params: {workshop_id: ayw_ws.id}
       result = JSON.parse(@response.body).slice(*expected_result.keys)
 
       assert_equal expected_result, result
@@ -312,27 +205,6 @@ module Api::V1::Pd
       assert_response :success
     end
 
-    test 'generic_survey_report: return empty result for CSF201 workshop without responds' do
-      csf_201_ws = create :csf_deep_dive_workshop, num_sessions: 2
-
-      expected_result = {
-        "course_name" => nil,
-        "questions" => {},
-        "this_workshop" => {},
-        "all_my_workshops" => {},
-        "facilitators" => {},
-        "facilitator_averages" => {},
-        "facilitator_response_counts" => {}
-      }
-
-      sign_in @admin
-      get :generic_survey_report, params: {workshop_id: csf_201_ws.id}
-      result = JSON.parse(@response.body).slice(*expected_result.keys)
-
-      assert_equal expected_result, result
-      assert_response :success
-    end
-
     test 'generic_survey_report: CSF101 workshop cannot invoke this action' do
       csf_101_ws = create :csf_intro_workshop
 
@@ -346,29 +218,7 @@ module Api::V1::Pd
       assert_response :bad_request
     end
 
-    test 'generic_survey_report: summer workshop uses old pipeline' do
-      local_summer_ws = create :summer_workshop
-
-      WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
-      WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
-
-      sign_in @admin
-      get :generic_survey_report, params: {workshop_id: local_summer_ws.id}
-
-      assert_response :success
-    end
-
     private
-
-    def assert_workshop_survey_report_facilitator_query(user:, expected_facilitator_name_filter:)
-      @controller.expects(:generate_summary_report).with do |params|
-        params[:facilitator_name] == expected_facilitator_name_filter
-      end
-
-      sign_in user
-      get :workshop_survey_report, params: {workshop_id: @workshop.id}
-      assert_response :success
-    end
 
     def build_sample_data
       facilitator_1 = create(:facilitator, name: 'Cersei')

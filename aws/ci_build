@@ -19,6 +19,8 @@
 # NOTE: running `touch build-started` (or running the `bin/start-build` script)
 # is an easy way to force a rebuild without needing to make a commit.
 #
+require_relative '../lib/cdo/only_one'
+exit(0) unless only_one_running?(__FILE__)
 
 require 'active_support/inflector'
 require_relative '../deployment'
@@ -31,7 +33,6 @@ require 'cdo/honeybadger'
 require 'cdo/infra_production_topic'
 require 'cdo/rake_utils'
 require 'cdo/test_server_status'
-require 'cdo/only_one'
 require 'cdo/metrics_helper'
 require 'dynamic_config/dcdo'
 require 'aws-sdk-cloudwatch'
@@ -39,6 +40,7 @@ require 'aws-sdk-cloudwatch'
 STARTED = 'build-started'.freeze
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
 S3_LOGS_PREFIX = CDO.name.freeze
+GIT_PULL_STARTED_PATH = deploy_dir('git-pull-started').freeze
 
 # Upload the given log to the logs s3 bucket.
 # @param [String] key where uploaded log should be located
@@ -59,6 +61,31 @@ rescue Exception => msg
   return ''
 end
 
+def protected_git_pull
+  # Use a lock file to prevent git-pull and unison, which both modify files in
+  # local repo, to run at the same time on the staging environment.
+  #
+  # Context: On the staging environment, we use the unison tool to sync content
+  # between local Dropbox and git repo. It works most of the time. However, we've
+  # seen half-dozen cases of Dropbox content being reverted. Those cases happened
+  # a few hours or even a few days after content editors had made file changes.
+  # They mostly coincided with the starts of new builds.
+  # This change is a speculative fix to prevent any potential conflicts between
+  # git-pull and unison.
+  #
+  if rack_env?(:staging)
+    FileUtils.touch GIT_PULL_STARTED_PATH
+    # Wait a few seconds to give the unison tool time to finish.
+    # Unison is fast and usually finishes in less than 1 second.
+    sleep 2
+  end
+  RakeUtils.git_pull
+ensure
+  if rack_env?(:staging) && File.exist?(GIT_PULL_STARTED_PATH)
+    FileUtils.rm GIT_PULL_STARTED_PATH
+  end
+end
+
 def build
   Dir.chdir(deploy_dir) do
     return 0 unless RakeUtils.git_updates_available? || File.file?(STARTED) || !CDO.daemon
@@ -66,7 +93,7 @@ def build
 
     RakeUtils.git_fetch
     count = RakeUtils.git_update_count
-    RakeUtils.git_pull if count > 0
+    protected_git_pull if count > 0
     count = [1, count].max
 
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
@@ -76,16 +103,17 @@ def build
     git_revision_short = GitUtils.git_revision_short
 
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
-    Honeybadger.notify_new_release(rack_env, git_revision)
     write_build_status rack_env, git_revision_short, :start
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
 
+    Honeybadger.notify_new_release(rack_env, git_revision)
+
     status = begin
       result = RakeUtils.rake_stream_output 'ci'
 
-      if rack_env == :test && git_revision != RakeUtils.git_revision
+      if CDO.test_system? && git_revision != RakeUtils.git_revision
         ChatClient.log "git revision unexpectedly changed from #{git_revision} to #{RakeUtils.git_revision} during DTT", color: 'red'
         raise
       end
@@ -146,9 +174,7 @@ def main
 
       write_build_status rack_env, commit_hash_short, :success
 
-      # Only the managed test server should publish the commit hash of a successful Test Build
-      # This logic prevents staging-next server from corrupting the current successful commit hash.
-      if rack_env == :test && CDO.pegasus_hostname == 'test.code.org'
+      if CDO.test_system?
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
         mark_dtt_green
       end
@@ -178,16 +204,30 @@ def main
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
       ChatClient.log message, color: 'red'
-      ChatClient.log "<@#{DevelopersTopic.dotd}> build failure", color: 'red'
+      ChatClient.log "<@#{DevelopersTopic.dotd}> build failure", color: 'red' unless rack_env?(:adhoc)
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
 
       write_build_status rack_env, commit_hash_short, :failed
 
-      if rack_env == :test
+      if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
+        ChatClient.log "*** Before you manually re-run a test, please ensure that the cabal who owns that test is actively tracking de-flaking. ***", color: 'yellow'
       end
+    end
+
+    if CDO.test_system?
+      tests_over_flake_threshold = `./bin/test_flakiness -x 0.2`
+      flake_factor_message = {}
+      if tests_over_flake_threshold.empty?
+        flake_factor_message[:color] = 'green'
+        flake_factor_message[:message] = "Hooray! There are no UI tests over 0.2 flakiness."
+      else
+        flake_factor_message[:color] = 'red'
+        flake_factor_message[:message] = "Tests exceeding 0.2 flakiness threshold: <br/><pre>#{tests_over_flake_threshold}</pre><br/><br/> Please ensure these tests are being investigated!"
+      end
+      ChatClient.log flake_factor_message[:message], color: flake_factor_message[:color]
     end
 
     emit_deploy_metric(rack_env.to_s.titleize, status == 0)
@@ -265,4 +305,4 @@ rescue => error
   ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
 end
 
-main if only_one_running?(__FILE__)
+main

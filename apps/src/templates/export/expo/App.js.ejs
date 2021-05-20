@@ -1,5 +1,7 @@
 import React from 'react';
-import { Platform, StyleSheet, View, WebView } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
+import { WebView } from 'react-native-webview';
+import { AppLoading } from 'expo';
 
 import CustomAsset from './CustomAsset';
 import DataWarning from './DataWarning';
@@ -16,6 +18,7 @@ export default class App extends React.Component {
 <% if (!hasDataAPIs) { -%>
       age: DataWarning.AGE_MINIMUM,
 <% } -%>
+      needsEmptyRender: Platform.OS === 'android',
     };
   }
 
@@ -55,7 +58,7 @@ export default class App extends React.Component {
     });
   };
 
-  onLoadEnd = () => {
+  onLoad = () => {
     //
     // NOTE: wait for 2 frames after the WebView says it is loaded before we set our state to
     // loaded and remove the "cover" View (without this delay, we see a white flash from the WebView)
@@ -90,7 +93,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { age, height, indexUri, loaded } = this.state;
+    const { age, height, indexUri, loaded, needsEmptyRender } = this.state;
 
     if (!age || age < DataWarning.AGE_MINIMUM) {
       return (
@@ -98,24 +101,45 @@ export default class App extends React.Component {
       );
     }
 
+    if (!indexUri) {
+      return (
+        <AppLoading />
+      );
+    }
+
+    const showWebView = !!height && indexUri;
+
+    if (showWebView && needsEmptyRender) {
+      // Workaround for react-native-webview issue with Android 10
+      // See https://github.com/react-native-community/react-native-webview/issues/656#issuecomment-551312436
+      this.setState({needsEmptyRender: false});
+    }
+
+    let readAccessToURL;
+    if (Platform.OS === 'ios' && indexUri) {
+      readAccessToURL = indexUri.substring(0, indexUri.lastIndexOf('/') + 1);
+    }
+
     return (
       <View onLayout={this.onLayout} style={styles.container}>
-        {!!height && indexUri && <View style={this.webViewContainerStyle()}>
+        {showWebView && <View style={this.webViewContainerStyle()}>
           <WebView
             allowUniversalAccessFromFileURLs
             originWhitelist={['*']}
             allowFileAccess
-            source={{uri: indexUri}}
+            allowFileAccessFromFileURLs
+            allowingReadAccessToURL={readAccessToURL}
+            source={needsEmptyRender ? undefined : {uri: indexUri}}
             style={Platform.OS === 'ios' ? styles.webViewIOS : styles.webViewAndroid}
             javaScriptEnabled
             mediaPlaybackRequiresUserAction={false}
             scrollEnabled={false}
             bounces={false}
-            scalesPageToFit={Platform.OS === 'ios'}
-            onLoadEnd={this.onLoadEnd}
+            onLoad={this.onLoad}
+            useWebkit
           />
-          {!loaded && <View style={styles.cover} />}
         </View>}
+        {!loaded && <View style={styles.cover} />}
       </View>
     );
   }
@@ -129,7 +153,7 @@ const styles = StyleSheet.create({
   },
   cover: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
   },
   webViewIOS: {
     backgroundColor: 'black',

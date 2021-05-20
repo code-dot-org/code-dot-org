@@ -1,0 +1,29 @@
+.field
+  = f.label :long_instructions, "Long Instructions"
+  %li
+    You can drag-and-drop or paste images in to this box, and they will be
+    uploaded to a suitable location.
+  %li
+    markdown-enabled instructions can take advantage of
+    = link_to 'various markdown rendering options', 'https://commonmark.org/help/', target: '_blank'
+    to provide more in-depth (and more vertically intrusive) instruction.
+
+  %div{ style: 'border: 8px solid rgb(239, 239, 239)' }
+    #level_long_instructions_preview{ style: 'padding: 20px' }
+    %div{ style: 'background-color: rgb(239, 239, 239); padding-top: 12px' }
+      ~ f.text_area :long_instructions, rows: 4
+
+:javascript
+  var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
+    callback: function (editor, change) {
+      convertXmlToBlockly(document.getElementById('level_long_instructions_preview'));
+
+      localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
+    },
+    attachments: true
+  });
+
+  var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || html_escape(params[:type])}');
+  if (locallyStoredMarkdown) {
+    mdEditor.setValue(locallyStoredMarkdown);
+  }

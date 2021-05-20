@@ -35,12 +35,19 @@
       ],
       [
         "professionalLearning",
-        "https://studio.code.org/courses/csp-support"
+        "https://studio.code.org/courses/CSP%20Support"
       ]
     ],
     "has_verified_resources": true,
     "family_name": "csp",
     "version_year": "2017",
-    "is_stable": true
-  }
+    "is_stable": true,
+    "visible": true
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
 }

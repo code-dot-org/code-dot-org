@@ -1,19 +1,19 @@
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp-19/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-19/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit5/standards/"], ["professionalLearning", "https://code.org/educate/professional-learning/middle-high"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit5/{LESSON}'
 family_name 'csp5'
 version_year '2019'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
+tts true
 
-stage 'Buttons and Events', flex_category: 'csp5_1'
+lesson_group 'csp5_1', display_name: 'Chapter 1: Event-Driven Programming'
+lesson 'Buttons and Events', display_name: 'Buttons and Events', has_lesson_plan: true
 level 'CSP U5L01 SFLP_2019', named: true
 level 'Introduction to Design Mode_2019', progression: 'Intro to Design Mode in App Lab'
 level 'CSPU5_FirstTimeDesignMode_2018_2019', progression: 'Introduction to Design Mode'
@@ -38,7 +38,7 @@ level 'How Images Work_2018_2019', progression: 'How Images Work'
 level 'Finalize Your Chaser Game v.1_2019', progression: 'Chaser Game v.1'
 level 'csp-pulse-check-survey-6-levelgroup-U5Ch1_2018_2019', progression: 'Quick Check-In', assessment: true
 
-stage 'Multi-screen Apps', flex_category: 'csp5_1'
+lesson 'Multi-screen Apps', display_name: 'Multi-screen Apps', has_lesson_plan: true
 level 'CSP U5L02 SFLP_2019', named: true
 level 'CSPU5 Layering and Deleting in Design Mode_2019', progression: 'Using Design Mode'
 level 'CSPU5 Add onEvent from Design Mode_2019', progression: 'Using Design Mode'
@@ -55,14 +55,14 @@ level 'CSPU5 Add welcome screen to chaser game_2019', progression: 'Making a Mul
 level 'CSPU5 Add full screen image to bg of chaser game_2019', progression: 'Making a Multi-Screen Chaser Game v.2'
 level 'CSPU5 Add game over screen_2019', progression: 'Project: Multi-Screen Chaser Game', assessment: true
 
-stage 'Building an App: Multi-Screen App', flex_category: 'csp5_1'
+lesson 'Building an App: Multi-Screen App', display_name: 'Building an App: Multi-Screen App', has_lesson_plan: true
 level 'CSP U5L03 SFLP_2019', named: true
 level 'Event Driven Programming Recap_2018_2019', progression: 'Event Driven Programming Recap'
 level 'Tips For Working on Your Own_2018_2019', progression: 'Tips For Working on Your Own'
 level 'Project - Your Own Multi Screen App_2019', progression: 'Project - Your Own Multi-Screen App', assessment: true
 level 'U5 AP Practice Create Process_2019', progression: 'AP Practice Response - Describe Your Process', assessment: true
 
-stage 'Controlling Memory with Variables', flex_category: 'csp5_1'
+lesson 'Controlling Memory with Variables', display_name: 'Controlling Memory with Variables', has_lesson_plan: true
 level 'CSP U5L04 SFLP_2019', named: true
 level 'Basic mechanics of variables_2018_2019', progression: 'Basic Mechanics of Variables'
 level 'Introduction to Variables - Part 1_2019', progression: 'Introduction to Variables - Part 1'
@@ -91,7 +91,7 @@ level 'CSPU5_U3L14 - moving memory challenge6_2019', progression: 'The Mental Mo
 level 'CSPU5_U3L19 - variable reassignment challenge pt2_2019', progression: 'The Mental Model for Variables'
 level 'CSPU5_U3L14 - MC variable reassignment_2018_2019', progression: 'Check Your Understanding', assessment: true
 
-stage 'Building an App: Clicker Game', flex_category: 'csp5_1'
+lesson 'Building an App: Clicker Game', display_name: 'Building an App: Clicker Game', has_lesson_plan: true
 level 'CSP U5L05 SFLP_2019', named: true
 level 'CSPU5_U3 full clicker demo_2019', progression: 'Clicker Game Demonstration'
 level 'CSPU5_U3L15 - practice with setText_2019', progression: 'AppLab Practice'
@@ -115,10 +115,10 @@ level 'CSPU5_U3L15 - Debug if never triggers in UpDown app_2019', progression: '
 level 'CSPU5_U3L15 full clicker app_2019', progression: 'Project: Clicker App', assessment: true
 level 'U5 AP Create Practice onEvent Doesnt Count_2019', progression: 'AP Practice Response - Choosing an Abstraction', assessment: true
 
-stage 'Unit 5 Assessment 1', lockable: true, flex_category: 'csp5_1'
+lesson 'Unit 5 Assessment 1', display_name: 'Unit 5 Assessment 1', lockable: true, has_lesson_plan: false
 level 'CSP Unit 5 Cumulative Assessment 1 MC_2018_2019', assessment: true
 
-stage 'User Input and Strings', flex_category: 'csp5_1'
+lesson 'User Input and Strings', display_name: 'User Input and Strings', has_lesson_plan: true
 level 'CSP U5L06 SFLP_2019', named: true
 level 'CSPU5_U3L16 Mad Lib Demo_2019', progression: 'Mad Lib Demonstration'
 level 'CSPU5_U3L16 - introStrings_2019', progression: 'Strings in Apps'
@@ -135,13 +135,13 @@ level 'CSPU5_U3L16 Mad Lib toUpper_2019', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib Clear Input_2019', progression: 'Mad Lib Game'
 level 'CSPU5_U3L25 Free Response 3_2019', progression: 'String and Substring Free Response', assessment: true
 
-stage '"If" Statements Unplugged', flex_category: 'csp5_1'
+lesson '"If" Statements Unplugged', display_name: '"If" Statements Unplugged', has_lesson_plan: true
 level 'CSP U5L07 SFLP_2019', named: true
 level 'Big Picture: If-statements_2018_2019', progression: 'Big Picture: if-statements'
 level 'Worked Example: If-statements and Robot_2018_2019', progression: 'Worked Example: if-statements and Robot'
 level 'CSP Algorithms Map_2018_2019', progression: 'Algorithms in Programming'
 
-stage 'Boolean Expressions and "If" Statements', flex_category: 'csp5_1'
+lesson 'Boolean Expressions and "If" Statements', display_name: 'Boolean Expressions and "If" Statements', has_lesson_plan: true
 level 'CSP U5L08 SFLP_2019', named: true
 level 'Introduction to Conditionals: Boolean Expressions_2019', progression: 'Introduction to Conditionals: Boolean Expressions'
 level 'Boolean Expressions and Comparison Operators_2018_2019', progression: 'Boolean Expressions and Comparison Operators'
@@ -161,7 +161,7 @@ level 'U5 if-else dropdown movie checker_2019', progression: 'Dropdown Menus'
 level 'U5 if-else dropdown guess dice_2019', progression: 'Dropdown Menus'
 level 'U5 if-else weeekend challenge_2019', progression: 'Dropdown Menus'
 
-stage '"if-else-if" and Conditional Logic', flex_category: 'csp5_1'
+lesson '"if-else-if" and Conditional Logic', display_name: '"if-else-if" and Conditional Logic', has_lesson_plan: true
 level 'CSP U5L09 SFLP_2019', named: true
 level 'Introduction to Conditionals: if-else-if Statements_2019', progression: 'Introduction to Conditionals: if-else-if Statements'
 level 'How "if-else-if" Works_2018_2019', progression: 'How "if-else-if" Works'
@@ -179,7 +179,7 @@ level 'U5 compound boolean museum example_2019', progression: 'How Compound Bool
 level 'CSPU5_U3 - Conditionals - Combine AND OR and NOT_2019', progression: 'How Compound Boolean Expressions Work'
 level 'U5-AP-Algorithm-Does-It-Count_2019', progression: 'AP Practice Response - Score the Response', assessment: true
 
-stage 'Building an App: Color Sleuth', flex_category: 'csp5_1'
+lesson 'Building an App: Color Sleuth', display_name: 'Building an App: Color Sleuth', has_lesson_plan: true
 level 'CSP U5L10 SFLP_2019', named: true
 level 'Color Sleuth - Planning the App_2018_2019', progression: 'Color Sleuth - Planning the App'
 level 'How Set Property Works_2018_2019', progression: 'How Set Property Works'
@@ -208,10 +208,11 @@ level 'U5 AP Practice Create Abstraction Color Sleuth_2019', progression: 'AP Pr
 level 'CSP U5 AP Practice Choose the Algorithm_2019', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
 level 'U5 AP Practice Create Algorithm Color Sleuth_2019', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
 
-stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
+lesson 'Unit 5 Assessment 2', display_name: 'Unit 5 Assessment 2', lockable: true, has_lesson_plan: false
 level 'CSP Unit 5 Cumulative Assessment 2 MC_2018_2019', assessment: true
 
-stage 'While Loops', flex_category: 'csp5_2'
+lesson_group 'csp5_2', display_name: 'Chapter 2: Programming with Data Structures'
+lesson 'While Loops', display_name: 'While Loops', has_lesson_plan: true
 level 'CSP U5L11 SFLP_2019', named: true
 level 'CSPU5_U3 - Loops - 1_2019', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 2_2019', progression: 'Loops'
@@ -235,7 +236,7 @@ level 'CSPU5_U3 - Loops - 14_2019', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 15_2019', progression: 'Loops Continued'
 level 'csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019', progression: 'Quick Check-In', assessment: true
 
-stage 'Loops and Simulations', flex_category: 'csp5_2'
+lesson 'Loops and Simulations', display_name: 'Loops and Simulations', has_lesson_plan: true
 level 'CSP U5L12 SFLP_2019', named: true
 level 'Make a Hypothesis_2018_2019', progression: 'Make a Hypothesis'
 level 'CSPU5_U3 - Simulation - 1_2019', progression: 'Introduction to Simulations'
@@ -249,7 +250,7 @@ level 'CSPU5_U3 - Simulation - 5_2019', progression: 'Simulation Practice'
 level 'Update your Hypothesis - Part 2_2018_2019', progression: 'Update your Hypothesis - Part 2'
 level 'CSPU5_U3 - Simulation - 6_2019', progression: 'Experiment With Simulation'
 
-stage 'Introduction to Arrays', flex_category: 'csp5_2'
+lesson 'Introduction to Arrays', display_name: 'Introduction to Arrays', has_lesson_plan: true
 level 'CSP U5L13 SFLP_2019', named: true
 level 'Introduction to Lists - Part 1_2019', progression: 'Introduction to Lists - Part 1'
 level 'CSPU5_U3 - Arrays - createFirstArray_2019', progression: 'List Basics'
@@ -282,7 +283,7 @@ level 'CSPU5_U3 - Arrays - favThings keepPlaying_2019', progression: 'Using List
 level 'CSPU5_U3 - Arrays - Wrap Up 1_2019', progression: 'Array Reflection Questions'
 level 'CSPU5_U3 - Arrays - Wrap Up 2_2019', progression: 'Array Reflection Questions'
 
-stage 'Building an App: Image Scroller', flex_category: 'csp5_2'
+lesson 'Building an App: Image Scroller', display_name: 'Building an App: Image Scroller', has_lesson_plan: true
 level 'CSP U5L14 SFLP_2019', named: true
 level 'CSPU5_U3 - Keys - Demo App_2019', progression: 'My Favorite Things Demonstration'
 level 'CSPU5_U3L25 - drag out key event_2019', progression: 'Key Event'
@@ -295,10 +296,10 @@ level 'CSPU5_U3 - Keys - Add Image URLs_2019', progression: 'Adding Images Using
 level 'Project - Final Image Scroller_2019', progression: 'Project: Image Scroller', assessment: true
 level 'CSPU5_U3- Keys - Code Refactoring Exit Ticket_2019', progression: 'My Favorite Things Reflection Question'
 
-stage 'Unit 5 Assessment 3', lockable: true, flex_category: 'csp5_2'
+lesson 'Unit 5 Assessment 3', display_name: 'Unit 5 Assessment 3', lockable: true, has_lesson_plan: false
 level 'CSP Unit 5 Cumulative Assessment 3 MC_2018_2019', assessment: true
 
-stage 'Processing Arrays', flex_category: 'csp5_2'
+lesson 'Processing Arrays', display_name: 'Processing Arrays', has_lesson_plan: true
 level 'CSP U5L15 SFLP_2019', named: true
 level 'Processing Lists with Loops_2019', progression: 'Processing Lists with Loops'
 level 'CSPU5_U3 - Loops And Arrays - Intro For Loop_2019', progression: 'Introduction to for Loops'
@@ -315,7 +316,7 @@ level 'CSPU5_U3 - Loops And Arrays - Make it a Function - add list param_2019', 
 level 'CSPU5_U3 - Loops And Arrays - General Search Param_2019', progression: 'Arrays and Functions'
 level 'CSPU5_U3 - Loops And Arrays - Find Min_2019', progression: 'Arrays and Functions'
 
-stage 'Functions with Return Values', flex_category: 'csp5_2'
+lesson 'Functions with Return Values', display_name: 'Functions with Return Values', has_lesson_plan: true
 level 'CSP U5L16 SFLP_2019', named: true
 level 'Using Output from Functions: The return Command_2018_2019', progression: 'The Return Command'
 level 'CSPU5_U3 - Return Values - useMinVal_2019', progression: 'Using minVal'
@@ -325,7 +326,7 @@ level 'CSPU5_U3 - Return Values - debuggingConstrain_2019', progression: 'Writin
 level 'CSPU5_U3 - Return Values - constrainTurtle_2019', progression: 'Return Values in Apps'
 level 'CSPU5_U3 - Return Values - wrapTurtle_2019', progression: 'Return Values in Apps'
 
-stage 'Building an App: Canvas Painter', flex_category: 'csp5_2'
+lesson 'Building an App: Canvas Painter', display_name: 'Building an App: Canvas Painter', has_lesson_plan: true
 level 'CSP U5L17 SFLP_2019', named: true
 level 'CSPU5_U3 - Canvas - introCanvas_2019', progression: 'Canvas Painter Introduction'
 level 'CSPU5_U3 - Canvas - 200dots_2019', progression: 'Canvas Painter Introduction'
@@ -347,12 +348,14 @@ level 'CSPU5_U3 - Canvas - sprayPaint_2019', progression: 'Adding More Features 
 level 'CSPU5_U3 - Canvas - sketch_2019', progression: 'Using Stored Information'
 level 'CSPU5_U3 - Canvas - freePlay_2019', progression: 'Project: Canvas Painter', assessment: true
 
-stage 'Unit 5 Assessment 4', lockable: true, flex_category: 'csp5_2'
+lesson 'Unit 5 Assessment 4', display_name: 'Unit 5 Assessment 4', lockable: true, has_lesson_plan: false
 level 'CSP Unit 5 Cumulative Assessment 4 MC_2018_2019', assessment: true
 
-stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true, flex_category: 'csp5_2'
+lesson 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', display_name: 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true, has_lesson_plan: false
 level 'CSP Cumulative Assess A_2018_2019', assessment: true
 
-stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true, has_lesson_plan: false
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true
+

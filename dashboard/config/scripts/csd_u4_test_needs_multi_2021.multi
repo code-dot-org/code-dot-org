@@ -1,0 +1,7 @@
+name 'CSD U4 test needs multi_2021'
+question 'Of the following, which strategy will NOT help a designer better understand user needs?'
+wrong 'Interviewing users and asking them direct questions about their needs'
+right 'Using events to change a screen when the user presses on a certain button'
+wrong 'Watching the user interact with an app and recording where they have trouble'
+wrong 'Creating paper and digital prototypes to run user testing'
+wrong 'Researching the current apps and seeing how those apps address user needs'

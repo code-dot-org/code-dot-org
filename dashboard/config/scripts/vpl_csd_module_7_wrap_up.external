@@ -1,0 +1,20 @@
+name 'VPL - CSD - Module 7 Wrap Up'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Module 7 Asynchronous Wrap Up
+**Estimated Time: 10 minutes**
+
+## Engage with the Code.org Community
+
+Check out the <a href="https://forum.code.org/tags/c/csd/curriculum/394/csd-unit-6" target="blank" rel="noopener noreferrer">Code.org forum for ideas on implementing Unit 6</a>. The forum is a great place to go when you are looking for additional resources, ideas, and templates to use with Code.org lessons - created and shared by teachers within the community. Share your ideas and resources too!
+
+## Next Steps
+
+1. Return to your cohort's shared slide deck for Module 7. 
+2. Add any questions you have to the "Questions from Asynchronous Work" slide. 
+3. Join the Module 7 Synchronous Workshop. 
+
+MARKDOWN

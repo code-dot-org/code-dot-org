@@ -9,6 +9,7 @@ import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {getTables, getColumns} from '@cdo/apps/storage/getColumnDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
 import {
@@ -35,6 +36,7 @@ var stringMethodPrefix = '[string].';
 var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
+var arrayBlockPrefix = 'list.';
 
 // Configure shared APIs for App Lab
 // We wrap this because it runs before window.Applab exists
@@ -215,7 +217,14 @@ export var blocks = [
     category: 'UI controls',
     paletteParams: ['id'],
     params: ['"id"'],
-    dropdown: {0: idDropdownWithSelector('img')},
+    dropdown: {
+      0: function() {
+        return [
+          ...idDropdownWithSelector('img')(),
+          ...idDropdownWithSelector('.img-upload')()
+        ];
+      }
+    },
     type: 'value'
   },
   {
@@ -226,7 +235,7 @@ export var blocks = [
     params: ['"id"', '"https://code.org/images/logo.png"'],
     dropdown: {
       0: idDropdownWithSelector('img'),
-      1: function() {
+      1: () => {
         return getAssetDropdown('image');
       }
     },
@@ -234,6 +243,7 @@ export var blocks = [
   },
   {...audioApiDropletConfig.playSound, category: 'UI controls'},
   {...audioApiDropletConfig.stopSound, category: 'UI controls'},
+  {...audioApiDropletConfig.playSpeech, category: 'UI controls'},
   {
     func: 'showElement',
     parent: api,
@@ -520,7 +530,19 @@ export var blocks = [
     params: ['imgData', '0', '0', '255', '255', '255'],
     dontMarshal: true
   },
-
+  {
+    func: 'getColumn',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'column'],
+    params: ['"mytable"', '"mycolumn"'],
+    nativeIsAsync: true,
+    type: 'value',
+    dropdown: {
+      0: getTables(),
+      1: getColumns()
+    }
+  },
   {
     func: 'startWebRequest',
     parent: api,
@@ -537,6 +559,9 @@ export var blocks = [
     parent: api,
     category: 'Data',
     paletteParams: ['url'],
+    params: [
+      '"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"'
+    ],
     nativeIsAsync: true,
     noAutocomplete: true
   },
@@ -584,6 +609,16 @@ export var blocks = [
     allowFunctionDrop: {2: true, 3: true}
   },
   {
+    func: 'createRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', "{name:'Alice'}"],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
+  },
+  {
     func: 'readRecords',
     parent: api,
     category: 'Data',
@@ -594,6 +629,15 @@ export var blocks = [
       "function(records) {\n  for (var i =0; i < records.length; i++) {\n    console.log(records[i].id + ': ' + records[i].name);\n  }\n}"
     ],
     allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'readRecordsSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table'],
+    params: ['"mytable"'],
+    nativeIsAsync: true,
+    type: 'either'
   },
   {
     func: 'updateRecord',
@@ -608,12 +652,32 @@ export var blocks = [
     allowFunctionDrop: {2: true, 3: true}
   },
   {
+    func: 'updateRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', "{id:1, name:'Bob'}"],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
+  },
+  {
     func: 'deleteRecord',
     parent: api,
     category: 'Data',
     paletteParams: ['table', 'record', 'callback'],
     params: ['"mytable"', '{id:1}', 'function(success) {\n  \n}'],
     allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'deleteRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', '{id:1}'],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
   },
   {
     func: 'onRecordEvent',
@@ -880,6 +944,16 @@ export var blocks = [
     type: 'property'
   },
   {
+    func: 'join',
+    blockPrefix: arrayBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.join',
+    tipPrefix: arrayBlockPrefix,
+    paletteParams: ['separator'],
+    params: ['"-"'],
+    type: 'value'
+  },
+  {
     func: 'insertItem',
     parent: dontMarshalApi,
     category: 'Variables',
@@ -1100,16 +1174,38 @@ export var blocks = [
   }
 ];
 
-if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
-  blocks.push({
-    func: 'getColumn',
-    parent: api,
-    category: 'Data',
-    paletteParams: ['table', 'column'],
-    params: ['"mytable"', '"mycolumn"'],
-    nativeIsAsync: true,
-    type: 'value'
-  });
+if (experiments.isEnabled(experiments.APPLAB_ML)) {
+  blocks.push(
+    {
+      func: 'getPrediction',
+      parent: api,
+      category: 'Data',
+      paletteParams: ['name', 'id', 'data', 'callback'],
+      params: ['"name"', '"id"', 'data', 'function (value) {\n \n}']
+    },
+    {
+      func: 'declareAssign_object',
+      block: `var object = {"key": "value"};`,
+      category: 'Variables',
+      noAutocomplete: true
+    },
+    {
+      func: 'getValue',
+      parent: dontMarshalApi,
+      category: 'Variables',
+      paletteParams: ['object', '"key"'],
+      params: ['{"key": "value"}', '"key"'],
+      dontMarshal: true
+    },
+    {
+      func: 'addPair',
+      parent: dontMarshalApi,
+      category: 'Variables',
+      paletteParams: ['object', '"key"', '"value"'],
+      params: ['object', '"key"', '"value"'],
+      dontMarshal: true
+    }
+  );
 }
 
 export const categories = {

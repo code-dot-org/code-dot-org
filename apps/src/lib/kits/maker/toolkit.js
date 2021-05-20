@@ -4,10 +4,13 @@
  */
 import {getStore} from '../../../redux';
 import trackEvent from '../../../util/trackEvent';
-import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
-import FakeBoard from './FakeBoard';
+import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
+import FakeBoard from './boards/FakeBoard';
 import * as commands from './commands';
-import * as dropletConfig from './dropletConfig';
+import dropletConfig, {
+  configMicrobit,
+  configCircuitPlayground
+} from './dropletConfig';
 import MakerError, {
   ConnectionCanceledError,
   UnsupportedBrowserError,
@@ -16,9 +19,12 @@ import MakerError, {
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import MicroBitBoard from './boards/microBit/MicroBitBoard';
+import project from '../../../code-studio/initApp/project';
+import {MB_API} from './boards/microBit/MicroBitConstants';
 
 // Re-export some modules so consumers only need this 'toolkit' module
-export {dropletConfig, MakerError};
+export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
 
 /**
  * @type {CircuitPlaygroundBoard} The current board controller, populated when
@@ -65,6 +71,8 @@ export function connect({interpreter, onDisconnect}) {
   if (currentBoard) {
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
+    // When the board is reset, the components are disabled. Re-enable now.
+    currentBoard.enableComponents();
     return Promise.resolve();
   }
 
@@ -154,9 +162,13 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    return findPortWithViableDevice().then(
-      port => new CircuitPlaygroundBoard(port)
-    );
+    if (project.getMakerAPIs() === MB_API) {
+      return findPortWithViableDevice().then(port => new MicroBitBoard(port));
+    } else {
+      return findPortWithViableDevice().then(
+        port => new CircuitPlaygroundBoard(port)
+      );
+    }
   }
 }
 

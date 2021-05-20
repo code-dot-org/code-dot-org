@@ -9,74 +9,42 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
 
 const SOUND_CATEGORIES = {
-  category_accent: 'Accent',
-  category_achievements: 'Achievements',
-  category_alerts: 'Alerts',
-  category_animals: 'Animals',
-  category_app: 'App',
-  category_background: 'Background',
-  category_bell: 'Bell',
-  category_board_games: 'Board games',
-  category_collect: 'Collect',
-  category_digital: 'Digital',
-  category_explosion: 'Explosion',
-  category_female_voiceover: 'Female voiceovers',
-  category_hits: 'Hits',
-  category_human: 'Human',
-  category_instrumental: 'Instrumental',
-  category_jump: 'Jump',
-  category_loops: 'Loops',
-  category_male_voiceover: 'Male voiceovers',
-  category_movement: 'Movement',
-  category_music: 'Music',
-  category_nature: 'Nature',
-  category_notifications: 'Notifications',
-  category_objects: 'Objects',
-  category_points: 'Points',
-  category_poof: 'Poof',
-  category_pop: 'Pop',
-  category_projectile: 'Projectile',
-  category_puzzle: 'Puzzle',
-  category_retro: 'Retro',
-  category_slide: 'Slide',
-  category_swing: 'Swing',
-  category_swish: 'Swish',
-  category_tap: 'Tap',
-  category_transition: 'Transition',
-  category_whoosh: 'Whoosh',
-  category_all: 'All'
-};
-
-const styles = {
-  button: {
-    float: 'right',
-    margin: '20px 0px'
-  },
-  categoryArea: {
-    float: 'left',
-    marginBottom: 20,
-    overflowY: 'scroll',
-    height: 320
-  },
-  allCategoriesText: {
-    fontSize: 16,
-    color: color.purple,
-    font: 'Gotham 5r',
-    paddingRight: 5,
-    cursor: 'pointer'
-  },
-  breadcrumbs: {
-    float: 'left',
-    marginTop: 16
-  },
-  categoryText: {
-    fontSize: 14
-  },
-  searchBarContainer: {
-    width: '300px',
-    float: 'right',
-    marginBottom: 10
-  }
+  accent: 'Accent',
+  achievements: 'Achievements',
+  alerts: 'Alerts',
+  animals: 'Animals',
+  app: 'App',
+  background: 'Background',
+  bell: 'Bell',
+  board_games: 'Board games',
+  collect: 'Collect',
+  digital: 'Digital',
+  explosion: 'Explosion',
+  female_voiceover: 'Female voiceovers',
+  hits: 'Hits',
+  human: 'Human',
+  instrumental: 'Instrumental',
+  jump: 'Jump',
+  loops: 'Loops',
+  male_voiceover: 'Male voiceovers',
+  movement: 'Movement',
+  music: 'Music',
+  nature: 'Nature',
+  notifications: 'Notifications',
+  objects: 'Objects',
+  points: 'Points',
+  poof: 'Poof',
+  pop: 'Pop',
+  projectile: 'Projectile',
+  puzzle: 'Puzzle',
+  retro: 'Retro',
+  slide: 'Slide',
+  swing: 'Swing',
+  swish: 'Swish',
+  tap: 'Tap',
+  transition: 'Transition',
+  whoosh: 'Whoosh',
+  all: 'All'
 };
 
 /**
@@ -194,3 +162,35 @@ export default class SoundLibrary extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    float: 'right',
+    margin: '20px 0px'
+  },
+  categoryArea: {
+    float: 'left',
+    marginBottom: 20,
+    overflowY: 'scroll',
+    height: 320
+  },
+  allCategoriesText: {
+    fontSize: 16,
+    color: color.purple,
+    font: 'Gotham 5r',
+    paddingRight: 5,
+    cursor: 'pointer'
+  },
+  breadcrumbs: {
+    float: 'left',
+    marginTop: 16
+  },
+  categoryText: {
+    fontSize: 14
+  },
+  searchBarContainer: {
+    width: '300px',
+    float: 'right',
+    marginBottom: 10
+  }
+};

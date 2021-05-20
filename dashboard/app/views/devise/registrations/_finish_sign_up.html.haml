@@ -7,96 +7,138 @@
 - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
 
 #signup
-  %h1= @page_title
+  .row
+    .span10.header
+      %h1= @page_title
 
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
-    %p
-      - if @user.provider.present?
-        - provider = t("auth.#{@user.provider}")
-        = t('activerecord.attributes.user.finish_sign_up_subheader_provider', provider: provider, email: @user.email).html_safe
-      - else
-        = t('activerecord.attributes.user.finish_sign_up_subheader', email: @user.email).html_safe
-      %span= link_to 'Cancel', users_cancel_path
+    .row
+      .span10
+        %p
+          - if @user.provider.present?
+            - provider = t("auth.#{@user.provider}")
+            = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: provider, email: @user.email, markdown: :inline).html_safe
+          - else
+            = t('activerecord.attributes.user.finish_sign_up_subheader_markdown', email: @user.email, markdown: :inline).html_safe
+          = link_to t('cancel'), users_cancel_path
 
     = f.hidden_field :locale, value: locale
     = f.hidden_field :email
     = f.hidden_field :encrypted_password
-
-    .field-row
-      .field
+    .row
+      .span3.signup-field-label
         = f.label :user_type, t('signup_form.user_type_label')
+        - if @user.errors[:user_type].present?
+          %p.error= t('activerecord.errors.messages.blank')
+      .span5
         = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
-      - if @user.errors[:user_type].present?
-        %span.error.padded= t('activerecord.errors.messages.blank')
-
-    .field-row
-      .field
+      .span2
+    .row#parent-email-container
+      .span8#parent-email-section
+        .padded-container
+          .row.parent-email-section-header
+            .span7.parent-email-field-input
+              .checkbox
+                = f.label :parent_email_preference_opt_in_required do
+                  = f.check_box :parent_email_preference_opt_in_required
+                  %span= t('signup_form.parent_account_checkbox')
+          .row.parent-email-field
+            .span3.signup-field-label
+              = f.label :parent_email do
+                %span= t('signup_form.parent_account_email_label')
+              - if @user.errors[:parent_email_preference_email].present?
+                %p.error= @user.errors[:parent_email_preference_email]&.first
+            .span4.parent-email-field-input
+              = f.email_field :parent_email_preference_email, maxlength: 255, value: @user.parent_email_preference_email || @user.email
+          .row.parent-email-field
+            .span6.signup-field-label
+              = t('signup_form.parent_account_email_progress_permission', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
+              - if @user.errors[:parent_email_preference_opt_in].present?
+                %p.error= t('signup_form.email_preference_required')
+            .span1.parent-email-field-input{style:"display:block"}
+              .radio
+                = f.radio_button :parent_email_preference_opt_in, 'yes'
+                = f.label :parent_email_preference_opt_in, t('signup_form.email_preference_yes'), value: 'yes'
+              .radio
+                = f.radio_button :parent_email_preference_opt_in, 'no'
+                = f.label :parent_email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
+    .row
+      .span3.signup-field-label
         #teacher-name-label{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name').html_safe
         #student-name-label{style: "display: none;"}
-          = f.label :name, t('activerecord.attributes.user.name_example').html_safe
+          = f.label :name, t('activerecord.attributes.user.name_example')
+        - if @user.errors[:name].present?
+          %p.error= @user.errors[:name].join(', ')
+      .span5
         = f.text_field :name, maxlength: 255
-      - if @user.errors[:name].present?
-        %span.error.padded= @user.errors[:name].join(', ')
 
-    .field-row#age-dropdown{style: "display: none;"}
-      .field
+    .row#age-dropdown{style: "display: none;"}
+      .span3.signup-field-label
         = f.label :age
+        - if @user.errors[:age].present?
+          %p.error= @user.errors[:age].join(', ')
+      .span5
         = f.select :age, age_options, include_blank: true
-      - if @user.errors[:age].present?
-        %span.error.padded= @user.errors[:age].join(', ')
 
-    .field-row#gender-dropdown{style: "display: none;"}
-      .field
+    .row#gender-dropdown{style: "display: none;"}
+      .span3.signup-field-label
         = f.label :gender, t('signup_form.gender')
-        = f.select :gender, gender_options
       - if @user.errors[:gender].present?
-        %span.error.padded= @user.errors[:gender].join(', ')
+        %span.error= @user.errors[:gender].join(', ')
+      .span5
+        = f.select :gender, gender_options
 
-    .field
-      -# Mount point for React SchoolInfoInputs component.
-      #school-info-inputs{style: "display: none;"}
-        = f.fields_for :school_info_attributes do |ff|
-          = ff.hidden_field :school_id
-          = ff.hidden_field :school_name
-          = ff.hidden_field :school_state
-          = ff.hidden_field :school_zip
-          = ff.hidden_field :country
-          = ff.hidden_field :full_address
-
-    .checkbox
-      = f.label :terms_of_service_version do
-        = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
-        = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
-        %span#student-consent{style: "display: none;"}
-          = t('signup_form.student_consent')
-        - if @user.errors[:terms_of_service_version].present?
-          %span.error= t('signup_form.accept_terms')
+    .row#school-info-section{style: "display: none;"}
+      .span10
+        -# Mount point for React SchoolInfoInputs component.
+        #school-info-inputs.section-container
+          = f.fields_for :school_info_attributes do |ff|
+            = ff.hidden_field :school_id
+            = ff.hidden_field :school_name
+            = ff.hidden_field :school_state
+            = ff.hidden_field :school_zip
+            = ff.hidden_field :country
+            = ff.hidden_field :full_address
 
     -# If GDPR applies, show an additional checkbox.
     - if request.gdpr? || request.params['force_in_eu']
-      = f.hidden_field :data_transfer_agreement_required, value: "1"
-      .checkbox
-        = f.label :data_transfer_agreement_accepted do
-          = f.check_box :data_transfer_agreement_accepted
-          = t('signup_form.agree_us_website')
-          = t('signup_form.my_data_to_us')
+      .row
+        .span12#gdpr-section
+          = f.hidden_field :data_transfer_agreement_required, value: "1"
+          .checkbox
+            = f.label :data_transfer_agreement_accepted do
+              = f.check_box :data_transfer_agreement_accepted
+              %div#gdpr-label
+                %span#student-gdpr
+                  = t('signup_form.agree_us_data_transfer_student', markdown: :inline).html_safe
+                %span#teacher-gdpr{style: "display: none;"}
+                  = t('signup_form.agree_us_data_transfer_teacher', markdown: :inline).html_safe
+                %span
+                  = t('signup_form.data_collection_us', markdown: :inline).html_safe
+                  = t('signup_form.visit_privacy', privacy_url: CDO.code_org_url('/privacy'), markdown: :inline).html_safe
           - if @user.errors[:data_transfer_agreement_accepted].present?
-            %span.error= t('signup_form.accept_terms')
+            %p.error= t('signup_form.accept_terms')
 
-    #email-preference-radio.field{style: "display: none;"}
-      %span
-        = t('signup_form.email_preference_question')
-        = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
+    .row#email-preference-radio{style: "display: none;"}
+      .span10.signup-field-label
+        %p
+          = t('signup_form.email_preference_question')
+          = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
         - if @user.errors[:email_preference_opt_in].present?
-          %span.error= t('signup_form.email_preference_required')
-      %span
+          %p.error= t('signup_form.email_preference_required')
+      .span2{style:"display:block"}
         .radio
           = f.radio_button :email_preference_opt_in, 'yes'
           = f.label :email_preference_opt_in, t('signup_form.email_preference_yes'), value: 'yes'
         .radio
           = f.radio_button :email_preference_opt_in, 'no'
           = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
+
+    .row
+      .span10.tos
+        = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last
+        = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
 
     %button.submit= t('signup_form.go_to_account')
 
@@ -107,4 +149,4 @@
       signUpUID: "#{session[:sign_up_uid]}"
     }.to_json
   }
-%script{src: minifiable_asset_path('js/devise/registrations/_finish_sign_up.js'), data: script_data}
+%script{src: webpack_asset_path('js/devise/registrations/_finish_sign_up.js'), data: script_data}

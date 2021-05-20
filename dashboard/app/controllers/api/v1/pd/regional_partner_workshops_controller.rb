@@ -18,25 +18,23 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
 
     # Find the matching partner, even if it has no workshops
     partner = @partners.find_by_region(zip_code, state) || RegionalPartner.find_by_region(zip_code, state)
-    render json: serialize_partner_workshops(partner)
+    # To preserve existing behavior after upgrading to ActiveModelSerializers 10.x,
+    # initialize partner to an object with nil values if not found.
+    partner ||= RegionalPartner.new
+
+    render json: partner,
+           serializer: Api::V1::Pd::RegionalPartnerWorkshopsSerializer,
+           scope: {course: @course, subject: @subject}
   end
 
   # GET /api/v1/pd/regional_partner_workshops
   def index
-    render json: @partners.map {|p| serialize_partner_workshops(p)}
+    render json: @partners,
+           each_serializer: Api::V1::Pd::RegionalPartnerWorkshopsSerializer,
+           scope: {course: @course, subject: @subject}
   end
 
   private
-
-  def serialize_partner_workshops(partner)
-    # The scope is not being passed to the serializer with `render json: serializer:` syntax,
-    # so initialize this explicitly.
-    # TODO (Andrew): Look into updating our very outdated version of ActiveModelSerializers
-    Api::V1::Pd::RegionalPartnerWorkshopsSerializer.new(
-      partner,
-      scope: {course: @course, subject: @subject}
-    ).attributes
-  end
 
   def get_filtered_workshops
     @partners = RegionalPartner.includes(:pd_workshops)

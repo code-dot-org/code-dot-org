@@ -25,7 +25,6 @@ hy-AM:
   petition_message: Յուրաքանչյուր աշակերտ յուրաքանչյուր դպրոցում պետք է հնարավորություն
     ունենա սովորելու համակարգչային գիտություն
   petition_sign_message: 'Եթե համաձայն եք, գրեք Ձեր անունը։ Գրանցվել։ #Այլ'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
   name: Անուն
   email: Էլ. փոստ
@@ -203,6 +202,7 @@ hy-AM:
   if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
     whole world to learn.
   personalize_certificate: Personalize your certificate
+  print_certificates: Տպել վկայականը
   share_achievement: Share your achievement
   beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
@@ -367,6 +367,7 @@ hy-AM:
   homepage_action_text_learn: Սկսել սովորել
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: I agree &#x25BE;
+  homepage_signpetition_dropdown_text: Ես համաձայն եմ
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
@@ -1084,6 +1085,8 @@ hy-AM:
   coursee-2018_gradelevel: Ages 8-12
   coursed-2019_gradelevel: Grade 8+
   coursee-2019_gradelevel: Ages 8-12
+  coursed-2020_gradelevel: Grade 8+
+  coursee-2020_gradelevel: Ages 8-12
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
@@ -1682,6 +1685,8 @@ hy-AM:
   header_project_gallery: ծրագրեր
   header_educate_hoc: Կոդի ժամ
   header_stats: Վիճակագրություն
+  header_legal_privacy: Գաղտնիության քաղաքականություն
+  header_legal_tos: Ծառայությունների մատուցման պայմաններ
   user_header_label: Բարև %{username}
   user_header_settings: Իմ էջը
   user_header_logout: Դուրս գալ
@@ -1708,3 +1713,8 @@ hy-AM:
   hoc2018_dance_teacher_resources_tile1_button: Դաս Plan
   hoc2018_dance_teacher_resources_tile2_button: unplugged Ակտիվություն
   hoc2018_dance_amazon_about_future_engineer_button: Սովորել ավելին
+  footer_powered_by_aws: Powered by Սայլակ վեբ ծառայություններ
+  footer_privacy_policy: Գաղտնիության քաղաքականություն
+  footer_donate: Նվիրաբերել
+  footer_support: Help and Community
+  footer_terms: Պայմաններ

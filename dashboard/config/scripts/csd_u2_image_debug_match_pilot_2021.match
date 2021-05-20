@@ -1,0 +1,22 @@
+name 'CSD U2 image debug match_pilot_2021'
+editor_experiment ''
+display_name 'Image Bug Match'
+description 'Match the buggy HTML code with the description of its bug.'
+question 'The `src` attribute is spelled incorrectly.'
+answer 'https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png'
+question 'The `src` and `alt` attributes are switched'
+answer 'https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png'
+question 'The file extension (.jpg) is missing from the image address'
+answer 'https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png'
+question 'The image address is not given as a `src` attribute'
+answer 'https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png'
+question 'There is a space in the file name'
+answer 'https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Although this level can be used to assess student understanding of the syntax of the `<img>` tag, its main purpose is to make students aware of the most common types of bugs they may encounter when adding images to web pages.
+MARKDOWN

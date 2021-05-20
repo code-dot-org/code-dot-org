@@ -1,5 +1,6 @@
 ---
 kind: pipeline
+type: docker
 name: unit
 
 clone:
@@ -9,39 +10,23 @@ steps:
 - name: clone
   image: docker:git
   commands:
-  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 100 $DRONE_GIT_HTTP_URL .
+  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
   - git reset --hard $DRONE_COMMIT
   # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
   - git remote set-branches --add origin $DRONE_TARGET_BRANCH
   - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
 
-- name: verify-pr
-  image: joshlory/code-dot-org:0.10
-  pull: always
-  commands:
-    - |
-      if [ -z "$DRONE_PULL_REQUEST" ]; then
-        echo "Not a pull request."
-        exit 0
-      fi
-    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
-    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
-    - echo $head_repo
-    - |
-      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
-        echo "Pull request is from fork $head_repo; exiting."
-        exit 1
-      fi
-
 - name: restore-cache
   image: plugins/s3-cache
   settings:
+    endpoint: s3://code-dot-org
+    debug: true
     pull: true
     restore: true
     filename: unit-tests-cache.tar
 
 - name: unit-tests
-  image: joshlory/code-dot-org:0.10
+  image: wjordan/code-dot-org:2020-09-10
   pull: always
   volumes:
   - name: rbenv
@@ -49,6 +34,7 @@ steps:
   - name: mysql
     path: /var/lib/mysql
   environment:
+    # Each Drone secret below must be explicitly written to locals.yml in /docker/unit_tests.sh
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
@@ -75,6 +61,8 @@ steps:
   - name: rbenv
     path: /home/circleci/.rbenv
   settings:
+    endpoint: s3://code-dot-org
+    debug: true
     pull: true
     rebuild: true
     filename: unit-tests-cache.tar
@@ -89,12 +77,14 @@ volumes:
 
 trigger:
   branch:
-  - staging
+  - 'staging'
+  - 'staging-next'
   event:
   - pull_request
 
 ---
 kind: pipeline
+type: docker
 name: ui
 
 clone:
@@ -110,9 +100,9 @@ steps:
 - name: clone
   image: docker:git
   commands:
-  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 100 $DRONE_GIT_HTTP_URL .
+  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
   - git reset --hard $DRONE_COMMIT
-  # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
+  # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
   - git remote set-branches --add origin $DRONE_TARGET_BRANCH
   - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
   # Merge so we're up-to-date with the target before running tests. We only do this for UI tests, not unit tests,
@@ -121,38 +111,23 @@ steps:
   - git config user.email "drone-fake-user@code.org"
   - git merge origin/$DRONE_TARGET_BRANCH
 
-- name: verify-pr
-  image: joshlory/code-dot-org:0.10
-  pull: always
-  commands:
-    - |
-      if [ -z "$DRONE_PULL_REQUEST" ]; then
-        echo "Not a pull request."
-        exit 0
-      fi
-    # Check to see if PR is from fork. If so, exit, as the test run provides access to secrets.
-    - head_repo=$(curl -s "https://api.github.com/repos/code-dot-org/code-dot-org/pulls/$DRONE_PULL_REQUEST" | jq .head.repo.full_name)
-    - echo $head_repo
-    - |
-      if [ "$head_repo" != '"code-dot-org/code-dot-org"' ]; then
-        echo "Pull request is from fork $head_repo; exiting."
-        exit 1
-      fi
-
 - name: restore-cache
   image: plugins/s3-cache
   settings:
+    endpoint: s3://code-dot-org
+    debug: true
     pull: true
     restore: true
 
 - name: ui-tests
-  image: joshlory/code-dot-org:0.10
+  image: wjordan/code-dot-org:2020-09-10
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
   - name: mysql
     path: /var/lib/mysql
   environment:
+    # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
@@ -163,6 +138,8 @@ steps:
       from_secret: FIREBASE_NAME
     FIREBASE_SECRET:
       from_secret: FIREBASE_SECRET
+    FIREBASE_SHARED_SECRET:
+      from_secret: FIREBASE_SHARED_SECRET
     SAUCE_USERNAME:
       from_secret: SAUCE_USERNAME
     SAUCE_ACCESS_KEY:
@@ -186,6 +163,8 @@ steps:
   - name: rbenv
     path: /home/circleci/.rbenv
   settings:
+    endpoint: s3://code-dot-org
+    debug: true
     pull: true
     rebuild: true
     mount:
@@ -202,92 +181,12 @@ volumes:
 
 trigger:
   branch:
-  - staging
+  - 'staging'
+  - 'staging-next'
   event:
   - pull_request
 ---
-# We run unit tests only on commits to staging to upload coverage reports.
-
-kind: pipeline
-name: staging-codecov
-
-clone:
-  disable: true
-
-steps:
-- name: clone
-  image: docker:git
-  commands:
-  - git clone --branch $DRONE_SOURCE_BRANCH  --depth 100 $DRONE_GIT_HTTP_URL .
-  - git reset --hard $DRONE_COMMIT
-  # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
-  - git remote set-branches --add origin $DRONE_TARGET_BRANCH
-  - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
-  # Create empty commit with tag to force all tests to run
-  - git config user.name "Drone"
-  - git config user.email "drone-fake-user@code.org"
-  - git commit --allow-empty -m "[test all]"
-
-- name: restore-cache
-  image: plugins/s3-cache
-  settings:
-    pull: true
-    restore: true
-    filename: staging-codecov-cache.tar
-
-- name: unit-tests
-  image: joshlory/code-dot-org:0.10
-  pull: always
-  volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
-  - name: mysql
-    path: /var/lib/mysql
-  environment:
-    CLOUDFRONT_KEY_PAIR_ID:
-      from_secret: CLOUDFRONT_KEY_PAIR_ID
-    CLOUDFRONT_PRIVATE_KEY:
-      from_secret: CLOUDFRONT_PRIVATE_KEY
-    CODECOV_TOKEN:
-      from_secret: CODECOV_TOKEN
-  commands:
-  # If running on EC2, get hostname from ec2 metadata
-  - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
-  - sudo chown -R circleci:circleci .
-  # cache is restored to source directory, so we need to copy it into the right place
-  - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-  - rm -rf "$(pwd)/home/circleci/.rbenv"
-  # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-  # Set this to current commit, which is the empty commit we created during the clone step with the "test all" tag
-  - export CIRCLE_SHA1=$(git rev-parse HEAD)
-  - /entrypoint.sh docker/unit_tests.sh
-
-- name: update-cache
-  image: plugins/s3-cache
-  volumes:
-  - name: rbenv
-    path: /home/circleci/.rbenv
-  settings:
-    pull: true
-    rebuild: true
-    filename: staging-codecov-cache.tar
-    mount:
-    - /home/circleci/.rbenv
-
-volumes:
-- name: rbenv
-  temp: {}
-- name: mysql
-  temp: {}
-
-trigger:
-  branch:
-  - staging
-  event:
-  - push
-
----
 kind: signature
-hmac: 6dfc29c91fbca03b97a0335e0ef0b3d19a2cc12e034cd34ea9e93408d44ad763
+hmac: dc4e945db625740ff05bf17df74f5e97a40b0e336db058bf3ea7c5543e9ce9e5
 
 ...

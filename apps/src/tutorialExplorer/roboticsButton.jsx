@@ -6,6 +6,46 @@ import React from 'react';
 import {getResponsiveValue} from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 
+export default class RoboticsButton extends React.Component {
+  static propTypes = {
+    url: PropTypes.string
+  };
+
+  render() {
+    const roboticsTextStyle = {
+      ...styles.roboticsText,
+      display: getResponsiveValue({xs: 'block', md: 'none'})
+    };
+
+    return (
+      <div>
+        <div style={{display: getResponsiveValue({md: 'block', xs: 'none'})}}>
+          <div style={styles.button}>
+            <a href={this.props.url}>
+              <div style={styles.container}>
+                <img
+                  src="/images/learn/robotics-link.png"
+                  style={styles.roboticsButtonImage}
+                  alt=""
+                />
+                <div style={styles.roboticsButtonText}>
+                  {i18n.roboticsButtonText()}
+                  &nbsp;
+                  <i className="fa fa-arrow-right" aria-hidden={true} />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div style={roboticsTextStyle}>
+          <a href={this.props.url}>{i18n.roboticsText()}</a>
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   button: {
     float: 'left',
@@ -40,42 +80,3 @@ const styles = {
     backgroundColor: '#eee'
   }
 };
-
-export default class RoboticsButton extends React.Component {
-  static propTypes = {
-    url: PropTypes.string
-  };
-
-  render() {
-    const roboticsTextStyle = {
-      ...styles.roboticsText,
-      display: getResponsiveValue({xs: 'block', md: 'none'})
-    };
-
-    return (
-      <div>
-        <div style={{display: getResponsiveValue({md: 'block', xs: 'none'})}}>
-          <div style={styles.button}>
-            <a href={this.props.url}>
-              <div style={styles.container}>
-                <img
-                  src="/images/learn/robotics-link.png"
-                  style={styles.roboticsButtonImage}
-                />
-                <div style={styles.roboticsButtonText}>
-                  {i18n.roboticsButtonText()}
-                  &nbsp;
-                  <i className="fa fa-arrow-right" aria-hidden={true} />
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div style={roboticsTextStyle}>
-          <a href={this.props.url}>{i18n.roboticsText()}</a>
-        </div>
-      </div>
-    );
-  }
-}

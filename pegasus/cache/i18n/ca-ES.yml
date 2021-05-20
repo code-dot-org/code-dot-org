@@ -21,6 +21,8 @@ ca-ES:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Ets mestre d''Informàtica? Mira altres recursos de la
     Setmana de l''Educació Informàtica</a>'
+  csedweek_banner_teachers_text: Ets mestre d'Informàtica? Mira altres recursos de
+    la Setmana de l'Educació Informàtica
   n_have_learned_an_hoc: "<h1>Prova una</h1><h2>Hora de Codi</h2><h3># servit</h3>"
   anybody_can_learn: Qualsevol persona pot aprendre.
   learn_now: Aprèn ara
@@ -28,7 +30,6 @@ ca-ES:
     informàtica
   petition_sign_message: 'Si hi esteu d''acord, signeu amb el vostre nom. Uniu-vos
     als altres #.'
-  petition_sign_message_support: 'Signa si ens dónes suport. Uneix-te a # altres.'
   petition_join_others: 'Uneix-te a # altres'
   name: Nom
   email: Correu electrònic
@@ -292,6 +293,7 @@ ca-ES:
   homepage_action_text_learn: Comença a aprendre
   homepage_action_text_signpetition: Signa la petició
   homepage_signpetition_dropdown: Estic d'acord &#x25BE;
+  homepage_signpetition_dropdown_text: D'acord
   homepage_banner_text_prizes: 'L''Hora del Codi s''acosta de nou, del 7 al 13 de
     desembre. '
   homepage_banner_link_prizes: 'Uneix-te a l''esdeveniment d''aprenentatge més gran
@@ -824,6 +826,8 @@ ca-ES:
   coursee-2018_gradelevel: Edats 8-12
   coursed-2019_gradelevel: Qualificacions 8+
   coursee-2019_gradelevel: Edats 8-12
+  coursed-2020_gradelevel: Qualificacions 8+
+  coursee-2020_gradelevel: Edats 8-12
   accelerated_gradelevel: Edat 10 + (després del curs 3)
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
@@ -1448,6 +1452,8 @@ ca-ES:
   header_teach: Ensenya
   header_help_us: Ajuda'ns
   header_about: Quant a
+  header_legal_privacy: Política de privadesa
+  header_legal_tos: Condicions d'ús
   user_header_label: Hola %{username}
   user_header_team: Equip
   user_header_settings: El meu compte
@@ -1568,3 +1574,10 @@ ca-ES:
   hoc2018_dance_measure: Mesure
   hoc2018_dance_measure_colon: 'Mesure:'
   hoc2018_mc_with_microsoft: En associació amb
+  footer_powered_by_aws: Funciona amb Amazon Web Services
+  footer_privacy_policy: Política de privadesa
+  footer_about: Quant a
+  footer_partners: Socis
+  footer_donate: Feu una donació
+  footer_support: Suport
+  footer_terms: Condicions

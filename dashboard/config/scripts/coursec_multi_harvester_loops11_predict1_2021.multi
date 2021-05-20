@@ -1,0 +1,6 @@
+name 'courseC_multi_harvester_loops11_predict1_2021'
+question 'Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?'
+wrong '4', feedback: 'Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!'
+right '12', feedback: 'Correct!'
+wrong '15', feedback: 'Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!'
+wrong '20', feedback: 'Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!'

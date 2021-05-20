@@ -1,8 +1,7 @@
 login_required true
-has_lesson_plan true
 
-stage 'Creating Javascript Objects'
-level 'U4L02 Student Lesson Introduction'
+lesson 'Creating Javascript Objects', display_name: 'Creating Javascript Objects', has_lesson_plan: true
+level 'U4L02 Student Lesson Introduction Video'
 level 'U4 - Objects - eventParameter'
 level 'U4 - Objects - dotNotation'
 level 'U4 - Objects - createDotNotation'
@@ -19,7 +18,7 @@ level 'U4 - Objects - createContactObject'
 level 'U4 - Objects - resetIndexAndShow'
 level 'U4 - Objects - showSampleImage'
 
-stage 'Permanent Data Storage'
+lesson 'Permanent Data Storage', display_name: 'Permanent Data Storage', has_lesson_plan: true
 level 'U4L03 Student Lesson Introduction'
 level 'U4 - CreateRecord - 1'
 level 'U4 - CreateRecord - 2'
@@ -34,7 +33,7 @@ level 'U4 - add createRecord to contacts App'
 level 'U4 - fix contacts by hand in data table'
 level 'U4 - last stage test adding contcts'
 
-stage 'Reading Records'
+lesson 'Reading Records', display_name: 'Reading Records', has_lesson_plan: true
 level 'U4L04 Student Lesson Introduction'
 level 'U4 - Read Record - 1'
 level 'U4 - Read Record - 1.2'
@@ -48,7 +47,7 @@ level 'U4 - Read Record - Local vs Remote Data External'
 level 'U4 - ReadRecords - Contacts App 2'
 level 'U4 - ReadRecords - Contacts App 3'
 
-stage 'Deleting Records'
+lesson 'Deleting Records', display_name: 'Deleting Records', has_lesson_plan: true
 level 'U6 - deleteRecord - Student Introduction'
 level 'U4 - Unique Ids Explanation'
 level 'U4 - deleteRecords 0'
@@ -57,7 +56,7 @@ level 'U4 - deleteRecords 2 delete object'
 level 'U4 - ReadRecords - Contacts App 4'
 level 'U4 - ReadRecords - Contacts App 5 make delete work'
 
-stage 'Updating Records'
+lesson 'Updating Records', display_name: 'Updating Records', has_lesson_plan: true
 level 'U6 - updateRecord - Student Introduction'
 level 'U6 - updateRecord - Default Block'
 level 'U6 - updateRecord - Callback Success Parameter'
@@ -66,14 +65,14 @@ level 'U6 - updateRecord - Contacts - Edit UI'
 level 'U6 - updateRecord - Contacts - Edit event handler'
 level 'U6 - updateRecord - Contacts - Save edited contact'
 
-stage 'Importing and Exporting Data'
+lesson 'Importing and Exporting Data', display_name: 'Importing and Exporting Data', has_lesson_plan: true
 level 'U6 - ImportExport - Student Introduction'
 level 'U4 - Charts - Import Data 1'
 level 'U4 - Charts - Import Data 2'
 level 'U4 - Charts - Remixing Apps with Data'
 level 'U4 - Charts - Export Data'
 
-stage 'Visualizing Data'
+lesson 'Visualizing Data', display_name: 'Visualizing Data', has_lesson_plan: true
 level 'U6 - Charts - Student Introduction'
 level 'U4 - Charts - drawChartFromRecords 1'
 level 'U4 - Charts - Scatter Chart'
@@ -82,13 +81,14 @@ level 'U4 - Charts - Line Chart 2'
 level 'U4 - Charts - drawChartFromRecords Options 1'
 level 'U4 - Charts - drawChartFromRecords Options 2'
 
-stage 'Sample Apps'
+lesson 'Sample Apps', display_name: 'Sample Apps', has_lesson_plan: true
 level 'U6 - Sample Apps - Student Introduction'
 level 'U6 - Sample Apps - User Login'
 level 'U6 - Sample Apps - Class Survey'
 level 'U6 - Sample Apps - Clicker Game'
 level 'U6 - Sample Apps - Flashcards'
 
-stage 'Final Project'
+lesson 'Final Project', display_name: 'Final Project', has_lesson_plan: true
 level 'U6 - Final Project - Student Introduction'
 level 'U6 - Final Project - Project Level'
+

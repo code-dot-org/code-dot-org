@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
 import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
 import TutorialDetail from '@cdo/apps/tutorialExplorer/tutorialDetail';
@@ -18,7 +18,6 @@ const TUTORIAL_2 = {
 
 const DEFAULT_PROPS = {
   tutorials: [],
-  filters: {},
   localeEnglish: true,
   disabledTutorials: [],
   grade: 'all'
@@ -62,7 +61,6 @@ describe('TutorialSet', () => {
         />
         <Tutorial
           item={TUTORIAL_1}
-          filters={{}}
           key={TUTORIAL_1.code}
           tutorialClicked={
             wrapper
@@ -73,7 +71,6 @@ describe('TutorialSet', () => {
         />
         <Tutorial
           item={TUTORIAL_2}
-          filters={{}}
           key={TUTORIAL_2.code}
           tutorialClicked={
             wrapper

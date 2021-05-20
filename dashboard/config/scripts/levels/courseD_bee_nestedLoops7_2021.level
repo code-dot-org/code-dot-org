@@ -1,0 +1,115 @@
+<Karel>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "bee",
+    "short_instructions": "Challenge: Figure out how to get all of the nectar using only the blocks available.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "1",
+    "nectar_goal": "144",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,2,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "7",
+    "never_autoplay_video": "false",
+    "step_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "true",
+    "long_instructions": "**Challenge:** Figure out how to get all of the nectar using only the blocks available.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to repeat `get nectar` inside of another `repeat` that also has the `move forward` block inside of it.\",\"hint_id\":\"courseD_bee_nestedLoops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0cca600239aa783638faeb027f376cfd/courseD_bee_nestedLoops7_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to use all three of the available `repeat` blocks to solve this puzzle.\",\"hint_id\":\"courseD_bee_nestedLoops7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/04824ab7e087859f6c6f6101085363c2/courseD_bee_nestedLoops7_2018.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Nest your blocks three deep, like this:\\n\\n- repeat 4\\n   - repeat 3\\n      - repeat 12\\n          - get nectar\\n      - move forward\\n   - turn right\\n\",\"hint_id\":\"courseD_bee_nestedLoops7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de4f4501ef476ab83a417eec6578a4fe/courseD_bee_nestedLoops7_2018.mp3\"}]",
+    "instructions_important": "false",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":1,\"value\":12,\"range\":12,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
+    "name_suffix": "_2021",
+    "parent_level_id": 21358,
+    "encrypted": "false",
+    "display_name": "Challenge: Get the Nectar",
+    "hint_prompt_attempts_threshold": "1",
+    "bubble_choice_description": "Figure out how to get all of the nectar using only the blocks available.",
+    "show_type_hints": "false",
+    "thumbnail_url": "https://images.code.org/91c6914147044d0d3a28344d491766a0-image-1615582061408.png",
+    "preload_asset_list": null
+  },
+  "game_id": 25,
+  "published": true,
+  "created_at": "2020-12-04T22:28:20.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-07 16:36:56 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-07 16:38:13 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 19:16:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-25 19:38:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 19:45:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"nectar_goal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 19:46:49 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 19:49:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-30 21:18:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-03-12 20:47:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 20:47:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="2"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_nectar" limit="1"/>
+        <block type="maze_honey"/>
+        <block type="controls_repeat" limit="3">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="controls_repeat" editable="false">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">12</title>
+                      <statement name="DO">
+                        <block type="maze_nectar" editable="false"/>
+                      </statement>
+                      <next>
+                        <block type="maze_moveForward" editable="false"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_turn" editable="false">
+                      <title name="DIR">turnRight</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

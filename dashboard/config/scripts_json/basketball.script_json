@@ -1,0 +1,367 @@
+{
+  "script": {
+    "name": "basketball",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:53 UTC",
+    "seeding_key": {
+      "script.name": "basketball"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Bounce",
+      "name": "Bounce",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_1_basketball"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_1_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      },
+      "level_keys": [
+        "bounce_1_basketball"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_2_basketball"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_2_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      },
+      "level_keys": [
+        "bounce_2_basketball"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_5_basketball"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_5_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      },
+      "level_keys": [
+        "bounce_5_basketball"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_6_basketball"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_6_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      },
+      "level_keys": [
+        "bounce_6_basketball"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_7_basketball"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_7_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      },
+      "level_keys": [
+        "bounce_7_basketball"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_10_basketball"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_10_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      },
+      "level_keys": [
+        "bounce_10_basketball"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_11_basketball"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_11_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      },
+      "level_keys": [
+        "bounce_11_basketball"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_12_basketball"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_12_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      },
+      "level_keys": [
+        "bounce_12_basketball"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "bounce_1_basketball",
+        "script_level.level_keys": [
+          "bounce_1_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_2_basketball",
+        "script_level.level_keys": [
+          "bounce_2_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_5_basketball",
+        "script_level.level_keys": [
+          "bounce_5_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_6_basketball",
+        "script_level.level_keys": [
+          "bounce_6_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_7_basketball",
+        "script_level.level_keys": [
+          "bounce_7_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_10_basketball",
+        "script_level.level_keys": [
+          "bounce_10_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_11_basketball",
+        "script_level.level_keys": [
+          "bounce_11_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_12_basketball",
+        "script_level.level_keys": [
+          "bounce_12_basketball"
+        ],
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "basketball"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

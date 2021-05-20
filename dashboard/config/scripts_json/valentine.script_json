@@ -1,0 +1,226 @@
+{
+  "script": {
+    "name": "valentine",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:12 UTC",
+    "seeding_key": {
+      "script.name": "valentine"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Valentine Puzzles",
+      "name": "Valentine Puzzles",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Valentine_playlab_01"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Valentine_playlab_01"
+        ],
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      },
+      "level_keys": [
+        "Valentine_playlab_01"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Valentine_artist_01"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Valentine_artist_01"
+        ],
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      },
+      "level_keys": [
+        "Valentine_artist_01"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Valentine_artist2_01"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Valentine_artist2_01"
+        ],
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      },
+      "level_keys": [
+        "Valentine_artist2_01"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "valentine_artist_03"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "valentine_artist_03"
+        ],
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      },
+      "level_keys": [
+        "valentine_artist_03"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Valentine_playlab_01",
+        "script_level.level_keys": [
+          "Valentine_playlab_01"
+        ],
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Valentine_artist_01",
+        "script_level.level_keys": [
+          "Valentine_artist_01"
+        ],
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Valentine_artist2_01",
+        "script_level.level_keys": [
+          "Valentine_artist2_01"
+        ],
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "valentine_artist_03",
+        "script_level.level_keys": [
+          "valentine_artist_03"
+        ],
+        "lesson.key": "Valentine Puzzles",
+        "lesson_group.key": "",
+        "script.name": "valentine"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

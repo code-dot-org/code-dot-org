@@ -4,7 +4,9 @@ slack_start_build_token: !Secret
 azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
-zendesk_secret:
+
+# Configurations for making calls to the Immersive Reader API on Azure
+imm_reader_client_id:     '92ef2120-f523-41fe-a995-f9720bf70b81'
 
 # Disable Secrets for CI, unit-test runs,
 # and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
@@ -22,19 +24,14 @@ dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
 google_maps_api_key: boguskey
 db_writer: 'mysql://root@localhost/'
+firebase_shared_secret: fake_firebase_shared_secret
 <% end -%>
 
 db_cluster_id: test-cluster
-pegasus_skip_asset_map: <%=ci_test%>
 netsim_enable_metrics: true
 stub_school_data: true
 daemon: true
 use_pusher: <%=!ci_test%>
-
-# test environment should use precompiled, minified, digested assets like production,
-# unless it's being used for unit tests. This logic should be kept in sync with
-# the logic for setting config.assets.* under dashboard/config/.
-pretty_js: <%=ci_test%>
 
 # Since channel ids are derived from user id and other sequential integer ids
 # use a new S3 sources directory for each Test Build to prevent a UI test
@@ -51,49 +48,5 @@ disable_s3_image_uploads: true
 # provide a unique path for firebase channels data for ci, to avoid conflicts in channel ids.
 firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'
 
-# Overrides for Jotform Form Ids
-jotform_forms:
-  local:
-    day_0: 1
-    day_1: 2
-    day_2: 3
-    day_3: 4
-    day_4: 5
-    day_5: 6
-    facilitator: 7
-    post_workshop: 6
-  local_summer:
-    day_0: 1
-    day_1: 2
-    day_2: 3
-    day_3: 4
-    day_4: 5
-    day_5: 6
-    facilitator: 7
-    post_workshop: 6
-  academic_year_1:
-    day_1: 10
-    facilitator: 11
-    post_workshop: 12
-  academic_year_2:
-    day_1: 20
-    facilitator: 11
-    post_workshop: 12
-  academic_year_3:
-    day_1: 30
-    facilitator: 11
-    post_workshop: 12
-  academic_year_4:
-    day_1: 40
-    facilitator: 11
-    post_workshop: 12
-  academic_year_1_2:
-    day_1: 10
-    day_2: 20
-    facilitator: 11
-    post_workshop: 12
-  academic_year_3_4:
-    day_1: 30
-    day_2: 40
-    facilitator: 11
-    post_workshop: 12
+javabuilder_private_key: not a secret
+javabuilder_key_password: not a password

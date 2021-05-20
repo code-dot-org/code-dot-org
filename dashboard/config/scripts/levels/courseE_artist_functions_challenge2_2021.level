@@ -1,0 +1,211 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-12-04T22:36:03.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist_zombie",
+    "x": "200",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "true",
+    "short_instructions": "Try this code to see how it works, then make the program your own!",
+    "ideal": "0",
+    "embed": "false",
+    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\r\n\r\n<xml>\r\n  <block type=\"jump_to_xy\">\r\n    <title name=\"XPOS\">???</title>\r\n    <title name=\"YPOS\">???</title>\r\n    </block></xml>",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "impressive": "false",
+    "never_autoplay_video": "false",
+    "permitted_errors": "0",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"<xml>\\n  <block type=\\\"jump_to_xy\\\">\\n    <title name=\\\"XPOS\\\">350</title>\\n    <title name=\\\"YPOS\\\">200</title>\\n  </block>\\n  </xml>\\n\\n  \\nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\\n\\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)\",\"hint_id\":\"courseE_artist_functions_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb5825ab0a1c0c56f8b57eb1c6d5e4f1/courseE_artist_functions_challenge2_2018.mp3\"}]",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_artist_functions_challenge2_callout1\",\r\n  \"callout_text\": \"Keep this program going by adding more code to the bottom.\",\r\n  \"element_id\": \"#blue\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"courseE_artist_functions_challenge2_callout2\",\r\n  \"callout_text\": \"If you don't like this design, change it to anything you want!\",\r\n  \"element_id\": \"#function\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right bottom\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/ebc0f571ffe0f421c9add100ed5163e0=levelbuilder/27787.png",
+    "name_suffix": "_2021",
+    "parent_level_id": 21581,
+    "encrypted": "false",
+    "tts_long_instructions_override": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!",
+    "mini_rubric": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 23:24:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"instructions\",\"markdown_instructions\",\"impressive\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:26:48 +0000\",\"changed\":[],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:27:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:30:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:32:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:32:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:34:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:34:49 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:35:16 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:38:47 +0000\",\"changed\":[\"toolbox_blocks\",\"x\",\"y\",\"ideal\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:40:51 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:44:57 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:45:49 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:47:18 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:49:54 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:51:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:51:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:51:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:52:04 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:53:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:53:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:53:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:53:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 00:36:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 00:36:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 00:46:05 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 00:49:53 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 01:11:56 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 01:12:33 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 20:06:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-24 20:06:27 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-24 20:06:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2019-03-27 20:05:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="jump_to_xy">
+              <title name="XPOS">300</title>
+              <title name="YPOS">100</title>
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ff0000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="my design"/>
+                      <next>
+                        <block type="jump_to_xy">
+                          <title name="XPOS">200</title>
+                          <title name="YPOS">200</title>
+                          <next>
+                            <block type="draw_colour" inline="true" id="draw-color">
+                              <value name="COLOUR">
+                                <block type="colour_picker">
+                                  <title name="COLOUR">#228b22</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="my design"/>
+                                  <next>
+                                    <block type="jump_to_xy">
+                                      <title name="XPOS">100</title>
+                                      <title name="YPOS">300</title>
+                                      <next>
+                                        <block type="draw_colour" inline="true" id="draw-color">
+                                          <value name="COLOUR">
+                                            <block type="colour_picker" id="blue">
+                                              <title name="COLOUR">#0000cd</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="procedures_callnoreturn">
+                                              <mutation name="my design"/>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" id="function" x="300" y="50">
+          <mutation/>
+          <title name="NAME">my design</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">75</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">120</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">72</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="jump_to">
+          <title name="VALUE">7</title>
+        </block>
+        <block type="jump_to_xy">
+          <title name="XPOS">350</title>
+          <title name="YPOS">200</title>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="sticker">
+          <title name="VALUE">Alien</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">do something</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Artist>

@@ -50,18 +50,19 @@
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
+      cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'sync_dropbox')
       cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
-      cronjob at:'30 16,17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
+      cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'start_broken_link_checker'), notify:'dev+crontab@code.org'
       cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
+      cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
     end
 
     if node.chef_environment == 'test' && node.name == 'staging-next'
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dtsn')
-      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'trigger_circle_build')
     end
 
     if node.chef_environment == 'test' && node.name == 'test' # 'real' test only
@@ -83,28 +84,29 @@
       cronjob at:'20 */4 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')
-      cronjob at:'*/1 * * * *', do:dashboard_dir('bin', 'process_pd_workshop_ends')
-      cronjob at:'*/1 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
+      cronjob at:'*/3 * * * *', do:dashboard_dir('bin', 'process_pd_workshop_ends')
+      cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
       cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
+      cronjob at:'0 6 * * *', do:dashboard_dir('bin', 'process_foorm_data')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
-      cronjob at:'25 8 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_mapbox')
-      cronjob at:'19 4 * * *', do:deploy_dir('bin', 'cron', 'summarize_census_data')
       cronjob at:'49 5 * * *', do:deploy_dir('bin', 'cron', 'update_census_mapbox')
       cronjob at:'0 9 * * 1-5', do:deploy_dir('bin', 'cron', 'check_for_census_inaccuracy_reports')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
-      cronjob at:'5 16 * * *', do:deploy_dir('bin', 'cron', 'calculate_workshop_survey_results')
-      cronjob at:'10 5 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups')
-      cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_s3')
-      cronjob at:'0 7 * * *', do:deploy_dir('bin', 'cron', 'process_jotform_data')
-      cronjob at:'0 11 * * *', do:deploy_dir('bin', 'cron', 'workshops_to_s3')
-      cronjob at:'00 17 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
+      cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
+      cronjob at:'30 */2 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
+      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'csf_workshop_attendance_to_gdrive')
+      cronjob at:'0 7 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
       cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
-      cronjob at:'0 14 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
+      cronjob at:'31 16 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
+      cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
+      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
+      cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
+      cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
+      cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
-      cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
     end
 
@@ -115,7 +117,7 @@
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'process_forms')
-      cronjob at:'35 * * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
+      cronjob at:'0 7 * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'deliver_poste_messages')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')

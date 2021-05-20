@@ -1,9 +1,9 @@
 name 'cspu5_assess1_swap_exam_prep'
-wrong '<img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>'
-wrong '<img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>'
-wrong '<img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>'
-right '<img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>'
-wrong '<img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>'
+wrong 'https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png,100'
+wrong 'https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png,150'
+wrong 'https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png,150'
+right 'https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png,150'
+wrong 'https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png,150'
 
 markdown <<MARKDOWN
 Jose is writing a reply function for a text messaging app.  He’d like to swap the sender and receiver so that the value currently in variable _From_ ends up as the value in _To_ and _To_ ends up in _From_

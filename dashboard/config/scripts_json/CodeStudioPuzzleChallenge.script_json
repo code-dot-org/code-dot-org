@@ -1,0 +1,646 @@
+{
+  "script": {
+    "name": "CodeStudioPuzzleChallenge",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:38 UTC",
+    "seeding_key": {
+      "script.name": "CodeStudioPuzzleChallenge"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Puzzles",
+      "name": "Puzzles",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 5 - Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 5 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 5 - Bee"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 6 - Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 6 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 6 - Bee"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 7 - Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 7 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 7 - Bee"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 10 - Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 10 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 10 - Bee"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 10b - Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 10b - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 10b - Bee"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 8 - Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 8 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 8 - Bee"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 9 - Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 9 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 9 - Bee"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 1 - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 1 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 1 - Artist"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 2 - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 2 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 2 - Artist"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 3 - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 3 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 3 - Artist"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 4 - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 4 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 4 - Artist"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge Var - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge Var - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge Var - Artist"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 11 - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 11 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 11 - Artist"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 12 - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 12 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 12 - Artist"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 13 - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 13 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 13 - Artist"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge 14 - Artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 14 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge 14 - Artist"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 5 - Bee",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 5 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 6 - Bee",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 6 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 7 - Bee",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 7 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 10 - Bee",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 10 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 10b - Bee",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 10b - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 8 - Bee",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 8 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 9 - Bee",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 9 - Bee"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 1 - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 1 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 2 - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 2 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 3 - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 3 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 4 - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 4 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge Var - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge Var - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 11 - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 11 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 12 - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 12 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 13 - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 13 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge 14 - Artist",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge 14 - Artist"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "CodeStudioPuzzleChallenge"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

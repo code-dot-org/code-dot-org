@@ -1,0 +1,84 @@
+<Maze>
+  <config><![CDATA[{
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,0,0,0,0,0],[0,2,1,1,3,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "short_instructions": "Drag an extra `move forward` block out of the toolbox to finish your code.",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "4",
+    "video_key": "CSF_maze_intro_text_blocks",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To use a <xml><block type=\\\"maze_moveForward\\\"/></xml> block, drag it out of the toolbox and snap it to the <xml><block type=\\\"when_run\\\"/></xml> block.\",\"hint_id\":\"courseC_maze_programming2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e2ea88c4663c1aa92cbacba8871b19bd/courseC_maze_programming2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Make sure all of the blocks have been fully snapped together, then click \\\"Run\\\" again.\",\"hint_id\":\"courseC_maze_programming2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19d0183dbe003b07dd1d4a3085a2a3fb/courseC_maze_programming2.mp3\"}]",
+    "long_instructions": "Drag an extra <xml><block type=\"maze_moveForward\" block-text=\"move forward\"/></xml> block out of the toolbox to finish your code.",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming2_1\",\r\n  \"callout_text\": \"This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 21144,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "tts_long_instructions_override": "Drag an extra move forward block out of the toolbox to finish your code.",
+    "mini_rubric": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "maze_data": null,
+    "preload_asset_list": null
+  },
+  "game_id": 25,
+  "published": true,
+  "created_at": "2020-12-04T22:23:30.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-06 03:32:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 15:20:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:21:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2019-03-27 19:38:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-24 13:29:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"video_key\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="maze_moveForward"/>
+        <block type="maze_moveForward"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="3"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_moveForward"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

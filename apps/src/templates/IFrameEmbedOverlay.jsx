@@ -3,9 +3,76 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {singleton as studioApp} from '../StudioApp';
+import msg from '@cdo/locale';
 
 const PHONE_MARGIN = 68;
 const PLAY_BUTTON_SIZE = 26;
+
+class IFrameEmbedOverlay extends Component {
+  static propTypes = {
+    appWidth: PropTypes.number.isRequired,
+    appHeight: PropTypes.number.isRequired,
+    style: PropTypes.object,
+    playButtonStyle: PropTypes.object
+  };
+
+  state = {
+    tooYoung: false
+  };
+
+  static defaultProps = {
+    showPlayButton: true
+  };
+
+  handleTooYoung = () => {
+    this.setState({tooYoung: true});
+  };
+
+  onClick = () => {
+    if (!this.state.tooYoung) {
+      studioApp().startIFrameEmbeddedApp(this.handleTooYoung);
+    }
+  };
+
+  render() {
+    return (
+      <div
+        style={[
+          styles.overlay.wrapper,
+          {
+            width: this.props.appWidth,
+            height: this.props.appHeight
+          },
+          !this.state.tooYoung && {cursor: 'cursor'},
+          this.props.style
+        ]}
+        onClick={this.onClick}
+      >
+        {this.state.tooYoung ? (
+          <div className="alert alert-danger">{msg.tooYoung()}</div>
+        ) : (
+          <div>
+            <div style={styles.overlay.clickText}>Tap or click to run</div>
+            <div
+              style={[
+                styles.playButtonWrapper,
+                {
+                  left:
+                    this.props.appWidth / 2 -
+                    PLAY_BUTTON_SIZE / 2 -
+                    styles.playButtonWrapper.padding / 2
+                },
+                this.props.playButtonStyle
+              ]}
+            >
+              <span className="fa fa-play" style={styles.playButton} />
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+}
 
 var styles = {
   overlay: {
@@ -56,73 +123,5 @@ var styles = {
     paddingLeft: 4
   }
 };
-
-class IFrameEmbedOverlay extends Component {
-  static propTypes = {
-    appWidth: PropTypes.number.isRequired,
-    appHeight: PropTypes.number.isRequired,
-    style: PropTypes.object,
-    playButtonStyle: PropTypes.object
-  };
-
-  state = {
-    tooYoung: false
-  };
-
-  static defaultProps = {
-    showPlayButton: true
-  };
-
-  handleTooYoung = () => {
-    this.setState({tooYoung: true});
-  };
-
-  onClick = () => {
-    if (!this.state.tooYoung) {
-      studioApp().startIFrameEmbeddedApp(this.handleTooYoung);
-    }
-  };
-
-  render() {
-    return (
-      <div
-        style={[
-          styles.overlay.wrapper,
-          {
-            width: this.props.appWidth,
-            height: this.props.appHeight
-          },
-          !this.state.tooYoung && {cursor: 'cursor'},
-          this.props.style
-        ]}
-        onClick={this.onClick}
-      >
-        {this.state.tooYoung ? (
-          <div className="alert alert-danger">
-            {window.dashboard.i18n.t('errors.messages.too_young')}
-          </div>
-        ) : (
-          <div>
-            <div style={styles.overlay.clickText}>Tap or click to run</div>
-            <div
-              style={[
-                styles.playButtonWrapper,
-                {
-                  left:
-                    this.props.appWidth / 2 -
-                    PLAY_BUTTON_SIZE / 2 -
-                    styles.playButtonWrapper.padding / 2
-                },
-                this.props.playButtonStyle
-              ]}
-            >
-              <span className="fa fa-play" style={styles.playButton} />
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  }
-}
 
 export default Radium(IFrameEmbedOverlay);

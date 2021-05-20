@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Provider} from 'react-redux';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
@@ -10,43 +11,8 @@ import SchoolInfoInputs, {
   SCHOOL_TYPES_HAVING_NAMES
 } from '../../templates/SchoolInfoInputs';
 import firehoseClient from '../util/firehose';
-
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-    fontSize: 13
-  },
-  heading: {
-    fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
-  },
-  middle: {
-    marginTop: 20,
-    marginBottom: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray
-  },
-  bottom: {
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  error: {
-    color: color.red
-  },
-  button: {
-    marginLeft: 7,
-    marginRight: 7,
-    marginTop: 15,
-    marginBottom: 15
-  }
-};
+import {combineReducers, createStore} from 'redux';
+import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 const FIREHOSE_EVENTS = {
   // Interstitial is displayed to the teacher.
@@ -58,6 +24,12 @@ const FIREHOSE_EVENTS = {
   // School information failed to save
   SAVE_FAILURE: 'save_failure'
 };
+
+const store = createStore(
+  combineReducers({
+    mapbox: mapboxReducer
+  })
+);
 
 export default class SchoolInfoInterstitial extends React.Component {
   static propTypes = {
@@ -77,7 +49,8 @@ export default class SchoolInfoInterstitial extends React.Component {
         school_type: PropTypes.string,
         school_name: PropTypes.string,
         full_address: PropTypes.string
-      }).isRequired
+      }).isRequired,
+      mapboxAccessToken: PropTypes.string
     }).isRequired,
     onClose: PropTypes.func.isRequired
   };
@@ -112,6 +85,12 @@ export default class SchoolInfoInterstitial extends React.Component {
       errors: {},
       isOpen: true
     };
+
+    if (this.props.scriptData.mapboxAccessToken) {
+      store.dispatch(
+        setMapboxAccessToken(this.props.scriptData.mapboxAccessToken)
+      );
+    }
   }
 
   logEvent(eventName, data = {}) {
@@ -332,58 +311,104 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   render() {
     const showErrors = Object.keys(this.state.errors).length > 0;
+    const {mapboxAccessToken} = this.props.scriptData;
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen={this.state.isOpen}
-        handleClose={this.props.onClose}
-        uncloseable
-      >
-        <div style={styles.container}>
-          <div style={styles.heading}>{i18n.schoolInfoInterstitialTitle()}</div>
-          {this.state.showSchoolInfoUnknownError && (
-            <p style={styles.error}>
-              {i18n.schoolInfoInterstitialUnknownError()}
-            </p>
-          )}
-          <div style={styles.middle}>
-            <p>{i18n.schoolInfoInterstitialDescription()}</p>
-            <SchoolInfoInputs
-              ref={ref => (this.schoolInfoInputs = ref)}
-              onCountryChange={this.onCountryChange}
-              onSchoolTypeChange={this.onSchoolTypeChange}
-              onSchoolChange={this.onSchoolChange}
-              onSchoolNotFoundChange={this.onSchoolNotFoundChange}
-              country={this.state.country}
-              schoolType={this.state.schoolType}
-              ncesSchoolId={this.state.ncesSchoolId}
-              schoolName={this.state.schoolName}
-              schoolLocation={this.state.schoolLocation}
-              useGoogleLocationSearch={true}
-              showErrors={showErrors}
-              showRequiredIndicator={true}
-            />
+      <Provider store={store}>
+        <BaseDialog
+          useUpdatedStyles
+          isOpen={this.state.isOpen}
+          handleClose={this.props.onClose}
+          uncloseable
+          overflow={'visible'}
+        >
+          <div style={styles.container}>
+            <div style={styles.heading}>
+              {i18n.schoolInfoInterstitialTitle()}
+            </div>
+            {this.state.showSchoolInfoUnknownError && (
+              <p style={styles.error}>
+                {i18n.schoolInfoInterstitialUnknownError()}
+              </p>
+            )}
+            <div style={styles.middle}>
+              <p>{i18n.schoolInfoInterstitialDescription()}</p>
+              <SchoolInfoInputs
+                ref={ref => (this.schoolInfoInputs = ref)}
+                onCountryChange={this.onCountryChange}
+                onSchoolTypeChange={this.onSchoolTypeChange}
+                onSchoolChange={this.onSchoolChange}
+                onSchoolNotFoundChange={this.onSchoolNotFoundChange}
+                country={this.state.country}
+                schoolType={this.state.schoolType}
+                ncesSchoolId={this.state.ncesSchoolId}
+                schoolName={this.state.schoolName}
+                schoolLocation={this.state.schoolLocation}
+                useLocationSearch={true}
+                showErrors={showErrors}
+                showRequiredIndicator={true}
+                mapboxAccessToken={mapboxAccessToken}
+              />
+            </div>
+            <div style={styles.bottom}>
+              <Button
+                __useDeprecatedTag
+                onClick={this.dismissSchoolInfoForm}
+                style={styles.button}
+                color="gray"
+                size="large"
+                text={i18n.dismiss()}
+                id="dismiss-button"
+              />
+              <Button
+                __useDeprecatedTag
+                onClick={this.handleSchoolInfoSubmit}
+                style={styles.button}
+                size="large"
+                text={i18n.save()}
+                color={Button.ButtonColor.orange}
+                id="save-button"
+              />
+            </div>
           </div>
-          <div style={styles.bottom}>
-            <Button
-              onClick={this.dismissSchoolInfoForm}
-              style={styles.button}
-              color="gray"
-              size="large"
-              text={i18n.dismiss()}
-              id="dismiss-button"
-            />
-            <Button
-              onClick={this.handleSchoolInfoSubmit}
-              style={styles.button}
-              size="large"
-              text={i18n.save()}
-              color={Button.ButtonColor.orange}
-              id="save-button"
-            />
-          </div>
-        </div>
-      </BaseDialog>
+        </BaseDialog>
+      </Provider>
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: 20,
+    color: color.charcoal,
+    fontSize: 13
+  },
+  heading: {
+    fontSize: 16,
+    fontFamily: "'Gotham 5r', sans-serif"
+  },
+  middle: {
+    marginTop: 20,
+    marginBottom: 20,
+    paddingBottom: 20,
+    paddingTop: 20,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray
+  },
+  bottom: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  error: {
+    color: color.red
+  },
+  button: {
+    marginLeft: 7,
+    marginRight: 7,
+    marginTop: 15,
+    marginBottom: 15
+  }
+};

@@ -16,17 +16,12 @@
 %link{href: asset_path("css/#{app}.css"), rel: 'stylesheet', type: 'text/css'}
 
 - if use_p5
-  %script{src: minifiable_asset_path('js/p5-dependencies.js')}
+  %script{src: webpack_asset_path('js/p5-dependencies.js')}
 
 -# Droplet style dependencies (only when editor present)
 - if use_droplet && !hide_source
   %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
   %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
-
--# Gamelab script dependencies
-- if use_gamelab
-  %script{src: minifiable_asset_path('js/p5play/p5.js')}
-  %script{src: minifiable_asset_path('js/p5play/p5.play.js')}
 
 -# Droplet script dependencies (only when editor present)
 - if use_droplet && !hide_source
@@ -42,27 +37,29 @@
   %script{src: "#{static_asset_base_path}js/ace/ace.js"}
   %script{src: "#{static_asset_base_path}js/ace/mode-javascript.js"}
   %script{src: "#{static_asset_base_path}js/ace/ext-language_tools.js"}
-  %script{src: minifiable_asset_path('js/droplet/droplet-full.js')}
-  %script{src: minifiable_asset_path('js/tooltipster/jquery.tooltipster.js')}
+  %script{src: webpack_asset_path('js/droplet/droplet-full.js')}
+  %script{src: webpack_asset_path('js/tooltipster/jquery.tooltipster.js')}
 -# Asset uploader script dependencies (not in share mode)
 - if (use_applab || use_gamelab || use_weblab) && !hide_source
-  %script{src: minifiable_asset_path('js/fileupload/jquery.iframe-transport.js')}
-  %script{src: minifiable_asset_path('js/fileupload/jquery.fileupload.js')}
+  %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
+  %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
 
 - if use_phaser
-  %script{src: minifiable_asset_path('js/phaser/phaser.js')}
+  %script{src: webpack_asset_path('js/phaser/phaser.js')}
 
 -# Blockly script dependencies
 - if use_blockly
-  %script{src: asset_path('js/blockly.js')}
-  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
+  - if use_google_blockly
+    %script{src: webpack_asset_path('js/googleblockly.js')}
+  - else
+    %script{src: webpack_asset_path('js/blockly.js')}
+    %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 
 -# Common script dependencies
-%script{src: minifiable_asset_path('js/marked/marked.js')}
-%script{src: minifiable_asset_path('js/common.js')}
+%script{src: webpack_asset_path('js/common.js')}
 -# common_locale is included in application.html.haml
-%script{src: asset_path("js/#{js_locale}/#{app}_locale.js")}
-%script{src: minifiable_asset_path("js/#{app}.js"),
+%script{src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")}
+%script{src: webpack_asset_path("js/#{app}.js"),
         data: {appoptions: app_options.to_json}}
 
 -# Applab external script dependencies

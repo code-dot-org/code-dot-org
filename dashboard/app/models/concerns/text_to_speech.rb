@@ -88,13 +88,13 @@ module TextToSpeech
     VOICES[loc]
   end
 
-  def self.tts_upload_to_s3(text, filename)
+  def self.tts_upload_to_s3(text, filename, context = nil)
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
-    return if AWS::S3.exists_in_bucket(TTS_BUCKET, filename)
+    return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
 
     loc_voice = TextToSpeech.localized_voice
-    url = acapela_text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE])
+    url = acapela_text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
     return if url.nil?
     uri = URI.parse(url)
     Net::HTTP.start(uri.host) do |http|
@@ -118,9 +118,9 @@ module TextToSpeech
     TTSSafeRenderer.render(text)
   end
 
-  def tts_upload_to_s3(text)
+  def tts_upload_to_s3(text, context = nil)
     filename = tts_path(text)
-    TextToSpeech.tts_upload_to_s3(text, filename)
+    TextToSpeech.tts_upload_to_s3(text, filename, context)
   end
 
   def tts_url(text)
@@ -142,7 +142,7 @@ module TextToSpeech
     if I18n.locale == I18n.default_locale
       # We still have to try localized instructions here for the
       # levels.js-defined levels
-      tts_short_instructions_override || short_instructions || try(:localized_short_instructions) || ""
+      tts_short_instructions_override || TextToSpeech.sanitize(short_instructions || try(:localized_short_instructions)) || ""
     else
       TextToSpeech.sanitize(try(:localized_short_instructions) || "")
     end
@@ -215,15 +215,16 @@ module TextToSpeech
   end
 
   def tts_update
-    tts_upload_to_s3(tts_short_instructions_text) if tts_should_update_short_instructions?
+    context = 'update_level'
+    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?
 
-    tts_upload_to_s3(tts_long_instructions_text) if tts_should_update_long_instructions?
+    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?
 
     if authored_hints && tts_should_update('authored_hints')
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
         text = TextToSpeech.sanitize(hint["hint_markdown"])
-        tts_upload_to_s3(text)
+        tts_upload_to_s3(text, context)
         hint["tts_url"] = tts_url(text)
       end
       self.authored_hints = JSON.dump(hints)

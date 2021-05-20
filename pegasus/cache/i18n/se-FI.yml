@@ -1,8 +1,134 @@
 ---
 se-NO:
+  hello: Bures máilbmi
+  email: Epoasta
+  cded_sign_up: Ráhkat konto
+  try_now: Geahččal dál
+  gender: Sohkabealli
+  studiobar_flappy_title: Flappy Koda
+  homepage_slot_text_course4: Kursa 4
+  homepage_slot_text_flappy: Flappy Koda
+  homepage_action_text_sign_up: Ráhkat konto
   starwars_subtitle: Hukse galákssa kodemiin
   starwars_javascript_title: JavaScript
-  starwars_shortdescription: Oahpahala kodet droidaid ja hukse gáiddus galáksii iežat
-    Násttiid soahti -spealu.
-  starwars_longdescription: Oahpahala kodet droidaid ja hukse gáiddus galáksii iežat
-    Násttiid soahti -spealu.
+  minecraft_designer_description: Programmere elliid dahje eará Minecraft heakkalaččaid
+    du iežat Minecraft-veršuvnnas.
+  are_you_teacher: Leat go oahpaheaddji?
+  volunteer_engineer_submission_field_email: Epoastačujuhus
+  volunteer_engineer_submission_field_email_placeholder: Epoastačujuhus
+  petition_age: Ahki
+  dashboard_landing_print_certificates: Čálit sertifikáhtaid ohppiide geat válbmejit
+    dán kurssa
+  dashboard_landing_educator_blog: Loga ođđasiid ja ođas materiálaid min Oahpaheaddji
+    Bloggas
+  dashboard_landing_video_player: Geahččal min ođđa videospealli iežat skuvllas
+  dashboard_navigation_section_community: Doarjja
+  dashboard_progress_not_started: ii álgán
+  dashboard_progress_in_progress: proseassa vuolde
+  dashboard_progress_completed_too_many_blocks: válbmejuvvon, beare ollu blohkat
+  dashboard_progress_completed_perfect: válbmejuvvon, áibbas buorre
+  dashboard_progress_furthest_level_attempted: alimus dássi geahččaluvvon
+  dashboard_progress_submitted: sisa addán
+  dashboard_students_male: Bárdni
+  dashboard_students_female: Nieida
+  dashboard_login_none: Epoasta
+  dashboard_stage: Dássi
+  dashboard_puzzle: Bargobihttá
+  dashboard_correctness_correct: Riekta
+  learn_more: Geahččal dál
+  learn_sign_up_button: Ráhkat konto
+  hoc2014_try_new_tutorial: Geahččal min ođđa KodenDiimmu neavvaga beta hámis
+  hoc2014_try_frozen: Dáiddár Annain ja Elsain, Jikŋon filmmas
+  frozen_name: Kode Annain ja Elsain
+  codeorg_name: Klassikalaš Labirynta
+  codeintl_name: Klassikalaš Labirynta
+  hourofcode_name: Klassikalaš Labirynta
+  playlab_name: Speallan-lab
+  infinity_name: Infinitiija Speallan-lab
+  artist_name: Dáiddár
+  course1_name: Kursa 1
+  course2_name: Kursa 2
+  course3_name: Kursa 3
+  course4_name: Kursa 4
+  accelerated_name: Akselerejuvvon Kursa
+  20-hour_name: Akselerejuvvon Kursa
+  classicmaze_name: Klassikalaš Labirynta
+  minecraft_name: Minecraft
+  text-compression_name: TeakstaKomprimeren
+  applab_gradelevel: Agit 13+
+  course1_gradelevel: Agit 4-6
+  course3_gradelevel: Ahki 8-18
+  course4_gradelevel: Ahki 10-18
+  accelerated_gradelevel: Ahki 10-18
+  starwars_shortdescription: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+    spealu galaksii mii lea guhkkin, guhkkin eret.
+  playlab_shortdescription: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
+  infinity_shortdescription: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas
+    Disney Infinitiija figurat leat mielde.
+  artist_shortdescription: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
+  frozen_longdescription: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja
+    čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid luistiiguin
+    ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
+  starwars_longdescription: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+    spealu galaksii mii lea guhkkin, guhkkin eret.
+  compatibility_unsupported_browser_markdown: Du neahttalohkki ii dorjojuvvo. Ođas
+    du neahttalohkki dása [ovtta min dorjojuvvon neahttalohkkiide](%{supported_browsers_url}).
+    Don sáhtát geahččalit geahččat siiddu, muhto fertet vuordit ahte funkšunálitehta
+    sáhttá billohuvvot.
+  header_courses: Kurssat
+  header_course_catalog: Kursa Kataloga
+  header_project_gallery: Prošeavttat
+  header_sections: Sekšuvnnat
+  header_educate_overview: Oahpaheaddjivárddus
+  header_educate_elementary: Mánáidskuvla
+  header_educate_middle: Nuoraidskuvla
+  header_educate_high: Joatkkaskuvla
+  header_educate_partner: Álgge bargat minguin
+  header_educate_beyond: Ovddos guvlui Code.org:in
+  header_educate_inspire: Movttiidahte Oahppi
+  header_educate_community: Neahttaservodat
+  header_educate_tools: Reaiddut ja Videoat
+  header_about_us: Min birra
+  header_about_leadership: Jođiheapmi
+  header_about_donors: Addit
+  header_about_partners: Doaibmaoasálaččat
+  header_about_team: Olles Joavku
+  header_about_news: Ođaslatnja
+  header_about_evaluation: Evalueren
+  header_about_jobs: Barggut
+  header_about_contact: Váldde minguin oktavuođa
+  header_about_faqs: Dábálaš jearaldagat / FAQs
+  header_learn: Oahpa
+  header_teach: Oahpat
+  header_help_us: Veahket min
+  header_about: Birra
+  header_teacher_community: Oahpaheaddjiservodat
+  header_report_bug: Dieđit váttisvuođa
+  header_legal_privacy: Persovdnasuodjalus
+  header_legal_tos: GeavahanEavttut
+  header_tutorials: Neavvagat
+  header_documentation: Dokumenteren
+  user_header_label: Bures %{username}
+  user_header_team: Joavku
+  user_header_settings: Kontohuksehus
+  user_header_logout: Logge olggos
+  user_header_signin: Logge sisa
+  user_header_playlab: Speallan-lab
+  user_header_spritelab: Sprite-lab
+  user_header_minecraft: Minecraft
+  user_header_flappy: Flappy
+  account_sign_up_email_opt_in: Sáhttit go epoastta sáddet dutnje mas leat ođasmahttimat
+    min kurssaide, báikkálaš vejolašvuođat, dahje eará dihtordiehtaga ođđasat? (sullii
+    ovtta geardde mánus)
+  account_sign_up_child_accept_terms: Mun duođaštan ahte mun lean ožžon lobi váhnemis
+    dahje oapmehasas geavahit Code.org bálvalusaid.
+  hoc2018_mc_designer_description: Programmere elliid dahje eará Minecraft heakkalaččaid
+    du iežat Minecraft-veršuvnnas.
+  hoc2018_dance_teacher_resources_tile1_button: BargoPlána
+  hoc2018_dance_teacher_resources_tile2_button: Neahtahaga Doaibma
+  footer_powered_by_aws: Jođihuvvon Amazon Web Services
+  footer_privacy_policy: Persovdnasuodjalus
+  footer_about: Birra
+  footer_partners: Doaibmaoasálaččat
+  footer_support: Doarjja
+  footer_terms: Eavttut

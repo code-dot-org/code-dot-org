@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
+  include Pd::SharedWorkshopConstants
+  include Pd::Application::ActiveApplicationModels
+
   COURSES = ['csd', 'csp']
 
   self.use_transactional_test_case = true
@@ -27,6 +30,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   setup do
     Pd::Workshop.any_instance.stubs(:process_location) # don't actually call Geocoder service
+    Pd::RegionalPartnerMapping.any_instance.stubs(:unique_region_to_partner) # skip uniqueness validations for easier testing
   end
 
   [:index, :capacity].each do |action|
@@ -246,13 +250,13 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   test 'show regional partner summer workshops for valid partner ID' do
     regional_partner = create :regional_partner_beverly_hills
 
-    get :show, partner_id: regional_partner.id
+    get :show, params: {partner_id: regional_partner.id}
     assert_response :success
     assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
   end
 
   test 'show regional partner summer workshops for invalid partner ID' do
-    get :show, partner_id: "YY"
+    get :show, params: {partner_id: "YY"}
     assert_response :success
     assert_equal "no_partner", JSON.parse(@response.body)['error']
   end
@@ -262,33 +266,33 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     regional_partner = create :regional_partner_beverly_hills
 
-    get :find, zip_code: 90210
+    get :find, params: {zip_code: 90210}
     assert_response :success
     assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
   end
 
   test 'find regional partner summer workshops for state fallback' do
-    mock_illinois_object = OpenStruct.new(state_code: "IL")
+    mock_illinois_object = OpenStruct.new(country_code: "US", state_code: "IL")
     Geocoder.expects(:search).returns([mock_illinois_object])
 
     regional_partner = create :regional_partner_illinois
 
-    get :find, zip_code: 60415
+    get :find, params: {zip_code: 60415}
     assert_response :success
     assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
   end
 
   test 'find no regional partner summer workshops for a state' do
-    mock_washington_object = OpenStruct.new(state_code: "WA")
+    mock_washington_object = OpenStruct.new(country_code: "US", state_code: "WA")
     Geocoder.expects(:search).returns([mock_washington_object])
 
-    get :find, zip_code: 98104
+    get :find, params: {zip_code: 98104}
     assert_response :success
     assert_equal "no_partner", JSON.parse(@response.body)['error']
   end
 
   test 'find no regional partner summer workshops for invalid ZIP code' do
-    get :find, zip_code: "XX"
+    get :find, params: {zip_code: "XX"}
     assert_response :success
     assert_equal "no_state", JSON.parse(@response.body)['error']
   end
@@ -296,8 +300,55 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   test 'find no regional partner summer workshops for non-existent ZIP code' do
     Geocoder.expects(:search).returns([])
 
-    get :find, zip_code: 11111
+    get :find, params: {zip_code: 11111}
     assert_response :success
     assert_equal "no_state", JSON.parse(@response.body)['error']
+  end
+
+  test 'program manager gets partner enrollment count' do
+    sign_in @program_manager
+
+    get :enrolled, params: {role: 'csd_teachers', regional_partner_value: nil}
+    result = JSON.parse(@response.body)
+
+    assert_response :success
+
+    # A non-nil result means regional_partner_value was automatically figured out from the server side.
+    assert_equal 0, result['enrolled']
+  end
+
+  test 'get partner enrollment count' do
+    # For each type of workshop "role", create a workshop of that role
+    # with number of enrollments equal to the role index
+    application_year = APPLICATION_CURRENT_YEAR.split('-').first.to_i
+    application_year_start_date = Date.new(application_year, 6, 1)
+
+    Api::V1::Pd::ApplicationsController::ROLES.each_with_index do |role, index|
+      course, subject =
+        case role
+        when :csf_facilitators
+          [COURSE_CSF, SUBJECT_CSF_FIT]
+        when :csd_facilitators
+          [COURSE_CSD, SUBJECT_CSD_FIT]
+        when :csp_facilitators
+          [COURSE_CSP, SUBJECT_CSP_FIT]
+        when :csd_teachers
+          [COURSE_CSD, SUBJECT_CSD_SUMMER_WORKSHOP]
+        when :csp_teachers
+          [COURSE_CSP, SUBJECT_CSP_SUMMER_WORKSHOP]
+        end
+
+      create :workshop,
+        course: course,
+        subject: subject,
+        enrolled_unattending_users: index,
+        sessions_from: application_year_start_date,
+        regional_partner: @regional_partner
+    end
+
+    Api::V1::Pd::ApplicationsController::ROLES.each_with_index do |role, index|
+      result = @controller.send :get_partner_enrollment_count, @regional_partner.id, role.to_s
+      assert_equal index, result, "Wrong enrollment count for role #{role}"
+    end
   end
 end

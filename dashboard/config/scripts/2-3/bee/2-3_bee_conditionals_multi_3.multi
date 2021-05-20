@@ -4,7 +4,7 @@ content1 '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500'
 
 height '160'
 
-question 'Choose the best blocks.'
+question 'Choose the best blocks. Purple flowers have either 0 or 1 nectar.'
 wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png'
 right '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png'
 wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png'

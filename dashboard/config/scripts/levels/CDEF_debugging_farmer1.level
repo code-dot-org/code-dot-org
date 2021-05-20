@@ -34,11 +34,11 @@
     "shape_shift": "false",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-06 00:00:45 +0000\",\"changed\":[\"notes\",\"maze_data\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:01:49 +0000\",\"changed\":[\"maze_data\",\"contained_level_names\",\"start_direction\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:06:14 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:10:16 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:12 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:25 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:55 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:13:29 +0000\",\"changed\":[\"step_mode\",\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:18:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-06 00:00:45 +0000\",\"changed\":[\"notes\",\"maze_data\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:01:49 +0000\",\"changed\":[\"maze_data\",\"contained_level_names\",\"start_direction\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:06:14 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:10:16 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:12 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:25 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:55 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:13:29 +0000\",\"changed\":[\"step_mode\",\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:18:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2020-07-07 20:46:27 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-07-07 20:46:38 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -92,24 +92,29 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">3</title>
-              <statement name="DO">
+            <block type="maze_moveForward">
+              <next>
                 <block type="controls_repeat">
-                  <title name="TIMES">4</title>
+                  <title name="TIMES">3</title>
                   <statement name="DO">
-                    <block type="maze_moveForward"/>
-                  </statement>
-                  <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnRight</title>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
                       <next>
-                        <block type="maze_dig"/>
+                        <block type="maze_dig">
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
+                            </block>
+                          </next>
+                        </block>
                       </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>

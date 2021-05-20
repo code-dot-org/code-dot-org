@@ -6,18 +6,10 @@ import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
-
-const styles = {
-  grid: {
-    width: styleConstants['content-width']
-  },
-  link: {
-    color: color.light_teal
-  }
-};
 
 class ProjectCardGrid extends Component {
   constructor() {
@@ -39,7 +31,8 @@ class ProjectCardGrid extends Component {
       bounce: PropTypes.arrayOf(projectPropType),
       events: PropTypes.arrayOf(projectPropType),
       k1: PropTypes.arrayOf(projectPropType),
-      dance: PropTypes.arrayOf(projectPropType)
+      dance: PropTypes.arrayOf(projectPropType),
+      special_topic: PropTypes.arrayOf(projectPropType)
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,
@@ -74,6 +67,7 @@ class ProjectCardGrid extends Component {
 
   render() {
     const {projectLists} = this.props;
+    const showSpecialTopic = experiments.isEnabled(experiments.SPECIAL_TOPIC);
     const numProjects = this.state.showAll
       ? NUM_PROJECTS_ON_PREVIEW
       : NUM_PROJECTS_IN_APP_VIEW;
@@ -82,6 +76,19 @@ class ProjectCardGrid extends Component {
       <div id="projectCardGrid" style={styles.grid}>
         {this.state.showAll && (
           <div>
+            {showSpecialTopic && (
+              <ProjectAppTypeArea
+                labKey="special_topic"
+                labName={i18n.projectTypeSpecialTopic()}
+                labViewMoreString={i18n.projectTypeSpecialTopicViewMore()}
+                projectList={projectLists.special_topic}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.onSelectApp}
+                isDetailView={false}
+                hideWithoutThumbnails={true}
+              />
+            )}
             <ProjectAppTypeArea
               labKey="dance"
               labName={i18n.projectTypeDance()}
@@ -188,6 +195,18 @@ class ProjectCardGrid extends Component {
 
         {!this.state.showAll && (
           <div>
+            {this.state.showApp === 'special_topic' && showSpecialTopic && (
+              <ProjectAppTypeArea
+                labKey="special_topic"
+                labName={i18n.projectTypeSpecialTopic()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.special_topic}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={false}
+              />
+            )}
             {this.state.showApp === 'dance' && (
               <ProjectAppTypeArea
                 labKey="dance"
@@ -304,6 +323,15 @@ class ProjectCardGrid extends Component {
     );
   }
 }
+
+const styles = {
+  grid: {
+    width: styleConstants['content-width']
+  },
+  link: {
+    color: color.light_teal
+  }
+};
 
 export default connect(state => ({
   selectedGallery: state.projects.selectedGallery

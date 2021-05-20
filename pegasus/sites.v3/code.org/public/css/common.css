@@ -412,6 +412,11 @@ button {
   margin-top: 10px;
 }
 
+#map .mapboxgl-popup-close-button {
+  margin-top: 0px;
+  background-color: #ffa400;
+}
+
 /* Promote page */
 #promote-page h1 {
   float: left;
@@ -588,15 +593,6 @@ button {
   max-width: 100%;
 }
 
-@media all {
-  .page-break { display: none; }
-}
-
-@media print {
-  .page-break { display: block; page-break-before: always; page-break-inside: avoid;}
-  .hide-print { display: none; }
-}
-
 /* Contact Us page */
 #contact-us-form {
   width: 480px;
@@ -639,7 +635,7 @@ button {
   font-weight: bold;
   margin: 1em 0;
 }
-.form-required-field {
+.form-required-field, .form-required-em em {
   color: #f00;
 }
 

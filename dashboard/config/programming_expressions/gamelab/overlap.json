@@ -1,0 +1,12 @@
+{
+  "func": "overlap",
+  "category": "Sprites",
+  "paletteParams": [
+    "target"
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "*.overlap",
+  "type": "either"
+}

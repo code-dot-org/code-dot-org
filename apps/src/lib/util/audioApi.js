@@ -1,7 +1,10 @@
+/* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {apiValidateType, OPTIONAL} from './javascriptMode';
-import Sounds from '../../Sounds';
+import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
+import i18n from '@cdo/locale';
+import Sounds from '@cdo/apps/Sounds';
+import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -11,6 +14,9 @@ let executeCmd;
 export function injectExecuteCmd(fn) {
   executeCmd = fn;
 }
+
+// Max text length for the playSpeech block.
+export const MAX_SPEECH_TEXT_LENGTH = 750;
 
 /**
  * Export a set of native code functions that student code can execute via the
@@ -53,7 +59,7 @@ export const commands = {
     );
 
     const url = assetPrefix.fixPath(opts.url);
-    if (Sounds.getSingleton().isPlayingURL(url)) {
+    if (Sounds.getSingleton().isPlaying(url)) {
       if (opts.callback) {
         opts.callback(false);
       }
@@ -103,12 +109,73 @@ export const commands = {
 
     if (opts.url) {
       const url = assetPrefix.fixPath(opts.url);
-      if (Sounds.getSingleton().isPlayingURL(url)) {
+      if (Sounds.getSingleton().isPlaying(url)) {
         Sounds.getSingleton().stopLoopingAudio(url);
       }
     } else {
       Sounds.getSingleton().stopAllAudio();
     }
+  },
+  /**
+   * Start playing given text as speech.
+   * @param {string} opts.text The text to play as speech.
+   * @param {string} opts.gender The gender of the voice to play.
+   * @param {string} opts.language The language of the text to play.
+   */
+  async playSpeech(opts) {
+    const validText = apiValidateType(
+      opts,
+      'playSpeech',
+      'text',
+      opts.text,
+      'string'
+    );
+    const validGender = apiValidateType(
+      opts,
+      'playSpeech',
+      'gender',
+      opts.gender,
+      'string'
+    );
+    if (!validText || opts.text.length === 0 || !validGender) {
+      return;
+    }
+    apiValidateType(
+      opts,
+      'playSpeech',
+      'language',
+      opts.language,
+      'string',
+      OPTIONAL
+    );
+
+    // appOptions.authenticityToken is only expected/used when using this block on a script_level.
+    // This is because script_levels remove Rails' authenticity token from the DOM for caching purposes:
+    // https://github.com/code-dot-org/code-dot-org/pull/5753
+    const {azureSpeechServiceVoices: voices, authenticityToken} = appOptions;
+    let {text, gender, language} = opts;
+
+    // Fall back to defaults if requested language/gender combination is not available.
+    if (!(voices[language] && voices[language][gender])) {
+      language = 'English';
+      gender = 'female';
+    }
+
+    const MAX_TEXT_LENGTH = 750;
+    if (text.length > MAX_TEXT_LENGTH) {
+      text = text.slice(0, MAX_TEXT_LENGTH);
+      outputWarning(i18n.textToSpeechTruncation());
+    }
+
+    const azureTTS = AzureTextToSpeech.getSingleton();
+    const promise = azureTTS.createSoundPromise({
+      text,
+      gender,
+      locale: voices[language].locale,
+      authenticityToken,
+      onFailure: message => outputWarning(message + '\n')
+    });
+    azureTTS.enqueueAndPlay(promise);
   }
 };
 
@@ -119,6 +186,8 @@ export const commands = {
 export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
-  stopSound: url => executeCmd(null, 'stopSound', {url})
+  stopSound: url => executeCmd(null, 'stopSound', {url}),
+  playSpeech: (text, gender, language = 'English') =>
+    executeCmd(null, 'playSpeech', {text, gender, language})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?

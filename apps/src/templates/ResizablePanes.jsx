@@ -10,29 +10,6 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
-const styles = {
-  resizer: {
-    flex: '0 0 0',
-    boxSizing: 'border-box',
-    opacity: 0.2,
-    zIndex: 1,
-    backgroundColor: '#000',
-    backgroundClip: 'padding-box',
-    userSelect: 'text',
-    width: 31,
-    margin: '0 -5px',
-    borderLeft: '5px solid',
-    borderRight: '5px solid',
-    borderColor: 'rgba(255, 255, 255, 0)',
-    cursor: 'col-resize',
-    height: '100%',
-    ':hover': {
-      transition: 'all 2s ease',
-      borderColor: 'rgba(0, 0, 0, 0.5)'
-    }
-  }
-};
-
 /**
  * Wraps its children to display them in a flexbox layout.
  */
@@ -180,5 +157,28 @@ class ResizablePanes extends Component {
     );
   }
 }
+
+const styles = {
+  resizer: {
+    flex: '0 0 0',
+    boxSizing: 'border-box',
+    opacity: 0.2,
+    zIndex: 1,
+    backgroundColor: '#000',
+    backgroundClip: 'padding-box',
+    userSelect: 'text',
+    width: 31,
+    margin: '0 -5px',
+    borderLeft: '5px solid',
+    borderRight: '5px solid',
+    borderColor: 'rgba(255, 255, 255, 0)',
+    cursor: 'col-resize',
+    height: '100%',
+    ':hover': {
+      transition: 'all 2s ease',
+      borderColor: 'rgba(0, 0, 0, 0.5)'
+    }
+  }
+};
 
 export default Radium(ResizablePanes);

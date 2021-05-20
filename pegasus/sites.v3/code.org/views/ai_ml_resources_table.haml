@@ -1,0 +1,97 @@
+:ruby
+  ai_activities = [
+   {
+      url: "https://www.microsoft.com/en-us/ai/seeing-ai",
+      title: hoc_s(:ai_activity_seeing_ai),
+      description: hoc_s(:ai_activity_seeing_ai_desc)
+    },
+    {
+      url: "https://quickdraw.withgoogle.com/",
+      title: hoc_s(:ai_activity_quick_draw),
+      description: hoc_s(:ai_activity_quick_draw_desc)
+    },
+    {
+      url: "https://teachablemachine.withgoogle.com/",
+      title: hoc_s(:ai_activity_teachable),
+      description: hoc_s(:ai_activity_teachable_desc)
+    },
+    {
+      url: "https://experiments.withgoogle.com/collection/ai",
+      title: hoc_s(:ai_activity_experiments),
+      description: hoc_s(:ai_activity_experiments_desc)
+    },
+    {
+      url: "https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445",
+      title: hoc_s(:ai_activity_zooniverse),
+      description: hoc_s(:ai_activity_zooniverse_desc)
+    }
+  ]
+
+  ai_ml_resources = [
+    {
+      url: "https://aka.ms/minecrafthourofcode",
+      title: hoc_s(:ai_resource_minecraft),
+      description: hoc_s(:ai_resource_minecraft_desc),
+      audience: hoc_s(:ai_audience_k12)
+    },
+    {
+      url: "https://machinelearningforkids.co.uk/",
+      title: hoc_s(:ai_resource_ml_for_kids),
+      description: hoc_s(:ai_resource_ml_for_kids_desc),
+      audience: hoc_s(:ai_audience_k12)
+    },
+    {
+      url: "https://www.ibm.com/ibm/responsibility/initiatives/activitykits/machine-learning-for-kids/",
+      title: hoc_s(:ai_resource_ibm_ml_for_kids),
+      description: hoc_s(:ai_resource_ibm_ml_for_kids),
+      audience: hoc_s(:ai_audience_k12)
+    },
+    {
+      url: "http://www.exploringcs.org/for-teachers-districts/artificial-intelligence",
+      title: hoc_s(:ai_resource_ecs),
+      description: hoc_s(:ai_resource_ecs_desc),
+      audience: hoc_s(:ai_audience_hs)
+    },
+    {
+      url: "https://course.elementsofai.com/",
+      title: hoc_s(:ai_resource_elements_ai),
+      description: hoc_s(:ai_resource_elements_ai_desc),
+      audience: hoc_s(:ai_audience_hs)
+    },
+    {
+      url: "http://cognimates.me/home/",
+      title: hoc_s(:ai_resource_cognimates),
+      description: hoc_s(:ai_resource_cognimates_desc),
+      audience: hoc_s(:ai_audience_k12)
+    },
+  ]
+
+%h2=hoc_s(:ai_activity_header)
+%table{style: 'border: 1; width: 100%'}
+  %tbody
+    %tr{style: 'font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal'}
+      %td=hoc_s(:activity)
+      %td=hoc_s(:description)
+    - ai_activities.each do |activity|
+      %tr
+        %td
+          %a{href: activity[:url], target: '_blank'}
+            =activity[:title]
+        %td=activity[:description]
+
+%h2=hoc_s(:ai_resource_header)
+%table{style: 'border: 1; width: 100%'}
+  %tbody
+    %tr{style: 'font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal'}
+      %td=hoc_s(:name)
+      %td=hoc_s(:description)
+      %td=hoc_s(:audience)
+    - ai_ml_resources.each do |activity|
+      %tr
+        %td
+          %a{href: activity[:url], target: '_blank'}
+            =activity[:title]
+        %td=activity[:description]
+        %td=activity[:audience]
+
+%div{style: "clear: both; margin-top: 20px;"}

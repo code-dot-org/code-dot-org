@@ -7,6 +7,7 @@
       0.74
     ],
     "func": "destroy",
+    "docFunc": "gamelab_destroy",
     "blockText": "remove {THIS}",
     "args": [
       {

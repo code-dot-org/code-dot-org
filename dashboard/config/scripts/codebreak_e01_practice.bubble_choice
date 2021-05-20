@@ -1,0 +1,12 @@
+name 'CodeBreak E01 Practice'
+editor_experiment ''
+display_name 'Practice'
+description 'Work through the puzzle of your choice to practice your coding skills. When you are ready for the challenge click "Continue."'
+
+sublevels
+level 'CodeBreak E01 Beg Practice'
+level 'CodeBreak E01 Int Practice'
+
+markdown <<MARKDOWN
+
+MARKDOWN

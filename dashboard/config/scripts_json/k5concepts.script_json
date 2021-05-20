@@ -1,0 +1,1314 @@
+{
+  "script": {
+    "name": "k5concepts",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:53 UTC",
+    "seeding_key": {
+      "script.name": "k5concepts"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Events",
+      "name": "Events",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "Loops",
+      "name": "Loops",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "Nested Loops",
+      "name": "Nested Loops",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "name": "Conditionals",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "While Loops",
+      "name": "While Loops",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "While Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "Functions",
+      "name": "Functions",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "Variables",
+      "name": "Variables",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "For Loops",
+      "name": "For Loops",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "Functions with Parameters",
+      "name": "Functions with Parameters",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "key": "Binary",
+      "name": "Binary",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BigEvent"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BigEvent"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "BigEvent"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "2-3 Big Event Match 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Big Event Match 1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "2-3 Big Event Match 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GettingLoopy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GettingLoopy"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "GettingLoopy"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "2-3 Getting Loopy Multi 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Getting Loopy Multi 1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "2-3 Getting Loopy Multi 1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "comingSoon"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "comingSoon"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "comingSoon"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Conditionals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Conditionals"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "Conditionals"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "2-3 Conditionals Multi 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Conditionals Multi 1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "2-3 Conditionals Multi 1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "comingSoon"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "comingSoon"
+        ],
+        "lesson.key": "While Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "comingSoon"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SongwritingParameters"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SongwritingParameters"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "SongwritingParameters"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "4-5 Songwriting Multi 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "4-5 Songwriting Multi 1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "4-5 Songwriting Multi 1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "EnvelopeVariables"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "EnvelopeVariables"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "EnvelopeVariables"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MadGlibs"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MadGlibs"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "MadGlibs"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ForLoopFun"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ForLoopFun"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "ForLoopFun"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_bee_for_loops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_bee_for_loops3"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_bee_for_loops3"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_bee_for_loops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_bee_for_loops5"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_bee_for_loops5"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_bee_for_loops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_bee_for_loops9"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_bee_for_loops9"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SongwritingWithParameters"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SongwritingWithParameters"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "SongwritingWithParameters"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_parameters_triangles3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_parameters_triangles3"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_parameters_triangles3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_parameters_squares2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_parameters_squares2"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_parameters_squares2"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_functionparameters8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_functionparameters8"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_functionparameters8"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_playlab_variables12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_playlab_variables12"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_playlab_variables12"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_functionparameters11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_functionparameters11"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_functionparameters11"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BinaryBracelets"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryBracelets"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "BinaryBracelets"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "2-3 Binary Match 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Binary Match 1"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "2-3 Binary Match 1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BinaryImages"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryImages"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "BinaryImages"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_pixelation"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_pixelation"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_pixelation"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_binary5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary5"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_binary5"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_binary4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary4"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_binary4"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_binary8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary8"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_binary8"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_binary9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary9"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_binary9"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade5_artist_binary11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade5_artist_binary11"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      },
+      "level_keys": [
+        "grade5_artist_binary11"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "BigEvent",
+        "script_level.level_keys": [
+          "BigEvent"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Big Event Match 1",
+        "script_level.level_keys": [
+          "2-3 Big Event Match 1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GettingLoopy",
+        "script_level.level_keys": [
+          "GettingLoopy"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Getting Loopy Multi 1",
+        "script_level.level_keys": [
+          "2-3 Getting Loopy Multi 1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "comingSoon",
+        "script_level.level_keys": [
+          "comingSoon"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Conditionals",
+        "script_level.level_keys": [
+          "Conditionals"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Conditionals Multi 1",
+        "script_level.level_keys": [
+          "2-3 Conditionals Multi 1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "comingSoon",
+        "script_level.level_keys": [
+          "comingSoon"
+        ],
+        "lesson.key": "While Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SongwritingParameters",
+        "script_level.level_keys": [
+          "SongwritingParameters"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "4-5 Songwriting Multi 1",
+        "script_level.level_keys": [
+          "4-5 Songwriting Multi 1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "EnvelopeVariables",
+        "script_level.level_keys": [
+          "EnvelopeVariables"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MadGlibs",
+        "script_level.level_keys": [
+          "MadGlibs"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ForLoopFun",
+        "script_level.level_keys": [
+          "ForLoopFun"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_bee_for_loops3",
+        "script_level.level_keys": [
+          "grade5_bee_for_loops3"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_bee_for_loops5",
+        "script_level.level_keys": [
+          "grade5_bee_for_loops5"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_bee_for_loops9",
+        "script_level.level_keys": [
+          "grade5_bee_for_loops9"
+        ],
+        "lesson.key": "For Loops",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SongwritingWithParameters",
+        "script_level.level_keys": [
+          "SongwritingWithParameters"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_parameters_triangles3",
+        "script_level.level_keys": [
+          "grade5_artist_parameters_triangles3"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_parameters_squares2",
+        "script_level.level_keys": [
+          "grade5_artist_parameters_squares2"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_functionparameters8",
+        "script_level.level_keys": [
+          "grade5_artist_functionparameters8"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_playlab_variables12",
+        "script_level.level_keys": [
+          "grade5_playlab_variables12"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_functionparameters11",
+        "script_level.level_keys": [
+          "grade5_artist_functionparameters11"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BinaryBracelets",
+        "script_level.level_keys": [
+          "BinaryBracelets"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Binary Match 1",
+        "script_level.level_keys": [
+          "2-3 Binary Match 1"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BinaryImages",
+        "script_level.level_keys": [
+          "BinaryImages"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_pixelation",
+        "script_level.level_keys": [
+          "grade5_pixelation"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary5",
+        "script_level.level_keys": [
+          "grade5_artist_binary5"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary4",
+        "script_level.level_keys": [
+          "grade5_artist_binary4"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary8",
+        "script_level.level_keys": [
+          "grade5_artist_binary8"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary9",
+        "script_level.level_keys": [
+          "grade5_artist_binary9"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade5_artist_binary11",
+        "script_level.level_keys": [
+          "grade5_artist_binary11"
+        ],
+        "lesson.key": "Binary",
+        "lesson_group.key": "",
+        "script.name": "k5concepts"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

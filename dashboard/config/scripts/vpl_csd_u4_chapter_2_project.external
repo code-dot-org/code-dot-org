@@ -1,0 +1,20 @@
+name 'VPL - CSD U4 Chapter 2 Project'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 4 Chapter 2 Project - App Presentation
+
+Unit 4 Chapter 2 ends with the culmination of several weeks of project work.  This is an opportunity for students to showcase not only their app, but more importantly to highlight the research, design, testing, and iteration they went through.
+
+## Sample Screens
+
+<img src="https://images.code.org/4b5e3f3e01eed1803ae65765a7392de2-image-1597873898625.png" style="float:center;">
+
+## Project Resources 
+
+**Optional:** Explore the project lesson plan and accompanying resources. 
+
+><a href="https://curriculum.code.org/csd-20/unit4/16/" target="blank" rel="noopener noreferrer">Unit 4 Lesson 16: Project - App Presentation - Lesson Plan</a>
+MARKDOWN

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import * as utils from '@cdo/apps/utils';
@@ -7,22 +7,26 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
 import msg from '@cdo/locale';
+import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 describe('project.js', () => {
   let sourceHandler;
 
   const setData = project.__TestInterface.setCurrentData;
+  const setSources = project.__TestInterface.setCurrentSources;
 
   beforeEach(() => {
     sourceHandler = createStubSourceHandler();
     replaceAppOptions();
     sinon.stub(utils, 'reload');
+    sinon.stub(header, 'showProjectHeader');
     sinon.stub(header, 'showMinimalProjectHeader');
     sinon.stub(header, 'updateTimestamp');
   });
 
   afterEach(() => {
     utils.reload.restore();
+    header.showProjectHeader.restore();
     header.showMinimalProjectHeader.restore();
     header.updateTimestamp.restore();
     restoreAppOptions();
@@ -209,11 +213,6 @@ describe('project.js', () => {
     it('for flappy', () => {
       window.appOptions.app = 'flappy';
       expect(project.getStandaloneApp()).to.equal('flappy');
-    });
-
-    it('for scratch', () => {
-      window.appOptions.app = 'scratch';
-      expect(project.getStandaloneApp()).to.equal('scratch');
     });
 
     it('for weblab', () => {
@@ -440,7 +439,7 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
+              setFakeLocation(`${origin}/s/csp3-2019/stage/10/puzzle/4`);
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
@@ -466,7 +465,7 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
+              setFakeLocation(`${origin}/s/csp3-2019/stage/10/puzzle/4`);
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
@@ -475,7 +474,139 @@ describe('project.js', () => {
     });
   });
 
-  describe('toggleMakerEnabled()', () => {
+  describe('setLibrarySharedClasses()', () => {
+    it('updates the list of shared classes', () => {
+      let oldClassList = [1];
+      let newClassList = [2];
+      setData({sharedWith: oldClassList});
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
+      project.setLibrarySharedClasses(newClassList);
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(newClassList);
+
+      setData({});
+      project.updateChannels_.restore();
+    });
+
+    it('does nothing if the classes passed are not in an array', () => {
+      let oldClassList = [1];
+      setData({sharedWith: oldClassList});
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
+      project.setLibrarySharedClasses(2);
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
+
+      setData({});
+      project.updateChannels_.restore();
+    });
+  });
+
+  describe('setLibraryDetails()', () => {
+    beforeEach(() => {
+      sinon.stub(project, 'updateChannels_');
+    });
+
+    afterEach(() => {
+      project.updateChannels_.restore();
+      setData({});
+    });
+
+    it('updates current library name if libraryName provided', () => {
+      let oldName = 'initialLibrary';
+      let newName = 'newLibraryName';
+      setData({libraryName: oldName});
+      expect(project.getCurrentLibraryName()).to.equal(oldName);
+
+      project.setLibraryDetails({libraryName: newName});
+
+      expect(project.getCurrentLibraryName()).to.equal(newName);
+      expect(project.updateChannels_).to.have.been.called;
+    });
+
+    it('updates current library description if libraryDescription provided', () => {
+      let oldDescription = 'initialDescription';
+      let newDescription = 'newLibraryDescription';
+      setData({libraryDescription: oldDescription});
+      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
+
+      project.setLibraryDetails({libraryDescription: newDescription});
+
+      expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
+      expect(project.updateChannels_).to.have.been.called;
+    });
+
+    it('updates current latestLibraryVersion if latestLibraryVersion provided', () => {
+      let oldVersion = '123456';
+      let newVersion = '654321';
+      setData({latestLibraryVersion: oldVersion});
+      let currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.latestLibraryVersion).to.equal(oldVersion);
+
+      project.setLibraryDetails({latestLibraryVersion: newVersion});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.latestLibraryVersion).to.equal(newVersion);
+
+      project.setLibraryDetails({latestLibraryVersion: -1});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.latestLibraryVersion).to.be.null;
+    });
+
+    it('updates current publishLibrary if publishing is true', () => {
+      setData({publishLibrary: false});
+      let currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.publishLibrary).to.be.false;
+
+      project.setLibraryDetails({publishing: true});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.publishLibrary).to.be.true;
+    });
+
+    it('nullifies current libraryPublishedAt if publishing is false', () => {
+      const oldPublishedAt = new Date();
+      setData({libraryPublishedAt: oldPublishedAt});
+      let currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.libraryPublishedAt).to.equal(oldPublishedAt);
+
+      project.setLibraryDetails({publishing: false});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.libraryPublishedAt).to.be.null;
+    });
+
+    it('does not overwrite current with undefined/missing config properties', () => {
+      const lib = {
+        libraryName: 'my name',
+        libraryDescription: 'my description',
+        latestLibraryVersion: '123456',
+        libraryPublishedAt: new Date()
+      };
+      setData(lib);
+      let currentProject = project.__TestInterface.getCurrent();
+      assert.deepEqual(currentProject, lib);
+
+      project.setLibraryDetails({
+        libraryDescription: 'new description',
+        latestLibraryVersion: undefined
+      });
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.libraryName).to.equal(lib.libraryName);
+      expect(currentProject.libraryDescription).to.equal('new description');
+      expect(currentProject.latestLibraryVersion).to.equal(
+        lib.latestLibraryVersion
+      );
+      expect(currentProject.libraryPublishedAt).to.equal(
+        lib.libraryPublishedAt
+      );
+    });
+  });
+
+  describe('setProjectLibraries()', () => {
     beforeEach(() => {
       sinon
         .stub(project, 'saveSourceAndHtml_')
@@ -488,30 +619,73 @@ describe('project.js', () => {
       project.saveSourceAndHtml_.restore();
     });
 
-    it('performs a save with maker enabled if it was disabled', () => {
+    it('performs a save with the new library list', () => {
+      let library = ['test'];
+      sourceHandler.getLibrariesList.returns(undefined);
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
+      });
+    });
+
+    it('performs a save with no libraries if an empty array is passed', () => {
+      let library = ['test'];
+      let result = [];
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
+        return project.setProjectLibraries(result).then(() => {
+          expect(
+            project.saveSourceAndHtml_.getCall(1).args[0].libraries
+          ).to.equal(result);
+        });
+      });
+    });
+  });
+
+  describe('setMakerEnabled()', () => {
+    beforeEach(() => {
+      sinon
+        .stub(project, 'saveSourceAndHtml_')
+        .callsFake((source, callback) => {
+          callback();
+        });
+    });
+
+    afterEach(() => {
+      project.saveSourceAndHtml_.restore();
+    });
+
+    it('performs a save with maker set to circuitPlayground enabled if it was disabled', () => {
       sourceHandler.getMakerAPIsEnabled.returns(false);
       project.init(sourceHandler);
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(CP_API).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
-          .to.be.true;
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled
+        ).to.equal(CP_API);
       });
     });
 
     it('performs a save with maker disabled if it was enabled', () => {
       sourceHandler.getMakerAPIsEnabled.returns(true);
       project.init(sourceHandler);
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(null).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
         expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
-          .to.be.false;
+          .to.be.null;
       });
     });
 
     it('always results in a page reload', () => {
       project.init(sourceHandler);
       expect(utils.reload).not.to.have.been.called;
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(null).then(() => {
         expect(utils.reload).to.have.been.called;
       });
     });
@@ -557,6 +731,99 @@ describe('project.js', () => {
       expect(server.requests[1].url).to.match(/main.json/);
       expect(server.requests[1].url).not.to.match(/currentVersion=/);
       expect(server.requests[1].url).not.to.match(/replace=(true|false)/);
+    });
+  });
+
+  describe('load', () => {
+    let server;
+
+    beforeEach(() => {
+      window.appOptions.channel = 'mychannel';
+      sinon.stub(utils, 'currentLocation').returns({
+        pathname: '/projects/artist/mychannel',
+        search: ''
+      });
+      sinon.stub(project, 'getStandaloneApp').returns('artist');
+      server = sinon.createFakeServer({autoRespond: true});
+      project.init(sourceHandler);
+    });
+
+    afterEach(() => {
+      server.restore();
+      project.getStandaloneApp.restore();
+      utils.currentLocation.restore();
+    });
+
+    describe('standalone project', () => {
+      beforeEach(() => {
+        sinon.stub(utils, 'navigateToHref');
+      });
+
+      afterEach(() => {
+        utils.navigateToHref.restore();
+      });
+
+      it('succeeds when ajax requests succeed', done => {
+        stubGetChannels(server);
+        stubGetMainJson(server);
+        project.load().then(() => {
+          expect(utils.navigateToHref).not.to.have.been.called;
+          done();
+        });
+      });
+
+      it('redirects to new project when channel not found', done => {
+        project.load().catch(() => {
+          expect(utils.navigateToHref).to.have.been.calledOnce;
+          expect(utils.navigateToHref.firstCall.args[0]).to.equal(
+            '/projects/artist'
+          );
+          done();
+        });
+      });
+
+      it('fails when channels request fails', done => {
+        stubGetChannelsWithError(server);
+        project.load().catch(() => done());
+      });
+
+      it('fails when sources request fails', done => {
+        stubGetChannels(server);
+        stubGetMainJsonWithError(server);
+        project.load().catch(() => done());
+      });
+    });
+
+    describe('project-backed level', () => {
+      beforeEach(() => {
+        // This was stubbed at the top level in this file, so unstub it here
+        window.appOptions.level.isProjectLevel = false;
+      });
+
+      it('succeeds when ajax requests succeed', done => {
+        stubGetChannels(server);
+        stubGetMainJson(server);
+        project.load().then(() => done());
+      });
+
+      it('fails when channels request fails', done => {
+        stubGetChannelsWithError(server);
+        project.load().catch(() => done());
+      });
+
+      it('fails when sources request fails', done => {
+        stubGetChannels(server);
+        stubGetMainJsonWithError(server);
+        project.load().catch(() => done());
+      });
+    });
+
+    describe('no channel', () => {
+      it('always succeeds', done => {
+        window.appOptions.level.isProjectLevel = false;
+        window.appOptions.channel = null;
+        project.load().then(done);
+      });
     });
   });
 
@@ -709,6 +976,48 @@ describe('project.js', () => {
       });
     });
   });
+
+  describe('project.isCurrentCodeDifferent', () => {
+    afterEach(() => {
+      setSources({});
+    });
+
+    it('compares unset sources as if they were an empty string', () => {
+      setSources({});
+      expect(project.isCurrentCodeDifferent('')).to.be.false;
+    });
+
+    it('compares null inputs as if they were an empty string', () => {
+      setSources({source: ''});
+      expect(project.isCurrentCodeDifferent(null)).to.be.false;
+    });
+
+    it('compares unset input sources as if they were an empty string', () => {
+      setSources({source: ''});
+      expect(project.isCurrentCodeDifferent()).to.be.false;
+    });
+
+    it('ignores differences in line endings', () => {
+      setSources({source: 'foo\r\n\r\nbar'});
+      expect(project.isCurrentCodeDifferent('foo\n\nbar')).to.be.false;
+    });
+
+    it('ignores differences in xml closing tags', () => {
+      setSources({source: '<xml><test/></xml>'});
+      expect(project.isCurrentCodeDifferent('<xml><test></test></xml>')).to.be
+        .false;
+    });
+
+    it('notices differences in xml', () => {
+      setSources({source: '<xml><test/></xml>'});
+      expect(project.isCurrentCodeDifferent('<xml><test2/></xml>')).to.be.true;
+    });
+
+    it('notices differences in text', () => {
+      setSources({source: 'test'});
+      expect(project.isCurrentCodeDifferent('test2')).to.be.true;
+    });
+  });
 });
 
 function replaceAppOptions() {
@@ -721,6 +1030,34 @@ function replaceAppOptions() {
 
 function restoreAppOptions() {
   restoreOnWindow('appOptions');
+}
+
+function stubGetChannelsWithError(server) {
+  server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
+    xhr.error();
+  });
+}
+
+function stubGetChannels(server) {
+  server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
+    xhr.respond(
+      200,
+      {
+        'Content-Type': 'application/json'
+      },
+      JSON.stringify({
+        createdAt: '2018-10-22T21:59:43.000-07:00',
+        updatedAt: '2018-10-22T21:59:45.000-07:00',
+        isOwner: true,
+        publishedAt: null,
+        level: '/projects/artist',
+        migratedToS3: true,
+        name: 'artist project',
+        id: 'kmz3weHzTpZTbRWrHRzMJA',
+        projectType: 'artist'
+      })
+    );
+  });
 }
 
 function stubPostChannels(server) {
@@ -743,6 +1080,30 @@ function stubPostChannels(server) {
       })
     );
   });
+}
+
+function stubGetMainJson(server) {
+  server.respondWith('GET', /\/v3\/sources\/.*\/main\.json/, xhr => {
+    xhr.respond(
+      200,
+      {
+        'Content-Type': 'application/json'
+      },
+      JSON.stringify({
+        filename: 'main.json',
+        category: 'json',
+        size: 0,
+        versionId: 12345,
+        timestamp: Date.now()
+      })
+    );
+  });
+}
+
+function stubGetMainJsonWithError(server) {
+  server.respondWith('GET', /\/v3\/sources\/.*\/main\.json/, xhr =>
+    xhr.error()
+  );
 }
 
 function stubPutMainJson(server) {
@@ -777,6 +1138,8 @@ function createStubSourceHandler() {
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),
     getSelectedSong: sinon.stub(),
-    prepareForRemix: sinon.stub().returns(Promise.resolve())
+    prepareForRemix: sinon.stub().returns(Promise.resolve()),
+    setInitialLibrariesList: sinon.stub(),
+    getLibrariesList: sinon.stub()
   };
 }

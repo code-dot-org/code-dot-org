@@ -1,0 +1,12 @@
+{
+  "func": "analogWrite",
+  "category": "Maker",
+  "paletteParams": [
+    "pin",
+    "value"
+  ],
+  "params": [
+    "5",
+    "150"
+  ]
+}

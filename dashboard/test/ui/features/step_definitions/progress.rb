@@ -28,6 +28,7 @@ def verify_progress(selector, test_result)
   end
   steps %{
     And I wait until element "#{selector}" is in the DOM
+    And I wait until jQuery Ajax requests are finished
     And element "#{selector}" has css property "background-color" equal to "#{background_color}"
     And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
   }
@@ -48,7 +49,7 @@ def verify_bubble_type(selector, type)
 end
 
 def header_bubble_selector(level_num)
-  ".header_level_container .react_stage a:nth(#{level_num - 1}) .uitest-bubble"
+  ".header_level .react_stage a:nth(#{level_num - 1}) .uitest-bubble"
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
@@ -78,6 +79,12 @@ end
 Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
   selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) .uitest-bubble"
   verify_progress(selector, test_result)
+end
+
+Then /^I verify progress for the sublevel with selector "([^"]*)" is "([^"]*)"/ do |selector, test_result|
+  wait_short_until do
+    verify_progress(selector, test_result)
+  end
 end
 
 # PLC Progress

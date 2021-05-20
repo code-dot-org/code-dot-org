@@ -1,0 +1,18 @@
+name 'VPL - CSD - Module 2 CI - Sprite Movement'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Curriculum Investigation: U3L12 Sprite Movement
+
+## Overview
+
+In the following activities, you will engage in activities that your students will complete as a part of Unit 3 Lesson 12: Sprite Movement. As you work through these activities to gain a better understanding of Unit 3 content, also think about your role as the teacher. How will you assess if students have met the learning goals of this lesson? 
+
+## Investigation Goal
+
+* Use a counter pattern to animate sprites in Game Lab
+
+![](https://images.code.org/b7bd2524bdf5f74aa7f34071a0542960-image-1594952257271.23.31 PM.png)
+MARKDOWN

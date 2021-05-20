@@ -1,0 +1,232 @@
+---
+title: 2020 State of CS Report
+theme: responsive
+layout: none
+---
+
+- require 'state_abbr'
+
+=inline_css 'interactive-map.css'
+=inline_css 'advocacy-stateofcsreport.css'
+
+
+
+.container_responsive{style: "background-color: #F5F5F5; text-align: center"}
+  .col-33
+    %img{src: "/images/fit-100/CodeLogo.png", style: "padding: 10px"}
+  .col-33
+    %img{src: "/images/fit-100/CSTALogo.png", style: "padding: 10px; padding-top: 15px"}
+  .col-33
+    %img{src: "/images/fit-100/ECEP_Logo.jpg", style: "padding: 10px"}
+  .clear
+
+.container_responsive
+  .col{style: "text-align: center"}
+    %h1
+      2020 State of Computer Science Education:
+      %br
+      Illuminating Disparities
+    %p
+      Annual report on K-12 computer science in the United States which includes policy trends, maps, state-by-state summaries, and implementation data. Choose a digital PDF or order a physical copy today.
+    %a{href: "/2020_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
+      %button{style: "background-color: black; color: white; border-color: black"} Download PDF
+    %a{href: "https://smile.amazon.com/2020-State-Computer-Science-Report/dp/B08KWLRGSC?ref_=ast_sto_dp", target: "_blank"}
+      %button{style: "background-color: black; color: white; border-color: black"} Order Report
+    %a{href: "/2020_State_of_Computer_Science_Education_Data.xlsx", target: "_blank"}
+      %button{style: "background-color: black; color: white; border-color: black"} Download Data
+  .clear
+
+%br
+
+.container_responsive{style: "background-color: #F5F5F5; text-align: center; padding: 10px"}
+  .col-100
+    %h3
+      State Summaries
+  .col-66
+    %p
+      Each state page includes graphics displaying computer science policies in place and student enrollment data. Download a seperate state handout for more details
+  .col-33
+    %select.dropdown#small-state-dropdown
+      %option Pick a State
+      -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
+        %option{value: abbr}= state
+    :javascript
+      var documents = {
+        AK: "Alaska",
+        AL: "Alabama",
+        AR: "Arkansas",
+        AZ: "Arizona",
+        CA: "California",
+        CO: "Colorado",
+        CT: "Connecticut",
+        DC: "DistrictofColumbia",
+        DE: "Delaware",
+        FL: "Florida",
+        GA: "Georgia",
+        HI: "Hawaii",
+        IA: "Iowa",
+        ID: "Idaho",
+        IL: "Illinois",          
+        IN: "Indiana",
+        KS: "Kansas",
+        KY: "Kentucky",
+        LA: "Louisiana",
+        MA: "Massachusetts",
+        MD: "Maryland",
+        ME: "Maine",
+        MI: "Michigan",
+        MN: "Minnesota",
+        MO: "Missouri",
+        MS: "Mississippi",
+        MT: "Montana",
+        NC: "NorthCarolina",
+        ND: "NorthDakota",
+        NE: "Nebraska",
+        NH: "NewHampshire",
+        NJ: "NewJersey",
+        NM: "NewMexico",
+        NV: "Nevada",
+        NY: "NewYork",
+        OH: "Ohio",
+        OK: "Oklahoma",
+        OR: "Oregon",
+        PA: "Pennsylvania",
+        RI: "RhodeIsland",
+        SC: "SouthCarolina",
+        SD: "SouthDakota",
+        TN: "Tennessee",
+        TX: "Texas",
+        UT: "Utah",
+        VA: "Virginia",
+        VT: "Vermont",
+        WA: "Washington",
+        WI: "Wisconsin",
+        WV: "WestVirginia",
+        WY: "Wyoming"
+      };
+
+      $("#small-state-dropdown").on('change', function() {
+        var value = $(this).val();
+        location.href = "/state_handouts/" + documents[value] +".pdf";
+      });
+  .clear
+
+.container_responsive{style: "background-color: #F5F5F5; text-align: center; padding: 10px"} 
+  .col-33
+    %img.center{src: "/images/fit-300/StatePage.jpg"}
+    %p{style: "margin-bottom: 20px"}
+      Detailed description of state policies that promote computer science education
+  .col-33
+    %img.center{src: "/images/fit-300/SchoolsTeaching.png"}
+    %p{style: "margin-bottom: 20px"}
+      Graph showing access to foundational computer science courses
+  .col-33
+    %img.center{src: "/images/fit-300/AccessParticipation.jpg"}
+    %p{style: "margin-bottom: 20px"}
+      AP Computer Science access and participation disparities for racial and ethnic groups
+  .clear
+
+%br
+
+.container_responsive
+  .col-50{style: "text-align:center; padding: 10px"}
+    %img{src: "/images/fit-200/Northam.jpg", style: "border-radius: 50%"}
+    %p
+      Governor Ralph Northam (D-VA)
+    %p{style: "font-style: italic; font-family: 'Gotham 5r', sans-serif; font-size: 14px; line-height: 1.5em; text-align: center"}
+      "Knowing the basics of computer science can open doors to virtually any career in our fast-growing 21st-century economy."
+  .col-50{style: "text-align:center; padding: 10px"}
+    %img{src: "/images/fit-200/Reynolds.jpg", style: "border-radius: 50%"}
+    %p
+      Governor Kim Reynolds (R-IA)
+    %p{style: "font-style: italic; font-family: 'Gotham 5r', sans-serif; font-size: 14px; line-height: 1.5em; text-align: center"}
+      "Computer science has quickly moved from a narrow elective to a basic skill that every student needs."
+  .clear
+
+%br
+
+.container_responsive{style: "background-color: #F5F5F5"}
+  .col-50{style: "background-color: white; text-align: center"}
+    %img{src: "/images/fit-450/AccessReport.jpg"}
+  .col-50{style: "padding: 10%"}
+    %h3
+      Access to Computer Science
+    %p
+      The Access Report shows the percent of high schools in each state that teach foundational computer science courses.
+  .clear
+
+%br
+
+.container_responsive{style: "background-color: white"}
+  .col-50{style: "padding: 10%; background-color: #F5F5F5"}
+    %h3
+      Policy Maps
+    %p
+      Maps show which states have passed each policy
+  .col-50{style: "background-color: white; text-align: center"}
+    %img{src: "/images/fit-450/StandardsMap.jpg"}
+  .clear
+
+%br
+
+.container_responsive{style: "background-color: #F5F5F5"}
+  .col-50{style: "background-color: white; text-align: center"}
+    %img{src: "/images/fit-450/9Policies.jpg"}
+  .col-50{style: "padding: 10%"}
+    %h3
+      Nine Policies
+    %p
+      The nine state policies promote equity, growth, and sustainability in K-12 computer science.
+  .clear
+
+%br
+
+.container_responsive
+  .col-50
+    %h4
+      Get Your State of Computer Science Report
+    %p
+      Choose a digital PDF or order a physical copy today
+  .col-50{style: "text-align: center"}
+    %a{href: "/2020_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
+      %button{style: "background-color: black; color: white; border-color: black"} Download PDF
+    %a{href: "https://smile.amazon.com/2020-State-Computer-Science-Report/dp/B08KWLRGSC?ref_=ast_sto_dp", target: "_blank"}
+      %button{style: "background-color: black; color: white; border-color: black"} Order Report
+    %a{href: "/2020_State_of_Computer_Science_Education_Data.xlsx", target: "_blank"}
+      %button{style: "background-color: black; color: white; border-color: black"} Download Data
+  .clear
+
+%br
+
+%hr{style: "height:2px; background-color: black; width: 85%"}
+
+
+.container_responsive
+  .col-50
+    %h4
+      Historic State of Computer Science Reports
+    %p
+      Download previous state of computer science reports to see how your state has progressed!
+  .col-50{style: "text-align: center"}
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
+      %button{style: "background-color: black; color: white; border-color: black"} 2019 Report
+    %a{href: "/2018_state_of_cs.pdf", target: "_blank"}
+      %button{style: "background-color: black; color: white; border-color: black"} 2018 Report
+    %a{href: "/2017_state_of_cs.pdf", target: "_blank"}
+      %button{style: "background-color: black; color: white; border-color: black"} 2017 Report
+  .clear
+
+%br
+
+
+
+
+
+.container_responsive
+  .col-100{style: "text-align: center; padding: 10px"}
+    %h4
+      %a{href: "https://creativecommons.org/licenses/by-nc-sa/4.0/", style: "color: grey"}CC BY-NC-SA 4.0
+    %p
+      This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Authorization to reproduce this report in whole or in part is granted
+  .clear
+

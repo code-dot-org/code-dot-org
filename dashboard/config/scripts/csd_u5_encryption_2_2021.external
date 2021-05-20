@@ -1,0 +1,11 @@
+name 'CSD U5 Encryption 2_2021'
+title 'Decoding Binary Strings'
+description 'description here'
+markdown <<MARKDOWN
+# Decoding Binary Strings
+
+![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+* Can you decode this binary string?
+* What do you need to know before you can decode it?
+MARKDOWN

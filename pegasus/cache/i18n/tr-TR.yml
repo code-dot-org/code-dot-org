@@ -12,7 +12,7 @@ tr-TR:
   upgrade_ie_link: Daha fazlasını öğren
   en: Bilgisayar Bilimi
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
-  csedweek_dates: 8-14 Aralık 2014
+  csedweek_dates: 3-9 Aralık 2018
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Kodlama Saati</a> yaklaşıyor. Öğretmen ve organizatörleri, <a
     href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">kendi
@@ -20,15 +20,25 @@ tr-TR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara
     bakın</a>'
+  csedweek_banner_teachers_text: Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara
+    bakın
   n_have_learned_an_hoc: "<h1>Deneyin</h1><h2>Kod Saati</h2><h3># kez</h3>"
+  try_hoc_num_served: "<h1>Deneyin</h1><h2>Kod Saatini</h2><h3>%{num} kez</h3>"
+  try_hoc_num_served_markdown: |-
+    # Deneyin
+
+    ## Kod Saatini
+
+    ### %{num} kez #Try an
   anybody_can_learn: Herkes öğrenebilir.
   learn_now: Şimdi Öğren
   petition_message: Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için
     fırsatı olmalıdır
   petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
-  petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girerek
-    # ile bize katılabilirsiniz.'
+  petition_sign_message_num: Kabul ediyorsanız, adınızı girin ve %{num} diğerleri
+    ile birlikte mail listemize katılın.
   petition_join_others: "# kişinin arasına katılın"
+  petition_join_others_num: "%{num} diğerlerine katılın"
   name: İsim
   email: e-posta
   zipcode: Posta kodu ya da ülke
@@ -59,6 +69,7 @@ tr-TR:
   hoc2014_support: Destekleyin &#x25BE;
   hoc2014_whatishoc: Kod Saati nedir?
   csedweek_map_header: "# CSEdWeek / kodlama saati 'nin dünya çapındaki etkinlikleri"
+  csedweek_map_header_num: "%{num} CSEdWeek / Kod Saati'nin dünya çapındaki olayları"
   csedweek_map_signup: Etkinliğinizi kaydettirin
   csedweek_map_search_placeholder: Kod Saati etkinlikleri ara
   csedweek_map_search_search: Arama
@@ -220,14 +231,33 @@ tr-TR:
     ya da yazdır seçeneğini kullanın. Şimdi, diğer<a href='http://studio.code.org'>kurslara</a>
     göz atabilir ya da daha fazla seçenek için <a href='/learn/beyond'>Kod Saatinin
     ötesini Öğrenin</a> sayfasını ziyaret edebilirsiniz.
+  get_a_certificate_message_after_markdown: Sertifikanızı indirmek veya yazdırmak
+    için lütfen sertifikaya tıklayın. Şimdi, [diğer kurslarımıza](http://studio.code.org)
+    göz atabilirsiniz ya da daha fazla seçenek için (Kod Saatinin ötesini Öğrenin)(/öğren/ötesini)
+    sayfasını ziyaret edebilirsiniz.
   thanks_for_submitting: Gönderdiğiniz için teşekkür ederiz!
   if_you_enjoyed: Eğer öğrenirken eğlendiyseniz arkadaşlarınıza da denemeleri için
     sorunuz! Biz tüm dünyanın öğrenmesini istiyoruz.
   personalize_certificate: Sertifikanızı özelleştirin
+  print_batch_certificates: Bir parti sertifika yazdırın
+  print_certificates: Sertifika yazdır
+  certificate_sponsor_message: "%{sponsor_name} öğreniminize sponsor olarak cömert
+    bir bağışta bulundu."
+  print_ice_art_from_frozen: Frozen eğitimlerinden buz sanatını yazdırın
+  want_a_blank_certificate_template: Öğrencilerinizin isimlerini yazması için boş
+    bir sertifika şablonu mu istiyorsunuz?
+  landscape_recommended_certificates: Sertifikaları yazdırdığınızda **Yatay** seçeneğini
+    seçmeniz tavsiye edilir.
+  print_one_here_certificates: Burada birini yazdırın.
+  enter_certificate_names: '**Satır başı bir isim" olmak üzere en fazla 30 isim girin.
+    Kişisel %{script_name} sertifikalarının olduğu yazdırılabilir bir sayfa oluşturulacaktır.'
   share_achievement: Başarınızı paylaşın
   beyond_hour_message: Öğrenmeye <a href='http://studio.code.org'>diğer kurslarımızla</a>
     devam edebilir ya da daha fazla seçenek için <a href='/learn/beyond'>Bir Saatin
     Ötesinde</a> sayfamızı ziyaret edebilirsiniz.
+  beyond_hour_message_markdown: "[Diğer kurslarımıza](http://studio.code.org) göz
+    atabilirsiniz ya da daha fazla seçenek için (Kod Saatinin ötesini Öğrenin)(/öğren/ötesini)
+    sayfasını ziyaret edebilirsiniz."
   leaderboards_for_hoc: Kod Saati için lider tablosu.
   support_url: http://support.code.org/
   country: Ülke
@@ -314,6 +344,12 @@ tr-TR:
     biliyordum." - Mariana Alzate, 5. sınıf öğrencisi'
   stats_michael: Öğrencilerimi <b>hiçbir zaman</b> öğrenme konusunda bu kadar heyecanlı
     görmemiştim." - Michael Clark, Öğretmen
+  stats_nina_markdown: '"Her bir gün aynı sonuçları verdi— %100 katılım." - Nina Nichols
+    Peery, Öğretmen'
+  stats_student_markdown: '"Bunun **hayatta ancak bir kere** karşıma çıkacak bir şans
+    olduğunu biliyordum." - Mariana Alzate, 5. sınıf öğrencisi'
+  stats_michael_markdown: Öğrencilerimi **hiçbir zaman** öğrenme konusunda bu kadar
+    heyecanlı görmemiştim." - Michael Clark, Öğretmen
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a>'yu Keşfedin"
   studiobar_title_nolink: Code Studio'yu Keşfedin
   studiobar_elementary_title: Temel dersler
@@ -405,6 +441,7 @@ tr-TR:
   homepage_action_text_signpetition: Üye dilekçesi
   homepage_action_text_wincelebritychat: Ünlü ile sohbet kazan
   homepage_signpetition_dropdown: Bizim üye dilekçemiz  &#x25BE;
+  homepage_signpetition_dropdown_text: Kabul ediyorum
   homepage_diversity_pledge: 'Çeşitlilik oluştur ! '
   homepage_banner_text_prizes: "`Kod Saati` 7-13 Aralıkta tekrar gerçekleşecek."
   homepage_banner_link_prizes: 'Tarihteki en büyük eğitim etkinliğine katılın. '
@@ -500,8 +537,12 @@ tr-TR:
   class_submission_languages_other: Diğer dil(ler)
   videos_more: Ünlülerin ve rol modellerinin bulunduğu ilham verici daha başka <a
     href='%{inspiring_videos_playlist}'>videolar</a>
+  videos_more_markdown: Ünlülerin ve rol modellerinin bulunduğu daha başka [ilham
+    verici videolar](%{inspiring_videos_playlist})
   careers_page_more: Teknoloji alanında profesyonellerin daha başka <a href='%{careers_url}'
     target='_blank'>videoları</a> için
+  careers_page_more_markdown: Teknoloji alanında profesyonellerin bulunduğu daha başka
+    [videolar](%{careers_url})
   playlab_choose_theme: Oyun Laboratuvarınızın temasını seçin
   playlab_classic_title: Klasik
   playlab_gumball_title: Gumball
@@ -545,9 +586,23 @@ tr-TR:
   minecraft_download_adventurer: Minecraft Maceracı'nın çevrimdışı versiyonunu indir.
   minecraft_subtitle: Minecraft Kod Saati
   minecraft_store_camps: Minecraft saat kodu kamplarının Microsoft Store ücretsiz
+  minecraft_signup_store_camps: "Ücretsiz Microsoft Avustralya, Kanada, Porto Riko
+    veya ABD mağazalarının Hour of Code kamplarına <a href=\"%{signup_store_camp}\">Kaydol</a>.
+    \nYaratıcılığını kodlamayla birleştirmeyi öğren."
+  minecraft_host_event: Minecraft Kodlama Saati'ne ev sahipliği yapın
   minecraft_teach_resources: Öğretmen kaynakları ve ders planı.
   minecraft_leader_guide: Bir etkinlik planlayıp gerçekleştirmenize yardımcı olan
     kaynakları indirin.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Kolaylaştırıcı
+    hızlı başlangıç rehberi indir</a> ve daha genç ve daha yaşlı öğrenciler için PowerPoint
+    Sunumlarını indir."
+  minecraft_join_online_training: Minecraft ile kendi Kod Saatinizi kolaylaştırmaya
+    hazırsınız ama nereden başlayacağınızı mı bilmiyorsunuz?  <a href='%{minecraft_webinar_url}',
+    target='_blank'>talep üzerine webinara</a> bakın. En iyi pratikleri öğreneceksiniz,
+    hazır kolaylaştırıcı malzemelerine erişeceksiniz ve Minecraft takımından yeni
+    Kahramanın Yolculuğu eğitiminde ilerleyeceksiniz. Bilgisayar Bilimi Eğitimi haftası
+    (Aralık 4-10) boyunca gençler için Kod Saatine ne getireceğiniz ve ötesi hakkında
+    düşünmeye başlayın.
   minecraft_continue_learning: 'Herkes İçin bilgisayar bilimi: Microsoft Mağazasında
     Bir Saatlik Bir Kod Ötesi'
   minecraft_continue_learning_description: Bilgisayar bilimi tecrübesi gerekmiyor!
@@ -558,6 +613,13 @@ tr-TR:
     veya topluluğunuzda bir Saat Kodu'na önderlik etmeye hazır olun. Sizindir! <a
     href='%{minecraft_continue_learning_url}', target='_blank'>Bu gün kaydolun</a>.
   minecraft_future: Tüm gençliğin geleceğe hazır olmasına yardım edin
+  minecraft_future_description: Diğer okulların ve kar amacı gütmeyen kuruluşların,
+    bilgisayar bilimi eğitiminden topluluklarına kadar her şey dahil olmak üzere dijital
+    becerileri nasıl kazandırdığını bulun. Farklı modeller düşünün, ipuçları ve tüyoları
+    alın ve en değerli buldukları <a href='%{minecraft_future_url}', target='_blank'>kaynaklara
+    erişin</a>.
+  minecraft_og_designer: Minecraft, Kod Saati'nin yeni bir aktivitesi ile geri döndü.
+    Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sizdeki sürümde programlayın.
   minecraft_og_agent: Minecraft, Kod Saati için geri döndü ve siz kahramansınız! Minecraft
     biyomaları boyunca yolculuk yapmak için kod yazınız.
   sports_page_title: Kod Saati Sporları
@@ -600,19 +662,23 @@ tr-TR:
   sports_athlete_Harrison: Harrison Barnes, Olimpiyat altın madalya ve NBA şampiyonu,
     Dallas Mavericks
   watch_inspirational_videos: Başlamadan önce ilham veren bu videolardan birini izle
+  video_title_cs_is_everything: Bilgisayar Bilimi, Her Şeyi Değiştiriyor.
   video_title_inspire_girl: Bir kıza ilham kaynağı ol
   video_title_cs_intro: Bilgisayar Bilimi Tanıtımı
   video_title_schools_dont_teach: Çoğu okulların öğretmedikleri
   video_title_obama: Başkan Obama'nın bilgisayar bilimi hakkında konuşması
   video_title_hoc_is_here: Kod Saati Burada - Herkes Öğrenebilir
   video_title_anybody_can_learn: Herkes Öğrenebilir
+  video_title_steph_curry: Steph Curry ile Kod Saati
   video_title_draymond_green: Draymond Green ile Hour of Code
   video_title_russell_okung: Russel Okung ile Hour of Code
   video_title_real_madrid: Real Madrıd ile Hour of Code
   video_title_marco_belinelli: Marco Belinelli ile Hour of Code
   video_title_chris_bosh: Chris Bosh'un bilgisayar bilimi hakkında konuşması
+  video_title_my_name_is_aracely: Adım Aracely
   video_1min: 1 dk
   video_2min: 2 dk
+  video_3min: 3 dk
   video_5min: 5 dk
   speak_another_language: Başka bir dil mi konuşuyorsun?
   help_translate: Tercümede bize yardımcı ol.
@@ -636,14 +702,27 @@ tr-TR:
   volunteer_engineer_submission_intro_recruit: Öğretmenler sınıfta veya hangi görüntülü
     sohbet ile bilgisayar bilimi konusunda yardımcı olabilecek ve Bilgisayar Bilimleri
     Eğitimi hakkında tutkulu kişileri arıyor.
+  volunteer_engineer_submission_intro_recruit_markdown: Öğretmenler, sınıfta yardım
+    edebilecekleri **bilgisayar bilimi eğitimi hakkında tutkulu** bir kişi veya bilgisayar
+    bilimine dair imkanların genişliği ile ilgili konuşarak (görüntülü konuşma ile
+    yapılabilir) öğrencilerine **ilham olabilecek** bir kişinin olmasını ister.
   volunteer_engineer_submission_intro_guide: Bizim <a href="%{volunteer_guide}"> gönüllü
     programımız</a> hakkında daha fazla bilgi edinin.
+  volunteer_engineer_submission_intro_guide_markdown: Bizim [gönüllü programımız](%{volunteer_guide})
+    hakkında daha fazla bilgi edinin.
   volunteer_engineer_submission_intro_signup: Bir bilgisayar bilimleri öğrencisi veya
     yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class="form-required-field">
     *</span> ile işaretlenmiş alanların doldurulması zorunludur.
+  volunteer_engineer_submission_intro_signup_markdown: Bir bilgisayar bilimi öğrencisi
+    veya yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. Gönüllü olarak
+    kaydolmanız için en az 18 yaşında olmalısınız. Bu bölümde dolduracağınız tüm alanların,
+    [gönüllü haritasına](/gönüllü/yerel) bakan herhangi bir kişi tarafından görüleceğini
+    unutmayın. _*_ ile işaretlenmiş alanların doldurulması zorunludur.
   volunteer_engineer_submission_intro_links: Kendi Kod Saati etkinliğini düzenlemek
     ve <a href="%{volunteer_local}">yerel gönüllü haritamızdan</a> gönüllü bulmak
     için <a href="%{learn_more}">daha fazlasını öğren.</a>.
+  volunteer_engineer_submission_intro_links_markdown: Gönüllü arayan bir öğretmen
+    misiniz? [Gönüllü haritamızdan](%{volunteer_local}) yerel bir gönüllü bulun.
   volunteer_engineer_submission_update_information: Bilgilerinizi güncelleyin
   volunteer_engineer_submission_header_shared: Bilgiler gönüllüler haritasındaki öğretmenlerle
     paylaşıldı
@@ -697,6 +776,10 @@ tr-TR:
   volunteer_engineer_submission_thankyou: Hour of Code gönüllüsü olduğunuz için teşekkür
     ederiz. Hour of Code 'a hazırlanmak ve diğer projelere gönüllü olmak için daha
     fazlasını <a href="%{url}">buradan</a> öğrenebilirsiniz.
+  volunteer_engineer_submission_thankyou_markdown: Teşekkürler! Gönüllü bilgilerinizi
+    başarılı bir şekilde ilettiniz. Öğretmenler, sizin gibi gönüllüleri aramak ve
+    onlarla temasa geçmek için [bu haritayı](%{url}) kullanacak. Bilgilerinizin haritada
+    doğru bir şekilde görünmesi için 48 saat boyunca izin verin.
   volunteer_engineer_submission_commitment_uncertain: Belirsiz
   volunteer_engineer_submission_commitment_one_hr_per_week: haftada 1 saat
   volunteer_engineer_submission_commitment_three_hrs_per_week: Haftada 3 saat
@@ -969,9 +1052,12 @@ tr-TR:
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Okul Öncesi Çocuklar için Hızlandırılmış Kurs: '
   dashboard_express: 'Hızlandırılmış Kurs:'
   dashboard_unplugged: Bilgisayarlarınız yok ise bu <a href='%{unplugged_url}'>bilgisayarsız
     dersleri sınıfınızda</a> kullanın.
+  dashboard_unplugged_markdown: Bilgisayarınız yok ise [bu bağlantısız dersleri](%{unplugged_url})
+    derste kullanın.
   dashboard_tools: 'Araçlar: '
   dashboard_curriculum: Müfredat
   dashboard_curriculum_overview: K-5 Müfredatı Ana Hatları
@@ -991,6 +1077,7 @@ tr-TR:
   dashboard_curriculum_csp: 'AP ® Bilgisayar Bilimi İlkeleri:'
   dashboard_curriculum_ecs: 'Bilgisayar Bilimini Keşfet:'
   dashboard_curriculum_csd: 'Bilgisayar Bilimi Keşifleri: '
+  dashboard_curriculum_apcsa: 'Java ile AP (İleri Düzey Yerleştirme) Bilgisayar Bilimi: '
   dashboard_grade_k: K
   dashboard_grade_other: Diğer
   dashboard_login_word: Kelime
@@ -1086,6 +1173,8 @@ tr-TR:
   carousel_heading_beyond_languages: "Diğer programlama dilleri için eğitimler\n\n"
   carousel_heading_apps_games: Kendi oyununuzu ya da uygulamanızı yapın
   carousel_heading_university: Online üniversite dersleri
+  carousel_heading_online_university: Çevrimiçi Ortamda Kullanılabilir Üniversite
+    Kursları
   carousel_heading_webpages: Nasıl web sayfası yapılacağını öğrenin
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: Öğretmenler arasında popüler platformlar
@@ -1174,10 +1263,41 @@ tr-TR:
   coursee_name: Kurs E
   coursef-draft_name: Kurs F
   coursef_name: Kurs F
+  coursea-2017_name: Kurs A (2017)
+  courseb-2017_name: Kurs B (2017)
+  coursec-2017_name: Kurs C (2017)
+  coursed-2017_name: Kurs D (2017)
+  coursee-2017_name: Kurs E (2017)
+  coursef-2017_name: Kurs F (2017)
+  coursea-2018_name: Ders A (2018)
+  courseb-2018_name: Kurs B (2018)
+  coursec-2018_name: Kurs C (2018)
   coursed-2018_name: Yeni Kurs D Senaryosu
+  coursee-2018_name: Kurs E (2018)
+  coursef-2018_name: Kurs F (2018)
+  coursea-2019_name: Kurs A (2019)
+  courseb-2019_name: Kurs B (2019)
+  coursec-2019_name: Kurs C (2019)
+  coursed-2019_name: Kurs D (2019)
+  coursee-2019_name: Kurs E (2019)
+  coursef-2019_name: Kurs F (2019)
+  coursea-2020_name: Ders A (2020)
+  courseb-2020_name: Kurs B (2020)
+  coursec-2020_name: Kurs C (2020)
+  coursed-2020_name: Kurs D (2020)
+  coursee-2020_name: Kurs E (2020)
+  coursef-2020_name: Kurs F (2020)
   express-2018_name: Hızlı Kurs
+  pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
+  express-2019_name: Hızlandırılmış Kurs (2019)
+  pre-express-2019_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2019)
+  express-2020_name: Hızlandırılmış Kurs (2020)
+  pre-express-2020_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2020)
+  csd2_name: Ünite 2 - Ağ Geliştirme
+  csd3_name: Ünite 3 - Animasyonlar ve Oyunlar
   accelerated_name: Hızlandırılmış Kurs
   express_name: Hızlı Kurs
+  pre-express_name: Okuma Bilmeyenler için Hızlı Kurs
   20-hour_name: Hızlandırılmış Kurs
   algebra_name: Bilgisayar biliminde Cebir
   AlgebraA_name: Bilgisayar biliminde Cebir Kurs A
@@ -1188,6 +1308,7 @@ tr-TR:
   minecraft_name: Minecraft
   starwarsblocks_name: Yıldız savaşları (blok)
   hoc-encryption_name: Basit şifreleme
+  text-compression_name: Metin Sıkıştırma
   applab_name: App Laboratuvarı
   gamelab_name: Oyun Laboratuvarı
   basketball_name: Basketbol oyunu kodla
@@ -1273,6 +1394,12 @@ tr-TR:
   coursed-2019_gradelevel: 8+ sınıfları
   coursee-2019_gradelevel: 9. ve üzeri Sınıflar
   coursef-2019_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2020_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2020_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2020_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2020_gradelevel: 8+ sınıfları
+  coursee-2020_gradelevel: 9. ve üzeri Sınıflar
+  coursef-2020_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
@@ -1452,6 +1579,28 @@ tr-TR:
     ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
   coursef-2019_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
     ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursea-2020_shortdescription_congrats: Bilgisayar bilimi ve internet güvenliğinin
+    temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya
+    da hikaye oluştur.
+  courseb-2020_shortdescription_congrats: Bilgisayar bilimi ve internet güvenliğinin
+    temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya
+    da hikaye oluştur.
+  coursec-2020_shortdescription_congrats: Döngüler, olaylar ve koşullar içeren programlar
+    oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme
+    tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda,
+    kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+  coursed-2020_shortdescription_congrats: Öğrenciler; döngüler, koşullar ve olaylara
+    dair anlayışlarını geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık
+    ile ilgili bilgi edinecektir.
+  coursee-2020_shortdescription_congrats: Algoritmalar, döngüler, koşullar ve olaylarla
+    kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında,
+    arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın
+    ve oluşturun.
+  coursef-2020_shortdescription_congrats: Farklı döngüler, olaylar, fonksiyonlar ve
+    koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek
+    ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci
+    bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi
+    tasarlayınız ve oluşturunuz.
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
     kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler
     Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten
@@ -1942,20 +2091,39 @@ tr-TR:
   header_teacher_community: Öğretmen topluluğu
   header_help_support: 'Yardım ve Destek '
   header_report_bug: Hata bildir
+  header_report_abuse: Hata Rapor Et
+  header_legal: Gizlilik & Hukuk
+  header_legal_privacy: Gizlilik Politikası
+  header_legal_tos: Şartlar
   header_tutorials: Eğitmler
+  header_screen_reader_hamburger: 'Menü
+
+'
+  header_screen_reader_help: Yardım menüsü
+  app_lab_documentation: Uygulama Laboratuvarı Belgelendirmesi
+  app_lab_tutorials: Uygulama Laboratuvar Eğitimleri
+  game_lab_documentation: Oyun Laboratuvar Belgelendirmesi
+  game_lab_tutorials: Oyun Laboratuvar Eğitimi
+  sprite_lab_documentation: Peri Laboratuvar Belgelendirmesi
+  sprite_lab_tutorials: Peri Laboratuvar Eğitimi
   header_documentation: Belgeler
   user_header_label: Merhaba %{username}
   user_header_team: Takım
+  user_header_my_projects: Projelerim
   user_header_settings: Hesap Ayarları
   user_header_logout: Çıkış Yap
   user_header_signin: Giriş Yap
   user_header_create: 'Oluştur '
+  user_header_applab: Uygulama Laboratuvarı
+  user_header_artist: 'Sanatçı '
   user_header_gamelab: Oyun Laboratuvarı
   user_header_playlab: Oyun Laboratuvarı
   user_header_dance: Dans Partisi
+  user_header_spritelab: Kukla Laboratuvarı
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Tüm projeleri görüntüle...
+  user_header_view_project_gallery: Proje galerisini incele
   user_header_view_my_projects: Projelerimi görüntüle
   view_all_sections: Tüm Bölümleri Görüntüle
   view_section: Bölümü Görüntüle
@@ -1973,6 +2141,10 @@ tr-TR:
   sign_in_overview_cards: Öğrenciler, %{secret} 'in gizli bilgileri de dahil olmak
     üzere tüm bu bilgileri aşağıdaki giriş kartlarında bulabilir.
   reset_student_password: Öğrenci şifreleri sıfırlanıyor
+  reset_student_password_instructions: Bu bölüm için "Öğrencileri Yönet" sekmesine
+    gidip, "Şifre" altındaki "Gizli kelimeyi göster" düğmesine tıklayarak ve "Gizli
+    kelimeyi sıfırla" düğmesine tıklayarak öğrencilerinizden herhangi biri için gizli
+    <word/picture> sıfırlayabilirsiniz.
   login_cards: Giriş Kartları
   print_login_cards: Giriş kartlarını yazdır
   joining_section: Bölümünüze katılmak (yalnızca bir kerelik)
@@ -1997,30 +2169,76 @@ tr-TR:
     ve "Şifre" sütunu altındaki "Şifreyi sıfırla" butonuna basarak öğrencinin şifresini
     sıfırlayabilirsiniz.
   syncing_students: Öğrencilerinizi senkronize etme
+  syncing_students_instructions: |2-
+
+    Code.org bölümünüz Google Sınıfındaki öğrenci listenizle güncel değilse, "Öğrencileri yönet" sekmesindeki "Google Sınıftan öğrencileri senkronize et" düğmesine tıklayın:
   google_sign_in_instruct: 'Oradan, "Google Hesabı ile Oturum Aç" seçeneğini seçmeliler:'
+  hero_name: 'Minecraft: Kahramanın Yolculuğu'
   applab-intro_name: Uygulama Laboratuvarı Giriş
+  applab_tile_title: Uygulama Laboratuvarına Giriş (Yaş 13+)
+  applab_tile_subtitle: Kendi uygulamanızı blok tabanlı programlama kullanarak JavaScript'te
+    oluşturun. Veya metin tabanlı programlama ile becerilerinizi bir sonraki seviyeye
+    çıkarın.
   applab_tile_start_tutorial: Başlayın
   applab_tile_teacher_guide: Öğretmen kılavuzunu görüntüle
   aquatic_name: 'Minecraft: Su Yolculuğu'
   account_sign_up_email_opt_in: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
     diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
+  account_sign_up_child_accept_terms: Code.org hizmetlerini kullanmam için ebeveynlerimin
+    veya yasal vasimin izni olduğunu onaylıyorum.
   hoc_overview_dance_title: Dans Partisi
+  hoc_overview_dance_subtitle: Arkadaşlarınızla paylaşmak için bir Dans Partisi kodlayın.
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 daha fazlası!
+  hoc_overview_dance_2019_subtitle: Arkadaşlarınızla paylaşmak için bir Dans Partisi
+    kodlayın. Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj ve 34 daha fazlası!
+  hoc_overview_title: Code.org'dan Kod Saati Aktiviteleri
+  hoc_overview_subtitle: <a href="https://hourofcode.com">Kod Saati</a>, 180 ülkede
+    milyonlaca öğrenciye ulaşan küresel bir harekettir. Herhangi bir kişi, herhangi
+    bir yerde Kod Saati etkinliğini düzenleyebilir veya 45'ten fazla dilde mevcut
+    500+ saatlik eğitimlerden herhangi birini deneyebilir.
+  hoc_overview_subtitle_markdown: " [Kod Saati](https://hourofcode.com), 180 ülkede
+    milyonlaca öğrenciye ulaşan küresel bir harekettir. Herhangi bir kişi, herhangi
+    bir yerde Kod Saati etkinliğini düzenleyebilir veya 45'ten fazla dilde mevcut
+    500+ saatlik eğitimlerden herhangi birini deneyebilir."
   hoc_overview_partner_activities_title: İş ortaklarımızdan daha fazla faaliyet
   hoc_overview_partner_activities_body: Kodlama Saati internet sitesi Code.org ve
     iş ortakları tarafından geliştirilen her yaşa ve deneyim seviyesine uygun 100’den
     fazla bilgisayar bilimi faaliyeti içerir.
   hoc_overview_partner_activities_link: Faaliyetleri Görüntüle
   hoc_overview_start_tutorial: Başlayın
+  hoc_overview_more_resources: Uzak sınıfınızla nasıl etkileşim kuracağınızla ilgili
+    daha fazla kaynak için [sanal Hour of Code] (https://hourofcode.com/us/how-to/virtual)
+    düzenleme kılavuzumuza bakın. Sınırlı teknoloji ve bağlantıya sahip veya hiç teknolojisi
+    veya bağlantısı olmayan öğrenciler için, bu [bağımsız Hour of Code etkinlikleri](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)  paketini
+    paylaşın .
   hoc_overview_view_teacher_guide: Öğretmen kılavuzunu görüntüle
   hoc2018_creativity: keşif ve Tasarlama
   hoc2018_creativity_create: Oluştur
+  hoc2018_creativity_hoc_coming: Kodlama Saati geliyor…
   hoc2018_creativity_what_will_you_create: Ne tasarlayacaksın?
+  hoc2018_creativity_homepage: Hayal gücünü zorla ve yeniliğe yelken aç. Bir Kod Saati
+    ve her ne ise kendi yaratıcılığın ile başla. Videomuzu izle.
+  hoc2018_creativity_hoc_about: 'Bu yıl Kod Saati tamamen yaratıcılıkla ilgili. '
+  hoc2018_creativity_social_media: 'Bu yılın #HourOfCode yaratıcılıkla ilgili. Ben
+    varım! Peki sen?'
+  hoc2018_creativity_social_media_2: 'Bu yılın #HourOfCode yaratıcılıkla ilgili. Ne
+    oluşturacaksınız?'
   hoc2018_creativity_courses: Code.org dersleri ile daha ileriye git
+  hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.org
+    dersleri </a> ile devam edin
+  hoc2018_homepage: Kod Saati için 150'den fazla YENİ aktiviteyi denemek için sınıfınıza
+    kaydolun (Aralık 3-9)!
   hoc2018_mc_page_title: Minecraft Kodlama Saati Eğitimleri
   hoc2018_mc_details: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar,
     tabletler | 2. sınıf ve üstü
+  hoc2018_mc_aquatic_announcement: Kod Saati için 150'den fazla YENİ aktiviteyi denemek
+    için sınıfınıza kaydolun (Aralık 3-9)! 2018 için yepyeni Minecraft aktivitemize,
+    yani Sul Yolculuğuna bakmayı unutmayın! Bugün sınıfınıza kaydolun.
+  hoc2018_mc_aquatic_title: 'Minecraft: Su Yolculuğu'
   hoc2018_mc_aquatic_description: Minecraft Kodlama Saati için yepyeni bir faaliyetle
     geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
+  hoc2019_mc_aquatic_description: Kod ile sualtı dünyalarını keşfedin ve oluşturun.
   hoc2018_mc_hero_title: 'Minecraft: Kahramanın yolculuğu'
   hoc2018_mc_hero_description: Minecraft Kodlama Saati için yepyeni bir faaliyetle
     geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
@@ -2033,7 +2251,24 @@ tr-TR:
   hoc2018_mc_start: Başlayın
   hoc2018_mc_no_internet: İnternetin yok mu?
   hoc2018_mc_download_adventurer: Minecraft Maceracı'nın çevrimdışı versiyonunu indir.
+  hoc2018_mc_educators: Eğitimciler İçin
+  hoc2018_mc_educators_box1_title: Minecraft ile Kodla
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Eğitim Sürümü, Minecraft''ta standartlarla
+    uyumlu müfredat, eğitim ve kodlama sağlar.'
+  hoc2018_mc_educators_box1_button: Kullanmaya başla
+  hoc2018_mc_educators_box2_title: Kolaylaştırıcı Rehberini İndir
+  hoc2018_mc_educators_box2_desc: Bu araç kutusu, sizin bir Kod Saati barındırmanıza
+    ve öğrencilerinizin bilgisayar bilimi ile ilgilenmesine yardımcı olur.
   hoc2018_mc_educators_box2_button: İndir
+  hoc2018_mc_educators_box3_title: Ücretsiz öğrenci atölyesine katılın
+  hoc2018_mc_educators_box3_desc: Ücretsiz Kod Saati atölyesi için bölgenizdeki bir
+    Microsoft Mağazasını ziyaret edin. Tüm beceri seviyeleri için katılımcılar en
+    az altı yaşında olmalıdır.
+  hoc2018_mc_educators_box3_button: Bir dükkan bul
+  hoc2018_mc_educators_box4_title: Daha fazla bilgisayar bilimi kaynağına eriş
+  hoc2018_mc_educators_box4_desc: Dijital beceriler ve Microsoft'tan bilgisayar bilimi
+    eğitim kaynakları ile topluluğunuzda değişikli yaratın.
+  hoc2018_mc_educators_box4_button: Kaynakları keşfet
   hoc2018_mc_watch_videos: Başlamadan önce ilham veren bu videolardan birini izle
   hoc2018_mc_videos_more: Ünlülerin ve rol modellerinin bulunduğu ilham verici daha
     başka <a href='%{inspiring_videos_playlist}'>videolar</a>
@@ -2041,16 +2276,23 @@ tr-TR:
     target='_blank'>videoları</a> için
   hoc2018_mc_video_1min: 1 dk
   hoc2018_mc_video_2min: 2 dk
+  hoc2018_mc_video_3min: 3 dk
   hoc2018_mc_video_5min: 5 dk
+  hoc2018_mc_video_title_steph_curry: Steph Curry ile Kod Saati
   hoc2018_mc_video_title_sports: Kendini zorla. Herkes öğrenebilir.
+  hoc2018_mc_video_title_cs_is_everything: Bilgisayar Bilimi, Her Şeyi Değiştiriyor.
   hoc2018_mc_video_title_inspire_girl: Bir kıza ilham kaynağı ol
   hoc2018_mc_video_title_cs_intro: Bilgisayar Bilimi Tanıtımı
   hoc2018_mc_video_title_schools_dont_teach: Çoğu okulların öğretmedikleri
   hoc2018_mc_video_title_obama: Başkan Obama'nın bilgisayar bilimi hakkında konuşması
   hoc2018_mc_video_title_hoc_is_here: Kod Saati Burada - Herkes Öğrenebilir
   hoc2018_mc_video_title_anybody_can_learn: Herkes Öğrenebilir
+  hoc2018_mc_video_title_my_name_is_aracely: Adım Aracely
   hoc2018_mc_homepage_hoc_coming: Kodlama Saati geliyor...
   hoc2018_mc_homepage_what_create: Ne tasarlayacaksın?
+  hoc2018_mc_homepage_give_flight: 'Hayal gücünü zorla ve yeniliğe yelken aç. Bir
+    Kod Saati ve her ne ise kendi yaratıcılığın ile başla. '
+  hoc2018_mc_homepage_watch_video: Videomuzu izle
   hoc2018_mc_homepage_join_us: Bize katılın
   hoc2018_mc_homepage_try_it: Deneyin
   hoc2018_mc_back: Minecraft, Kod Saati için yeni bir etkinlikle geri döndü!
@@ -2060,15 +2302,24 @@ tr-TR:
   hoc2018_mc_minecraft_education: Minecraft eğitim
   hoc2018_mc_continue_learning: Minecraft'la öğrenin.
   hoc2018_mc_go_to_mc_education: Minecraft Eğitime gidin
+  hoc2018_mc_short_description: Kod gücü ile hazine bulmak  ve sualtı dünyalarını
+    keşfetmek için yaratıcılığınızı ve problem çözme becerilerinizi kullanın.
+  hoc2018_mc_short_description_shorter: Minecraft, Kodlama Saati için yepyeni bir
+    etkinlikle geri döndü!
+  hoc2018_mc_journey: Kod ile Minecraft'ta yolculuk.
   hoc2018_dance_party_main_heading: Dans Partisi
+  hoc2018_dance_party_landing_title: Dans et
+  hoc2018_dance_party_subheading: Dans Kutlamasını çevirmede yardım et
   hoc2018_dance_create_your_own_dance_title: Kendi Dans Partini Yarat
   hoc2018_dance_party_box_title: Dans Partisi
   hoc2018_dance_party_box_description: Arkadaşlarınla paylaşmak için bir Dans Partisi
     kodla!
+  hoc2018_dance_party_specs: Dil | Biçim | Yaş 6-106
   hoc2018_dance_party_button: Başlayın
   hoc2018_dance_keep_on_dancing_box_title: Dans Etmeye Devam
   hoc2018_dance_keep_on_dancing_description: Genişletilmiş proje fikirleri ile ilk
     saatin ötesine geç.
+  hoc2018_dance_keep_on_dancing_specs: Dil | Biçim | Yaş 13+
   hoc2018_dance_keep_on_dancing_button: ". Bölüme Başla"
   hoc2018_dance_teacher_resources_title: Öğretmen Kaynakları
   hoc2018_dance_teacher_resources_tile1_description: Ders planları, sertifikalar ve
@@ -2078,7 +2329,100 @@ tr-TR:
   hoc2018_dance_teacher_resources_tile2_description: Bilgisayar gerektirmez!  Hep
     birlikte bir dans partisi koreografisi yapmak için kodlama kavramlarını öğrenin.
   hoc2018_dance_teacher_resources_tile2_button: Bilgisayarsız Etkinlik
+  hoc2018_dance_featured_student_creations_title: Öğrencilerin Oluşturduklarından
+    Öne Çıkanlar
+  hoc2018_dance_videos_section_heading: İlham Alın
+  hoc2018_dance_video_title_what_is_creativity: Yaratıcılık nedir?
+  hoc2018_dance_view_creativity_video_playlist: Yaratıcılık nedir? Bütün Seriyi Görüntüle
+    (5 dk)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "### ortaklığıyla"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Gelecek
+    Mühendisi*, düşük gelirli ve diğer dezavantajlı çocuklara ve gençlere bilgisayar
+    biliminde kariyerlerini sürdürmeleri için ilham vermek, eğitim vermek ve öğretmek
+    için içi kapsamlı çocukluktan kariyere götüren bir programdır.<a href='%{amazon_future_engineer_link}'
+    target='_blank'>Daha fazla bilgi edinin</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Gelecek Mühendisi*, düşük gelirli ve diğer dezavantajlı çocuklara ve gençlere
+    bilgisayar biliminde kariyerlerini sürdürmeleri için ilham vermek, eğitim vermek
+    ve öğretmek için içi kapsamlı çocukluktan kariyere götüren bir programdır.[Daha
+    fazla bilgi edinin](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Amazon Gelecek
+    Mühendisi hakkında daha hazla bilgi edinin.
+  hoc2018_dance_amazon_about_future_engineer_title: Amazon Gelecek Mühendisi Hakkında
+  hoc2018_dance_amazon_about_future_engineer_description: Bilgisayar bilimi eğitimine
+    erişimi arttırmak için kariyer programına yönelik Amazon anaokulu hakkında bilgi
+    edinin. Yaz kamplarımıza, lise Bilgisayar Bilimi sınıflarımıza, burslarımıza ve
+    stajlarımıza nasıl katılacağınız ile ilgili bilgi edinin.
   hoc2018_dance_amazon_about_future_engineer_button: Daha fazlasını öğren
+  hoc2018_dance_amazon_try_coding_this_summer_title: Bu yaz kodlamayı deneyin
+  hoc2018_dance_amazon_try_coding_this_summer_description: Amazon Gelecek Mühendisi'nin
+    ücretsiz, eğlenceli ve kapsayıcı bilgisayar bilimi kamplarına katılın! Yaz kampları,
+    2019 yazı için ABD'de birçok yerde anaokuldan 8. sınıfa kadar tüm öğrenciler için
+    mevcuttur.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Bir kampa katıl
+  hoc2018_dance_amazon_scholarship_programs_title: Burs programları
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon, bir AP Bilgisayar
+    Bilimi kursunu başarılı bir şekilde tamamlamış veya halihazırda buraya kayıtlı
+    olan ve Amerika Birleşik Devletleri'nde 4 yıllık kolej veya üniversitede bir Bilgisayar
+    Bilimi derecesini almayı hedefleyen hak edilmemiş öğrenciler için yıllık 10.000$
+    değerinde burs sunar.
   hoc2018_dance_amazon_scholarship_programs_button: Şimdi uygula
+  hoc2018_dance_amazon_internships_title: Amazon'da Sataja Gelin
+  hoc2018_dance_amazon_internships_description: 2019 yazılı Amazon Gelecek Mühendisi
+    stajlarına yönelik başvurular şimdi açıktır. Stajyerler, Amazon müşterileri adına
+    yeni özellikleri ve hizmetleri getirmek ve oluşturmak için bir yönetici, teknik
+    danışman ve diğer stajyerler ile birlikte ortak hareket edecektir. Stajlar, ABD
+    ve Kanada'da mevcuttur.
+  hoc2018_dance_amazon_internships_button: Bir staj bulun
+  hoc2018_dance_amazon_k8_programs_title: K-8 programları
+  hoc2018_dance_amazon_funding_title: CS derecen için fon al
+  hoc2018_dance_amazon_future_engineer_footer: "* Müziği bu eğitimde kullanılan sanatçılar,
+    Code.org için müziklerinin yetkili kullanımının bir parçası olarak Amazona sponsorluk
+    yapmaz veya destek sağlamaz."
   hoc2018_dance_measure: Ölçü
   hoc2018_dance_measure_colon: 'Ölçü:'
+  hoc2018_aquatic_video1: Minecraft Su Yolculuğu - Giriş
+  hoc2018_aquatic_video2: Minecraft Su Yolculuğu - Döngüler
+  hoc2018_aquatic_video3: Minecraft Su Yolculuğu - Koşullar
+  hoc2018_aquatic_video4: Minecraft Su Yolculuğu - Tebrikler
+  hoc2018_dance_video1: Dans Kutlaması - Tanıtım
+  hoc2018_dance_video2: Dans Kutlaması - Etkinlikler
+  hoc2018_dance_video3: Dans Kutlaması - Özellikler
+  hoc2018_dance_video4: Dans Kutlaması - Tebrikler
+  page_not_found_title: Sayfa Bulunamadı
+  page_not_found_header: '404: Sayfa Bulunamadı'
+  page_not_found_description: Aradığınız sayfa bu adreste bulunmuyor. Web adresini
+    kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün.
+  page_not_found_button: Anasayfaya Dön
+  hoc2018_mc_with_microsoft: "### ortaklığıyla"
+  hoc2018_mc_thank_microsoft: 21. yüzyılda başarıyı yakalamak için her çocuğun bilgisayar
+    bilimini ve becerileri öğrenme olanağına sahip olmasını sağlamaya yönelik vizyonumuzu
+    ve misyonumuzu desteklediği için Microsoft'a teşekkür ederiz.
+  hoc2019_mc_mee_title: İyilik için Minecraft Yapay Zeka 
+  hoc2019_mc_mee_description1: 'Yeni Minecraft Kod Saati eğitimi artık Minecraft''ta
+    mevcuttur: Windows, Mac ve iPad için Eğitim Sürümü. Kodlama temellerini öğrenin
+    ve öğrencilerinizle birlikte Yapay Zekayı keşfedin!'
+  hoc2019_mc_mee_description2: Bir ders planı, videolar, bilgisayar bilimi müfredatı
+    ve öğretmen eğitimleri içeren kaynaklara ücretsiz erişim.
+  hoc2019_mc_more_coding_resources: Daha Fazla Kodlama Kaynakları
+  hoc2019_dance_previous_versions: "Dans Partisinin önceki sürümünü mü arıyorsunuz?
+    \ \nÖnceki yıldan [Kısım 1](%{dance_2018_link}) ve [Kısım 2](%{dance_extras_2018_link})
+    başlamak için buraya tıklayın."
+  homepage_slot_text_title_at_home: Evde Öğrenme
+  homepage_slot_text_blurb_at_home: Bu kaynaklar bilgisayar bilimini kolaylaştırır
+  homepage_slot_text_link_code_break: Kodlamaya biraz ara verin
+  homepage_slot_text_link_do_hoc: Bir Kod Saati Yapın
+  homepage_slot_text_link_express_course: Hızlandırılmış bir Kursu Deneyin
+  page_not_available_title: Sayfa Kullanılamıyor
+  page_not_available_description: Üzgünüz, açmak istediğiniz sayfa artık bu adreste
+    bulunmuyor. Yine de erişim isterseniz, lütfen [support@code.org](%{support_email_link})
+    adresine e-posta gönderin.
+  page_not_available_button: Anasayfaya Dön
+  footer_powered_by_aws: Amazon Web Services tarafından desteklenmektedir
+  codebytes_skinny_banner_english_only: Sadece İngilizce
+  footer_privacy_policy: Gizlilik Politikası
+  footer_about: Hakkında
+  footer_partners: Ortaklar
+  footer_donate: Bağış Yap
+  footer_support: Yardım ve Topluluk
+  footer_terms: Koşullar

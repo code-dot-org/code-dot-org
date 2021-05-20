@@ -1,0 +1,12 @@
+name 'csp-9-exam1-school-survey-2-2020_2021'
+editor_experiment ''
+wrong 'How Travel'
+right 'How Long'
+wrong 'Time Arrive'
+wrong 'Biggest Challenges'
+
+markdown <<MARKDOWN
+This question refers to the same table of data described above.
+
+Which column of data might be able to be  visualized or analyzed but first would need to be cleaned?
+MARKDOWN

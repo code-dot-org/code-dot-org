@@ -1,0 +1,191 @@
+{
+  "script": {
+    "name": "cspunit1-support-test",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "seeding_key": {
+      "script.name": "cspunit1-support-test"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Unit 1 Overview",
+      "name": "Unit 1 Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "plc csp1 introduction to unit"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "plc csp1 introduction to unit"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      },
+      "level_keys": [
+        "plc csp1 introduction to unit"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "plc csp1 chapter overviews"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "plc csp1 chapter overviews"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      },
+      "level_keys": [
+        "plc csp1 chapter overviews"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "plc csp1 philosophy and commentary"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "plc csp1 philosophy and commentary"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      },
+      "level_keys": [
+        "plc csp1 philosophy and commentary"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "plc csp1 introduction to unit",
+        "script_level.level_keys": [
+          "plc csp1 introduction to unit"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "plc csp1 chapter overviews",
+        "script_level.level_keys": [
+          "plc csp1 chapter overviews"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "plc csp1 philosophy and commentary",
+        "script_level.level_keys": [
+          "plc csp1 philosophy and commentary"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

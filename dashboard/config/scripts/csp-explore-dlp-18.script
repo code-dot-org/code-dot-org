@@ -3,13 +3,16 @@ peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
 
-stage 'Deeper Learning Overview', flex_category: 'required'
+lesson_group 'required', display_name: 'Overview'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview', has_lesson_plan: false
 level 'Deeper Learning Overview', progression: 'Background'
 level 'csd deeper learning timeline 2018-2019', progression: 'Deadlines and Payment'
 level 'deeper learning recommendations- csp - 2018', progression: 'Resource Recommendations'
 level 'peer review recommendations 18-19', progression: 'Guidelines For Peer Review'
 
-stage 'Complete Explore Deeper Learning Reflections'
+lesson_group 'content', display_name: 'Content'
+lesson 'Complete Explore Deeper Learning Reflections', display_name: 'Complete Explore Deeper Learning Reflections', has_lesson_plan: false
 level 'csp-explore-dlp-q1'
 level 'csp-explore-dlp-q2'
 level 'csp-explore-dlp-q3'
+

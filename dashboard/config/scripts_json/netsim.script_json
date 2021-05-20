@@ -1,0 +1,641 @@
+{
+  "script": {
+    "name": "netsim",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:38 UTC",
+    "seeding_key": {
+      "script.name": "netsim"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Overview and Setup Instructions",
+      "name": "Overview and Setup Instructions",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Overview and Setup Instructions",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Peer to Peer - Sending Bits on a Shared Wire",
+      "name": "Peer to Peer - Sending Bits on a Shared Wire",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Peer to Peer - Sending Bits on a Shared Wire",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Peer to Peer - Sending Numbers",
+      "name": "Peer to Peer - Sending Numbers",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Peer to Peer - Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Peer to Peer - Sending Ascii",
+      "name": "Peer to Peer - Sending Ascii",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Peer to Peer - Sending Ascii",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Broadcasting messages",
+      "name": "Broadcasting messages",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Broadcasting messages",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Routers and addresses",
+      "name": "Routers and addresses",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Routers and addresses",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Packets and Reliability",
+      "name": "Packets and Reliability",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Packets and Reliability",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Manual DNS",
+      "name": "Manual DNS",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Manual DNS",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Automatic DNS node",
+      "name": "Automatic DNS node",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Automatic DNS node",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "Internet Simulator Freeplay",
+      "name": "Internet Simulator Freeplay",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Internet Simulator Freeplay",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator Setup"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator Setup"
+        ],
+        "lesson.key": "Overview and Setup Instructions",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "Internet Simulator Setup"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator Setup 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator Setup 2"
+        ],
+        "lesson.key": "Overview and Setup Instructions",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "Internet Simulator Setup 2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator Setup 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator Setup 3"
+        ],
+        "lesson.key": "Overview and Setup Instructions",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "Internet Simulator Setup 3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone SendAB"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone SendAB"
+        ],
+        "lesson.key": "Peer to Peer - Sending Bits on a Shared Wire",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone SendAB"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone Sending Numbers"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone Sending Numbers"
+        ],
+        "lesson.key": "Peer to Peer - Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone Sending Numbers"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone Sending Numbers Ascii"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone Sending Numbers Ascii"
+        ],
+        "lesson.key": "Peer to Peer - Sending Ascii",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone Sending Numbers Ascii"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone Broadcast"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone Broadcast"
+        ],
+        "lesson.key": "Broadcasting messages",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone Broadcast"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone Classroom Routers"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone Classroom Routers"
+        ],
+        "lesson.key": "Routers and addresses",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone Classroom Routers"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone Packets TCP"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone Packets TCP"
+        ],
+        "lesson.key": "Packets and Reliability",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone Packets TCP"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone Manual DNS"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone Manual DNS"
+        ],
+        "lesson.key": "Manual DNS",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone Manual DNS"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone Automatic DNS"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone Automatic DNS"
+        ],
+        "lesson.key": "Automatic DNS node",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone Automatic DNS"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "NetSim Standalone Freeplay"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "NetSim Standalone Freeplay"
+        ],
+        "lesson.key": "Internet Simulator Freeplay",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      },
+      "level_keys": [
+        "NetSim Standalone Freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator Setup",
+        "script_level.level_keys": [
+          "Internet Simulator Setup"
+        ],
+        "lesson.key": "Overview and Setup Instructions",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator Setup 2",
+        "script_level.level_keys": [
+          "Internet Simulator Setup 2"
+        ],
+        "lesson.key": "Overview and Setup Instructions",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator Setup 3",
+        "script_level.level_keys": [
+          "Internet Simulator Setup 3"
+        ],
+        "lesson.key": "Overview and Setup Instructions",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone SendAB",
+        "script_level.level_keys": [
+          "NetSim Standalone SendAB"
+        ],
+        "lesson.key": "Peer to Peer - Sending Bits on a Shared Wire",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone Sending Numbers",
+        "script_level.level_keys": [
+          "NetSim Standalone Sending Numbers"
+        ],
+        "lesson.key": "Peer to Peer - Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone Sending Numbers Ascii",
+        "script_level.level_keys": [
+          "NetSim Standalone Sending Numbers Ascii"
+        ],
+        "lesson.key": "Peer to Peer - Sending Ascii",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone Broadcast",
+        "script_level.level_keys": [
+          "NetSim Standalone Broadcast"
+        ],
+        "lesson.key": "Broadcasting messages",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone Classroom Routers",
+        "script_level.level_keys": [
+          "NetSim Standalone Classroom Routers"
+        ],
+        "lesson.key": "Routers and addresses",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone Packets TCP",
+        "script_level.level_keys": [
+          "NetSim Standalone Packets TCP"
+        ],
+        "lesson.key": "Packets and Reliability",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone Manual DNS",
+        "script_level.level_keys": [
+          "NetSim Standalone Manual DNS"
+        ],
+        "lesson.key": "Manual DNS",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone Automatic DNS",
+        "script_level.level_keys": [
+          "NetSim Standalone Automatic DNS"
+        ],
+        "lesson.key": "Automatic DNS node",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "NetSim Standalone Freeplay",
+        "script_level.level_keys": [
+          "NetSim Standalone Freeplay"
+        ],
+        "lesson.key": "Internet Simulator Freeplay",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

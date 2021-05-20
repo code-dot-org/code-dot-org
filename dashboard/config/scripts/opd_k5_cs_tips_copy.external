@@ -1,0 +1,32 @@
+name 'OPD-K5 CS Tips_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Navigating this online course
+
+As you complete this course, you'll familiarize yourself with everything CS Fundamentals has to offer.
+
+If you find yourself having trouble, the information below will help you navigate and use this space for your professional learning as you complete this online course. Feel free to come back to this level any time!
+
+---
+
+## Concept Chunks
+The main page of this online course is pictured below. This page is broken up into four **concept chunks**. This mirrors how the Computer Science Fundamentals courses are laid out.
+
+![](https://images.code.org/5227343bf74975b4678e42b50fdcd085-image-1573235429162.50.02 AM.png)
+## Lessons
+Each section is comprised of **lessons**, which represent different topics and ideas.
+
+## Levels (bubbles)
+Each stage is made up of levels, which look like bubbles. **Diamonds** represent levels like this, which hold individual videos, readings, or questions. Some **circles** are online puzzles that you will complete to practice coding concepts. Other **circles** are free response questions, which you will submit an answer for and revisit later on. The colors of the bubble will change based on your progress. In this online professional development course you'll see the following types of bubbles:
+<br/>
+
+<img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+<br/>
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

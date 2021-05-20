@@ -44,11 +44,10 @@
       style: 'width: 180px; height: 36px; border: 0; color: white; background-color: #FDC62C; font: bolder 18px Arial; display: block; text-align: center; line-height: 36px; text-decoration: none; border-radius: 5px;'}
       Get started here
 
-  %p
-  Remember that you can always reach out to us for support at
-  = mail_to('teacher@code.org') + '.'
+  %p#contact-us
+    != @contact_text
 
   %p
     Thank you,
-    %br Megan Hochstatter
-    %br K-5 Education Program Manager, Code.org
+    %br Dave Frye
+    %br Director of Program Development and Operations, Code.org

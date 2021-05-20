@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "layoutClusters",
+    "blockText": "layout monsters in clusters of {NUM}",
+    "args": [
+      {
+        "name": "NUM",
+        "type": "Number",
+        "field": true
+      }
+    ]
+  }
+}

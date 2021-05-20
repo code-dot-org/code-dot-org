@@ -19,9 +19,9 @@ import {
 } from '../lib/util/javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
 import $ from 'jquery';
@@ -802,7 +802,7 @@ applabCommands.drawImageURL = function(opts) {
   );
 
   var callback = function(success) {
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null, success);
     }
   };
@@ -920,6 +920,8 @@ applabCommands.textLabel = function(opts) {
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
   newLabel.style.borderStyle = 'solid';
+  // Set optimizeSpeed to ensure better text size consistency between Safari and Chrome
+  newLabel.style.textRendering = 'optimizeSpeed';
   elementLibrary.setAllPropertiesToCurrentTheme(
     newLabel,
     Applab.activeScreen()
@@ -1002,7 +1004,7 @@ applabCommands.getAttribute = function(opts) {
   return divApplab.contains(element) ? String(element[attribute]) : false;
 };
 
-// Whitelist of HTML Element attributes which can be modified, to
+// Allowlist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
 var MUTABLE_ATTRIBUTES = ['scrollTop'];
 
@@ -1157,7 +1159,7 @@ applabCommands.getImageURL = function(opts) {
       return element.getAttribute('data-canonical-image-url');
     } else if (
       element.tagName === 'LABEL' &&
-      element.className === 'img-upload'
+      $(element).hasClass('img-upload')
     ) {
       var fileObj = element.children[0].files[0];
       if (fileObj) {
@@ -1530,6 +1532,20 @@ applabCommands.onEvent = function(opts) {
           opts.eventName,
           applabCommands.onEventFired.bind(this, opts)
         );
+
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        if (opts.eventName === 'mousedown') {
+          domElement.addEventListener(
+            'touchstart',
+            applabCommands.onEventFired.bind(this, opts)
+          );
+        }
+        if (opts.eventName === 'mouseup') {
+          domElement.addEventListener(
+            'touchend',
+            applabCommands.onEventFired.bind(this, opts)
+          );
+        }
         // To allow INPUT type="range" (Slider) events to work on downlevel browsers, we need to
         // register a 'change' listener whenever an 'input' listner is requested.  Downlevel
         // browsers typically only sent 'change' events.
@@ -1547,6 +1563,11 @@ applabCommands.onEvent = function(opts) {
       case 'mousemove':
         domElement.addEventListener(
           opts.eventName,
+          applabCommands.onEventFired.bind(this, opts)
+        );
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        domElement.addEventListener(
+          'touchmove',
           applabCommands.onEventFired.bind(this, opts)
         );
         // Additional handler needed to ensure correct calculation of
@@ -1647,14 +1668,6 @@ function logWebRequest(url) {
 applabCommands.startWebRequest = function(opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
-  apiValidateType(
-    opts,
-    'startWebRequest',
-    'headers',
-    opts.headers,
-    'object',
-    OPTIONAL
-  );
   logWebRequest(opts.url);
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
@@ -1673,22 +1686,7 @@ applabCommands.startWebRequest = function(opts) {
     encodeURIComponent(Applab.channelId);
   const {isExported} = getAppOptions() || {};
   req.open('GET', isExported ? opts.url : url, true);
-  const headers = opts.headers || {};
-  Object.keys(headers).forEach(key => {
-    if (AllowedWebRequestHeaders.includes(key)) {
-      req.setRequestHeader(key, headers[key]);
-    }
-  });
   req.send();
-};
-
-applabCommands.startWebRequestSync = function(opts) {
-  applabCommands.startWebRequest({
-    ...opts,
-    func: (status, contentType, responseText) => {
-      opts.func(responseText);
-    }
-  });
 };
 
 applabCommands.createRecord = function(opts) {
@@ -2097,7 +2095,7 @@ applabCommands.drawChart = function(opts) {
     chartApi.warnings.forEach(function(warning) {
       outputWarning(warning.message);
     });
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
   };
@@ -2204,7 +2202,7 @@ applabCommands.drawChartFromRecords = function(opts) {
     chartApi.warnings.forEach(function(warning) {
       outputWarning(warning.message);
     });
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
   };
@@ -2270,4 +2268,5 @@ function stopLoadingSpinnerFor(elementId) {
 // Include playSound, stopSound, etc.
 Object.assign(applabCommands, audioCommands);
 Object.assign(applabCommands, timeoutCommands);
+Object.assign(applabCommands, mlCommands);
 Object.assign(applabCommands, makerCommands);

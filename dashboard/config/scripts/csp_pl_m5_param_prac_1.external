@@ -1,0 +1,32 @@
+name 'CSP-PL M5 - Param Prac 1'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Overview of Parameters and Return Practice - U7L3
+**Goal:** The purpose of this section is to practice doing the same activities students will do to further their understanding of parameters and return. *(Estimated time: 30 minutes)*
+
+## Context:
+You will notice that between the Explore lesson you just looked at and this Practice lesson, students will have completed an Investigate lesson on parameters and return.  
+
+<img src="https://images.code.org/d41b283a3cf1b7e3bad9f8d8abb611d6-image-1600366797828.18.36 PM.png" style="display: block; margin-left: auto; margin-right: auto"> 
+
+In the Investigate lesson, students see parameters and return working in two different apps:
+
+* One is a "Number Cruncher" calculator that uses functions to calculate operations between two numbers.
+* One is a “Word Game Helper” where a user selects a letter and a number and the app gives them some words that start with that letter of that length. This app has a function that uses the parameters of the letter and the number to filter a list of words down to contain a list of words that meet the criteria.
+
+
+<img src="https://images.code.org/3079e85f0c106aeb1925be12c87b27e9-image-1600366565913.15.42 PM.png" style="display: block; margin-left: auto; margin-right: auto"> 
+
+In the Practice lesson in this EIPM sequence, which you will look at next, students will write some of their own code and check their work using the console.log and by checking the output of an app.
+
+
+## Do this: 
+* Open the <a href="https://curriculum.code.org/csp-20/unit7/3" target="blank" rel="noopener noreferrer">lesson plan for U7L3</a>.  Skim the lesson plan, paying attention to the teaching tip.
+
+In the next seven levels in this module, you will be completing levels from U7L3 that match the levels students will engage in during this lesson.
+
+
+MARKDOWN

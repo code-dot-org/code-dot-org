@@ -1,0 +1,22 @@
+name 'OPD-K5 Stage4Go_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Unplugged Lesson: Getting Loopy
+
+> A **loop** is the action of doing something over and over again.
+****
+
+## **1. Review "<a href="https://curriculum.code.org/csf-19/courseb/6/" target="blank" rel="noopener noreferrer">Getting Loopy</a>" Lesson Plan from Course B:**
+Course B is meant for Grade 1 students. Loops comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
+
+## **2. Watch the student video: Getting Loopy (found in the lesson plan)**
+This is a video that you would show your students to help introduce the concept of loops and kick off the unplugged lesson.
+
+***
+<a href="https://curriculum.code.org/csf-19/courseb/6/" target="blank" rel="noopener noreferrer">![](https://images.code.org/74f963b452dbba7eb260d6b9e1fa2b4c-image-1573079606451.33.05 PM.png)</a>
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

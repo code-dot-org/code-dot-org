@@ -1,0 +1,1263 @@
+{
+  "script": {
+    "name": "cspfacilitator",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS Principles Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:43 UTC",
+    "seeding_key": {
+      "script.name": "cspfacilitator"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome!",
+      "name": "Welcome!",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "Pixelation Widget",
+      "name": "Pixelation Widget",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "Text Compression Widget",
+      "name": "Text Compression Widget",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Text Compression Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "Internet Simulator",
+      "name": "Internet Simulator",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "App Lab",
+      "name": "App Lab",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "Broadcast Lesson",
+      "name": "Broadcast Lesson",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "Text Compression Lesson",
+      "name": "Text Compression Lesson",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPfac intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPfac intro"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "CSPfac intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "a bit about pixels"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "a bit about pixels"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "a bit about pixels"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 14 - Make the Letter A"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 14 - Fix bit offset"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 14 - Make your own B and W Image"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Complete 3-bit color"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Text Compression"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Text Compression"
+        ],
+        "lesson.key": "Text Compression Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L13 Text Compression"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L4 NetSim SendAB"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 NetSim SendAB"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L4 NetSim SendAB"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L8 NetSim numbers no decimal"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 NetSim numbers no decimal"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L8 NetSim numbers no decimal"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L5 NetSim Classroom Internet"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L5 NetSim Classroom Internet"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U2L5 NetSim Classroom Internet"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L7 NetSim Need for Packets"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L7 NetSim Need for Packets"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U2L7 NetSim Need for Packets"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L10 NetSim Automatic DNS"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L10 NetSim Automatic DNS"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U2L10 NetSim Automatic DNS"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U3L2 Using Simple Commands"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L03 Define and use turnAround"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Define and use turnAround"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U3L03 Define and use turnAround"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - Starry Night Starter Code"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - Starry Night Starter Code"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U3L07 - Starry Night Starter Code"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - Enchantment Under the Sea"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - Enchantment Under the Sea"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U3L08 - Enchantment Under the Sea"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L13 - Turtle move with button"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L13 - Turtle move with button"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U3L13 - Turtle move with button"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L16 - use images"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L16 - use images"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U3L16 - use images"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "broadcast lesson plan"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "broadcast lesson plan"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "broadcast lesson plan"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L2 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 Student Lesson Introduction"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U2L2 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L2 NetSim Hub Mode"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 NetSim Hub Mode"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U2L2 NetSim Hub Mode"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L02 Free Response Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L02 Free Response Reflection"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U2L02 Free Response Reflection"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L02 Assessment2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L02 Assessment2"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U2L02 Assessment2"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "text compression lesson plan"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "text compression lesson plan"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "text compression lesson plan"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Student Lesson Summary"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Student Lesson Summary"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L13 Student Lesson Summary"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Text Compression"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Text Compression"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L13 Text Compression"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Assessment 1"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L13 Assessment 1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Assessment 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Assessment 2"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L13 Assessment 2"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Reflection Free Response"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Reflection Free Response"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L13 Reflection Free Response"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Reflection 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Reflection 1"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L13 Reflection 1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Reflection 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Reflection 2"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      },
+      "level_keys": [
+        "U1L13 Reflection 2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSPfac intro",
+        "script_level.level_keys": [
+          "CSPfac intro"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "a bit about pixels",
+        "script_level.level_keys": [
+          "a bit about pixels"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 14 - Make the Letter A",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 14 - Fix bit offset",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 14 - Make your own B and W Image",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Complete 3-bit color",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Text Compression",
+        "script_level.level_keys": [
+          "U1L13 Text Compression"
+        ],
+        "lesson.key": "Text Compression Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 NetSim SendAB",
+        "script_level.level_keys": [
+          "U1L4 NetSim SendAB"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 NetSim numbers no decimal",
+        "script_level.level_keys": [
+          "U1L8 NetSim numbers no decimal"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L5 NetSim Classroom Internet",
+        "script_level.level_keys": [
+          "U2L5 NetSim Classroom Internet"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L7 NetSim Need for Packets",
+        "script_level.level_keys": [
+          "U2L7 NetSim Need for Packets"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L10 NetSim Automatic DNS",
+        "script_level.level_keys": [
+          "U2L10 NetSim Automatic DNS"
+        ],
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L2 Using Simple Commands",
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Define and use turnAround",
+        "script_level.level_keys": [
+          "U3L03 Define and use turnAround"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - Starry Night Starter Code",
+        "script_level.level_keys": [
+          "U3L07 - Starry Night Starter Code"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - Enchantment Under the Sea",
+        "script_level.level_keys": [
+          "U3L08 - Enchantment Under the Sea"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L13 - Turtle move with button",
+        "script_level.level_keys": [
+          "U3L13 - Turtle move with button"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L16 - use images",
+        "script_level.level_keys": [
+          "U3L16 - use images"
+        ],
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "broadcast lesson plan",
+        "script_level.level_keys": [
+          "broadcast lesson plan"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U2L2 Student Lesson Introduction"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 NetSim Hub Mode",
+        "script_level.level_keys": [
+          "U2L2 NetSim Hub Mode"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L02 Free Response Reflection",
+        "script_level.level_keys": [
+          "U2L02 Free Response Reflection"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L02 Assessment2",
+        "script_level.level_keys": [
+          "U2L02 Assessment2"
+        ],
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "text compression lesson plan",
+        "script_level.level_keys": [
+          "text compression lesson plan"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Student Lesson Summary",
+        "script_level.level_keys": [
+          "U1L13 Student Lesson Summary"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Text Compression",
+        "script_level.level_keys": [
+          "U1L13 Text Compression"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Assessment 1",
+        "script_level.level_keys": [
+          "U1L13 Assessment 1"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Assessment 2",
+        "script_level.level_keys": [
+          "U1L13 Assessment 2"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Reflection Free Response",
+        "script_level.level_keys": [
+          "U1L13 Reflection Free Response"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Reflection 1",
+        "script_level.level_keys": [
+          "U1L13 Reflection 1"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Reflection 2",
+        "script_level.level_keys": [
+          "U1L13 Reflection 2"
+        ],
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

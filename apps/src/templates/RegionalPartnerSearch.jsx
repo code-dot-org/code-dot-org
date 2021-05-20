@@ -13,82 +13,6 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
 
-const styles = {
-  schoolZipLabel: {
-    marginRight: 40
-  },
-  zipInput: {
-    height: 28
-  },
-  zipSubmit: {
-    marginTop: 20,
-    display: 'inline-block',
-    marginLeft: 10
-  },
-  hr: {
-    borderColor: color.charcoal,
-    marginTop: 50,
-    marginBottom: 50
-  },
-  spinner: {
-    fontSize: 32,
-    marginTop: 20,
-    marginLeft: 48
-  },
-  noState: {
-    marginTop: 20,
-    color: color.dark_red
-  },
-  noPartner: {
-    marginTop: 20
-  },
-  bold: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  linkLike: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'pointer',
-    color: color.purple
-  },
-  workshopCollection: {
-    backgroundColor: color.lightest_purple,
-    padding: 20,
-    borderRadius: 10,
-    marginBottom: 20
-  },
-  halfWidth: {
-    width: '40%',
-    float: 'left',
-    marginRight: 20
-  },
-  fullWidth: {
-    width: '100%'
-  },
-  workshop: {
-    marginBottom: 20
-  },
-  action: {
-    marginTop: 20,
-    marginBottom: 20
-  },
-  scholarship: {
-    backgroundColor: color.lightest_gray,
-    padding: 20,
-    borderRadius: 10
-  },
-  partnerContact: {
-    marginBottom: 20
-  },
-  bigButton: {
-    padding: '10px 20px 10px 20px',
-    height: 'initial',
-    marginTop: 22
-  },
-  clear: {
-    clear: 'both'
-  }
-};
-
 class RegionalPartnerSearch extends Component {
   static propTypes = {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
@@ -286,6 +210,7 @@ class RegionalPartnerSearch extends Component {
                 <a
                   href="https://docs.google.com/document/d/1OeLNx97wiLon69e8lp45M6ox0BuYLCOSZedzrtMB8_k/edit"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   this document
                 </a>
@@ -341,7 +266,7 @@ class RegionalPartnerSearch extends Component {
                 <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
                 {workshopCollections[0].workshops.length === 0 &&
                   workshopCollections[1].workshops.length === 0 && (
-                    <div>Workshops not currently available in your region.</div>
+                    <div>Workshop details coming soon!</div>
                   )}
 
                 {workshopCollections.map(
@@ -371,17 +296,6 @@ class RegionalPartnerSearch extends Component {
             <div style={styles.clear} />
 
             <div style={styles.action}>
-              {appState !== WorkshopApplicationStates.now_closed &&
-                (workshopCollections[0].workshops.length > 0 ||
-                  workshopCollections[1].workshops.length > 0) && (
-                  <div>
-                    In addition to attending a five-day summer workshop, the
-                    professional learning program includes up to 4 required
-                    one-day, in-person academic year workshops during the
-                    2019-20 school year.
-                  </div>
-                )}
-
               {appState === WorkshopApplicationStates.now_closed && (
                 <h3>Applications are now closed.</h3>
               )}
@@ -417,7 +331,7 @@ class RegionalPartnerSearch extends Component {
               {appState !== WorkshopApplicationStates.now_closed &&
                 partnerInfo.cost_scholarship_information && (
                   <div>
-                    <h3>Scholarship, discounts, and cost information:</h3>
+                    <h3>Program information</h3>
                     <div style={styles.scholarship}>
                       <SafeMarkdown
                         markdown={partnerInfo.cost_scholarship_information}
@@ -428,7 +342,7 @@ class RegionalPartnerSearch extends Component {
 
               {partnerInfo.additional_program_information && (
                 <div>
-                  <h3>Additional program information:</h3>
+                  <h3>More about your Regional Partner</h3>
                   <SafeMarkdown
                     markdown={partnerInfo.additional_program_information}
                   />
@@ -491,6 +405,82 @@ class RegionalPartnerSearch extends Component {
   }
 }
 
+const styles = {
+  schoolZipLabel: {
+    marginRight: 40
+  },
+  zipInput: {
+    height: 28
+  },
+  zipSubmit: {
+    marginTop: 20,
+    display: 'inline-block',
+    marginLeft: 10
+  },
+  hr: {
+    borderColor: color.charcoal,
+    marginTop: 50,
+    marginBottom: 50
+  },
+  spinner: {
+    fontSize: 32,
+    marginTop: 20,
+    marginLeft: 48
+  },
+  noState: {
+    marginTop: 20,
+    color: color.dark_red
+  },
+  noPartner: {
+    marginTop: 20
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  linkLike: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'pointer',
+    color: color.purple
+  },
+  workshopCollection: {
+    backgroundColor: color.lightest_purple,
+    padding: 20,
+    borderRadius: 10,
+    marginBottom: 20
+  },
+  halfWidth: {
+    width: '40%',
+    float: 'left',
+    marginRight: 20
+  },
+  fullWidth: {
+    width: '100%'
+  },
+  workshop: {
+    marginBottom: 20
+  },
+  action: {
+    marginTop: 20,
+    marginBottom: 20
+  },
+  scholarship: {
+    backgroundColor: color.lightest_gray,
+    padding: 20,
+    borderRadius: 10
+  },
+  partnerContact: {
+    marginBottom: 20
+  },
+  bigButton: {
+    padding: '10px 20px 10px 20px',
+    height: 'initial',
+    marginTop: 22
+  },
+  clear: {
+    clear: 'both'
+  }
+};
+
 const StartApplicationButton = ({
   buttonOnly,
   className,
@@ -517,7 +507,7 @@ const StartApplicationButton = ({
     notificationText = 'Sign up now to reserve your space!';
   } else {
     notificationHeading =
-      'We still have spaces in the professional learning program!';
+      'We still have spaces in the Professional Learning Program!';
     notificationText = 'It’s not too late to sign up.';
   }
 

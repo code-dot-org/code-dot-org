@@ -1,0 +1,140 @@
+---
+title: AI for Oceans
+theme: responsive
+---
+:ruby
+
+  resources = {
+    left_link: CDO.curriculum_url(I18n.locale, "/hoc/plugged/9/"),
+    left_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
+    left_heading: hoc_s(:oceans_landing_teacher_resources),
+    left_description: hoc_s(:oceans_landing_teacher_resources_desc),
+    left_button_text: hoc_s(:oceans_landing_resource_button),
+    right_link: "/csforgood",
+    right_image: CDO.code_org_url("/images/fill-485x260/csforgood2019.jpg"),
+    right_heading: hoc_s(:oceans_landing_cs_for_good),
+    right_description: hoc_s(:oceans_landing_cs_for_good_desc),
+    right_button_text: hoc_s(:oceans_landing_resource_button)
+  }
+
+:css
+  .tutorial-promo-container {
+    width: 100%;
+    padding-left: 5px;
+    position: relative;
+  }
+
+  .tutorial-details {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 20px;
+  }
+  div[dir='ltr'] .tutorial-details {
+    left: 80px;
+  }
+  div[dir='rtl'] .tutorial-details {
+    right: 80px;
+  }
+  .tutorial-details-mobile {
+    background-color: rgba(0, 35, 82, 0.9);
+    color: white;
+    padding: 20px;
+  }
+
+  .tutorial-heading {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px
+  }
+
+  .tutorial-heading-mobile {
+    margin-top: 0px
+  }
+
+  .tutorial-description {
+    color: white;
+    font-size: 14px;
+  }
+
+  .tutorial-specs {
+    color: white;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .tutorial-button {
+    font-size: 18px;
+    height: 40px;
+  }
+
+  h3 {
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  .blurb {
+    padding: 10px;
+    margin-top: 0px;
+  }
+
+%div{dir: language_dir_class}
+  %a{href: CDO.studio_url('/s/oceans/reset'), target: '_self', style: "font-family: 'Gotham 4r', sans-serif; text-decoration: none"}
+    .tutorial-promo-container
+      = view :oceans_promo
+      .tutorial-details.desktop-feature
+        %h1.tutorial-heading= hoc_s(:oceans_landing_title)
+        %p.tutorial-description= hoc_s(:oceans_landing_description)
+        %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
+        %p.tutorial-specs= hoc_s(:oceans_landing_specs)
+        %button.tutorial-button=I18n.t(:try_now)
+
+      .tutorial-details-mobile.mobile-feature
+        %h1.tutorial-heading.tutorial-heading-mobile= hoc_s(:oceans_landing_title)
+        %p.tutorial-description= hoc_s(:oceans_landing_description)
+        %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
+        %p.tutorial-specs= hoc_s(:oceans_landing_specs)
+        %button.tutorial-button=I18n.t(:try_now)
+
+  %div{style: "clear: both; margin-top: 10px;"}
+
+  %h3.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: :inline)
+
+  = view :resource_boxes, resources: resources
+
+  :css
+    .microsoft-partnership {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .microsoft-thanks {
+      font-size: 14px;
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 85px;
+      margin-left: 18%;
+      margin-right: 18%;
+    }
+
+  .microsoft-partnership
+    = I18n.t(:hoc2018_mc_with_microsoft)
+    &nbsp;
+    %img{src: "images/fit-240/avatars/microsoft.png"}
+
+  .microsoft-thanks
+    = I18n.t(:hoc2018_mc_thank_microsoft)
+
+  = view :ai_videos
+
+  = view :ai_ml_resources_table
+
+  #behind-the-scenes
+    %h2= hoc_s(:oceans_behind_the_scenes)
+
+    %h3!= hoc_s(:oceans_behind_the_scenes_1_markdown, markdown: :inline)
+
+    %h3!= hoc_s(:oceans_behind_the_scenes_2_markdown, markdown: :inline)
+
+.clear

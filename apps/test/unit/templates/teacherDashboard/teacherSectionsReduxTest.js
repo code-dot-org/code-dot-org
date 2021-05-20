@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import {
   stubRedux,
   restoreRedux,
@@ -12,6 +12,7 @@ import reducer, {
   setRosterProvider,
   setValidGrades,
   setValidAssignments,
+  setPreReaderScriptIds,
   setSections,
   selectSection,
   removeSection,
@@ -40,9 +41,11 @@ import reducer, {
   isSaveInProgress,
   sectionsNameAndId,
   getSectionRows,
+  sortedSectionsList,
+  sortSectionsList,
   NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {OAuthSectionTypes} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 
 const {
   EDIT_SECTION_SUCCESS,
@@ -52,6 +55,8 @@ const {
   USER_EDITABLE_SECTION_PROPS
 } = __testInterface__;
 
+const createdAt = '2019-10-21T23:45:34.345Z';
+
 const sections = [
   {
     id: 11,
@@ -60,13 +65,16 @@ const sections = [
     login_type: 'picture',
     grade: '2',
     code: 'PMTKVH',
-    stage_extras: false,
+    lesson_extras: false,
+    tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: null,
     course_id: 29,
+    createdAt: createdAt,
     studentCount: 10,
-    hidden: false
+    hidden: false,
+    restrict_section: false
   },
   {
     id: 12,
@@ -75,7 +83,8 @@ const sections = [
     login_type: 'picture',
     grade: '11',
     code: 'DWGMFX',
-    stage_extras: false,
+    lesson_extras: false,
+    tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: {
@@ -83,8 +92,10 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
+    createdAt: createdAt,
     studentCount: 1,
-    hidden: false
+    hidden: false,
+    restrict_section: false
   },
   {
     id: 307,
@@ -93,16 +104,19 @@ const sections = [
     login_type: 'email',
     grade: '10',
     code: 'WGYXTR',
-    stage_extras: true,
+    lesson_extras: true,
+    tts_autoplay_enabled: false,
     pairing_allowed: false,
     sharing_disabled: false,
     script: {
       id: 112,
-      name: 'csp1'
+      name: 'csp1-2017'
     },
     course_id: 29,
+    createdAt: createdAt,
     studentCount: 0,
-    hidden: false
+    hidden: false,
+    restrict_section: false
   }
 ];
 
@@ -172,12 +186,12 @@ const validScripts = [
     category: 'other',
     position: null,
     category_priority: 3,
-    stage_extras_available: true
+    lesson_extras_available: true
   },
   {
     id: 112,
     name: 'Unit 1: The Internet',
-    script_name: 'csp1',
+    script_name: 'csp1-2017',
     category: "'16-'17 CS Principles",
     position: 0,
     category_priority: 7
@@ -185,7 +199,7 @@ const validScripts = [
   {
     id: 113,
     name: 'Unit 2: Digital Information',
-    script_name: 'csp2',
+    script_name: 'csp2-2017',
     category: "'16-'17 CS Principles",
     position: 1,
     category_priority: 7
@@ -220,7 +234,7 @@ const validScripts = [
     category: 'other',
     position: null,
     category_priority: 3,
-    stage_extras_available: true
+    lesson_extras_available: true
   }
 ];
 
@@ -238,6 +252,8 @@ const students = [
     sharingDisabled: false
   }
 ];
+
+const preReaderScripts = [37, 208];
 
 describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
@@ -541,13 +557,16 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         providerManaged: false,
         stageExtras: true,
+        ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
         studentCount: 0,
         code: '',
         courseId: null,
         scriptId: null,
-        hidden: false
+        hidden: false,
+        isAssigned: undefined,
+        restrictSection: false
       });
     });
   });
@@ -565,12 +584,16 @@ describe('teacherSectionsRedux', () => {
         providerManaged: false,
         code: 'DWGMFX',
         stageExtras: false,
+        ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
         scriptId: 36,
         courseId: null,
+        createdAt: createdAt,
         studentCount: 1,
-        hidden: false
+        hidden: false,
+        isAssigned: undefined,
+        restrictSection: false
       });
     });
   });
@@ -652,6 +675,34 @@ describe('teacherSectionsRedux', () => {
       state = reducer(state, editSectionProperties({scriptId: 37}));
       expect(state.sectionBeingEdited.stageExtras).to.equal(true);
     });
+
+    it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
+      let state = reducer(
+        editingNewSectionState,
+        setPreReaderScriptIds(preReaderScripts)
+      );
+      state = reducer(state, editSectionProperties({scriptId: 2}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+
+      state = reducer(state, editSectionProperties({scriptId: 37}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+    });
+
+    // TODO: add this test when tts autoplay is enabled by default for pre-reader scripts
+    it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
+      let state = reducer(
+        editingNewSectionState,
+        setPreReaderScriptIds(preReaderScripts)
+      );
+      state = reducer(state, editSectionProperties({scriptId: 2}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+
+      state = reducer(state, editSectionProperties({scriptId: 37}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
+
+      state = reducer(state, editSectionProperties({scriptId: 208}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
+    });
   });
 
   describe('cancelEditingSection', () => {
@@ -673,13 +724,16 @@ describe('teacherSectionsRedux', () => {
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
-      stage_extras: false,
+      lesson_extras: false,
+      tts_autoplay_enabled: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
-      course_id: null,
-      script_id: null,
-      hidden: false
+      courseId: null,
+      scriptId: null,
+      createdAt: createdAt,
+      hidden: false,
+      restrict_section: false
     };
 
     function successResponse(customProps = {}) {
@@ -820,13 +874,17 @@ describe('teacherSectionsRedux', () => {
           grade: '3',
           providerManaged: false,
           stageExtras: false,
+          ttsAutoplayEnabled: false,
           pairingAllowed: true,
           sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
-          courseId: null,
+          courseId: undefined,
           scriptId: null,
-          hidden: false
+          createdAt: createdAt,
+          hidden: false,
+          isAssigned: undefined,
+          restrictSection: false
         }
       });
     });
@@ -873,13 +931,15 @@ describe('teacherSectionsRedux', () => {
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
-      stage_extras: false,
+      lesson_extras: false,
+      tts_autoplay_enabled: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
-      hidden: false
+      hidden: false,
+      restrict_section: false
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1104,12 +1164,14 @@ describe('teacherSectionsRedux', () => {
       login_type: 'picture',
       grade: '2',
       code: 'PMTKVH',
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       script: null,
       course_id: 29,
+      createdAt: createdAt,
       studentCount: 10,
-      hidden: false
+      hidden: false,
+      restrict_section: false
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1119,7 +1181,11 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.login_type, serverSection.loginType);
       assert.strictEqual(section.grade, serverSection.grade);
       assert.strictEqual(section.code, serverSection.code);
-      assert.strictEqual(section.stage_extras, serverSection.stageExtras);
+      assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
+      assert.strictEqual(
+        section.tts_autoplay_enabled,
+        serverSection.ttsAutoplayEnabled
+      );
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
       assert.strictEqual(
         section.sharing_disabled,
@@ -1127,6 +1193,10 @@ describe('teacherSectionsRedux', () => {
       );
       assert.strictEqual(section.course_id, serverSection.courseId);
       assert.strictEqual(section.hidden, serverSection.hidden);
+      assert.strictEqual(
+        section.restrict_section,
+        serverSection.restrictSection
+      );
     });
 
     it('maps from a script object to a script_id', () => {
@@ -1244,7 +1314,7 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.validAssignments,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1']);
+      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1-2017']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1704,10 +1774,10 @@ describe('teacherSectionsRedux', () => {
 
   describe('getVisibleSections', () => {
     it('filters out hidden sections', () => {
-      const expectedVisibleSections = {
-        11: {id: 11, hidden: false},
-        1: {id: 1, hidden: null}
-      };
+      const expectedVisibleSections = [
+        {id: 11, hidden: false},
+        {id: 1, hidden: null}
+      ];
       const state = {
         teacherSections: {
           sections: {
@@ -1718,10 +1788,7 @@ describe('teacherSectionsRedux', () => {
       };
       const actualVisibleSections = getVisibleSections(state);
 
-      assert.deepEqual(
-        Object.values(expectedVisibleSections),
-        actualVisibleSections
-      );
+      assert.deepEqual(expectedVisibleSections, actualVisibleSections);
     });
 
     it('returns an empty array if there are no visible sections', () => {
@@ -1755,16 +1822,16 @@ describe('teacherSectionsRedux', () => {
       const state = reducer(undefined, setSections(sections));
       const expected = [
         {
-          id: 11,
-          name: 'My Section'
+          id: 307,
+          name: 'My Third Section'
         },
         {
           id: 12,
           name: 'My Other Section'
         },
         {
-          id: 307,
-          name: 'My Third Section'
+          id: 11,
+          name: 'My Section'
         }
       ];
       assert.deepEqual(sectionsNameAndId(state), expected);
@@ -1807,6 +1874,23 @@ describe('teacherSectionsRedux', () => {
         }
       ];
       assert.deepEqual(data, expected);
+    });
+  });
+
+  describe('sortedSectionsList', () => {
+    it('creates a sorted array from a dictionary object', () => {
+      const state = reducer(undefined, setSections(sections));
+      const expected = sections
+        .map(section => sectionFromServerSection(section))
+        .reverse();
+      assert.deepEqual(sortedSectionsList(state.sections), expected);
+    });
+  });
+
+  describe('sortSectionsList', () => {
+    it('sorts an array of sections by descending id', () => {
+      const expected = sections.reverse();
+      assert.deepEqual(sortSectionsList(sections), expected);
     });
   });
 });

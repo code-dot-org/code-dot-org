@@ -16,7 +16,7 @@
 # A Concept contains a set of Levels
 # A Video can be associated with a Concept
 # Trophies are awarded based on percentage completion of Concepts
-class Concept < ActiveRecord::Base
+class Concept < ApplicationRecord
   include Seeded
   has_and_belongs_to_many :levels
 

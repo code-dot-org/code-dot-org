@@ -1,0 +1,24 @@
+name 'CSP - Understanding the content of the Lists EIPM sequence'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Understanding the content of the lists EIPM sequence
+**Goals:** The purpose of this task is to understand the content in lists EIPM sequence. *(Estimated time: ~25 minutes)*
+
+## Connections to past and future work
+In the synchronous workshop for the previous module, you participated in a modified version of Unit 5, Lesson 2 - Lists Investigate.  Throughout Unit 5, we build on our knowledge of lists.  As a teacher, it will be important for you to have a good understanding of this learning progression.  Additionally, students will need to use a list in their Create Task that they submit to the College Board as part of the AP test.
+
+To help cement your understanding of lists, we recommend that you either spend time working with lists in the Lists Practice or Lists Make lessons in this unit.  If you are new to teaching or learning computer science, we recommend that you look at U5L3 - Lists Practice.  If you already have more experience with teaching or learning computer science, we recommend that you look at U5L4 - Lists Make.
+
+## Do this:
+Choose **ONE** of the options below to engage with for 20 minutes:
+* <a href="https://studio.code.org/s/csp5-2020/lessons/3/levels/2" target="blank" rel="noopener noreferrer">U5L3 - Lists Practice: Levels 2-7</a> (Recommended for less experienced CS teachers.)
+* <a href="https://studio.code.org/s/csp5-2020/lessons/4/levels/2" target="blank" rel="noopener noreferrer">U5L4 - Lists Make: Levels 2-3</a> (Recommended for more experienced CS teachers. Note you might only get started in the time we allocated for this task for this module and that is ok.  We only expect you to work on this task for 20 minutes)
+
+As you engage in the level progression, pay attention to what academic skills you might see your students demonstrate during this lesson. 
+
+*Note: The above links will take you to the student-facing course.  If you worked on these levels earlier in your own exploration of the course, you may see your previous work saved in these levels.  This is to be expected.*
+
+MARKDOWN

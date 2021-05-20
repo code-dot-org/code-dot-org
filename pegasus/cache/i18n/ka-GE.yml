@@ -19,6 +19,8 @@ ka-GE:
     font-weight:bold"> დაგეგმოთ თქვენი კოდის ერთი საათი</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> CS მასწავლებელი ხართ? გაეცანით CSEd კვირის სხვა რესურსებს</a>'
+  csedweek_banner_teachers_text: " CS მასწავლებელი ხართ? გაეცანით CSEd კვირის სხვა
+    რესურსებს"
   n_have_learned_an_hoc: "<h1> სცადეთ </h1><h2>კოდის ერთი საათი</h2><h3>#</h3>"
   anybody_can_learn: სწავლა შეუძლია ყველას.
   learn_now: ისწავლეთ ახლა
@@ -26,8 +28,6 @@ ka-GE:
     პროგრამირება
   petition_sign_message: 'თუ გვეთანხმებით, ჩაწერეთ თქვენი სახელი. შუერთდით #სხვებს
     ჩვენი ელფოსტის ადრესატების სიაში.'
-  petition_sign_message_support: 'თუ გვიჭერთ მხარს, მაშინ ჩაწერეთ თქვენი სახელი. შეუერთდით
-    #სხვებს ჩვენი ელფოსტის ადრესატების სიაში.'
   petition_join_others: 'შეუერთდით #სხვებს'
   name: სახელი
   email: ელექტრონული ფოსტა
@@ -205,10 +205,14 @@ ka-GE:
     მას. შემდეგ კი გააგრძელეთ <a href='http://studio.code.org'>ჩვენი სხვა კურსები</a>
     ან გაიგეთ, კიდევ როგორ შეგიძლიათ სწავლა <a href='/learn/beyond'>კოდის ერთი საათის
     დასრულების შემდეგ</a>.
+  get_a_certificate_message_after_markdown: სერტიფიკატის გადმოსაწერად ან ამოსაბეჭდად
+    დააჭირეთ მას. შემდეგ კი გააგრძელეთ [ჩვენი სხვა კურსები](http://studio.code.org)
+    ან გაიგეთ, კიდევ როგორ შეგიძლიათ სწავლა [კოდის ერთი საათის დასრულების შემდეგ](/learn/beyond).
   thanks_for_submitting: მადლობა, თქვენი მოთხოვნა მიღებულია!
   if_you_enjoyed: თუ მოგეწონათ სწავლა, შესთავაზეთ მეგობრებსაც! ჩვენ გვინდა, რომ მთელმა
     სამყარომ ისწავლოს პროგრამირება.
   personalize_certificate: სერტიფიკატის პერსონიფიკაცია
+  print_certificates: სერტიფიკატის ამობეჭდვა
   share_achievement: მიღწევის გაზიარება
   beyond_hour_message: გააგრძელეთ ჩვენი <a href='http://studio.code.org'>სხვა კურსები</a>
     ან გაიგეთ, კიდევ როგორ შეგიძლითა <a href='/learn/beyond'>ისწავლოთ ერთი საათის
@@ -367,6 +371,7 @@ ka-GE:
   homepage_action_text_learn: დაიწყეთ სწავლა
   homepage_action_text_signpetition: მოაწერეთ ხელი პეტიციას
   homepage_signpetition_dropdown: ვეთანხმები პეტიციას &#x25BE;
+  homepage_signpetition_dropdown_text: ვეთანხმები
   homepage_diversity_pledge: დაუჭირეთ მხარი მრავალფეროვნებას
   homepage_banner_text_prizes: 'კოდის ერთი საათი კვლავ ბრუნდება, დეკემბრის 7-13. '
   homepage_banner_link_prizes: 'მიიღეთ მონაწილეობა ისტორიაში ყველაზე დიდ საგანმანათლებლო
@@ -1228,6 +1233,12 @@ ka-GE:
   coursed-2019_gradelevel: კლასები 8+
   coursee-2019_gradelevel: ასაკი 8-12
   coursef-2019_gradelevel: 9-13 წელი
+  coursea-2020_gradelevel: 4-7 წელი
+  courseb-2020_gradelevel: 5-8 წელი
+  coursec-2020_gradelevel: 6-10 წელი
+  coursed-2020_gradelevel: კლასები 8+
+  coursee-2020_gradelevel: ასაკი 8-12
+  coursef-2020_gradelevel: 9-13 წელი
   accelerated_gradelevel: 'ასაკი: 10-18'
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
@@ -1383,6 +1394,16 @@ ka-GE:
     ვინც ჯერ კითხვა არ იცის.
   courseb-2019_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
     მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursea-2020_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ
+    უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია,
+    რომლის გაზიარებასაც შეძლებთ.
+  courseb-2020_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ
+    უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია,
+    რომლის გაზიარებასაც შეძლებთ.
+  coursec-2020_shortdescription_congrats: შექმენით პროგრამები ციკლებით, მოვლენებით
+    და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ
+    პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
+    კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
   codeorg_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი,
     Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები,
@@ -1876,6 +1897,8 @@ ka-GE:
   header_teacher_community: მასწავლებელთა კოლექტივი
   header_help_support: 'დახმარება და მხარდაჭერა '
   header_report_bug: მოგვახსენეთ ტექნიკური ხარვეზის შესახებ
+  header_legal_privacy: კონფიდენციალურობის პოლიტიკა
+  header_legal_tos: მომსახურების პირობები
   header_tutorials: ტუტორიალები
   header_documentation: დოკუმენტაცია
   user_header_label: გამარჯობა %{username}
@@ -1961,3 +1984,10 @@ ka-GE:
   hoc2018_dance_teacher_resources_tile2_button: აქტივობა უკომპიუტეროდ
   hoc2018_dance_amazon_about_future_engineer_button: გაიგეთ მეტი
   hoc2018_dance_amazon_scholarship_programs_button: მიიღეთ მონაწილეობა ახლავე
+  footer_powered_by_aws: შექმნილია Amazon Web Services დახმარებით
+  footer_privacy_policy: კონფიდენციალურობის პოლიტიკა
+  footer_about: გაიცანით
+  footer_partners: პარტნიორები
+  footer_donate: შემოწირულობა
+  footer_support: დახმარება და თემი
+  footer_terms: პირობები

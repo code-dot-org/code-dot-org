@@ -1,7 +1,6 @@
 name 'ECSPD impact vid2 question'
 title 'Barrier to Using Data'
-description 'Based on the video you just watched, answer the following 
-question' 
+description 'Based on the video you just watched, answer the following question' 
 answer_line true
 skip_sound true
 hide_submit true

@@ -1,0 +1,7 @@
+name 'ml-md placeholder'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# Placeholder Level
+MARKDOWN

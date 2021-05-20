@@ -1,0 +1,67 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-12-04T22:03:55.000Z",
+  "level_num": "custom",
+  "user_id": 832,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "comment": null,
+      "onEvent": null,
+      "setProperty": null
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "display_name": "Thermostat App v.1",
+    "submittable": "false",
+    "start_blocks": "// Create and assign variables\r\nvar clicks = 0;\r\n\r\nonEvent(\"addOneButton\", \"click\", function() {  \r\n  // This line creates the scope issue.\r\n  // You should only create variables once,\r\n  // and at the start of your program.\r\n  var clicks = clicks + 1;   \r\n  setProperty(\"counter\",\"text\",clicks);\r\n});\r\n",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "validation_enabled": "true",
+    "text_mode_at_start": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"addOneButton\" style=\"padding: 0px; margin: 0px; height: 140px; width: 290px; color: rgb(255, 255, 255); position: absolute; left: 15px; top: 295px; background-color: purple; font-size: 90px;\">+1</button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 290px; height: 100px; position: absolute; top: 95px; left: 15px; text-align: center; font-size: 90px;\" id=\"counter\">0</label></div></div>",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "long_instructions": "This program has a scope bug created by accidentally using a **local variable**.\r\n\r\n# Do This\r\n\r\n* Read the yellow warning. Why might you see this when you create a local variable?\r\n* Run this program once. Click the \"+1\" button to see how it works now.\r\n* Remove the `var` command inside the `onEvent()` to remove the local variable.",
+    "parent_level_id": 15835,
+    "map_reference": "/docs/concepts/patterns/counter-patterns-with-event/",
+    "mini_rubric": "false",
+    "reference_links": [
+      "/docs/concepts/patterns/counter-patterns-with-event/",
+      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
+    ],
+    "encrypted": "false",
+    "encrypted_examples": "XOQsNjTKQFNDyrJ9Kivgk8uj7/aF+HVudffK9YLWiPBBgG7y61iBXUTxspK6\nXJcDSo0Flu5Hbsa8E15LVTVOeA==\n",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-07 17:12:42 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-07 17:17:14 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-07 17:24:47 +0000\",\"changed\":[\"code_functions\",\"embed\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-08 16:04:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-08 19:39:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-08 19:42:47 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-12 02:27:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 02:54:10 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 02:59:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 03:22:19 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 05:09:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-13 17:03:18 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-14 21:09:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-14 23:53:56 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-03-31 20:20:06 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

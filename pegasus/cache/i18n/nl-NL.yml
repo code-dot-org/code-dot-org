@@ -10,7 +10,7 @@ nl-NL:
   upgrade_ie_message_csedweek: CSEdWeek.org geeft binnenkort geen support meer voor
     Internet Explorer 8, 9 en 10. Neem een moderne browser a.u.b.
   upgrade_ie_link: Leer meer
-  en: informatica
+  en: informaticawetenschappen
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 8-14 December 2014
   csedweek_banner_hoc: 'Het <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -20,15 +20,15 @@ nl-NL:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Bent u een Informaticadocent? Zie andere bronnen voor
     de CSEdWeek</a>'
+  csedweek_banner_teachers_text: Bent u een Informaticadocent? Zie andere bronnen
+    voor de CSEdWeek
   n_have_learned_an_hoc: "<h1>Probeer een</h1><h2>'Hour of Code'</h2><h3># geholpen</h3>"
   anybody_can_learn: Iedereen kan het leren.
   learn_now: Nu leren
-  petition_message: Elke leerling in elke school moet de kans krijgen om informatica
+  petition_message: Elke leerling in elke school moet de kans krijgen om informaticawetenschappen
     te leren
   petition_sign_message: 'Ga je akkoord, onderteken dan met je naam. Sluit je aan
     bij # anderen.'
-  petition_sign_message_support: 'Voeg je naam toe aan de lijst, als je ons steunt.
-    Net als # anderen.'
   petition_join_others: 'Doe mee met # anderen'
   name: naam
   email: E-mail
@@ -38,6 +38,7 @@ nl-NL:
   twentyhours_text: Klaar met je eerste 'Hour of Code'? Leer meer over Informatica
     en programmeerconcepten in deze vervolgcursus.
   og_title: Ieder kind verdient een kans
+  og_title_soon: De Hour of Code komt eraan
   og_title_here: Het Code Uur is er!
   og_description: Elke leerling op elke school moet de kans krijgen om te leren programmeren.
     Dit verandert alles.
@@ -92,6 +93,7 @@ nl-NL:
   congratulations_volunteer: 'Gefeliciteerd: nu je het Uur van Coderen hebt geprobeerd,
     <a href="https://code.org/volunteer">geef je op om te helpen in een klas</a> en
     help studenten met het leren van het Uur van Coderen!'
+  congratulations_on_completing_course: Gefeliciteerd met het afronden van %{course}
   congrats_next_tutorials_title: Probeer nu deze opdrachten
   congrats_next_tutorials_desc: Probeer deze kortere opdrachten van een uur of probeer
     een <a href="%{current_path}/next">opdracht van een partner</a>.
@@ -180,6 +182,7 @@ nl-NL:
   third_party_desc_5_4to8: Ongeveer 5 lessen, gericht op niveau 4-8
   third_party_desc_10to12_kto3: Ongeveer 10-12 lessen, gericht op niveau K-3
   third_party_desc_11_kto5: Ongeveer 11 lessen, gericht op niveau K-5
+  third_party_desc_10to12_kto5: Ongeveer 10-12 lessen, gericht op niveau K-3
   third_party_desc_40_4to8: Meer dan 40 lessen, gericht op niveaus 4-8
   third_party_desc_dozens_kto8: Tientallen lessen voor alle niveaus K-8
   third_party_desc_10to15_3to12: Tussen 10 & 15 lessen, gericht op niveaus 3-12
@@ -197,6 +200,7 @@ nl-NL:
   if_you_enjoyed: Als je het leuk vond dit te leren, vraag je vrienden of ze het ook
     willen proberen! We willen dat de hele wereld dit leert.
   personalize_certificate: Personaliseer je certificaat
+  print_certificates: Print certificaten
   share_achievement: Deel je prestatie
   beyond_hour_message: Ga door met onze  <a href='http://studio.code.org'>andere cursussen</a>,
     of kijk naar meer opties bij <a href='/learn/beyond'>verder dan een 'Hour of Code'</a>.
@@ -240,6 +244,7 @@ nl-NL:
   learn_online: Probeer andere cursussen online
   learn_classes: Zoek naar klassen in de buurt
   learn_back_to_minecraft: Blijf leren met Minecraft
+  hoc_is_here: 'Het #HourOfCode is zover - check it out! @codeorg'
   just_did_hoc: 'Ik heb net het #UurCode gedaan - check it out! @codeorg'
   learn_hoc: Leer een 'Hour of Code'
   beyond_hoc: Verder dan een Uur Code
@@ -326,6 +331,8 @@ nl-NL:
     op Code Studio
   homepage_hero_text_stat_students: "#student_count studenten accounts op Code Studio"
   homepage_hero_text_stat_served: 'Uur van Code: #served geserveerd'
+  homepage_hero_hoc_is_coming: De Hour of Code komt eraan
+  homepage_hero_hoc_is_here: Het Uur Code is hier
   homepage_slot_text_hoc: Het Uur Code
   homepage_slot_text_frozen: Frozen met Anna en Elsa
   homepage_slot_text_teacher: Dashboard Leerkrachten
@@ -346,6 +353,7 @@ nl-NL:
   homepage_action_text_learn: Begin met leren
   homepage_action_text_signpetition: Teken de petitie
   homepage_signpetition_dropdown: Teken onze petitie &#x25BE;
+  homepage_signpetition_dropdown_text: Ik ga akkoord
   homepage_diversity_pledge: Doe de diversiteits-belofte
   homepage_banner_text_prizes: 'Het Uur Code komt er weer aan, 7-13 december. '
   homepage_banner_link_prizes: 'Doe mee met het grootste onderwijs-event in de geschiedenis. '
@@ -362,7 +370,7 @@ nl-NL:
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
   homepage_slot_text_link_about_hoc: Over Hour of Code
-  homepage_slot_text_link_host: Organiseer een 'Hour of Code'
+  homepage_slot_text_link_host: Organiseer een Uur Code
   homepage_slot_text_link_hocserved: "# bediend"
   homepage_solot_text_link_volunteer: Word vrijwilliger voor het Uur Code
   homepage_slot_text_title_students: Leerlingen
@@ -371,7 +379,7 @@ nl-NL:
   homepage_slot_text_link_codestudio: Probeer Code Studio
   homepage_slot_text_link_local: Vind een groep in de buurt
   homepage_slot_text_link_othercourses: Andere online cursussen
-  homepage_slot_text_title_educators: Educatoren
+  homepage_slot_text_title_educators: Leerkrachten
   homepage_slot_text_blurb_educators: Leer het je leerlingen
   homepage_slot_text_link_elementary: Basisschool
   homepage_slot_text_link_middle: Middelbare school
@@ -385,7 +393,8 @@ nl-NL:
   homepage_slot_text_link_buy: Doe mee
   homepage_slot_text_link_donate: Doneer
   homepage_slot_text_link_shop: T-shirts, hoeden, & meer
-  homepage_header_donors: Code.org dankt zijn aanhangers
+  homepage_gallery_header: Meer dan %{project_count} miljoen Code.org projecten gemaakt
+  homepage_header_donors: Code.org bedankt haar sponsoren
   homepage_donors_seall: Alles weergeven
   homepage_donors_donate: Doneren
   homepage_below_hero_announcement_text: We nemen uw privacy serieus en met ingang
@@ -445,7 +454,7 @@ nl-NL:
   starwars_blocks_specs: Vele talen | Moderne browsers, smartphones, tablets | Leeftijden
     6-106
   starwars_platform_text: Moderne browsers, smartphones, tablets
-  mc_name: Minecraft Uur Code
+  mc_name: Minecraft programmeer uur
   mc_longdescription: Gebruik blokken code om Steve of Alex te helpen op hun avontuur
     door deze Minecraft-wereld.
   mc_shortdescription: Gebruik blokken code om Steve of Alex te helpen op hun avontuur
@@ -457,8 +466,8 @@ nl-NL:
   minecraft_adventurer: Minecraft avonturier
   minecraft_tutorials: Minecraft Code Uur handleidingen
   minecraft_specs: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
-  minecraft_agent_description: Minecraft is terug bij Hour of Code met een gloednieuwe
-    activiteit! Gebruik code om door Minecraft te reizen.
+  minecraft_agent_description: Minecraft is terug bij Uur Code met een gloednieuwe
+    activiteit! Programmeer om door Minecraft te reizen.
   minecraft_agent_button: Start
   minecraft_designer_description: Ga dieren en andere Minecraft wezens programmeren
     in je eigen Minecraft omgeving.
@@ -469,8 +478,15 @@ nl-NL:
   minecraft_no_internet: Heeft u geen Internet?
   minecraft_download_adventurer: Download de offline versie van Minecraft avonturier.
   minecraft_subtitle: Minecraft Uur Code
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Meld je aan</a> voor
+    een gratis Microsoft Code Uur kamp bij een Microsoft winkel in Australië, Canada,
+    Puerto Rico of de Verenigde Staten. Leer om je creativiteit te combineren met
+    programmeren.
   minecraft_host_event: Plan een Minecraft Hour of Code Evenement
+  minecraft_teach_resources: Hulpmiddelen voor leraren en een lesplan.
+  minecraft_leader_guide: Download de hulpmiddelen om een event te plannen en leiden.
   sports_watch_video: Bekijk de video
+  watch_inspirational_videos: Bekijk voor je begint deze inspiratie-video's
   video_title_inspire_girl: Inspireer een meisje
   speak_another_language: Spreek je een andere taal?
   help_translate: Help ons met vertalen.
@@ -717,9 +733,12 @@ nl-NL:
     van uw individuele leerlingen, die u kunt ronddelen.
   dashboard_sections_switch_section: 'switch groep:'
   dashboard_sections_close: Afsluiten
+  dashboard_sections_enter_code: Voer de sectie code in
   dashboard_sections_code_placeholder: 6-tekencode (ABCDEF)
   dashboard_sections_other_section: Andere leraar
   dashboard_sections_both_sections: Wilt u dat de leerling(en) in beide secties zijn?
+  dashboard_sections_yes_both: Ja, ik wil leerling(en) kopiëren om in de huidige EN
+    de nieuwe sectie te plaatsen.
   dashboard_sections_move_students: Verplaatsen van studenten
   dashboard_sections_assign_activity: Cursus Toewijzen
   dashboard_students_add_multiple: 'Typ of plak hier de namen van uw studenten, één
@@ -808,6 +827,7 @@ nl-NL:
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "# multiple choice correct"
   stats_hoc_2013_heading: 'Ongelooflijke statistieken voor de ''Hour of Code'' van
     vorig jaar. In één week alleen al:'
   stats_hoc_2013_image_alt: Statistieken van de 'Hour of Code' van 2013
@@ -947,12 +967,14 @@ nl-NL:
   course1_name: Cursus 1
   course2_name: Cursus 2
   course3_name: Cursus 3
-  course4_name: Les 4
+  course4_name: Cursus 4
   accelerated_name: versnelde cursus
   20-hour_name: versnelde cursus
+  gumball_name: Gumball
   classicmaze_name: Klassiek doolhof
   iceage_name: Ice Age
   minecraft_name: Minecraft
+  text-compression_name: Tekstcompressie
   applab_name: App Lab
   gamelab_name: Game Lab
   applab_gradelevel: Leeftijd 13+
@@ -1021,6 +1043,8 @@ nl-NL:
   coursee-2018_gradelevel: Leeftijden 8-12
   coursed-2019_gradelevel: Rang 8+
   coursee-2019_gradelevel: Leeftijden 8-12
+  coursed-2020_gradelevel: Rang 8+
+  coursee-2020_gradelevel: Leeftijden 8-12
   accelerated_gradelevel: Leeftijden 10 + (na cursus 3)
   codeorg_platformtext: Moderne browsers, smartphones, tablets
   codeintl_platformtext: Moderne browsers, smartphones, tablets
@@ -1619,6 +1643,7 @@ nl-NL:
   sphero_beyond_longdescription: Of u nu een leerkracht of een ouder bent, SPRK lessen
     geven kinderen een leuke spoedcursus in het programmeren van robots, terwijl vaardigheden
     in wiskunde en wetenschap aangescherpt worden.
+  compatibility_hide_this_warning: Verberg deze waarschuwing
   compatibility_unsupported_browser: Uw browser wordt niet ondersteund. Probeer uw
     browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'>
     een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken,
@@ -1635,11 +1660,13 @@ nl-NL:
   header_project_gallery: Projecten overzicht
   header_sections: Secties
   header_professional_learning: Professioneel Leren
+  header_educate_overview: Leerkracht Overzicht
   header_educate_elementary: Basisschool
   header_educate_middle: Middelbare school
   header_educate_high: Middelbare school
   header_educate_hoc: Uur Code
   header_educate_partner: Partner met ons
+  header_educate_beyond: Achter Code.org
   header_educate_inspire: Inspireer een Student
   header_educate_community: Online gemeenschap
   header_educate_tools: Hulpmiddelen en video's
@@ -1648,6 +1675,7 @@ nl-NL:
   header_about_donors: Sponsors
   header_about_partners: Partners
   header_about_team: Volledig Team
+  header_about_news: Persinfo
   header_about_evaluation: Beoordeling
   header_about_jobs: Vacatures
   header_about_contact: Neem contact met ons op
@@ -1658,7 +1686,10 @@ nl-NL:
   header_help_us: Help ons
   header_about: Over
   header_teacher_community: Lerarengemeenschap
+  header_help_support: Hulp en ondersteuning
   header_report_bug: Rapporteer bugs
+  header_legal_privacy: Privacybeleid
+  header_legal_tos: Gebruiksvoorwaarden
   header_tutorials: Tutorials
   header_documentation: Documentatie
   user_header_label: Hallo %{username}
@@ -1666,22 +1697,35 @@ nl-NL:
   user_header_settings: Mijn account
   user_header_logout: Uitloggen
   user_header_signin: Aanmelden
+  user_header_create: Maak
   user_header_gamelab: Game Lab
   user_header_playlab: Speel Lab
   user_header_dance: Dansfeest
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_project_gallery: Bekijk projecten
   user_header_view_my_projects: Bekijk mijn projecten
   view_all_sections: Bekijk alle onderdelen
   signing_in: Aan Het Inloggen
   reset_student_password: Studenten paswoorden aan het resetten
   syncing_students: Studenten aan het synchroniseren
+  hero_name: 'Minecraft: Heldenreis'
+  applab_tile_subtitle: Maak je eigen app in JavaScript door blokgebaseerd programmeren.
+    Of breng je vaardigheden naar een hoger niveau met tekstgebaseerde programmering.
+    (Alleen in het Engels)
   applab_tile_start_tutorial: Start
   applab_tile_teacher_guide: Lerarenhandleiding bekijken
   aquatic_name: 'Minecraft: Aquatische reis'
   account_sign_up_email_opt_in: Mogen wij u e-mailen met updates over onze cursussen,
     lokale aanbiedingen of ander nieuws op het gebied van informatica?
+  account_sign_up_child_accept_terms: Ik bevestig dat ik toestemming heb van mijn
+    ouder of voogd om the Code.org diensten te gebruiken.
   hoc_overview_dance_title: Dansfeest
+  hoc_overview_dance_subtitle: Codeer een Dance Party om te delen met je vrienden.
+    Met Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara en nog 25 anderen!
+  hoc_overview_dance_2019_subtitle: Codeer een Dance Party om te delen met je vrienden.
+    Met Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, en nog eens 34 anderen!
   hoc_overview_partner_activities_title: Meer activiteiten van onze partners
   hoc_overview_partner_activities_body: De website van Hour of Code heeft meer dan
     100 informatica-activiteiten voor alle leeftijden en ervaringsniveaus, ontwikkeld
@@ -1703,10 +1747,15 @@ nl-NL:
     lessen</a>
   hoc2018_mc_page_title: Minecraft Code Uur handleidingen
   hoc2018_mc_details: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
-  hoc2018_mc_aquatic_description: Minecraft is terug bij Hour of Code met een gloednieuwe
-    activiteit! Gebruik code om door Minecraft te reizen.
-  hoc2018_mc_hero_description: Minecraft is terug bij Hour of Code met een gloednieuwe
-    activiteit! Gebruik code om door Minecraft te reizen.
+  hoc2018_mc_aquatic_announcement: Schrijf je klas in om een van de 150 NIEUWE activiteiten
+    voor de Uur Code (3-9 december) uit te proberen. Neem vooral ook een kijkje in
+    onze nieuwe Minecraft activiteit voor 2018, De Reis Onder Water! Schrijf je klas
+    vandaag nog in.
+  hoc2018_mc_aquatic_title: 'Minecraft: Aquatische reis'
+  hoc2018_mc_aquatic_description: Minecraft is terug bij Uur Code met een gloednieuwe
+    activiteit! Programmeer om door Minecraft te reizen.
+  hoc2018_mc_hero_description: Minecraft is terug bij Uur Code met een gloednieuwe
+    activiteit! Programmeer om door Minecraft te reizen.
   hoc2018_mc_designer_title: Minecraft Ontwerper
   hoc2018_mc_designer_description: Ga dieren en andere Minecraft wezens programmeren
     in je eigen Minecraft omgeving.
@@ -1716,18 +1765,26 @@ nl-NL:
   hoc2018_mc_start: Start
   hoc2018_mc_no_internet: Heeft u geen Internet?
   hoc2018_mc_download_adventurer: Download de offline versie van Minecraft avonturier.
+  hoc2018_mc_educators_box1_title: Programmeren met Minecraft
   hoc2018_mc_educators_box2_button: Downloaden
+  hoc2018_mc_educators_box4_title: Meer Informatica bronnen
+  hoc2018_mc_educators_box4_desc: Meer Infromatica bronnen
+  hoc2018_mc_watch_videos: Bekijk voor je begint deze inspiratie-video's
   hoc2018_mc_video_title_inspire_girl: Inspireer een meisje
   hoc2018_mc_homepage_hoc_coming: De Hour of Code komt eraan...
   hoc2018_mc_homepage_what_create: Wat ga jij creëren?
   hoc2018_mc_homepage_join_us: Doe mee
   hoc2018_mc_homepage_try_it: Probeer het
-  hoc2018_mc_back_journey: Minecraft is terug bij Hour of Code met een gloednieuwe
-    activiteit! Gebruik code om door Minecraft te reizen.
+  hoc2018_mc_back: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
+  hoc2018_mc_back_journey: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
+    Programmeer om door Minecraft te reizen.
   hoc2018_mc_teacher_guide: Lerarenhandleiding bekijken
   hoc2018_mc_minecraft_education: Minecraft Opleiding
   hoc2018_mc_continue_learning: Blijf leren met Minecraft.
   hoc2018_mc_go_to_mc_education: Ga naar de Minecraft Opleiding
+  hoc2018_mc_short_description_shorter: Minecraft is terug met een gloednieuwe activiteit
+    voor het Codeuur!
+  hoc2018_mc_journey: Reis door Minecraft met programmeercode.
   hoc2018_dance_party_main_heading: Dansfeest
   hoc2018_dance_create_your_own_dance_title: Maak je eigen dansfeest
   hoc2018_dance_party_box_title: Dansfeest
@@ -1749,3 +1806,15 @@ nl-NL:
   hoc2018_dance_amazon_scholarship_programs_button: Meld je nu aan
   hoc2018_dance_measure: Maten
   hoc2018_dance_measure_colon: 'Maten:'
+  page_not_found_title: Pagina niet gevonden
+  hoc2018_mc_thank_microsoft: "  We danken Microsoft voor het ondersteunen van onze
+    visie en missie om ervoor te zorgen dat elk kind de kans krijgt om informatica
+    te leren en de vaardigheden om te slagen in de 21e eeuw.  "
+  footer_powered_by_aws: Aangedreven door Amazon webservices
+  codebytes_skinny_banner_english_only: Alleen Engels
+  footer_privacy_policy: Privacybeleid
+  footer_about: Over
+  footer_partners: Partners
+  footer_donate: Doneren
+  footer_support: Help en Gemeenschap
+  footer_terms: Voorwaarden

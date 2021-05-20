@@ -1,49 +1,14 @@
-.field
-  = f.label :ball_direction, 'Ball Direction (in radians)'
-  = f.number_field :ball_direction, step: :any
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/code_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
+= render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
 
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
+= render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
+= render partial: 'levels/editors/fields/bounce_fields', locals: {f: f}
+= render partial: 'levels/editors/fields/grid', locals: {f: f}
 
-.field
-  = f.label :soft_buttons, 'Software Buttons'
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
-  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
-
-.field
-  = f.label :timeout_failiure_tick, 'Timeout Failure Tick'
-  %p How many ticks before the game declares the level failed. Defaults to Infinity.
-  = f.number_field :timeout_failure_tick
-
-.field
-  = f.label :success_condition, "Success Condition"
-  %p condition(s), which if true at any point, indicate user has successfully completed the puzzle
-  %p For both this and failure condition, you can reference several state values, including (but not limited to):
-  %ul
-    %li Bounce.playerScore
-    %li Bounce.opponentScore
-    %li Bounce.ballCount
-    %li Bounce.ballX
-    %li Bounce.ballY
-  = f.text_area :success_condition, rows: 4
-
-.field
-  = f.label :failure_condition, "Failure Condition"
-  %p condition(s), which if true at any point, indicates the puzzle is complete (indicating failure if success condition not met)
-  = f.text_area :failure_condition, rows: 4
-
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'use_flag_goal', description: "Use Flag Goal"}
-
-.field
-  = f.label :theme, 'Theme'
-  %p
-    NOTE that not all themes are compatible with all skins. Specifically, the
-    bounce and basketball skins can only have retro or basketball themes, while
-    the sports skin can have any theme except retro.
-  = f.select :theme, options_for_select(Bounce.themes, @level.theme)
+= render partial: 'levels/editors/fields/sharing', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}

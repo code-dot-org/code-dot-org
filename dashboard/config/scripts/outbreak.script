@@ -1,0 +1,16 @@
+hidden false
+
+lesson_group 'outbreak', display_name: 'Outbreak Simulation'
+lesson 'Virus Simulation for Code Bytes', display_name: 'Coding a Simulation', has_lesson_plan: false
+level 'outbreak_story', progression: 'Welcome to Monster Town'
+level 'outbreak1', progression: 'Creating a Simulation'
+level 'outbreak2', progression: 'Programming with Events'
+level 'outbreak3', progression: 'Stopping the Outbreak with Masks'
+level 'outbreak_story2', progression: 'Learning from Simulations'
+level 'outbreak4', progression: 'More Monsters'
+level 'outbreak5', progression: 'Recovery'
+level 'outbreak6', progression: 'Chance', challenge: true
+level 'outbreak7', progression: 'Vaccines', challenge: true
+level 'outbreak8', progression: 'Share Your Message'
+level 'outbreak_freeplay_choice', progression: 'Free Play'
+

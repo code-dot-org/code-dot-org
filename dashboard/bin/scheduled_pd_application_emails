@@ -1,17 +1,21 @@
 #!/usr/bin/env ruby
 require_relative '../../lib/cdo/only_one'
-exit unless only_one_running?(__FILE__)
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../config/environment'
 
 def queue_pd_reminder_emails
   # For each teacher application, queue up one reminder email if their principal
   # hasn't yet responded.
-  Pd::Application::Teacher1920Application.all.each do |teacher_application|
+  Pd::Application::Teacher2122Application.all.each do |teacher_application|
     if teacher_application.allow_sending_principal_approval_teacher_reminder_email?
       teacher_application.queue_email :principal_approval_teacher_reminder
     end
   end
+
+  # Queue reminder emails for teachers that have been accepted but have not yet
+  # registered for a workshop.
+  Services::RegistrationReminder.queue_registration_reminders!
 end
 
 # First, add PD reminder emails to the queue.

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {studentsShape} from './types';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 
 /**
  * A component for selecting one or more students in a section.
@@ -41,30 +42,50 @@ export default class StudentSelector extends React.Component {
     } else if (this.props.students.length === 0) {
       return <span>{i18n.noStudentsInSection()}</span>;
     }
+    const {students} = this.props;
+    const {selectedStudentIds} = this.state;
+    const exceededMaximum = selectedStudentIds.length >= 4;
 
-    const studentDivs = this.props.students.map(student => {
-      let className = 'student selectable';
-      if (this.state.selectedStudentIds.indexOf(student.id) !== -1) {
-        className = 'student selectable selected';
+    const studentBtns = students.map(student => {
+      let className = 'student selected';
+      let disabled = false;
+      if (selectedStudentIds.indexOf(student.id) === -1) {
+        className = 'student selectable';
+        disabled = exceededMaximum;
       }
+      let buttonStyle = styles.enabled;
+
+      //Adjust styles for disabled and selected buttons
+      if (disabled) {
+        buttonStyle = {...buttonStyle, ...styles.disabled};
+      } else if (className.includes('selected')) {
+        buttonStyle = {...buttonStyle, ...styles.selected};
+      }
+
       return (
-        <div
+        <button
+          type="button"
           key={student.id}
           data-id={student.id}
           className={className}
           onClick={this.handleStudentClicked}
+          style={buttonStyle}
+          disabled={disabled}
         >
           {student.name}
-        </div>
+        </button>
       );
     });
-
     return (
       <div>
-        {studentDivs}
+        {studentBtns}
         <div className="clear" />
-        {this.state.selectedStudentIds.length !== 0 && (
+        {exceededMaximum && (
+          <p style={styles.warning}>{i18n.exceededPairProgrammingMax()}</p>
+        )}
+        {selectedStudentIds.length !== 0 && (
           <button
+            style={styles.buttonLeft}
             type="button"
             onClick={this.handleSubmit}
             className="addPartners"
@@ -76,3 +97,27 @@ export default class StudentSelector extends React.Component {
     );
   }
 }
+
+// see pairing.scss for general button styling
+const styles = {
+  buttonLeft: {
+    marginLeft: 0
+  },
+  enabled: {
+    backgroundColor: 'white',
+    fontSize: '13px'
+  },
+  warning: {
+    color: 'red',
+    fontFamily: "'Gotham 4r', sans-serif",
+    fontSize: '12px',
+    paddingTop: '5px'
+  },
+  disabled: {
+    opacity: 0.5
+  },
+  selected: {
+    backgroundColor: color.cyan,
+    color: 'white'
+  }
+};

@@ -1,0 +1,4045 @@
+{
+  "script": {
+    "name": "coursec-draft",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "has_lesson_plan": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:55 UTC",
+    "seeding_key": {
+      "script.name": "coursec-draft"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Building a Foundation",
+      "name": "Building a Foundation",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Programming in Maze",
+      "name": "Programming in Maze",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Debugging in Maze",
+      "name": "Debugging in Maze",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Real-life Algorithms: Paper Planes",
+      "name": "Real-life Algorithms: Paper Planes",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Real-life Algorithms: Paper Planes",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Programming in Collector",
+      "name": "Programming in Collector",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Programming in Artist",
+      "name": "Programming in Artist",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Loops: Getting Loopy",
+      "name": "Loops: Getting Loopy",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Loops in Maze",
+      "name": "Loops in Maze",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Loops in Harvester",
+      "name": "Loops in Harvester",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Events: The Big Event",
+      "name": "Events: The Big Event",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Build a Flappy Game",
+      "name": "Build a Flappy Game",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Events in Play Lab",
+      "name": "Events in Play Lab",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Screen Out the Mean",
+      "name": "Screen Out the Mean",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Screen Out the Mean",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "Binary Bracelets",
+      "name": "Binary Bracelets",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BuildingAFoundation"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BuildingAFoundation"
+        ],
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "BuildingAFoundation"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_maze"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_maze"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_video_maze"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming2"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming3"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming3"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming4"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming4"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming5"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming5"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming6"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming6"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_programming7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming7"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming7"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming8"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming8"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming8_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming8_predict1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming8_predict1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_programming9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming9"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming9"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_programming_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming_challenge1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming_challenge1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_programming_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_programming_challenge2"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_programming_challenge2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_debugging"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_debugging"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_video_debugging"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging1"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging2"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging3"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging4"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging4"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging5"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging5"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging6"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging6"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging7"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging7"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging8_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging8_predict1"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging8_predict1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging9"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging9"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging_challenge1"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging_challenge1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging_challenge2"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_debugging_challenge2"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PaperPlanes"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PaperPlanes"
+        ],
+        "lesson.key": "Real-life Algorithms: Paper Planes",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "PaperPlanes"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_collector"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_collector"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_video_collector"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_prog1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog1"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_prog2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog2"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_prog3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog3"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog3"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_prog4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog4"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog4"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_prog5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog5"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog5"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_prog6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog6"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog6"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_collector_prog7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog7"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog7"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_prog8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog8"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog8"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_prog9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog9"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog9"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade2_collector_A"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade2_collector_A"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "grade2_collector_A"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "grade2_collector_A_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade2_collector_A_predict1"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "grade2_collector_A_predict1"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade2_collector_10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade2_collector_10"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "grade2_collector_10"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_collector_prog_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog_challenge1"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog_challenge1"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_collector_prog_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog_challenge2"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_prog_challenge2"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_artist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_artist"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_video_artist"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog1"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog1"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog2"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog2"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog3"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog3"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog4"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog4"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog5"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog5"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog6"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog6"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog7"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog7"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog8"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog8"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog6_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog6_predict1"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog6_predict1"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge2"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_artist_prog_challenge2"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GettingLoopy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GettingLoopy"
+        ],
+        "lesson.key": "Loops: Getting Loopy",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "GettingLoopy"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops1"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops1"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_loops"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_loops"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_video_loops"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops2_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops2_predict1"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops2_predict1"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops2"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops2"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops4"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops4"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops5"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops5"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops6"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops6"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops7"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops7"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_loops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops8"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops8"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops9"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops9"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops10"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops10"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops10_predict2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops10_predict2"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops10_predict2"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops11"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops11"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_loops_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_loops_challenge1"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_maze_loops_challenge1"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_collector_loops_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_loops_challenge2"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_collector_loops_challenge2"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops1"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops1"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops2"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops2"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops3"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops3"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops4"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops4"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops6"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops6"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops7"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops7"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops5"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops5"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_harvester_loops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops8"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops8"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops9"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops9"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops10"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops10"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops11"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops11"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops11_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops11_predict1"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops11_predict1"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops_challenge1"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops_challenge1"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_harvester_loops_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_harvester_loops_challenge2"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_harvester_loops_challenge2"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BigEvent"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BigEvent"
+        ],
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "BigEvent"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_1"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_1"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_2"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_2"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_3"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_3"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_4"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_4"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_5"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_5"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_6"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_6"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_7"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_7"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_8"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_8"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_9"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_9"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_11"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "flappy_11"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events1"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events1"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events2"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events2"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events3"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events3"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events4"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events4"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events5"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events5"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events6"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events6"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events7"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events7"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events8"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events8"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_events9"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_events9"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_eventsA"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_eventsA"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_eventsA"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_PlayLab_eventsFP"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_PlayLab_eventsFP"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_PlayLab_eventsFP"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_screenoutthemean"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_screenoutthemean"
+        ],
+        "lesson.key": "Screen Out the Mean",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "courseC_screenoutthemean"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BinaryBracelets"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryBracelets"
+        ],
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      },
+      "level_keys": [
+        "BinaryBracelets"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "BuildingAFoundation",
+        "script_level.level_keys": [
+          "BuildingAFoundation"
+        ],
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_maze",
+        "script_level.level_keys": [
+          "courseC_video_maze"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming1",
+        "script_level.level_keys": [
+          "courseC_maze_programming1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming2",
+        "script_level.level_keys": [
+          "courseC_maze_programming2"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming3",
+        "script_level.level_keys": [
+          "courseC_maze_programming3"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming4",
+        "script_level.level_keys": [
+          "courseC_maze_programming4"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming5",
+        "script_level.level_keys": [
+          "courseC_maze_programming5"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming6",
+        "script_level.level_keys": [
+          "courseC_maze_programming6"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming7",
+        "script_level.level_keys": [
+          "courseC_maze_programming7"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming8",
+        "script_level.level_keys": [
+          "courseC_maze_programming8"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming8_predict1",
+        "script_level.level_keys": [
+          "courseC_maze_programming8_predict1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming9",
+        "script_level.level_keys": [
+          "courseC_maze_programming9"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming_challenge1",
+        "script_level.level_keys": [
+          "courseC_maze_programming_challenge1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_programming_challenge2",
+        "script_level.level_keys": [
+          "courseC_maze_programming_challenge2"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_debugging",
+        "script_level.level_keys": [
+          "courseC_video_debugging"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging1",
+        "script_level.level_keys": [
+          "courseC_maze_debugging1"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging2",
+        "script_level.level_keys": [
+          "courseC_maze_debugging2"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging3",
+        "script_level.level_keys": [
+          "courseC_maze_debugging3"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging4",
+        "script_level.level_keys": [
+          "courseC_maze_debugging4"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging5",
+        "script_level.level_keys": [
+          "courseC_maze_debugging5"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging6",
+        "script_level.level_keys": [
+          "courseC_maze_debugging6"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging7",
+        "script_level.level_keys": [
+          "courseC_maze_debugging7"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging8_predict1",
+        "script_level.level_keys": [
+          "courseC_maze_debugging8_predict1"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging9",
+        "script_level.level_keys": [
+          "courseC_maze_debugging9"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging_challenge1",
+        "script_level.level_keys": [
+          "courseC_maze_debugging_challenge1"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging_challenge2",
+        "script_level.level_keys": [
+          "courseC_maze_debugging_challenge2"
+        ],
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PaperPlanes",
+        "script_level.level_keys": [
+          "PaperPlanes"
+        ],
+        "lesson.key": "Real-life Algorithms: Paper Planes",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_collector",
+        "script_level.level_keys": [
+          "courseC_video_collector"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog1",
+        "script_level.level_keys": [
+          "courseC_collector_prog1"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog2",
+        "script_level.level_keys": [
+          "courseC_collector_prog2"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog3",
+        "script_level.level_keys": [
+          "courseC_collector_prog3"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog4",
+        "script_level.level_keys": [
+          "courseC_collector_prog4"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog5",
+        "script_level.level_keys": [
+          "courseC_collector_prog5"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog6",
+        "script_level.level_keys": [
+          "courseC_collector_prog6"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog7",
+        "script_level.level_keys": [
+          "courseC_collector_prog7"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog8",
+        "script_level.level_keys": [
+          "courseC_collector_prog8"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog9",
+        "script_level.level_keys": [
+          "courseC_collector_prog9"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade2_collector_A",
+        "script_level.level_keys": [
+          "grade2_collector_A"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade2_collector_A_predict1",
+        "script_level.level_keys": [
+          "grade2_collector_A_predict1"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade2_collector_10",
+        "script_level.level_keys": [
+          "grade2_collector_10"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog_challenge1",
+        "script_level.level_keys": [
+          "courseC_collector_prog_challenge1"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog_challenge2",
+        "script_level.level_keys": [
+          "courseC_collector_prog_challenge2"
+        ],
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_artist",
+        "script_level.level_keys": [
+          "courseC_video_artist"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog1",
+        "script_level.level_keys": [
+          "courseC_artist_prog1"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog2",
+        "script_level.level_keys": [
+          "courseC_artist_prog2"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog3",
+        "script_level.level_keys": [
+          "courseC_artist_prog3"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog4",
+        "script_level.level_keys": [
+          "courseC_artist_prog4"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog5",
+        "script_level.level_keys": [
+          "courseC_artist_prog5"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog6",
+        "script_level.level_keys": [
+          "courseC_artist_prog6"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog7",
+        "script_level.level_keys": [
+          "courseC_artist_prog7"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog8",
+        "script_level.level_keys": [
+          "courseC_artist_prog8"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog6_predict1",
+        "script_level.level_keys": [
+          "courseC_artist_prog6_predict1"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog_challenge2",
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge2"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GettingLoopy",
+        "script_level.level_keys": [
+          "GettingLoopy"
+        ],
+        "lesson.key": "Loops: Getting Loopy",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops1",
+        "script_level.level_keys": [
+          "courseC_maze_loops1"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_loops",
+        "script_level.level_keys": [
+          "courseC_video_loops"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops2_predict1",
+        "script_level.level_keys": [
+          "courseC_maze_loops2_predict1"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops2",
+        "script_level.level_keys": [
+          "courseC_maze_loops2"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops4",
+        "script_level.level_keys": [
+          "courseC_maze_loops4"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops5",
+        "script_level.level_keys": [
+          "courseC_maze_loops5"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops6",
+        "script_level.level_keys": [
+          "courseC_maze_loops6"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops7",
+        "script_level.level_keys": [
+          "courseC_maze_loops7"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops8",
+        "script_level.level_keys": [
+          "courseC_maze_loops8"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops9",
+        "script_level.level_keys": [
+          "courseC_maze_loops9"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops10",
+        "script_level.level_keys": [
+          "courseC_maze_loops10"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops10_predict2",
+        "script_level.level_keys": [
+          "courseC_maze_loops10_predict2"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops11",
+        "script_level.level_keys": [
+          "courseC_maze_loops11"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_loops_challenge1",
+        "script_level.level_keys": [
+          "courseC_maze_loops_challenge1"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_loops_challenge2",
+        "script_level.level_keys": [
+          "courseC_collector_loops_challenge2"
+        ],
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops1",
+        "script_level.level_keys": [
+          "courseC_harvester_loops1"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops2",
+        "script_level.level_keys": [
+          "courseC_harvester_loops2"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops3",
+        "script_level.level_keys": [
+          "courseC_harvester_loops3"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops4",
+        "script_level.level_keys": [
+          "courseC_harvester_loops4"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops6",
+        "script_level.level_keys": [
+          "courseC_harvester_loops6"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops7",
+        "script_level.level_keys": [
+          "courseC_harvester_loops7"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops5",
+        "script_level.level_keys": [
+          "courseC_harvester_loops5"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops8",
+        "script_level.level_keys": [
+          "courseC_harvester_loops8"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops9",
+        "script_level.level_keys": [
+          "courseC_harvester_loops9"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops10",
+        "script_level.level_keys": [
+          "courseC_harvester_loops10"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops11",
+        "script_level.level_keys": [
+          "courseC_harvester_loops11"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops11_predict1",
+        "script_level.level_keys": [
+          "courseC_harvester_loops11_predict1"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops_challenge1",
+        "script_level.level_keys": [
+          "courseC_harvester_loops_challenge1"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_harvester_loops_challenge2",
+        "script_level.level_keys": [
+          "courseC_harvester_loops_challenge2"
+        ],
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BigEvent",
+        "script_level.level_keys": [
+          "BigEvent"
+        ],
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_1",
+        "script_level.level_keys": [
+          "flappy_1"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_2",
+        "script_level.level_keys": [
+          "flappy_2"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_3",
+        "script_level.level_keys": [
+          "flappy_3"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_4",
+        "script_level.level_keys": [
+          "flappy_4"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_5",
+        "script_level.level_keys": [
+          "flappy_5"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_6",
+        "script_level.level_keys": [
+          "flappy_6"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_7",
+        "script_level.level_keys": [
+          "flappy_7"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_8",
+        "script_level.level_keys": [
+          "flappy_8"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_9",
+        "script_level.level_keys": [
+          "flappy_9"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_11",
+        "script_level.level_keys": [
+          "flappy_11"
+        ],
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events1",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events1"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events2",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events2"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events3",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events3"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events4",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events4"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events5",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events5"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events6",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events6"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events7",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events7"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events8",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events8"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_events9",
+        "script_level.level_keys": [
+          "courseC_PlayLab_events9"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_eventsA",
+        "script_level.level_keys": [
+          "courseC_PlayLab_eventsA"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_PlayLab_eventsFP",
+        "script_level.level_keys": [
+          "courseC_PlayLab_eventsFP"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_screenoutthemean",
+        "script_level.level_keys": [
+          "courseC_screenoutthemean"
+        ],
+        "lesson.key": "Screen Out the Mean",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BinaryBracelets",
+        "script_level.level_keys": [
+          "BinaryBracelets"
+        ],
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -8,49 +8,13 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
+import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-
-const styles = {
-  scrollable: {
-    overflowY: 'auto',
-    overflowX: 'hidden',
-    maxHeight: '90%'
-  },
-  text: {
-    margin: 10
-  },
-  exclamation: {
-    color: 'red'
-  },
-  dontForget: {
-    display: 'inline',
-    marginLeft: 10,
-    fontSize: 16,
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  sectionHeader: {
-    margin: 10,
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
-  },
-  exampleSolutions: {
-    textAlign: 'center',
-    margin: 5
-  },
-  sectionInfo: {
-    textAlign: 'center',
-    padding: '5px 0px'
-  },
-  teacherDashboardLink: {
-    fontSize: 11
-  }
-};
 
 class TeacherPanel extends React.Component {
   static propTypes = {
@@ -59,7 +23,11 @@ class TeacherPanel extends React.Component {
     sectionData: PropTypes.object,
     scriptName: PropTypes.string,
     // pageType describes the current route the user is on. Used only for logging.
-    pageType: PropTypes.oneOf(['level', 'script_overview', 'stage_extras']),
+    pageType: PropTypes.oneOf([
+      pageTypes.level,
+      pageTypes.scriptOverview,
+      pageTypes.stageExtras
+    ]),
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -148,7 +116,7 @@ class TeacherPanel extends React.Component {
               <SelectedStudentInfo
                 students={students}
                 selectedStudent={currentStudent}
-                level={currentStudentScriptLevel}
+                userLevel={currentStudentScriptLevel}
                 onSelectUser={id => this.onSelectUser(id, 'iterator')}
                 getSelectedUserId={this.props.getSelectedUserId}
               />
@@ -159,11 +127,13 @@ class TeacherPanel extends React.Component {
               <div style={styles.exampleSolutions}>
                 {sectionData.level_examples.map((example, index) => (
                   <Button
+                    __useDeprecatedTag
                     key={index}
                     text={i18n.exampleSolution({number: index + 1})}
                     color="blue"
                     href={example}
                     target="_blank"
+                    rel="noopener noreferrer"
                   />
                 ))}
               </div>
@@ -183,6 +153,7 @@ class TeacherPanel extends React.Component {
                 <a
                   href={teacherDashboardUrl(selectedSection.id)}
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={styles.teacherDashboardLink}
                   onClick={() => this.logToFirehose('select_teacher_dashboard')}
                 >
@@ -221,7 +192,7 @@ class TeacherPanel extends React.Component {
             )}
           {viewAs === ViewType.Teacher && (students || []).length > 0 && (
             <StudentTable
-              levels={currentSectionScriptLevels}
+              userLevels={currentSectionScriptLevels}
               students={students}
               onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}
@@ -234,6 +205,43 @@ class TeacherPanel extends React.Component {
     );
   }
 }
+
+const styles = {
+  scrollable: {
+    overflowY: 'auto',
+    overflowX: 'hidden',
+    maxHeight: '90%'
+  },
+  text: {
+    margin: 10
+  },
+  exclamation: {
+    color: 'red'
+  },
+  dontForget: {
+    display: 'inline',
+    marginLeft: 10,
+    fontSize: 16,
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  sectionHeader: {
+    margin: 10,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  },
+  exampleSolutions: {
+    textAlign: 'center',
+    margin: 5
+  },
+  sectionInfo: {
+    textAlign: 'center',
+    padding: '5px 0px'
+  },
+  teacherDashboardLink: {
+    fontSize: 11
+  }
+};
 
 export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(state => {
@@ -257,7 +265,7 @@ export default connect(state => {
     stageNames[stage.id] = stage.name;
   });
 
-  // Pretend we don't have lockable stages if we're not authorized to see them
+  // Pretend we don't have lockable lessons if we're not authorized to see them
   const scriptHasLockableStages =
     lockableAuthorized && hasLockableStages(state.progress);
 

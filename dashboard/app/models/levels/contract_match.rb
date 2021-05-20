@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -26,12 +26,12 @@
 # Contract Match type.
 class ContractMatch < DSLDefined
   def dsl_default
-    <<ruby
-name 'Enter name here'
-title 'Enter title here'
-content1 'Enter prompt here'
-answer 'Contract Name|Number|Domain1:Number|Domain2:String'
-ruby
+    <<~ruby
+      name 'Enter name here'
+      title 'Enter title here'
+      content1 'Enter prompt here'
+      answer 'Contract Name|Number|Domain1:Number|Domain2:String'
+    ruby
   end
 
   def supports_markdown?

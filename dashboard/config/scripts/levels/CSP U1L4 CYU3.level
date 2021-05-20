@@ -7,7 +7,7 @@
   "properties": {
     "title": "Reflection: Counting in Binary",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "How is counting in binary (base-2) similar to counting in the decimal system (base-10) we use every day? How is it different?",
+    "long_instructions": "How would you explain a number system to someone who had never seen numbers before?",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",
@@ -16,13 +16,13 @@
     "instructions_important": "false",
     "parent_level_id": 18809,
     "name_suffix": "_2018",
-    "encrypted_solution": "+IxiRPZr7x6uE94Ln7bpY45mJtBs8AefaW8be0mtmiO4EBlpDHKiz+HeOHAQ\nmBjwqjQQ8Y49Ow9R1cprZPTMYvuPoRDjh6jX2p9JJVCwb2FbyAtRVamejKFa\nBL1j6PqvBw6a26/o/ptlpt1shSIuXsG7phAWG7uh2hF3XAO83ZnhNIMMetKT\nFiqCEFwnJPYMCER1LX19YZLmNx112X/iZflx3I6+8GYnjOBEh3f7OTxBD9cG\nBaWgQkGDtbSjDfLTxuv4dKVuITsWnt/Qwl0grFzYWHQdLUdc/IhImQs1rNt4\nmmMA/dgu7fOS0ifRLEN21OuqmLBUHqkZWqLsBH/5Q7Mm2b0uZbvhIgW2AoF2\ngEj5R75s1HPDDrA3KGDClnU8a1F57JR23eVRqkd3cngAxnwk9G8q6ZrDQ/lf\nV6Rsd0OFOV/XtFSY5Wq1EQ2V5UZR1Ps5z/sqjbnDOD6gLzt7oDDerC3jhmQH\n7d0O5sWGtseh+FZiStq+OipGkbeOdGc77r7vt630UTkKUxqZ1dyJ+cKPfl7y\nhIxYxj5sJM+HFrA1I8asT33FdJFiQTtRPAFw6aLb+pVwI4RxGSw1EKcZGp5T\nfCkZ2TIqBo/XXiJJDgIELcO8WjtWHy6aSOGAu+WHTiX7J/l6GBc5gXfXoxAJ\nSivmGXVItq5DUj8kiPFHfYdhtWSLSkNt5PdgoEVqfr5TxgG5OCESRhqpH+sm\nlWU17/43w3yvy0n2Ld8Q5FT3pTe4qRNR1SP95UOjk8UiNCaAW3VFd6Jul6k0\nVTv8rsc/jz22nTFV4ZwoEbagHzr2Gb4=\n",
+    "encrypted_solution": "p75+kWoHJ4pGx7MnkEGbHbxhioYUsM1dKJGZHadXAUFC8CweSKn6NQS+/q17\n7NR+0UsIZrSyKBNz18gLa9NbPtfNQGCON285N2Qxx9uz2Jnb7BvwuBiGxWFL\nNlqI9IS/PgfQhugvqmYwPbk6Hnc9O5y9GRqtxXP3b8iJUyvTmQY0v6Uuuapp\narHoTISFK3+Cuf1z+7nHd9pmV7Nwjc9V/iz2DL49mdfD9+5CiB5eukZunEZJ\ntlhHz0qS3CZ7uUVbIBOkOkgm9f2nRwLDJ8JV7chl1S4YUDZJPWtDy0JnSFNF\nJojvJaaHzAo0gEcrPYkpWLeHLqCXGNLn2FLQo9sp0AgP14w3kBXyOPu4TtR5\nS5f303ybLzUZHi1zrdzMgcgqJ+SqjXSUCaJLl1dVrWyiSkuKbF64S66V77mI\n+uPDJN18637my+SXeq2EfJQx8lMbWLwKsINUILJdOVOAD1uoXyzaSytZ63Ry\n8+EaoGgkhYYfhcvEa62S7SPTYkFSWPfN5PhxwkflpUrR2yAi9kyFChksaEAN\nxuefvf2bLkEpLWU=\n",
     "encrypted": "false",
     "optional": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 14:28:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-26 14:30:12 +0000\",\"changed\":[\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-26 14:39:44 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-16 17:19:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 14:28:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-26 14:30:12 +0000\",\"changed\":[\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-26 14:39:44 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-16 17:19:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-11-12 17:48:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

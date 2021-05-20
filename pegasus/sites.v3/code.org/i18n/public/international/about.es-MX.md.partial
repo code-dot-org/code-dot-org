@@ -6,10 +6,8 @@ video_player: true
 
 # Acerca de nosotros
 
-<div class="col-60", style="padding-right:20px;">
-
-Code.org® es una organización sin fines de lucro dedicada a ampliar el acceso a las ciencias de la computación en las escuelas y aumentar la participación de las mujeres y las minorías que no están suficientemente representadas. Nuestra visión es que cada estudiante, en cada escuela, tenga la oportunidad de aprender ciencias de la computación de la misma manera que aprende biología, química o álgebra. Ofrecemos el plan de estudios más utilizado para enseñar ciencias de la computación en escuelas primarias y secundarias, y también organizamos la campaña anual <a href="hourofcode.com">La Hora del Código</a>, en la que participa el 10% de los estudiantes de todo el mundo. Code.org es apoyado por donantes generosos, como Amazon, Facebook, Google, la Fundación Infosys, Microsoft y <a href="/about/donors">muchos más</a>.
-
+<div class="col-60">
+  Code.org® es una organización sin fines de lucro dedicada a ampliar el acceso a las ciencias de la computación en las escuelas y aumentar la participación de las mujeres y las minorías que no están suficientemente representadas. Nuestra visión es que cada estudiante, en cada escuela, tenga la oportunidad de aprender ciencias de la computación de la misma manera que aprende biología, química o álgebra. Ofrecemos el plan de estudios más utilizado para enseñar ciencias de la computación en escuelas primarias y secundarias, y también organizamos la campaña anual <a href="https://hourofcode.com">La Hora del Código</a>, en la que participa el 10% de los estudiantes de todo el mundo. Code.org es apoyado por donantes generosos, como Amazon, Facebook, Google, la Fundación Infosys, Microsoft y <a href="/about/donors">muchos más</a>.
 </div>
 
 [col-40]
@@ -24,34 +22,33 @@ Code.org® es una organización sin fines de lucro dedicada a ampliar el acceso 
 
 <div style="clear:both"></div>
 
-## Historia 
+## Historia
 
 En 2013, los hermanos gemelos Hadi y Ali Partovi lanzaron Code.org a través de un [video que fomentaba las ciencias de la computación](https://www.youtube.com/watch?v=nKIu9yen5nc). Este video se convirtió en el más visto en YouTube durante un día y 15,000 escuelas nos contactaron para solicitar ayuda. Desde entonces, hemos pasado de ser un grupo de voluntarios con mucho entusiasmo a una organización completa por detrás de un movimiento mundial. Creemos que la educación de calidad en ciencias de la computación debe estar disponible para todos los niños, y no solo para unos pocos afortunados.
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
 ## Qué es lo que hacemos
 
-Trabajamos en todo el espectro de la educación: diseñamos [nuestros propios cursos](https://studio.code.org/courses) o nos asociamos con otros, capacitamos a los docentes, nos asociamos con distritos escolares grandes, ayudamos a cambiar las políticas de gobierno, nos expandimos a nivel internacional a través de alianzas e impulsamos un marketing que rompa con los estereotipos. Nuestro trabajo se basa en décadas de esfuerzo, por parte de innumerables organizaciones y personas que han ayudado a establecer, financiar y difundir la enseñanza de las ciencias de la computación. Estamos agradecidos por el incansable trabajo de la comunidad orientada a la enseñanza de ciencias de la computación, y agradecemos a todos los socios y personas que han ampliado nuestro alcance durante estos años.
+Trabajamos en todo el espectro de la educación: diseñamos [nuestros propios cursos](https://studio.code.org/courses) o nos asociamos con otros, capacitamos a docentes, nos asociamos con distritos escolares, ayudamos a cambiar las políticas de gobierno, nos expandimos a nivel internacional a través de alianzas y mercadeo para romper con los estereotipos. Nuestro trabajo se basa en décadas de esfuerzo, por parte de innumerables organizaciones y personas que han ayudado a establecer, financiar y difundir la enseñanza de las ciencias de la computación. Estamos agradecidos por el incansable trabajo de la comunidad orientada a la enseñanza de ciencias de la computación, y agradecemos a todos los socios y personas que han ampliado nuestro alcance durante estos años.
 
-## Alcance internacional de Code.org 
+## Alcance internacional de Code.org
 
-Más del 40% del tráfico de nuestro sitio web proviene de países que no son los Estados Unidos, y ese número sigue creciendo. Con el fin de ampliar el acceso a las ciencias de la computación a nivel mundial, nuestro equipo trabaja de cerca con [más de 100 socios internacionales](/about/partners), para ayudarlos a promover la Hora del Código, abogar por cambios en las políticas y capacitar a los docentes. Nos asociamos con ministerios de educación de todo el mundo y trabajamos con organizaciones internacionales como la Organización para la Cooperación Económica y el Desarrollo, y la Organización Educativa, Científica y Cultural de las Naciones Unidas, para que las ciencias de la computación sean parte del debate educativo internacional.
+Más del 40% del tráfico de nuestro sitio web proviene de países que no son los Estados Unidos, y ese número sigue creciendo. Con el fin de ampliar el acceso a las ciencias de la computación a nivel mundial, nuestro equipo trabaja con [más de 100 socios internacionales](/about/partners), para ayudarlos a promover la Hora del Código, abogar por cambios en políticas públicas y capacitar a docentes. Nos asociamos con ministerios de educación de todo el mundo y trabajamos con organizaciones internacionales como la Organización para la Cooperación Económica y el Desarrollo, y la Organización Educativa, Científica y Cultural de las Naciones Unidas, para que las ciencias de la computación sean parte del debate educativo internacional.
 
-<img alt="Socios internacionales de Code.org" src="/images/international/international_partners.jpg" width="100%">
+<img alt="Socios internacionales de Code.org" src="/images/international/international_partners.jpg" width="100%" />
 
-## Traducción 
+## Traducción
 
-¿Quieres tener un impacto directo en los estudiantes de tu país? ¡Ayúdanos a que el contenido de Code.org esté disponible en tu idioma! Si te ofreces a traducir nuestros tutoriales y lecciones, te unirás a una comunidad de más de 7,000 traductores voluntarios que ayudan a acercar las ciencias de la computación a estudiantes de todo el mundo. Echa un vistazo a nuestra [guía de traducción](/translate) para obtener más información. 
+¿Quieres tener un impacto directo en los estudiantes de tu país? ¡Ayúdanos a que el contenido de Code.org esté disponible en tu idioma! Si te ofreces a traducir nuestros tutoriales y lecciones, te unirás a una comunidad de más de 7,000 traductores voluntarios que ayudan a acercar las ciencias de la computación a estudiantes de todo el mundo. Echa un vistazo a nuestra [guía de traducción](/translate) para obtener más información.
 
-## Nuestro compromiso con un plan de estudios gratuito y la tecnología de código abierto
+## Nuestro compromiso a un plan de estudios gratuito y la tecnología de código abierto
 
-Todos los recursos y tutoriales del plan de estudios serán siempre de uso gratuito y están bajo licencias abiertas de [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/), para que otros actores puedan utilizarlos con fines no comerciales. [Contáctanos](/contact) si estás interesado en contar con la licencia de nuestros materiales para uso comercial. Nuestros cursos se traducen para ser usados en todo el mundo o por personas que hablan diferentes idiomas. Nuestra tecnología es desarrollada como un [proyecto de código abierto](https://github.com/code-dot-org/code-dot-org).
+Todos los recursos y tutoriales del plan de estudios serán siempre de uso gratuito y están bajo licencias abiertas de [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/), para que otros actores puedan utilizarlos con fines no comerciales. [Contáctanos](/contact) si estás interesado en contar con la licencia de nuestros materiales para uso comercial. Nuestros cursos se traducen para ser usados en todo el mundo o por personas que hablan diferentes idiomas. Nuestra tecnología ha sido desarrollada como un [proyecto de código abierto](https://github.com/code-dot-org/code-dot-org).
 
-<img alt="Estudiantes con una computadora portátil" src="/images/international/group_computer.jpg" width="100%">
+<img alt="Estudiantes con una computadora portátil" src="/images/international/group_computer.jpg" width="100%" />
 
 ## Síguenos
 
-[Suscríbete para recibir actualizaciones](/about/hear-from-us) sobre el progreso de las ciencias de la computación desde el jardín de infantes hasta la escuela secundaria y sobre el trabajo de Code.org. También puedes seguir a Code.org en las redes sociales:
+[Suscríbete para recibir actualizaciones](/about/hear-from-us) sobre el progreso de las ciencias de la computación desde el jardín de infantes hasta la escuela secundaria y sobre el trabajo de Code.org. También puedes seguir a Code.org en las redes sociales: También puedes seguir a Code.org en las redes sociales:
 
 {{ social_media_codeorg }}

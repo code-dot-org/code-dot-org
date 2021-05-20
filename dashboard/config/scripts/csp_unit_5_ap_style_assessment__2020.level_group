@@ -1,0 +1,28 @@
+name 'CSP Unit 5 AP-Style Assessment _2020'
+editor_experiment ''
+
+title 'CS Principles Unit 5 Assessment'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_2020'
+level 'csp-u5-exam1-data-abstraction_2020'
+level 'csp-u5-exam1-fill-in-thelist-traversal_2020'
+level 'csp-u5-exam1-change-array-element_2020'
+level 'csp-u5-exam1-array-length-access_2020'
+level 'csp-u5-exam1-modify-list-print_2020'
+
+page
+level 'csp-u5-exam1-while-loop-leap-two_2020'
+level 'csp-u5-exam1-normal-for-loop_2020'
+level 'csp-u5-exam1-gaussian-summation_2020'
+level 'csp-u5-exam1-robot_2020'
+level 'csp-u5-exam1-list-iteration-1_2020'
+
+page
+level 'csp-u5-exam1-list-iteration-2_2020'
+level 'csp-u5-exam1-list-iteration-3_2020'
+level 'csp-u5-exam1-simulation-1_2020'
+level 'csp-u5-exam1-simulation-2_2020'
+level 'csp-u5-exam1-simulation-3_2020'

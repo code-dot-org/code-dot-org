@@ -5,6 +5,7 @@ import color from '../../util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import shapes from './shapes';
 
 const styles = {
   heading: {
@@ -19,13 +20,7 @@ const styles = {
   textItem: {
     backgroundColor: color.teal,
     padding: 25,
-    minHeight: 260,
-    boxSizing: 'border-box'
-  },
-  textItemCyan: {
-    backgroundColor: color.light_cyan,
-    padding: 25,
-    minHeight: 260,
+    minHeight: 281,
     boxSizing: 'border-box'
   },
   subHeading: {
@@ -46,7 +41,8 @@ const styles = {
   },
   image: {
     width: 485,
-    minHeight: 260
+    minHeight: 260,
+    height: 281
   },
   description: {
     paddingRight: 10,
@@ -57,8 +53,7 @@ const styles = {
     color: color.white
   },
   clear: {
-    clear: 'both',
-    marginBottom: 60
+    clear: 'both'
   },
   container: {
     width: '100%',
@@ -73,7 +68,6 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
     imageExtra: PropTypes.node,
-    teacherStyle: PropTypes.bool,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
     subHeadingSmallFont: PropTypes.bool,
@@ -85,7 +79,9 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         target: PropTypes.string,
         id: PropTypes.string
       })
-    )
+    ),
+    backgroundColor: PropTypes.string,
+    marginBottom: PropTypes.string
   };
 
   render() {
@@ -99,10 +95,17 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       subHeading,
       subHeadingSmallFont,
       description,
-      buttons
+      buttons,
+      backgroundColor,
+      marginBottom = '60px'
     } = this.props;
     const float = isRtl ? 'right' : 'left';
     const width = responsiveSize === 'lg' ? '50%' : '100%';
+
+    const textItemCustomBackgroundColor = {
+      ...styles.textItem,
+      backgroundColor: backgroundColor || styles.textItem.backgroundColor
+    };
 
     return (
       <div id={id} style={styles.container}>
@@ -115,11 +118,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
             </div>
           )}
           <div style={{float, width}}>
-            <div
-              style={
-                this.props.teacherStyle ? styles.textItemCyan : styles.textItem
-              }
-            >
+            <div style={textItemCustomBackgroundColor}>
               {subHeading && (
                 <div
                   style={
@@ -135,6 +134,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
               {buttons.map((button, index) => (
                 <span key={index}>
                   <Button
+                    __useDeprecatedTag
                     href={button.url}
                     color={Button.ButtonColor.gray}
                     text={button.text}
@@ -147,7 +147,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
             </div>
           </div>
         </div>
-        <div style={styles.clear} />
+        <div style={{...styles.clear, marginBottom: marginBottom}} />
       </div>
     );
   }
@@ -170,7 +170,7 @@ export class LocalClassActionBlock extends Component {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/misc/beyond-local-map.png'
+          '/shared/images/fill-540x300/misc/beyond-local-map.png'
         )}
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
@@ -191,7 +191,7 @@ export class AdministratorResourcesActionBlock extends Component {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/images/fill-540x289/2015AR/newcsteacherstrained.png'
+          '/images/fill-540x300/2015AR/newcsteacherstrained.png'
         )}
         heading={i18n.administratorResourcesHeading()}
         description={i18n.administratorResourcesDescription()}
@@ -214,51 +214,46 @@ export class AdministratorResourcesActionBlock extends Component {
 
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
-    hocLaunch: PropTypes.string,
-    hasIncompleteApplication: PropTypes.bool
+    announcement: shapes.specialAnnouncement,
+    marginBottom: PropTypes.string
   };
 
+  state = {
+    buttonList: this.createButtonList()
+  };
+
+  createButtonList() {
+    const buttonList = [];
+    const {announcement} = this.props;
+    buttonList.push({
+      id: announcement.buttonId
+        ? announcement.buttonId
+        : 'special-announcement-btn-1',
+      url: announcement.buttonUrl,
+      text: announcement.buttonText
+    });
+    if (announcement.buttonUrl2 && announcement.buttonText2) {
+      buttonList.push({
+        id: announcement.buttonId2
+          ? announcement.buttonId2
+          : 'special-announcement-btn-2',
+        url: announcement.buttonUrl2,
+        text: announcement.buttonText2
+      });
+    }
+    return buttonList;
+  }
+
   render() {
-    return !!this.props.hasIncompleteApplication ? (
+    const {announcement} = this.props;
+    return (
       <TwoColumnActionBlock
-        id="teacher-application-continue-announcement"
-        imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
-        )}
-        subHeading={
-          'Finish your application to the Professional Learning Program'
-        }
-        subHeadingSmallFont={true}
-        description={
-          'We noticed you started your application to the Code.org Professional Learning Program.\
-          Finish your application while seats last!'
-        }
-        buttons={[
-          {
-            id: 'teacher-application-continue-button',
-            url: '/pd/application/teacher',
-            text: 'Finish application'
-          }
-        ]}
-      />
-    ) : (
-      <TwoColumnActionBlock
-        id="teacher-application-announcement"
-        imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-closing-soon.jpg'
-        )}
-        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Deadline()}
-        subHeadingSmallFont={true}
-        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Deadline()}
-        imageExtra={false}
-        teacherStyle={false}
-        buttons={[
-          {
-            id: 'teacher-application-join-button',
-            url: pegasus('/educate/professional-learning'),
-            text: i18n.joinUs()
-          }
-        ]}
+        imageUrl={pegasus(announcement.image)}
+        subHeading={announcement.title}
+        description={announcement.body}
+        buttons={this.state.buttonList}
+        backgroundColor={announcement.backgroundColor}
+        marginBottom={this.props.marginBottom}
       />
     );
   }

@@ -5,78 +5,37 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
-
-const styles = {
-  main: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    width: styleConstants['content-width'],
-    backgroundColor: color.white,
-    marginTop: 25
-  },
-  mainDashed: {
-    borderWidth: 5,
-    borderStyle: 'dashed',
-    borderColor: color.border_gray,
-    boxSizing: 'border-box'
-  },
-  heading: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 20,
-    fontWeight: 'bold',
-    backgroundColor: color.white,
-    color: color.teal
-  },
-  details: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 14,
-    marginTop: 5,
-    color: color.charcoal
-  },
-  wordBox: {
-    width: styleConstants['content-width'] - 475,
-    marginLeft: 25,
-    marginTop: 25,
-    marginBottom: 25,
-    float: 'left',
-    borderWidth: 1,
-    borderColor: 'red'
-  },
-  actionBox: {
-    float: 'right'
-  },
-  inputBox: {
-    float: 'left',
-    marginTop: 27,
-    borderRadius: 0,
-    height: 26,
-    paddingLeft: 25,
-    width: 200
-  },
-  button: {
-    float: 'right',
-    marginTop: 28,
-    marginLeft: 20,
-    marginRight: 25
-  },
-  clear: {
-    clear: 'both'
-  }
-};
+import {connect} from 'react-redux';
 
 const INITIAL_STATE = {
   sectionCode: ''
 };
 
-export default class JoinSection extends React.Component {
+class JoinSection extends React.Component {
   static propTypes = {
     enrolledInASection: PropTypes.bool.isRequired,
     updateSections: PropTypes.func.isRequired,
-    updateSectionsResult: PropTypes.func.isRequired
+    updateSectionsResult: PropTypes.func.isRequired,
+
+    // Provided by Redux
+    isRtl: PropTypes.bool
   };
 
   state = {...INITIAL_STATE};
+
+  fetchCaptchaInfo = () => {
+    $.get({
+      url: '/api/v1/sections/require_captcha',
+      dataType: 'json'
+    }).done(data => {
+      const {key} = data;
+      this.setState({key});
+    });
+  };
+
+  componentDidMount() {
+    this.fetchCaptchaInfo();
+  }
 
   handleChange = event => this.setState({sectionCode: event.target.value});
 
@@ -125,7 +84,10 @@ export default class JoinSection extends React.Component {
   };
 
   render() {
-    const {enrolledInASection} = this.props;
+    const {enrolledInASection, isRtl} = this.props;
+
+    // Adjust styles for RTL
+    const wordBoxStyle = {...styles.wordBox, ...(isRtl && styles.wordBoxRTL)};
 
     return (
       <div
@@ -134,7 +96,7 @@ export default class JoinSection extends React.Component {
           ...(enrolledInASection ? styles.main : styles.mainDashed)
         }}
       >
-        <div style={styles.wordBox}>
+        <div style={wordBoxStyle}>
           <div style={styles.heading}>{i18n.joinASection()}</div>
           <div style={styles.details}>{i18n.joinSectionDescription()}</div>
         </div>
@@ -142,6 +104,7 @@ export default class JoinSection extends React.Component {
           <input
             type="text"
             name="sectionCode"
+            className="ui-test-join-section"
             value={this.state.sectionCode}
             onChange={this.handleChange}
             onKeyUp={this.handleKeyUp}
@@ -149,8 +112,11 @@ export default class JoinSection extends React.Component {
             placeholder={i18n.joinSectionPlaceholder()}
           />
           <Button
+            __useDeprecatedTag
             onClick={this.joinSection}
+            className="ui-test-join-section"
             color={Button.ButtonColor.gray}
+            disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}
             style={styles.button}
           />
@@ -160,3 +126,75 @@ export default class JoinSection extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    display: 'flex',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    width: styleConstants['content-width'],
+    backgroundColor: color.white,
+    marginTop: 25
+  },
+  mainDashed: {
+    borderWidth: 5,
+    borderStyle: 'dashed',
+    borderColor: color.border_gray,
+    boxSizing: 'border-box'
+  },
+  heading: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 20,
+    fontWeight: 'bold',
+    backgroundColor: color.white,
+    color: color.teal
+  },
+  details: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    marginTop: 5,
+    color: color.charcoal
+  },
+  wordBox: {
+    width: styleConstants['content-width'] - 475,
+    flexGrow: 1,
+    marginLeft: 25,
+    marginTop: 25,
+    marginBottom: 25,
+    float: 'left',
+    borderWidth: 1,
+    borderColor: 'red'
+  },
+  wordBoxRTL: {
+    marginLeft: 0,
+    marginRight: 25
+  },
+  actionBox: {
+    float: 'right',
+    display: 'flex'
+  },
+  inputBox: {
+    float: 'left',
+    marginTop: 27,
+    borderRadius: 0,
+    height: 26,
+    paddingLeft: 25,
+    width: 200
+  },
+  button: {
+    float: 'right',
+    marginTop: 28,
+    marginLeft: 20,
+    marginRight: 25
+  },
+  clear: {
+    clear: 'both'
+  }
+};
+
+export const UnconnectedJoinSection = JoinSection;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(JoinSection);

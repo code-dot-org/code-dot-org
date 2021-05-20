@@ -1,0 +1,121 @@
+{
+  "script": {
+    "name": "csp-ca-a",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:57 UTC",
+    "seeding_key": {
+      "script.name": "csp-ca-a"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Commutative Assessment A",
+      "name": "Commutative Assessment A",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Commutative Assessment A",
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Cumulative Assess A"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Cumulative Assess A"
+        ],
+        "lesson.key": "Commutative Assessment A",
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      },
+      "level_keys": [
+        "CSP Cumulative Assess A"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP Cumulative Assess A",
+        "script_level.level_keys": [
+          "CSP Cumulative Assess A"
+        ],
+        "lesson.key": "Commutative Assessment A",
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

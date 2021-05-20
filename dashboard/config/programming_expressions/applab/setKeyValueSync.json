@@ -1,0 +1,14 @@
+{
+  "func": "setKeyValueSync",
+  "category": "Data",
+  "paletteParams": [
+    "key",
+    "value"
+  ],
+  "params": [
+    "\"key\"",
+    "\"value\""
+  ],
+  "nativeIsAsync": true,
+  "noAutocomplete": true
+}

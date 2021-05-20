@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -37,6 +37,8 @@ class Artist < Blockly
     disable_sharing
     solution_image_url
     auto_run
+    validation_enabled
+    enable_download_image
   )
 
   def xml_blocks
@@ -54,6 +56,8 @@ class Artist < Blockly
         user: params[:user],
         game: Game.custom_artist,
         level_num: 'custom',
+        validation_enabled: true,
+        enable_download_image: false
       )
     )
   end

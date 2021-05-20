@@ -1,0 +1,19 @@
+name 'VPL - CSD U5 Chapter 1 Project'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5 - End of Chapter 1 Project
+##Lesson 8: Create A Representation
+
+Unit 5, Chapter 1 ends with Lesson 8 in which students design a structure to represent their perfect day using the binary representation system they learned about.  This is an opportunity for students to show how they engaged in the Problem Solving Process for data and considered the needs of others.
+
+## Project Resources 
+
+**Optional:** Explore the lesson plan and accompanying resources. 
+
+><a href="https://curriculum.code.org/csd-20/unit5/8/" target="blank" rel="noopener noreferrer">Unit 5 Lesson 8: Create a Representation </a>
+
+
+MARKDOWN

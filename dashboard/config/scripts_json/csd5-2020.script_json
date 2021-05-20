@@ -1,0 +1,1940 @@
+{
+  "script": {
+    "name": "csd5-2020",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "curriculum_path": "https://curriculum.code.org/csd-20/unit5/{LESSON}",
+      "project_sharing": true,
+      "curriculum_umbrella": "CSD",
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csd-20/unit5/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csd"
+        ],
+        [
+          "vocabulary",
+          "https://curriculum.code.org/csd-20/unit5/vocab"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csd-20/unit5/standards/"
+        ]
+      ],
+      "hideable_lessons": true,
+      "is_stable": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:41 UTC",
+    "seeding_key": {
+      "script.name": "csd5-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd5_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: Representing Information"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "csd5_2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: Solving Data Problems"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd5-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Representation Matters",
+      "name": "Representation Matters",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Patterns and Representation",
+      "name": "Patterns and Representation",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Patterns and Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "ASCII and Binary Representation",
+      "name": "ASCII and Binary Representation",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "ASCII and Binary Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Representing Images",
+      "name": "Representing Images",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Representing Numbers",
+      "name": "Representing Numbers",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Keeping Data Secret",
+      "name": "Keeping Data Secret",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Combining Representations",
+      "name": "Combining Representations",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Combining Representations",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Project - Create a Representation",
+      "name": "Project - Create a Representation",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Problem Solving and Data",
+      "name": "Problem Solving and Data",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Problem Solving and Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Problem Solving with Big Data",
+      "name": "Problem Solving with Big Data",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Structuring Data",
+      "name": "Structuring Data",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Making Decisions with Data",
+      "name": "Making Decisions with Data",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Decisions with Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Interpreting Data",
+      "name": "Interpreting Data",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Interpreting Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Automating Data Decisions",
+      "name": "Automating Data Decisions",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Automating Data Decisions",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Project - Make a Recommendation",
+      "name": "Project - Make a Recommendation",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "Post-Project Test",
+      "name": "Post-Project Test",
+      "absolute_position": 16,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "key": "CS Discoveries Post Course survey",
+      "name": "CS Discoveries Post Course survey",
+      "absolute_position": 17,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd5-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L01 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L01 autoSFLP_2020"
+        ],
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L01 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L02 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L02 autoSFLP_2020"
+        ],
+        "lesson.key": "Patterns and Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L02 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L03 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L03 autoSFLP_2020"
+        ],
+        "lesson.key": "ASCII and Binary Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L03 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L04 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L04 autoSFLP_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L04 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation_2020"
+        ],
+        "progression": "Representing Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 black white images pixelation_2020"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 2_2020"
+        ],
+        "progression": "Representing Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation 2_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 black white images pixelation 2_2020"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 3_2020"
+        ],
+        "progression": "Representing Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation 3_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 black white images pixelation 3_2020"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 4_2020"
+        ],
+        "progression": "Representing Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation 4_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 black white images pixelation 4_2020"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 5_2020"
+        ],
+        "progression": "Representing Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation 5_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 black white images pixelation 5_2020"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L05 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L05 autoSFLP_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L05 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 binary 1_2020"
+        ],
+        "progression": "Binary Numbers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 binary 1_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 binary 1_2020"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 binary 2_2020"
+        ],
+        "progression": "Binary Numbers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 binary 2_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 binary 2_2020"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 binary 4-new_2020"
+        ],
+        "progression": "Binary Numbers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 binary 4-new_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 binary 4-new_2020"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 binary 5-new_2020"
+        ],
+        "progression": "Binary Numbers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 binary 5-new_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 binary 5-new_2020"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 binary 6-new_2020"
+        ],
+        "progression": "Binary Numbers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 binary 6-new_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 binary 6-new_2020"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 binary 7-new_2020"
+        ],
+        "progression": "Binary Numbers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 binary 7-new_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 binary 7-new_2020"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 binary video_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 binary video_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 binary video_2020"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L06 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L06 autoSFLP_2020"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L06 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Encryption 2_2018_2019_2020"
+        ],
+        "progression": "Keeping Data Secret"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Encryption 2_2018_2019_2020"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 Encryption 2_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Encryption 1_2018_2019_2020"
+        ],
+        "progression": "Keeping Data Secret"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Encryption 1_2018_2019_2020"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 Encryption 1_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L07 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L07 autoSFLP_2020"
+        ],
+        "lesson.key": "Combining Representations",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L07 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 combining rep_2018_2019_2020"
+        ],
+        "progression": "Combining Representations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 combining rep_2018_2019_2020"
+        ],
+        "lesson.key": "Combining Representations",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U3 combining rep_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 student record_2018_2019_2020"
+        ],
+        "progression": "Combining Representations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 student record_2018_2019_2020"
+        ],
+        "lesson.key": "Combining Representations",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 student record_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L08 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L08 autoSFLP_2020"
+        ],
+        "lesson.key": "Project - Create a Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L08 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019_2020"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019_2020"
+        ],
+        "lesson.key": "Project - Create a Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L09 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L09 autoSFLP_2020"
+        ],
+        "lesson.key": "Problem Solving and Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L09 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L10 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L10 autoSFLP_2020"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L10 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Netflix Data Video_2020"
+        ],
+        "progression": "Problem Solving"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Netflix Data Video_2020"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 Netflix Data Video_2020"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video_2020"
+        ],
+        "progression": "Problem Solving"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Waze Data Video_2020"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 Waze Data Video_2020"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video_2020"
+        ],
+        "progression": "Problem Solving"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Amazon Data Video_2020"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 Amazon Data Video_2020"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L11 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L11 autoSFLP_2020"
+        ],
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L11 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 data visualization_2018_2019_2020"
+        ],
+        "progression": "Data Visualization"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 data visualization_2018_2019_2020"
+        ],
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 data visualization_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Pizza_2020"
+        ],
+        "progression": "Data Visualization"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Pizza_2020"
+        ],
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 Pizza_2020"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Pizza 2_2020"
+        ],
+        "progression": "Data Visualization"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Pizza 2_2020"
+        ],
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 Pizza 2_2020"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L12 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L12 autoSFLP_2020"
+        ],
+        "lesson.key": "Making Decisions with Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L12 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L13 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L13 autoSFLP_2020"
+        ],
+        "lesson.key": "Interpreting Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L13 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 crosstab warmup_2018_2019_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 crosstab warmup_2018_2019_2020"
+        ],
+        "lesson.key": "Interpreting Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 crosstab warmup_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L14 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L14 autoSFLP_2020"
+        ],
+        "lesson.key": "Automating Data Decisions",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L14 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5L15 autoSFLP_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L15 autoSFLP_2020"
+        ],
+        "lesson.key": "Project - Make a Recommendation",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5L15 autoSFLP_2020"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd u5 recommender sample_2020"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd u5 recommender sample_2020"
+        ],
+        "lesson.key": "Project - Make a Recommendation",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "csd u5 recommender sample_2020"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019_2020"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019_2020"
+        ],
+        "lesson.key": "Project - Make a Recommendation",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U5 test_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 test_2020"
+        ],
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "CSD U5 test_2020"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-intro-2019_2020"
+        ],
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "csd-post-survey-intro-2019_2020"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2019_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2019_2020"
+        ],
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd5-2020"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup_2019_2020"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L01 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L01 autoSFLP_2020"
+        ],
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L02 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L02 autoSFLP_2020"
+        ],
+        "lesson.key": "Patterns and Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L03 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L03 autoSFLP_2020"
+        ],
+        "lesson.key": "ASCII and Binary Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L04 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L04 autoSFLP_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 black white images pixelation_2020",
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 black white images pixelation 2_2020",
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation 2_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 black white images pixelation 3_2020",
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation 3_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 black white images pixelation 4_2020",
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation 4_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 black white images pixelation 5_2020",
+        "script_level.level_keys": [
+          "CSD U5 black white images pixelation 5_2020"
+        ],
+        "lesson.key": "Representing Images",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L05 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L05 autoSFLP_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 binary 1_2020",
+        "script_level.level_keys": [
+          "CSD U5 binary 1_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 binary 2_2020",
+        "script_level.level_keys": [
+          "CSD U5 binary 2_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 binary 4-new_2020",
+        "script_level.level_keys": [
+          "CSD U5 binary 4-new_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 binary 5-new_2020",
+        "script_level.level_keys": [
+          "CSD U5 binary 5-new_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 binary 6-new_2020",
+        "script_level.level_keys": [
+          "CSD U5 binary 6-new_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 binary 7-new_2020",
+        "script_level.level_keys": [
+          "CSD U5 binary 7-new_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 binary video_2020",
+        "script_level.level_keys": [
+          "CSD U5 binary video_2020"
+        ],
+        "lesson.key": "Representing Numbers",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L06 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L06 autoSFLP_2020"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Encryption 2_2018_2019_2020",
+        "script_level.level_keys": [
+          "CSD U5 Encryption 2_2018_2019_2020"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Encryption 1_2018_2019_2020",
+        "script_level.level_keys": [
+          "CSD U5 Encryption 1_2018_2019_2020"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L07 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L07 autoSFLP_2020"
+        ],
+        "lesson.key": "Combining Representations",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 combining rep_2018_2019_2020",
+        "script_level.level_keys": [
+          "CSD U3 combining rep_2018_2019_2020"
+        ],
+        "lesson.key": "Combining Representations",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 student record_2018_2019_2020",
+        "script_level.level_keys": [
+          "CSD U5 student record_2018_2019_2020"
+        ],
+        "lesson.key": "Combining Representations",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L08 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L08 autoSFLP_2020"
+        ],
+        "lesson.key": "Project - Create a Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019_2020",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019_2020"
+        ],
+        "lesson.key": "Project - Create a Representation",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L09 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L09 autoSFLP_2020"
+        ],
+        "lesson.key": "Problem Solving and Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L10 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L10 autoSFLP_2020"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Netflix Data Video_2020",
+        "script_level.level_keys": [
+          "CSD U5 Netflix Data Video_2020"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Waze Data Video_2020",
+        "script_level.level_keys": [
+          "CSD U5 Waze Data Video_2020"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Amazon Data Video_2020",
+        "script_level.level_keys": [
+          "CSD U5 Amazon Data Video_2020"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L11 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L11 autoSFLP_2020"
+        ],
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 data visualization_2018_2019_2020",
+        "script_level.level_keys": [
+          "CSD U5 data visualization_2018_2019_2020"
+        ],
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Pizza_2020",
+        "script_level.level_keys": [
+          "CSD U5 Pizza_2020"
+        ],
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Pizza 2_2020",
+        "script_level.level_keys": [
+          "CSD U5 Pizza 2_2020"
+        ],
+        "lesson.key": "Structuring Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L12 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L12 autoSFLP_2020"
+        ],
+        "lesson.key": "Making Decisions with Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L13 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L13 autoSFLP_2020"
+        ],
+        "lesson.key": "Interpreting Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 crosstab warmup_2018_2019_2020",
+        "script_level.level_keys": [
+          "CSD U5 crosstab warmup_2018_2019_2020"
+        ],
+        "lesson.key": "Interpreting Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L14 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L14 autoSFLP_2020"
+        ],
+        "lesson.key": "Automating Data Decisions",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L15 autoSFLP_2020",
+        "script_level.level_keys": [
+          "CSD U5L15 autoSFLP_2020"
+        ],
+        "lesson.key": "Project - Make a Recommendation",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd u5 recommender sample_2020",
+        "script_level.level_keys": [
+          "csd u5 recommender sample_2020"
+        ],
+        "lesson.key": "Project - Make a Recommendation",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019_2020",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019_2020"
+        ],
+        "lesson.key": "Project - Make a Recommendation",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 test_2020",
+        "script_level.level_keys": [
+          "CSD U5 test_2020"
+        ],
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-intro-2019_2020",
+        "script_level.level_keys": [
+          "csd-post-survey-intro-2019_2020"
+        ],
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd5-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup_2019_2020",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2019_2020"
+        ],
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd5-2020"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

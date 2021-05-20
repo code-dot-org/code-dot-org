@@ -1,49 +1,48 @@
 professional_learning_course 'CS Principles Support'
-login_required 'true'
+login_required true
 
-stage 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'CSPPD3-u3 Welcome'
 level 'CSPPD3-u3 overview'
 level 'PD check your progress'
 level 'CSPPD3-u3 tips for prep'
 level 'CSPPD3-u2 plan'
 
-stage 'Unit 3 Overview' 
+lesson 'Unit 3 Overview', display_name: 'Unit 3 Overview', has_lesson_plan: false
 level 'CSPPD3-u3 unit 3 overview'
 level 'CSPPD3-u3 breakdown of u3 chunks'
 level 'CSPPD3-u3 unit overview checkin'
 
-stage 'Chunk 1 Overview'
+lesson 'Chunk 1 Overview', display_name: 'Chunk 1 Overview', has_lesson_plan: false
 level 'CSPPD3-u3 chunk 1 concepts'
 level 'CSPPD3-u3 chunk 1 resources'
 level 'CSPPD3-u3 chunk 1 checkin'
 
-stage 'Chunk 2 Overview'
+lesson 'Chunk 2 Overview', display_name: 'Chunk 2 Overview', has_lesson_plan: false
 level 'CSPPD3-u3 chunk 2 concepts'
 level 'CSPPD3-u3 chunk 2 resources'
 level 'CSPPD3-u3 chunk 2 checkin'
 
-stage 'Chunk 3 Overview'
+lesson 'Chunk 3 Overview', display_name: 'Chunk 3 Overview', has_lesson_plan: false
 level 'CSPPD3-u3 chunk 3 concepts'
 level 'CSPPD3-u3 chunk 3 resources'
 level 'CSPPD3-u3 chunk 3 checkin'
 
-stage 'Chunk 4 Overview'
+lesson 'Chunk 4 Overview', display_name: 'Chunk 4 Overview', has_lesson_plan: false
 level 'CSPPD3-u3 chunk 4 concepts'
 level 'CSPPD3-u3 chunk 4 resources'
 level 'CSPPD3-u3 chunk 4 checkin'
 
-stage 'Chunk 5 Overview' 
+lesson 'Chunk 5 Overview', display_name: 'Chunk 5 Overview', has_lesson_plan: false
 level 'CSPPD3-u3 chunk 5 concepts'
 level 'CSPPD3-u3 chunk 5 resources'
 level 'CSPPD3-u3 chunk 5 checkin-b'
 
-
-stage 'Practice Performance Task'
-level ‘CSPPD3-u3 practice PT’
+lesson 'Practice Performance Task', display_name: 'Practice Performance Task', has_lesson_plan: false
+level 'CSPPD3-u3 practice PT'
 level 'CSPPD3-u3 pause and reflect'
 
-stage ‘Challenge Overview’ 
+lesson 'Challenge Overview', display_name: 'Challenge Overview', has_lesson_plan: false
 level 'CSPPD3-u3 challenge overview'
 level 'CSPPD3-u3 what is a challenge'
 level 'CSPPD3-u3 completing the challenge'
@@ -51,15 +50,16 @@ level 'CSPPD3-u3 list of challenges'
 level 'CSPPD3-u2 expectations'
 level 'CSPPD3-u3 pick a challenge'
 
-stage 'Complete the Challenge' 
-level  'CSPPD3-u3 complete the challenge overview'
+lesson 'Complete the Challenge', display_name: 'Complete the Challenge', has_lesson_plan: false
+level 'CSPPD3-u3 complete the challenge overview'
 level 'CSPPD3-u3 do the challenge'
 level 'CSPPD3-u2 create your extension'
 level 'CSPPD3-u2 reflect on challenge'
 
-stage 'Share out and Submit' 
-level  'CSPPD3-u3 share out overview'
+lesson 'Share out and Submit', display_name: 'Share out and Submit', has_lesson_plan: false
+level 'CSPPD3-u3 share out overview'
 level 'CSPPD3-u3 post to forum'
 level 'CSPPD3-u3 submit forum link'
 level 'CSPPD3-u2 final progress check'
 level 'CSPPD3-u3 post survey'
+

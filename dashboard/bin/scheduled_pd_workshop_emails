@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 require_relative '../../lib/cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 require_relative '../config/environment'
 
 def main
   Pd::Workshop.send_automated_emails
 end
 
-main if only_one_running?(__FILE__)
+main

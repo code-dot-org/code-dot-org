@@ -1,11 +1,11 @@
-stage 'App Lab Basics'
+lesson 'App Lab Basics', display_name: 'App Lab Basics', has_lesson_plan: false
 level 'CSD Review: Design Mode, IDs, and Events', named: true
 level 'CSD: Review Events', named: true
 level 'CSD - Getters and Setters', named: true
 level 'CSDU6 - UI and Inputs - setText', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - hide show', progression: 'Using Getters and Setters'
 
-stage 'The Circuit Playground'
+lesson 'The Circuit Playground', display_name: 'The Circuit Playground', has_lesson_plan: false
 level 'Circuit Playground Map: LEDS', named: true
 level 'CSDU6 Circuit Playground Test', progression: 'Using the LED'
 level 'CSDU6 LED basics led.on', progression: 'Using the LED'
@@ -19,7 +19,7 @@ level 'CSDU6 buzzer stop', progression: 'Using the Buzzer'
 level 'CSDU6 buzzer alarm', progression: 'Using the Buzzer'
 level 'Challenge: Buzzer and LED', named: true
 
-stage 'Physical Input'
+lesson 'Physical Input', display_name: 'Physical Input', has_lesson_plan: false
 level 'CSD Map: onBoardEvent', named: true
 level 'CSDU6 - button screen buttonL', progression: 'Board Events'
 level 'CSDU6 - button screen buttonR', progression: 'Board Events'
@@ -32,7 +32,7 @@ level 'CSDU6 - button tug o war right button', progression: 'Tug o War Game'
 level 'CSDU6 - button tug o war left button', progression: 'Tug o War Game'
 level 'CSDU6 - button tug o war challenge', progression: 'Tug o War game', named: true
 
-stage 'Analog Input'
+lesson 'Analog Input', display_name: 'Analog Input', has_lesson_plan: false
 level 'CSDU6 - sensors experiment', named: true
 level 'CSD Map: Board Sensors', named: true
 level 'CSDU6 - sensors sound', progression: 'Using Sensors'
@@ -43,3 +43,4 @@ level 'CSD Map: Polling Events', named: true
 level 'CSDU6 - sensors temp f c', progression: 'Displaying Sensor Values'
 level 'CSDU6 light sensor alarm'
 level 'maker workshop final', named: true
+

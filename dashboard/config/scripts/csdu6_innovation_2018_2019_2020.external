@@ -1,0 +1,73 @@
+name 'CSDU6 Innovation_2018_2019_2020'
+editor_experiment ''
+display_name 'Innovation Research'
+markdown <<MARKDOWN
+# Innovation Research
+
+Choose one of the following topics to look into. You'll want to find information about some of the most recent innovative computing devices related to your category.
+
+## Wearable Technology
+Wearable technology includes any form of computing that is designed to be worn by the user, whether it's embedded into the clothing or worn as an accessory. Many wearables, such as smart pedometers, overlap somewhat with health and safety as the device is both wearable _and_ intended to help improve your personal health.
+
+## Health and Safety
+The broad range topic includes both consumer technology (things that you might use to improve your health or safety) and professional technology (gear that a doctor or other professional might use).
+
+## Agriculture
+Agriculture might not be an obvious topic, but technological innovations have had a huge impact on how we approach farming. This includes incorporating computers into existing farm equipment, using sensors and robotics to monitor crops, and analyzing data to improve efficiency and sustainability.
+
+## Manufacturing
+Advancements in rapid prototyping, industrial robotics, and automation have had a major impact on how goods are produced. Whether it's technology to enable affordable small-scale manufacturing (like 3D printers and laser cutters) or the integration of computers into factory work, there are many interesting areas to research here.
+
+## Art and Design
+The intersection of artistic expression and computing can yield impressive and unexpected results. While you are less likely to find commercially available products related to art and design, you will find a wide variety of homemade creations that use all manners of computing devices in creative and expressive ways.
+
+## Smart Home
+The dream of a house that understands and even anticipates your needs is closer than ever. Whether controlled explicitly through voice commands, or by using sensors to monitor and respond to changing conditions, smart home devices take care of any number of mundane or repetitive tasks around the house.
+
+
+# Research Considerations
+
+As you research devices on your topic, keep the following considerations in mind:
+
+* Focus on hardware based solutions over software programs
+* Focus on recent innovations over old news
+* Follow what interests you
+
+In addition to the recommended sites listed for each topic, consider looking towards the various crowd funding websites (such as Kickstarter and Indiegogo) to see the products that haven't quite made it off the ground yet.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Here are some recommended sites for students to start their research.  Although these sites are generally appropriate for school, the content within them changes frequently, so **we strongly suggest you check each site for inappropriate content before sharing it with students**.
+
+### Wearable Technology
+
+* [Warable.com](https://www.wareable.com/)
+
+### Health and Safety
+
+* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+* [Medstartr](http://www.medstartr.com/)
+
+### Agriculture
+
+* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)
+* [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+### Manufacturing
+
+* [Industry Week](https://www.industryweek.com/technology-and-iiot)
+* [3D Printing](https://3dprinting.com/)
+
+### Art and Design
+
+* [ArtFab](http://artfab.art.cmu.edu/)
+* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+### Smart Home
+
+* [CNet](https://www.cnet.com/smart-home/)
+* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+
+MARKDOWN

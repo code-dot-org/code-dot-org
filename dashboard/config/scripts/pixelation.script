@@ -1,20 +1,20 @@
 hidden false
-has_lesson_plan true
 
-stage 'Black & White Pixelation Tutorial'
+lesson 'Black & White Pixelation Tutorial', display_name: 'Black & White Pixelation Tutorial', has_lesson_plan: false
 level 'Pixelation 4x4 Empty'
 
-stage 'Black & White Pixelation Freeplay'
+lesson 'Black & White Pixelation Freeplay', display_name: 'Black & White Pixelation Freeplay', has_lesson_plan: false
 level 'Pixelation 1'
 
-stage 'Color Pixelation Tutorial'
+lesson 'Color Pixelation Tutorial', display_name: 'Color Pixelation Tutorial', has_lesson_plan: false
 level 'Pixelation - Lesson 15 - Complete 3-bit color'
 level 'Pixelation - Lesson 15 - Color Shades'
 level 'Pixelation - Lesson 15 - Color Shades 4x4'
 
-stage 'Color Pixelation Examples'
+lesson 'Color Pixelation Examples', display_name: 'Color Pixelation Examples', has_lesson_plan: false
 level 'Pixelation Flappy'
 level 'Pixelation Bee'
 
-stage 'Color Pixelation Freeplay'
+lesson 'Color Pixelation Freeplay', display_name: 'Color Pixelation Freeplay', has_lesson_plan: false
 level 'Mixing Colors'
+

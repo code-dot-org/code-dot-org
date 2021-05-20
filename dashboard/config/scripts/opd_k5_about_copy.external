@@ -1,0 +1,35 @@
+name 'OPD-K5 About_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Welcome to 'Teaching Computer Science Fundamentals'
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+## What is this online course for? 
+This online course is intended as an introduction to Code.org's Computer Science Fundamentals curriculum and resources for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding of how to teach Computer Science Fundamentals in your classroom.
+
+## Who is this online course for?
+This online course is designed for **elementary school educators who are interested in teaching Computer Science Fundamentals to their students**. This can range from classroom teachers, to STEM teachers, to librarians, and everyone in between.
+
+If you are a <a href="https://code.org/educate/csd" target="blank" rel="noopener noreferrer">middle school</a> or <a href="https://code.org/educate/csp" target="blank" rel="noopener noreferrer">high school</a> teacher interested in teaching our middle school or high school courses, we recommend you pursue more <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">in-depth, ongoing professional development opportunities</a>.
+
+## Will I learn computer science through this online course?
+While there are opportunities to learn and practice basic coding concepts and see how they are presented to students in the curriculum, it is not meant to be a comprehensive introduction to computer science for adults. At the end of the course, we will provide other resources that can help you go deeper into computer science concepts.
+
+## Do I need to have any experience in order to take this online course?
+No previous experience with coding or computer science education is assumed. 
+
+## How long does this online course take? 
+Completing this online course should take between 4-6 hours.
+
+## Can I change the font size of the text in this course?
+We know that the text on this platform can appear small! 
+
+To make the font size bigger:
+- On Mac, click "Command" and "+"
+- On Windows, click "Control" and "+"
+
+To make the size smaller: 
+- On Mac, click "Command" and "-"
+- On Windows, click "Control" and "-"
+MARKDOWN

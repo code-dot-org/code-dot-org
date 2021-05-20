@@ -1,0 +1,2694 @@
+{
+  "script": {
+    "name": "csp1-support",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "professional_learning_course": "CSP Support",
+      "peer_reviews_to_complete": 4,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:53 UTC",
+    "seeding_key": {
+      "script.name": "csp1-support"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "practice",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Teaching Practices"
+      },
+      "seeding_key": {
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Unit 1 Overview",
+      "name": "Unit 1 Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "AP Preparation and Support",
+      "name": "AP Preparation and Support",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Lessons 2 - 3: Binary Messages",
+      "name": "Lessons 2 - 3: Binary Messages",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Lessons 4 - 6: Encoding and Sending Numbers",
+      "name": "Lessons 4 - 6: Encoding and Sending Numbers",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Lesson 7: Encoding and Sending Text",
+      "name": "Lesson 7: Encoding and Sending Text",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Lesson 9: Internet Addressing",
+      "name": "Lesson 9: Internet Addressing",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+      "name": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Lessons 12 - 13: Abstraction on the Internet",
+      "name": "Lessons 12 - 13: Abstraction on the Internet",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Group Work and Peer Learning",
+      "name": "Group Work and Peer Learning",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Balancing Teachers and Tools",
+      "name": "Balancing Teachers and Tools",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Discovery Learning",
+      "name": "Discovery Learning",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "Measuring Student Learning",
+      "name": "Measuring Student Learning",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What's inside and how is it organized?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What's inside and how is it organized?"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "What's inside and how is it organized?"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Introduction to Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Unit 1"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Introduction to Unit 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Teaching Philosophy and Commentary"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Teaching Philosophy and Commentary"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Unit 1 Teaching Philosophy and Commentary"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Teaching with the Internet Simulator"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teaching with the Internet Simulator"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Teaching with the Internet Simulator"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Practice Performance Tasks in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Practice Performance Tasks in Unit 1"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Practice Performance Tasks in Unit 1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Self-Assessment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Self-Assessment"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Unit 1 Self-Assessment"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Vocab and Concept Review Activity"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Vocab and Concept Review Activity"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Unit 1 Vocab and Concept Review Activity"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AP Test Prep Guidance"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AP Test Prep Guidance"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "AP Test Prep Guidance"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.2 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.2 Overview"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.2 Overview"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Understanding Communication Protocols"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Understanding Communication Protocols"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Understanding Communication Protocols"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.3 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.3 Overview"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.3 Overview"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Binary as an Encoding Scheme"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Binary as an Encoding Scheme"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Binary as an Encoding Scheme"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Binary Messages"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Binary Messages"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Internet Simulator: Sending Binary Messages"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: Wires, Cables, and Wifi"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: Wires, Cables, and Wifi"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "The Internet: Wires, Cables, and Wifi"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lessons 2 - 3: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lessons 2 - 3: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lessons 2 - 3: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.4 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.4 Overview"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.4 Overview"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Why Teach Number Systems?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Why Teach Number Systems?"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Why Teach Number Systems?"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.5 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.5 Overview"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.5 Overview"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.6 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.6 Overview"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.6 Overview"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Sending Numbers: The Big Picture"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Sending Numbers: The Big Picture"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Sending Numbers: The Big Picture"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Numbers"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Numbers"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Internet Simulator: Sending Numbers"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Reflection: Create your Own Number System"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Reflection: Create your Own Number System"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Reflection: Create your Own Number System"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lessons 4 - 6: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lessons 4 - 6: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lessons 4 - 6: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.7 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.7 Overview"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.7 Overview"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is ASCII?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is ASCII?"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "What is ASCII?"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Task: ASCII Representation of your Name"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Task: ASCII Representation of your Name"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Task: ASCII Representation of your Name"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is HTML?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is HTML?"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "What is HTML?"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Text"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Text"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Internet Simulator: Sending Text"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 7: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 7: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 7: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.9 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.9 Overview"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.9 Overview"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Addressing in the Game of Battleship"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Addressing in the Game of Battleship"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Addressing in the Game of Battleship"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Task: Develop a Battleship Protocol"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Task: Develop a Battleship Protocol"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Task: Develop a Battleship Protocol"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Broadcast"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Broadcast"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Internet Simulator: Broadcast"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "The Internet: IP Addresses & DNS"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 9: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 9: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 9: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.10 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.10 Overview"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.10 Overview"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Routers"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Routers"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Internet Simulator: Routers"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.11 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.11 Overview"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.11 Overview"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Packets"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Packets"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Internet Simulator: Packets"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: Packets, Routing, and Reliability"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: Packets, Routing, and Reliability"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "The Internet: Packets, Routing, and Reliability"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lessons 10 - 11: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lessons 10 - 11: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lessons 10 - 11: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.12 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.12 Overview"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.12 Overview"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: DNS"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: DNS"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Internet Simulator: DNS"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "The Internet: IP Addresses & DNS"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson 1.13 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson 1.13 Overview"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lesson 1.13 Overview"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: HTTP and HTML"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: HTTP and HTML"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "The Internet: HTTP and HTML"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lessons 12 - 13: Teaching and Student Support Plan"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lessons 12 - 13: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Lessons 12 - 13: Teaching and Student Support Plan"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Overview: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Group Work and Peer Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Group Work and Peer Learning in Unit 1"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Group Work and Peer Learning in Unit 1"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Collaborative Learning and Group Work: Description and Strategies"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "The Official Peer Instruction Blog"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "the Journal of Peer Learning"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Teaching Practice Plan: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teaching Practice Plan: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Teaching Practice Plan: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Overview: Balancing Teachers and Tools"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Balancing Teacher and Tools in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Balancing Teacher and Tools in Unit 1"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Balancing Teacher and Tools in Unit 1"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Classroom Management Tips for School Computer Labs"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Considerations for the 1-to-1 Classroom"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Teaching Practice Plan: Balancing Teacher and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Teaching Practice Plan: Balancing Teacher and Tools"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Overview: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery Learning in Unit 1"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Discovery Learning in Unit 1"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Discovery learning definition and history"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Discovery learning techniques"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Teaching Practice Plan: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teaching Practice Plan: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Teaching Practice Plan: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Overview: Capturing Student Learning"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Assessing Student Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Assessing Student Learning in Unit 1"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Assessing Student Learning in Unit 1"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "What is the difference between formative and summative assessment?"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Designing Assessment Questions"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Designing Assessment Questions"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Designing Assessment Questions"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Classroom Assessment Techniques"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Teaching Practice Plan: Assessing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Teaching Practice Plan: Assessing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      },
+      "level_keys": [
+        "Teaching Practice Plan: Assessing Student Learning"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "What's inside and how is it organized?",
+        "script_level.level_keys": [
+          "What's inside and how is it organized?"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Unit 1",
+        "script_level.level_keys": [
+          "Introduction to Unit 1"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Teaching Philosophy and Commentary",
+        "script_level.level_keys": [
+          "Unit 1 Teaching Philosophy and Commentary"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teaching with the Internet Simulator",
+        "script_level.level_keys": [
+          "Teaching with the Internet Simulator"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Practice Performance Tasks in Unit 1",
+        "script_level.level_keys": [
+          "Practice Performance Tasks in Unit 1"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Self-Assessment",
+        "script_level.level_keys": [
+          "Unit 1 Self-Assessment"
+        ],
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Vocab and Concept Review Activity",
+        "script_level.level_keys": [
+          "Unit 1 Vocab and Concept Review Activity"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AP Test Prep Guidance",
+        "script_level.level_keys": [
+          "AP Test Prep Guidance"
+        ],
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.2 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.2 Overview"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Understanding Communication Protocols",
+        "script_level.level_keys": [
+          "Understanding Communication Protocols"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.3 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.3 Overview"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Binary as an Encoding Scheme",
+        "script_level.level_keys": [
+          "Binary as an Encoding Scheme"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Sending Binary Messages",
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Binary Messages"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: Wires, Cables, and Wifi",
+        "script_level.level_keys": [
+          "The Internet: Wires, Cables, and Wifi"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lessons 2 - 3: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "Lessons 2 - 3: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.4 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.4 Overview"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Why Teach Number Systems?",
+        "script_level.level_keys": [
+          "Why Teach Number Systems?"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.5 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.5 Overview"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.6 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.6 Overview"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Sending Numbers: The Big Picture",
+        "script_level.level_keys": [
+          "Sending Numbers: The Big Picture"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Sending Numbers",
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Numbers"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Reflection: Create your Own Number System",
+        "script_level.level_keys": [
+          "Reflection: Create your Own Number System"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lessons 4 - 6: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "Lessons 4 - 6: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.7 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.7 Overview"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is ASCII?",
+        "script_level.level_keys": [
+          "What is ASCII?"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Task: ASCII Representation of your Name",
+        "script_level.level_keys": [
+          "Task: ASCII Representation of your Name"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is HTML?",
+        "script_level.level_keys": [
+          "What is HTML?"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Sending Text",
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Text"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 7: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "Lesson 7: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.9 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.9 Overview"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Addressing in the Game of Battleship",
+        "script_level.level_keys": [
+          "Addressing in the Game of Battleship"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Task: Develop a Battleship Protocol",
+        "script_level.level_keys": [
+          "Task: Develop a Battleship Protocol"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Broadcast",
+        "script_level.level_keys": [
+          "Internet Simulator: Broadcast"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: IP Addresses & DNS",
+        "script_level.level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 9: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "Lesson 9: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.10 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.10 Overview"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Routers",
+        "script_level.level_keys": [
+          "Internet Simulator: Routers"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.11 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.11 Overview"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Packets",
+        "script_level.level_keys": [
+          "Internet Simulator: Packets"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: Packets, Routing, and Reliability",
+        "script_level.level_keys": [
+          "The Internet: Packets, Routing, and Reliability"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lessons 10 - 11: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "Lessons 10 - 11: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.12 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.12 Overview"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: DNS",
+        "script_level.level_keys": [
+          "Internet Simulator: DNS"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: IP Addresses & DNS",
+        "script_level.level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson 1.13 Overview",
+        "script_level.level_keys": [
+          "Lesson 1.13 Overview"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: HTTP and HTML",
+        "script_level.level_keys": [
+          "The Internet: HTTP and HTML"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lessons 12 - 13: Teaching and Student Support Plan",
+        "script_level.level_keys": [
+          "Lessons 12 - 13: Teaching and Student Support Plan"
+        ],
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Group Work and Peer Learning in Unit 1",
+        "script_level.level_keys": [
+          "Group Work and Peer Learning in Unit 1"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Collaborative Learning and Group Work: Description and Strategies",
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Official Peer Instruction Blog",
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "the Journal of Peer Learning",
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teaching Practice Plan: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Teaching Practice Plan: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Balancing Teachers and Tools",
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Balancing Teacher and Tools in Unit 1",
+        "script_level.level_keys": [
+          "Balancing Teacher and Tools in Unit 1"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Management Tips for School Computer Labs",
+        "script_level.level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Considerations for the 1-to-1 Classroom",
+        "script_level.level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teaching Practice Plan: Balancing Teacher and Tools",
+        "script_level.level_keys": [
+          "Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Discovery Learning",
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery Learning in Unit 1",
+        "script_level.level_keys": [
+          "Discovery Learning in Unit 1"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning definition and history",
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning techniques",
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teaching Practice Plan: Discovery Learning",
+        "script_level.level_keys": [
+          "Teaching Practice Plan: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Capturing Student Learning",
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Assessing Student Learning in Unit 1",
+        "script_level.level_keys": [
+          "Assessing Student Learning in Unit 1"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is the difference between formative and summative assessment?",
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Designing Assessment Questions",
+        "script_level.level_keys": [
+          "Designing Assessment Questions"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Assessment Techniques",
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Teaching Practice Plan: Assessing Student Learning",
+        "script_level.level_keys": [
+          "Teaching Practice Plan: Assessing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

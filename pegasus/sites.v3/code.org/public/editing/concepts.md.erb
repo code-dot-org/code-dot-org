@@ -1,0 +1,91 @@
+---
+title: Template Concepts
+nav: editing_nav
+theme: responsive
+---
+
+# Template Concepts
+
+## Templating Engines
+
+We support several different templating engines in our web stack. To control what templating engine a given template should be rendered with, you simply have to give your template the correct extension.
+
+Templating Engine | Extension | Documentation
+----------------- | --------- | -------------
+Embedded Ruby     | `.erb`    | https://ruby-doc.org/stdlib-2.7.1/libdoc/erb/rdoc/ERB.html
+HAML              | `.haml`   | http://haml.info/docs.html
+HTML              | `.html`   | https://developer.mozilla.org/en-US/docs/Web/HTML
+Markdown          | `.md`     | https://daringfireball.net/projects/markdown/syntax
+
+All templates are ultimately rendered to HTML, but using a templating language rather than pure HTML can allow you to use programmatic constructs and programming logic in your template, and can sometimes also provide a simplified syntax.
+
+## Multiple Extensions
+
+Sometimes, you might want to combine templating languages. For instance, if you want to take advantage of the simplicity of the Markdown syntax for the majority of your template, but also include some advanced syntax only available in HAML or ERB. In this case, you can simply add multiple extensions to your template file; a template with multiple extension will be rendered with each specified templating engine, in order.
+
+For example, a template named `example.md.erb` will be processed first as an ERB template, then the result of that will be processed as a Markdown template. Do note that this order can be important; the different templating engines have different and occasionally conflicting syntax, so a line in your template that you might expect to get parsed by one templating engine might accidentally get parsed by the other if you aren't careful with your ordering.
+
+## Markdown Content editing process
+Here is a quick overview of the editing process that you should follow. For more information, consult [this documentation](https://docs.google.com/document/d/1MkLDhniu6gcZ_M6AVQZ79uvWE-tEXZ4AzKqWxk326Vo/preview).
+
+This overview assumes you are going to be editing Markdown, as that is the most commonly-used templating engine. The process for editing content in other templating languages should be similar.
+
+1. Make sure you have access to Code.org's Dropbox folders in order to create new or edit existing pages. You can edit your pages using a Markdown preview tool like [Mou](http://25.io/mou/).
+2. Every page needs to have the following metadata at the top of the page
+
+	`---`<br>
+	`title: Your page title`<br>
+	`theme: responsive`<br>
+	`---`<br>
+
+	There are other kinds of metadata that you can include on your page:
+	* If you are on a page that has a few related pages, you'll want a side navigation menu that can be included with `nav: markdown_nav`. You can use a nav that already exists, otherwise you'll need an engineer to create a new nav.
+	* If you don't have a side nav but want a skinnier page layout, you can use both `nav: blank` and `rightbar: blank`
+	* Social media tags for Facebook and Twitter. [See how-to here](/markdown/more).
+	* If you are embedding a YouTube video, you'll need `video_player: true`. [See how to here](/markdown/advanced).
+	* If you are using a Google Chart, you'll need `chart: true`. [See how to here](/markdown/advanced).
+
+3. Review the markdown guides to format your page content. When ready, save to Dropbox and check that your page appears correctly on staging.code.org/your-page.
+4. At the top of the next hour, check the #broken-links Slack channel to see if your page has any broken links.
+5. After 48 hours, check your page on production: code.org/your-page.
+
+## Partials
+
+In addition to the complete templating engine extensions, we also support the extension `.partial`, which you can use to add support for partials in templating engines like Markdown that otherwise wouldn't be able to use them. Simply use the the extension `.partial` in addition to the `.md` extension and you can use the partials syntax to embed other templates. The partials syntax simply requires the name of the template to embed wrapped in curly braces like so:
+
+```
+{{ view_template_name }}
+```
+
+For example, I can include [the testimonials template](https://github.com/code-dot-org/code-dot-org/blob/79a7d591c6f8e06f2458da5abfc8ac635f29cfc0/pegasus/sites.v3/code.org/views/testimonials.haml) like so:
+
+### Code:
+
+```
+{{ testimonials }}
+```
+
+### Result:
+
+<!--
+  Note that I am using the ERB view syntax here rather than the actual partials
+  syntax. This is because the partials syntax is (currently) implemented
+  outside the context of markdown, so the code example above would actually end
+  up including the actual view in the code block, rather than the code example.
+-->
+
+<%= view :testimonials %>
+
+## Advanced Partials
+
+If the view you want to include requires arguments, you can simply create an intermediary view. For example, to use the `about_people` view (which requires a `people` argument) you can create a view `about_team.erb`:
+
+```
+<%%= view :about_people, people: DB[:cdo_team] %>
+```
+
+And then simply include that new view as a partial:
+
+```
+{{ about_team }}
+```

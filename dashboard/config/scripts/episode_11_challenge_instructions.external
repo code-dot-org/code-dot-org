@@ -1,0 +1,30 @@
+name 'Episode 11 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Sprite Lab
+
+**Do This:** Create your own game using functions to check if you've won or to reset the game. Check out the samples below.
+
+![](https://images.code.org/c952c070462a2745d999221e3fe37229-image-1590759851639.gif) ![](https://images.code.org/cebf52616d6f34003c56f8abf74c3ad5-image-1590780945933.gif)
+
+[Snake Snack](https://studio.code.org/projects/spritelab/mZwGO4BdPXn4RkDc21IAnL3FHRs5NPz51NOwumDmHN4/view)
+
+[Cat & Mouse](https://studio.code.org/projects/spritelab/Y_UeL7v8WAYotgvPBT71xyfVMbq6J8zUifpq2e07Ivo)
+
+## App Lab
+
+**Do This:** 
+
+* Create your own scene using the Outdoor Scene library. Add ants & ladybugs! Modify the code and change the colors or sizes of the insects and plants. 
+* Create your own library to share with your friends and family! Make your own functions and share them using the new library tool. 
+
+*Reminder: Look under "Advanced Options" in the share menu to share your library!*
+
+
+![](https://images.code.org/c031a3cfbac28746d42469eaf7a5748f-image-1590783071689.gif)
+MARKDOWN

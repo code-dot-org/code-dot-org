@@ -16,7 +16,7 @@
   margin: 5px 0px;
   background-color: white;
   border-color: white;
-  color: #4d575f;
+  color: black;
 }
 
 .ctabutton-white-inverse {
@@ -83,49 +83,148 @@ a.category-link {
   border-radius: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
+  background-color: white;
+}
+
+.announcements-body {
+  background-color: #5c3f7f;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  max-width: 30%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.banner-box {
+  display: table;
+  width: 100%;
+  max-height: 400px;
+}
+
+.banner-image-box {
+  display: table-cell;
+  float: none;
+  width: 50%;
+  height: auto;
+  background-color: #e0ffff;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.banner-message-box {
+  display: table-cell;
+  float: none;
+  width: 50%;
+  height: auto;
+  background-color: #00adbc;
+  text-align: left;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+.banner-title {
+  font-family: 'Gotham 7r', sans-serif;
+  color: white;
+  line-height: 1.2;
+}
+
+.banner-message {
+  color: white;
+  line-height: 1.2;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
+  .announcements-body {
+    min-width: 100%;
+  }
+
   .robotics-provider {
     max-width: 45%;
   }
 
-  .front-header-banner h4 {
-    font-size: 40px;
+  .front-header-banner .front-header-title p {
+    font-size: 34px;
+    line-height: 34px;
   }
 
   .front-header-description {
     font-size: 16px;
     line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  .banner-title {
+    font-size: 16px;
+  }
+
+  .banner-message {
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
-  .robotics-provider {
-    max-width: 30%;
+  .announcements-body {
+    min-width: 100%;
   }
 
-  .front-header-banner h4 {
-    font-size: 60px;
+  .robotics-provider {
+    max-width: 40%;
+  }
+
+  .front-header-banner .front-header-title p {
+    font-size: 44px;
+    line-height: 44px;
   }
 
   .front-header-description {
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 80px;
+  }
+
+  .banner-title {
+    font-size: 20px;
+  }
+
+  .banner-message {
+    font-size: 18px;
   }
 }
 
 @media screen and (min-width: 1201px) {
-  .robotics-provider {
-    max-width: 15%;
+  .announcements-body {
+    min-width: 100%;
   }
 
-  .front-header-banner h4 {
-    font-size: 80px;
+  .robotics-provider {
+    width: 22%;
+  }
+
+  .front-header-banner .front-header-title p {
+    font-size: 44px;
+    line-height: 44px;
   }
 
   .front-header-description {
     font-size: 24px;
+    margin-bottom: 80px;
+  }
+
+  .banner-title {
+    font-size: 24px;
+  }
+
+  .banner-message {
+    font-size: 20px;
+    line-height: 1.5
   }
 }
 
@@ -149,7 +248,6 @@ a.category-link {
   color: white;
   border-radius: 5px;
   padding: 10px;
-  text-shadow: 0px 0px 4px rgba(31, 31, 31, 1.0);
   text-align: center;
 }
 
@@ -158,7 +256,19 @@ a.category-link {
   margin-top: 0px;
 }
 
+.front-header-banner .front-header-title {
+  color: #00ADBC;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.front-header-banner .front-header-title p {
+  font-family: 'Gotham 5r', sans-serif !important;
+  margin-bottom: 0px;
+}
+
 .front-header-description {
+  color: #4d575f;
   max-width: 800px;
   display: inline-block;
 }

@@ -1,36 +1,36 @@
-stage 'Events'
+lesson 'Events', display_name: 'Events', has_lesson_plan: false, unplugged: true
 level 'BigEvent'
 level '2-3 Big Event Match 1', assessment: true
 
-stage 'Loops'
+lesson 'Loops', display_name: 'Loops', has_lesson_plan: false, unplugged: true
 level 'GettingLoopy'
 level '2-3 Getting Loopy Multi 1', assessment: true
 
-stage 'Nested Loops'
+lesson 'Nested Loops', display_name: 'Nested Loops', has_lesson_plan: false
 level 'comingSoon'
 
-stage 'Conditionals'
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false, unplugged: true
 level 'Conditionals'
 level '2-3 Conditionals Multi 1', assessment: true
 
-stage 'While Loops'
+lesson 'While Loops', display_name: 'While Loops', has_lesson_plan: false
 level 'comingSoon'
 
-stage 'Functions'
+lesson 'Functions', display_name: 'Functions', has_lesson_plan: false, unplugged: true
 level 'SongwritingParameters'
 level '4-5 Songwriting Multi 1', assessment: true
 
-stage 'Variables'
+lesson 'Variables', display_name: 'Variables', has_lesson_plan: false, unplugged: true
 level 'EnvelopeVariables'
 level 'MadGlibs'
 
-stage 'For Loops'
+lesson 'For Loops', display_name: 'For Loops', has_lesson_plan: false, unplugged: true
 level 'ForLoopFun'
 level 'grade5_bee_for_loops3'
 level 'grade5_bee_for_loops5'
 level 'grade5_bee_for_loops9'
 
-stage 'Functions with Parameters'
+lesson 'Functions with Parameters', display_name: 'Functions with Parameters', has_lesson_plan: false, unplugged: true
 level 'SongwritingWithParameters'
 level 'grade5_artist_parameters_triangles3'
 level 'grade5_artist_parameters_squares2'
@@ -38,7 +38,7 @@ level 'grade5_artist_functionparameters8'
 level 'grade5_playlab_variables12'
 level 'grade5_artist_functionparameters11'
 
-stage 'Binary'
+lesson 'Binary', display_name: 'Binary', has_lesson_plan: false, unplugged: true
 level 'BinaryBracelets'
 level '2-3 Binary Match 1', assessment: true
 level 'BinaryImages'
@@ -48,3 +48,4 @@ level 'grade5_artist_binary4'
 level 'grade5_artist_binary8'
 level 'grade5_artist_binary9'
 level 'grade5_artist_binary11'
+

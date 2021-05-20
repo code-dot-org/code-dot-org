@@ -1,0 +1,228 @@
+{
+  "script": {
+    "name": "csp3-a",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSP"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:07 UTC",
+    "seeding_key": {
+      "script.name": "csp3-a"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp3_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: Programming Languages and Algorithms"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CSP3A: Using Simple Commands",
+      "name": "CSP3A: Using Simple Commands",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "subgoal v2 U3L04 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "subgoal v2 U3L04 Student Lesson Introduction"
+        ],
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      },
+      "level_keys": [
+        "subgoal v2 U3L04 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "subgoal U3L2 Using Simple Commands"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "subgoal U3L2 Using Simple Commands"
+        ],
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      },
+      "level_keys": [
+        "subgoal U3L2 Using Simple Commands"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "subgoal U3 L4 introducing subgoal labels"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "subgoal U3 L4 introducing subgoal labels"
+        ],
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      },
+      "level_keys": [
+        "subgoal U3 L4 introducing subgoal labels"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "subgoalU3L2_TurtleSquare_right"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "subgoalU3L2_TurtleSquare_right"
+        ],
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      },
+      "level_keys": [
+        "subgoalU3L2_TurtleSquare_right"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "subgoal v2 U3L04 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "subgoal v2 U3L04 Student Lesson Introduction"
+        ],
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "subgoal U3L2 Using Simple Commands",
+        "script_level.level_keys": [
+          "subgoal U3L2 Using Simple Commands"
+        ],
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "subgoal U3 L4 introducing subgoal labels",
+        "script_level.level_keys": [
+          "subgoal U3 L4 introducing subgoal labels"
+        ],
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "subgoalU3L2_TurtleSquare_right",
+        "script_level.level_keys": [
+          "subgoalU3L2_TurtleSquare_right"
+        ],
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

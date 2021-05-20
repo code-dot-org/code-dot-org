@@ -5,6 +5,7 @@ import {getStore} from './redux';
 import {setAwaitingContainedResponse} from './redux/runState';
 import locale from '@cdo/locale';
 import $ from 'jquery';
+import queryString from 'query-string';
 
 const PostState = {
   None: 'None',
@@ -64,9 +65,23 @@ export function postContainedLevelAttempt({
     return;
   }
 
+  const isTeacher = getStore().getState().currentUser?.userType === 'teacher';
+  if (isTeacher) {
+    if (!!queryString.parse(window.location.search).user_id) {
+      // if we have a user_id in the search params, we are a viewing student
+      // work and should not post a milestone.
+      return;
+    }
+  }
+
   // Track the fact that we're currently submitting
   postState = PostState.Started;
 
+  /**
+   * Get report info for our contained level. *Note:* If we are currently editing blocks,
+   * some of the report info will be overwritten in onAttempt() in order to allow levelbuilders
+   * to update blocks (rather than submit the contained level).
+   */
   const reportInfo = getContainedLevelResultInfo();
   onAttempt({
     ...reportInfo,

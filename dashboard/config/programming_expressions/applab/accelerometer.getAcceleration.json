@@ -1,0 +1,19 @@
+{
+  "func": "accelerometer.getAcceleration",
+  "category": "Circuit",
+  "type": "value",
+  "paletteParams": [
+    "orientationType"
+  ],
+  "params": [
+    "\"x\""
+  ],
+  "dropdown": {
+    "0": [
+      "\"x\"",
+      "\"y\"",
+      "\"z\"",
+      "\"total\""
+    ]
+  }
+}

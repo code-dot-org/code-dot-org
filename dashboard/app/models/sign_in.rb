@@ -13,5 +13,6 @@
 #  index_sign_ins_on_user_id     (user_id)
 #
 
-class SignIn < ActiveRecord::Base
+class SignIn < ApplicationRecord
+  belongs_to :user
 end

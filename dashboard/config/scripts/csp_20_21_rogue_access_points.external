@@ -1,0 +1,28 @@
+name 'CSP 20-21 Rogue Access Points'
+title 'That was easy, what\'s next?'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+#Malware
+
+## Vocabulary
+
+**Malware:** software intended to damage a computing system or to take partial control over its operation
+
+## Visual
+
+![](https://images.code.org/572e6ee1865383b56909922ef9bd05e1-image-1573056059237.jpg)
+[https://www.sitelock.com/blog/types-of-malware/](https://www.sitelock.com/blog/types-of-malware/)
+
+## Videos
+
+[What is Malware?](https://www.youtube.com/watch?v=AfZxUK9U3hE_)
+
+[Malware - Security Awareness](https://www.youtube.com/watch?v=pbG0JGY2U00)
+
+## Articles
+
+[What is Malware? How Malware Works & How to Remove It](https://www.avg.com/en/signal/what-is-malware)
+
+
+MARKDOWN

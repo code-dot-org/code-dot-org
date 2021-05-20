@@ -42,6 +42,11 @@ const announcement = {
   dismissible: false
 };
 
+const firehoseAnalyticsData = {
+  user_id: 1,
+  important_data_point: 2
+};
+
 export default storybook => {
   return storybook
     .storiesOf('Notification', module)
@@ -156,7 +161,8 @@ export default storybook => {
             buttonText="Learn more"
             buttonLink="/"
             newWindow={true}
-            analyticId="sample_announcement"
+            firehoseAnalyticsData={firehoseAnalyticsData}
+            googleAnalyticsId="sample_announcement"
           />
         )
       },

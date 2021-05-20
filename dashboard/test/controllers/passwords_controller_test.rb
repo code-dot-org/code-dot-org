@@ -44,6 +44,20 @@ class PasswordsControllerTest < ActionController::TestCase
     assert flash[:notice].include? 'http://test.host/users/password/edit?reset_password_token='
   end
 
+  test "create with multiple associated accounts includes link for admin" do
+    sign_in create(:admin)
+
+    user1 = create :student, email: 'student1@email.com', parent_email: 'parent@email.com'
+    user2 = create :student, email: 'student2@email.com', parent_email: 'parent@email.com'
+    post :create, params: {user: {email: 'parent@email.com'}}
+
+    assert_redirected_to '/users/password/new'
+
+    assert flash[:notice].include? 'Reset password link sent to user. You may also send the link directly:'
+    assert flash[:notice].include? "#{user1.username}: <a href='http://test.host/users/password/edit?reset_password_token="
+    assert flash[:notice].include? "#{user2.username}: <a href='http://test.host/users/password/edit?reset_password_token="
+  end
+
   test "create with valid email that doesn't exist says it doesn't work" do
     post :create, params: {user: {email: 'asdasda@asdasd.asda'}}
 

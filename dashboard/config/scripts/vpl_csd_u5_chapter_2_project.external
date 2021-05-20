@@ -1,0 +1,18 @@
+name 'VPL - CSD U5 Chapter 2 Project'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5 - End of Chapter 2 Project
+
+## Lesson 15: Project - Make a Recommendation
+
+Unit 5, Chapter 2 concludes with a multi-day project in which students design a recommendation engine.  They collect, analyze, and interpret data, as well as engage in peer review before presenting their projects to the class.
+
+## Project Resources 
+
+**Optional:** Explore the project lesson plan and accompanying resources. 
+
+><a href="https://curriculum.code.org/csd-20/unit5/15/" target="blank" rel="noopener noreferrer">Unit 5 Lesson 15: Project - App Presentation - Lesson Plan</a>
+MARKDOWN

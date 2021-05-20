@@ -1,0 +1,11 @@
+{
+  "func": "mirrorY",
+  "category": "Sprites",
+  "paletteParams": [
+    "dir"
+  ],
+  "params": [
+    "-1"
+  ],
+  "modeOptionName": "*.mirrorY"
+}

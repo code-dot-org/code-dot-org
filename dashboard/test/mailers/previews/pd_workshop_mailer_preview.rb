@@ -30,6 +30,24 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
   end
 
+  def teacher_enrollment_receipt__csd_summer_workshop_virtual
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_receipt__csp_summer_workshop_virtual
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
   def teacher_enrollment_receipt__csp_1
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
   end
@@ -40,6 +58,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def teacher_enrollment_receipt__admin
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
+  end
+
+  def teacher_enrollment_receipt__csp_for_returning_teachers
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
   end
 
   def teacher_enrollment_receipt__formatted_notes
@@ -94,6 +116,86 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
       options: {days_before: 3}
   end
 
+  def teacher_enrollment_reminder__csf_intro_10_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csf_intro_3_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csf_deepdive_10_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csf_deepdive_3_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csd_summer_workshop_10_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csd_summer_workshop_3_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop_10_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop_3_day_virtual
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
   def teacher_enrollment_reminder__csp_1_10_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
       options: {days_before: 10}
@@ -131,6 +233,49 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
   end
 
+  def teacher_enrollment_receipt__facilitator
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_FACILITATOR
+  end
+
+  def teacher_enrollment_reminder__facilitator
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_FACILITATOR,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csp_for_returning_teachers_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csp_for_returning_teachers_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+      options: {days_before: 3}
+  end
+
+  def teacher_follow_up__csf_intro_with_rp
+    facilitator1 = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
+    facilitator2 = build :facilitator, name: 'Fred Facilitator', email: 'fred_facilitator@example.net'
+
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+    regional_partner.assign_attributes contact_name: 'Patty Partner', contact_email: 'patty@we_teach_code.ex.net'
+    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      workshop_params: {
+        facilitators: [facilitator1, facilitator2],
+        regional_partner: regional_partner
+      }
+  end
+
+  def teacher_follow_up__csf_intro_three_facilitators
+    facilitator1 = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
+    facilitator2 = build :facilitator, name: 'Fred Facilitator', email: 'fred_facilitator@example.net'
+    facilitator3 = build :facilitator, name: 'Frannie Facilitator', email: 'frannie_facilitator@example.net'
+
+    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      workshop_params: {
+        facilitators: [facilitator1, facilitator2, facilitator3]
+      }
+  end
+
   def teacher_follow_up__csf_intro
     mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
   end
@@ -149,6 +294,48 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def facilitator_enrollment_reminder
     mail :facilitator_enrollment_reminder, target: :facilitator
+  end
+
+  def facilitator_pre_workshop_csp
+    mail :facilitator_pre_workshop,
+      Pd::Workshop::COURSE_CSP,
+      Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      target: :facilitator
+  end
+
+  def facilitator_pre_workshop_csd
+    mail :facilitator_pre_workshop,
+      Pd::Workshop::COURSE_CSD,
+      Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
+      target: :facilitator
+  end
+
+  def facilitator_post_workshop_csp_summer
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+
+    mail :facilitator_post_workshop,
+      Pd::Workshop::COURSE_CSP,
+      Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      target: :facilitator,
+      workshop_params: {
+        regional_partner: regional_partner,
+        num_sessions: 5
+      }
+  end
+
+  def facilitator_post_workshop_no_rp_csd_workshop_1
+    # the way we set up workshops for mailers means they won't have an id.
+    # We want to test that this mailer can extract the workshop id correctly--find
+    # an unused id and assign it to this workshop.
+    highest_workshop_id = Pd::Workshop.last&.id || 0
+    mail :facilitator_post_workshop,
+      Pd::Workshop::COURSE_CSD,
+      Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
+      target: :facilitator,
+      workshop_params: {
+        num_sessions: 1,
+        id: highest_workshop_id + 5
+      }
   end
 
   # The teacher_cancel_receipt has a variation for CSF. It's the same for all other courses.
@@ -205,12 +392,23 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_TEACHER_CON
   end
 
-  def exit_survey__csp_1
-    mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+  # Commenting these out while we are not sending
+  # post-workshop surveys for Academic Year Workshops
+  # def exit_survey__csp_1
+  #   mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+  # end
+  #
+  # def exit_survey__csd_1
+  #   mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+  # end
+
+  def exit_survey__csp_for_returning_teachers
+    mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
   end
 
-  def exit_survey__csd_1
-    mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+  def exit_survey__csf_pre_foorm
+    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      workshop_params: {sessions_from: Date.new(2020, 5, 4)}
   end
 
   private

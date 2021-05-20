@@ -1,12 +1,14 @@
-hidden false
-
-stage 'Sequencing with Scrat', flex_category: 'csf_sequencing'
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
+lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat', has_lesson_plan: false
 level 'courseAB_video_NewIntro_2019'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:6'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:10'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12'
 level 'courseB_Scrat_ramp1_2019'
 level 'courseB_Scrat_ramp2_2019'
@@ -15,7 +17,7 @@ level 'courseB_Scrat_ramp3b_2019'
 level 'courseB_Scrat_ramp4a_2019'
 level 'courseB_Scrat_ramp5a_2019'
 
-stage 'Programming in Maze', flex_category: 'csf_sequencing'
+lesson 'Programming in Maze', display_name: 'Programming in Maze', has_lesson_plan: false
 level 'elementary_video_pairProgramming_2019'
 level 'courseA_maze_seq1_2019'
 level 'courseA_maze_seq5_2019'
@@ -29,7 +31,7 @@ level 'courseA_maze_seq13_2019'
 bonus 'courseA_maze_seq_challenge1_2019'
 bonus 'courseA_maze_seq_challenge2_2019'
 
-stage 'Programming with Rey and BB-8', flex_category: 'csf_sequencing'
+lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8', has_lesson_plan: false
 level 'bb8_skinOverview_K-1_video_2019'
 level 'courseB_starWars_prog1_2019'
 level 'courseB_starWars_prog2_2019'
@@ -43,7 +45,8 @@ level 'courseB_starWars_prog9_2019'
 level 'courseB_starWars_prog10_2019'
 level 'courseB_starWars_prog11_2019'
 
-stage 'Loops in Ice Age', flex_category: 'csf_loops'
+lesson_group 'csf_loops', display_name: 'Loops'
+lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age', has_lesson_plan: false
 level 'courseB_iceage_loops_video_2019'
 level 'courseB_iceage_loops1_2019'
 level 'courseB_iceage_loops2_2019'
@@ -57,7 +60,7 @@ level 'courseB_iceage_loops10_2019', challenge: true
 level 'courseB_iceage_loops11_2019'
 level 'courseB_iceage_loops12_2019'
 
-stage 'Ocean Scene with Loops', flex_category: 'csf_loops'
+lesson 'Ocean Scene with Loops', display_name: 'Ocean Scene with Loops', has_lesson_plan: false
 level 'courseB_video_ArtistIntro_2019'
 level 'courseA_artist_loops2_2019'
 level 'courseA_artist_loops3_2019'
@@ -74,15 +77,17 @@ level 'courseA_artist_loops12_2019'
 bonus 'courseA_artist_loops_challenge2a_2019'
 bonus 'courseA_artist_loops_challenge1_2019'
 
-stage 'Tell a Story in Play Lab', flex_category: 'csf_events'
+lesson_group 'csf_events', display_name: 'Events'
+lesson 'Tell a Story in Play Lab', display_name: 'Tell a Story in Play Lab', has_lesson_plan: false
 level 'courseA_video_events_2019'
+level 'courseA_playLab_events1_2019'
 level 'courseA_playLab_events2_2019'
 level 'courseA_playLab_events3_2019'
 level 'courseA_playLab_events4_2019'
 level 'courseA_playLab_events5_2019'
-level 'courseA_playLab_events6_2019'
-level 'courseA_playLab_events7_2019'
-level 'courseB_playlab_events5_2019'
-level 'courseB_playLab_events1_2019'
+level 'courseB_playlab_events6_2019'
+level 'courseB_playlab_events7_2019'
+level 'courseB_playlab_eventsFP_2019'
 bonus 'courseA_playlab_events_challenge2_2019'
 bonus 'courseA_playlab_events_challenge1_2019'
+

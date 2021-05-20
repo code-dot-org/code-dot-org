@@ -14,7 +14,7 @@ end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Game ?Lab test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/stage/#{GAMELAB_ALLTHETHINGS_STAGE}/puzzle/#{level_index}"
+    And I am on "http://studio.code.org/s/allthethings/lessons/#{GAMELAB_ALLTHETHINGS_STAGE}/levels/#{level_index}"
     And I rotate to landscape
     And I wait for the page to fully load
   STEPS
@@ -57,11 +57,13 @@ Then /^I select a blank animation$/ do
 end
 
 Then /^I select the animal category of the animation library$/ do
-  @browser.execute_script("$(\"img[src*='/category_animals.png']\")[0].click();")
+  wait_until {@browser.execute_script("return $(\"img[src*='/category_animals.png']\").length != 0;")}
+  @browser.execute_script("$(\"img[src*='/category_animals.png']\")[1].click();")
 end
 
-Then /^I select the bear animation from the animal category$/ do
-  @browser.execute_script("$(\"img[style*='/category_animals/bear.png']\")[0].click();")
+Then /^I select the bear animal head animation from the animal category$/ do
+  wait_until {@browser.execute_script("return $(\"img[src*='/category_animals/animalhead_bear.png']\").length != 0;")}
+  @browser.execute_script("$(\"img[src*='/category_animals/animalhead_bear.png']\")[0].click();")
 end
 
 Then /^I add a new, blank animation$/ do
@@ -71,11 +73,11 @@ Then /^I add a new, blank animation$/ do
   STEPS
 end
 
-Then /^I add the bear animation from the library$/ do
+Then /^I add the bear animal head animation from the library$/ do
   steps <<-STEPS
     And I open the animation picker
     And I select the animal category of the animation library
-    And I select the bear animation from the animal category
+    And I select the bear animal head animation from the animal category
   STEPS
 end
 

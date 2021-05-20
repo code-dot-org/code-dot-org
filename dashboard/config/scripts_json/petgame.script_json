@@ -1,0 +1,401 @@
+{
+  "script": {
+    "name": "petgame",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:19 UTC",
+    "seeding_key": {
+      "script.name": "petgame"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "pet game",
+      "name": "pet game",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 1"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 2"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 3"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 4"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 5"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 6"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 7"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 7"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 8"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 8"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pet game 9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pet game 9"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      },
+      "level_keys": [
+        "pet game 9"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pet game 1",
+        "script_level.level_keys": [
+          "pet game 1"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pet game 2",
+        "script_level.level_keys": [
+          "pet game 2"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pet game 3",
+        "script_level.level_keys": [
+          "pet game 3"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pet game 4",
+        "script_level.level_keys": [
+          "pet game 4"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pet game 5",
+        "script_level.level_keys": [
+          "pet game 5"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pet game 6",
+        "script_level.level_keys": [
+          "pet game 6"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pet game 7",
+        "script_level.level_keys": [
+          "pet game 7"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pet game 8",
+        "script_level.level_keys": [
+          "pet game 8"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pet game 9",
+        "script_level.level_keys": [
+          "pet game 9"
+        ],
+        "lesson.key": "pet game",
+        "lesson_group.key": "",
+        "script.name": "petgame"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

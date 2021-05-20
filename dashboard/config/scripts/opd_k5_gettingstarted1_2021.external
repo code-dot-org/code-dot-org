@@ -1,0 +1,52 @@
+name 'OPD-K5 GettingStarted1_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Getting Started
+**Total Suggested Time:**
+
+Let's take a first look at what is available to help you prepare to implement and teach CS Fundamentals.
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+## Teacher Dashboard
+
+The teacher dashboard contains tools for checking on and evaluating students' work, as well as managing students in a particular section.
+
+The teacher dashboard allows you to:
+* Add a new classroom section
+* Connect your Code.org class with Google Classroom or Clever [link]
+* View and manage your classroom sections
+* Access and find courses
+* Access resources
+	* Lesson Plans
+	* Curriculum standards
+	* Connect with the teacher community
+* Access course, share and hide lessons
+
+**Task: Create a Class Section (Suggested Time: )**
+
+## Curriculum Resources
+
+Curriculum resources include:
+* Lesson plans
+* Lesson resources for educators
+* Lesson resources for students 
+
+**Task: Locate Lessons and Lesson Plans (Suggested Time: )**
+
+## Code Studio
+
+Code Studio is the learning platform where students engage with tools, apps, and coding.  You will have an opportunity to become more familiar with Code Studio in the "CS Fundamentals Concepts" of the course.
+
+**Task: Explore Code Studio**
+
+## Help and Support
+
+Code.org provides help and support and also appreciates getting help and support from you.  One of Code.org's values is being agile and responsive to feedback.  Please feel free to report any bugs you may encounter as you use the website, curriculum resources, and Code Studio.
+
+**Task: Locate where to give feedback and get help (Suggested Time: )**
+
+
+    
+
+MARKDOWN

@@ -3,31 +3,6 @@ import React, {Component} from 'react';
 import SafeMarkdown from '../../../../templates/SafeMarkdown';
 import color from '../../../../util/color';
 
-const styles = {
-  title: {
-    fontSize: 32
-  },
-  image: {
-    width: 300,
-    marginTop: 10,
-    marginLeft: 50
-  },
-  step: {
-    marginTop: 25,
-    fontSize: 16
-  },
-  bold: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    display: 'inline'
-  },
-  expired: {
-    color: color.dark_red
-  },
-  codeText: {
-    fontFamily: 'monospace'
-  }
-};
-
 export default class DiscountCodeInstructions extends Component {
   static propTypes = {
     discountCode: PropTypes.string.isRequired,
@@ -115,7 +90,7 @@ export default class DiscountCodeInstructions extends Component {
           </a>
         </div>
         <div style={styles.step}>
-          4) Proceed to checkout. Your total cost should be $0.
+          4) Proceed to checkout. The cost of the kit should be $0.
         </div>
         <div style={{marginTop: 20}}>
           <SafeMarkdown markdown={endnoteMd} />
@@ -125,8 +100,33 @@ export default class DiscountCodeInstructions extends Component {
   }
 }
 
+const styles = {
+  title: {
+    fontSize: 32
+  },
+  image: {
+    width: 300,
+    marginTop: 10,
+    marginLeft: 50
+  },
+  step: {
+    marginTop: 25,
+    fontSize: 16
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline'
+  },
+  expired: {
+    color: color.dark_red
+  },
+  codeText: {
+    fontFamily: 'monospace'
+  }
+};
+
 const overviewMd = expirationString => `
-We're happy to share with you this discount code that will fully cover the cost of a $350 Circuit
+We're happy to share with you this discount code that will cover the cost of a $350 Circuit
 Playground kit. We're excited that you will be bringing this opportunity to your students!
 
 To order your kit with the discount code, follow the steps below.

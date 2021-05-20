@@ -82,7 +82,7 @@ module AWS
       CLOUDFRONT_ALIAS_CACHE
     end
 
-    def self.invalidate_caches
+    def self.invalidate_caches(wait: false)
       require 'aws-sdk-cloudfront'
       puts 'Creating CloudFront cache invalidations...'
       cloudfront = Aws::CloudFront::Client.new(
@@ -110,12 +110,14 @@ module AWS
       end
       invalidations.compact!
       puts "Invalidations created: #{invalidations.count}"
-      invalidations.map do |app, id, invalidation|
-        cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
-          waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
-          waiter.before_wait {|_| puts "Waiting for #{app} cache invalidation.."}
+      if wait
+        invalidations.map do |app, id, invalidation|
+          cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
+            waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
+            waiter.before_wait {|_| puts "Waiting for #{app} cache invalidation.."}
+          end
+          puts "#{app} cache invalidated!"
         end
-        puts "#{app} cache invalidated!"
       end
     end
 
@@ -248,7 +250,7 @@ module AWS
           Cookies: cookie_config,
           # Always explicitly include Host and CloudFront-Forwarded-Proto headers in CloudFront's cache key, to match Varnish defaults.
           Headers: headers,
-          QueryString: true
+          QueryString: behavior_config[:query] != false
         },
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,

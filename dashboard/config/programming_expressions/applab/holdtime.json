@@ -1,0 +1,7 @@
+{
+  "func": "holdtime",
+  "category": "Circuit",
+  "modeOptionName": "*.holdtime",
+  "type": "readonlyproperty",
+  "tipPrefix": "[Button]."
+}

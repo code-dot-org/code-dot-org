@@ -58,9 +58,7 @@ Each school may have multiple data points for the same school year. All of that 
 * **Null** - We did not have any data to process for this school
 
 Historical values are only used when we don't have data for the current year. The summaries are stored in the `census_summaries` table. There should be a row for each school in the `schools` table for each school year that we've computed summaries.
-
-Summaries are recomputed every night via [a cron job](https://github.com/code-dot-org/code-dot-org/blob/11e6e18ffc71da39345f224ea245048d87d9c10a/cookbooks/cdo-apps/templates/default/crontab.erb#L91).
-[That same script](https://github.com/code-dot-org/code-dot-org/blob/staging/bin/cron/update_census_map) also uploads the current year's summaries to [a Google fusion table](https://fusiontables.google.com/data?docid=1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13#rows:id=1) which powers the map shown on /yourschool.
+Summaries are recomputed every night via a [cron job](https://github.com/code-dot-org/code-dot-org/blob/staging/bin/cron/update_census_mapbox) which uploads the current year's summaries to a public MapBox layer and powers the map shown on /yourschool.
 
 # Mapping from `census_submissions` column names to census questions
 Topic questions only show up for those who indicated that their school has a 10 or 20 hr class.

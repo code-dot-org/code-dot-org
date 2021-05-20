@@ -44,9 +44,23 @@
     "data_tables": "{\r\n  \"myTable\" :[\r\n  {\r\n    \"name\": \"New York City\",\r\n    \"state\": \"New York\",\r\n    \"population\": 9000000\r\n  },\r\n  {\r\n     \"name\": \"Los Angeles\",\r\n    \"state\": \"California\",\r\n    \"population\": 4000000\r\n  },\r\n  {\r\n     \"name\": \"Chicago\",\r\n    \"state\": \"Illinios\",\r\n    \"population\": 3000000\r\n  },\r\n  {\r\n    \"name\": \"Houston\",\r\n    \"state\": \"Texas\",\r\n    \"population\": 2000000\r\n  }\r\n]\r\n}",
     "parent_level_id": 14052,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-13 00:58:18 +0000\",\"changed\":[\"notes\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

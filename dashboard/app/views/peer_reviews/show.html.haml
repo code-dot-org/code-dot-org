@@ -1,12 +1,12 @@
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/peer_reviews/show.js')}
+  %script{src: webpack_asset_path('js/peer_reviews/show.js')}
 .peer-review
   - reviewed = @peer_review.review_completed?
 
   - if @peer_review.script.professional_learning_course?
     #breadcrumb
     - course_unit = @peer_review.script.plc_course_unit
-    - react_props = {unit_name: course_unit.unit_name, unit_view_path: script_path(course_unit.script), course_view_path: course_path(course_unit.plc_course.get_url_name), page_name: t('flex_category.peer_review')}
+    - react_props = {unit_name: course_unit.unit_name, unit_view_path: script_path(course_unit.script), course_view_path: course_path(course_unit.plc_course.unit_group), page_name: I18n.t('peer_review.peer_review')}
     :javascript
       ReactDOM.render(
         React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
@@ -14,7 +14,7 @@
       );
 
   %h1
-    =t('flex_category.peer_review')
+    =I18n.t('peer_review.peer_review')
 
   - unless reviewed
     %p Please review the peer submission in the grey box below.
@@ -48,10 +48,10 @@
       .field
         %label
           = f.radio_button :status, :accepted, disabled: reviewed, checked: ['accepted', nil].include?(@peer_review.status)
-          != t('peer_review.accepted.description')
+          != t('peer_review.accepted.description_markdown', markdown: true)
         %label
           = f.radio_button :status, :rejected, disabled: reviewed
-          != t('peer_review.rejected.description')
+          != t('peer_review.rejected.description_markdown', markdown: true)
     .field
       %p Review notes:
       = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;', disabled: reviewed

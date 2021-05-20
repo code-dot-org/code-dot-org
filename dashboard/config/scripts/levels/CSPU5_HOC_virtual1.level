@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-04-01T15:34:35.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "video_key": "applab_intro_welcome",
+    "instructions_important": "false",
+    "display_name": "Video: Getting Started",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 10551,
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-20 19:55:59 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-04-01 15:34:39 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

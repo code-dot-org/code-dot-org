@@ -1,6 +1,7 @@
 module ViewOptionsHelper
   AppViewOptions = Struct.new(
-    :full_width,
+    :full_width, # The container for the main page content should span the full width of the screen.
+    :no_padding_container, # The container for the main page content should have no padding/margins
     :no_header,
     :no_footer,
     :small_footer,
@@ -24,16 +25,20 @@ module ViewOptionsHelper
     :server_project_level_id,
     :game_display_name,
     :script_name,
-    :stage_position,
+    :lesson_position,
     :level_position,
     :public_caching,
     :is_13_plus,
     :user_id,
     :has_contained_levels,
     :next_level_url,
-    :responsive_content,
+    :responsive_content, # The container for the main page content will be responsive to small screen sizes.
     :answerdash,
     :signed_replay_log_url,
+    :azure_speech_service_voices,
+    :authenticity_token,
+    :useGoogleBlockly,
+    :disallowed_html_tags
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
@@ -62,6 +67,7 @@ module ViewOptionsHelper
     :submitted,
     :unsubmit_url,
     :iframe_embed,
+    :iframe_embed_app_and_code,
     :pairing_driver,
     :pairing_attempt,
     :pairing_channel_id,

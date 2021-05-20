@@ -16,14 +16,6 @@ import {
   studentWithMatchResponsesPropType
 } from './assessmentDataShapes';
 
-const styles = {
-  text: {
-    font: 10,
-    paddingTop: 20,
-    paddingBottom: 20
-  }
-};
-
 class MatchByStudentContainer extends Component {
   static propTypes = {
     matchStructure: PropTypes.arrayOf(matchQuestionPropType),
@@ -84,6 +76,14 @@ class MatchByStudentContainer extends Component {
     );
   }
 }
+
+const styles = {
+  text: {
+    font: 10,
+    paddingTop: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedMatchByStudentContainer = MatchByStudentContainer;
 

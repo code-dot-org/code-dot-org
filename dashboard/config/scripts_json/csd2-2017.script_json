@@ -1,0 +1,4021 @@
+{
+  "script": {
+    "name": "csd2-2017",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "exclude_csf_column_in_legend": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csd/unit2/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csd2"
+        ],
+        [
+          "vocabulary",
+          "https://curriculum.code.org/csd/unit2/vocab/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csd/unit2/standards/"
+        ],
+        [
+          "codeIntroduced",
+          "https://curriculum.code.org/csd/unit2/code/"
+        ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "version_year": "2017",
+      "is_stable": true,
+      "project_sharing": true,
+      "curriculum_umbrella": "CSD",
+      "family_name": "csd2",
+      "tts": true,
+      "hideable_lessons": true
+    },
+    "new_name": "csd2-2017",
+    "family_name": "csd2",
+    "serialized_at": "2021-05-03 23:54:53 UTC",
+    "seeding_key": {
+      "script.name": "csd2-2017"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd2_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: Web Content and HTML"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "csd2_2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: Styling and CSS"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "csd_survey",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd2-2017"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Exploring Websites",
+      "name": "Exploring Websites",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Websites for Expression ",
+      "name": "Websites for Expression ",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Intro to HTML",
+      "name": "Intro to HTML",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Headings",
+      "name": "Headings",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Digital Footprint",
+      "name": "Digital Footprint",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Lists",
+      "name": "Lists",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Intellectual Property and Images",
+      "name": "Intellectual Property and Images",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Clean Code and Debugging",
+      "name": "Clean Code and Debugging",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Project - Multi-Page Websites",
+      "name": "Project - Multi-Page Websites",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Styling Text with CSS",
+      "name": "Styling Text with CSS",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Styling Elements with CSS",
+      "name": "Styling Elements with CSS",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Sources and Search Engines",
+      "name": "Sources and Search Engines",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sources and Search Engines",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "RGB Colors and Classes",
+      "name": "RGB Colors and Classes",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "Project - Personal Portfolio Website",
+      "name": "Project - Personal Portfolio Website",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Personal Portfolio Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "key": "CSD Post-Course Survey",
+      "name": "CSD Post-Course Survey",
+      "absolute_position": 15,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD Post-Course Survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd2-2017"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 L1 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L1 Overview"
+        ],
+        "lesson.key": "Exploring Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 L1 Overview"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Top Websites"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Top Websites"
+        ],
+        "lesson.key": "Exploring Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Top Websites"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 L2 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L2 Overview"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 L2 Overview"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Expression Exemplars"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Expression Exemplars"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Expression Exemplars"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 L3 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L3 Overview"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 L3 Overview"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU2 - Type Anything"
+        ],
+        "progression": "Experiment with Web Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU2 - Type Anything"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSDU2 - Type Anything"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 1"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Intro to Web Lab - Part 1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Inspector Warm Up"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Inspector Warm Up"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Inspector Warm Up"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 2"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 2"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Intro to Web Lab - Part 2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 HTML Tags Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Tags Map"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 HTML Tags Map"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs"
+        ],
+        "progression": "Using HTML Tags"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 HTML Adding Paragraphs"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2"
+        ],
+        "progression": "Using HTML Tags"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 HTML Adding Paragraphs pt 2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 HTML Debug Paragraphs"
+        ],
+        "progression": "Using HTML Tags"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Debug Paragraphs"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 HTML Debug Paragraphs"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 L4 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L4 Overview"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 L4 Overview"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Pair Programming Video"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Pair Programming Video"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Pair Programming Video"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Heading Demo"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Demo"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Heading Demo"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Heading Sizes"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Sizes"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Heading Sizes"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Header Size MC"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Header Size MC"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD Header Size MC"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Heading Test"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Test"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Heading Test"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Headers map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Headers map"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Headers map"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 PSP Programming"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 PSP Programming"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 PSP Programming"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Design Project"
+        ],
+        "progression": "Your Personal Website"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Design Project"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Design Project"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Project Start"
+        ],
+        "progression": "Your Personal Website"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Project Start"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Project Start"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 L5 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L5 Overview"
+        ],
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 L5 Overview"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Social Sleuth"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Social Sleuth"
+        ],
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Social Sleuth"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 L6 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L6 Overview"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 L6 Overview"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 lists intro"
+        ],
+        "progression": "Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 lists intro"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 lists intro"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 ordered list"
+        ],
+        "progression": "Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 ordered list"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 ordered list"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 unordered list"
+        ],
+        "progression": "Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 unordered list"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 unordered list"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 lists match"
+        ],
+        "progression": "Lists"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 lists match"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 lists match"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 lists map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 lists map"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 lists map"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 expand project"
+        ],
+        "progression": "Expanding Your Website"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 expand project"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 expand project"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 new page"
+        ],
+        "progression": "Expanding Personal Website"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 new page"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 new page"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 L7 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L7 Overview"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 L7 Overview"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 images map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 images map"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 images map"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 1"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag 1"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag Debug"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag Debug"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 2"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag 2"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 CC Search Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CC Search Map"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 CC Search Map"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Attribution"
+        ],
+        "progression": "Attribution"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag Attribution"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag Attribution"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Info Page Final Touches"
+        ],
+        "progression": "Attribution"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Info Page Final Touches"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Info Page Final Touches"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Lesson 6 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Lesson 6 Overview"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Lesson 6 Overview"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Debugging 1"
+        ],
+        "progression": "Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Debugging 1"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Debugging 1"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Debugging 2"
+        ],
+        "progression": "Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Debugging 2"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Debugging 2"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Debugging 3"
+        ],
+        "progression": "Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Debugging 3"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Debugging 3"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Debugging 4"
+        ],
+        "progression": "Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Debugging 4"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Debugging 4"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 commenting"
+        ],
+        "progression": "Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 commenting"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 commenting"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 formatting map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 formatting map"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 formatting map"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 challenge"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 challenge"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 challenge"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Lesson 9 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Lesson 9 Overview"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Lesson 9 Overview"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 a tag map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 a tag map"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 a tag map"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 link demo"
+        ],
+        "progression": "Linking Pages"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 link demo"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 link demo"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 navigation"
+        ],
+        "progression": "Linking Pages"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 navigation"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 navigation"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 project guide"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project guide"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 project guide"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 create page"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 create page"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 create page"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 upload images"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 upload images"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 upload images"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 add content"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add content"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 add content"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 header footer"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 header footer"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 header footer"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 project review"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project review"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 project review"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 project share"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project share"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 project share"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U2Ch1"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Lesson 7 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Lesson 7 Overview"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Unit 2 Lesson 7 Overview"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS explore CSS"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 CSS explore CSS"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Video: Intro to CSS"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video: Intro to CSS"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Video: Intro to CSS"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style h1"
+        ],
+        "progression": "Styling Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style h1"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 text style h1"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style h3"
+        ],
+        "progression": "Styling Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style h3"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 text style h3"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Style Sheet Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Style Sheet Map"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Style Sheet Map"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style size"
+        ],
+        "progression": "Fonts and Style"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style size"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 text style size"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style font family"
+        ],
+        "progression": "Fonts and Style"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style font family"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 text style font family"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style decoration"
+        ],
+        "progression": "Fonts and Style"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style decoration"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 text style decoration"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style text align"
+        ],
+        "progression": "Fonts and Style"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style text align"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 text style text align"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Text Properties Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Text Properties Map"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Text Properties Map"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Video: Intro to CSS Part 2"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video: Intro to CSS Part 2"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Video: Intro to CSS Part 2"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 add file"
+        ],
+        "progression": "Styling your Website"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add file"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 add file"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style freeplay"
+        ],
+        "progression": "Styling your Website"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style freeplay"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 text style freeplay"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Lesson 8 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Lesson 8 Overview"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Unit 2 Lesson 8 Overview"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style sample"
+        ],
+        "progression": "Exploring more CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style sample"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style sample"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style bgcolor"
+        ],
+        "progression": "Exploring more CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style bgcolor"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style bgcolor"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSS U2 Body Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSS U2 Body Map"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSS U2 Body Map"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style body"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style body"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style body"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style border"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style border"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style border"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style borderradius"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style borderradius"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style borderradius"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style float"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style float"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style float"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style width"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style width"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style width"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style margin"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style margin"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style margin"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Layout Properties Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Layout Properties Map"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 Layout Properties Map"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style freeplay"
+        ],
+        "progression": "Styling your Website"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style freeplay"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 layout style freeplay"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 L12 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L12 Overview"
+        ],
+        "lesson.key": "Sources and Search Engines",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 L12 Overview"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Lesson 10 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Lesson 10 Overview"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Unit 2 Lesson 10 Overview"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 RGB intro"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 RGB intro"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 RGB intro"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 RGB winter"
+        ],
+        "progression": "RGB Exploration"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 RGB winter"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 RGB winter"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 RGB summer"
+        ],
+        "progression": "RGB Exploration"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 RGB summer"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 RGB summer"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 RGB others"
+        ],
+        "progression": "RGB Exploration"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 RGB others"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 RGB others"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 classes sample"
+        ],
+        "progression": "RGB Exploration"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes sample"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 classes sample"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 CSS Classes Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS Classes Map"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 CSS Classes Map"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 classes modify"
+        ],
+        "progression": "Styling with Classes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes modify"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 classes modify"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 classes spring"
+        ],
+        "progression": "Styling with Classes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes spring"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 classes spring"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 classes summer"
+        ],
+        "progression": "Styling with Classes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes summer"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSD U2 classes summer"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU2 - PW - Class Style Personal Site"
+        ],
+        "progression": "Styling with Classes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU2 - PW - Class Style Personal Site"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "CSDU2 - PW - Class Style Personal Site"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 2 Lesson 16 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 2 Lesson 16 Overview"
+        ],
+        "lesson.key": "Project - Personal Portfolio Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Unit 2 Lesson 16 Overview"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Final Personal Website"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Final Personal Website"
+        ],
+        "lesson.key": "Project - Personal Portfolio Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "Final Personal Website"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch2"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch2"
+        ],
+        "lesson.key": "Project - Personal Portfolio Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U2Ch2"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CSD Post-Course Survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd2-2017"
+      },
+      "level_keys": [
+        "csd-post-survey-2018-markdown-with-link-to-survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L1 Overview",
+        "script_level.level_keys": [
+          "CSD U2 L1 Overview"
+        ],
+        "lesson.key": "Exploring Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Top Websites",
+        "script_level.level_keys": [
+          "CSD U2 Top Websites"
+        ],
+        "lesson.key": "Exploring Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L2 Overview",
+        "script_level.level_keys": [
+          "CSD U2 L2 Overview"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Expression Exemplars",
+        "script_level.level_keys": [
+          "CSD U2 Expression Exemplars"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L3 Overview",
+        "script_level.level_keys": [
+          "CSD U2 L3 Overview"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU2 - Type Anything",
+        "script_level.level_keys": [
+          "CSDU2 - Type Anything"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Web Lab - Part 1",
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 1"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Inspector Warm Up",
+        "script_level.level_keys": [
+          "CSD U2 Inspector Warm Up"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Web Lab - Part 2",
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 2"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Tags Map",
+        "script_level.level_keys": [
+          "CSD U2 HTML Tags Map"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Adding Paragraphs",
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Adding Paragraphs pt 2",
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Debug Paragraphs",
+        "script_level.level_keys": [
+          "CSD U2 HTML Debug Paragraphs"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L4 Overview",
+        "script_level.level_keys": [
+          "CSD U2 L4 Overview"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Pair Programming Video",
+        "script_level.level_keys": [
+          "CSD U2 Pair Programming Video"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Demo",
+        "script_level.level_keys": [
+          "CSD U2 Heading Demo"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Sizes",
+        "script_level.level_keys": [
+          "CSD U2 Heading Sizes"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Header Size MC",
+        "script_level.level_keys": [
+          "CSD Header Size MC"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Test",
+        "script_level.level_keys": [
+          "CSD U2 Heading Test"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Headers map",
+        "script_level.level_keys": [
+          "CSD U2 Headers map"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 PSP Programming",
+        "script_level.level_keys": [
+          "CSD U2 PSP Programming"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Design Project",
+        "script_level.level_keys": [
+          "CSD U2 Design Project"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Project Start",
+        "script_level.level_keys": [
+          "CSD U2 Project Start"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L5 Overview",
+        "script_level.level_keys": [
+          "CSD U2 L5 Overview"
+        ],
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Social Sleuth",
+        "script_level.level_keys": [
+          "Social Sleuth"
+        ],
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L6 Overview",
+        "script_level.level_keys": [
+          "CSD U2 L6 Overview"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 lists intro",
+        "script_level.level_keys": [
+          "CSD U2 lists intro"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 ordered list",
+        "script_level.level_keys": [
+          "CSD U2 ordered list"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 unordered list",
+        "script_level.level_keys": [
+          "CSD U2 unordered list"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 lists match",
+        "script_level.level_keys": [
+          "CSD U2 lists match"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 lists map",
+        "script_level.level_keys": [
+          "CSD U2 lists map"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 expand project",
+        "script_level.level_keys": [
+          "CSD U2 expand project"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 new page",
+        "script_level.level_keys": [
+          "CSD U2 new page"
+        ],
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L7 Overview",
+        "script_level.level_keys": [
+          "CSD U2 L7 Overview"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 images map",
+        "script_level.level_keys": [
+          "CSD U2 images map"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag 1",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 1"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag Debug",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag Debug"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag 2",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 2"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CC Search Map",
+        "script_level.level_keys": [
+          "CSD U2 CC Search Map"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag Attribution",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag Attribution"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Info Page Final Touches",
+        "script_level.level_keys": [
+          "CSD U2 Info Page Final Touches"
+        ],
+        "lesson.key": "Intellectual Property and Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Lesson 6 Overview",
+        "script_level.level_keys": [
+          "CSD U2 Lesson 6 Overview"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Debugging 1",
+        "script_level.level_keys": [
+          "CSD U2 Debugging 1"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Debugging 2",
+        "script_level.level_keys": [
+          "CSD U2 Debugging 2"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Debugging 3",
+        "script_level.level_keys": [
+          "CSD U2 Debugging 3"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Debugging 4",
+        "script_level.level_keys": [
+          "CSD U2 Debugging 4"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 commenting",
+        "script_level.level_keys": [
+          "CSD U2 commenting"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 formatting map",
+        "script_level.level_keys": [
+          "CSD U2 formatting map"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 challenge",
+        "script_level.level_keys": [
+          "CSD U2 challenge"
+        ],
+        "lesson.key": "Clean Code and Debugging",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Lesson 9 Overview",
+        "script_level.level_keys": [
+          "CSD U2 Lesson 9 Overview"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 a tag map",
+        "script_level.level_keys": [
+          "CSD U2 a tag map"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 link demo",
+        "script_level.level_keys": [
+          "CSD U2 link demo"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 navigation",
+        "script_level.level_keys": [
+          "CSD U2 navigation"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project guide",
+        "script_level.level_keys": [
+          "CSD U2 project guide"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 create page",
+        "script_level.level_keys": [
+          "CSD U2 create page"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 upload images",
+        "script_level.level_keys": [
+          "CSD U2 upload images"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 add content",
+        "script_level.level_keys": [
+          "CSD U2 add content"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 header footer",
+        "script_level.level_keys": [
+          "CSD U2 header footer"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project review",
+        "script_level.level_keys": [
+          "CSD U2 project review"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project share",
+        "script_level.level_keys": [
+          "CSD U2 project share"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U2Ch1",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1"
+        ],
+        "lesson.key": "Project - Multi-Page Websites",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Lesson 7 Overview",
+        "script_level.level_keys": [
+          "Unit 2 Lesson 7 Overview"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS explore CSS",
+        "script_level.level_keys": [
+          "CSD U2 CSS explore CSS"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video: Intro to CSS",
+        "script_level.level_keys": [
+          "Video: Intro to CSS"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style h1",
+        "script_level.level_keys": [
+          "CSD U2 text style h1"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style h3",
+        "script_level.level_keys": [
+          "CSD U2 text style h3"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Style Sheet Map",
+        "script_level.level_keys": [
+          "CSD U2 Style Sheet Map"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style size",
+        "script_level.level_keys": [
+          "CSD U2 text style size"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style font family",
+        "script_level.level_keys": [
+          "CSD U2 text style font family"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style decoration",
+        "script_level.level_keys": [
+          "CSD U2 text style decoration"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style text align",
+        "script_level.level_keys": [
+          "CSD U2 text style text align"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Text Properties Map",
+        "script_level.level_keys": [
+          "CSD U2 Text Properties Map"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video: Intro to CSS Part 2",
+        "script_level.level_keys": [
+          "Video: Intro to CSS Part 2"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 add file",
+        "script_level.level_keys": [
+          "CSD U2 add file"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style freeplay",
+        "script_level.level_keys": [
+          "CSD U2 text style freeplay"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Lesson 8 Overview",
+        "script_level.level_keys": [
+          "Unit 2 Lesson 8 Overview"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style sample",
+        "script_level.level_keys": [
+          "CSD U2 layout style sample"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style bgcolor",
+        "script_level.level_keys": [
+          "CSD U2 layout style bgcolor"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSS U2 Body Map",
+        "script_level.level_keys": [
+          "CSS U2 Body Map"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style body",
+        "script_level.level_keys": [
+          "CSD U2 layout style body"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style border",
+        "script_level.level_keys": [
+          "CSD U2 layout style border"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style borderradius",
+        "script_level.level_keys": [
+          "CSD U2 layout style borderradius"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style float",
+        "script_level.level_keys": [
+          "CSD U2 layout style float"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style width",
+        "script_level.level_keys": [
+          "CSD U2 layout style width"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style margin",
+        "script_level.level_keys": [
+          "CSD U2 layout style margin"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Layout Properties Map",
+        "script_level.level_keys": [
+          "CSD U2 Layout Properties Map"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style freeplay",
+        "script_level.level_keys": [
+          "CSD U2 layout style freeplay"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L12 Overview",
+        "script_level.level_keys": [
+          "CSD U2 L12 Overview"
+        ],
+        "lesson.key": "Sources and Search Engines",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Lesson 10 Overview",
+        "script_level.level_keys": [
+          "Unit 2 Lesson 10 Overview"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 RGB intro",
+        "script_level.level_keys": [
+          "CSD U2 RGB intro"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 RGB winter",
+        "script_level.level_keys": [
+          "CSD U2 RGB winter"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 RGB summer",
+        "script_level.level_keys": [
+          "CSD U2 RGB summer"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 RGB others",
+        "script_level.level_keys": [
+          "CSD U2 RGB others"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes sample",
+        "script_level.level_keys": [
+          "CSD U2 classes sample"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS Classes Map",
+        "script_level.level_keys": [
+          "CSD U2 CSS Classes Map"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes modify",
+        "script_level.level_keys": [
+          "CSD U2 classes modify"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes spring",
+        "script_level.level_keys": [
+          "CSD U2 classes spring"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes summer",
+        "script_level.level_keys": [
+          "CSD U2 classes summer"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU2 - PW - Class Style Personal Site",
+        "script_level.level_keys": [
+          "CSDU2 - PW - Class Style Personal Site"
+        ],
+        "lesson.key": "RGB Colors and Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 2 Lesson 16 Overview",
+        "script_level.level_keys": [
+          "Unit 2 Lesson 16 Overview"
+        ],
+        "lesson.key": "Project - Personal Portfolio Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Final Personal Website",
+        "script_level.level_keys": [
+          "Final Personal Website"
+        ],
+        "lesson.key": "Project - Personal Portfolio Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U2Ch2",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch2"
+        ],
+        "lesson.key": "Project - Personal Portfolio Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-2018-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CSD Post-Course Survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd2-2017"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

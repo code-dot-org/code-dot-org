@@ -16,13 +16,14 @@ gl-ES:
     Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Es profesor de informática? Mira outros recursos de CSEdWeek</a>'
+  csedweek_banner_teachers_text: Es profesor de informática? Mira outros recursos
+    de CSEdWeek
   n_have_learned_an_hoc: "<h1>Proba unha</h1><h2>Hora do Código</h2><h3># xa o intentaron</h3>"
   anybody_can_learn: Calquera pode aprender.
   learn_now: Aprende agora
   petition_message: Todos os alumnos, en todas as escolas, deberían ter a oportunidade
     de aprender a programar
   petition_sign_message: 'Se estás dacordo, asina co teu nome.  Únete a # outros.'
-  petition_sign_message_support: 'Se nos apoias, asina co teu nome. Únete a # outros.'
   petition_join_others: 'Únete a # outros'
   name: Nome
   email: E-mail
@@ -93,6 +94,9 @@ gl-ES:
   get_a_certificate_message_after: Fai clic no certificado para descargalo e imprimilo.
     Agora, continúa cos <a href='http://studio.code.org'>outros cursos</a>, ou mira
     máis opcións en <a href='/learn/beyond'>Aprender máis aló dunha Hora</a>.
+  get_a_certificate_message_after_markdown: Fai clic no certificado para descargalo
+    e imprimilo. Agora, continúa cos [outros cursos)(http://studio.code.org), ou mira
+    máis opcións en [Aprender máis aló dunha Hora](/learn/beyond).
   thanks_for_submitting: Graciñas por enviar!
   if_you_enjoyed: Se che gustou aprender, invita os teus amigos para que o intenten
     tamén!  Queremos que todo o mundo poida aprender.
@@ -249,6 +253,7 @@ gl-ES:
   homepage_action_text_learn: Comeza a aprender
   homepage_action_text_signpetition: Asina a petición
   homepage_signpetition_dropdown: Concordo &#x25BE;
+  homepage_signpetition_dropdown_text: Acepto
   homepage_diversity_pledge: Abraza a causa en favor da diversidade
   homepage_banner_text_prizes: 'A Hora do Código está volvendo, de 7 a 13 decembro. '
   homepage_banner_link_prizes: 'Xúntate ao maior evento de aprendizaxe da historia. '
@@ -867,6 +872,7 @@ gl-ES:
   coursee-2017_gradelevel: De 8 a 12 anos
   coursee-2018_gradelevel: De 8 a 12 anos
   coursee-2019_gradelevel: De 8 a 12 anos
+  coursee-2020_gradelevel: De 8 a 12 anos
   accelerated_gradelevel: Idades de 10 a 18 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
@@ -1523,6 +1529,8 @@ gl-ES:
   header_about: Sobre
   header_teacher_community: Comunidade de profesorado
   header_report_bug: Comunicar un erro
+  header_legal_privacy: Política de Privacidade
+  header_legal_tos: Termos de Servizo
   user_header_label: Ola, %{username}
   user_header_team: Equipo
   user_header_settings: A miña conta
@@ -1549,3 +1557,10 @@ gl-ES:
   hoc2018_dance_teacher_resources_tile1_button: Planificación da lección
   hoc2018_dance_teacher_resources_tile2_button: Actividade off-line
   hoc2018_dance_amazon_about_future_engineer_button: Aprender máis
+  footer_powered_by_aws: Sostido por Amazon Web Services
+  footer_privacy_policy: Política de Privacidade
+  footer_about: Sobre
+  footer_partners: Socios
+  footer_donate: Fai unha doazón
+  footer_support: Axuda e Comunidade
+  footer_terms: Termos

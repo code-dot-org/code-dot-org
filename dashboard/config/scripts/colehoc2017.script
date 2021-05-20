@@ -1,4 +1,4 @@
-stage 'colehoc2017 stage'
+lesson 'colehoc2017 stage', display_name: 'colehoc2017 stage', has_lesson_plan: false
 level 'MC_HOC_2017_01_Cole'
 level 'MC_HOC_2017_02_Cole'
 level 'MC_HOC_2017_03_Cole'
@@ -13,3 +13,4 @@ level 'MC_HOC_2017_10_Cole'
 level 'MC_HOC_2017_11_Cole'
 level 'MC_HOC_2017_12_Cole'
 level 'MC_HOC_2017_13_Cole'
+

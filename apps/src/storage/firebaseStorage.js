@@ -11,10 +11,13 @@ import {
   loadConfig,
   fixFirebaseKey,
   getRecordsRef,
+  getProjectCountersRef,
   getProjectDatabase,
+  getSharedDatabase,
   resetConfigForTesting,
   isInitialized,
-  validateFirebaseKey
+  validateFirebaseKey,
+  getPathRef
 } from './firebaseUtils';
 import {
   enforceTableCount,
@@ -27,8 +30,12 @@ import {
   deleteColumnName,
   renameColumnName,
   addMissingColumns,
-  getColumnsRef
+  getColumnsRef,
+  getColumnNamesFromRecords,
+  getColumnNamesSnapshot
 } from './firebaseMetadata';
+import {tableType} from './redux/data';
+import {WarningType} from './constants';
 
 /**
  * Namespace for Firebase storage.
@@ -39,10 +46,39 @@ const FirebaseStorage = {};
 // of a record when an 'id' field (up to 10 digits) is added to it, e.g. ' "id":1234567890'.
 const RECORD_ID_PADDING = 16;
 
-function getKeysRef() {
-  let kv = getProjectDatabase().child('storage/keys');
-  return kv;
-}
+const KEYS_PATH = 'storage/keys';
+
+FirebaseStorage.getLibraryManifest = function() {
+  return getPathRef(getSharedDatabase(), 'metadata/manifest')
+    .once('value')
+    .then(snapshot => snapshot.val());
+};
+
+FirebaseStorage.getColumnsForTable = function(tableName, tableType) {
+  let database =
+    tableType === 'shared' ? getSharedDatabase() : getProjectDatabase();
+  return getColumnNamesSnapshot(database, tableName);
+};
+
+/**
+ * @return {Promise<boolean>} whether the project channel exists
+ */
+FirebaseStorage.channelExists = function() {
+  return getProjectDatabase()
+    .once('value')
+    .then(snapshot => snapshot.val() !== null);
+};
+
+/**
+ * Deletes the entire channel in firebase.
+ * @param {function} onSuccess
+ * @param {function} onError
+ */
+FirebaseStorage.clearAllData = function(onSuccess, onError) {
+  getProjectDatabase()
+    .set(null)
+    .then(onSuccess, onError);
+};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -53,8 +89,17 @@ function getKeysRef() {
  */
 FirebaseStorage.getKeyValue = function(key, onSuccess, onError) {
   key = fixKeyName(key, onError);
+  try {
+    validateFirebaseKey(key);
+  } catch (e) {
+    onError({
+      type: WarningType.KEY_INVALID,
+      msg: `The key is invalid. ${e.message}`
+    });
+    return;
+  }
 
-  const keyRef = getKeysRef().child(key);
+  const keyRef = getPathRef(getProjectDatabase(), `${KEYS_PATH}/${key}`);
   keyRef.once(
     'value',
     snapshot => {
@@ -75,10 +120,12 @@ FirebaseStorage.getKeyValue = function(key, onSuccess, onError) {
 function fixKeyName(key, onError) {
   const newKey = fixFirebaseKey(key);
   if (newKey !== key) {
-    onError(
-      `The key was renamed from "${key}" to "${newKey}" because the characters ` +
-        '".", "$", "#", "[", "]", and "/" are not allowed in key names.'
-    );
+    onError({
+      type: WarningType.KEY_RENAMED,
+      msg:
+        `The key was renamed from "${key}" to "${newKey}" because the characters ` +
+        '"$", "#", "[", "]", and "/" are not allowed in key names.'
+    });
     key = newKey;
   }
   return key;
@@ -87,10 +134,12 @@ function fixKeyName(key, onError) {
 function fixTableName(tableName, onError) {
   const newTableName = fixFirebaseKey(tableName);
   if (newTableName !== tableName) {
-    onError(
-      `The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
-        '".", "$", "#", "[", "]", and "/" are not allowed in table names.'
-    );
+    onError({
+      type: WarningType.TABLE_RENAMED,
+      msg:
+        `The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
+        '"$", "#", "[", "]", and "/" are not allowed in table names.'
+    });
     tableName = newTableName;
   }
   return tableName;
@@ -118,7 +167,10 @@ FirebaseStorage.setKeyValue = function(key, value, onSuccess, onError) {
       try {
         validateFirebaseKey(key);
       } catch (e) {
-        return Promise.reject(`The key is invalid. ${e.message}`);
+        return Promise.reject({
+          type: WarningType.KEY_INVALID,
+          msg: `The key is invalid. ${e.message}`
+        });
       }
       if (jsonValue && jsonValue.length > config.maxPropertySize) {
         return Promise.reject(
@@ -130,9 +182,7 @@ FirebaseStorage.setKeyValue = function(key, value, onSuccess, onError) {
       return incrementRateLimitCounters();
     })
     .then(() =>
-      getKeysRef()
-        .child(key)
-        .set(jsonValue)
+      getPathRef(getProjectDatabase(), `${KEYS_PATH}/${key}`).set(jsonValue)
     )
     .then(onSuccess, onError);
 };
@@ -144,7 +194,7 @@ FirebaseStorage.setKeyValue = function(key, value, onSuccess, onError) {
  * @param {function (string)} onError
  */
 FirebaseStorage.deleteKeyValue = function(key, onSuccess, onError) {
-  const keyRef = getKeysRef().child(key);
+  const keyRef = getPathRef(getProjectDatabase(), `${KEYS_PATH}/${key}`);
   keyRef.set(null).then(onSuccess, onError);
 };
 
@@ -155,7 +205,8 @@ FirebaseStorage.deleteKeyValue = function(key, onSuccess, onError) {
  * @returns {Promise<boolean>} whether the record exists
  */
 function getRecordExistsPromise(tableName, recordId) {
-  let recordRef = getProjectDatabase().child(
+  let recordRef = getPathRef(
+    getProjectDatabase(),
     `storage/tables/${tableName}/records/${recordId}`
   );
   return recordRef.once('value').then(snapshot => snapshot.val() !== null);
@@ -184,11 +235,18 @@ FirebaseStorage.createRecord = function(tableName, record, onSuccess, onError) {
     .then(() => updateTableCounters(tableName, 1, updateNextId))
     .then(nextId => {
       record.id = nextId;
-      const recordRef = getProjectDatabase().child(
+      const recordRef = getPathRef(
+        getProjectDatabase(),
         `storage/tables/${tableName}/records/${record.id}`
       );
       return recordRef.set(JSON.stringify(record));
     })
+    .then(() =>
+      addMissingColumns(
+        tableName,
+        getColumnNamesFromRecords([JSON.stringify(record)])
+      )
+    )
     .then(() => onSuccess(record), onError);
 };
 
@@ -209,7 +267,10 @@ function validateTableName(tableName) {
     validateFirebaseKey(tableName);
     return Promise.resolve();
   } catch (e) {
-    return Promise.reject(`The table name is invalid. ${e.message}`);
+    return Promise.reject({
+      type: WarningType.TABLE_NAME_INVALID,
+      msg: `The table name is invalid. ${e.message}`
+    });
   }
 }
 
@@ -260,33 +321,50 @@ FirebaseStorage.readRecords = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  const countersRef = getProjectDatabase().child('counters/tables/');
-  // First, check if table exists using counters/tables/ as source of truth
-  countersRef.once('value', countersSnapshot => {
-    if (!countersSnapshot.val() || !countersSnapshot.val()[tableName]) {
-      // Table doesn't exist. Return null instead of [] so we can show an error
-      onSuccess(null);
-      return;
-    }
-    let recordsRef = getRecordsRef(tableName);
-
-    // Get all records in the table and filter them on the client.
-    recordsRef.once(
+  let channelRef;
+  // First check both current tables and project tables
+  Promise.all([
+    getPathRef(getProjectDatabase(), `current_tables/${tableName}`).once(
       'value',
-      recordsSnapshot => {
-        let recordMap = recordsSnapshot.val() || {};
-        let records = [];
-        // Collect all of the records matching the searchParams.
-        Object.keys(recordMap).forEach(id => {
-          let record = JSON.parse(recordMap[id]);
-          if (matchesSearch(record, searchParams)) {
-            records.push(record);
-          }
-        });
-        onSuccess(records);
-      },
-      onError
-    );
+      snapshot => {
+        if (snapshot.val()) {
+          // This is a current table, so read the records from
+          // the shared channel
+          channelRef = getSharedDatabase();
+        }
+      }
+    ),
+    getProjectCountersRef(tableName).once('value', snapshot => {
+      if (snapshot.val()) {
+        // This is a project table, so read the records from
+        // this project's channel
+        channelRef = getProjectDatabase();
+      }
+    })
+  ]).then(() => {
+    if (channelRef) {
+      // We found this table in either current or project, so read the
+      // records and return them
+      getPathRef(channelRef, `storage/tables/${tableName}/records`).once(
+        'value',
+        recordsSnapshot => {
+          let recordMap = recordsSnapshot.val() || {};
+          let records = [];
+          // Collect all of the records matching the searchParams.
+          Object.keys(recordMap).forEach(id => {
+            let record = JSON.parse(recordMap[id]);
+            if (matchesSearch(record, searchParams)) {
+              records.push(record);
+            }
+          });
+          onSuccess(records);
+        },
+        onError
+      );
+    } else {
+      // We didn't find this table, so return null so that we can show an error message
+      onSuccess(null);
+    }
   });
 };
 
@@ -310,7 +388,8 @@ FirebaseStorage.updateRecord = function(
   tableName = fixTableName(tableName, onError);
 
   const recordJson = JSON.stringify(record);
-  const recordRef = getProjectDatabase().child(
+  const recordRef = getPathRef(
+    getProjectDatabase(),
     `storage/tables/${tableName}/records/${record.id}`
   );
   const hasId = true;
@@ -327,6 +406,12 @@ FirebaseStorage.updateRecord = function(
         incrementRateLimitCounters()
           .then(() => updateTableCounters(tableName, 0))
           .then(() => recordRef.set(recordJson))
+          .then(() =>
+            addMissingColumns(
+              tableName,
+              getColumnNamesFromRecords([recordJson])
+            )
+          )
           .then(() => onComplete(record, true), onError);
       }
     });
@@ -350,7 +435,8 @@ FirebaseStorage.deleteRecord = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  const recordRef = getProjectDatabase().child(
+  const recordRef = getPathRef(
+    getProjectDatabase(),
     `storage/tables/${tableName}/records/${record.id}`
   );
 
@@ -455,6 +541,76 @@ FirebaseStorage.resetForTesting = function() {
   resetConfigForTesting();
 };
 
+FirebaseStorage.addCurrentTableToProject = function(
+  tableName,
+  onSuccess,
+  onError
+) {
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
+    .then(loadConfig)
+    .then(config => {
+      return enforceTableCount(config, tableName);
+    })
+    .then(() => {
+      getPathRef(getProjectDatabase(), `current_tables/${tableName}`).set(true);
+    })
+    .then(onSuccess, onError);
+};
+
+FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
+  return enforceUniqueTableNames(tableName)
+    .then(incrementRateLimitCounters)
+    .then(loadConfig)
+    .then(config => {
+      return enforceTableCount(config, tableName);
+    })
+    .then(() => {
+      return getPathRef(
+        getSharedDatabase(),
+        `counters/tables/${tableName}`
+      ).once('value');
+    })
+    .then(snapshot => {
+      getProjectCountersRef(tableName).set(snapshot.val());
+    })
+    .then(() => {
+      return getPathRef(
+        getSharedDatabase(),
+        `storage/tables/${tableName}/records`
+      ).once('value');
+    })
+    .then(snapshot => {
+      getRecordsRef(tableName).set(snapshot.val());
+      return snapshot;
+    })
+    .then(snapshot =>
+      addMissingColumns(tableName, getColumnNamesFromRecords(snapshot.val()))
+    )
+    .then(onSuccess, onError);
+};
+
+function enforceUniqueTableNames(tableName) {
+  const checkForExistingTable = (dbRef, tableName) => {
+    return dbRef.once('value').then(snapshot => {
+      if (snapshot.val()) {
+        return Promise.reject({
+          type: WarningType.DUPLICATE_TABLE_NAME,
+          msg: `There is already a table with name "${tableName}"`
+        });
+      }
+    });
+  };
+
+  return Promise.all([
+    checkForExistingTable(getProjectCountersRef(tableName), tableName),
+    checkForExistingTable(
+      getPathRef(getProjectDatabase(), `current_tables/${tableName}`),
+      tableName
+    )
+  ]);
+}
+
 /**
  * Adds an entry for the table in Firebase under counters/tables, making the table
  * show up in the data browser and also count toward the table count limit.
@@ -464,15 +620,14 @@ FirebaseStorage.resetForTesting = function() {
  */
 FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
   return validateTableName(tableName)
+    .then(() => enforceUniqueTableNames(tableName))
     .then(incrementRateLimitCounters)
     .then(loadConfig)
     .then(config => {
       return enforceTableCount(config, tableName);
     })
     .then(() => {
-      const countersRef = getProjectDatabase().child(
-        `counters/tables/${tableName}`
-      );
+      const countersRef = getProjectCountersRef(tableName);
       countersRef
         .transaction(countersData => {
           if (countersData === null) {
@@ -490,25 +645,34 @@ FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
           return Promise.resolve();
         });
     })
+    .then(() => addColumnName(tableName, 'id'))
     .then(onSuccess, onError);
 };
 
 /**
  * Delete an entire table from firebase storage, then reset its lastId and rowCount.
  * @param {string} tableName
+ * @param {string} type
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
-FirebaseStorage.deleteTable = function(tableName, onSuccess, onError) {
-  const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
-  const countersRef = getProjectDatabase().child(
-    `counters/tables/${tableName}`
-  );
-  tableRef
-    .set(null)
-    .then(() => countersRef.set(null))
-    .then(() => getColumnsRef(getProjectDatabase(), tableName).set(null))
-    .then(onSuccess, onError);
+FirebaseStorage.deleteTable = function(tableName, type, onSuccess, onError) {
+  if (type === tableType.SHARED) {
+    getPathRef(getProjectDatabase(), `current_tables/${tableName}`)
+      .set(null)
+      .then(onSuccess, onError);
+  } else {
+    const tableRef = getPathRef(
+      getProjectDatabase(),
+      `storage/tables/${tableName}`
+    );
+    const countersRef = getProjectCountersRef(tableName);
+    tableRef
+      .set(null)
+      .then(() => countersRef.set(null))
+      .then(() => getColumnsRef(getProjectDatabase(), tableName).set(null))
+      .then(onSuccess, onError);
+  }
 };
 
 /**
@@ -518,12 +682,16 @@ FirebaseStorage.deleteTable = function(tableName, onSuccess, onError) {
  * @param {function (string)} onError
  */
 FirebaseStorage.clearTable = function(tableName, onSuccess, onError) {
-  const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
+  const tableRef = getPathRef(
+    getProjectDatabase(),
+    `storage/tables/${tableName}`
+  );
   tableRef
     .set(null)
     .then(() => {
-      const rowCountRef = getProjectDatabase().child(
-        `counters/tables/${tableName}/rowCount`
+      const rowCountRef = getPathRef(
+        getProjectCountersRef(tableName),
+        'rowCount'
       );
       return rowCountRef.set(0);
     })
@@ -533,15 +701,10 @@ FirebaseStorage.clearTable = function(tableName, onSuccess, onError) {
 /**
  * Returns a list of existing tables. The counters/tables node is the source of truth for
  * whether a table exists. See fileoverview in firebaseCounters.js for more details.
- * @param {boolean} overwrite
- * @returns {Promise.<Object>} Promise containing a map with existing table names as keys,
- *   or an empty map if overwrite is true.
+ * @returns {Promise.<Object>} Promise containing a map with existing table names as keys.
  */
-function getExistingTables(overwrite) {
-  if (overwrite) {
-    return Promise.resolve({});
-  }
-  const tablesRef = getProjectDatabase().child('counters/tables');
+function getExistingTables() {
+  const tablesRef = getPathRef(getProjectDatabase(), 'counters/tables');
   return tablesRef.once('value').then(snapshot => snapshot.val() || {});
 }
 
@@ -569,23 +732,16 @@ function getRecordsData(records) {
  *     "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
  *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
  *   }
- * @param {bool} overwrite Whether to overwrite a table if it already exists.
- * @param {function ()} onSuccess Function to call on success.
- * @param {function} onError Function to call with an error in case of failure.
+ * @returns {Promise} which resolves when all table data has been written
  */
-FirebaseStorage.populateTable = function(
-  jsonData,
-  overwrite,
-  onSuccess,
-  onError
-) {
+FirebaseStorage.populateTable = function(jsonData) {
   if (!jsonData || !jsonData.length) {
-    return;
+    return Promise.resolve();
   }
   // Ensure rate limit counters have been initialized, so that updates to the
   // counters/tables node will pass type definition checks in the security rules.
-  incrementRateLimitCounters()
-    .then(() => getExistingTables(overwrite))
+  return incrementRateLimitCounters()
+    .then(() => getExistingTables())
     .then(existingTables => {
       const promises = [];
       let newTables;
@@ -597,27 +753,21 @@ FirebaseStorage.populateTable = function(
         );
       }
       for (const tableName in newTables) {
-        if (overwrite || existingTables[tableName] === undefined) {
+        if (existingTables[tableName] === undefined) {
           const newRecords = newTables[tableName];
           const recordsData = getRecordsData(newRecords);
           promises.push(overwriteTableData(tableName, recordsData));
         }
       }
       return Promise.all(promises);
-    })
-    .then(onSuccess, onError);
+    });
 };
 
 /**
- * @param {boolean} overwrite
- * @returns {Promise} Promise containing a map of existing key/value pairs, or an
- *   empty map if overwrite is true.
+ * @returns {Promise} Promise containing a map of existing key/value pairs.
  */
-function getExistingKeyValues(overwrite) {
-  if (overwrite) {
-    return Promise.resolve({});
-  }
-  return getKeysRef()
+function getExistingKeyValues() {
+  return getPathRef(getProjectDatabase(), KEYS_PATH)
     .once('value')
     .then(snapshot => snapshot.val() || {});
 }
@@ -630,20 +780,14 @@ function getExistingKeyValues(overwrite) {
  *     "click_count": 5,
  *     "button_color": "blue"
  *   }
- * @param {bool} overwrite Whether to overwrite a key if it already exists.
  * @param {function ()} onSuccess Function to call on success.
  * @param {function} onError Function to call with an error in case of failure.
  */
-FirebaseStorage.populateKeyValue = function(
-  jsonData,
-  overwrite,
-  onSuccess,
-  onError
-) {
+FirebaseStorage.populateKeyValue = function(jsonData, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  getExistingKeyValues(overwrite)
+  getExistingKeyValues()
     .then(oldKeyValues => {
       let newKeyValues;
       try {
@@ -655,13 +799,15 @@ FirebaseStorage.populateKeyValue = function(
       }
       const keysData = {};
       for (const key in newKeyValues) {
-        if (overwrite || oldKeyValues[key] === undefined) {
+        if (oldKeyValues[key] === undefined) {
           keysData[key] = JSON.stringify(newKeyValues[key]);
         }
       }
       return keysData;
     })
-    .then(keysData => getKeysRef().update(keysData))
+    .then(keysData =>
+      getPathRef(getProjectDatabase(), KEYS_PATH).update(keysData)
+    )
     .then(onSuccess, onError);
 };
 
@@ -687,9 +833,7 @@ FirebaseStorage.deleteColumn = function(
   onSuccess,
   onError
 ) {
-  const recordsRef = getProjectDatabase().child(
-    `storage/tables/${tableName}/records`
-  );
+  const recordsRef = getRecordsRef(tableName);
   recordsRef
     .once('value')
     .then(snapshot => {
@@ -728,9 +872,7 @@ FirebaseStorage.renameColumn = function(
     );
     return;
   }
-  const recordsRef = getProjectDatabase().child(
-    `storage/tables/${tableName}/records`
-  );
+  const recordsRef = getRecordsRef(tableName);
   recordsRef
     .once('value')
     .then(snapshot => {
@@ -802,9 +944,7 @@ FirebaseStorage.coerceColumn = function(
   onSuccess,
   onError
 ) {
-  const recordsRef = getProjectDatabase().child(
-    `storage/tables/${tableName}/records`
-  );
+  const recordsRef = getRecordsRef(tableName);
   recordsRef
     .once('value')
     .then(snapshot => {
@@ -817,9 +957,10 @@ FirebaseStorage.coerceColumn = function(
         recordsData[recordId] = JSON.stringify(record);
       });
       if (!allConverted) {
-        onError(
-          `Not all values in column "${columnName}" could be converted to type "${columnType}".`
-        );
+        onError({
+          type: WarningType.CANNOT_CONVERT_COLUMN_TYPE,
+          msg: `Not all values in column "${columnName}" could be converted to type "${columnType}".`
+        });
       }
       return recordsRef.set(recordsData);
     })
@@ -845,7 +986,7 @@ function parseRecordsDataFromCsv(csvData) {
     records.forEach((record, index) => {
       const id = index + 1;
       for (const key in record) {
-        record[key] = castValue(record[key]);
+        record[key] = castValue(record[key], /* allowUnquotedStrings */ true);
       }
       record.id = id;
       recordsData[id] = JSON.stringify(record);
@@ -862,20 +1003,24 @@ function parseRecordsDataFromCsv(csvData) {
 function validateRecordsData(recordsData) {
   return loadConfig().then(config => {
     if (Object.keys(recordsData).length > config.maxTableRows) {
-      return Promise.reject(
-        `Import failed because the data is too large. ` +
+      return Promise.reject({
+        type: WarningType.IMPORT_FAILED,
+        msg:
+          `Import failed because the data is too large. ` +
           `A table may only contain ${config.maxTableRows} rows.`
-      );
+      });
     }
     if (
       Object.keys(recordsData).some(
         id => recordsData[id].length > config.maxRecordSize
       )
     ) {
-      return Promise.reject(
-        `Import failed because one of of the records is too large. ` +
+      return Promise.reject({
+        type: WarningType.IMPORT_FAILED,
+        msg:
+          `Import failed because one of of the records is too large. ` +
           `The maximum allowable size is ${config.maxRecordSize} bytes.`
-      );
+      });
     }
     return recordsData;
   });
@@ -889,12 +1034,8 @@ function validateRecordsData(recordsData) {
  * @returns {Promise} A promise which is successful if all writes were successful.
  */
 function overwriteTableData(tableName, recordsData) {
-  const recordsRef = getProjectDatabase().child(
-    `storage/tables/${tableName}/records`
-  );
-  const countersRef = getProjectDatabase().child(
-    `counters/tables/${tableName}`
-  );
+  const recordsRef = getRecordsRef(tableName);
+  const countersRef = getProjectCountersRef(tableName);
   return getColumnsRef(getProjectDatabase(), tableName)
     .set(null)
     .then(() => recordsRef.set(recordsData))
@@ -909,7 +1050,12 @@ function overwriteTableData(tableName, recordsData) {
         rowCount: count
       });
     })
-    .then(() => addMissingColumns(tableName));
+    .then(() =>
+      addMissingColumns(
+        tableName,
+        getColumnNamesFromRecords(Object.values(recordsData))
+      )
+    );
 }
 
 FirebaseStorage.importCsv = function(

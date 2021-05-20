@@ -1,0 +1,23 @@
+name 'Episode 12 Challenge Instructions younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Sprite Lab
+
+**Do This:** Add on to the Build a Computer program. Add more inputs and outputs! What about speakers, a microphone, or a webcam? For an added challenge, remake the program using a phone instead of a laptop. Remember - a phone is a computer too! Is uses input, storage, processing, and output. 
+
+![](https://images.code.org/4e27d70383c55923f10212cf6a04f76b-image-1591668733903.gif)
+
+## Physical Computing
+
+You can learn more about Physical Computing by following tutorials using a digital version of a Micro:bit at Microsoft's [MakeCode](https://makecode.microbit.org/)! 
+
+![](https://images.code.org/d269056d5c1cd0647ff1144dac0b01a2-image-1591718717944.png)
+
+---
+*Over 13 year old? Find your challenge level [here](https://studio.code.org/s/code-break/lessons/12/levels/4).*
+MARKDOWN

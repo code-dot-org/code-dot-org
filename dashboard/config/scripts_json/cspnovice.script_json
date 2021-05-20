@@ -1,0 +1,694 @@
+{
+  "script": {
+    "name": "cspnovice",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "professional_learning_course": "CS Principles Facilitator in Training",
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:03 UTC",
+    "seeding_key": {
+      "script.name": "cspnovice"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome",
+      "name": "Welcome",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome",
+        "lesson_group.key": "required",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "key": "Tuesday",
+      "name": "Tuesday",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "key": "Wednesday",
+      "name": "Wednesday",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "key": "Thursday",
+      "name": "Thursday",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "key": "Wrap Up",
+      "name": "Wrap Up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "welcome-csp-novice"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "welcome-csp-novice"
+        ],
+        "lesson.key": "Welcome",
+        "lesson_group.key": "required",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "welcome-csp-novice"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-tuesday-unit"
+        ],
+        "progression": "Unit Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-tuesday-unit"
+        ],
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-tuesday-unit"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-tuesday-unit2"
+        ],
+        "progression": "Unit Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-tuesday-unit2"
+        ],
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-tuesday-unit2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-tuesday-pedagogy"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-tuesday-pedagogy"
+        ],
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-tuesday-pedagogy"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-tuesday-facilitation"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-tuesday-facilitation"
+        ],
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-tuesday-facilitation"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-wednesday-unit"
+        ],
+        "progression": "Unit Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-wednesday-unit"
+        ],
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-wednesday-unit"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-wednesday-unit2"
+        ],
+        "progression": "Unit Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-wednesday-unit2"
+        ],
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-wednesday-unit2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-wednesday-pedagogy"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-wednesday-pedagogy"
+        ],
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-wednesday-pedagogy"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-wednesday-facilitation"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-wednesday-facilitation"
+        ],
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-wednesday-facilitation"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-thursday-unit"
+        ],
+        "progression": "Unit Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-thursday-unit"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-thursday-unit"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-thursday-unit2"
+        ],
+        "progression": "Unit Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-thursday-unit2"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-thursday-unit2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-thursday-pedagogy"
+        ],
+        "progression": "Pedagogy Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-thursday-pedagogy"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-thursday-pedagogy"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-thursday-pedagogy2"
+        ],
+        "progression": "Pedagogy Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-thursday-pedagogy2"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-thursday-pedagogy2"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-thursday-facilitation"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-thursday-facilitation"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-thursday-facilitation"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-novice-congrats"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-novice-congrats"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      },
+      "level_keys": [
+        "csp-novice-congrats"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "welcome-csp-novice",
+        "script_level.level_keys": [
+          "welcome-csp-novice"
+        ],
+        "lesson.key": "Welcome",
+        "lesson_group.key": "required",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-tuesday-unit",
+        "script_level.level_keys": [
+          "csp-tuesday-unit"
+        ],
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-tuesday-unit2",
+        "script_level.level_keys": [
+          "csp-tuesday-unit2"
+        ],
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-tuesday-pedagogy",
+        "script_level.level_keys": [
+          "csp-tuesday-pedagogy"
+        ],
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-tuesday-facilitation",
+        "script_level.level_keys": [
+          "csp-tuesday-facilitation"
+        ],
+        "lesson.key": "Tuesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-wednesday-unit",
+        "script_level.level_keys": [
+          "csp-wednesday-unit"
+        ],
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-wednesday-unit2",
+        "script_level.level_keys": [
+          "csp-wednesday-unit2"
+        ],
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-wednesday-pedagogy",
+        "script_level.level_keys": [
+          "csp-wednesday-pedagogy"
+        ],
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-wednesday-facilitation",
+        "script_level.level_keys": [
+          "csp-wednesday-facilitation"
+        ],
+        "lesson.key": "Wednesday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-thursday-unit",
+        "script_level.level_keys": [
+          "csp-thursday-unit"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-thursday-unit2",
+        "script_level.level_keys": [
+          "csp-thursday-unit2"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-thursday-pedagogy",
+        "script_level.level_keys": [
+          "csp-thursday-pedagogy"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-thursday-pedagogy2",
+        "script_level.level_keys": [
+          "csp-thursday-pedagogy2"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-thursday-facilitation",
+        "script_level.level_keys": [
+          "csp-thursday-facilitation"
+        ],
+        "lesson.key": "Thursday",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-novice-congrats",
+        "script_level.level_keys": [
+          "csp-novice-congrats"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "cspnovice"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

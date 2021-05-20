@@ -5,8 +5,9 @@ require 'test_helper'
 # DEPRECATION NOTICE
 #
 # Please locate new tests for RegistrationsController in files for individual
-# routes under
-#   test/controllers/registrations_controller/*_test.rb
+# routes under one of:
+#   test/integration/registration/*_test.rb
+#   test/integration/omniauth/*_test.rb
 #
 # New tests should inherit from ActionDispatch::IntegrationTest instead of
 # ActionController::TestCase
@@ -147,6 +148,64 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'f', student.gender
     assert_equal 12, student.age
     assert_equal 'My School', student.school
+  end
+
+  test "parent_email: student can add a parent email without opt in" do
+    student = create(:student)
+    sign_in student
+
+    patch :set_parent_email, params: {
+      user: {
+        parent_email: 'parent@example.com',
+        parent_email_preference_opt_in: ''
+      }
+    }
+    student.reload
+    assert_response :no_content
+    assert_equal 'parent@example.com', student.parent_email
+  end
+
+  test "parent_email: student can add a parent email with opt in" do
+    student = create(:student)
+    sign_in student
+
+    patch :set_parent_email, params: {
+      user: {
+        parent_email: 'parent@example.com',
+        parent_email_preference_opt_in: 'yes',
+        parent_email_preference_source: 'PARENT_EMAIL_CHANGE'
+      }
+    }
+    student.reload
+    assert_response :no_content
+    assert_equal 'parent@example.com', student.parent_email
+
+    email_preference = EmailPreference.last
+    assert_equal "parent@example.com", email_preference[:email]
+    assert email_preference[:opt_in]
+    assert_equal EmailPreference::PARENT_EMAIL_CHANGE, email_preference[:source]
+  end
+
+  test "sign up page saves return to url in session" do
+    # Note that we currently have no restrictions on what the domain of the
+    # redirect url can be; we may at some point want to add domain
+    # restrictions, but if we do so we want to make sure that both
+    # studio.code.org and code.org are supported.
+    #
+    # See also the "sign in page saves return to url in session" test in
+    # sessions_controller_test
+    urls = [
+      "/foo",
+      "//studio.code.org/foo",
+      "//code.org/foo",
+      "//some_other_domain.com/foo"
+    ]
+
+    urls.each do |url|
+      session.delete(:user_return_to)
+      get :new, params: {user_return_to: url}
+      assert_equal url, session[:user_return_to]
+    end
   end
 
   test "teachers go to specified return to url after signing up" do
@@ -297,6 +356,16 @@ class RegistrationsControllerTest < ActionController::TestCase
     refute mail.body.to_s =~ /New to teaching computer science/
   end
 
+  test 'create new teacher with es-MX locale sends localized welcome email' do
+    with_default_locale('es-MX') do
+      teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+      post :create, params: {user: teacher_params}
+      mail = ActionMailer::Base.deliveries.first
+      assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'es-MX'), mail.subject
+      assert_match /Hola/, mail.body.to_s
+    end
+  end
+
   test "create new teacher with opt-in option as yes writes email preference as yes" do
     teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
@@ -428,5 +497,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     get :edit
     assert_response :success
     assert_select '#user_name', 1
+  end
+
+  test "existing account sign in/up links redirect to user edit page" do
+    get :existing_account, params: {email: "test@email.com", provider: "facebook"}
+    assert_response :success
+    assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
+    assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
   end
 end

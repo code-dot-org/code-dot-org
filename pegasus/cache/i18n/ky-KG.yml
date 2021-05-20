@@ -14,8 +14,6 @@ ky-KG:
   petition_message: Бардык мектептердеги бардык окуучулардын компүтердик билим алуу
     мүмкүнчүлүгү болушу керек
   petition_sign_message: 'Макул болсоңуз, атыңарды жазып,  # башкаларга кошулгула.'
-  petition_sign_message_support: 'Бизди колдосоңор, атыңарды жазып,  # башкаларга
-    кошулгула.'
   petition_join_others: "# Башкаларга кошулгула"
   name: Аты
   email: Эмейл
@@ -52,6 +50,7 @@ ky-KG:
   csedweek_map_legend_cs_tech_jam: Атайын иш-чара
   cded_sign_up: Катталуу
   cded_try_it: Көргүлө
+  try_now: Дагы кара
   california_button: Дагы кара
   write_your_first_program: Алгачкы компүтердик программаңарды жазгыла
   all_ages: Бардык курак
@@ -257,6 +256,7 @@ ky-KG:
   dashboard_sequence: Ирет
   dashboard_grade_other: Башка
   dashboard_login_none: Эмейл
+  learn_more: Дагы кара
   learn_sign_up_button: Катталуу
   learn_footer_all_tutorials: 'Бул жерден <a href="https://code.org/learn">Код сааты
     жетектемелеринин толук тизмесин көргүлө</a>. Код сааты критерийлерин жана кошуу
@@ -303,6 +303,7 @@ ky-KG:
   alice_beyond_platformtext: Windows же Mac (орнотуу керек)
   flappy_shortcode: серпүү
   header_my_dashboard: Менин тактам
+  header_sections: Класс секциялары
   header_educate_hoc: Код сааты
   header_about_news: Жаңылыктар
   user_header_signin: Кирүү
@@ -351,3 +352,4 @@ ky-KG:
   hoc2018_mc_go_to_mc_education: Minecraft окутууга өтүү
   hoc2018_dance_party_button: Башта
   hoc2018_dance_amazon_about_future_engineer_button: Дагы кара
+  footer_donate: Колдоо

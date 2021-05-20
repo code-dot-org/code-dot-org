@@ -11,28 +11,32 @@
 
 %p
   Thank you for attending a Code.org
-  = @workshop.course
   - if @workshop.course == Pd::Workshop::COURSE_CSF
+    = @workshop.course + ' ' + @workshop.subject + ' workshop'
+  - elsif @workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
     = @workshop.subject
-  workshop on
+  - else
+    = @workshop.course + ' workshop'
+  on
   = @workshop.sessions.first.start_date_us_format + '.'
 
 %p
-  %strong
-    Please tell us about your experience by filling out this 5 minute
-    = link_to('survey', @survey_url) + '.'
+  Please tell us about your experience by filling out this 5 minute
+  = link_to('survey', @survey_url) + '.'
 
 %p
   %i Why? Because your opinion matters!!
 
 %p
-  Please note that the facilitator of your session and your Regional Partner will see your responses.
-  Your name and email will not be shared with your facilitator or Regional Partner to protect your anonymity.
-  However, it's possible your facilitator or Regional Partner could identify you from your written responses.
-
-%p
   We are committed to continually improving our programs. We want our teachers to have the best workshops possible
   and your feedback helps us build the experience that teachers have in the future!
+
+%p
+  Please note that your responses will be shared
+  %strong anonymously
+  with the facilitator of your workshop and your Regional Partner. Your responses are confidential
+  and your name and email will not be shared with your facilitator or Regional Partner. However,
+  it's possible your facilitator or Regional Partner could identify you from your written responses.
 
 %p
   %a{href: @survey_url,
@@ -58,7 +62,7 @@
     or connect with other teachers on our
     = link_to('teacher forum', 'https://forum.code.org/') + '.'
 
-- unless @workshop.subject == Pd::Workshop::SUBJECT_CSF_201
+- unless [Pd::Workshop::SUBJECT_CSF_201, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS].include? @workshop.subject
   %h3
     Additional workshop benefits
 
@@ -79,9 +83,9 @@
   %p
     Thank you,
     %br
-    Megan Hochstatter
+    Dave Frye
     %br
-    K-5 Education Program Manager Code.org
+    Director of Program Development and Operations, Code.org
 
 - else
   %p

@@ -3,7 +3,7 @@ import _ from 'lodash';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {spy} from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import NetSimLogBrowserFilters, {
   SentByDropdown
 } from '@cdo/apps/netsim/NetSimLogBrowserFilters';

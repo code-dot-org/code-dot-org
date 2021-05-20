@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Hour of Code ja CSEdWeek-neuvoa-antava Komitea
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Hour of Code ja CSEdWeek-neuvoa-antava Komitea
 
 {{ advisory-committee/about_headshots }}
 

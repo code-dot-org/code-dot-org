@@ -1,0 +1,64 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-02-25T15:47:17.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n   // return ((Studio.sprite[0].isCollidingWith(1))&&(Studio.sprite[0].value === \"hidden\"));\r\n  return  (Studio.playerScore > 9);\r\n}",
+    "failure_condition": "function () {\r\n  //Studio.sprite[1].value === \"hidden\";\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":9},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "short_instructions": "Let's make the animals disappear when you click on them! You can also add sounds and score points to create a fun game of Animal Tag!",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "timeout_failure_tick": "850",
+    "first_sprite_index": "0",
+    "protaganist_sprite_index": "1",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each animal in the game should vanish when tapped. It should also come back after a second or two!\",\"hint_id\":\"courseB_playlab_events_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9d85de655162c25d4dffda43339355e1/courseB_playlab_events_challenge2_template_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use other event blocks to make the other animals disappear!\\n\\n<xml>\\n  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n  </block>\\n  </xml>\",\"hint_id\":\"courseB_playlab_events_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bd89c4932afb6b8c79c38aba898bdd5d/courseB_playlab_events_challenge2_template_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use extra commands to play sounds or score points when you click the animals!\\n\\n<xml>\\n  <block type=\\\"studio_playSound\\\">\\n    <title name=\\\"SOUND\\\">slap</title>\\n  </block>\\n  <block type=\\\"studio_changeScore\\\"/></xml>\",\"hint_id\":\"courseB_playlab_events_challenge2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c28b5ef78970bd5c95f183041c6adbcb/courseB_playlab_events_challenge2_template_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Mix it up!\\n\\nMake some animals give more points than others.\\nUse different sounds.\\nChange the animals' moods!\",\"hint_id\":\"courseB_playlab_events_challenge2_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4f4e5f14cc4b0f00bf3a9c2f1865da20/courseB_playlab_events_challenge2_template_2018.mp3\"}]",
+    "parent_level_id": 15770,
+    "name_suffix": "_2020",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml/>
+    </initialization_blocks>
+  </blocks>
+</Studio>

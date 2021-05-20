@@ -28,20 +28,10 @@ FactoryGirl.define do
     user nil
   end
 
-  factory :plc_task, class: 'Plc::Task' do
-    name "MyString"
-    plc_learning_modules []
-    after(:create) do |plc_task|
-      plc_task.plc_learning_modules.each do |learning_module|
-        plc_task.script_level = create(:script_level, stage: learning_module.stage, script: learning_module.plc_course_unit.script, levels: [create(:level)])
-      end
-    end
-  end
-
   factory :plc_learning_module, class: 'Plc::LearningModule' do
     sequence(:name) {|n| "plc-learning-module-#{n}"}
     plc_course_unit {create(:plc_course_unit)}
-    stage {create(:stage)}
+    lesson {create(:lesson)}
     module_type Plc::LearningModule::CONTENT_MODULE
   end
 
@@ -50,7 +40,7 @@ FactoryGirl.define do
       sequence(:name) {|n| "plc-course-#{n}"}
     end
     after(:build) do |plc_course, evaluator|
-      create(:course, name: evaluator.name, plc_course: plc_course)
+      create(:unit_group, name: evaluator.name, plc_course: plc_course)
     end
   end
 end

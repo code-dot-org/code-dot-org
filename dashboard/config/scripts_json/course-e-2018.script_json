@@ -1,0 +1,6955 @@
+{
+  "script": {
+    "name": "course-e-2018",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:13 UTC",
+    "seeding_key": {
+      "script.name": "course-e-2018"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csf_e_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Ramp Up to Course E (Optional)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "csf_e_2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Course E Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "end_of_course_project",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Course Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "extra_course_content",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Extra Course Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "extra_course_content",
+        "script.name": "course-e-2018"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Programming: My Robotic Friends",
+      "name": "Programming: My Robotic Friends",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Sequence in Maze",
+      "name": "Sequence in Maze",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Building a Foundation",
+      "name": "Building a Foundation",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Debugging with Scrat",
+      "name": "Debugging with Scrat",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Programming in Artist",
+      "name": "Programming in Artist",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Loops: My Loopy Robotic Friends",
+      "name": "Loops: My Loopy Robotic Friends",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Loops in Artist",
+      "name": "Loops in Artist",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Nested Loops",
+      "name": "Nested Loops",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Nested Loops with Frozen",
+      "name": "Nested Loops with Frozen",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Algorithms: Dice Race",
+      "name": "Algorithms: Dice Race",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms: Dice Race",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Introduction",
+      "name": "Introduction",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "name": "Conditionals",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Private and Personal Information",
+      "name": "Private and Personal Information",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Private and Personal Information",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Build a Star Wars Game",
+      "name": "Build a Star Wars Game",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Functions: Songwriting",
+      "name": "Functions: Songwriting",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Functions in Artist",
+      "name": "Functions in Artist",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Functions in Bee",
+      "name": "Functions in Bee",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Functions in Harvester",
+      "name": "Functions in Harvester",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Determine the Concept",
+      "name": "Determine the Concept",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Build a Play Lab Game",
+      "name": "Build a Play Lab Game",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Explore Project Ideas",
+      "name": "Explore Project Ideas",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "The Design Process",
+      "name": "The Design Process",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Design Process",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Build Your Project",
+      "name": "Build Your Project",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Present Your Project",
+      "name": "Present Your Project",
+      "absolute_position": 24,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Present Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Internet",
+      "name": "Internet",
+      "absolute_position": 25,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 25,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "lesson_group.key": "extra_course_content",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "key": "Crowdsourcing",
+      "name": "Crowdsourcing",
+      "absolute_position": 26,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 26,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "extra_course_content",
+        "script.name": "course-e-2018"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_unplugged_MRF_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_unplugged_MRF_2018"
+        ],
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseB_unplugged_MRF_2018"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_ramp1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_ramp1_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_video_ramp1_2018"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp1_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp1_2018"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp2_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp2_2018"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp3_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp3_2018"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "comment_intro_maze_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "comment_intro_maze_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "comment_intro_maze_2018"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp4_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp4_2018"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5_2018"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5a_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5a_2018"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_maze_ramp5b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5b_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5b_2018"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5c_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5c_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5c_2018"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5d_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5d_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5d_2018"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BuildingAFoundation_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BuildingAFoundation_2018"
+        ],
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "BuildingAFoundation_2018"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_debugging_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_debugging_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_video_debugging_2018"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging1_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging1_2018"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging2_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging2_2018"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging3_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging3_2018"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging4_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging4_2018"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging5_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging5_2018"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging6_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging6_2018"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging7_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging7_2018"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging8_predict1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging8_predict1_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging8_predict1_2018"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_maze_debugging9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_maze_debugging9_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_maze_debugging9_2018"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_artist_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_artist_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_video_artist_2018"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog1_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog1_2018"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog2_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog2_2018"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog3_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog3_2018"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog4_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog4_2018"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog5_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog5_2018"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog6_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog6_2018"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog7_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog7_2018"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog8_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog8_2018"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog6_predict1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog6_predict1_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog6_predict1_2018"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge1_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge2a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge2a_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_artist_prog_challenge2a_2018"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_unplugged_loopyMRF_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_unplugged_loopyMRF_2018"
+        ],
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseB_unplugged_loopyMRF_2018"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_video_artistIntro_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_video_artistIntro_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_video_artistIntro_2018"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops1_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops1_2018"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops2_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops2_2018"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_video_loopsArtist_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_video_loopsArtist_2018"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops3_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops3_2018"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops4_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops4_2018"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops5_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops5_2018"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops6_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops6_2018"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops7_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops7_2018"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "ramp_artist_loops8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops8_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops8_2018"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops9_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_artist_loops9_2018"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1a_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops1a_2018"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops1_2018"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoops_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_nestedLoops_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_video_nestedLoops_2018"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops2_predict1_2018"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops2_2018"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops3_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops3_2018"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops4_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops4_2018"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops5_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops5_2018"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops6_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops6_2018"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_nestedLoops7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops7_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops7_2018"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops8_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops8_2018"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops9_2018"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops9_predict2_2018"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project1_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project1_2018"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project2_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project2_2018"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project3_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project3_2018"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project4_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project4_2018"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project5_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project5_2018"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project1a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project1a_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project1a_2018"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project2a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project2a_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project2a_2018"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project3a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project3a_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project3a_2018"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project4a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project4a_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_artist_project4a_2018"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "DiceRace_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DiceRace_2018"
+        ],
+        "lesson.key": "Algorithms: Dice Race",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "DiceRace_2018"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_ramp1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_ramp1_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_video_ramp1_2018"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_scrat_ramp1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_ramp1_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_ramp1_2018"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_scrat_ramp2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_ramp2_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_ramp2_2018"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_scrat_ramp3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_ramp3_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_ramp3_2018"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_scrat_ramp4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_ramp4_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_ramp4_2018"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_scrat_ramp5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_ramp5_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_ramp5_2018"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_scrat_predict1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_predict1_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_predict1_2018"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_ScratLoops_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_ScratLoops_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_video_ScratLoops_2018"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_scrat_ramp6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_ramp6_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_ramp6_2018"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_scrat_ramp7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_ramp7_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_ramp7_2018"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_scrat_ramp8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_scrat_ramp8_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_scrat_ramp8_2018"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_video_artistIntro_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_video_artistIntro_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "ramp_video_artistIntro_2018"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_ramp8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_ramp8_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_ramp8_2018"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_angles_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_angles_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseC_video_angles_2018"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_ramp9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_ramp9_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_ramp9_2018"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_video_whileIntro_2018"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11a_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp11a_2018"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11b_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp11b_2018"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12b_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12b_2018"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12_forswap_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12_forswap_2018"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseD_video_repeatUntil_2018"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12c_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12c_2018"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12d_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12d_2018"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12e_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12e_2018"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_BeeifElse_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_video_BeeifElse_2018"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12f_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12f_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12f_2018"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12g_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12g_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12g_2018"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_unplugged_privateInformation_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_unplugged_privateInformation_2018"
+        ],
+        "lesson.key": "Private and Personal Information",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_unplugged_privateInformation_2018"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bb8_skinOverview_C-F_video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bb8_skinOverview_C-F_video"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "bb8_skinOverview_C-F_video"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_7_no_video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_7_no_video"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_7_no_video"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_8"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_8"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_9"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_9"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_10"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_10"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_11"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_11"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_12"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_12"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_13"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_13"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_13"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_14"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_14"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_14"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_15"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_15"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_15"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SongwritingParameters_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SongwritingParameters_2018"
+        ],
+        "lesson.key": "Functions: Songwriting",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "SongwritingParameters_2018"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions1_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions1_2018"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_functionsArtist_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_functionsArtist_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_video_functionsArtist_2018"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict1_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions_predict1_2018"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions2_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions2_2018"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions3_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions3_2018"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions4_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions4_2018"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions5_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions5_2018"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions6_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions6_2018"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions7_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions7_2018"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseE_artist_functions8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions8_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions8_2018"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions9_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions9_2018"
+      ]
+    },
+    {
+      "chapter": 121,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions10_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions10_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions10_2018"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict2_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions_predict2_2018"
+      ]
+    },
+    {
+      "chapter": 123,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_challenge1_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_challenge2_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_functions_challenge2_2018"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions1_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions1_2018"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_functionsBee_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_functionsBee_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_video_functionsBee_2018"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions2_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions2_2018"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions3_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions3_2018"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions4_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions4_2018"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions5_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions5_2018"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_createFunctions_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_createFunctions_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_video_createFunctions_2018"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions6_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions6_2018"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions7_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions7_2018"
+      ]
+    },
+    {
+      "chapter": 134,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseE_bee_functions8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions8_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions8_2018"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions9_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions9_2018"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions10_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions10_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions10_2018"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions11_predict1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions11_predict1_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions11_predict1_2018"
+      ]
+    },
+    {
+      "chapter": 138,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions_challenge1_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_functions_challenge2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_functions_challenge2_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_functions_challenge2_2018"
+      ]
+    },
+    {
+      "chapter": 140,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "harvester_skinOverview_video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "harvester_skinOverview_video"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "harvester_skinOverview_video"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions1_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions1_2018"
+      ]
+    },
+    {
+      "chapter": 142,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions1a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions1a_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions1a_2018"
+      ]
+    },
+    {
+      "chapter": 143,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions2b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions2b_2018"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2ba_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions2ba_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions2ba_2018"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions3c_2018"
+      ]
+    },
+    {
+      "chapter": 146,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions4b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions4b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions4b_2018"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions5c_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions5c_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions5c_2018"
+      ]
+    },
+    {
+      "chapter": 148,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions6c_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions6c_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions6c_2018"
+      ]
+    },
+    {
+      "chapter": 149,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_createFunctions2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_createFunctions2_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_video_createFunctions2_2018"
+      ]
+    },
+    {
+      "chapter": 150,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions7b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions7b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions7b_2018"
+      ]
+    },
+    {
+      "chapter": 151,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseE_farmer_functions8b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions8b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions8b_2018"
+      ]
+    },
+    {
+      "chapter": 152,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions9b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions9b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions9b_2018"
+      ]
+    },
+    {
+      "chapter": 153,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions10b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions10b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions10b_2018"
+      ]
+    },
+    {
+      "chapter": 154,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions11_predict_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions11_predict_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_functions11_predict_2018"
+      ]
+    },
+    {
+      "chapter": 155,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_concept1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_concept1_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_concept1_2018"
+      ]
+    },
+    {
+      "chapter": 156,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_concept1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_concept1_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_concept1_2018"
+      ]
+    },
+    {
+      "chapter": 157,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_concept2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_concept2_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_concept2_2018"
+      ]
+    },
+    {
+      "chapter": 158,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_concept3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_concept3_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_concept3_2018"
+      ]
+    },
+    {
+      "chapter": 159,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_concept1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_concept1_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_concept1_2018"
+      ]
+    },
+    {
+      "chapter": 160,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_concept4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_concept4_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_concept4_2018"
+      ]
+    },
+    {
+      "chapter": 161,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_concept2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_concept2_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_concept2_2018"
+      ]
+    },
+    {
+      "chapter": 162,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_concept5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_concept5_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_bee_concept5_2018"
+      ]
+    },
+    {
+      "chapter": 163,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_concept3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_concept3_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_farmer_concept3_2018"
+      ]
+    },
+    {
+      "chapter": 164,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_concept4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_concept4_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_concept4_2018"
+      ]
+    },
+    {
+      "chapter": 165,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_concept_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_concept_challenge1_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_concept_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 166,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_concept_challenge2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_concept_challenge2_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_artist_concept_challenge2_2018"
+      ]
+    },
+    {
+      "chapter": 167,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_playLab_scaffold1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold1_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_playLab_scaffold1_2018"
+      ]
+    },
+    {
+      "chapter": 168,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_playLab_scaffold2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold2_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_playLab_scaffold2_2018"
+      ]
+    },
+    {
+      "chapter": 169,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_playLab_scaffold3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold3_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_playLab_scaffold3_2018"
+      ]
+    },
+    {
+      "chapter": 170,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_playLab_scaffold4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold4_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_playLab_scaffold4_2018"
+      ]
+    },
+    {
+      "chapter": 171,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_playLab_scaffold5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold5_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_playLab_scaffold5_2018"
+      ]
+    },
+    {
+      "chapter": 172,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_playLab_scaffold6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold6_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_playLab_scaffold6_2018"
+      ]
+    },
+    {
+      "chapter": 173,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_playLab_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_playLab_challenge1_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseE_playLab_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 174,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_video_csMatters_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_video_csMatters_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "courseF_video_csMatters_2018"
+      ]
+    },
+    {
+      "chapter": 175,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Geometric Sun_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Geometric Sun_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Geometric Sun_2018"
+      ]
+    },
+    {
+      "chapter": 176,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Robot Doodle_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Robot Doodle_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Robot Doodle_2018"
+      ]
+    },
+    {
+      "chapter": 177,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Alien Defender_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Alien Defender_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Alien Defender_2018"
+      ]
+    },
+    {
+      "chapter": 178,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Find the Wizard_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Find the Wizard_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Find the Wizard_2018"
+      ]
+    },
+    {
+      "chapter": 179,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Begin planning your project_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Begin planning your project_2018"
+        ],
+        "lesson.key": "The Design Process",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Begin planning your project_2018"
+      ]
+    },
+    {
+      "chapter": 180,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course E: Play Lab Project_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course E: Play Lab Project_2018"
+        ],
+        "lesson.key": "Build Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Course E: Play Lab Project_2018"
+      ]
+    },
+    {
+      "chapter": 181,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course E: Artist Project_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course E: Artist Project_2018"
+        ],
+        "lesson.key": "Build Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Course E: Artist Project_2018"
+      ]
+    },
+    {
+      "chapter": 182,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Prepare for your presentation_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Prepare for your presentation_2018"
+        ],
+        "lesson.key": "Present Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Prepare for your presentation_2018"
+      ]
+    },
+    {
+      "chapter": 183,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet_2018"
+        ],
+        "lesson.key": "Internet",
+        "lesson_group.key": "extra_course_content",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Internet_2018"
+      ]
+    },
+    {
+      "chapter": 184,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crowdsourcing_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crowdsourcing_2018"
+        ],
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "extra_course_content",
+        "script.name": "course-e-2018"
+      },
+      "level_keys": [
+        "Crowdsourcing_2018"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseB_unplugged_MRF_2018",
+        "script_level.level_keys": [
+          "courseB_unplugged_MRF_2018"
+        ],
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_ramp1_2018",
+        "script_level.level_keys": [
+          "courseD_video_ramp1_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp1_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp1_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp2_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp2_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp3_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp3_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "comment_intro_maze_2018",
+        "script_level.level_keys": [
+          "comment_intro_maze_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp4_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp4_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5a_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5a_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5b_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5b_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5c_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5c_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5d_2018",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5d_2018"
+        ],
+        "lesson.key": "Sequence in Maze",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BuildingAFoundation_2018",
+        "script_level.level_keys": [
+          "BuildingAFoundation_2018"
+        ],
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_debugging_2018",
+        "script_level.level_keys": [
+          "courseC_video_debugging_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging1_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging1_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging2_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging2_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging3_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging3_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging4_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging4_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging5_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging5_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging6_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging6_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging7_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging7_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging8_predict1_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging8_predict1_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_maze_debugging9_2018",
+        "script_level.level_keys": [
+          "courseC_maze_debugging9_2018"
+        ],
+        "lesson.key": "Debugging with Scrat",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_artist_2018",
+        "script_level.level_keys": [
+          "courseC_video_artist_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog1_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog1_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog2_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog2_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog3_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog3_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog4_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog4_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog5_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog5_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog6_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog6_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog7_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog7_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog8_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog8_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog6_predict1_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog6_predict1_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog_challenge1_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge1_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_artist_prog_challenge2a_2018",
+        "script_level.level_keys": [
+          "courseC_artist_prog_challenge2a_2018"
+        ],
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_unplugged_loopyMRF_2018",
+        "script_level.level_keys": [
+          "courseB_unplugged_loopyMRF_2018"
+        ],
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_artistIntro_2018",
+        "script_level.level_keys": [
+          "ramp_video_artistIntro_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops1_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops1_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops2_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops2_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_loopsArtist_2018",
+        "script_level.level_keys": [
+          "ramp_video_loopsArtist_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops3_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops3_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops4_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops4_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops5_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops5_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops6_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops6_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops7_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops7_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops8_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops8_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops9_2018",
+        "script_level.level_keys": [
+          "ramp_artist_loops9_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops1a_2018",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1a_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops1_2018",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_nestedLoops_2018",
+        "script_level.level_keys": [
+          "courseD_video_nestedLoops_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops2_predict1_2018",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops2_2018",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops3_2018",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops3_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops4_2018",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops4_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops5_2018",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops5_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops6_2018",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops6_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops7_2018",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops7_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops8_2018",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops8_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops9_2018",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops9_predict2_2018",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2018"
+        ],
+        "lesson.key": "Nested Loops",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project1_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project1_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project2_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project2_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project3_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project3_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project4_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project4_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project5_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project5_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project1a_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project1a_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project2a_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project2a_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project3a_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project3a_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project4a_2018",
+        "script_level.level_keys": [
+          "courseD_artist_project4a_2018"
+        ],
+        "lesson.key": "Nested Loops with Frozen",
+        "lesson_group.key": "csf_e_1",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DiceRace_2018",
+        "script_level.level_keys": [
+          "DiceRace_2018"
+        ],
+        "lesson.key": "Algorithms: Dice Race",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_ramp1_2018",
+        "script_level.level_keys": [
+          "courseE_video_ramp1_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp1_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp1_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp2_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp2_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp3_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp3_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp4_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp4_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp5_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp5_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_predict1_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_predict1_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_ScratLoops_2018",
+        "script_level.level_keys": [
+          "courseD_video_ScratLoops_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp6_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp6_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp7_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp7_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp8_2018",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp8_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_artistIntro_2018",
+        "script_level.level_keys": [
+          "ramp_video_artistIntro_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_ramp8_2018",
+        "script_level.level_keys": [
+          "courseE_artist_ramp8_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_angles_2018",
+        "script_level.level_keys": [
+          "courseC_video_angles_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_ramp9_2018",
+        "script_level.level_keys": [
+          "courseE_artist_ramp9_2018"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_whileIntro_2018",
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp11a_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11a_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp11b_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11b_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12b_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12b_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12_forswap_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12_forswap_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_repeatUntil_2018",
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12c_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12c_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12d_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12d_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12e_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12e_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_BeeifElse_2018",
+        "script_level.level_keys": [
+          "courseE_video_BeeifElse_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12f_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12f_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12g_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12g_2018"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_unplugged_privateInformation_2018",
+        "script_level.level_keys": [
+          "courseE_unplugged_privateInformation_2018"
+        ],
+        "lesson.key": "Private and Personal Information",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bb8_skinOverview_C-F_video",
+        "script_level.level_keys": [
+          "bb8_skinOverview_C-F_video"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_7_no_video",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_7_no_video"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_8",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_8"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_9",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_9"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_10",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_10"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_11",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_11"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_12",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_12"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_13",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_13"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_14",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_14"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_15",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_15"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SongwritingParameters_2018",
+        "script_level.level_keys": [
+          "SongwritingParameters_2018"
+        ],
+        "lesson.key": "Functions: Songwriting",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions1_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions1_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_functionsArtist_2018",
+        "script_level.level_keys": [
+          "courseE_video_functionsArtist_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_predict1_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict1_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions2_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions2_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions3_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions3_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions4_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions4_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions5_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions5_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions6_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions6_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions7_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions7_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions8_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions8_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions9_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions9_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions10_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions10_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_predict2_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict2_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_challenge1_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions_challenge1_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_challenge2_2018",
+        "script_level.level_keys": [
+          "courseE_artist_functions_challenge2_2018"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions1_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions1_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_functionsBee_2018",
+        "script_level.level_keys": [
+          "courseE_video_functionsBee_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions2_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions2_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions3_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions3_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions4_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions4_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions5_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions5_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_createFunctions_2018",
+        "script_level.level_keys": [
+          "courseE_video_createFunctions_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions6_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions6_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions7_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions7_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions8_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions8_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions9_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions9_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions10_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions10_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions11_predict1_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions11_predict1_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions_challenge1_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions_challenge1_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_functions_challenge2_2018",
+        "script_level.level_keys": [
+          "courseE_bee_functions_challenge2_2018"
+        ],
+        "lesson.key": "Functions in Bee",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "harvester_skinOverview_video",
+        "script_level.level_keys": [
+          "harvester_skinOverview_video"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions1_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions1_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions1a_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions1a_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions2b_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions2b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions2ba_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions2ba_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions3c_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions4b_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions4b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions5c_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions5c_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions6c_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions6c_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_createFunctions2_2018",
+        "script_level.level_keys": [
+          "courseE_video_createFunctions2_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions7b_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions7b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions8b_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions8b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions9b_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions9b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions10b_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions10b_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions11_predict_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_functions11_predict_2018"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_concept1_2018",
+        "script_level.level_keys": [
+          "courseE_bee_concept1_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_concept1_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_concept1_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_concept2_2018",
+        "script_level.level_keys": [
+          "courseE_bee_concept2_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_concept3_2018",
+        "script_level.level_keys": [
+          "courseE_bee_concept3_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_concept1_2018",
+        "script_level.level_keys": [
+          "courseE_artist_concept1_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_concept4_2018",
+        "script_level.level_keys": [
+          "courseE_bee_concept4_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_concept2_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_concept2_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_concept5_2018",
+        "script_level.level_keys": [
+          "courseE_bee_concept5_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_concept3_2018",
+        "script_level.level_keys": [
+          "courseE_farmer_concept3_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_concept4_2018",
+        "script_level.level_keys": [
+          "courseE_artist_concept4_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_concept_challenge1_2018",
+        "script_level.level_keys": [
+          "courseE_artist_concept_challenge1_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_concept_challenge2_2018",
+        "script_level.level_keys": [
+          "courseE_artist_concept_challenge2_2018"
+        ],
+        "lesson.key": "Determine the Concept",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_playLab_scaffold1_2018",
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold1_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_playLab_scaffold2_2018",
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold2_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_playLab_scaffold3_2018",
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold3_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_playLab_scaffold4_2018",
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold4_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_playLab_scaffold5_2018",
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold5_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_playLab_scaffold6_2018",
+        "script_level.level_keys": [
+          "courseE_playLab_scaffold6_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_playLab_challenge1_2018",
+        "script_level.level_keys": [
+          "courseE_playLab_challenge1_2018"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_video_csMatters_2018",
+        "script_level.level_keys": [
+          "courseF_video_csMatters_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Geometric Sun_2018",
+        "script_level.level_keys": [
+          "Geometric Sun_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Robot Doodle_2018",
+        "script_level.level_keys": [
+          "Robot Doodle_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Alien Defender_2018",
+        "script_level.level_keys": [
+          "Alien Defender_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Find the Wizard_2018",
+        "script_level.level_keys": [
+          "Find the Wizard_2018"
+        ],
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Begin planning your project_2018",
+        "script_level.level_keys": [
+          "Begin planning your project_2018"
+        ],
+        "lesson.key": "The Design Process",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course E: Play Lab Project_2018",
+        "script_level.level_keys": [
+          "Course E: Play Lab Project_2018"
+        ],
+        "lesson.key": "Build Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course E: Artist Project_2018",
+        "script_level.level_keys": [
+          "Course E: Artist Project_2018"
+        ],
+        "lesson.key": "Build Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Prepare for your presentation_2018",
+        "script_level.level_keys": [
+          "Prepare for your presentation_2018"
+        ],
+        "lesson.key": "Present Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet_2018",
+        "script_level.level_keys": [
+          "Internet_2018"
+        ],
+        "lesson.key": "Internet",
+        "lesson_group.key": "extra_course_content",
+        "script.name": "course-e-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crowdsourcing_2018",
+        "script_level.level_keys": [
+          "Crowdsourcing_2018"
+        ],
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "extra_course_content",
+        "script.name": "course-e-2018"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

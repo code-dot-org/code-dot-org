@@ -1,5 +1,5 @@
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_text_match.js')}
+  %script{src: webpack_asset_path('js/levels/_text_match.js')}
 
 = render partial: 'levels/single_text_match', locals: {standalone: true, level: @level, last_attempt: @last_attempt }
 

@@ -1,0 +1,261 @@
+{
+  "script": {
+    "name": "contagion-guided-practice",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
+        ]
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:56:12 UTC",
+    "seeding_key": {
+      "script.name": "contagion-guided-practice"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lesson group",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Contagion-Guided-Practice"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "how things spread gp",
+      "name": "How Things Spread  - Guided Practice",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "how things spread gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "key": "contagion simulator gp",
+      "name": "Contagion Simulator - Guided Practice",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "key": "sometimes not always gp",
+      "name": "Sometimes, Not Always - Practice",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "sometimes not always gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "key": "modifying your simulator gp",
+      "name": "Modifying Your Simulator - Guided Practice",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "modifying your simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "key": "collecting data gp",
+      "name": "Collecting Data Guided Practice",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "collecting data gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "contagion_teachers"
+        ],
+        "progression": "Lesson 2: Bridging Activity"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      },
+      "level_keys": [
+        "contagion_teachers"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "contagion_teachers2"
+        ],
+        "progression": "Lesson 4: Collecting Data"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      },
+      "level_keys": [
+        "contagion_teachers2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "6sidedDie"
+        ],
+        "progression": "Lesson 3: Dice Roll"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "6sidedDie"
+        ],
+        "lesson.key": "sometimes not always gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      },
+      "level_keys": [
+        "6sidedDie"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers",
+        "script_level.level_keys": [
+          "contagion_teachers"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers2",
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "6sidedDie",
+        "script_level.level_keys": [
+          "6sidedDie"
+        ],
+        "lesson.key": "sometimes not always gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

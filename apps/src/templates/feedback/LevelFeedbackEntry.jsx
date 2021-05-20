@@ -7,83 +7,6 @@ import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  main: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    minHeight: 72,
-    width: '100%',
-    marginBottom: 20,
-    display: 'flex',
-    flexFlow: 'wrap',
-    boxSizing: 'border-box'
-  },
-  lessonDetails: {
-    width: '75%',
-    marginLeft: 20,
-    marginTop: 8,
-    marginBottom: 4
-  },
-  lessonLevel: {
-    fontSize: 18,
-    lineHeight: '24px',
-    marginBottom: 4,
-    color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  unit: {
-    color: color.dark_charcoal,
-    fontSize: 14,
-    lineHeight: '17px',
-    marginBottom: 8
-  },
-  time: {
-    marginTop: 8,
-    fontSize: 14,
-    lineHeight: '17px',
-    color: color.light_gray,
-    float: 'right',
-    textAlign: 'right',
-    marginRight: 20,
-    width: 200
-  },
-  comment: {
-    color: color.dark_charcoal,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 8,
-    fontSize: 14,
-    lineHeight: '21px',
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  rubricBox: {
-    color: color.dark_charcoal,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 8,
-    fontSize: 14,
-    lineHeight: '21px',
-    width: '100%'
-  },
-  rubricPerformance: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    marginLeft: 5
-  },
-  icon: {
-    fontSize: 18
-  },
-  iconBox: {
-    float: 'left',
-    paddingLeft: 25,
-    cursor: 'pointer'
-  },
-  commentBox: {
-    float: 'left',
-    width: '96%'
-  }
-};
-
 const measureElement = element => {
   const DOMNode = ReactDOM.findDOMNode(element);
   return {
@@ -224,3 +147,80 @@ export default class LevelFeedbackEntry extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    minHeight: 72,
+    width: '100%',
+    marginBottom: 20,
+    display: 'flex',
+    flexFlow: 'wrap',
+    boxSizing: 'border-box'
+  },
+  lessonDetails: {
+    width: '75%',
+    marginLeft: 20,
+    marginTop: 8,
+    marginBottom: 4
+  },
+  lessonLevel: {
+    fontSize: 18,
+    lineHeight: '24px',
+    marginBottom: 4,
+    color: color.teal,
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  unit: {
+    color: color.dark_charcoal,
+    fontSize: 14,
+    lineHeight: '17px',
+    marginBottom: 8
+  },
+  time: {
+    marginTop: 8,
+    fontSize: 14,
+    lineHeight: '17px',
+    color: color.light_gray,
+    float: 'right',
+    textAlign: 'right',
+    marginRight: 20,
+    width: 200
+  },
+  comment: {
+    color: color.dark_charcoal,
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 8,
+    fontSize: 14,
+    lineHeight: '21px',
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  rubricBox: {
+    color: color.dark_charcoal,
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 8,
+    fontSize: 14,
+    lineHeight: '21px',
+    width: '100%'
+  },
+  rubricPerformance: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    marginLeft: 5
+  },
+  icon: {
+    fontSize: 18
+  },
+  iconBox: {
+    float: 'left',
+    paddingLeft: 25,
+    cursor: 'pointer'
+  },
+  commentBox: {
+    float: 'left',
+    width: '96%'
+  }
+};

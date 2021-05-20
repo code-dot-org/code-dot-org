@@ -6,7 +6,7 @@
 #  user_id         :integer          not null
 #  level_id        :integer          not null
 #  script_id       :integer          not null
-#  level_source_id :integer          unsigned
+#  level_source_id :bigint           unsigned
 #  attempt         :integer
 #  test_result     :integer
 #  created_at      :datetime         not null
@@ -17,7 +17,7 @@
 #  index_assessment_activities_on_user_and_level_and_script  (user_id,level_id,script_id)
 #
 
-class AssessmentActivity < ActiveRecord::Base
+class AssessmentActivity < ApplicationRecord
   belongs_to :user
   belongs_to :script
   belongs_to :level

@@ -30,21 +30,6 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import {StickyContainer} from 'react-sticky';
 
-const styles = {
-  bottomLinksContainer: {
-    padding: '10px 7px 40px 7px',
-    fontSize: 13,
-    lineHeight: '17px',
-    clear: 'both'
-  },
-  bottomLinksLink: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  bottomLinksLinkFirst: {
-    paddingBottom: 10
-  }
-};
-
 export default class TutorialExplorer extends React.Component {
   static propTypes = {
     tutorials: PropTypes.array.isRequired,
@@ -569,10 +554,8 @@ export default class TutorialExplorer extends React.Component {
               {this.state.filteredTutorialsForLocale.length > 0 && (
                 <TutorialSet
                   tutorials={this.state.filteredTutorialsForLocale}
-                  filters={this.state.filters}
-                  locale={this.props.locale}
                   specificLocale={true}
-                  localeEnglish={this.isLocaleEnglish()}
+                  localeEnglish={false}
                   disabledTutorials={this.props.disabledTutorials}
                   grade={grade}
                 />
@@ -636,8 +619,6 @@ export default class TutorialExplorer extends React.Component {
                 {this.shouldShowTutorials() && (
                   <TutorialSet
                     tutorials={this.state.filteredTutorials}
-                    filters={this.state.filters}
-                    locale={this.props.locale}
                     localeEnglish={this.isLocaleEnglish()}
                     disabledTutorials={this.props.disabledTutorials}
                     grade={grade}
@@ -671,6 +652,21 @@ export default class TutorialExplorer extends React.Component {
   }
 }
 
+const styles = {
+  bottomLinksContainer: {
+    padding: '10px 7px 40px 7px',
+    fontSize: 13,
+    lineHeight: '17px',
+    clear: 'both'
+  },
+  bottomLinksLink: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  bottomLinksLinkFirst: {
+    paddingBottom: 10
+  }
+};
+
 function getFilters({robotics, mobile}) {
   const filters = [
     {
@@ -703,6 +699,7 @@ function getFilters({robotics, mobile}) {
         {name: 'computers', text: i18n.filterPlatformComputers()},
         {name: 'android', text: i18n.filterPlatformAndroid()},
         {name: 'ios', text: i18n.filterPlatformIos()},
+        {name: 'screenreader', text: i18n.filterPlatformScreenReader()},
         {name: 'no-internet', text: i18n.filterPlatformNoInternet()},
         {name: 'no-computers', text: i18n.filterPlatformNoComputers()}
       ]

@@ -1,0 +1,43 @@
+name 'csp-u5-exam1-simulation-1_2020'
+editor_experiment ''
+
+
+
+wrong 'tails has a value of 0 and heads has a value of 100'
+wrong 'tails has a value of 100 and heads has a value of 0'
+right 'tails has a value of 20 and heads has a value of 20'
+wrong 'tails has a value of 50 and heads has a value of 50'
+
+markdown <<MARKDOWN
+A 2-sided coin has an equal likelihood of landing on each side. One side is called "heads" and the other is called "tails". The program below simulates randomly flipping that coin many times.
+
+```
+var heads = 0;
+var tails = 0;
+var rolls = 100;
+for(var i = 0; i < rolls; i++){
+  if(randomNumber(0,1) == 0){
+    heads++
+  } else {
+    tails++
+  }
+}
+```
+
+
+Which of the following is NOT a possible combination of values of the variables in this program when it finishes running?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Since the for-loop will run 100 times until the expression `i < rolls` evaluates to `false` the combined total of `tails` and `heads` must be 100.
+
+[Lesson 6 - Loops Investigate](https://curriculum.code.org/csp-20/unit5/6/) gave students practice with a coin flip simulation program.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-3.F: For simulations:
+a. Explain how computers can be used to represent real-world phenomena or outcomes.
+b. Compare simulations with real-world contexts.
+:::
+
+MARKDOWN

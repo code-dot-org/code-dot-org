@@ -12,14 +12,15 @@
 #  fk_rails_d5fc777f73  (course_id)
 #
 
-class Plc::Course < ActiveRecord::Base
+# Professional Learning Course
+# A course that the teacher is taking to build their skills.
+# Ex: Teaching Computer Science Principles.
+# A Plc::Course is always tied to a Course in our regular curriculum hierarchy.
+# A user may be enrolled in multiple courses.
+class Plc::Course < ApplicationRecord
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', foreign_key: 'plc_course_id', dependent: :destroy
   has_many :plc_course_units, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_id', dependent: :destroy
-  belongs_to :course, class_name: '::Course', foreign_key: 'course_id', dependent: :destroy, required: true
+  belongs_to :unit_group, class_name: '::UnitGroup', foreign_key: 'course_id', dependent: :destroy, required: true
 
-  delegate :name, to: :course
-
-  def get_url_name
-    name.downcase.tr(' ', '-')
-  end
+  delegate :name, to: :unit_group
 end

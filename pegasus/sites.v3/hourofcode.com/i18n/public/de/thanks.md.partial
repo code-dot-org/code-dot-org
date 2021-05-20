@@ -1,49 +1,37 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: Danke, dass du dich als Veranstalter für eine Hour of Code angemeldet hast!
 layout: wide
 nav: how_to_nav
-
 social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  twitter:card: player
+  twitter:site: "@codeorg"
 ---
 
 # Danke, dass du dich als Veranstalter für eine Hour of Code angemeldet hast!
 
-<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **The Hour of Code läuft während {{ campaign_date/full }} und wir werden Dich über neue Tutorials und andere spannende Updates informieren, sobald diese erscheinen. In der Zwischenzeit, was kannst du jetzt tun?**
 
-As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
+Als besonderes Dankeschön an die Organisatoren von Hour of Code haben wir ein neues Poster-Set mit Malala, Stephen Curry, Shakira und weiteren Produkten, die unter [50% Rabatt von Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) bestellt werden können. In diesem Jahr wird jedes Set mit 6 Postern und 126 Aufklebern "I did the Hour of Code" geliefert. Mit dem Rabatt erhalten Sie sie für weniger als unsere Kosten für die Herstellung. Das Angebot ist begrenzt, also bestellen Sie Ihre Poster bald. Wenn Sie nicht in den Vereinigten Staaten leben, können Sie aber auch [alle Poster herunterladen und drucken]({{ promote/promote_posters_url }}}).
 
 ## 1. Erzähle von Hour of Code in Deiner Schule und bei Deinen Freunden
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Du hast dich gerade der Hour of Code Bewegung angeschlossen. Erzähle es deinen Freunden mit dem Hashtag **#HourOfCode**!
 
-{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Du musst nicht in die Schule gehen, um neue Fähigkeiten zu erlernen. Invite a local politician or policy maker to visit your school for the Hour of Code. Das wird helfen das Verständnis für Informatilk in deiner Region zu fördern.
+{{ social_media_hoc }} <br /> Ermutigen Sie andere zur Teilnahme [mit unseren Muster-E-Mails.]({{ promote/sample_emails }}) Kontaktieren Sie Ihren Schulleiter und fordern Sie jedes Klassenzimmer an Ihrer Schule auf, sich anzumelden. Rekrutieren Sie eine lokale Gruppe - Pfadfinderclub, Kirche, Universität, Gewerkschaft oder sogar einige Freunde. Du musst nicht in die Schule gehen, um neue Fähigkeiten zu erlernen. Lade eine lokale Politikerin oder einen lokalen Politiker ein, um Deine Schule während der "Hour of Code" zu besuchen. Das wird helfen das Verständnis für Informatilk in deiner Region zu fördern.
 
-Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
+Verwenden Sie diese [Poster, Banner, Aufkleber, Videos und mehr]({{ promote/resources }}) für Ihre eigene Veranstaltung.
 
 ## 2. Suche nach einem ehrenamtlichen Vertreter, der Dir bei Deiner Veranstaltung hilft
 
-[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Suchen Sie in unserer Freiwilligenkartei]({{ urls/volunteer_local }}) nach Freiwilligen, die Ihr Klassenzimmer oder Ihren Video-Chat aus der Ferne besuchen können, um Ihre Schüler über die vielfältigen Möglichkeiten der Informatik zu informieren.
 
 ## 3. Plane Deine Hour of Code
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+Wählen Sie eine [Hour of Code Aktivität](https://hourofcode.com/learn) für Ihr Klassenzimmer und [überprüfen Sie diese Anleitung]({{ urls/how_to_guide }}).
 
 ### 4. Besorge Dir Werbematerial
 
-Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
+Bestellen Sie Materialien, die die Schüler für Ihre Veranstaltung begeistern sollen, indem Sie zum Code.org [Amazon Store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220) gehen. [Bestellen Sie Poster](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (und erhalten Sie 50% Rabatt), Hour of Code Kits, Aufkleber und mehr! Aber beeilen Sie sich, die Vorräte sind begrenzt.
 
 # Was kommt nach der Hour of Code?
 

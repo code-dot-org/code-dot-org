@@ -8,7 +8,7 @@
     pairingAllowed: @section.pairing_allowed
   }.to_json
 
-%script{src: minifiable_asset_path('js/sections/show.js'), data: {section: section_data}}
+%script{src: webpack_asset_path('js/sections/show.js'), data: {section: section_data}}
 
 #signinsection
   %h2
@@ -24,18 +24,9 @@
           = student.name
     .clear
 
-  %br
-  = precede '*' do
-    != t('signinsection.student_privacy_markdown', student_privacy_blog: 'http://teacherblog.code.org/post/156768797364/privacy-concern-with-using-student-full-names', markdown: true)
-
   = form_tag(log_in_section_path(id: @section.code), class: 'section-user-sign-in') do
     = hidden_field_tag :secret_picture_id
     = hidden_field_tag :user_id
-
-    #pairing_checkbox{style: 'display: none'}
-      = check_box_tag :show_pairing_dialog
-      = label_tag :show_pairing_dialog, t('signinsection.pair_programming')
-    = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
 
     - if @section.login_type == Section::LOGIN_TYPE_PICTURE
       #secret{style: 'display: none;'}
@@ -43,7 +34,7 @@
         %ul.pictures
           - @secret_pictures.each do |secret_picture|
             %li{id: secret_picture.id}
-              = image_tag secret_picture.path, width: 90, alt: secret_picture.name
+              = image_tag secret_picture.path, width: 66, alt: secret_picture.name
         .clear
 
     - if @section.login_type == Section::LOGIN_TYPE_WORD
@@ -51,6 +42,18 @@
         %h4.instructions= t('signinsection.words')
         = text_field_tag :secret_words, nil, autocomplete: 'off'
         .clear
+
+    #pairing_checkbox{style: 'display: none'}
+      = check_box_tag :show_pairing_dialog
+      = label_tag :show_pairing_dialog, t('signinsection.pair_programming')
+    = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
+
+    %br/
+    %br/
+    %div.span{ :style => "margin-left: auto"}
+      != "*&nbsp;"
+    %span
+      != t('signinsection.student_privacy_markdown', student_privacy_blog: 'http://teacherblog.code.org/post/156768797364/privacy-concern-with-using-student-full-names', markdown: true)
 
 %br/
 %br/

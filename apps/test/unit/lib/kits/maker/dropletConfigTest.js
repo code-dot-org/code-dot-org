@@ -1,17 +1,21 @@
 /** @file Test maker droplet config behavior */
-import {expect} from '../../../../util/configuredChai';
-import {
-  blocks,
-  getBoardEventDropdownForParam,
-  stringifySong,
-  MAKER_CATEGORY
+import {expect} from '../../../../util/deprecatedChai';
+import dropletConfig, {
+  configMicrobit
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
+import {CP_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {MB_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import * as commands from '@cdo/apps/lib/kits/maker/commands';
 
 describe('maker/dropletConfig.js', () => {
   describe('getBoardEventDropdownForParam', () => {
     it('unknown first parameter dropdown contains all options', () => {
-      expect(getBoardEventDropdownForParam('unknown')).to.deep.equal([
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'unknown',
+          CP_COMPONENT_EVENTS
+        )
+      ).to.deep.equal([
         '"change"',
         '"close"',
         '"data"',
@@ -23,72 +27,119 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('buttonL dropdown', () => {
-      expect(getBoardEventDropdownForParam('buttonL')).to.deep.equal([
-        '"down"',
-        '"up"'
-      ]);
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'buttonL',
+          CP_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"down"', '"up"']);
     });
 
     it('buttonR dropdown', () => {
-      expect(getBoardEventDropdownForParam('buttonR')).to.deep.equal([
-        '"down"',
-        '"up"'
-      ]);
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'buttonR',
+          CP_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"down"', '"up"']);
     });
 
     it('toggleSwitch dropdown', () => {
-      expect(getBoardEventDropdownForParam('toggleSwitch')).to.deep.equal([
-        '"change"',
-        '"close"',
-        '"open"'
-      ]);
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'toggleSwitch',
+          CP_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"change"', '"close"', '"open"']);
     });
 
     it('accelerometer dropdown', () => {
-      expect(getBoardEventDropdownForParam('accelerometer')).to.deep.equal([
-        '"change"',
-        '"data"',
-        '"shake"'
-      ]);
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'accelerometer',
+          CP_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"change"', '"data"', '"shake"']);
     });
 
     it('soundSensor dropdown', () => {
-      expect(getBoardEventDropdownForParam('soundSensor')).to.deep.equal([
-        '"change"',
-        '"data"'
-      ]);
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'soundSensor',
+          CP_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"change"', '"data"']);
     });
 
     it('lightSensor dropdown', () => {
-      expect(getBoardEventDropdownForParam('lightSensor')).to.deep.equal([
-        '"change"',
-        '"data"'
-      ]);
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'lightSensor',
+          CP_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"change"', '"data"']);
     });
 
     it('tempSensor dropdown', () => {
-      expect(getBoardEventDropdownForParam('tempSensor')).to.deep.equal([
-        '"change"',
-        '"data"'
-      ]);
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'tempSensor',
+          CP_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"change"', '"data"']);
     });
 
-    // TODO (bbuchanan): Enable when captouch is on by default
+    // Enable when captouch is on by default
     describe.skip('touchPads', () => {
       [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
         it(`touchPad${pin} dropdown`, () => {
-          expect(getBoardEventDropdownForParam(`touchPad${pin}`)).to.deep.equal(
-            ['"down"', '"up"']
-          );
+          expect(
+            dropletConfig.getBoardEventDropdownForParam(
+              `touchPad${pin}`,
+              CP_COMPONENT_EVENTS
+            )
+          ).to.deep.equal(['"down"', '"up"']);
         });
       });
+    });
+
+    // micro:bit specific components
+    it('buttonA dropdown', () => {
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'buttonA',
+          MB_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"down"', '"up"']);
+    });
+
+    it('buttonB dropdown', () => {
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'buttonB',
+          MB_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"down"', '"up"']);
+    });
+
+    it('compass dropdown', () => {
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'compass',
+          MB_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"change"', '"data"']);
     });
   });
 
   describe('stringifySong', () => {
     it('formats note arrays indented with one note per line', () => {
       expect(
-        stringifySong([['A1', 1 / 4], ['B2', 1 / 4], ['C3', 1 / 2]])
+        dropletConfig.stringifySong([
+          ['A1', 1 / 4],
+          ['B2', 1 / 4],
+          ['C3', 1 / 2]
+        ])
       ).to.equal(
         '[\n' + '  ["A1",0.25],\n' + '  ["B2",0.25],\n' + '  ["C3",0.5]\n' + ']'
       );
@@ -134,7 +185,7 @@ describe('maker/dropletConfig.js', () => {
     let block;
 
     beforeEach(() => {
-      block = blocks.find(x => x.func === 'createLed');
+      block = configMicrobit.blocks.find(x => x.func === 'createLed');
     });
 
     it('is an exported block', () => {
@@ -142,7 +193,7 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('is in the Maker category', () => {
-      expect(block).to.have.property('category', MAKER_CATEGORY);
+      expect(block).to.have.property('category', dropletConfig.MAKER_CATEGORY);
     });
 
     it('has one argument', () => {
@@ -166,7 +217,9 @@ describe('maker/dropletConfig.js', () => {
     let block;
 
     beforeEach(() => {
-      block = blocks.find(x => x.func === 'var myLed = createLed');
+      block = configMicrobit.blocks.find(
+        x => x.func === 'var myLed = createLed'
+      );
     });
 
     it('is an exported block', () => {
@@ -174,7 +227,7 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('is in the Maker category', () => {
-      expect(block).to.have.property('category', MAKER_CATEGORY);
+      expect(block).to.have.property('category', dropletConfig.MAKER_CATEGORY);
     });
 
     it('has one argument', () => {
@@ -193,7 +246,7 @@ describe('maker/dropletConfig.js', () => {
     let block;
 
     beforeEach(() => {
-      block = blocks.find(x => x.func === 'createButton');
+      block = configMicrobit.blocks.find(x => x.func === 'createButton');
     });
 
     it('is an exported block', () => {
@@ -201,7 +254,7 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('is in the Maker category', () => {
-      expect(block).to.have.property('category', MAKER_CATEGORY);
+      expect(block).to.have.property('category', dropletConfig.MAKER_CATEGORY);
     });
 
     it('has one argument', () => {
@@ -225,7 +278,9 @@ describe('maker/dropletConfig.js', () => {
     let block;
 
     beforeEach(() => {
-      block = blocks.find(x => x.func === 'var myButton = createButton');
+      block = configMicrobit.blocks.find(
+        x => x.func === 'var myButton = createButton'
+      );
     });
 
     it('is an exported block', () => {
@@ -233,7 +288,7 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('is in the Maker category', () => {
-      expect(block).to.have.property('category', MAKER_CATEGORY);
+      expect(block).to.have.property('category', dropletConfig.MAKER_CATEGORY);
     });
 
     it('has one argument', () => {

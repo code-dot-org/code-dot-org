@@ -14,7 +14,8 @@ const WorkshopPropType = PropTypes.shape({
   organizer: PropTypes.shape({
     name: PropTypes.string,
     email: PropTypes.string
-  })
+  }),
+  virtual: PropTypes.bool
 });
 
 const FacilitatorPropType = PropTypes.shape({

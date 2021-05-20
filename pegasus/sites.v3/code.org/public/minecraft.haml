@@ -2,29 +2,25 @@
 title: Minecraft
 theme: responsive
 social:
-  "twitter:card": photo
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://code.org/minecraft"
-  "twitter:image:src" : "https://code.org/images/mc/mc_social_2017.jpg"
-  "twitter:title": "Minecraft Hour of Code"
-  "twitter:description": "<%= I18n.t(:minecraft_og_agent) %>"
-  "og:title": "Minecraft Hour of Code"
-  "og:description": "<%= I18n.t(:minecraft_og_agent) %>"
-  "og:image" : "https://code.org/images/mc/mc_social_2017.jpg"
-  "og:image:width": "1200"
-  "og:image:height": "630"
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
+  twitter:card: photo
+  twitter:site: "@codeorg"
+  twitter:url: http://code.org/minecraft
+  twitter:image:src: https://code.org/images/mc/mc_social_2017.jpg
+  twitter:title: Minecraft Hour of Code
+  og:title: Minecraft Hour of Code
+  og:image: https://code.org/images/mc/mc_social_2017.jpg
+  og:image:width: '1200'
+  og:image:height: '630'
+  og:video: ''
+  og:video:width: ''
+  og:video:height: ''
+  og:video:type: ''
 video_player: true
 style_min: true
 ---
 
-= view :minecraft_2018
+:ruby
+  @header["social"]["twitter:description"] = I18n.t(:minecraft_og_agent)
+  @header["social"]["og:description"] = I18n.t(:minecraft_og_agent)
 
-.clear
-
-.mc-videos{style: "clear: both;"}
-  %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)
-  = view :inspirational_videos
+= view :minecraft_2019

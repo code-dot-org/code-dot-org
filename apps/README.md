@@ -165,8 +165,8 @@ if (IN_UNIT_TEST) {
 These if statements will be removed from production source files at build time.
 
 The test runner starts a server which can serve files in the apps directory to
-your test code. Only whitelisted files and directories are available. See the
-`config.karma.options.files` array in `Gruntfile.js` for the whitelist. When
+your test code. Only allowlisted files and directories are available. See the
+`config.karma.options.files` array in `Gruntfile.js` for the allowlist. When
 fetching files served by the test runner, prefix the file path with
 `/base/`. For example, to load the `test/audio/assets/win.mp3` file in an
 `<audio>` tag inside your test, you could write:
@@ -224,7 +224,7 @@ A static version of the styleguide is hosted at https://code-dot-org.github.io/c
 
 ![code-studio-common bundle](https://user-images.githubusercontent.com/1070243/44691985-abe8dc80-aa15-11e8-95a3-0835ca3529df.png)
 
-Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer). 
+Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 
 
 ### Localization

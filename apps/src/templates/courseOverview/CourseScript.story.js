@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 import {UnconnectedCourseScript as CourseScript} from './CourseScript';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-const sectionId = '11';
+const sectionId = 11;
 const courseId = 123;
 const unhiddenState = Immutable.fromJS({
   initialized: false,
@@ -12,7 +12,7 @@ const unhiddenState = Immutable.fromJS({
   scriptsBySection: {}
 });
 const hiddenState = unhiddenState.setIn(
-  ['stagesBySection', sectionId, courseId.toString()],
+  ['stagesBySection', sectionId.toString(), courseId.toString()],
   true
 );
 
@@ -27,48 +27,58 @@ const defaultProps = {
     'explores the structure and design of the internet and the implications of ' +
     'those design decisions.',
   viewAs: ViewType.Teacher,
-  selectedSectionId: '',
+  selectedSectionId: 11,
   hiddenStageState: unhiddenState,
   hasNoSections: true,
-  toggleHiddenScript: () => {}
+  toggleHiddenScript: () => {},
+  sectionsForDropdown: [
+    {
+      name: 'Section 11',
+      id: 11,
+      isAssigned: false
+    }
+  ]
 };
 
 export default storybook => {
-  storybook.storiesOf('CourseScript', module).addStoryTable([
-    {
-      name: 'Plain CourseScript',
-      story: () => <CourseScript {...defaultProps} />
-    },
-    {
-      name: 'With teacher info',
-      story: () => (
-        <CourseScript
-          {...defaultProps}
-          selectedSectionId={sectionId}
-          hasNoSections={false}
-        />
-      )
-    },
-    {
-      name: 'hidden as teacher',
-      story: () => (
-        <CourseScript
-          {...defaultProps}
-          selectedSectionId={sectionId}
-          hasNoSections={false}
-          hiddenStageState={hiddenState}
-        />
-      )
-    },
-    {
-      name: 'no section selected',
-      story: () => (
-        <CourseScript
-          {...defaultProps}
-          hasNoSections={false}
-          hiddenStageState={hiddenState}
-        />
-      )
-    }
-  ]);
+  storybook
+    .storiesOf('CourseScript', module)
+    .withReduxStore()
+    .addStoryTable([
+      {
+        name: 'Plain CourseScript',
+        story: () => <CourseScript {...defaultProps} />
+      },
+      {
+        name: 'With teacher info',
+        story: () => (
+          <CourseScript
+            {...defaultProps}
+            selectedSectionId={sectionId}
+            hasNoSections={false}
+          />
+        )
+      },
+      {
+        name: 'hidden as teacher',
+        story: () => (
+          <CourseScript
+            {...defaultProps}
+            selectedSectionId={sectionId}
+            hasNoSections={false}
+            hiddenStageState={hiddenState}
+          />
+        )
+      },
+      {
+        name: 'no section selected',
+        story: () => (
+          <CourseScript
+            {...defaultProps}
+            hasNoSections={false}
+            hiddenStageState={hiddenState}
+          />
+        )
+      }
+    ]);
 };

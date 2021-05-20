@@ -1,6 +1,6 @@
 hidden false
 
-stage 'Hour of Code 2015'
+lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015', has_lesson_plan: false
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'
@@ -15,3 +15,4 @@ level 'Underground Avoiding Lava'
 level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
+

@@ -1,0 +1,2742 @@
+{
+  "script": {
+    "name": "cspunit1",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "has_lesson_plan": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:39 UTC",
+    "seeding_key": {
+      "script.name": "cspunit1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Personal Innovations",
+      "name": "Personal Innovations",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Sending Binary Messages",
+      "name": "Sending Binary Messages",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Sending Complex Messages",
+      "name": "Sending Complex Messages",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Sending Binary Messages with the Internet Simulator",
+      "name": "Sending Binary Messages with the Internet Simulator",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Sending Bits in the Real World",
+      "name": "Sending Bits in the Real World",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Number Systems",
+      "name": "Number Systems",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Binary Numbers",
+      "name": "Binary Numbers",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Sending Numbers",
+      "name": "Sending Numbers",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Encoding Numbers in the Real World",
+      "name": "Encoding Numbers in the Real World",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Encoding and Sending Text",
+      "name": "Encoding and Sending Text",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Sending Formatted Text",
+      "name": "Sending Formatted Text",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Bytes and File Sizes",
+      "name": "Bytes and File Sizes",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Bytes and File Sizes",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Text Compression",
+      "name": "Text Compression",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Encoding B&W Images",
+      "name": "Encoding B&W Images",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Encoding Color Images",
+      "name": "Encoding Color Images",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Lossy Compression and File Formats",
+      "name": "Lossy Compression and File Formats",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lossy Compression and File Formats",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "key": "Encode a Complex Thing",
+      "name": "Encode an Experience",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Encode a Complex Thing",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L1 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L1 Student Lesson Introduction"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L1 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L1 Innovation - Video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L1 Innovation - Video"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L1 Innovation - Video"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L1 - FR computer science word association"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L1 - FR computer science word association"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L1 - FR computer science word association"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L2 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L2 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L2 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L2 Multiple Choice Assessment Question"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L2 Multiple Choice Assessment Question"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L2 Multiple Choice Assessment Question"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L2 Free response assessment question"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L2 Free response assessment question"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L2 Free response assessment question"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L2 Free response reflection question"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L2 Free response reflection question"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L2 Free response reflection question"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L3 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L3 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L3 Free response reflection question"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 Free response reflection question"
+        ],
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L3 Free response reflection question"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L3 Multiple Choice"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 Multiple Choice"
+        ],
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L3 Multiple Choice"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L3 Free Response"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 Free Response"
+        ],
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L3 Free Response"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L4 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L4 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L4 NetSim SendAB"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 NetSim SendAB"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L4 NetSim SendAB"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L4 Multiple Choice"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 Multiple Choice"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L4 Multiple Choice"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L4 Free Response Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 Free Response Reflection"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L4 Free Response Reflection"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L5 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L5 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ],
+        "lesson.key": "Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L5 How the Internet Works - Video"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L5 Matching Assessment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 Matching Assessment"
+        ],
+        "lesson.key": "Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L5 Matching Assessment"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L6 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 Student Lesson Introduction"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L6 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L6 Assessment multiple choice"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 Assessment multiple choice"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L6 Assessment multiple choice"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L6 Free Response Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 Free Response Reflection"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L6 Free Response Reflection"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L7 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L7 Student Lesson Introduction"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L7 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Odometer"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Odometer"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Odometer"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L7 Free Response Assessment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L7 Free Response Assessment"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L7 Free Response Assessment"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L7 Free Response Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L7 Free Response Reflection"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L7 Free Response Reflection"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L8 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L8 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L8 NetSim numbers with decimal"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 NetSim numbers with decimal"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L8 NetSim numbers with decimal"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L8 Free Response Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 Free Response Reflection"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L8 Free Response Reflection"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L8 Free Response2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 Free Response2"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L8 Free Response2"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L8 Multiple Choice"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 Multiple Choice"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L8 Multiple Choice"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L9 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Student Lesson Introduction"
+        ],
+        "lesson.key": "Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L9 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L9 Free Response Assessment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Free Response Assessment"
+        ],
+        "lesson.key": "Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L9 Free Response Assessment"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L10 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Student Lesson Introduction"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L10 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L10 NetSim numbers with decimal"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 NetSim numbers with decimal"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L10 NetSim numbers with decimal"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L10 Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Assessment 1"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L10 Assessment 1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L10 Assessment 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Assessment 2"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L10 Assessment 2"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L10 Assessment Free Response"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Assessment Free Response"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L10 Assessment Free Response"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L11 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L11 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L11 NetSim numbers with Ascii"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 NetSim numbers with Ascii"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L11 NetSim numbers with Ascii"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Assessment 1"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L11 Assessment 1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 Assessment 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Assessment 2"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L11 Assessment 2"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 Reflection Free Response"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Reflection Free Response"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L11 Reflection Free Response"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 Collaboration Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Collaboration Reflection"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L11 Collaboration Reflection"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L12 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L12 Student Lesson Introduction"
+        ],
+        "lesson.key": "Bytes and File Sizes",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L12 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L12 Reflection Free Response"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L12 Reflection Free Response"
+        ],
+        "lesson.key": "Bytes and File Sizes",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L12 Reflection Free Response"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Student Lesson Summary"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Student Lesson Summary"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L13 Student Lesson Summary"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L13 Text Compression"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Text Compression"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L13 Text Compression"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L13 - Assess Text Compression reverse process"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 - Assess Text Compression reverse process"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L13 - Assess Text Compression reverse process"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L13 Assess Text Compression amount"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Assess Text Compression amount"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L13 Assess Text Compression amount"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L13 Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Assessment 1"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L13 Assessment 1"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L13 Assessment 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 Assessment 2"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L13 Assessment 2"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L14 Student Lesson Summary"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L14 Student Lesson Summary"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L14 Student Lesson Summary"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 14 - Make the Letter A"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 14 - Fix bit offset"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 14 - Make your own B and W Image"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L14 Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L14 Assessment 1"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L14 Assessment 1"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L14 - Assessment 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L14 - Assessment 2"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L14 - Assessment 2"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L15 Student Lesson Summary"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L15 Student Lesson Summary"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L15 Student Lesson Summary"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Complete 3-bit color"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Color Shades"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Color Shades 4x4"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation Flappy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation Flappy"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation Flappy"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation Bee"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation Bee"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Favicon Instructions"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Favicon Instructions"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Favicon Instructions"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Free Play"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Free Play"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Color Free Play"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "a bit about pixels"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "a bit about pixels"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "a bit about pixels"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L16 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L16 Student Lesson Introduction"
+        ],
+        "lesson.key": "Lossy Compression and File Formats",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L16 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L16 - Matching File Compression Types"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L16 - Matching File Compression Types"
+        ],
+        "lesson.key": "Lossy Compression and File Formats",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L16 - Matching File Compression Types"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L17 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L17 Student Lesson Introduction"
+        ],
+        "lesson.key": "Encode a Complex Thing",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      },
+      "level_keys": [
+        "U1L17 Student Lesson Introduction"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U1L1 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L1 Student Lesson Introduction"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L1 Innovation - Video",
+        "script_level.level_keys": [
+          "U1L1 Innovation - Video"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L1 - FR computer science word association",
+        "script_level.level_keys": [
+          "U1L1 - FR computer science word association"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L2 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L2 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L2 Multiple Choice Assessment Question",
+        "script_level.level_keys": [
+          "U1L2 Multiple Choice Assessment Question"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L2 Free response assessment question",
+        "script_level.level_keys": [
+          "U1L2 Free response assessment question"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L2 Free response reflection question",
+        "script_level.level_keys": [
+          "U1L2 Free response reflection question"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L3 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 Free response reflection question",
+        "script_level.level_keys": [
+          "U1L3 Free response reflection question"
+        ],
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 Multiple Choice",
+        "script_level.level_keys": [
+          "U1L3 Multiple Choice"
+        ],
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 Free Response",
+        "script_level.level_keys": [
+          "U1L3 Free Response"
+        ],
+        "lesson.key": "Sending Complex Messages",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L4 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 NetSim SendAB",
+        "script_level.level_keys": [
+          "U1L4 NetSim SendAB"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 Multiple Choice",
+        "script_level.level_keys": [
+          "U1L4 Multiple Choice"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 Free Response Reflection",
+        "script_level.level_keys": [
+          "U1L4 Free Response Reflection"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L5 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 How the Internet Works - Video",
+        "script_level.level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ],
+        "lesson.key": "Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 Matching Assessment",
+        "script_level.level_keys": [
+          "U1L5 Matching Assessment"
+        ],
+        "lesson.key": "Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L6 Student Lesson Introduction"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 Assessment multiple choice",
+        "script_level.level_keys": [
+          "U1L6 Assessment multiple choice"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 Free Response Reflection",
+        "script_level.level_keys": [
+          "U1L6 Free Response Reflection"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L7 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L7 Student Lesson Introduction"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Odometer",
+        "script_level.level_keys": [
+          "Odometer"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L7 Free Response Assessment",
+        "script_level.level_keys": [
+          "U1L7 Free Response Assessment"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L7 Free Response Reflection",
+        "script_level.level_keys": [
+          "U1L7 Free Response Reflection"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L8 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 NetSim numbers with decimal",
+        "script_level.level_keys": [
+          "U1L8 NetSim numbers with decimal"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 Free Response Reflection",
+        "script_level.level_keys": [
+          "U1L8 Free Response Reflection"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 Free Response2",
+        "script_level.level_keys": [
+          "U1L8 Free Response2"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 Multiple Choice",
+        "script_level.level_keys": [
+          "U1L8 Multiple Choice"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L9 Student Lesson Introduction"
+        ],
+        "lesson.key": "Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Free Response Assessment",
+        "script_level.level_keys": [
+          "U1L9 Free Response Assessment"
+        ],
+        "lesson.key": "Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L10 Student Lesson Introduction"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 NetSim numbers with decimal",
+        "script_level.level_keys": [
+          "U1L10 NetSim numbers with decimal"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Assessment 1",
+        "script_level.level_keys": [
+          "U1L10 Assessment 1"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Assessment 2",
+        "script_level.level_keys": [
+          "U1L10 Assessment 2"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Assessment Free Response",
+        "script_level.level_keys": [
+          "U1L10 Assessment Free Response"
+        ],
+        "lesson.key": "Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L11 Student Lesson Introduction"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 NetSim numbers with Ascii",
+        "script_level.level_keys": [
+          "U1L11 NetSim numbers with Ascii"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Assessment 1",
+        "script_level.level_keys": [
+          "U1L11 Assessment 1"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Assessment 2",
+        "script_level.level_keys": [
+          "U1L11 Assessment 2"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Reflection Free Response",
+        "script_level.level_keys": [
+          "U1L11 Reflection Free Response"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Collaboration Reflection",
+        "script_level.level_keys": [
+          "U1L11 Collaboration Reflection"
+        ],
+        "lesson.key": "Sending Formatted Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L12 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L12 Student Lesson Introduction"
+        ],
+        "lesson.key": "Bytes and File Sizes",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L12 Reflection Free Response",
+        "script_level.level_keys": [
+          "U1L12 Reflection Free Response"
+        ],
+        "lesson.key": "Bytes and File Sizes",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Student Lesson Summary",
+        "script_level.level_keys": [
+          "U1L13 Student Lesson Summary"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Text Compression",
+        "script_level.level_keys": [
+          "U1L13 Text Compression"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 - Assess Text Compression reverse process",
+        "script_level.level_keys": [
+          "U1L13 - Assess Text Compression reverse process"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Assess Text Compression amount",
+        "script_level.level_keys": [
+          "U1L13 Assess Text Compression amount"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Assessment 1",
+        "script_level.level_keys": [
+          "U1L13 Assessment 1"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 Assessment 2",
+        "script_level.level_keys": [
+          "U1L13 Assessment 2"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L14 Student Lesson Summary",
+        "script_level.level_keys": [
+          "U1L14 Student Lesson Summary"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 14 - Make the Letter A",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 14 - Fix bit offset",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 14 - Make your own B and W Image",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L14 Assessment 1",
+        "script_level.level_keys": [
+          "U1L14 Assessment 1"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L14 - Assessment 2",
+        "script_level.level_keys": [
+          "U1L14 - Assessment 2"
+        ],
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L15 Student Lesson Summary",
+        "script_level.level_keys": [
+          "U1L15 Student Lesson Summary"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Complete 3-bit color",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Color Shades",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Color Shades 4x4",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation Flappy",
+        "script_level.level_keys": [
+          "Pixelation Flappy"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation Bee",
+        "script_level.level_keys": [
+          "Pixelation Bee"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Favicon Instructions",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Favicon Instructions"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Color Free Play",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Free Play"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "a bit about pixels",
+        "script_level.level_keys": [
+          "a bit about pixels"
+        ],
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L16 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L16 Student Lesson Introduction"
+        ],
+        "lesson.key": "Lossy Compression and File Formats",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L16 - Matching File Compression Types",
+        "script_level.level_keys": [
+          "U1L16 - Matching File Compression Types"
+        ],
+        "lesson.key": "Lossy Compression and File Formats",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L17 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L17 Student Lesson Introduction"
+        ],
+        "lesson.key": "Encode a Complex Thing",
+        "lesson_group.key": "",
+        "script.name": "cspunit1"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

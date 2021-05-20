@@ -1,4 +1,4 @@
-- video = Homepage.get_video
+- video = Homepage.get_video(request)
 - if video
   #videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
   = view :display_video_lightbox, id: "mainvideo", video_code: video[:video_code], download_filename: nil, download_path: video[:download_path], facebook: video[:facebook], twitter: video[:twitter]

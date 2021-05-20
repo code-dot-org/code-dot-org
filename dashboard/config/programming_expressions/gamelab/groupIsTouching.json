@@ -1,0 +1,13 @@
+{
+  "func": "group.isTouching",
+  "category": "Groups",
+  "paletteParams": [
+    "target"
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "group_isTouching",
+  "noAutocomplete": true,
+  "type": "value"
+}

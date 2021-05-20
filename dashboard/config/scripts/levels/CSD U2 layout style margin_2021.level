@@ -1,0 +1,38 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-12-04T21:49:40.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**How does the code work?**]\r\nHere is the code that is putting extra space around the images:\r\n\r\n    img {\r\n        margin: 10px;\r\n    }\r\n\r\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\r\n\r\n* `margin: 10px;` is the rule that puts 10 pixels of space around the image.\r\n:::\r\n\r\n::: details [**What does the `margin` property do?**]\r\n\r\nThe `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\" target=\"_new\">W3Schools - CSS margin Property</a>\r\n:::\r\n\r\n::: details [**What does `px` mean / What is a pixel?**]\r\n\r\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\r\n\r\n\r\n:::\r\n</div>\r\n\r\n# Margin\r\n\r\nMargins specify how much space should be around an element.\r\n\r\n* Find the `margin` property in the `img` rule-set.\r\n* Change the margin to be larger, and discuss the effect with a partner.\r\n* Choose another element type and give it a margin, too.",
+    "instructions_important": "false",
+    "project_template_level_name": "CSDU2 - layout style template_2021",
+    "hide_share_and_remix": "false",
+    "encrypted_examples": "M00ltjc4s3plM9hlDnBemF/VYHYzAf95pfMGSO/SctSahP8eLc/MnNgzdLbL\n1tHd366Qnn+cUaZUr9uMdtj1vw==\n",
+    "submittable": "false",
+    "parent_level_id": 18357,
+    "name_suffix": "_2021",
+    "reference_links": [
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "map_reference": "/docs/concepts/css/layout-properties/",
+    "encrypted": "false",
+    "display_name": "Extra Code: Margins",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Control the amount of space around each element in your page.",
+    "thumbnail_url": "https://images.code.org/2dc42da0de3eec242c9bc38ba5a5deca-image-1565669528582.11.45 PM.png"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:44:11 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 23:57:22 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-07-12 20:55:15 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:52:06 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-01-30 21:47:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-01 03:07:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-13 04:12:47 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-10 22:48:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-20 21:20:52 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-29 18:22:11 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab>

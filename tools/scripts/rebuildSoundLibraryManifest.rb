@@ -64,6 +64,10 @@ class ManifestBuilder
     alias_map = build_alias_map(sound_metadata)
     info "Mapped #{alias_map.size} aliases."
 
+    info "Building category map..."
+    category_map = build_category_map(sound_metadata)
+    info "Mapped #{category_map.size} categories"
+
     # Write result to file
     File.open(DEFAULT_OUTPUT_FILE, 'w') do |file|
       file.write(
@@ -80,6 +84,9 @@ class ManifestBuilder
             #   are represented in the alias map.
             # Also sort for stable updates
             'metadata': sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+
+            # Sort category map for stable updates
+            'categories': category_map.sort.to_h,
 
             # Sort alias map for stable updates
             'aliases': alias_map.sort.to_h
@@ -278,6 +285,16 @@ The sound has been skipped.
       begin
         json_response = objects['json'].get
         metadata = JSON.parse(json_response.body.read)
+        aliases = metadata['aliases']
+        # move categories out of aliases
+        categories = []
+        aliases.each do |a|
+          if a.start_with? "category_"
+            categories.push (a.delete_prefix "category_")
+          end
+        end
+        metadata['aliases'] = aliases.map {|a| (a.start_with? "category_") ? (a.delete_prefix "category_") : a}
+        metadata['categories'] = categories
       rescue Aws::Errors::ServiceError => service_error
         next <<-WARN
 There was an error retrieving #{name}.json from S3:
@@ -335,6 +352,21 @@ The sound has been skipped.
     alias_progress_bar.finish unless alias_progress_bar.nil?
     alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
     alias_map
+  end
+
+  # Given a metadata map, build the category map
+  def build_category_map(sound_metadata)
+    category_progress_bar = ProgressBar.create(total: sound_metadata.size) unless @options[:quiet]
+    category_map = Hash.new {|h, k| h[k] = []}
+    sound_metadata.each do |name, metadata|
+      categories = metadata['categories']
+      categories.each do |category|
+        category_map[category] = (category_map[category] + [name]).uniq.sort
+      end
+      category_progress_bar.increment unless category_progress_bar.nil?
+    end
+    category_progress_bar.finish unless category_progress_bar.nil?
+    category_map
   end
 
   def verbose(s)

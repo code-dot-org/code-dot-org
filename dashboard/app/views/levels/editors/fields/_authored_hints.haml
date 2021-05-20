@@ -1,0 +1,89 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#authored_hints"}}
+  Authored Hints
+
+#authored_hints.in.collapse
+  %p
+    Learn how to make authored hints
+    = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-an-Authored-Hint', target: '_blank'
+  .json_editor
+    .json_template
+      .authored_hint_space
+        %input.hint_type{type: 'hidden', value: 'general'}
+        %input.tts_url{type: 'hidden', value: 'general'}
+        .row
+          .span10
+            %input.hint_id{type: 'text', placeholder: 'hint_id'}
+            %select.hint_class
+              %option{value: 'content'} Content Hint
+              %option{value: 'pointer'} Pointer Hint
+              %option{value: 'bottom-out'} Bottom-out Hint
+            %input.hint_path{type: 'text', placeholder: 'hint_path'}
+            = select_tag :hint_video, options_for_select(video_key_choices), {include_blank: true, class: 'hint_video'}
+        .row
+          .span5
+            %textarea.hint_markdown
+          .span5
+            .markdown_preview
+        .row
+          .span10
+            %button.remove_authored_hint{type: 'button'}
+              %i.icon-trash
+            %button.move_up{type: 'button'}
+              %i.icon-chevron-up
+            %button.move_down{type: 'button'}
+              %i.icon-chevron-down
+        %hr
+    #all_authored_hints_editor
+    %button#add_authored_hint{type: 'button'} Add a Hint
+
+  .field
+    = f.label :authored_hints, "Authored Hints JSON"
+    %div{style: '-webkit-user-select: text'}
+    = f.text_area :authored_hints, rows: 4
+
+  - if @level.hint_prompt_enabled?
+    .field
+      = f.label :hint_prompt_attempts_threshold, "How many times does a student need to attempt this level before being shown the hint prompt dialog? If you leave this field blank, the default is 7 attempts."
+      %div{style: '-webkit-user-select: text'}
+      = f.select :hint_prompt_attempts_threshold, options_for_select([*1..30], @level.properties["hint_prompt_attempts_threshold"])
+
+- content_for :body_scripts do
+  :javascript
+    $(document).ready(function () {
+      levelbuilder.jsonEditor("#authored_hints", {
+        json_textarea: '#level_authored_hints',
+        add_button: '#add_authored_hint',
+        remove_button: ".remove_authored_hint",
+        up_button: ".move_up",
+        down_button: ".move_down",
+        value_space: ".authored_hint_space",
+        template: ".json_template",
+        form_container: "#all_authored_hints_editor",
+        wrapper: ".json_editor",
+        onNewSpace: function (space) {
+          space.find('.hint_id').get(0).setAttribute("required", "");
+          levelbuilder.initializeCodeMirror(
+            space.find('.hint_markdown').get(0),
+            'markdown',
+            {
+              callback: function(editor, change) {
+                convertXmlToBlockly(space.find('.markdown_preview').get(0));
+                space.find('.hint_markdown').val(editor.getValue());
+                space.find('.hint_markdown').trigger('change');
+              },
+              attachments: true,
+              preview: space.find('.markdown_preview').get(0)
+            }
+          );
+        },
+        model: {
+          hint_class: "",
+          hint_markdown: "",
+          hint_id: "",
+          hint_type: "general",
+          hint_path: "",
+          hint_video: "",
+          tts_url: "",
+        }
+      });
+    });

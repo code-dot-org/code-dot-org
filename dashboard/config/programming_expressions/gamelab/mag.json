@@ -1,0 +1,13 @@
+{
+  "func": "mag",
+  "category": "Math",
+  "paletteParams": [
+    "a",
+    "b"
+  ],
+  "params": [
+    "100",
+    "100"
+  ],
+  "type": "value"
+}

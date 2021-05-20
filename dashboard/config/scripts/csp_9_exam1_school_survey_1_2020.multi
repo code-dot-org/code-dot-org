@@ -1,0 +1,43 @@
+name 'csp-9-exam1-school-survey-1-2020'
+editor_experiment ''
+wrong 'How Travel'
+wrong 'How Long'
+wrong 'Time Arrive'
+right 'Biggest Challenges'
+
+markdown <<MARKDOWN
+The next three questions all refer to the same dataset described below.
+
+A school is conducting a survey of students to learn more about how they get to school. Students were asked how they travel to school, how long it takes them to get to school, what time they arrive at school, and for a description of their most significant challenges when traveling to school. Several rows of the data collected are shown in the table below.
+
+Which column is data will likely be most difficult to visualize or analyze?
+
+| Student ID | How Travel | How Long | Time Arrive | Biggest Challenges |
+| --- | --- | --- | --- | ---|
+| 738192 | Car | 10 minutes | 7:30 am |  None | 
+| 781401 | Car | 20 minutes | 7:45 am | |
+| 72001 | Car | .5 hours |  7:40 am | |
+| 74012 | Bus | 10-20 minutes | 7:35 am | Sister sometimes sleeps in and I miss my bus |
+| 75441 | Walk | 1 hour | 7:30 am | |
+| 73109 | Walk | 20 mins | 7:45 am | |
+| 76120 | Bus | twenty minutes | 7:35 am | |
+| 73012 | Car | 15 min |  7:20 am | Waking up! |
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** The “Biggest Challenge” column has incomplete data and the data that it does contain is not at all standardized in its format. Both of these factors will make it difficult to visualize and analyze the data from this column.
+
+Students discovered some of the challenges in working with incomplete and messy data in [Lesson - Cleaning and Filtering Data](https://curriculum.code.org/csp-20/unit9/3/) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+
+* DAT-2.C: Identify the challenges associated with processing data.
+:::
+
+
+MARKDOWN

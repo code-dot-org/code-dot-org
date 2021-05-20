@@ -170,7 +170,8 @@ class HamburgerTest < Minitest::Test
 
   def test_hamburger_content_noexpandable_nonen
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "fr"})
-    refute contents[:entries].find {|e| e[:type] == "expander"}
+    # 'legal_entries' is an allowable section in non-english.
+    refute contents[:entries].find {|e| e[:type] == "expander" && e[:id] != "legal_entries"}
   end
 
   # Header content tests.

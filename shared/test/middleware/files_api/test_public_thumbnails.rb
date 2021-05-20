@@ -96,6 +96,36 @@ class PublicThumbnailsTest < FilesApiTestBase
     end
   end
 
+  def test_unknown_thumbnail
+    ImageModeration.stubs(:rate_image).once.returns :unknown
+
+    with_project_type('applab') do |channel_id|
+      get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
+      assert successful?
+
+      # Returns cache timeout between 60-120 seconds, proxy timeout between 30-60 seconds
+      assert last_response['Cache-Control'] =~ /public, max-age=(\d+), s-maxage=(\d+)/
+      max_age = $1.to_i
+      s_maxage = $2.to_i
+      assert max_age.between?(60, 120)
+      assert s_maxage.between?(30, 60)
+
+      # Returns project_default.png instead of the actual image
+      refute_equal @thumbnail_body, last_response.body
+
+      # Does not flag the project as abusive
+      get "/v3/channels/#{channel_id}/abuse"
+      assert successful?
+      assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+
+      # Does not flag the thumbnail as abusive
+      thumbnail = FileBucket.new.get(channel_id, @thumbnail_filename)
+      metadata = thumbnail[:metadata]
+      thumbnail_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+      assert_equal 0, thumbnail_abuse
+    end
+  end
+
   def test_bad_channel_thumbnail
     ImageModeration.expects(:rate_image).never
 
@@ -171,11 +201,7 @@ class PublicThumbnailsTest < FilesApiTestBase
 
     # Require that tests delete the assets they upload
     get "v3/files/#{channel_id}"
-    expected_empty_files = {
-      'files' => [],
-      'filesVersionId' => ''
-    }
-    assert_equal(expected_empty_files, JSON.parse(last_response.body))
+    assert not_found?
 
     delete_channel(channel_id)
   end

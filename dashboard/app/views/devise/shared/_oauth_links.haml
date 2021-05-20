@@ -17,12 +17,18 @@
       %strong
         Hi! If you are having trouble with OAuth features on
         = Rails.env
-        %a{href: 'http://wiki.code.org/display/PROD/Developer+Oauth+setup'}
-          check the wiki.
+        %a{href: 'https://docs.google.com/document/d/1QfHFWQ1mN8deGJz6CW9F3UTgReYGADO2P7aRGo0monU/edit'}
+          check this document.
 
     - [:google_oauth2, :facebook, :microsoft_v2_auth].each do |provider|
       = button_to omniauth_authorize_path(resource_name, provider), class: "oauth-sign-in with-#{provider}" do
         = t('auth.continue_with', provider: t("auth.#{provider}"))
 
 :javascript
+
   $('.oauth_sign_in').click(dashboard.clientState.reset);
+  // If the makerBridge is available, we are in the Maker App, which has its
+  // own Google login button. Disabling this google-oauth button to avoid confusion.
+  if (!!window.MakerBridge) {
+    $('.with-google_oauth2').prop({'disabled': true, 'title': 'Please use the ‘Log in with Google’ button in the toolbar at the top of the Maker App. If you do not see a ‘Log in with Google’ button, please download the latest Maker App version.'});
+  }

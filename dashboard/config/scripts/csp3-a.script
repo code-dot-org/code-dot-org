@@ -1,8 +1,10 @@
 login_required true
 curriculum_umbrella 'CSP'
 
-stage 'CSP3A: Using Simple Commands', flex_category: 'csp3_1'
+lesson_group 'csp3_1', display_name: 'Chapter 1: Programming Languages and Algorithms'
+lesson 'CSP3A: Using Simple Commands', display_name: 'CSP3A: Using Simple Commands', has_lesson_plan: false
 level 'subgoal v2 U3L04 Student Lesson Introduction'
 level 'subgoal U3L2 Using Simple Commands'
 level 'subgoal U3 L4 introducing subgoal labels'
 level 'subgoalU3L2_TurtleSquare_right'
+

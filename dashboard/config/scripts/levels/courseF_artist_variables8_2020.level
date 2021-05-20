@@ -1,0 +1,222 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:56:24.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "x": "125",
+    "y": "260",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "13",
+    "slider_speed": ".5",
+    "disable_param_editing": "true",
+    "free_play": "false",
+    "embed": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "callout_json": "[]",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "long_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.\r\n\r\n<xml>\r\n<block type=\"variables_set\" inline=\"false\">\r\n                        <title name=\"VAR\">length</title>\r\n                        <value name=\"VALUE\">\r\n                          <block type=\"math_arithmetic\" inline=\"true\">\r\n                            <title name=\"OP\">ADD</title>\r\n                            <value name=\"A\">\r\n                              <block type=\"variables_get\">\r\n                                <title name=\"VAR\">length</title>\r\n                              </block>\r\n                            </value>\r\n                            <value name=\"B\">\r\n                              <block type=\"math_number\">\r\n                                <title name=\"NUM\">10</title>\r\n                              </block>\r\n                            </value>\r\n                          </block>\r\n                        </value>\r\n                      </block>\r\n</xml>\r\n\r\nThe length of the first side of the triangle is 150 pixels.",
+    "examples_required": "false",
+    "never_autoplay_video": "false",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to start your code for the triangle with the `set length` block, and start it at 150 pixels.\",\"hint_id\":\"courseF_artist_variables8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d9ad46f546c0e9b78b167cc1812f5c19/courseF_artist_variables8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure to use the `repeat` loop to draw your triangle.\",\"hint_id\":\"courseF_artist_variables8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/edbf0787efa878d9c62c9a4ebf681292/courseF_artist_variables8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try putting the set of \\n\\n<xml>\\n<block type=\\\"variables_set\\\" inline=\\\"false\\\">\\n                        <title name=\\\"VAR\\\">length</title>\\n                        <value name=\\\"VALUE\\\">\\n                          <block type=\\\"math_arithmetic\\\" inline=\\\"true\\\">\\n                            <title name=\\\"OP\\\">ADD</title>\\n                            <value name=\\\"A\\\">\\n                              <block type=\\\"variables_get\\\">\\n                                <title name=\\\"VAR\\\">length</title>\\n                              </block>\\n                            </value>\\n                            <value name=\\\"B\\\">\\n                              <block type=\\\"math_number\\\">\\n                                <title name=\\\"NUM\\\">10</title>\\n                              </block>\\n                            </value>\\n                          </block>\\n                        </value>\\n                      </block>\\n</xml>\\n\\nblocks inside your loop at the end.\\n\",\"hint_id\":\"courseF_artist_variables8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/42be3caa1c8c05b458444c34780fa9f0/courseF_artist_variables8.mp3\"}]",
+    "short_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "name_suffix": "_2020",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "parent_level_id": 14835,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 16:07:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 17:25:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 17:26:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-05 00:14:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="draw_move" inline="true">
+            <title name="DIR">moveForward</title>
+            <value name="VALUE">
+              <block type="variables_get">
+                <title name="VAR">length</title>
+              </block>
+            </value>
+          </block>
+          <block type="jump" inline="true">
+            <title name="DIR">jumpForward</title>
+            <value name="VALUE">
+              <block type="variables_get">
+                <title name="VAR">length</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnLeft</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">120</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">3</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number" limit="4">
+            <title name="NUM">55</title>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+          </block>
+        </category>
+        <category name="Brushes">
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
+          </block>
+          <block type="alpha" inline="true" id="alpha">
+            <value name="VALUE">
+              <block type="math_number_dropdown">
+                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_line_style_pattern">
+            <title name="VALUE">rainbowLine</title>
+          </block>
+          <block type="draw_width" inline="false">
+            <value name="WIDTH">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_pen">
+            <title name="PEN">penUp</title>
+          </block>
+          <block type="sticker">
+            <title name="VALUE">Alien</title>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_set" inline="false" limit="2">
+            <title name="VAR">length</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">length</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">length</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">150</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get">
+                          <title name="VAR">length</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">120</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set" inline="false">
+                              <title name="VAR">length</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">ADD</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">length</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <title name="NUM">10</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

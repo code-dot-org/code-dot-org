@@ -7,11 +7,12 @@
       0.65
     ],
     "func": "showTitleScreen",
-    "blockText": "show title screen {BREAK} title {TITLE} text {SUBTITLE}",
+    "docFunc": "gamelab_showTitleScreen",
+    "blockText": "show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}",
     "args": [
       {
         "name": "BREAK",
-        "empty": true
+        "dummy": true
       },
       {
         "name": "TITLE"

@@ -1,0 +1,28 @@
+name 'CSP Unit 6 AP-Style Assessment _2020'
+editor_experiment ''
+
+title 'CS Principles Unit 6 Assessment'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_2020'
+level 'csp-u6-exam1-algorithm-definition_2020'
+level 'csp-u6-exam1-sequencing_2020'
+level 'csp-u6-exam1-turtle-algorithm-comparison_2020'
+level 'csp-u6-exam1-problem-type_2020'
+level 'csp-u6-exam1-modifying-algorithms_2020'
+
+page
+level 'csp-u6-exam1-flow-chart-translation_2020'
+level 'csp-u6-exam1-efficiency-comparison_2020'
+level 'csp-u6-exam1-heuristics_2020'
+level 'csp-u6-exam1-comparing-efficiencies_2020'
+level 'csp-u6-exam1-undecidable-problems_2020'
+
+page
+level 'csp-u6-exam1-linear-or-binary_2020'
+level 'csp-u6-exam1-binary-iterations_2020'
+level 'csp-u6-exam1-distributed-parallel-benefits_2020'
+level 'csp-u6-exam1-parallel-efficiency_2020'
+level 'csp-u6-exam1-calculate-speedup_2020'

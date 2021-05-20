@@ -3,9 +3,6 @@ source 'https://supermarket.chef.io'
 metadata
 instance_eval File.read('../local_cookbooks.rb'), __FILE__
 
-# Not yet published to Supermarket: https://github.com/PaytmLabs/chef-ixgbevf/issues/1
-cookbook 'ixgbevf', github: 'wjordan/chef-ixgbevf', branch: 'cdo'
-
 # Ref: https://github.com/chef-cookbooks/chef_client_updater/pull/93
 cookbook 'chef_client_updater', github: 'wjordan/chef_client_updater', branch: 'update_rubygems_fix'
 

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Our system uses trusted_proxies.json to distinguish cloudfront IP addresses from end-user IP addresses
+# This is important to correctly geolocate users
+set -e
+
+cd ~/staging
+dashboard/scripts/archive/generate_trusted_proxies
+
+git add lib/cdo/trusted_proxies.json
+git commit -m "update trusted proxy list for cloudfront servers" || true
+git push

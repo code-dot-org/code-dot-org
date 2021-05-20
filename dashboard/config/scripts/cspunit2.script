@@ -1,14 +1,13 @@
 login_required true
-has_lesson_plan true
 
-stage 'The Internet'
+lesson 'The Internet', display_name: 'The Internet Is for Everyone', has_lesson_plan: true
 level 'U2L1 Student Lesson Introduction'
 level 'U2L01 Assessment 1', assessment: true
 level 'U2L01 Assessment 2', assessment: true
 level 'U2L01 Assessment 3', assessment: true
 level 'U2L01 Assessment 4', assessment: true
 
-stage 'The Need for Addressing'
+lesson 'The Need for Addressing', display_name: 'The Need for Addressing', has_lesson_plan: true
 level 'U2L2 Student Lesson Introduction'
 level 'U2L2 NetSim Hub Mode'
 level 'U2L02 Free Response Reflection', assessment: true
@@ -16,7 +15,7 @@ level 'U2L02 Assessment 3', assessment: true
 level 'U2L02 Assessment 4', assessment: true
 level 'U2L02 Assessment 5', assessment: true
 
-stage 'Invent an Addressing Protocol'
+lesson 'Invent an Addressing Protocol', display_name: 'Invent an Addressing Protocol', has_lesson_plan: true
 level 'U2L3 Student Lesson Introduction'
 level 'U2L3: IP DNS Video'
 level 'U2L3 Assessment', assessment: true
@@ -25,7 +24,7 @@ level 'U2L3 Assessment 2', assessment: true
 level 'U2L3 Assessment 3', assessment: true
 level 'U2L3 Assessment 4', assessment: true
 
-stage 'Routers and Redundancy'
+lesson 'Routers and Redundancy', display_name: 'Routers and Redundancy', has_lesson_plan: true
 level 'U2L4 Student Lesson Introduction'
 level 'U2L04 - NetSim Routers with Addresses'
 level 'U2L04 Assessment1', assessment: true
@@ -34,7 +33,7 @@ level 'U2L04 Assessment5', assessment: true
 level 'U2L04 Assessment2', assessment: true
 level 'U2L04 Assessment3', assessment: true
 
-stage 'Packets and Making a Reliable Internet'
+lesson 'Packets and Making a Reliable Internet', display_name: 'Packets and Making a Reliable Internet', has_lesson_plan: true
 level 'U2L5 Student Lesson Introduction'
 level 'U2L05 - NetSim - Packets and Building TCP'
 level 'U2L5 Packets and Reliability - Video'
@@ -42,13 +41,13 @@ level 'U2L05 Assessment 1', assessment: true
 level 'U2L05 Assessment 2', assessment: true
 level 'U2L05 Reflection 1', assessment: true
 
-stage 'Algorithms Detour - Minimum Spanning Tree'
+lesson 'Algorithms Detour - Minimum Spanning Tree', display_name: 'Algorithms Detour - Minimum Spanning Tree', has_lesson_plan: true
 level 'U2L6 Student Lesson Introduction'
 level 'U2L06 - Matching: Label the Diagram', assessment: true
 level 'U2L06- MC: what is an MST?', assessment: true
 level 'U2L06 - MC: Which is an MST?', assessment: true
 
-stage 'Algorithms Detour - Shortest Path'
+lesson 'Algorithms Detour - Shortest Path', display_name: 'Algorithms Detour - Shortest Path', has_lesson_plan: true
 level 'U2L7 Student Lesson Introduction'
 level 'U1L07 Assessment 1', assessment: true
 level 'U2L07 Assessment2', assessment: true
@@ -56,7 +55,7 @@ level 'U2L07 Assessment3', assessment: true
 level 'U2L07 Assessment4', assessment: true
 level 'U2L07 Assessment5', assessment: true
 
-stage 'Algorithms Detour - How Routers Learn'
+lesson 'Algorithms Detour - How Routers Learn', display_name: 'How Routers Learn', has_lesson_plan: true
 level 'U2L8 Student Lesson Introduction'
 level 'U2L08 Free Response 3', assessment: true
 level 'U2L08 Free Response 1', assessment: true
@@ -64,14 +63,14 @@ level 'U2L08 Free Response 2', assessment: true
 level 'U2L08 Assessment 0', assessment: true
 level 'U2L08 Assessment 1', assessment: true
 
-stage 'The Need for DNS'
+lesson 'The Need for DNS', display_name: 'The Need for DNS', has_lesson_plan: true
 level 'U2L9 Student Lesson Introduction'
 level 'U2L10 NetSim Automatic DNS'
 level 'U2L09 Assessment1', assessment: true
 level 'U2L09 Assessment2', assessment: true
 level 'U2L09 Free Response Wrap Up', assessment: true
 
-stage 'DNS in the Real World'
+lesson 'DNS in the Real World', display_name: 'DNS in the Real World', has_lesson_plan: true
 level 'U2L10 Student Lesson Introduction'
 level 'U2L10 Free Response Getting Started', assessment: true
 level 'U2L10 Assessment1', assessment: true
@@ -79,17 +78,17 @@ level 'U2L10 Assessment2', assessment: true
 level 'U2L10 Assessment3', assessment: true
 level 'U2L10 Free Response Wrap Up', assessment: true
 
-stage 'HTTP and Abstraction'
+lesson 'HTTP and Abstraction', display_name: 'HTTP and Abstraction on the Internet', has_lesson_plan: true
 level 'U2L11 Student Lesson Introduction'
 level 'U2 HTTP and HTML - Video'
 level 'U2L11 Assessment 1', assessment: true
 level 'U2L11 Assessment 2', assessment: true
 level 'U2L11 Free Response', assessment: true
 
-stage 'Practice PT - The Internet and Society'
+lesson 'Practice PT - The Internet and Society', display_name: 'Practice PT - The Internet and Society', has_lesson_plan: true
 level 'U2L12 Student Lesson Introduction'
 
-stage 'Tell Me a Secret - Encrypting Text'
+lesson 'Tell Me a Secret - Encrypting Text', display_name: 'The Need for Encryption', has_lesson_plan: true
 level 'U2L13 Student Lesson Introduction'
 level 'U2 frequency caesar'
 level 'U2L13 Free Response Getting Started', assessment: true
@@ -98,7 +97,7 @@ level 'U2L13 Assessment3', assessment: true
 level 'U2L13 Assessment4', assessment: true
 level 'U2L13 Free Response Wrap Up', assessment: true
 
-stage 'Cracking the Code'
+lesson 'Cracking the Code', display_name: 'Cracking the Code', has_lesson_plan: true
 level 'U2L14 Student Lesson Introduction'
 level 'U2 frequency random sub'
 level 'U2 vigenere cipher'
@@ -109,21 +108,21 @@ level 'U2L14 Assessment2', assessment: true
 level 'U2L14 Assessment3', assessment: true
 level 'U2L14 Assessment4', assessment: true
 
-stage 'Encryption Algorithms'
+lesson 'Encryption Algorithms', display_name: 'Keys and Passwords', has_lesson_plan: true
 level 'U2L15 Student Lesson Introduction'
 level 'U2L15 Assessment1', assessment: true
 level 'U2L15 Assessment2', assessment: true
 level 'U2L15 Assessment3', assessment: true
 level 'U2L15 Assessment4', assessment: true
 
-stage 'Algorithms Detour - Hard Problems TSP'
+lesson 'Algorithms Detour - Hard Problems TSP', display_name: 'Hard Problems - The Traveling Salesperson Problem', has_lesson_plan: true
 level 'U2L17 Student Lesson Introduction'
 level 'U2L17 Assessment 1', assessment: true
 level 'U2L17 Assessment 2', assessment: true
 level 'U2L16 Free Response Assessment 3', assessment: true
 level 'U2L17 Free Response Wrap Up', assessment: true
 
-stage 'One Way Functions - Ice Cream Vans'
+lesson 'One Way Functions - Ice Cream Vans', display_name: 'One-Way Functions - The WiFi Hotspot Problem', has_lesson_plan: true
 level 'U2L18 Student Lesson Introduction'
 level 'U2L17 Free Response Getting Started', assessment: true
 level 'U2L17 Free Responses Assessment 1', assessment: true
@@ -132,14 +131,14 @@ level 'U2L18 Free Response Getting Started', assessment: true
 level 'U2L18 Assessment', assessment: true
 level 'U2L18 Free Response Wrap Up', assessment: true
 
-stage 'Alice and Bob and Asymmetric Keys'
+lesson 'Alice and Bob and Asymmetric Keys', display_name: 'Asymmetric Keys - Cups and Beans', has_lesson_plan: true
 level 'U2L16 Student Lesson Introduction'
 level 'U2 Encryption and Public Keys - Video'
 level 'U2L18 Free Response Assessment 1', assessment: true
 level 'U2L18 Match terms to cups and beans analogy', assessment: true
 level 'U2L18 Free Response Assessment 3', assessment: true
 
-stage 'Public Key Crypto'
+lesson 'Public Key Crypto', display_name: 'Public Key Cryptography', has_lesson_plan: true
 level 'U2L19 Student Lesson Introduction'
 level 'U2L19 Free Response Getting Started', assessment: true
 level 'U2L19 mutlichoice 20 mod 15', assessment: true
@@ -147,7 +146,8 @@ level 'U2L19 multichoice 13 MOD 17', assessment: true
 level 'U2L19 Assessment', assessment: true
 level 'U2L19 Free Response Wrap Up', assessment: true
 
-stage 'Practice PT - Cybersecurity Innovations'
+lesson 'Practice PT - Cybersecurity Innovations', display_name: 'Practice PT - Cybersecurity Innovations', has_lesson_plan: true
 level 'U2L20 Student Lesson Introduction'
 level 'U2 The Internet: Cybersecurity and Crime - Video'
 level 'U2 Encryption and Public Keys - Video'
+

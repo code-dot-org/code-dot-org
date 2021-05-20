@@ -7,16 +7,6 @@ import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 
-const styles = {
-  checkboxIcon: {
-    color: color.lighter_gray
-  },
-  checkbox: {
-    height: 20,
-    width: 20
-  }
-};
-
 class ManageStudentsSharingCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
@@ -90,6 +80,16 @@ class ManageStudentsSharingCell extends Component {
     );
   }
 }
+
+const styles = {
+  checkboxIcon: {
+    color: color.lighter_gray
+  },
+  checkbox: {
+    height: 20,
+    width: 20
+  }
+};
 
 export const UnconnectedManageStudentsSharingCell = ManageStudentsSharingCell;
 

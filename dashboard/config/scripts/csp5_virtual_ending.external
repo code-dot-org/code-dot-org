@@ -1,0 +1,20 @@
+name 'csp5 virtual ending'
+editor_experiment ''
+title 'title'
+description 'description here'
+use_large_video_player 'true'
+hide_reference_area 'true'
+video_key 'csp_cs_is_changing_everything'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+## Congratulations, you finished Event-Driven Programming in App Lab!
+You have learned some foundational concepts of computer programming, and how to make interactive apps! You wrote code in JavaScript using App Lab, but the concepts learned in these lessons span all programming languages and tools. We hope you will continue learning and sharing your creations with others!
+
+![](https://images.code.org/20e9431f430073a88b9fad0927f41ff2-image-1587503492264.jpg)
+
+## [Print your certificate!](https://code.org/certificates?course=Event-Driven%20Programming%20in%20App%20Lab)
+MARKDOWN

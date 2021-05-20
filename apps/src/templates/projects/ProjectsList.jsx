@@ -7,7 +7,7 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {PROJECT_TYPE_MAP} from './projectConstants';
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -26,21 +26,6 @@ export const COLUMNS_WITHOUT_THUMBNAILS = {
   STUDENT_NAME: 1,
   APP_TYPE: 2,
   LAST_EDITED: 3
-};
-
-const styles = {
-  thumbnailCell: {
-    border: '1px solid gray',
-    width: THUMBNAIL_SIZE,
-    minWidth: THUMBNAIL_SIZE,
-    padding: 0
-  },
-  thumbnailWrapper: {
-    height: THUMBNAIL_SIZE,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
 };
 
 const typeFormatter = type => {
@@ -131,7 +116,12 @@ class ProjectsList extends React.Component {
       this.props.studioUrlPrefix
     }/projects/${type}/${channel}/view`;
     return (
-      <a href={url} style={tableLayoutStyles.link} target="_blank">
+      <a
+        href={url}
+        style={tableLayoutStyles.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {name}
       </a>
     );
@@ -232,5 +222,20 @@ class ProjectsList extends React.Component {
     );
   }
 }
+
+const styles = {
+  thumbnailCell: {
+    border: '1px solid gray',
+    width: THUMBNAIL_SIZE,
+    minWidth: THUMBNAIL_SIZE,
+    padding: 0
+  },
+  thumbnailWrapper: {
+    height: THUMBNAIL_SIZE,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+};
 
 export default ProjectsList;

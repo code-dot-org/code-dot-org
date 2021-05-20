@@ -4,12 +4,6 @@ import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import {updateProjectName} from './projectsRedux';
 
-const styles = {
-  inputBox: {
-    width: 225
-  }
-};
-
 class PersonalProjectsNameCell extends Component {
   static propTypes = {
     projectId: PropTypes.string.isRequired,
@@ -41,6 +35,7 @@ class PersonalProjectsNameCell extends Component {
             style={tableLayoutStyles.link}
             href={url}
             target="_blank"
+            rel="noopener noreferrer"
             className="ui-projects-table-project-name"
           >
             {projectName}
@@ -61,6 +56,12 @@ class PersonalProjectsNameCell extends Component {
     );
   }
 }
+
+const styles = {
+  inputBox: {
+    width: 225
+  }
+};
 
 export default connect(
   state => ({}),

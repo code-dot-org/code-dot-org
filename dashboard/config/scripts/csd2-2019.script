@@ -1,27 +1,27 @@
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit2/code/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit2/{LESSON}'
 family_name 'csd2'
 version_year '2019'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+tts true
 
-stage 'Exploring Websites', flex_category: 'csd2_1'
+lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
+lesson 'Exploring Websites', display_name: 'Exploring Websites', has_lesson_plan: true
 level 'CSD U2L01 TFMD_2019', named: true
 level 'CSD U2 Top Websites_2018_2019', named: true
 
-stage 'Websites for Expression ', flex_category: 'csd2_1'
+lesson 'Websites for Expression ', display_name: 'Websites for Expression ', has_lesson_plan: true
 level 'CSD U2L02 TFMD_2019', named: true
 level 'CSD U2 Expression Exemplars_2018_2019', named: true
 
-stage 'Intro to HTML', flex_category: 'csd2_1'
+lesson 'Intro to HTML', display_name: 'Intro to HTML', has_lesson_plan: true
 level 'CSD U2L03 TFMD_2019', named: true
 level 'CSDU2 - Type Anything_2019', progression: 'Experiment with Web Lab'
 level 'Intro to Web Lab - Part 1_2019', named: true
@@ -32,7 +32,7 @@ level 'CSD U2 HTML Adding Paragraphs_2019', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Adding Paragraphs pt 2_2019', progression: 'Using HTML Tags', assessment: true
 level 'CSD U2 HTML Debug Paragraphs_2019', progression: 'Using HTML Tags'
 
-stage 'Headings', flex_category: 'csd2_1'
+lesson 'Headings', display_name: 'Headings', has_lesson_plan: true
 level 'CSD U2L04 TFMD_2019', named: true
 level 'CSD U2 Pair Programming Video_2019', named: true
 level 'CSD U2 Heading Demo_2019', progression: 'Headings'
@@ -44,11 +44,11 @@ level 'CSD U2 PSP Programming_2018_2019', named: true
 level 'CSD U2 Design Project_2018_2019', progression: 'Your Personal Website'
 level 'CSD U2 Project Start_2019', progression: 'Your Personal Website'
 
-stage 'Digital Footprint', flex_category: 'csd2_1'
+lesson 'Digital Footprint', display_name: 'Digital Footprint', has_lesson_plan: true
 level 'CSD U2L05 TFMD_2019', named: true
 level 'Social Sleuth_2018_2019', named: true
 
-stage 'Lists', flex_category: 'csd2_1'
+lesson 'Lists', display_name: 'Lists', has_lesson_plan: true
 level 'CSD U2L06 TFMD_2019', named: true
 level 'CSD U2 lists intro_2019', progression: 'Lists'
 level 'CSD U2 unordered list_2019', progression: 'Lists'
@@ -59,7 +59,7 @@ level 'CSD U2 lists map_2019', named: true
 level 'CSD U2 expand project_2018_2019', progression: 'Expanding Your Website'
 level 'CSD U2 new page_2019', progression: 'Expanding Personal Website'
 
-stage 'Intellectual Property and Images', flex_category: 'csd2_1'
+lesson 'Intellectual Property and Images', display_name: 'Intellectual Property and Images', has_lesson_plan: true
 level 'CSD U2L07 TFMD_2019', named: true
 level 'CSD U2 Image Tag 1_2019', progression: 'Adding Images'
 level 'CSD U2 Image Tag Debug_2019', progression: 'Adding Images'
@@ -70,7 +70,7 @@ level 'CSD U2 CC Search Map_2019', named: true
 level 'CSD U2 Image Tag Attribution_2019', progression: 'Attribution'
 level 'CSD U2 Info Page Final Touches_2019', progression: 'Attribution'
 
-stage 'Clean Code and Debugging', flex_category: 'csd2_1'
+lesson 'Clean Code and Debugging', display_name: 'Clean Code and Debugging', has_lesson_plan: true
 level 'CSD U2L08 TFMD_2019', named: true
 level 'CSD U2 Debugging 1_2019', progression: 'Debugging'
 level 'CSD U2 Debugging 2_2019', progression: 'Debugging'
@@ -80,7 +80,7 @@ level 'CSD U2 commenting_2019', progression: 'Debugging'
 level 'CSD U2 formatting map_2019', named: true
 level 'CSD U2 challenge_2019', progression: 'Challenge'
 
-stage 'Project - Multi-Page Websites', flex_category: 'csd2_1'
+lesson 'Project - Multi-Page Websites', display_name: 'Project - Multi-Page Websites', has_lesson_plan: true
 level 'CSD U2L09 TFMD_2019', named: true
 level 'CSD U2 link demo_2019', progression: 'Linking Pages'
 level 'CSD U2 navigation_2019', progression: 'Linking Pages'
@@ -95,7 +95,8 @@ level 'CSD U2 publish video', named: true
 level 'CSD U2 project share_2019', progression: 'Publishing Your Website', named: true
 level 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019', progression: 'Reflection', assessment: true
 
-stage 'Styling Text with CSS', flex_category: 'csd2_2'
+lesson_group 'csd2_2', display_name: 'Chapter 2: Styling and CSS'
+lesson 'Styling Text with CSS', display_name: 'Styling Text with CSS', has_lesson_plan: true
 level 'CSD U2L10 TFMD_2019', named: true
 level 'CSD U2 CSS explore CSS_2019', named: true
 level 'Video: Intro to CSS_2019', named: true
@@ -111,7 +112,7 @@ level 'Video: Intro to CSS Part 2_2019', named: true
 level 'CSD U2 add file_2019', progression: 'Styling your Website'
 level 'CSD U2 text style freeplay_2019', progression: 'Styling your Website'
 
-stage 'Styling Elements with CSS', flex_category: 'csd2_2'
+lesson 'Styling Elements with CSS', display_name: 'Styling Elements with CSS', has_lesson_plan: true
 level 'CSD U2L11 TFMD_2019', named: true
 level 'CSD U2 layout style sample_2019', progression: 'Exploring more CSS'
 level 'CSD U2 layout style bgcolor_2019', progression: 'Exploring more CSS'
@@ -126,10 +127,10 @@ level 'CSD U2 add style_2019', progression: 'Layout with CSS', assessment: true
 level 'CSD U2 Layout Properties Map_2019', named: true
 level 'CSD U2 layout style freeplay_2019', progression: 'Styling your Website'
 
-stage 'Sources and Search Engines', flex_category: 'csd2_2'
+lesson 'Sources and Search Engines', display_name: 'Sources and Search Engines', has_lesson_plan: true
 level 'CSD U2L12 TFMD_2019', named: true
 
-stage 'RGB Colors and Classes', flex_category: 'csd2_2'
+lesson 'RGB Colors and Classes', display_name: 'RGB Colors and Classes', has_lesson_plan: true
 level 'CSD U2L13 TFMD_2019', named: true
 level 'CSD U2 RGB intro_2019', named: true
 level 'CSD U2 RGB winter_2019', progression: 'RGB Exploration'
@@ -142,14 +143,16 @@ level 'CSD U2 classes spring_2019', progression: 'Styling with Classes'
 level 'CSD U2 classes summer_2019', progression: 'Styling with Classes', assessment: true
 level 'CSDU2 - PW - Class Style Personal Site_2019', progression: 'Styling with Classes'
 
-stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
+lesson 'Project - Personal Portfolio Website', display_name: 'Project - Personal Portfolio Website', has_lesson_plan: true
 level 'CSD U2L14 TFMD_2019', named: true
 level 'Final Personal Website_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019', progression: 'Reflection', assessment: true
 
-stage 'Post-Project Test', lockable: true, flex_category: 'csd2_2'
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD Web Development Post-Project Test', assessment: true
 
-stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019'
 level 'csd-post-survey-levelgroup_2019', assessment: true
+

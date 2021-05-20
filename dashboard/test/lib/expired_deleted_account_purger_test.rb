@@ -34,10 +34,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   test 'can construct with no arguments - all defaults' do
     edap = ExpiredDeletedAccountPurger.new
     assert_equal false, edap.dry_run?
-    assert_equal Time.parse('2018-07-31 4:18pm PDT'), edap.deleted_after
+    assert_equal 60.days.ago, edap.deleted_after
     assert_equal 28.days.ago, edap.deleted_before
     assert_equal 200, edap.max_teachers_to_purge
-    assert_equal 4000, edap.max_accounts_to_purge
+    assert_equal 8000, edap.max_accounts_to_purge
   end
 
   test 'raises ArgumentError unless dry_run is boolean' do
@@ -192,6 +192,20 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     refute_includes picked_users, needs_manual_review
   end
 
+  test 'does locate accounts that are queued but also auto-retryable' do
+    autodeleteable = create :student, deleted_at: 3.days.ago
+    autoretryable = create :student, deleted_at: 3.days.ago
+    create :queued_account_purge, :autoretryable, user: autoretryable
+
+    picked_users = ExpiredDeletedAccountPurger.new(
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago
+    ).send :expired_soft_deleted_accounts
+
+    assert_includes picked_users, autodeleteable
+    assert_includes picked_users, autoretryable
+  end
+
   #
   # Tests over full behavior
   #
@@ -211,6 +225,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 2,
         AccountsQueued: 0,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer)
       )
     )
@@ -235,22 +250,45 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{student_c.id}
       AccountsPurged: 2
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Purged 2 account(s).
       🕐 00:00:00
     LOG
   end
 
+  test 'with an auto-retryable account' do
+    # Create an account that's queued, but autoretryable
+    autoretryable = create :student, deleted_at: 3.days.ago
+    qap = create :queued_account_purge, :autoretryable, user: autoretryable
+
+    Cdo::Metrics.expects(:push)
+
+    ExpiredDeletedAccountPurger.new(
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago
+    ).purge_expired_deleted_accounts!
+
+    # The account is purged
+    autoretryable.reload
+    refute_nil autoretryable.purged_at
+
+    # The autoretryable queued account purge record should be gone
+    refute QueuedAccountPurge.where(id: qap.id).exists?
+  end
+
   test 'moves account to queue when purge fails' do
-    student_a = create :student, deleted_at: 3.days.ago
-    student_b = create :student, deleted_at: 3.days.ago
+    student_succeeds = create :student, deleted_at: 3.days.ago
+    student_needs_review = create :student, deleted_at: 3.days.ago
+    student_autoretryable = create :student, deleted_at: 3.days.ago
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
       deleted_before: 2.days.ago
 
     DeleteAccountsHelper.any_instance.stubs(:purge_user).with do |account|
-      raise 'Intentional failure' if account == student_b
+      raise 'Intentional failure' if account == student_needs_review
+      raise 'Net::ReadTimeout' if account == student_autoretryable
       account.update!(purged_at: Time.now); true
     end
 
@@ -258,34 +296,40 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       'DeletedAccountPurger',
       includes_metrics(
         AccountsPurged: 1,
-        AccountsQueued: 1,
+        AccountsQueued: 2,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer)
       )
     )
 
-    assert_creates QueuedAccountPurge do
+    assert_difference(-> {QueuedAccountPurge.count}, 2) do
       edap.purge_expired_deleted_accounts!
     end
 
     purged = User.with_deleted.where.not(purged_at: nil)
-    assert_includes purged, student_a
-    refute_includes purged, student_b
+    assert_includes purged, student_succeeds
+    refute_includes purged, student_needs_review
 
+    review_queue_depth = QueuedAccountPurge.count
+    manual_reviews_needed = QueuedAccountPurge.needing_manual_review.count
     assert_equal <<~LOG, edap.log.string
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
       max_teachers_to_purge: #{edap.max_teachers_to_purge}
       max_accounts_to_purge: #{edap.max_accounts_to_purge}
-      Purging user_id #{student_a.id}
-      Done purging user_id #{student_a.id}
-      Purging user_id #{student_b.id}
+      Purging user_id #{student_succeeds.id}
+      Done purging user_id #{student_succeeds.id}
+      Purging user_id #{student_needs_review.id}
+      Purging user_id #{student_autoretryable.id}
       AccountsPurged: 1
-      AccountsQueued: 1
-      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      AccountsQueued: 2
+      ReviewQueueDepth: #{review_queue_depth}
+      ManualReviewQueueDepth: #{manual_reviews_needed}
       Purged 1 account(s).
-      Queued 1 account(s) for manual review.
-      1 account(s) require review.
+      Queued 2 account(s) for retry or review.
+      #{review_queue_depth} account(s) in the review queue.
+      #{manual_reviews_needed} account(s) require manual review.
       🕐 00:00:00
     LOG
   end
@@ -316,7 +360,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{student_c.id} (dry-run)
       AccountsPurged: 2
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Would have purged 2 account(s).
       🕐 00:00:00
     LOG
@@ -355,9 +400,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_b.id} (dry-run)
       AccountsPurged: 1
       AccountsQueued: 1
-      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Would have purged 1 account(s).
-      Would have queued 1 account(s) for manual review.
+      Would have queued 1 account(s) for retry or review.
       🕐 00:00:00
     LOG
   end
@@ -379,6 +425,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 0,
         AccountsQueued: 0,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer),
       )
     )
@@ -399,7 +446,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Found 6 teachers to purge, which exceeds the configured limit of 5. Abandoning run.
       AccountsPurged: 0
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Purged 0 account(s).
       🕐 00:00:00
     LOG
@@ -418,6 +466,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 6,
         AccountsQueued: 0,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer),
       )
     )
@@ -444,7 +493,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{students[5].id}
       AccountsPurged: 6
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Purged 6 account(s).
       🕐 00:00:00
     LOG
@@ -467,6 +517,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 0,
         AccountsQueued: 0,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer),
       )
     )
@@ -487,7 +538,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
       AccountsPurged: 0
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Purged 0 account(s).
       🕐 00:00:00
     LOG

@@ -1,12 +1,12 @@
-var errorDialogStackModule = require('@cdo/apps/p5lab/errorDialogStackModule');
-import {expect} from '../../util/configuredChai';
+var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
+import {expect} from '../../util/deprecatedChai';
 import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
 import {mount} from 'enzyme';
 import React from 'react';
 
 describe('ErrorDialogStack', function() {
   describe('reducer', function() {
-    var reducer = errorDialogStackModule.default;
+    var reducer = errorDialogStack.default;
 
     it('has empty array as default state', function() {
       expect(reducer(undefined, {})).to.deep.equal([]);
@@ -18,7 +18,7 @@ describe('ErrorDialogStack', function() {
     });
 
     describe('action: reportError', function() {
-      var reportError = errorDialogStackModule.reportError;
+      var reportError = errorDialogStack.reportError;
 
       it('pushes an error object onto the stack', function() {
         var state = [];
@@ -91,7 +91,7 @@ describe('ErrorDialogStack', function() {
     });
 
     describe('action: dismissError', function() {
-      var dismissError = errorDialogStackModule.dismissError;
+      var dismissError = errorDialogStack.dismissError;
 
       it('removes the first error object from the stack', function() {
         var state = [{message: 'first'}, {message: 'second'}];

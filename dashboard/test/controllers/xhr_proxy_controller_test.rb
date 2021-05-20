@@ -30,9 +30,8 @@ class XhrProxyControllerTest < ActionController::TestCase
   end
 
   test "should handle query parameters" do
-    url = 'https://www.googleapis.com/freebase/v1/search?query=ada&filter=(any%20type:/people/person%20type:/location/citytown)'
-    stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, params: {u: url, c: @channel_id}
+    stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
+    get :get, params: {u: XHR_URI, c: @channel_id}
     assert_response :success
     assert_equal XHR_DATA, response.body
   end

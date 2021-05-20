@@ -2,10 +2,10 @@ var actions = require('@cdo/apps/p5lab/actions');
 var {
   clearConsole,
   addConsoleMessage
-} = require('@cdo/apps/p5lab/spritelab/textConsoleModule');
+} = require('@cdo/apps/p5lab/redux/textConsole');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 var _ = require('lodash');
 var P5LabInterfaceMode = require('@cdo/apps/p5lab/constants')
   .P5LabInterfaceMode;
@@ -32,8 +32,8 @@ describe('gamelabReducer', function() {
 
   it('has expected default state', function() {
     expect(initialState.interfaceMode).to.equal(CODE);
-    expect(initialState.pageConstants).to.be.an.object;
-    expect(initialState.pageConstants.assetUrl).to.be.a.function;
+    expect(initialState.pageConstants).to.be.an('object');
+    expect(initialState.pageConstants.assetUrl).to.be.a('function');
     expect(initialState.pageConstants.isEmbedView).to.be.undefined;
     expect(initialState.pageConstants.isShareView).to.be.undefined;
     expect(initialState.textConsole).to.be.empty;

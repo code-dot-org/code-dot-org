@@ -1,0 +1,76 @@
+- registration_url = "https://studio.code.org/pd/workshops/#{@application.workshop.id}/enroll"
+
+%p
+  Hello
+  = @application.first_name + "!"
+
+%p
+  Congratulations! We are excited to offer you a seat in
+  = @application.effective_regional_partner_name + "'s"
+  = @application.year
+  Professional Learning Program for
+  = @application.course_name + ","
+  - if @application.regional_partner
+    %strong at no cost to you or your school,
+    in partnership with Code.org!
+  - else
+    %strong at no cost to you or your school!
+  Please read on for more details, and then make
+  sure to register using the link below
+  %strong within two weeks
+  of receiving this message to
+  %strong confirm your seat in the program.
+
+= render partial: 'expectations'
+
+%strong
+  Your Professional Learning Program contact
+
+%p
+  If you decide to accept your space in the program, you will be joining a
+  year-long professional learning experience managed by
+  - if @application.regional_partner
+    = @application.regional_partner_name + ","
+    Code.org's Regional Partner in your area.
+  - else
+    Code.org.
+  Moving forward, I will be your main point of contact
+  for this program, including all communication regarding your
+  summer and school-year workshops. Please let me know if you
+  have any questions or concerns.
+
+%p
+  Here are your important next steps:
+
+%ul
+  %li
+    %strong Within two weeks
+    of receiving this message, please register for your summer workshop
+    and confirm your seat in this program.
+    = link_to('Register Here', registration_url) + '.'
+  %li
+    If you want to decline your seat, let me know as soon as possible
+    using the contact information below so we can accommodate another teacher.
+  %li
+    %strong Mark your calendar for your summer workshop!
+    Details about your workshop can be found at
+    = link_to('this registration link', registration_url) + '.'
+    You will receive more details
+    approximately six weeks prior to your summer workshop.
+  %li
+    Share the good news with your school! Start talking with your
+    administration, colleagues, students, and parents about the course you
+    will be teaching next year, and encourage a diverse group of students to
+    enroll. Once you accept your space in the program, you will receive a
+    welcome kit complete with recruitment tips and tools. In the meantime,
+    please checkout these
+    = link_to('recruitment resources', 'https://code.org/educate/resources/recruit') + '.'
+
+%p
+  Congratulations again! We look forward to receiving your registration
+  within two weeks.
+
+= render partial: 'questions_concerns'
+
+%p
+  = render partial: 'partner_signature'

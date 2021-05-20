@@ -13,39 +13,43 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
+    @levelbuilder = create(:levelbuilder)
     @project_validator = create :project_validator
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
-    @custom_script = create(:script, name: 'laurel', hideable_stages: true)
-    @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
-    @custom_stage_2 = create(:stage, script: @custom_script, name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
-    @custom_stage_3 = create(:stage, script: @custom_script, name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
+    @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
+    @custom_lesson_group = create(:lesson_group, script: @custom_script)
+    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 1', name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
+    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 2', name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
+    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 3', name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
     @custom_s1_l1 = create(
       :script_level,
       script: @custom_script,
-      stage: @custom_stage_1,
+      lesson: @custom_lesson_1,
       position: 1
     )
     @custom_s2_l1 = create(
       :script_level,
       script: @custom_script,
-      stage: @custom_stage_2,
+      lesson: @custom_lesson_2,
       position: 1
     )
     @custom_s2_l2 = create(
       :script_level,
       script: @custom_script,
-      stage: @custom_stage_2,
+      lesson: @custom_lesson_2,
       position: 2
     )
-    create(:script_level, script: @custom_script, stage: @custom_stage_3, position: 1)
+    create(:script_level, script: @custom_script, lesson: @custom_lesson_3, position: 1)
 
     @script = @custom_script
     @script_level = @custom_s1_l1
 
     pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
-    @pilot_script_level = create :script_level, script: pilot_script
+    pilot_lesson_group = create(:lesson_group, script: pilot_script)
+    pilot_lesson = create(:lesson, script: pilot_script, lesson_group: pilot_lesson_group)
+    @pilot_script_level = create :script_level, script: pilot_script, lesson: pilot_lesson
     @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
     pilot_section = create :section, user: @pilot_teacher, script: pilot_script
     @pilot_student = create(:follower, section: pilot_section).student_user
@@ -54,6 +58,83 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   setup do
     client_state.reset
     Gatekeeper.clear
+    AzureTextToSpeech.stubs(:get_voices).returns({})
+  end
+
+  teardown do
+    AzureTextToSpeech.unstub(:get_voices)
+  end
+
+  test 'should show script level for csp1-2020 lockable lesson with lesson plan' do
+    @unit = create :script, name: 'csp1-2020'
+    @lesson_group = create :lesson_group, script: @unit
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 15, relative_position: 14)
+    @external = create(:external, name: 'markdown level')
+    @external_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@external])
+    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
+    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+
+    get :show, params: {
+      script_id: @unit.name,
+      lesson_position: @lockable_lesson.absolute_position - 1,
+      id: @external_sl.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, '/s/csp1-2020/lessons/14/'
+
+    get :show, params: {
+      script_id: @unit.name,
+      lesson_position: @lockable_lesson.absolute_position - 1,
+      id: @lockable_level_group_sl.position
+    }
+
+    assert_redirected_to '/s/csp1-2020/lessons/14/levels/2/page/1'
+
+    get :show, params: {
+      script_id: @unit.name,
+      lesson_position: @lockable_lesson.absolute_position - 1,
+      id: @lockable_level_group_sl.position,
+      puzzle_page: 1
+    }
+
+    assert_redirected_to '/s/csp1-2020/lessons/14/levels/2/page/1'
+  end
+
+  test 'should show script level for csp2-2020 lockable lesson with lesson plan' do
+    @unit = create :script, name: 'csp2-2020'
+    @lesson_group = create :lesson_group, script: @unit
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9)
+    @external = create(:external, name: 'markdown level')
+    @external_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@external])
+    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
+    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+
+    get :show, params: {
+      script_id: @unit.name,
+      lesson_position: @lockable_lesson.absolute_position,
+      id: @external_sl.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, '/s/csp2-2020/lessons/9/'
+
+    get :show, params: {
+      script_id: @unit.name,
+      lesson_position: @lockable_lesson.absolute_position,
+      id: @lockable_level_group_sl.position
+    }
+
+    assert_redirected_to '/s/csp2-2020/lessons/9/levels/2/page/1'
+
+    get :show, params: {
+      script_id: @unit.name,
+      lesson_position: @lockable_lesson.absolute_position,
+      id: @lockable_level_group_sl.position,
+      puzzle_page: 1
+    }
+
+    assert_redirected_to '/s/csp2-2020/lessons/9/levels/2/page/1'
   end
 
   test 'should show script level for twenty hour' do
@@ -104,7 +185,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   def script_level_params(script_level)
     {
       script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
+      lesson_position: script_level.lesson.absolute_position,
       id: script_level.position
     }
   end
@@ -115,7 +196,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     netsim_script_level = allthethings_script.script_levels.find {|script_level| script_level.level_id == netsim_level.id}
     get :show, params: {
       script_id: allthethings_script,
-      stage_position: netsim_script_level.stage.relative_position,
+      lesson_position: netsim_script_level.lesson.relative_position,
       id: netsim_script_level.position
     }
     assert_response :success
@@ -125,24 +206,26 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should show script level of ECSPD if signed in" do
     sign_in @student
-    get :show, params: {script_id: 'ECSPD', stage_position: 1, id: 1}
+    get :show, params: {script_id: 'ECSPD', lesson_position: 1, id: 1}
     assert_response :success
   end
 
   test "should not get show of ECSPD if not signed in" do
-    get :show, params: {script_id: 'ECSPD', stage_position: 1, id: 1}
+    get :show, params: {script_id: 'ECSPD', lesson_position: 1, id: 1}
     assert_redirected_to_sign_in
   end
 
   test "should render sublevel for BubbleChoice script_level with sublevel_position param" do
     script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create(:bubble_choice_level, :with_sublevels)
-    script_level = create :script_level, script: script, levels: [level]
+    script_level = create :script_level, script: script, levels: [level], lesson: lesson
     sublevel_position = 1
 
     get :show, params: {
       script_id: script,
-      stage_position: script_level.stage.relative_position,
+      lesson_position: script_level.lesson.relative_position,
       id: script_level.position,
       sublevel_position: sublevel_position
     }
@@ -151,6 +234,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets start blocks when defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
     template_level = create :level
     template_level.start_blocks = '<xml/>'
     template_level.save!
@@ -160,8 +247,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_blocks = "<should:override/>"
     real_level.save!
 
-    sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
 
     assert_response :success
     # start blocks comes from project_level not real_level
@@ -170,6 +257,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set start blocks when not defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
     template_level = create :level
     template_level.save!
 
@@ -178,8 +269,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_blocks = "<shouldnot:override/>"
     real_level.save!
 
-    sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
 
     assert_response :success
     # start blocks comes from real_level not project_level
@@ -188,6 +279,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets start html when defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
     template_level = create :applab
     template_level.start_html = '<div><label id="label1">expected html</label></div>'
     template_level.save!
@@ -197,8 +292,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_html = '<div><label id="label1">wrong html</label></div>'
     real_level.save!
 
-    sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
 
     assert_response :success
     # start html comes from project_level not real_level
@@ -207,6 +302,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set start html when not defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
     template_level = create :applab
     template_level.save!
 
@@ -215,8 +314,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_html = '<div><label id="label1">real_level html</label></div>'
     real_level.save!
 
-    sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
 
     assert_response :success
     # start html comes from real_level not project_level
@@ -224,7 +323,61 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<div><label id="label1">real_level html</label></div>', level_options['startHtml']
   end
 
+  test 'project template level sets data tables when defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    template_level = create :applab
+    template_level.data_tables = '{"key":"expected"}'
+    template_level.data_properties = '{"prop":"expected"}'
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.data_tables = '{"key":"wrong"}'
+    real_level.data_properties = '{"prop":"wrong"}'
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+
+    assert_response :success
+    # data tables comes from project_level not real_level
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '{"key":"expected"}', level_options['dataTables']
+    assert_equal '{"prop":"expected"}', level_options['dataProperties']
+  end
+
+  test 'project template level does not set data tables when not defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    template_level = create :applab
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.data_tables = '{"key":"real"}'
+    real_level.data_properties = '{"prop":"real"}'
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+
+    assert_response :success
+    # data tables comes from real_level not project_level
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '{"key":"real"}', level_options['dataTables']
+    assert_equal '{"prop":"real"}', level_options['dataProperties']
+  end
+
   test 'project template level sets start animations when defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
     template_animations_json = '{"orderedKeys":["expected"],"propsByKey":{"expected":{}}}'
     template_level = create :gamelab
     template_level.start_animations = template_animations_json
@@ -236,8 +389,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_animations = real_animations_json
     real_level.save!
 
-    sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
 
     assert_response :success
     # start animations comes from project_level not real_level
@@ -246,6 +399,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set start animations when not defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
     template_level = create :gamelab
     template_level.save!
 
@@ -255,8 +412,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_animations = real_animations_json
     real_level.save!
 
-    sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
 
     assert_response :success
     # start animations comes from real_level not project_level
@@ -265,6 +422,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets toolbox blocks when defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
     template_level = create :level
     template_level.toolbox_blocks = '<xml><toolbox/></xml>'
     template_level.save!
@@ -274,8 +435,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.toolbox_blocks = "<should:override/>"
     real_level.save!
 
-    sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
 
     assert_response :success
     # toolbox blocks comes from project_level not real_level
@@ -284,6 +445,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set toolbox blocks when not defined' do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
     template_level = create :level
     template_level.save!
 
@@ -292,8 +457,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.toolbox_blocks = "<shouldnot:override/>"
     real_level.save!
 
-    sl = create :script_level, levels: [real_level]
-    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+    sl = create :script_level, levels: [real_level], lesson: lesson, script: script
+    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
 
     assert_response :success
     # toolbox blocks comes from real_level not project_level
@@ -302,13 +467,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not show concept video for non-legacy script level' do
-    non_legacy_script_level = create(:script_level)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    non_legacy_script_level = create(:script_level, lesson: lesson, script: script)
     concept_with_video = Concept.find_by_name('sequence')
     non_legacy_script_level.level.concepts = [concept_with_video]
 
     get :show, params: {
       script_id: non_legacy_script_level.script,
-      stage_position: '1',
+      lesson_position: '1',
       id: '1'
     }
 
@@ -317,11 +485,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show specified video for script level with video' do
-    non_legacy_script_level = create(:script_level, :with_autoplay_video)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    non_legacy_script_level = create(:script_level, :with_autoplay_video, lesson: lesson, script: script)
     assert_empty(non_legacy_script_level.level.concepts)
     get :show, params: {
       script_id: non_legacy_script_level.script,
-      stage_position: '1',
+      lesson_position: '1',
       id: '1'
     }
     assert_response :success
@@ -330,10 +501,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should have autoplay video when never_autoplay_video is false on level' do
-    level_with_autoplay_video = create(:script_level, :never_autoplay_video_false)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level_with_autoplay_video = create(:script_level, :never_autoplay_video_false, lesson: lesson, script: script)
     get :show, params: {
       script_id: level_with_autoplay_video.script,
-      stage_position: '1',
+      lesson_position: '1',
       id: '1'
     }
     assert_response :success
@@ -342,10 +516,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not have autoplay video when never_autoplay_video is true on level' do
-    level_with_autoplay_video = create(:script_level, :never_autoplay_video_true)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level_with_autoplay_video = create(:script_level, :never_autoplay_video_true, lesson: lesson, script: script)
     get :show, params: {
       script_id: level_with_autoplay_video.script,
-      stage_position: '1',
+      lesson_position: '1',
       id: '1'
     }
     assert_response :success
@@ -354,11 +531,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "shouldn't show autoplay video when already seen" do
-    non_legacy_script_level = create(:script_level, :with_autoplay_video)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    non_legacy_script_level = create(:script_level, :with_autoplay_video, lesson: lesson, script: script)
     client_state.add_video_seen(non_legacy_script_level.level.video_key)
     get :show, params: {
       script_id: non_legacy_script_level.script,
-      stage_position: '1',
+      lesson_position: '1',
       id: '1'
     }
     assert_response :success
@@ -367,11 +547,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'non-legacy script level with concepts should have related but not autoplay video' do
-    non_legacy_script_level = create(:script_level)
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    non_legacy_script_level = create(:script_level, lesson: lesson, script: script)
     non_legacy_script_level.level.concepts = [create(:concept, :with_video)]
     get :show, params: {
       script_id: non_legacy_script_level.script,
-      stage_position: '1',
+      lesson_position: '1',
       id: '1'
     }
     assert_response :success
@@ -383,7 +567,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
         script_id: Script.twenty_hour_script,
-        stage_position: '99999999999999999999999999',
+        lesson_position: '99999999999999999999999999',
         id: '1'
       }
     end
@@ -391,7 +575,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
         script_id: Script.twenty_hour_script,
-        stage_position: '1',
+        lesson_position: '1',
         id: '99999999999999999999999999'
       }
     end
@@ -402,13 +586,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_stable: true
     create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
-    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
-    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
+    courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
+    courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_lesson_1_script_level = create :script_level, script: courseg_2017, lesson: courseg_2017_lesson_1, position: 1
 
     get :show, params: {
       script_id: courseg_2017.name,
-      stage_position: courseg_2017_stage_1.relative_position,
-      id: courseg_2017_stage_1_script_level.position,
+      lesson_position: courseg_2017_lesson_1.relative_position,
+      id: courseg_2017_lesson_1_script_level.position,
     }
 
     assert_redirected_to '/s/courseg-2018?redirect_warning=true'
@@ -421,21 +606,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_stable: true
     create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
-    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
-    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
+    courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
+    courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_lesson_1_script_level = create :script_level, script: courseg_2017, lesson: courseg_2017_lesson_1, position: 1
 
     get :show, params: {
       script_id: courseg_2017.name,
-      stage_position: courseg_2017_stage_1.relative_position,
-      id: courseg_2017_stage_1_script_level.position,
+      lesson_position: courseg_2017_lesson_1.relative_position,
+      id: courseg_2017_lesson_1_script_level.position,
     }
     assert_redirected_to '/s/courseg-2018?redirect_warning=true'
 
     # Does not redirect if no_redirect query param is provided.
     get :show, params: {
       script_id: courseg_2017.name,
-      stage_position: courseg_2017_stage_1.relative_position,
-      id: courseg_2017_stage_1_script_level.position,
+      lesson_position: courseg_2017_lesson_1.relative_position,
+      id: courseg_2017_lesson_1_script_level.position,
       no_redirect: "true"
     }
     assert_response :ok
@@ -443,10 +629,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
-    assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
+    assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
     assert_routing(
       {method: "get", path: build_script_level_path(sl)},
-      {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_position: sl.stage.to_param, id: sl.to_param}
+      {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, lesson_position: sl.lesson.to_param, id: sl.to_param}
     )
   end
 
@@ -475,32 +661,32 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       {method: "get", path: '/jigsaw/3'},
       {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"}
     )
-    assert_equal "/s/jigsaw/stage/1/puzzle/3", build_script_level_path(jigsaw_level)
+    assert_equal "/s/jigsaw/lessons/1/levels/3", build_script_level_path(jigsaw_level)
   end
 
-  test "routing for custom scripts with stage" do
+  test "routing for custom scripts with lesson" do
     assert_routing(
-      {method: "get", path: "/s/laurel/stage/1/puzzle/1"},
-      {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "1", id: "1"}
+      {method: "get", path: "/s/laurel/lessons/1/levels/1"},
+      {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "1", id: "1"}
     )
-    assert_equal "/s/laurel/stage/1/puzzle/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "/s/laurel/lessons/1/levels/1", build_script_level_path(@custom_s1_l1)
 
     assert_routing(
-      {method: "get", path: "/s/laurel/stage/2/puzzle/1"},
-      {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "2", id: "1"}
+      {method: "get", path: "/s/laurel/lessons/2/levels/1"},
+      {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "2", id: "1"}
     )
-    assert_equal "/s/laurel/stage/2/puzzle/1", build_script_level_path(@custom_s2_l1)
+    assert_equal "/s/laurel/lessons/2/levels/1", build_script_level_path(@custom_s2_l1)
 
     assert_routing(
-      {method: "get", path: "/s/laurel/stage/2/puzzle/2"},
-      {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "2", id: "2"}
+      {method: "get", path: "/s/laurel/lessons/2/levels/2"},
+      {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "2", id: "2"}
     )
-    assert_equal "/s/laurel/stage/2/puzzle/2", build_script_level_path(@custom_s2_l2)
+    assert_equal "/s/laurel/lessons/2/levels/2", build_script_level_path(@custom_s2_l2)
   end
 
   test "build_script_level_url" do
-    assert_equal "/s/laurel/stage/1/puzzle/1", build_script_level_path(@custom_s1_l1)
-    assert_equal "http://test.host/s/laurel/stage/1/puzzle/1", build_script_level_url(@custom_s1_l1)
+    assert_equal "/s/laurel/lessons/1/levels/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "http://test.host/s/laurel/lessons/1/levels/1", build_script_level_url(@custom_s1_l1)
   end
 
   test "next routing for custom scripts" do
@@ -513,53 +699,57 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "next redirects to next level for custom scripts" do
     get :next, params: {script_id: 'laurel'}
-    assert_redirected_to "/s/laurel/stage/#{@custom_s1_l1.stage.absolute_position}/puzzle/#{@custom_s1_l1.position}"
+    assert_redirected_to "/s/laurel/lessons/#{@custom_s1_l1.lesson.absolute_position}/levels/#{@custom_s1_l1.position}"
   end
 
   test "next redirects to first non-unplugged level for custom scripts" do
     custom_script = create(:script, name: 'coolscript')
-    unplugged_stage = create(:stage, script: custom_script, name: 'unplugged stage', absolute_position: 1)
-    create(:script_level, levels: [create(:unplugged)], script: custom_script, stage: unplugged_stage, position: 1)
-    plugged_stage = create(:stage, script: custom_script, name: 'plugged stage', absolute_position: 2)
-    create(:script_level, script: custom_script, stage: plugged_stage, position: 1)
+    lesson_group = create(:lesson_group, script: custom_script)
+    unplugged_lesson = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'unplugged lesson', absolute_position: 1)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: unplugged_lesson, position: 1)
+    plugged_lesson = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'plugged lesson', absolute_position: 2)
+    create(:script_level, script: custom_script, lesson: plugged_lesson, position: 1)
 
     get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/stage/2/puzzle/1"
+    assert_redirected_to "/s/coolscript/lessons/2/levels/1"
   end
 
   test "next when logged in redirects to first non-unplugged non-finished level" do
     sign_in @student
 
     custom_script = create(:script, name: 'coolscript')
-    custom_stage_1 = create(:stage, script: custom_script, name: 'neat stage', absolute_position: 1)
-    first_level = create(:script_level, script: custom_script, stage: custom_stage_1, position: 1)
+    lesson_group = create(:lesson_group, script: custom_script)
+    custom_lesson_1 = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'neat lesson', absolute_position: 1)
+    first_level = create(:script_level, script: custom_script, lesson: custom_lesson_1, position: 1)
     UserLevel.create(user: @student, level: first_level.level, script: custom_script, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
-    second_level = create(:script_level, script: custom_script, stage: custom_stage_1, position: 2)
+    second_level = create(:script_level, script: custom_script, lesson: custom_lesson_1, position: 2)
     UserLevel.create(user: @student, level: second_level.level, script: custom_script, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
-    create(:script_level, levels: [create(:unplugged)], script: custom_script, stage: custom_stage_1, position: 3)
-    last_level = create(:script_level, script: custom_script, stage: custom_stage_1, position: 4)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: custom_lesson_1, position: 3)
+    last_level = create(:script_level, script: custom_script, lesson: custom_lesson_1, position: 4)
 
     get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/stage/#{last_level.stage.absolute_position}/puzzle/#{last_level.position}"
+    assert_redirected_to "/s/coolscript/lessons/#{last_level.lesson.absolute_position}/levels/#{last_level.position}"
   end
 
-  test "next skips entire unplugged stage" do
+  test "next skips entire unplugged lesson" do
     custom_script = create(:script, name: 'coolscript')
-    unplugged_stage = create(:stage, script: custom_script, name: 'unplugged stage', absolute_position: 1)
-    create(:script_level, levels: [create(:unplugged)], script: custom_script, stage: unplugged_stage, position: 1)
-    create(:script_level, script: custom_script, stage: unplugged_stage, position: 2)
-    create(:script_level, script: custom_script, stage: unplugged_stage, position: 3)
-    plugged_stage = create(:stage, script: custom_script, name: 'plugged stage', absolute_position: 2)
-    create(:script_level, script: custom_script, stage: plugged_stage, position: 1)
+    lesson_group = create(:lesson_group, script: custom_script)
+    unplugged_lesson = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'unplugged lesson', absolute_position: 1)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: unplugged_lesson, position: 1)
+    create(:script_level, script: custom_script, lesson: unplugged_lesson, position: 2)
+    create(:script_level, script: custom_script, lesson: unplugged_lesson, position: 3)
+    plugged_lesson = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'plugged lesson', absolute_position: 2)
+    create(:script_level, script: custom_script, lesson: plugged_lesson, position: 1)
 
     get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/stage/2/puzzle/1"
+    assert_redirected_to "/s/coolscript/lessons/2/levels/1"
   end
 
   test "next when only unplugged level goes back to home" do
     custom_script = create(:script, name: 'coolscript')
-    custom_stage_1 = create(:stage, script: custom_script, name: 'neat stage', absolute_position: 1)
-    create(:script_level, levels: [create(:unplugged)], script: custom_script, stage: custom_stage_1, position: 1)
+    lesson_group = create(:lesson_group, script: custom_script)
+    custom_lesson_1 = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'neat lesson', absolute_position: 1)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: custom_lesson_1, position: 1)
 
     assert_raises RuntimeError do
       get :next, params: {script_id: 'coolscript'}
@@ -569,7 +759,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show redirects to canonical url for hoc" do
     get :show, params: {
       script_id: Script::HOC_NAME,
-      stage_position: '1',
+      lesson_position: '1',
       id: '2'
     }
 
@@ -590,7 +780,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show redirects to canonical url for special scripts" do
     get :show, params: {
       script_id: Script::FLAPPY_NAME,
-      stage_position: '1',
+      lesson_position: '1',
       id: '2'
     }
 
@@ -598,10 +788,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to '/flappy/2'
   end
 
-  test "should show script level by stage and puzzle position" do
+  test "should show script level by lesson and puzzle position" do
     # this works for custom scripts
 
-    get :show, params: {script_id: @custom_script, stage_position: 2, id: 1}
+    get :show, params: {script_id: @custom_script, lesson_position: 2, id: 1}
 
     assert_response :success
 
@@ -613,7 +803,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
+      lesson_position: script_level.lesson.absolute_position,
       id: script_level.position
     }
 
@@ -623,12 +813,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'div.unplugged > p', 'Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.'
     assert_select '.pdf-button', 2
 
-    unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.stage.absolute_position}"
+    unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.lesson.absolute_position}"
     assert_select '.pdf-button' do
       assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}.*/
     end
 
     assert_equal script_level, assigns(:script_level)
+  end
+
+  test "show with the login_required param should redirect when not logged in" do
+    script_level = Script.find_by_name('courseb-2017').script_levels.first
+
+    get :show, params: {
+      script_id: script_level.script,
+      lesson_position: script_level.lesson.absolute_position,
+      id: script_level.position,
+      login_required: "true"
+    }
+
+    assert_redirected_to_sign_in
   end
 
   test "show with the reset param should reset session when not logged in" do
@@ -694,18 +897,19 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in(create(:user))
 
     get :reset, params: {script_id: 'laurel'}
-    assert_redirected_to '/s/laurel/stage/1/puzzle/1'
+    assert_redirected_to '/s/laurel/lessons/1/levels/1'
   end
 
   test "should render blockly partial for blockly levels" do
     script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
     level = create(:level, :blockly)
-    stage = create(:stage, script: script)
-    script_level = create(:script_level, script: script, levels: [level], stage: stage)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create(:script_level, script: script, levels: [level], lesson: lesson)
 
     get :show, params: {
       script_id: script,
-      stage_position: stage.absolute_position,
+      lesson_position: lesson.absolute_position,
       id: script_level.position
     }
 
@@ -716,15 +920,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "with callout defined should define callout JS" do
     script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
     level = create(:level, :blockly, user_id: nil)
-    stage = create(:stage, script: script)
-    script_level = create(:script_level, script: script, levels: [level], stage: stage)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create(:script_level, script: script, levels: [level], lesson: lesson)
 
     create(:callout, script_level: script_level)
 
     get :show, params: {
       script_id: script,
-      stage_position: stage.absolute_position,
+      lesson_position: lesson.absolute_position,
       id: script_level.position
     }
 
@@ -734,7 +939,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should render title for puzzle in custom script' do
     get :show, params: {
       script_id: @custom_script.name,
-      stage_position: @custom_s2_l1.stage,
+      lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
     assert_equal 'Code.org [test] - custom-script-laurel: laurel-stage-2 #1',
@@ -777,7 +982,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   #   assert(@response.body.include?('hoc_wrapup'))
   # end
 
-  # test 'end of HoC for signed-in users has no wrapup video, does have stage change info' do
+  # test 'end of HoC for signed-in users has no wrapup video, does have lesson change info' do
   #   get :show, {script_id: Script::HOC_NAME, chapter: '20'}
   #   assert(!@response.body.include?('hoc_wrapup'))
   #   assert(@response.body.include?('/s/1/level/show?chapter=next'))
@@ -801,7 +1006,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     set_env :production
     get :show, params: {
       script_id: Script::FROZEN_NAME,
-      stage_position: 1,
+      lesson_position: 1,
       id: 1
     }
     assert_select 'img[src="//code.org/api/hour/begin_frozen.png"]'
@@ -817,7 +1022,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     set_env :production
     get :show, params: {
       script_id: Script::PLAYLAB_NAME,
-      stage_position: 1,
+      lesson_position: 1,
       id: 1
     }
     assert_select 'img[src="//code.org/api/hour/begin_playlab.png"]'
@@ -829,15 +1034,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
   end
 
-  test "should 404 for invalid stage for course1" do
+  test "should 404 for invalid lesson for course1" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, params: {script_id: 'course1', stage_position: 4000, id: 1}
+      get :show, params: {script_id: 'course1', lesson_position: 4000, id: 1}
     end
   end
 
   test "should 404 for invalid puzzle for course1" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, params: {script_id: 'course1', stage_position: 1, id: 4000}
+      get :show, params: {script_id: 'course1', lesson_position: 1, id: 4000}
     end
   end
 
@@ -854,7 +1059,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: @custom_script,
-      stage_position: @custom_stage_1.absolute_position,
+      lesson_position: @custom_lesson_1.absolute_position,
       id: @custom_s1_l1.position
     }
     assert_equal last_attempt_data, assigns(:last_attempt)
@@ -872,7 +1077,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: @custom_script,
-      stage_position: @custom_stage_1.absolute_position,
+      lesson_position: @custom_lesson_1.absolute_position,
       id: @custom_s1_l1.position,
       user_id: @student.id,
       section_id: @section.id
@@ -881,29 +1086,46 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal last_attempt_data, assigns(:last_attempt)
   end
 
+  test 'renders error message when attempting to view a student\'s work while not signed in' do
+    # Note that this also applies when trying to view a student's work for a
+    # cached page, as we tend to do for high-traffic levels.
+
+    get :show, params: {
+      script_id: @script,
+      lesson_position: @script_level.lesson,
+      id: @script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_response :success
+    assert_includes response.body, 'Student code cannot be viewed for this activity.'
+  end
+
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
     sign_in @teacher
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: @student,
-          level_source: create(:level_source, data: fake_last_attempt)
-        )
-      )
 
     user_storage_id = storage_id_for_user_id(@student.id)
 
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
-    script_level = create :script_level, levels: [level]
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: fake_last_attempt)
+    )
 
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
       script_id: script_level.script,
-      stage_position: script_level.stage,
+      lesson_position: script_level.lesson,
       id: script_level.position,
       user_id: @student.id,
       section_id: @section.id
@@ -918,25 +1140,26 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @project_validator
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: @student,
-          level_source: create(:level_source, data: fake_last_attempt)
-        )
-      )
 
     user_storage_id = storage_id_for_user_id(@student.id)
 
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
-    script_level = create :script_level, levels: [level]
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: fake_last_attempt)
+    )
 
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
       script_id: script_level.script,
-      stage_position: script_level.stage,
+      lesson_position: script_level.lesson,
       id: script_level.position,
       user_id: @student.id,
       section_id: @section.id
@@ -954,23 +1177,24 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     user_storage_id = storage_id_for_user_id(other_student.id)
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: other_student,
-          level_source: create(:level_source, data: fake_last_attempt)
-        )
-      )
 
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
-    script_level = create :script_level, levels: [level]
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+    create(:user_level,
+      user: @student,
+      script: script,
+      level: level,
+      level_source: create(:level_source, data: fake_last_attempt)
+    )
 
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
       script_id: script_level.script,
-      stage_position: script_level.stage,
+      lesson_position: script_level.lesson,
       id: script_level.position,
       user_id: other_student.id,
       section_id: @section.id
@@ -985,21 +1209,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: @student,
-          level_source: create(:level_source, data: fake_last_attempt)
-        )
-      )
 
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
-    script_level = create :script_level, levels: [level]
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: fake_last_attempt)
+    )
 
     get :show, params: {
       script_id: script_level.script,
-      stage_position: script_level.stage,
+      lesson_position: script_level.lesson,
       id: script_level.position,
       user_id: @student.id,
       section_id: @section.id
@@ -1018,7 +1243,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: @custom_script,
-      stage_position: @custom_stage_1.absolute_position,
+      lesson_position: @custom_lesson_1.absolute_position,
       id: @custom_s1_l1.position
     }
 
@@ -1029,14 +1254,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'teacher cannot view solution to plc script' do
     sign_in @teacher
     script = create :script
+    lesson_group = create(:lesson_group, script: script)
     script.update(professional_learning_course: true)
-    stage = create(:stage, script: script)
-    level = Artist.first
-    script_level = create(:script_level, script: script, stage: stage, levels: [level])
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create(:level, :with_ideal_level_source)
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
 
     get :show, params: {
       script_id: script,
-      stage_position: stage,
+      lesson_position: lesson,
       id: script_level,
       solution: true
     }
@@ -1044,17 +1270,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'student cannot view solution' do
-    sl = ScriptLevel.joins(:script, :levels).find_by(
-      scripts: {name: 'allthethings'},
-      levels: Level.key_to_params('K-1 Artist1 1')
-    )
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create(:level, :with_ideal_level_source)
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
 
     sign_in @student
 
     get :show, params: {
-      script_id: sl.script,
-      stage_position: sl.stage,
-      id: sl,
+      script_id: script,
+      lesson_position: lesson,
+      id: script_level,
       solution: true
     }
     assert_response :forbidden
@@ -1070,7 +1297,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: sl.script,
-      stage_position: sl.stage,
+      lesson_position: sl.lesson,
       id: sl
     }
 
@@ -1087,7 +1314,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: sl.script,
-      stage_position: sl.stage,
+      lesson_position: sl.lesson,
       id: sl
     }
 
@@ -1098,14 +1325,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
 
     last_attempt_data = 'test'
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create(:applab, submittable: true)
-    script_level = create(:script_level, levels: [level])
+    script_level = create(:script_level, levels: [level], lesson: lesson, script: script)
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
     ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::FREE_PLAY_RESULT, submitted: true)
 
     get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage,
+      script_id: script,
+      lesson_position: lesson,
       id: script_level
     }
     assert_response :success
@@ -1145,26 +1375,37 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should present single available level for single-level scriptlevels" do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze
-    get_show_script_level_page(create(:script_level, levels: [level]))
+    get_show_script_level_page(create(:script_level, levels: [level], lesson: lesson, script: script))
 
     assert_equal assigns(:level), level
   end
 
   test "should present first available level if missing properties" do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze
     level2 = create :maze
-    get_show_script_level_page(create(:script_level, levels: [level, level2]))
+    get_show_script_level_page(create(:script_level, levels: [level, level2], lesson: lesson, script: script))
 
     assert_equal assigns(:level), level
   end
 
   test "should present first level if active" do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(
       create(
         :script_level,
+        lesson: lesson,
+        script: script,
         levels: [level, level2],
         properties: {variants: {'maze 2': {'active': false}}}
       )
@@ -1173,11 +1414,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should present second level if first is inactive" do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(
       create(
         :script_level,
+        lesson: lesson,
+        script: script,
         levels: [level, level2],
         properties: {'variants': {'maze 1': {'active': false}}}
       )
@@ -1186,12 +1432,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should raise if all levels inactive" do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     assert_raises do
       get_show_script_level_page(
         create(
           :script_level,
+          lesson: lesson,
+          script: script,
           levels: [level, level2],
           properties: {'variants': {'maze 1': {'active': false}, 'maze 2': {'active': false}}}
         )
@@ -1201,6 +1452,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present level with activity" do
     sign_in @student
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     level_source = create :level_source, level: level, data: 'level source'
@@ -1210,6 +1464,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get_show_script_level_page(
       create(
         :script_level,
+        lesson: lesson,
+        script: script,
         levels: [level, level2],
         properties: {'variants': {'maze 1': {'active': false}}}
       )
@@ -1219,6 +1475,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present level with most recent activity" do
     sign_in @student
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     level_source = create :level_source, level: level, data: 'level source'
@@ -1231,6 +1490,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get_show_script_level_page(
       create(
         :script_level,
+        lesson: lesson,
+        script: script,
         levels: [level, level2],
         properties: {'variants': {'maze 1': {'active': false}}}
       )
@@ -1240,12 +1501,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present experiment level if in the experiment" do
     sign_in @student
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     experiment = create :single_user_experiment, min_user_id: @student.id
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(
       create(
         :script_level,
+        lesson: lesson,
+        script: script,
         levels: [level, level2],
         properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
       )
@@ -1256,12 +1522,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present experiment level if in the section experiment" do
     sign_in @student
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     experiment = create :single_section_experiment, section: @section
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(
       create(
         :script_level,
+        lesson: lesson,
+        script: script,
         levels: [level, level2],
         properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
       )
@@ -1272,6 +1543,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present experiment level if in one of the experiments" do
     sign_in @student
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     experiment1 = create :single_user_experiment, min_user_id: @student.id + 1
     experiment2 = create :single_user_experiment, min_user_id: @student.id
     level = create :maze, name: 'maze 1'
@@ -1279,6 +1553,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get_show_script_level_page(
       create(
         :script_level,
+        lesson: lesson,
+        script: script,
         levels: [level, level2],
         properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment1.name, experiment2.name]}}}
       )
@@ -1290,12 +1566,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should not present experiment level if not in the experiment" do
     sign_in @student
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
     experiment = create :single_user_experiment, min_user_id: @student.id + 1
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(
       create(
         :script_level,
+        lesson: lesson,
+        script: script,
         levels: [level, level2],
         properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
       )
@@ -1304,23 +1585,35 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     experiment.destroy
   end
 
-  test "hidden_stage_ids for user not signed in" do
-    response = get :hidden_stage_ids, params: {script_id: @script.name}
+  test "hidden_lesson_ids for user not signed in" do
+    response = get :hidden_lesson_ids, params: {script_id: @script.name}
     assert_response :success
 
     hidden = JSON.parse(response.body)
     assert_equal [], hidden
   end
 
-  test "hidden_stage_ids for user signed in" do
-    SectionHiddenStage.create(section_id: @section.id, stage_id: @custom_stage_1.id)
+  test "hidden_lesson_ids for student signed in" do
+    SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
 
     sign_in @student
-    response = get :hidden_stage_ids, params: {script_id: @script.name}
+    response = get :hidden_lesson_ids, params: {script_id: @script.name}
     assert_response :success
 
     hidden = JSON.parse(response.body)
-    assert_equal [@custom_stage_1.id.to_s], hidden
+    assert_equal [@custom_lesson_1.id], hidden
+  end
+
+  test "hidden_lesson_ids for teacher signed in" do
+    SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
+
+    sign_in @teacher
+    response = get :hidden_lesson_ids, params: {script_id: @script.name}
+    assert_response :success
+
+    hidden = JSON.parse(response.body)
+    expected = {@section.id.to_s => [@custom_lesson_1.id]}
+    assert_equal expected, hidden
   end
 
   def put_student_in_section(student, teacher, script)
@@ -1329,34 +1622,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     section
   end
 
-  test "teacher can hide and unhide stages in sections they own" do
+  test "teacher can hide and unhide lessons in sections they own" do
     teacher = create :teacher
     student = create :student
     sign_in teacher
 
     section = put_student_in_section(student, teacher, @custom_script)
-    stage1 = @custom_script.stages[0]
-    assert @custom_script.hideable_stages
+    lesson1 = @custom_script.lessons[0]
+    assert @custom_script.hideable_lessons
 
-    # start with no hidden stages
-    assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
+    # start with no hidden lessons
+    assert_equal 0, SectionHiddenLesson.where(section_id: section.id).length
 
     post :toggle_hidden, params: {
       script_id: @custom_script.id,
-      stage_id: stage1.id,
+      stage_id: lesson1.id,
       section_id: section.id,
       hidden: true
     }
     assert_response :success
-    assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
+    assert_equal 1, SectionHiddenLesson.where(section_id: section.id).length
 
     post :toggle_hidden, params: {
       script_id: @custom_script.id,
-      stage_id: stage1.id,
+      stage_id: lesson1.id,
       section_id: section.id,
       hidden: false
     }
-    assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
+    assert_equal 0, SectionHiddenLesson.where(section_id: section.id).length
   end
 
   test "teacher can hide and unhide scripts in sections they own" do
@@ -1365,7 +1658,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in teacher
 
     section = put_student_in_section(student, teacher, @custom_script)
-    assert @custom_script.hideable_stages
+    assert @custom_script.hideable_lessons
 
     # start with no hidden scripts
     assert_equal 0, SectionHiddenScript.where(section_id: section.id).length
@@ -1384,58 +1677,58 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal 0, SectionHiddenScript.where(section_id: section.id).length
   end
 
-  test "teacher can't hide stages if script has hideable_stages false" do
-    script = create(:script, hideable_stages: false)
-    stage = create(:stage, script: script)
+  test "teacher can't hide lessons if script has hideable_lessons false" do
+    script = create(:script, hideable_lessons: false)
+    lesson = create(:lesson, script: script)
 
     teacher = create :teacher
     student = create :student
     sign_in teacher
 
     section = put_student_in_section(student, teacher, script)
-    refute script.hideable_stages
+    refute script.hideable_lessons
 
     post :toggle_hidden, params: {
       script_id: script.id,
-      stage_id: stage.id,
+      stage_id: lesson.id,
       section_id: section.id,
       hidden: true
     }
     assert_response 403
-    assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
+    assert_equal 0, SectionHiddenLesson.where(section_id: section.id).length
   end
 
-  test "teacher can't hide or unhide stages in sections they don't own" do
+  test "teacher can't hide or unhide lessons in sections they don't own" do
     teacher = create :teacher
     other_teacher = create :teacher
     student = create :student
     sign_in teacher
 
     section = put_student_in_section(student, other_teacher, @custom_script)
-    stage1 = @custom_script.stages[0]
-    assert @custom_script.hideable_stages
+    lesson1 = @custom_script.lessons[0]
+    assert @custom_script.hideable_lessons
 
     post :toggle_hidden, params: {
       script_id: @custom_script.id,
-      stage_id: stage1.id,
+      stage_id: lesson1.id,
       section_id: section.id,
       hidden: "true"
     }
     assert_response 403
 
-    # add a SectionHiddenStage directly
-    SectionHiddenStage.create(stage_id: stage1.id, section_id: section.id)
+    # add a SectionHiddenLesson directly
+    SectionHiddenLesson.create(stage_id: lesson1.id, section_id: section.id)
 
     # try to unhide
     post :toggle_hidden, params: {
       script_id: @custom_script.id,
-      stage_id: stage1.id,
+      stage_id: lesson1.id,
       section_id: section.id,
       hidden: "false"
     }
     assert_response 403
 
-    assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
+    assert_equal 1, SectionHiddenLesson.where(section_id: section.id).length
   end
 
   test "teacher can't hide or unhide scripts in sections they don't own" do
@@ -1453,7 +1746,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
     assert_response 403
 
-    # add a SectionHiddenStage directly
+    # add a SectionHiddenLesson directly
     SectionHiddenScript.create(script_id: @custom_script.id, section_id: section.id)
 
     # try to unhide
@@ -1470,41 +1763,48 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should redirect when script has a redirect_to property" do
     script = create :script
     new_script = create :script
-    create(:script_level, script: script)
-    create(:script_level, script: script)
-    create(:script_level, script: new_script)
+    lesson_group = create(:lesson_group, script: script)
+    new_lesson_group = create(:lesson_group, script: new_script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    new_lesson = create(:lesson, script: new_script, lesson_group: new_lesson_group)
+    create(:script_level, script: script, lesson: lesson)
+    create(:script_level, script: script, lesson: lesson)
+    create(:script_level, script: new_script, lesson: new_lesson)
     script.update(redirect_to: new_script.name)
 
-    get :show, params: {script_id: script.name, stage_position: '1', id: '2'}
-    assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/2"
+    get :show, params: {script_id: script.name, lesson_position: '1', id: '2'}
+    assert_redirected_to "/s/#{new_script.name}/lessons/1/levels/2"
   end
 
   test 'should redirect to 2017 version in script family' do
-    cats1 = create :script, name: 'cats1', family_name: 'coursea', version_year: '2017'
+    cats1 = create :script, name: 'cats1', family_name: 'ui-test-versioned-script', version_year: '2017'
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
+      get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     end
 
     cats1.update!(is_stable: true)
-    get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
-    assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+    get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
+    assert_redirected_to "/s/cats1/lessons/1/levels/1"
 
-    create :script, name: 'cats2', family_name: 'coursea', version_year: '2018', is_stable: true
-    get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
-    assert_redirected_to "/s/cats2/stage/1/puzzle/1"
+    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', is_stable: true
+    get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
+    assert_redirected_to "/s/cats2/lessons/1/levels/1"
 
     # next redirects to latest version in a script family
-    get :next, params: {script_id: 'coursea'}
+    get :next, params: {script_id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/cats2/next"
   end
 
   test "should indicate challenge levels as challenge levels" do
-    script_level = create :script_level,
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script,
       properties: {challenge: true}
     get :show, params: {
       script_id: script_level.script,
-      stage_position: 1,
+      lesson_position: 1,
       id: '1',
     }
     assert_response :success
@@ -1512,10 +1812,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should not indicate non-challenge levels as challenge levels" do
-    script_level = create :script_level
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script
     get :show, params: {
       script_id: script_level.script,
-      stage_position: 1,
+      lesson_position: 1,
       id: '1',
     }
     assert_response :success
@@ -1523,12 +1826,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "specifying a bonus level name will direct to that level" do
-    script_level = create :script_level
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script
     script_level.bonus = true
     script_level.save!
     get :stage_extras, params: {
-      script_id: script_level.script,
-      stage_position: 1,
+      script_id: script,
+      lesson_position: 1,
       level_name: script_level.level.name
     }
     assert_response :success
@@ -1536,15 +1842,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "a bonus scriptlevel id takes precedence over level name" do
-    script_level_by_id = create :script_level
-    script_level_by_name = create :script_level, script: script_level_by_id.script
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level_by_id = create :script_level, lesson: lesson, script: script
+    script_level_by_name = create :script_level, lesson: lesson, script: script
     script_level_by_id.bonus = true
     script_level_by_name.bonus = true
     script_level_by_id.save!
     script_level_by_name.save!
     get :stage_extras, params: {
       script_id: script_level_by_id.script,
-      stage_position: 1,
+      lesson_position: 1,
       id: script_level_by_id.id,
       level_name: script_level_by_name.level.name
     }
@@ -1553,19 +1862,109 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "a bad bonus level name shows extras page" do
-    script_level_by_id = create :script_level
-    script_level_by_name = create :script_level, script: script_level_by_id.script
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level_by_id = create :script_level, lesson: lesson, script: script
+    script_level_by_name = create :script_level, lesson: lesson, script: script
     script_level_by_id.bonus = true
     script_level_by_name.bonus = true
     script_level_by_id.save!
     script_level_by_name.save!
     get :stage_extras, params: {
       script_id: script_level_by_id.script,
-      stage_position: 1,
+      lesson_position: 1,
       id: script_level_by_id.id,
       level_name: script_level_by_name.level.name + "!!!"
     }
     assert_response :success
+  end
+
+  test "stage extras shows progress for current user if no section and user id" do
+    sign_in @student
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
+    get :stage_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
+  test "stage extras shows teacher no progress if no section and user id" do
+    sign_in @teacher
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
+    get :stage_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
+  test "stage extras shows teacher progress for student if section and user id" do
+    sign_in @teacher
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
+    get :stage_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1,
+      section_id: @section.id,
+      user_id: @student.id
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
+  test "stage extras shows no progress if no current user" do
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
+    get :stage_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1,
+      section_id: @section.id,
+      user_id: @student.id
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
@@ -1591,4 +1990,129 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'levelbuilder can view pilot script level'
+
+  def create_visible_after_script_level
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0700'
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+
+    script_level
+  end
+
+  class ShowVisibleAfterScriptLevelTests < ActionController::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
+
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+      level = create :maze, name: 'maze 1', level_num: 'custom'
+      script_with_visible_after_lessons = create :script
+      lesson_group = create :lesson_group, script: script_with_visible_after_lessons
+
+      lesson_future_visible_after = create :lesson, name: 'lesson 1', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0700'
+      @script_level_future_visible_after = create :script_level, levels: [level], lesson: lesson_future_visible_after, script: script_with_visible_after_lessons
+
+      lesson_past_visible_after = create :lesson, name: 'lesson 2', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-03-01 08:00:00 -0700'
+      @script_level_past_visible_after = create :script_level, levels: [level], lesson: lesson_past_visible_after, script: script_with_visible_after_lessons
+
+      lesson_no_visible_after = create :lesson, name: 'lesson 3', script: script_with_visible_after_lessons, lesson_group: lesson_group
+      @script_level_no_visible_after = create :script_level, levels: [level], lesson: lesson_no_visible_after, script: script_with_visible_after_lessons
+    end
+
+    teardown do
+      Timecop.return
+    end
+
+    test 'levelbuilder can view level in lesson with future visible after date' do
+      sign_in @levelbuilder
+
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        lesson_position: @script_level_future_visible_after.lesson.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :success
+    end
+
+    test 'levelbuilder can view level in lesson with past visible after date' do
+      sign_in @levelbuilder
+
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        lesson_position: @script_level_past_visible_after.lesson.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
+
+    test 'teacher can not view level in lesson with future visible after date' do
+      sign_in @teacher
+
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        lesson_position: @script_level_future_visible_after.lesson.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
+
+    test 'teacher can view level in lesson with past visible after date' do
+      sign_in @teacher
+
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        lesson_position: @script_level_past_visible_after.lesson.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
+
+    test 'student can not view level in lesson with future visible after date' do
+      sign_in @teacher
+
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        lesson_position: @script_level_future_visible_after.lesson.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
+
+    test 'student can view level in lesson with past visible after date' do
+      sign_in @teacher
+
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        lesson_position: @script_level_past_visible_after.lesson.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
+
+    test 'unsigned in user can not view level in lesson with future visible after date' do
+      sign_out :user
+
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        lesson_position: @script_level_future_visible_after.lesson.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
+
+    test 'unsigned in user can view level in lesson with past visible after date' do
+      sign_out :user
+
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        lesson_position: @script_level_past_visible_after.lesson.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
+  end
 end

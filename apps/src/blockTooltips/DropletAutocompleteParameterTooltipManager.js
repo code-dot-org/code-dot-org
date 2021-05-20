@@ -90,7 +90,16 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
     return;
   }
 
-  if (editor.completer && this.showParamDropdowns) {
+  // We check the command name to make sure that we aren't opening the param dropdown when users are
+  // navigating through the code with arrow keys.
+  // Otherwise, the cursor could get stuck in the dropdown.
+  if (
+    editor.completer &&
+    this.showParamDropdowns &&
+    !['golineup', 'golinedown', 'gotoleft', 'gotoright'].includes(
+      changeEvent.command.name
+    )
+  ) {
     this.showParamDropdownIfNeeded_(editor, currentParameterInfo);
   }
 

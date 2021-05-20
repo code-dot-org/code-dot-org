@@ -1,0 +1,13 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#helperLibraries"}}
+  Helper Libraries
+
+#helperLibraries.in.collapse
+
+  = f.label :helper_libraries
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple).
+  = f.select :helper_libraries, (Library.distinct.pluck(:name) + (@level.helper_libraries || [])).uniq.sort, {}, {multiple: true}

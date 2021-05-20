@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T16:56:13.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "# Design a program\r\n\r\nDescribe, using a top-down approach, how you would create a program to draw a white snowflake on a blue background that uses random numbers, so the snowflake will be unique every time you run the code. \r\n\r\nYou don’t need to write the exact code or blocks that you would use, but you should describe what functions you would need to create, where you would or would not use loops, and where you would or would not use random numbers.",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "86NiYJ32wMmmVlCuvpZxQARWIRKYTvAeMtkAX6QpmPQOLN9N+ODAOmlXQ5tY\ncSCYTtYNMKueYBsI2lT7WTMQUf4bEtSy1g22tEGszc37TIS6Y3AQ+6wMqRJG\ndFMOfsumHfVtnEgUNgrmfozIip9yyiIqt09Ny6BdRu7/Vwmu3KOJTr1JG50c\n8EUF9vzWVak8qT8voy17aQeDN67jQS3HMSb4NdRqHo2gKoz+fMou5J5gFXfy\nn5PLT1IZdUKhraEiwGMNYgLd4ibWGju/l6MiTnh7nzmt6NiElSNDj5TTt/61\nsds4zpcOAy87451XZd2nNJtPFug1MDewGpmetALTKmOLi9RQuVwZyRmLFb9n\n7DvolUtQctOcOWtjmOYjqp+Nk3ihiRpkDKB279/0I+NnpS6f4DLnq3pJagA/\n+be8FZd4uT72p6N+J2CX7I4mm+M+qQqX/iD0RmKYjU3BR5Sykc5IxSj05qt1\nFDibUCNCr5sJbM9/ydjf8h/Os/pEbsJ3OYkV8ct8b0DRDY3k2/FGybM/hq0X\nuHhNKVsUPCaWnuZ/2WB4fKFfQPFj9kBZ1gj5B5Zr1NVgwcTUzjLFtWL5aqei\nNyjLeXqoHWn7bzzgh8WLytBQablHmHIIzmh1Nz1jZ+vq//KdLxIiPJgA8bLw\nsmKIUd+ygPHMqOt9V1jf6q+yEptuMb78GM8CxuFwJpo8S3wpG/OLJWQjs0Wl\nV5f+PtJONMQLfmYATpWBdHQW4p/lPq1HgCbgItHxjsbT22iJwcJqTeYBVXUa\nfRGkHa6PwixxjZRZcQTtotfkIiY8dXM+LaW9+hRFsB4Gj5OQTJs5VBhAvj/z\nTqKNcZmT1UuG28qJjWlO9Cx/94IQlV45OJQ8RKFfE/dWV4y5LD9Y8LuUbgmA\nqMRkKMD8YOiu8B4PFXy6JJVKvWhqZQKM2XOHb3jJpUaIuzDGvz2TF3eKqXvY\n1T2eEuK8dXvRmhvavGDs4VgYvdG+VhlqoxVIz/CfJlTInJdZrtMcFwGpnJsu\ntnOgtzhCZ2AP+EJgbjce6Y7CUHUX506A22iv3rsiRuf1i1cuPGWRtxk76X6p\nOgC46h7nfo40Dp9BqKVZoqfQbEii+V8MgwWOYgyiI2epaVCl/5az6hAnsQDP\n78CRST47NsbEAys2EXmlJfam3pGbOmONX5TQDIq30RFVChb8opgwd165JA/s\nWp33sA+oBvALhperhbE867t6eGNMsrFg2MCr2+k4I1peuI4PHN6SPt147aee\nDZ4DL5z5hkv+d5ZLgDanyFlmdXfIcwnT090v6Ma67Txf4vRYCJWaEcbRzady\n/Fs/KNGbfY+3b9/DKxy0L3ERFji0WTPRjJUcWzR+TRqRggDS653+ML3AdN1p\nZi45e+LcQJcN6qsnPXT0GRlR+k30G5BuuBmlVQmP+kMOJphDXlc2F6KjyTar\navnXkyiKZtZmOlgdX9SxOs+F+yxcFdFWBPPSS59pbMLQrzwSytAMuApi3ZUN\nBErBcq7zbKUjVo9mLmWmIyUA95j4bgv2NmAP\n",
+    "parent_level_id": 16973,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-27 17:13:09 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-27 17:13:40 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-27 17:13:52 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-03 17:52:01 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2019-04-11 19:09:01 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

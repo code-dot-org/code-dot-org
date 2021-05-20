@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Choose your Backgrounds\r\n\r\nNow that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 19 Level 11](/s/csd3-2017/stage/19/puzzle/11).\r\n\r\nAfter you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.\r\n",
+    "long_instructions": "# Choose your Backgrounds\r\n\r\nNow that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 19 Level 11](/s/csd3-2017/lessons/19/levels/11).\r\n\r\nAfter you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

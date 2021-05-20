@@ -12,7 +12,7 @@ import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
 // Add story files here to exclude them from the storybook render tests.
-const BLACKLIST = [
+const DENYLIST = [
   // 'templates/progress/ProgressLessonTeacherInfo.story.jsx',
 ];
 
@@ -21,24 +21,39 @@ describe('react-storybook stories render without errors or warnings', function()
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();
 
-  //Stub jquery fileupload library function
-  let fileupload;
+  // Stub jquery fileupload library function and window.Audio class.
+  let fileupload, windowAudio;
   before(() => {
     fileupload = $.fn.fileupload;
     $.fn.fileupload = () => {};
+
+    windowAudio = window.Audio;
+    window.Audio = FakeAudio;
   });
   after(() => {
     $.fn.fileupload = fileupload;
+    window.Audio = windowAudio;
   });
 
-  // Test all the *.story.jsx files that aren't blacklisted
+  // Test all the *.story.jsx files that aren't denylisted
   const context = require.context('../../src/', true, /.*\.story\.jsx?$/);
   context
     .keys()
-    .filter(storyFile => !BLACKLIST.some(taboo => storyFile.includes(taboo)))
+    .filter(storyFile => !DENYLIST.some(taboo => storyFile.includes(taboo)))
     .forEach(storyFile => {
       describe(storyFile, () => {
         testStorybook(context(storyFile));
       });
     });
 });
+
+class FakeAudio {
+  play() {}
+  pause() {}
+  load() {}
+  // EventTarget interface
+  addEventListener() {}
+  removeEventListener() {}
+  dispatchEvent() {}
+  removeAttribute() {}
+}

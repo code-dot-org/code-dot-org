@@ -1,0 +1,26 @@
+{
+  "name": "csa-pilot",
+  "script_names": [
+    "csa1-pilot",
+    "csa2-pilot",
+    "csa3-pilot",
+    "csa4-pilot",
+    "csa5-pilot",
+    "csa6-pilot",
+    "csa7-pilot",
+    "csa8-pilot",
+    "csa9-pilot"
+  ],
+  "properties": {
+    "has_numbered_units": true,
+    "version_year": "2020",
+    "family_name": "csa",
+    "pilot_experiment": "csa-pilot"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

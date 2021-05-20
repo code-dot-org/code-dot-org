@@ -11,6 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DancelabReservedWords} from './constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
+import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import danceMsg from './locale';
 import {
@@ -20,7 +21,7 @@ import {
   setRunIsStarting
 } from './redux';
 import trackEvent from '../util/trackEvent';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {
@@ -39,6 +40,8 @@ import {
 } from './songs';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
+import queryString from 'query-string';
 
 const ButtonState = {
   UP: 0,
@@ -180,7 +183,12 @@ Dance.prototype.awaitTimingMetrics = function() {
 };
 
 Dance.prototype.initSongs = async function(config) {
-  const songManifest = await getSongManifest(config.useRestrictedSongs);
+  // Check for a user-specified manifest file.
+  const manifest = queryString.parse(window.location.search).manifest;
+  const songManifest = await getSongManifest(
+    config.useRestrictedSongs,
+    manifest
+  );
   const songData = parseSongOptions(songManifest);
   const selectedSong = getSelectedSong(songManifest, config);
 
@@ -392,7 +400,7 @@ Dance.prototype.afterInject_ = function() {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(
-      'https://curriculum.code.org/images/sprites/dance_20181127/'
+      'https://curriculum.code.org/images/sprites/dance_20191106/'
     )
   });
 
@@ -442,9 +450,8 @@ Dance.prototype.reset = function() {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons')
-      .removeClass('soft-buttons-none')
-      .addClass('soft-buttons-' + softButtonCount);
+    getStore().dispatch(showArrowButtons());
+    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
 };
 
@@ -532,7 +539,7 @@ Dance.prototype.runButtonClick = async function() {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play', getStore().getState().songs.selectedSong);
+  trackEvent('HoC_Song', 'Play-2019', getStore().getState().songs.selectedSong);
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
@@ -603,122 +610,7 @@ Dance.prototype.execute = async function() {
 
 Dance.prototype.initInterpreter = function() {
   const nativeAPI = this.nativeAPI;
-  const sprites = [];
-
-  const api = {
-    setBackground: color => {
-      nativeAPI.setBackground(color.toString());
-    },
-    // DEPRECATED
-    // An old block may refer to this version of the command,
-    // so we're keeping it around for backwards-compat.
-    // @see https://github.com/code-dot-org/dance-party/issues/469
-    setBackgroundEffect: (effect, palette = 'default') => {
-      nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
-    },
-    setBackgroundEffectWithPalette: (effect, palette = 'default') => {
-      nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
-    },
-    // DEPRECATED
-    // An old block may refer to this version of the command,
-    // so we're keeping it around for backwards-compat.
-    // @see https://github.com/code-dot-org/dance-party/issues/469
-    setForegroundEffect: effect => {
-      nativeAPI.setForegroundEffect(effect.toString());
-    },
-    setForegroundEffectExtended: effect => {
-      nativeAPI.setForegroundEffect(effect.toString());
-    },
-    makeNewDanceSprite: (costume, name, location) => {
-      return Number(
-        sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1
-      );
-    },
-    makeNewDanceSpriteGroup: (n, costume, layout) => {
-      nativeAPI.makeNewDanceSpriteGroup(n, costume, layout);
-    },
-    getCurrentDance: spriteIndex => {
-      return nativeAPI.getCurrentDance(sprites[spriteIndex]);
-    },
-    changeMoveLR: (spriteIndex, move, dir) => {
-      nativeAPI.changeMoveLR(sprites[spriteIndex], move, dir);
-    },
-    doMoveLR: (spriteIndex, move, dir) => {
-      nativeAPI.doMoveLR(sprites[spriteIndex], move, dir);
-    },
-    changeMoveEachLR: (group, move, dir) => {
-      nativeAPI.changeMoveEachLR(group, move, dir);
-    },
-    doMoveEachLR: (group, move, dir) => {
-      nativeAPI.doMoveEachLR(group, move, dir);
-    },
-    layoutSprites: (group, format) => {
-      nativeAPI.layoutSprites(group, format);
-    },
-    setTint: (spriteIndex, val) => {
-      nativeAPI.setTint(sprites[spriteIndex], val);
-    },
-    setTintInline: (spriteIndex, val) => {
-      nativeAPI.setTint(sprites[spriteIndex], val);
-    },
-    setTintEach: (group, val) => {
-      nativeAPI.setTintEach(group, val);
-    },
-    setVisible: (spriteIndex, val) => {
-      nativeAPI.setVisible(sprites[spriteIndex], val);
-    },
-    setVisibleEach: (group, val) => {
-      nativeAPI.setVisibleEach(group, val);
-    },
-    setProp: (spriteIndex, property, val) => {
-      nativeAPI.setProp(sprites[spriteIndex], property, val);
-    },
-    setPropEach: (group, property, val) => {
-      nativeAPI.setPropEach(group, property, val);
-    },
-    setPropRandom: (spriteIndex, property) => {
-      nativeAPI.setPropRandom(sprites[spriteIndex], property);
-    },
-    getProp: (spriteIndex, property, val) => {
-      return nativeAPI.setProp(sprites[spriteIndex], property, val);
-    },
-    changePropBy: (spriteIndex, property, val) => {
-      nativeAPI.changePropBy(sprites[spriteIndex], property, val);
-    },
-    jumpTo: (spriteIndex, location) => {
-      nativeAPI.jumpTo(sprites[spriteIndex], location);
-    },
-    setDanceSpeed: (spriteIndex, speed) => {
-      nativeAPI.setDanceSpeed(sprites[spriteIndex], speed);
-    },
-    setDanceSpeedEach: (group, speed) => {
-      nativeAPI.setDanceSpeedEach(group, speed);
-    },
-    getEnergy: range => {
-      return Number(nativeAPI.getEnergy(range));
-    },
-    getTime: unit => {
-      return Number(nativeAPI.getTime(unit));
-    },
-    startMapping: (spriteIndex, property, val) => {
-      return nativeAPI.startMapping(sprites[spriteIndex], property, val);
-    },
-    stopMapping: (spriteIndex, property, val) => {
-      return nativeAPI.stopMapping(sprites[spriteIndex], property, val);
-    },
-    changeColorBy: (input, method, amount) => {
-      return nativeAPI.changeColorBy(input, method, amount);
-    },
-    mixColors: (color1, color2) => {
-      return nativeAPI.mixColors(color1, color2);
-    },
-    randomColor: () => {
-      return nativeAPI.randomColor();
-    },
-    getCurrentTime: () => {
-      return nativeAPI.getCurrentTime();
-    }
-  };
+  const api = new DanceAPI(nativeAPI);
 
   const studentCode = this.studioApp_.getCode();
 
@@ -745,12 +637,12 @@ Dance.prototype.computeCharactersReferenced = function(studentCode) {
   // charactersReferencedSet with the results:
   const charactersReferencedSet = new Set();
   const charactersRegExp = new RegExp(
-    /^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/,
+    /^.*make(Anonymous|New)DanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/,
     'gm'
   );
   let match;
   while ((match = charactersRegExp.exec(studentCode))) {
-    const characterName = match[1];
+    const characterName = match[2];
     charactersReferencedSet.add(characterName);
   }
   return Array.from(charactersReferencedSet);
@@ -778,7 +670,7 @@ Dance.prototype.onHandleEvents = function(currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function() {
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
   const artistTwitterHandle =
     SongTitlesToArtistTwitterHandle[this.level.selectedSong];

@@ -1,0 +1,3191 @@
+{
+  "script": {
+    "name": "csp1-2019",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "exclude_csf_column_in_legend": true,
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-19/unit1/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csp1"
+        ],
+        [
+          "vocabulary",
+          "https://curriculum.code.org/csp-19/unit1/vocab/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-19/unit1/standards/"
+        ],
+        [
+          "professionalLearning",
+          "https://code.org/educate/professional-learning/middle-high"
+        ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "version_year": "2019",
+      "project_sharing": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit1/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "is_stable": true,
+      "family_name": "csp1",
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": "csp1",
+    "serialized_at": "2021-05-03 23:55:33 UTC",
+    "seeding_key": {
+      "script.name": "csp1-2019"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "csp1_1",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 1: Representing and Transmitting Information"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "csp1_2",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Chapter 2: Inventing the Internet"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CS Principles Pre-survey",
+      "name": "CS Principles Pre-survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Personal Innovations",
+      "name": "Personal Innovations",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Sending Binary Messages",
+      "name": "Sending Binary Messages",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Sending Binary Messages with the Internet Simulator",
+      "name": "Sending Binary Messages with the Internet Simulator",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Number Systems",
+      "name": "Number Systems",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Binary Numbers",
+      "name": "Binary Numbers",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Sending Numbers",
+      "name": "Sending Numbers",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Sending Text",
+      "name": "Sending Text",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Unit 1 Chapter 1 Assessment",
+      "name": "Unit 1 Chapter 1 Assessment",
+      "absolute_position": 9,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "The Internet",
+      "name": "The Internet",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "The Need for Addressing",
+      "name": "The Need for Addressing",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Routers and Redundancy",
+      "name": "Routers and Redundancy",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Packets and Making a Reliable Internet",
+      "name": "Packets and Making a Reliable Internet",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "The Need for DNS",
+      "name": "The Need for DNS",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "HTTP and Abstraction",
+      "name": "HTTP and Abstraction",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Practice PT - The Internet and Society",
+      "name": "Practice PT - The Internet and Society",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice PT - The Internet and Society",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "key": "Unit 1 Chapter 2 Assessment",
+      "name": "Unit 1 Chapter 2 Assessment",
+      "absolute_position": 17,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 Chapter 2 Assessment",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pre-survey-levelgroup_2019"
+        ],
+        "lesson.key": "CS Principles Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "csp-pre-survey-levelgroup_2019"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L01 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L01 SFLP_2019"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L01 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Science is Changing Everything_2019"
+        ],
+        "progression": "Computer Science is Changing Everything"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Science is Changing Everything_2019"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Computer Science is Changing Everything_2019"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_socialBelonging_control_2019",
+          "csp_socialBelonging_intervention_2019"
+        ],
+        "progression": "Reflection: starting out in computer science"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_socialBelonging_control_2019",
+          "csp_socialBelonging_intervention_2019"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "csp_socialBelonging_control_2019",
+        "csp_socialBelonging_intervention_2019"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L02 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L02 SFLP_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L02 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L2 Multiple Choice Assessment Question_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L2 Multiple Choice Assessment Question_2018_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L2 Multiple Choice Assessment Question_2018_2019"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L3 Free response reflection question_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 Free response reflection question_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L3 Free response reflection question_2019"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L2 Free response assessment question_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L2 Free response assessment question_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L2 Free response assessment question_2019"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L3 Free Response_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 Free Response_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L3 Free Response_2019"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L03 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L03 SFLP_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L03 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Binary Messages_2019"
+        ],
+        "progression": "Internet Simulator: Sending Binary Messages"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Binary Messages_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Internet Simulator: Sending Binary Messages_2019"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: Wires, Cables, and Wifi_2019"
+        ],
+        "progression": "The Internet: Wires, Cables, and Wifi"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: Wires, Cables, and Wifi_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "The Internet: Wires, Cables, and Wifi_2019"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L4 Multiple Choice_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 Multiple Choice_2018_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L4 Multiple Choice_2018_2019"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L3 Multiple Choice_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 Multiple Choice_2018_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L3 Multiple Choice_2018_2019"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L4 Free Response Reflection_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 Free Response Reflection_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L4 Free Response Reflection_2019"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L5 Matching Assessment_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 Matching Assessment_2018_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L5 Matching Assessment_2018_2019"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L04 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L04 SFLP_2019"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L04 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L6 Assessment multiple choice_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 Assessment multiple choice_2018_2019"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L6 Assessment multiple choice_2018_2019"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L6 Free Response Reflection_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 Free Response Reflection_2019"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L6 Free Response Reflection_2019"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L05 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L05 SFLP_2019"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L05 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Widget: Binary Odometer_2019"
+        ],
+        "progression": "Widget: Binary Odometer"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Widget: Binary Odometer_2019"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Widget: Binary Odometer_2019"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L7 Free Response Assessment_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L7 Free Response Assessment_2019"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L7 Free Response Assessment_2019"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L7 Free Response Reflection_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L7 Free Response Reflection_2019"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L7 Free Response Reflection_2019"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L06 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L06 SFLP_2019"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L06 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Numbers_2019"
+        ],
+        "progression": "Internet Simulator: Sending Numbers"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Numbers_2019"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Internet Simulator: Sending Numbers_2019"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L8 Free Response Reflection_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 Free Response Reflection_2019"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L8 Free Response Reflection_2019"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L8 Multiple Choice_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 Multiple Choice_2018_2019"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L8 Multiple Choice_2018_2019"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L07 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L07 SFLP_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L07 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Text_2019"
+        ],
+        "progression": "Internet Simulator: Sending Text"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Text_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Internet Simulator: Sending Text_2019"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L10 Assessment 1_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L10 Assessment 1_2018_2019"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L10 Assessment 2_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L10 Assessment 2_2018_2019"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 Assessment 1_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L11 Assessment 1_2018_2019"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 Reflection Multiple Representations_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Reflection Multiple Representations_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L11 Reflection Multiple Representations_2019"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 Abstraction Reflection_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Abstraction Reflection_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U1L11 Abstraction Reflection_2019"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018_2019"
+        ],
+        "lesson.key": "Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018_2019"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L08 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L08 SFLP_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L08 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is the Internet?_2019"
+        ],
+        "progression": "What is the Internet?"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is the Internet?_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "What is the Internet?_2019"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L01 Assessment 1_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L01 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L01 Assessment 1_2018_2019"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L01 Assessment 2_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L01 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L01 Assessment 2_2018_2019"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L01 Assessment 3_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L01 Assessment 3_2018_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L01 Assessment 3_2018_2019"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L01 Assessment 4_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L01 Assessment 4_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L01 Assessment 4_2019"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-1-levelgroup-U1Ch2_2018_2019"
+        ],
+        "progression": "Quick Check-In"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pulse-check-survey-1-levelgroup-U1Ch2_2018_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "csp-pulse-check-survey-1-levelgroup-U1Ch2_2018_2019"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L09 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L09 SFLP_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L09 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Broadcast_2019"
+        ],
+        "progression": "Internet Simulator: Broadcast"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Broadcast_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Internet Simulator: Broadcast_2019"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: IP Addresses & DNS_2019"
+        ],
+        "progression": "The Internet: IP Addresses & DNS"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: IP Addresses & DNS_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "The Internet: IP Addresses & DNS_2019"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L02 Free Response Reflection_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L02 Free Response Reflection_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L02 Free Response Reflection_2019"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L02 Assessment 3_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L02 Assessment 3_2018_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L02 Assessment 3_2018_2019"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L02 Assessment 4_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L02 Assessment 4_2018_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L02 Assessment 4_2018_2019"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L02 Assessment 5_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L02 Assessment 5_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L02 Assessment 5_2019"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L3 Assessment 2_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L3 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L3 Assessment 2_2018_2019"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L10 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 SFLP_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L10 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Routers_2019"
+        ],
+        "progression": "Internet Simulator: Routers"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Routers_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Internet Simulator: Routers_2019"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L04 Assessment1_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L04 Assessment1_2018_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L04 Assessment1_2018_2019"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L04 Assessment4_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L04 Assessment4_2018_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L04 Assessment4_2018_2019"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L04 Assessment5_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L04 Assessment5_2018_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L04 Assessment5_2018_2019"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L04 Assessment2_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L04 Assessment2_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L04 Assessment2_2019"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L04 Assessment3_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L04 Assessment3_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L04 Assessment3_2019"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L11 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L11 SFLP_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L11 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: Packets_2019"
+        ],
+        "progression": "Internet Simulator: Packets"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: Packets_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Internet Simulator: Packets_2019"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: Packets, Routing, and Reliability_2019"
+        ],
+        "progression": "The Internet: Packets, Routing, and Reliability"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: Packets, Routing, and Reliability_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "The Internet: Packets, Routing, and Reliability_2019"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L05 Reflection 1_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L05 Reflection 1_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L05 Reflection 1_2019"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L05 Assessment 1_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L05 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L05 Assessment 1_2018_2019"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L05 Assessment 2_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L05 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L05 Assessment 2_2018_2019"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L3 Assessment_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L3 Assessment_2018_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L3 Assessment_2018_2019"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L12 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L12 SFLP_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L12 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet Simulator: DNS_2019"
+        ],
+        "progression": "Internet Simulator: DNS"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Internet Simulator: DNS_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "Internet Simulator: DNS_2019"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: IP Addresses & DNS_2019"
+        ],
+        "progression": "The Internet: IP Addresses & DNS"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: IP Addresses & DNS_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "The Internet: IP Addresses & DNS_2019"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L09 Assessment1_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L09 Assessment1_2018_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L09 Assessment1_2018_2019"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L09 Assessment2_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L09 Assessment2_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L09 Assessment2_2019"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L09 Free Response Wrap Up_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L09 Free Response Wrap Up_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L09 Free Response Wrap Up_2019"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L10 Assessment1_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L10 Assessment1_2018_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L10 Assessment1_2018_2019"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L13 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L13 SFLP_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L13 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Internet: HTTP and HTML_2019"
+        ],
+        "progression": "The Internet: HTTP and HTML"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Internet: HTTP and HTML_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "The Internet: HTTP and HTML_2019"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L11 Assessment 1_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L11 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L11 Assessment 1_2018_2019"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L11 Assessment 2_2018_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L11 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L11 Assessment 2_2018_2019"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L11 Free Response_2019"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L11 Free Response_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "U2L11 Free Response_2019"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U1L14 SFLP_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L14 SFLP_2019"
+        ],
+        "lesson.key": "Practice PT - The Internet and Society",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP U1L14 SFLP_2019"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018_2019"
+        ],
+        "lesson.key": "Unit 1 Chapter 2 Assessment",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      },
+      "level_keys": [
+        "CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018_2019"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csp-pre-survey-levelgroup_2019",
+        "script_level.level_keys": [
+          "csp-pre-survey-levelgroup_2019"
+        ],
+        "lesson.key": "CS Principles Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L01 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L01 SFLP_2019"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Science is Changing Everything_2019",
+        "script_level.level_keys": [
+          "Computer Science is Changing Everything_2019"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_socialBelonging_intervention_2019",
+        "script_level.level_keys": [
+          "csp_socialBelonging_control_2019",
+          "csp_socialBelonging_intervention_2019"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_socialBelonging_control_2019",
+        "script_level.level_keys": [
+          "csp_socialBelonging_control_2019",
+          "csp_socialBelonging_intervention_2019"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L02 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L02 SFLP_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L2 Multiple Choice Assessment Question_2018_2019",
+        "script_level.level_keys": [
+          "U1L2 Multiple Choice Assessment Question_2018_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 Free response reflection question_2019",
+        "script_level.level_keys": [
+          "U1L3 Free response reflection question_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L2 Free response assessment question_2019",
+        "script_level.level_keys": [
+          "U1L2 Free response assessment question_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 Free Response_2019",
+        "script_level.level_keys": [
+          "U1L3 Free Response_2019"
+        ],
+        "lesson.key": "Sending Binary Messages",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L03 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L03 SFLP_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Sending Binary Messages_2019",
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Binary Messages_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: Wires, Cables, and Wifi_2019",
+        "script_level.level_keys": [
+          "The Internet: Wires, Cables, and Wifi_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 Multiple Choice_2018_2019",
+        "script_level.level_keys": [
+          "U1L4 Multiple Choice_2018_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 Multiple Choice_2018_2019",
+        "script_level.level_keys": [
+          "U1L3 Multiple Choice_2018_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 Free Response Reflection_2019",
+        "script_level.level_keys": [
+          "U1L4 Free Response Reflection_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 Matching Assessment_2018_2019",
+        "script_level.level_keys": [
+          "U1L5 Matching Assessment_2018_2019"
+        ],
+        "lesson.key": "Sending Binary Messages with the Internet Simulator",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L04 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L04 SFLP_2019"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 Assessment multiple choice_2018_2019",
+        "script_level.level_keys": [
+          "U1L6 Assessment multiple choice_2018_2019"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 Free Response Reflection_2019",
+        "script_level.level_keys": [
+          "U1L6 Free Response Reflection_2019"
+        ],
+        "lesson.key": "Number Systems",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L05 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L05 SFLP_2019"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Widget: Binary Odometer_2019",
+        "script_level.level_keys": [
+          "Widget: Binary Odometer_2019"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L7 Free Response Assessment_2019",
+        "script_level.level_keys": [
+          "U1L7 Free Response Assessment_2019"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L7 Free Response Reflection_2019",
+        "script_level.level_keys": [
+          "U1L7 Free Response Reflection_2019"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L06 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L06 SFLP_2019"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Sending Numbers_2019",
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Numbers_2019"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 Free Response Reflection_2019",
+        "script_level.level_keys": [
+          "U1L8 Free Response Reflection_2019"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 Multiple Choice_2018_2019",
+        "script_level.level_keys": [
+          "U1L8 Multiple Choice_2018_2019"
+        ],
+        "lesson.key": "Sending Numbers",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L07 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L07 SFLP_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Sending Text_2019",
+        "script_level.level_keys": [
+          "Internet Simulator: Sending Text_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Assessment 1_2018_2019",
+        "script_level.level_keys": [
+          "U1L10 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Assessment 2_2018_2019",
+        "script_level.level_keys": [
+          "U1L10 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Assessment 1_2018_2019",
+        "script_level.level_keys": [
+          "U1L11 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Reflection Multiple Representations_2019",
+        "script_level.level_keys": [
+          "U1L11 Reflection Multiple Representations_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Abstraction Reflection_2019",
+        "script_level.level_keys": [
+          "U1L11 Abstraction Reflection_2019"
+        ],
+        "lesson.key": "Sending Text",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018_2019",
+        "script_level.level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018_2019"
+        ],
+        "lesson.key": "Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "csp1_1",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L08 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L08 SFLP_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is the Internet?_2019",
+        "script_level.level_keys": [
+          "What is the Internet?_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L01 Assessment 1_2018_2019",
+        "script_level.level_keys": [
+          "U2L01 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L01 Assessment 2_2018_2019",
+        "script_level.level_keys": [
+          "U2L01 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L01 Assessment 3_2018_2019",
+        "script_level.level_keys": [
+          "U2L01 Assessment 3_2018_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L01 Assessment 4_2019",
+        "script_level.level_keys": [
+          "U2L01 Assessment 4_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-pulse-check-survey-1-levelgroup-U1Ch2_2018_2019",
+        "script_level.level_keys": [
+          "csp-pulse-check-survey-1-levelgroup-U1Ch2_2018_2019"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L09 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L09 SFLP_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Broadcast_2019",
+        "script_level.level_keys": [
+          "Internet Simulator: Broadcast_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: IP Addresses & DNS_2019",
+        "script_level.level_keys": [
+          "The Internet: IP Addresses & DNS_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L02 Free Response Reflection_2019",
+        "script_level.level_keys": [
+          "U2L02 Free Response Reflection_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L02 Assessment 3_2018_2019",
+        "script_level.level_keys": [
+          "U2L02 Assessment 3_2018_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L02 Assessment 4_2018_2019",
+        "script_level.level_keys": [
+          "U2L02 Assessment 4_2018_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L02 Assessment 5_2019",
+        "script_level.level_keys": [
+          "U2L02 Assessment 5_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L3 Assessment 2_2018_2019",
+        "script_level.level_keys": [
+          "U2L3 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L10 SFLP_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Routers_2019",
+        "script_level.level_keys": [
+          "Internet Simulator: Routers_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L04 Assessment1_2018_2019",
+        "script_level.level_keys": [
+          "U2L04 Assessment1_2018_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L04 Assessment4_2018_2019",
+        "script_level.level_keys": [
+          "U2L04 Assessment4_2018_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L04 Assessment5_2018_2019",
+        "script_level.level_keys": [
+          "U2L04 Assessment5_2018_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L04 Assessment2_2019",
+        "script_level.level_keys": [
+          "U2L04 Assessment2_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L04 Assessment3_2019",
+        "script_level.level_keys": [
+          "U2L04 Assessment3_2019"
+        ],
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L11 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L11 SFLP_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: Packets_2019",
+        "script_level.level_keys": [
+          "Internet Simulator: Packets_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: Packets, Routing, and Reliability_2019",
+        "script_level.level_keys": [
+          "The Internet: Packets, Routing, and Reliability_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L05 Reflection 1_2019",
+        "script_level.level_keys": [
+          "U2L05 Reflection 1_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L05 Assessment 1_2018_2019",
+        "script_level.level_keys": [
+          "U2L05 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L05 Assessment 2_2018_2019",
+        "script_level.level_keys": [
+          "U2L05 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L3 Assessment_2018_2019",
+        "script_level.level_keys": [
+          "U2L3 Assessment_2018_2019"
+        ],
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L12 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L12 SFLP_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Internet Simulator: DNS_2019",
+        "script_level.level_keys": [
+          "Internet Simulator: DNS_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: IP Addresses & DNS_2019",
+        "script_level.level_keys": [
+          "The Internet: IP Addresses & DNS_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L09 Assessment1_2018_2019",
+        "script_level.level_keys": [
+          "U2L09 Assessment1_2018_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L09 Assessment2_2019",
+        "script_level.level_keys": [
+          "U2L09 Assessment2_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L09 Free Response Wrap Up_2019",
+        "script_level.level_keys": [
+          "U2L09 Free Response Wrap Up_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L10 Assessment1_2018_2019",
+        "script_level.level_keys": [
+          "U2L10 Assessment1_2018_2019"
+        ],
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L13 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L13 SFLP_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Internet: HTTP and HTML_2019",
+        "script_level.level_keys": [
+          "The Internet: HTTP and HTML_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L11 Assessment 1_2018_2019",
+        "script_level.level_keys": [
+          "U2L11 Assessment 1_2018_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L11 Assessment 2_2018_2019",
+        "script_level.level_keys": [
+          "U2L11 Assessment 2_2018_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L11 Free Response_2019",
+        "script_level.level_keys": [
+          "U2L11 Free Response_2019"
+        ],
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L14 SFLP_2019",
+        "script_level.level_keys": [
+          "CSP U1L14 SFLP_2019"
+        ],
+        "lesson.key": "Practice PT - The Internet and Society",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018_2019",
+        "script_level.level_keys": [
+          "CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018_2019"
+        ],
+        "lesson.key": "Unit 1 Chapter 2 Assessment",
+        "lesson_group.key": "csp1_2",
+        "script.name": "csp1-2019"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

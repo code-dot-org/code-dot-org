@@ -42,6 +42,8 @@ Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.applicatio
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+CDO.stubs(override_pegasus: nil)
+CDO.stubs(override_dashboard: nil)
 
 Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
 Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
@@ -69,6 +71,9 @@ class ActiveSupport::TestCase
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
+
+    Cdo::Metrics.client ||= Aws::CloudWatch::Client.new(stub_responses: true)
+
     CDO.stubs(override_pegasus: nil)
     CDO.stubs(override_dashboard: nil)
 
@@ -79,6 +84,13 @@ class ActiveSupport::TestCase
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
 
+    # A list of keys used by our shared cache that should be cleared between every test.
+    [
+      ProfanityHelper::PROFANITY_PREFIX,
+      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
+      AzureTextToSpeech::AZURE_TTS_PREFIX
+    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
+
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
 
@@ -86,6 +98,11 @@ class ActiveSupport::TestCase
     DCDO.clear
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    # Ensure that AssetHelper#webpack_asset_path does not raise an exception
+    # when called from unit tests. See comments on that method for details.
+    CDO.stubs(:optimize_webpack_assets).returns(false)
+    CDO.stubs(:use_my_apps).returns(true)
   end
 
   teardown do
@@ -293,9 +310,7 @@ class ActiveSupport::TestCase
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
       'no-cache',
-      'no-store',
-      'must-revalidate',
-      'max-age=0'
+      'no-store'
     ]
     assert_cache_control_match expected_directives, cache_control_header
   end
@@ -315,7 +330,7 @@ class ActiveSupport::TestCase
   #     freeze_time
   #     #...
   def self.freeze_time(time=nil)
-    time ||= Date.today + 9.hours
+    time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
     end
@@ -364,7 +379,8 @@ class ActionController::TestCase
     @html_document ||= if @response.content_type === Mime[:xml]
                          Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
-                         Nokogiri::HTML::Document.parse(@response.body, &:strict)
+                         # TODO: Enable strict parsing after fixing html errors (FND-1573)
+                         Nokogiri::HTML::Document.parse(@response.body)
                        end
   end
 
@@ -435,7 +451,7 @@ class ActionController::TestCase
   #     assert_equal :admin, assigns(:permission)
   #   end
   def self.test_user_gets_response_for(action, method: :get, response: :success,
-    user: nil, params: {}, name: nil, queries: nil, &block)
+    user: nil, params: {}, name: nil, queries: nil, redirected_to: nil, &block)
 
     unless name.present?
       raise 'name is required when a block is provided' if block
@@ -447,10 +463,12 @@ class ActionController::TestCase
         end
 
       name = "#{user_display_name} calling #{method} #{action} should receive #{response}"
+      name += " to #{redirected_to}"
     end
 
     test name do
       # params can be a hash, or a proc that returns a hash at runtime
+      refute_nil params, "params in controller tests cannot be nil"
       params = instance_exec(&params) if params.is_a? Proc
 
       if user
@@ -466,6 +484,8 @@ class ActionController::TestCase
         send method, action, params: params
         assert_response response
       end
+
+      assert_redirected_to redirected_to if redirected_to
 
       # Run additional test logic, if supplied
       instance_exec(&block) if block
@@ -519,7 +539,6 @@ class ActionController::TestCase
     assert_select 'meta[content="https://www.facebook.com/Code.org"][property="article:publisher"]'
 
     assert_select 'meta[content="@codeorg"][name="twitter:site"]'
-    assert_select 'meta[content="photo"][name="twitter:card"]'
 
     {og: 'property', twitter: 'name'}.each do |namespace, attr|
       # descriptions
@@ -532,6 +551,12 @@ class ActionController::TestCase
       assert_select "meta[content='#{opts[:image_url]}'][#{attr}='#{namespace}:image']" if opts[:image_url]
       assert_select "meta[content='#{opts[:image_width]}'][#{attr}='#{namespace}:image:width']" if opts[:image_width]
       assert_select "meta[content='#{opts[:image_height]}'][#{attr}='#{namespace}:image:height']" if opts[:image_height]
+    end
+
+    if opts[:small_thumbnail]
+      assert_select 'meta[content="summary"][name="twitter:card"]'
+    else
+      assert_select 'meta[content="photo"][name="twitter:card"]'
     end
 
     if opts[:apple_mobile_web_app]

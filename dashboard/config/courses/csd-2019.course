@@ -22,6 +22,13 @@
     "has_verified_resources": true,
     "family_name": "csd",
     "version_year": "2019",
-    "is_stable": true
-  }
+    "is_stable": true,
+    "visible": true
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
 }

@@ -1,0 +1,64 @@
+%p
+  Dear
+  = @application.principal_greeting + ','
+
+%p
+  A teacher at your school,
+  = @application.applicant_full_name + ','
+  has submitted an application to participate in
+  = @application.effective_regional_partner_name + "'s"
+  Professional Learning Program in order to prepare to teach the
+  = @application.course_name
+  curriculum during the school year.
+  We are excited that this teacher is committed to computer science education!
+  = link_to 'Six different studies show', 'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536'
+  that students who study computer science perform better in other subjects,
+  excel at problem solving,
+  and are 17% more likely to attend college.
+
+%p
+  Code.org’s vision is that every student at every school has the opportunity to learn CS
+  as part of their core K-12 path. This is a community effort and administrative support is essential.
+  %strong
+    That’s why we need your approval in order for us to consider
+    = @application.applicant_full_name + "'s"
+    application.
+
+%p
+  To help us measure our progress towards expanding access and providing resources where
+  they’re needed most, we ask that you confirm demographic information about your school
+  as well as how the course will be implemented during the upcoming school year.
+
+%p
+  Please take five minutes to complete
+  = link_to('this form', @application.principal_approval_url)
+  as soon as possible.
+  Please note that
+  = @application.first_name + "'s"
+  application is not considered complete until we receive this form.
+
+%p
+  Registration for the Professional Learning Program may have a cost,
+  but there may also be scholarships available. Please
+  = link_to 'review this page', 'https://code.org/educate/professional-learning/program-information'
+  to see the cost of the program in your region.
+
+%p
+  Participating teachers are asked to commit to Code.org’s year-long Professional Learning Program
+  starting in the summer and concluding in the spring. Workshops can either be held in-person,
+  virtually, or as a combination of both throughout the year.
+
+%p
+  For more information about
+  = link_to('Code.org', 'https://code.org') + "'s"
+  professional development programs, please visit
+  = link_to('https://code.org/educate', 'https://code.org/educate')
+  and refer to this
+  = link_to('brochure', 'https://code.org/files/programs/codeorg-program-brochure.pdf')
+  that highlights how to bring computer science to your school.
+  Please send any additional questions to your regional partner below.
+  Thank you very much for your support of computer science for all!
+
+= render partial: 'questions_concerns'
+%p
+  = render partial: 'partner_signature'

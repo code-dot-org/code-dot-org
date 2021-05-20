@@ -1,0 +1,6 @@
+{
+  "func": "camera.position.x",
+  "category": "World",
+  "type": "property",
+  "noAutocomplete": true
+}

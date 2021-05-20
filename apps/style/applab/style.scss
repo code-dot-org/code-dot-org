@@ -9,6 +9,8 @@
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 $defaultWidth: 320px;
 $defaultFooterlessHeight: 450px;
+$widgetWidth: 600px; // Note: This constant is also maintained in applab/constants.js.
+$widgetHeight: $defaultFooterlessHeight;
 
 div#visualization {
   height: 562.5px;
@@ -25,13 +27,6 @@ div#visualizationResizeBar {
 
 #playSpaceHeader > div {
   height: $workspace-headers-height;
-}
-
-// Override appliction.scss's defined width for applab, so that embed levels
-// get a better width. Non embed levels will be handled by responsive media
-// queries
-.small-footer-base {
-  width: 340px;
 }
 
 /*
@@ -238,16 +233,6 @@ div#visualizationResizeBar {
   }
 }
 
-.widgetWidth {
-  width: 600px !important;
-  max-width: 600px !important;
-}
-
-.widgetHeight {
-  height: 450px !important;
-  max-height: 450px !important;
-}
-
 #visualizationColumn.wireframeShare {
   max-width: none !important;
   // If you change this width and height,
@@ -278,6 +263,18 @@ div#visualizationResizeBar {
 #visualizationColumn.chromelessShare {
   #playSpaceHeader, #gameButtons {
     display: none;
+  }
+}
+
+#visualizationColumn, #visualization {
+  &.widgetWidth {
+    width: $widgetWidth;
+    max-width: $widgetWidth;
+  }
+
+  &.widgetHeight {
+    height: $widgetHeight;
+    max-height: $widgetHeight;
   }
 }
 
@@ -549,4 +546,34 @@ div#visualizationResizeBar {
 #designModeViz .ui-resizable-s {
   width: calc(100% - 12px);
   bottom: 0;
+}
+
+// Theme dropdown needs to use classes for styling
+.theme-dropdown {
+  .Select-value {
+    height: 44px;
+    .theme-dropdown-label {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+  .Select-value-label .checkbox {
+    visibility: hidden;
+  }
+  .Select-menu, .Select-menu-outer {
+    height: 70vh;
+    max-height: 70vh;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .Select-control {
+    height: 44px;
+  }
+  .form-control .Select-arrow-zone {
+    display: table-cell !important;
+  }
 }

@@ -31,9 +31,9 @@ Code.org will be covering the cost of all initial supplies needed for all K-12 p
 Forget your login information or don't have an account? Email partner@code.org.
 
 <a id="academic"></a>
-## Ordering 2018-19 Academic Year Supplies
+## Ordering 2019-20 Academic Year Supplies
 
-*Note: The only supplies available through Mimeo for the 2018-19 academic year is swag for Administrator & Counselor PD.*
+*Note: The only supplies available through Mimeo for the 2019-20 academic year is swag for Administrator & Counselor PD.*
 
 
 [**Back to the top**](#top)
@@ -85,7 +85,7 @@ Teachers are able to download and print their own workshop certificates through 
 
 
 <a id="ac"></a>
-## Ordering 2018-19 Administrator & Counselor PD Supplies
+## Ordering 2019-20 Administrator & Counselor PD Supplies
 Order Administrator & Counselor Supplies from the [Mimeo Marketplace](https://marketplace.mimeo.com/codeorgworkshop)
 
 You may order 1 swag bag per attendee and 1 of each of the documents shown in the "Attendee Materials" section (unless otherwise noted -- some are 1 per PAIR of attendees), plus 1 applicable State Fact Sheet(s), per attendee.

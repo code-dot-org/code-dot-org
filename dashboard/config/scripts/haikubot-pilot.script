@@ -1,0 +1,38 @@
+hideable_lessons true
+pilot_experiment 'haikubot-pilot'
+
+lesson_group 'Peom Bot', display_name: 'Poem Bot'
+lesson 'Introducing Sprite Lab', display_name: 'Programming Ramp Up for Poem Bot', has_lesson_plan: false
+level 'poembot_video_sprites', progression: 'Video: Making Sprites'
+level 'poembot_sprites_make', progression: 'Sprites'
+level 'poembot_sprites_positioning', progression: 'Sprites'
+level 'poembot_sprites_properties', progression: 'Sprites'
+level 'poembot_sprites_behaviors', progression: 'Sprites'
+level 'poembot_sprites_behaviors_freeplay', progression: 'Sprites'
+level 'poembot_video_text', progression: 'Video: Storing Text'
+level 'poembot_text_print', progression: 'Text and Prompts'
+level 'poembot_text_prompts', progression: 'Text and Prompts'
+level 'poembot_text_answer', progression: 'Text and Prompts'
+level 'poembot_text_concat', progression: 'Text and Prompts'
+level 'poembot_text_concat_freeplay', progression: 'Text and Prompts'
+
+lesson 'write a haiku', display_name: 'Write a Haiku', has_lesson_plan: false
+level 'poembot_lesson 2_markdown', progression: 'Poem Bot Prototype'
+
+lesson 'Plan Your Haiku Poem', display_name: 'Plan Your Haiku Poem', has_lesson_plan: false
+level 'poembot_lesson 3_markdown', progression: 'Poem Bot Prototype'
+
+lesson 'Programming Poem Bot', display_name: 'Programming Poem Bot', has_lesson_plan: false
+level 'haiku_prototype_choice1', progression: 'Poem Bot Prototype'
+level 'poembot_video_choices', progression: 'Video: Prompt with Choices'
+level 'Poem Bot_Prompt 1 Mike', progression: 'Code Your Prompts'
+level 'Poem Bot_Prompt 2', progression: 'Code Your Prompts'
+level 'Poem Bot_Prompt 3 Mike', progression: 'Code Your Prompts'
+level 'Poem Bot_Prompt 4 Mike', progression: 'Code Your Prompts'
+level 'poembot_video_haiku', progression: 'Video: Finish your Haiku'
+level 'Poem Bot_Fat Level_2', progression: 'Finish your Haiku'
+level 'Poem Bot Choice Home', progression: 'Customize Your Program'
+
+lesson 'poetry circle', display_name: 'Poetry Circle', has_lesson_plan: false
+level 'Poem Bot_Choice1_Background', progression: 'Poem Bot Prototype'
+

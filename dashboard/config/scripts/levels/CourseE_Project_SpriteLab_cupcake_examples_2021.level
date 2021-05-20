@@ -1,0 +1,2008 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "false",
+    "show_type_hints": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "validation_enabled": "true",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "display_name": "Cupcake Dance (SpriteLab)",
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "parent_level_id": 27727,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "thumbnail_url": "https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png",
+    "mini_toolbox": "false",
+    "short_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
+    "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
+    "hide_pause_button": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 64,
+  "published": true,
+  "created_at": "2021-03-23T18:49:33.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-18 20:22:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:24:00 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:27:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:29:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:14 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:37 +0000\",\"changed\":[\"free_play\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:40:35 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:56:53 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:58:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-09-10 14:08:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-10 14:11:51 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-10 14:13:30 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-10 15:33:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-10 15:55:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-10 16:24:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-23 19:08:14 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-23 19:09:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-24 17:57:55 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-05-02 23:55:59 +0000\",\"changed\":[\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2019-06-20 22:01:20 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2020-03-12 14:31:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-12 14:50:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-12 14:52:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-12 15:04:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-15 18:59:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2020-06-16 19:35:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2020-08-24 19:41:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-01-21 20:05:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-22 22:46:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-03-22 23:09:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-03-23 18:19:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-03-23 18:51:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-03-23 19:16:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="true" movable="true" editable="true">
+          <next>
+            <block type="gamelab_setBackgroundImage" deletable="true" movable="true" editable="true">
+              <title name="IMG">"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"</title>
+              <next>
+                <block type="controls_repeat_ext" deletable="true" movable="true" editable="true">
+                  <value name="TIMES">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="gamelab_makeNewSpriteAnon" deletable="true" movable="true" editable="true">
+                      <title name="ANIMATION_NAME">"bee"</title>
+                      <value name="LOCATION">
+                        <block type="gamelab_randomLocation" deletable="true" movable="true" editable="true"/>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="gamelab_setProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"scale"</title>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                          <title name="ANIMATION">"bee"</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">50</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_addBehaviorSimple" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                              <title name="ANIMATION">"bee"</title>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_behavior_get" deletable="true" movable="true" editable="true">
+                              <mutation/>
+                              <title name="VAR" id="wandering">wandering</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_makeNewSpriteAnon" deletable="true" movable="true" editable="true">
+                              <title name="ANIMATION_NAME">"green monster"</title>
+                              <value name="LOCATION">
+                                <block type="gamelab_location_picker" deletable="true" movable="true" editable="true">
+                                  <title name="LOCATION">{"x":201,"y":350}</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_makeNewSpriteAnon" deletable="true" movable="true" editable="true">
+                                  <title name="ANIMATION_NAME">"cupcake"</title>
+                                  <value name="LOCATION">
+                                    <block type="gamelab_randomLocation" deletable="true" movable="true" editable="true"/>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_setProp" deletable="true" movable="true" editable="true">
+                                      <title name="PROPERTY">"scale"</title>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                                          <title name="ANIMATION">"cupcake"</title>
+                                        </block>
+                                      </value>
+                                      <value name="VAL">
+                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                          <title name="NUM">75</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" deletable="true" movable="true" editable="true">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+              <title name="ANIMATION">"green monster"</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+              <title name="ANIMATION">"cupcake"</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_jumpTo" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                  <title name="ANIMATION">"cupcake"</title>
+                </block>
+              </value>
+              <value name="LOCATION">
+                <block type="gamelab_randomLocation" deletable="true" movable="true" editable="true"/>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" deletable="true" movable="true" editable="true">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+              <title name="ANIMATION">"green monster"</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+              <title name="ANIMATION">"bee"</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_jumpTo" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                  <title name="ANIMATION">"green monster"</title>
+                </block>
+              </value>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker" deletable="true" movable="true" editable="true">
+                  <title name="LOCATION">{"x":200,"y":350}</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed" deletable="true" movable="true" editable="true">
+          <title name="CONDITION">"while"</title>
+          <title name="KEY">"up"</title>
+          <next>
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                  <title name="ANIMATION">"green monster"</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed" deletable="true" movable="true" editable="true">
+          <title name="CONDITION">"while"</title>
+          <title name="KEY">"down"</title>
+          <next>
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                  <title name="ANIMATION">"green monster"</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed" deletable="true" movable="true" editable="true">
+          <title name="CONDITION">"while"</title>
+          <title name="KEY">"left"</title>
+          <next>
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"West"</title>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                  <title name="ANIMATION">"green monster"</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed" deletable="true" movable="true" editable="true">
+          <title name="CONDITION">"while"</title>
+          <title name="KEY">"right"</title>
+          <next>
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"East"</title>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" deletable="true" movable="true" editable="true">
+                  <title name="ANIMATION">"green monster"</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the left across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving west">moving west</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"West"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its right</description>
+          </mutation>
+          <title name="NAME" id="spinning right">spinning right</title>
+          <statement name="STACK">
+            <block type="gamelab_turn" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"right"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="growing">growing</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
+          </mutation>
+          <title name="NAME" id="swimming left and right">swimming left and right</title>
+          <statement name="STACK">
+            <block type="controls_if" deletable="true" movable="true" editable="true">
+              <mutation elseif="1"/>
+              <value name="IF0">
+                <block type="logic_compare" deletable="true" movable="true" editable="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_mirrorSprite" deletable="true" movable="true" editable="true">
+                  <title name="DIRECTION">"right"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare" deletable="true" movable="true" editable="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">180</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="gamelab_mirrorSprite" deletable="true" movable="true" editable="true">
+                  <title name="DIRECTION">"left"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward" deletable="true" movable="true" editable="true">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" deletable="true" movable="true" editable="true">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                  <title name="NUM">180</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the right across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving east">moving east</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"East"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite upwards across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving north">moving north</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite across the screen, reversing direction if it touches the edges</description>
+          </mutation>
+          <title name="NAME" id="patrolling">patrolling</title>
+          <statement name="STACK">
+            <block type="gamelab_moveForward" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" deletable="true" movable="true" editable="true">
+                  <value name="IF0">
+                    <block type="gamelab_isTouchingEdges" deletable="true" movable="true" editable="true">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_edgesDisplace" deletable="true" movable="true" editable="true">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                          <title name="PROPERTY">"direction"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" deletable="true" movable="true" editable="true">
+                              <title name="NUM">180</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite downwards across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving south">moving south</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="jittering">jittering</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int" deletable="true" movable="true" editable="true">
+                  <value name="FROM">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">-1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite, changing its direction randomly</description>
+          </mutation>
+          <title name="NAME" id="wandering">wandering</title>
+          <statement name="STACK">
+            <block type="controls_if" deletable="true" movable="true" editable="true">
+              <value name="IF0">
+                <block type="logic_compare" deletable="true" movable="true" editable="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="math_random_int" deletable="true" movable="true" editable="true">
+                      <value name="FROM">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                  <title name="PROPERTY">"direction"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int" deletable="true" movable="true" editable="true">
+                      <value name="FROM">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">-25</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward" deletable="true" movable="true" editable="true">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" deletable="true" movable="true" editable="true">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int" deletable="true" movable="true" editable="true">
+                                  <value name="FROM">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">135</title>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">225</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="shrinking">shrinking</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">-1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its left</description>
+          </mutation>
+          <title name="NAME" id="spinning left">spinning left</title>
+          <statement name="STACK">
+            <block type="gamelab_turn" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the left across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving west">moving west2</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"West"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its right</description>
+          </mutation>
+          <title name="NAME" id="spinning right">spinning right2</title>
+          <statement name="STACK">
+            <block type="gamelab_turn" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"right"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="growing">growing2</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
+          </mutation>
+          <title name="NAME" id="swimming left and right">swimming left and right2</title>
+          <statement name="STACK">
+            <block type="controls_if" deletable="true" movable="true" editable="true">
+              <mutation elseif="1"/>
+              <value name="IF0">
+                <block type="logic_compare" deletable="true" movable="true" editable="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_mirrorSprite" deletable="true" movable="true" editable="true">
+                  <title name="DIRECTION">"right"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare" deletable="true" movable="true" editable="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">180</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="gamelab_mirrorSprite" deletable="true" movable="true" editable="true">
+                  <title name="DIRECTION">"left"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward" deletable="true" movable="true" editable="true">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" deletable="true" movable="true" editable="true">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                  <title name="NUM">180</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the right across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving east">moving east2</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"East"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite upwards across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving north">moving north2</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite across the screen, reversing direction if it touches the edges</description>
+          </mutation>
+          <title name="NAME" id="patrolling">patrolling2</title>
+          <statement name="STACK">
+            <block type="gamelab_moveForward" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" deletable="true" movable="true" editable="true">
+                  <value name="IF0">
+                    <block type="gamelab_isTouchingEdges" deletable="true" movable="true" editable="true">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_edgesDisplace" deletable="true" movable="true" editable="true">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                          <title name="PROPERTY">"direction"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" deletable="true" movable="true" editable="true">
+                              <title name="NUM">180</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite downwards across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving south">moving south2</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="jittering">jittering2</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int" deletable="true" movable="true" editable="true">
+                  <value name="FROM">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">-1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite, changing its direction randomly</description>
+          </mutation>
+          <title name="NAME" id="wandering">wandering2</title>
+          <statement name="STACK">
+            <block type="controls_if" deletable="true" movable="true" editable="true">
+              <value name="IF0">
+                <block type="logic_compare" deletable="true" movable="true" editable="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="math_random_int" deletable="true" movable="true" editable="true">
+                      <value name="FROM">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                  <title name="PROPERTY">"direction"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int" deletable="true" movable="true" editable="true">
+                      <value name="FROM">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">-25</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward" deletable="true" movable="true" editable="true">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" deletable="true" movable="true" editable="true">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace" deletable="true" movable="true" editable="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int" deletable="true" movable="true" editable="true">
+                                  <value name="FROM">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">135</title>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">225</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="shrinking">shrinking2</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">-1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its left</description>
+          </mutation>
+          <title name="NAME" id="spinning left">spinning left2</title>
+          <statement name="STACK">
+            <block type="gamelab_turn" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite if the user is pressing the arrow keys</description>
+          </mutation>
+          <title name="NAME" id="moving with arrow keys">moving with arrow keys</title>
+          <statement name="STACK">
+            <block type="controls_if" deletable="true" movable="true" editable="true">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed" deletable="true" movable="true" editable="true">
+                  <title name="KEY">"up"</title>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+                  <title name="DIRECTION">"North"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if" deletable="true" movable="true" editable="true">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed" deletable="true" movable="true" editable="true">
+                      <title name="KEY">"down"</title>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+                      <title name="DIRECTION">"South"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                          <title name="PROPERTY">"speed"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if" deletable="true" movable="true" editable="true">
+                      <value name="IF0">
+                        <block type="gamelab_isKeyPressed" deletable="true" movable="true" editable="true">
+                          <title name="KEY">"left"</title>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+                          <title name="DIRECTION">"West"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="DISTANCE">
+                            <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"speed"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if" deletable="true" movable="true" editable="true">
+                          <value name="IF0">
+                            <block type="gamelab_isKeyPressed" deletable="true" movable="true" editable="true">
+                              <title name="KEY">"right"</title>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+                              <title name="DIRECTION">"East"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="DISTANCE">
+                                <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                                  <title name="PROPERTY">"speed"</title>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite if the user is pressing the arrow keys</description>
+          </mutation>
+          <title name="NAME" id="driving with arrow keys">driving with arrow keys</title>
+          <statement name="STACK">
+            <block type="controls_if" deletable="true" movable="true" editable="true">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed" deletable="true" movable="true" editable="true">
+                  <title name="KEY">"up"</title>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveForward" deletable="true" movable="true" editable="true">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if" deletable="true" movable="true" editable="true">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed" deletable="true" movable="true" editable="true">
+                      <title name="KEY">"down"</title>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveBackward" deletable="true" movable="true" editable="true">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                          <title name="PROPERTY">"speed"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if" deletable="true" movable="true" editable="true">
+                      <value name="IF0">
+                        <block type="gamelab_isKeyPressed" deletable="true" movable="true" editable="true">
+                          <title name="KEY">"left"</title>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                          <title name="PROPERTY">"direction"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_single" deletable="true" movable="true" editable="true">
+                              <title name="OP">NEG</title>
+                              <value name="NUM">
+                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                  <title name="NUM">5</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"rotation"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_single" deletable="true" movable="true" editable="true">
+                                  <title name="OP">NEG</title>
+                                  <value name="NUM">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">5</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if" deletable="true" movable="true" editable="true">
+                          <value name="IF0">
+                            <block type="gamelab_isKeyPressed" deletable="true" movable="true" editable="true">
+                              <title name="KEY">"right"</title>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                  <title name="NUM">5</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+                                  <title name="PROPERTY">"rotation"</title>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">5</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_if" deletable="true" movable="true" editable="true">
+                              <value name="IF0">
+                                <block type="gamelab_isTouchingEdges" deletable="true" movable="true" editable="true">
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="gamelab_edgesDisplace" deletable="true" movable="true" editable="true">
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly change the vertical position of a sprite</description>
+          </mutation>
+          <title name="NAME" id="fluttering">fluttering</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" deletable="true" movable="true" editable="true">
+              <title name="PROPERTY">"y"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int" deletable="true" movable="true" editable="true">
+                  <value name="FROM">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">-1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly set the rotation of a sprite</description>
+          </mutation>
+          <title name="NAME" id="wobbling">wobbling</title>
+          <statement name="STACK">
+            <block type="gamelab_withPercentChance" deletable="true" movable="true" editable="true">
+              <value name="NUM">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">50</title>
+                </block>
+              </value>
+              <statement name="STATEMENT">
+                <block type="gamelab_setProp" deletable="true" movable="true" editable="true">
+                  <title name="PROPERTY">"rotation"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int" deletable="true" movable="true" editable="true">
+                      <value name="FROM">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">-1</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving west and looping">moving west and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+                  <title name="DIRECTION">"West"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" deletable="true" movable="true" editable="true">
+                      <value name="IF0">
+                        <block type="logic_compare" deletable="true" movable="true" editable="true">
+                          <title name="OP">LT</title>
+                          <value name="A">
+                            <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"x"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" deletable="true" movable="true" editable="true">
+                              <title name="NUM">-50</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_setProp" deletable="true" movable="true" editable="true">
+                          <title name="PROPERTY">"x"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" deletable="true" movable="true" editable="true">
+                              <title name="NUM">450</title>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving east and looping">moving east and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite" deletable="true" movable="true" editable="true">
+              <title name="DIRECTION">"right"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection" deletable="true" movable="true" editable="true">
+                  <title name="DIRECTION">"East"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" deletable="true" movable="true" editable="true">
+                      <value name="IF0">
+                        <block type="logic_compare" deletable="true" movable="true" editable="true">
+                          <title name="OP">GT</title>
+                          <value name="A">
+                            <block type="gamelab_getProp" deletable="true" movable="true" editable="true">
+                              <title name="PROPERTY">"x"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" deletable="true" movable="true" editable="true">
+                              <title name="NUM">450</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_setProp" deletable="true" movable="true" editable="true">
+                          <title name="PROPERTY">"x"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" deletable="true" movable="true" editable="true">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" deletable="true" movable="true" editable="true">
+                              <title name="NUM">-50</title>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="gamelab_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setBackgroundImage">
+            <title name="IMG">"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"</title>
+          </block>
+          <block type="gamelab_printText">
+            <value name="TEXT">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"green monster"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">{"x":200,"y":200}</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_randomLocation"/>
+          <block type="gamelab_allSpritesWithAnimation">
+            <title name="ANIMATION">"green monster"</title>
+          </block>
+        </category>
+        <category name="Actions">
+          <block type="gamelab_setTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveInDirection">
+            <title name="DIRECTION">"North"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+            <value name="DISTANCE">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_destroy">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_bounceOff">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+            <value name="TARGET">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple monster"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setAnimation">
+            <title name="ANIMATION">"brown bunny"</title>
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_keyPressed">
+            <title name="CONDITION">"when"</title>
+            <title name="KEY">"up"</title>
+          </block>
+          <block type="gamelab_spriteClicked">
+            <title name="CONDITION">"when"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_checkTouching">
+            <title name="CONDITION">"when"</title>
+            <value name="SPRITE1">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+            <value name="SPRITE2">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"purple monster"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_atTime">
+            <title name="UNIT">"seconds"</title>
+            <value name="N">
+              <block type="math_number">
+                <title name="NUM">3</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Behaviors" custom="Behavior">
+          <block type="gamelab_addBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeAllBehaviors">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"green monster"</title>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

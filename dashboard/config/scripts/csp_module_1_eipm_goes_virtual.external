@@ -1,0 +1,14 @@
+name 'CSP Module 1 EIPM goes virtual'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# EIPM in different learning environments (optional)
+
+### **Note: This will be available August 2020!**
+
+## Do this: 
+* If you are teaching in a virtual or socially-distanced setting, read the Curriculum guidance for adapting EIPM to these different learning environments. You can also find this resource linked off of the <a href="https://curriculum.code.org/csp-20/unit4" target="blank" rel="noopener noreferrer">Unit 4 curriculum page</a>.
+
+MARKDOWN

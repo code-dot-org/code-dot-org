@@ -1,0 +1,58 @@
+%link{href: "/css/oceans-promo.css", rel: "stylesheet"}
+
+.img-container.desktop-feature
+  %img.background-img{src: '/images/fit-1940/oceans/oceans-background.png', style: 'border-top-right-radius: 10px; border-top-left-radius: 10px;'}
+  %img.sea-creature{src: 'images/oceans/big-sunfish.png'}
+  %img.sea-creature{src: 'images/oceans/small-sunfish.png'}
+  %img.sea-creature{src: 'images/oceans/turtle.png'}
+  %img.sea-creature{src: 'images/oceans/gorgon-fish.png'}
+  %img.sea-creature{src: 'images/oceans/shark.png'}
+  %img.sea-creature{src: 'images/oceans/orange-fish.png'}
+  %img.crab{src: 'images/oceans/crab.png'}
+  .scanning-bot
+    %img.ai-bot{src: 'images/oceans/ai-bot.png'}
+  %img.ai-light{src: 'images/oceans/bot-beam-puddle.png'}
+  %img.ai-fish{src: 'images/oceans/fish-in-beam.png'}
+
+%img.mobile.mobile-feature{src: 'images/oceans/mobile-ai.png', style: 'border-top-right-radius: 10px; border-top-left-radius: 10px;'}
+
+:javascript
+  $time =
+    Date.now ||
+    function() {
+      return +new Date();
+    };
+  var fishLocations = [
+    {x: 520, y: 90},
+    {x: 570, y: 70},
+    {x: 820, y: 110},
+    {x: 560, y: 215},
+    {x: 300, y: 180},
+    {x: 300, y: 30}
+  ];
+  var fishWidths = ['45px', '30px', '100px', '80px', '100px', '30px']
+  $(document).ready(function() {
+    var isRtl = $('div[dir=rtl]').length != 0;
+    setInterval(function() {
+      $(".sea-creature").each(function(index) {
+        var swayValue =
+          (($time() * 360) / (20 * 1000) + (index + 1) * 10) % 360;
+        var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
+        var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+        var x = fishLocations[index].x + swayOffsetX;
+        var y;
+        if (index == 3) {
+          y = fishLocations[index].y;
+        } else {
+          y = fishLocations[index].y + swayOffsetY;
+        }
+        var seaCreateStyle = {top: y, display: 'block', width: fishWidths[index]}
+        if (isRtl) {
+          seaCreateStyle.right = x;
+        } else {
+          seaCreateStyle.left = x;
+        }
+        $(this).css(seaCreateStyle);
+      });
+    }, 1000 / 30);
+  });

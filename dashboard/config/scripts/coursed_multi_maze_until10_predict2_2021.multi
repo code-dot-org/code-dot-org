@@ -1,0 +1,6 @@
+name 'courseD_multi_maze_until10_predict2_2021'
+question 'Look carefully at the code below. What will happen after you click "Run"?'
+right 'The zombie will pass the correct path and end up going back and forth forever.', feedback: 'Correct!'
+wrong 'The zombie will make it to the sunflower.', feedback: 'Incorrect. The zombie will pass the correct path and end up going back and forth forever.'
+wrong 'The zombie will turn right on the first path and go around in circles forever.', feedback: 'Incorrect. The zombie will pass the correct path and end up going back and forth forever.'
+wrong 'The zombie will be stuck at the end of the path forward.', feedback: 'In this code, the zombie will pass the correct path and end up going back and forth forever.'

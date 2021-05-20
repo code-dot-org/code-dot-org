@@ -1,0 +1,175 @@
+name 'OPD-K5 CS Courses_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Getting started on Code.org
+
+
+## Step 1: Choose a course
+All of our courses – from pre-readers to high schoolers – are listed in our **<a href="https://studio.code.org/courses" target="blank" rel="noopener noreferrer">course catalog</a>**. All our courses are available at no cost. Chat with colleagues at your school to determine how the course curriculum can be integrated with a variety of subjects.
+
+<table style="width:100%; border-style:none;">
+  <tr>
+    <th style="background-color:#ff9900; text-align:center; border-style:none; font-weight:bold;""">
+      <b>Course A</b><br/>
+      <i>Kindergarten</i>
+    </th>
+    <th style="background-color:#f1c232; text-align:center; border-style:none;""">
+        Course B<br/>
+        <i>1st Grade</i>
+    </th>
+    <th style="background-color:#b8bf0d; text-align:center; border-style:none;""">
+        Course C<br/>
+        <i>2nd Grade</i>
+    </th>
+    <th style="background-color:#53bac2; text-align:center; border-style:none;""">
+        Course D<br/>
+        <i>3rd Grade</i>
+    </th>
+    <th style="background-color:#0094ca; text-align:center; border-style:none;""">
+        Course E<br/>
+        <i>4th Grade</i>
+    </th>
+    <th style="background-color:#7664a0; text-align:center; border-style:none;""">
+        Course F<br/>
+        <i>5th Grade</i>
+    </th>
+  </tr>
+  <tr>
+    <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">12 lessons, ~12 hours to complete</td>
+    <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">12 lessons, ~12 hours to complete</td>
+    <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18 hours to complete</td>
+    <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18 hours to complete</td>
+    <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18-20 hours to complete</td>
+    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~20-22 hours to complete</td>
+  </tr>
+  <tr>
+    <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">Concepts</td>
+  </tr>
+  <tr>
+    <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Loops</li>
+        <li>Events</li>
+      </ul>
+    </td>
+    <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Loops</li>
+        <li>Impacts of Computing</li>
+        <li>Events</li>
+      </ul>
+    </td>
+    <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Binary</li>
+        <li>Loops</li>
+        <li>Events</li>
+        <li>Data</li>
+      </ul>
+    </td>
+    <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Sequencing</li>
+        <li>Events</li>
+        <li>Loops</li>
+        <li>Conditionals</li>
+        <li>Binary</li>
+        <li>Digital Citizenship</li>
+      </ul>
+    </td>
+    <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Sprites</li>
+        <li>Digital Citizenship</li>
+        <li>Impacts of Computing</li>
+        <li>Nested Loops</li>
+        <li>Functions</li>
+      </ul>
+    </td>
+    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="font-style:italic;">
+        <li>Variables</li>
+        <li>Data</li>
+        <li>For Loops</li>
+        <li>Internet</li>
+        <li>Sprites</li>
+        <li>Digital Citizenship</li>
+        </ul>
+    </td>
+  <tr>
+  	<td style="background-color:#f9cb9c">
+     <a href="https://studio.code.org/s/coursea" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursea" target="_blank" style='text-decoration:none'>
+          <button>Lesson plans</button>
+      </a>
+    </td>
+    <td style="background-color:#ffe599">
+    <a href="https://studio.code.org/s/courseb" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/courseb" target="_blank" style='text-decoration:none'>
+        <button>Lesson plans</button>
+      </a>
+    </td>   
+   	<td style="background-color:#d2da0e">
+    <a href="https://studio.code.org/s/coursec" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursec" target="_blank" style='text-decoration:none'>
+        <button>Lesson plans</button>
+      </a>
+    </td>   
+    <td style="background-color:#68ebf5">
+    <a href="https://studio.code.org/s/coursed" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursed" target="_blank" style='text-decoration:none'>
+        <button>Lesson plans</button>
+      </a>
+    </td>  
+    <td style="background-color:#9ed7ed">
+    <a href="https://studio.code.org/s/coursee" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursee" target="_blank" style='text-decoration:none'>
+        <button>Lesson plans</button>
+      </a>
+    </td>  
+     <td style="background-color:#c9c1e9">
+    <a href="https://studio.code.org/s/coursee" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursee" target="_blank" style='text-decoration:none'>
+        <button>Lesson plans</button>
+      </a>
+    </td>  
+  </tr>
+</table>
+<br/>
+
+
+***
+## Step 2: Set up your classroom section
+Set up a classroom section to view your student’s progress, print login cards for your students, manage their accounts, and print certificates they can bring home when they finish the course. Click this link to **<a href="https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b" target="blank" rel="noopener noreferrer">watch a brief video</a>** that demonstrates how to set up your first computer science class on Code.org. You can also find the steps in **<a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section" target="blank" rel="noopener noreferrer">this support article</a>**.
+
+***
+## Step 3: Assign the course to your section
+Click into the course that you are teaching. You can then click "Assign Course" and assign that course to one of your sections. 
+***
+## Step 4: Start teaching! 
+All it takes is one lesson to bring computer science concepts into your classroom. Once you see your students enthusiasm for CS, go further with daily lesson plans to guide your students, unplugged activities you can do without a computer, and forums to connect to other teachers.
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

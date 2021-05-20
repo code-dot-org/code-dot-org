@@ -1,0 +1,3840 @@
+{
+  "script": {
+    "name": "csp3-2018",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "exclude_csf_column_in_legend": true,
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-18/unit3/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csp3"
+        ],
+        [
+          "vocabulary",
+          "https://curriculum.code.org/csp-18/unit3/vocab/"
+        ],
+        [
+          "codeIntroduced",
+          "https://curriculum.code.org/csp-18/unit3/code/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-18/unit3/standards/"
+        ],
+        [
+          "professionalLearning",
+          "https://studio.code.org/s/csp3-support"
+        ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "version_year": "2018",
+      "is_stable": true,
+      "script_announcements": [
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "project_sharing": true,
+      "curriculum_umbrella": "CSP",
+      "family_name": "csp3",
+      "tts": true,
+      "hideable_lessons": true,
+      "announcements": [
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ]
+    },
+    "new_name": null,
+    "family_name": "csp3",
+    "serialized_at": "2021-05-03 23:55:22 UTC",
+    "seeding_key": {
+      "script.name": "csp3-2018"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp3_1_2018",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Unit 3: Intro to Programming"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "cspAssessment",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter Assessment"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspAssessment",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp3-2018"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "The Need For Programming Languages",
+      "name": "The Need For Programming Languages",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "The Need for Algorithms",
+      "name": "The Need for Algorithms",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Algorithms",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Creativity in Algorithms",
+      "name": "Creativity in Algorithms",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Creativity in Algorithms",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Using Simple Commands",
+      "name": "Using Simple Commands",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Creating Functions",
+      "name": "Creating Functions",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Functions and Top-Down Design",
+      "name": "Functions and Top-Down Design",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "APIs and Function Parameters",
+      "name": "APIs and Function Parameters",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Creating functions with Parameters",
+      "name": "Creating functions with Parameters",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Looping and Random Numbers",
+      "name": "Looping and Random Numbers",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Practice PT - Design a Digital Scene",
+      "name": "Practice PT - Design a Digital Scene",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Unit 3 Chapter 1 Assessment",
+      "name": "Unit 3 Chapter 1 Assessment",
+      "absolute_position": 11,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Chapter 1 Assessment",
+        "lesson_group.key": "cspAssessment",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "Mid-Year Survey",
+      "name": "Mid-Year Survey",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Mid-Year Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp3-2018"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L01 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L01 SFLP"
+        ],
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L01 SFLP"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L01 Assessment1_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L01 Assessment1_2018"
+        ],
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L01 Assessment1_2018"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L01 Assessment3_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L01 Assessment3_2018"
+        ],
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L01 Assessment3_2018"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-4-levelgroup-U3Ch1_2018"
+        ],
+        "progression": "Quick Check-In"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pulse-check-survey-4-levelgroup-U3Ch1_2018"
+        ],
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp-pulse-check-survey-4-levelgroup-U3Ch1_2018"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L02 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L02 SFLP"
+        ],
+        "lesson.key": "The Need for Algorithms",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L02 SFLP"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L03 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L03 SFLP"
+        ],
+        "lesson.key": "Creativity in Algorithms",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L03 SFLP"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L04 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L04 SFLP"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L04 SFLP"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp_applab_turtle_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_turtle_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp_applab_turtle_2018"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands_2018"
+        ],
+        "progression": "Using Simple Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L2 Using Simple Commands_2018"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L2_TurtleSquare_right_2018"
+        ],
+        "progression": "Using Simple Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2_TurtleSquare_right_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L2_TurtleSquare_right_2018"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L2_Turtle3by3Grid_2018"
+        ],
+        "progression": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2_Turtle3by3Grid_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L2_Turtle3by3Grid_2018"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L02 Assessment_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L02 Assessment_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L02 Assessment_2018"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L02 Free Response Getting Started_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L02 Free Response Getting Started_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L02 Free Response Getting Started_2018"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_U3_square_v_rect_FR_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_U3_square_v_rect_FR_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp_U3_square_v_rect_FR_2018"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L02 Free Response Wrap Up_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L02 Free Response Wrap Up_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L02 Free Response Wrap Up_2018"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L05 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L05 SFLP"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L05 SFLP"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp_applab_functions_2018"
+        ],
+        "progression": "Defining and Calling Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_functions_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp_applab_functions_2018"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L03 Define and use turnAround_2018"
+        ],
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Define and use turnAround_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 Define and use turnAround_2018"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L03 Draw a T using turnAround_2018"
+        ],
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Draw a T using turnAround_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 Draw a T using turnAround_2018"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L03 define turnRight and draw a rectangle_2018"
+        ],
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 define turnRight and draw a rectangle_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 define turnRight and draw a rectangle_2018"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP Abstraction in Programming 2_2018"
+        ],
+        "progression": "Abstraction in Programming"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Abstraction in Programming 2_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP Abstraction in Programming 2_2018"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L03 - draw rect function_2018"
+        ],
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 - draw rect function_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 - draw rect function_2018"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L03 - draw step_2018"
+        ],
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 - draw step_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 - draw step_2018"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L03 Three Steps_2018"
+        ],
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Three Steps_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 Three Steps_2018"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L03 draw diamond_2018"
+        ],
+        "progression": "Challenge: Draw a Diamond Using Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 draw diamond_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 draw diamond_2018"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L03 - multiselect - properties of functions_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 - multiselect - properties of functions_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 - multiselect - properties of functions_2018"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L03 Assessment_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Assessment_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 Assessment_2018"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L03 Free Response Wrap Up_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Free Response Wrap Up_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L03 Free Response Wrap Up_2018"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_U3_plan_code_FR_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_U3_plan_code_FR_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp_U3_plan_code_FR_2018"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L06 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L06 SFLP"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L06 SFLP"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L04 - snowflake_2018"
+        ],
+        "progression": "Using Functions with Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L04 - snowflake_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L04 - snowflake_2018"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L04 - 3 by 3 with functions_2018"
+        ],
+        "progression": "Using Functions with Turtle Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L04 - 3 by 3 with functions_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L04 - 3 by 3 with functions_2018"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-design-process_2018"
+        ],
+        "progression": "AP Practice Response - Design Process"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3-AP-Practice-FR-design-process_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3-AP-Practice-FR-design-process_2018"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L04 Assessment1_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L04 Assessment1_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L04 Assessment1_2018"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L04 Assessment2_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L04 Assessment2_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L04 Assessment2_2018"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L04 Free Response Wrap Up_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L04 Free Response Wrap Up_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L04 Free Response Wrap Up_2018"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L07 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L07 SFLP"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L07 SFLP"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 - moveForwardwithParams_2018"
+        ],
+        "progression": "Introduction to Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 - moveForwardwithParams_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 - moveForwardwithParams_2018"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 Challenge 1 triangle_2018"
+        ],
+        "progression": "Introduction to Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 1 triangle_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Challenge 1 triangle_2018"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 Challenge 2 purple square_2018"
+        ],
+        "progression": "Introduction to Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 2 purple square_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Challenge 2 purple square_2018"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 Challenge 3 fill pink_2018"
+        ],
+        "progression": "Introduction to Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 3 fill pink_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Challenge 3 fill pink_2018"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 Challenge 4 bullseye_2018"
+        ],
+        "progression": "Introduction to Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 4 bullseye_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Challenge 4 bullseye_2018"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 Challenge 6 squiggles_2018"
+        ],
+        "progression": "Introduction to Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 6 squiggles_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Challenge 6 squiggles_2018"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 Challenge 5 overlapping circles_2018"
+        ],
+        "progression": "Introduction to Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 5 overlapping circles_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Challenge 5 overlapping circles_2018"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 Challenge 7 smiley face_2018"
+        ],
+        "progression": "Introduction to Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 7 smiley face_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Challenge 7 smiley face_2018"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L06 Challenge 8 make your own_2018"
+        ],
+        "progression": "Make Your Own Turtle Drawing"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 8 make your own_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Challenge 8 make your own_2018"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-score-abstraction-response_2018"
+        ],
+        "progression": "AP Practice Response - Score a student response"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3-AP-Practice-FR-score-abstraction-response_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3-AP-Practice-FR-score-abstraction-response_2018"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L06 Assessment2_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Assessment2_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Assessment2_2018"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L06-API-multichoice_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06-API-multichoice_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06-API-multichoice_2018"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L06 Assessment_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Assessment_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L06 Assessment_2018"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp3_U3_turtle_subgoal_mc_levelgroup_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp3_U3_turtle_subgoal_mc_levelgroup_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp3_U3_turtle_subgoal_mc_levelgroup_2018"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L08 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L08 SFLP"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L08 SFLP"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp_applab_functions_parameters_2018"
+        ],
+        "progression": "Functions with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_functions_parameters_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp_applab_functions_parameters_2018"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - drawSquareWithParam_2018"
+        ],
+        "progression": "Drawing Shapes With Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - drawSquareWithParam_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - drawSquareWithParam_2018"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - createTriangleParam_2018"
+        ],
+        "progression": "Drawing Shapes With Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - createTriangleParam_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - createTriangleParam_2018"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - squareTwoParams_2018"
+        ],
+        "progression": "Drawing Shapes With Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - squareTwoParams_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - squareTwoParams_2018"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - createTwoParamTriangle_2018"
+        ],
+        "progression": "Drawing Shapes With Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - createTwoParamTriangle_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - createTwoParamTriangle_2018"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc_2018"
+        ],
+        "progression": "Check Your Understanding: Defining Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp_U3_turtle_subgoal_q3_mc_2018"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 whats a comment_2018"
+        ],
+        "progression": "How to add comments to code"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 whats a comment_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3 whats a comment_2018"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 how to add comments_2018"
+        ],
+        "progression": "How to add comments to code"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 how to add comments_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 how to add comments_2018"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - introUnderTheSea_2018"
+        ],
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - introUnderTheSea_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - introUnderTheSea_2018"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - paramsToStarfish_2018"
+        ],
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - paramsToStarfish_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - paramsToStarfish_2018"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - seaGrass_2018"
+        ],
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - seaGrass_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - seaGrass_2018"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - fish_2018"
+        ],
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - fish_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - fish_2018"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - multiParamFish_2018"
+        ],
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - multiParamFish_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - multiParamFish_2018"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - randomInput_2018"
+        ],
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - randomInput_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - randomInput_2018"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_U3_subgoal_q4_mc_2018"
+        ],
+        "progression": "Check Your Understanding: Using Random Numbers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_U3_subgoal_q4_mc_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp_U3_subgoal_q4_mc_2018"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - freePlay_2018"
+        ],
+        "progression": "Challenge: Continue Your Drawing With More Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - freePlay_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - freePlay_2018"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-manage-complexity_2018"
+        ],
+        "progression": "AP Practice Response - Managing Complexity"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3-AP-Practice-FR-manage-complexity_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3-AP-Practice-FR-manage-complexity_2018"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 19,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L08 Assessment1_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 Assessment1_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 Assessment1_2018"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 20,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L08 Assessment2_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 Assessment2_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 Assessment2_2018"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L09 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L09 SFLP"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L09 SFLP"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp_applab_loops_2018"
+        ],
+        "progression": "Using Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_loops_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp_applab_loops_2018"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - introSquare_2018"
+        ],
+        "progression": "Introduction to Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - introSquare_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - introSquare_2018"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - randomSquare_2018"
+        ],
+        "progression": "Introduction to Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - randomSquare_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - randomSquare_2018"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "subgoals_U3_turtle_prediction_FR_2018"
+        ],
+        "progression": "Introduction to Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "subgoals_U3_turtle_prediction_FR_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "subgoals_U3_turtle_prediction_FR_2018"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - randomDots1_2018"
+        ],
+        "progression": "Introduction to Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - randomDots1_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - randomDots1_2018"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - loopsWithRandom_2018"
+        ],
+        "progression": "Introduction to Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - loopsWithRandom_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - loopsWithRandom_2018"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - topDownDesign_2018"
+        ],
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - topDownDesign_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - topDownDesign_2018"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - bubbles_2018"
+        ],
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - bubbles_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - bubbles_2018"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - fish_2018"
+        ],
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - fish_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - fish_2018"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - seaStar_2018"
+        ],
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - seaStar_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - seaStar_2018"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - seaGrass_2018"
+        ],
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - seaGrass_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - seaGrass_2018"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - allSeaGrass_2018"
+        ],
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - allSeaGrass_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - allSeaGrass_2018"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - sunBeams_2018"
+        ],
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - sunBeams_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - sunBeams_2018"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L07 - Free Play Loops and Random_2018"
+        ],
+        "progression": "Project: Under the Sea"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - Free Play Loops and Random_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - Free Play Loops and Random_2018"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3-AP-Practice-Choose-The-Abstraction_2018"
+        ],
+        "progression": "AP Practice Response - Identify the Abstraction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3-AP-Practice-Choose-The-Abstraction_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3-AP-Practice-Choose-The-Abstraction_2018"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L07 - MC remove line of code loops_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - MC remove line of code loops_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 - MC remove line of code loops_2018"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3L07 Free Response Reflection_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 Free Response Reflection_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L07 Free Response Reflection_2018"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 19,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "subgoals_u3_top_down_FR_2018"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "subgoals_u3_top_down_FR_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "subgoals_u3_top_down_FR_2018"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U3L10 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L10 SFLP"
+        ],
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP U3L10 SFLP"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - individualCode_2018"
+        ],
+        "progression": "Design Your Components"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - individualCode_2018"
+        ],
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - individualCode_2018"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "How To: Share Code with Teammates_2018"
+        ],
+        "progression": "How to Share Code with Teammates"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How To: Share Code with Teammates_2018"
+        ],
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "How To: Share Code with Teammates_2018"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L08 - digitalScene_2018"
+        ],
+        "progression": "Challenge: Design Your Digital Scene"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - digitalScene_2018"
+        ],
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "U3L08 - digitalScene_2018"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018"
+        ],
+        "lesson.key": "Unit 3 Chapter 1 Assessment",
+        "lesson_group.key": "cspAssessment",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-mid-survey-2018-markdown-with-link-to-survey"
+        ],
+        "progression": "Click here! Complete the CS Principles Mid-year survey"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-mid-survey-2018-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "Mid-Year Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp-mid-survey-2018-markdown-with-link-to-survey"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp3-2018"
+      },
+      "level_keys": [
+        "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L01 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L01 SFLP"
+        ],
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L01 Assessment1_2018",
+        "script_level.level_keys": [
+          "U3L01 Assessment1_2018"
+        ],
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L01 Assessment3_2018",
+        "script_level.level_keys": [
+          "U3L01 Assessment3_2018"
+        ],
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-pulse-check-survey-4-levelgroup-U3Ch1_2018",
+        "script_level.level_keys": [
+          "csp-pulse-check-survey-4-levelgroup-U3Ch1_2018"
+        ],
+        "lesson.key": "The Need For Programming Languages",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L02 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L02 SFLP"
+        ],
+        "lesson.key": "The Need for Algorithms",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L03 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L03 SFLP"
+        ],
+        "lesson.key": "Creativity in Algorithms",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L04 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L04 SFLP"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_turtle_2018",
+        "script_level.level_keys": [
+          "csp_applab_turtle_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L2 Using Simple Commands_2018",
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L2_TurtleSquare_right_2018",
+        "script_level.level_keys": [
+          "U3L2_TurtleSquare_right_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L2_Turtle3by3Grid_2018",
+        "script_level.level_keys": [
+          "U3L2_Turtle3by3Grid_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L02 Assessment_2018",
+        "script_level.level_keys": [
+          "U3L02 Assessment_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L02 Free Response Getting Started_2018",
+        "script_level.level_keys": [
+          "U3L02 Free Response Getting Started_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_U3_square_v_rect_FR_2018",
+        "script_level.level_keys": [
+          "csp_U3_square_v_rect_FR_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L02 Free Response Wrap Up_2018",
+        "script_level.level_keys": [
+          "U3L02 Free Response Wrap Up_2018"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L05 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L05 SFLP"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_functions_2018",
+        "script_level.level_keys": [
+          "csp_applab_functions_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Define and use turnAround_2018",
+        "script_level.level_keys": [
+          "U3L03 Define and use turnAround_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Draw a T using turnAround_2018",
+        "script_level.level_keys": [
+          "U3L03 Draw a T using turnAround_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 define turnRight and draw a rectangle_2018",
+        "script_level.level_keys": [
+          "U3L03 define turnRight and draw a rectangle_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Abstraction in Programming 2_2018",
+        "script_level.level_keys": [
+          "CSP Abstraction in Programming 2_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 - draw rect function_2018",
+        "script_level.level_keys": [
+          "U3L03 - draw rect function_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 - draw step_2018",
+        "script_level.level_keys": [
+          "U3L03 - draw step_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Three Steps_2018",
+        "script_level.level_keys": [
+          "U3L03 Three Steps_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 draw diamond_2018",
+        "script_level.level_keys": [
+          "U3L03 draw diamond_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 - multiselect - properties of functions_2018",
+        "script_level.level_keys": [
+          "U3L03 - multiselect - properties of functions_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Assessment_2018",
+        "script_level.level_keys": [
+          "U3L03 Assessment_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Free Response Wrap Up_2018",
+        "script_level.level_keys": [
+          "U3L03 Free Response Wrap Up_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_U3_plan_code_FR_2018",
+        "script_level.level_keys": [
+          "csp_U3_plan_code_FR_2018"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L06 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L06 SFLP"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L04 - snowflake_2018",
+        "script_level.level_keys": [
+          "U3L04 - snowflake_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L04 - 3 by 3 with functions_2018",
+        "script_level.level_keys": [
+          "U3L04 - 3 by 3 with functions_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3-AP-Practice-FR-design-process_2018",
+        "script_level.level_keys": [
+          "U3-AP-Practice-FR-design-process_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L04 Assessment1_2018",
+        "script_level.level_keys": [
+          "U3L04 Assessment1_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L04 Assessment2_2018",
+        "script_level.level_keys": [
+          "U3L04 Assessment2_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L04 Free Response Wrap Up_2018",
+        "script_level.level_keys": [
+          "U3L04 Free Response Wrap Up_2018"
+        ],
+        "lesson.key": "Functions and Top-Down Design",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L07 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L07 SFLP"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 - moveForwardwithParams_2018",
+        "script_level.level_keys": [
+          "U3L06 - moveForwardwithParams_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 1 triangle_2018",
+        "script_level.level_keys": [
+          "U3L06 Challenge 1 triangle_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 2 purple square_2018",
+        "script_level.level_keys": [
+          "U3L06 Challenge 2 purple square_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 3 fill pink_2018",
+        "script_level.level_keys": [
+          "U3L06 Challenge 3 fill pink_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 4 bullseye_2018",
+        "script_level.level_keys": [
+          "U3L06 Challenge 4 bullseye_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 6 squiggles_2018",
+        "script_level.level_keys": [
+          "U3L06 Challenge 6 squiggles_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 5 overlapping circles_2018",
+        "script_level.level_keys": [
+          "U3L06 Challenge 5 overlapping circles_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 7 smiley face_2018",
+        "script_level.level_keys": [
+          "U3L06 Challenge 7 smiley face_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 8 make your own_2018",
+        "script_level.level_keys": [
+          "U3L06 Challenge 8 make your own_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3-AP-Practice-FR-score-abstraction-response_2018",
+        "script_level.level_keys": [
+          "U3-AP-Practice-FR-score-abstraction-response_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Assessment2_2018",
+        "script_level.level_keys": [
+          "U3L06 Assessment2_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06-API-multichoice_2018",
+        "script_level.level_keys": [
+          "U3L06-API-multichoice_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Assessment_2018",
+        "script_level.level_keys": [
+          "U3L06 Assessment_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp3_U3_turtle_subgoal_mc_levelgroup_2018",
+        "script_level.level_keys": [
+          "csp3_U3_turtle_subgoal_mc_levelgroup_2018"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L08 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L08 SFLP"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_functions_parameters_2018",
+        "script_level.level_keys": [
+          "csp_applab_functions_parameters_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - drawSquareWithParam_2018",
+        "script_level.level_keys": [
+          "U3L08 - drawSquareWithParam_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - createTriangleParam_2018",
+        "script_level.level_keys": [
+          "U3L07 - createTriangleParam_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - squareTwoParams_2018",
+        "script_level.level_keys": [
+          "U3L08 - squareTwoParams_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - createTwoParamTriangle_2018",
+        "script_level.level_keys": [
+          "U3L08 - createTwoParamTriangle_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_U3_turtle_subgoal_q3_mc_2018",
+        "script_level.level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 whats a comment_2018",
+        "script_level.level_keys": [
+          "U3 whats a comment_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 how to add comments_2018",
+        "script_level.level_keys": [
+          "U3L08 how to add comments_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - introUnderTheSea_2018",
+        "script_level.level_keys": [
+          "U3L08 - introUnderTheSea_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - paramsToStarfish_2018",
+        "script_level.level_keys": [
+          "U3L08 - paramsToStarfish_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - seaGrass_2018",
+        "script_level.level_keys": [
+          "U3L08 - seaGrass_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - fish_2018",
+        "script_level.level_keys": [
+          "U3L08 - fish_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - multiParamFish_2018",
+        "script_level.level_keys": [
+          "U3L08 - multiParamFish_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - randomInput_2018",
+        "script_level.level_keys": [
+          "U3L08 - randomInput_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_U3_subgoal_q4_mc_2018",
+        "script_level.level_keys": [
+          "csp_U3_subgoal_q4_mc_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - freePlay_2018",
+        "script_level.level_keys": [
+          "U3L08 - freePlay_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3-AP-Practice-FR-manage-complexity_2018",
+        "script_level.level_keys": [
+          "U3-AP-Practice-FR-manage-complexity_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 Assessment1_2018",
+        "script_level.level_keys": [
+          "U3L08 Assessment1_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 Assessment2_2018",
+        "script_level.level_keys": [
+          "U3L08 Assessment2_2018"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L09 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L09 SFLP"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_loops_2018",
+        "script_level.level_keys": [
+          "csp_applab_loops_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - introSquare_2018",
+        "script_level.level_keys": [
+          "U3L07 - introSquare_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - randomSquare_2018",
+        "script_level.level_keys": [
+          "U3L07 - randomSquare_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "subgoals_U3_turtle_prediction_FR_2018",
+        "script_level.level_keys": [
+          "subgoals_U3_turtle_prediction_FR_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - randomDots1_2018",
+        "script_level.level_keys": [
+          "U3L07 - randomDots1_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - loopsWithRandom_2018",
+        "script_level.level_keys": [
+          "U3L07 - loopsWithRandom_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - topDownDesign_2018",
+        "script_level.level_keys": [
+          "U3L07 - topDownDesign_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - bubbles_2018",
+        "script_level.level_keys": [
+          "U3L07 - bubbles_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - fish_2018",
+        "script_level.level_keys": [
+          "U3L07 - fish_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - seaStar_2018",
+        "script_level.level_keys": [
+          "U3L07 - seaStar_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - seaGrass_2018",
+        "script_level.level_keys": [
+          "U3L07 - seaGrass_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - allSeaGrass_2018",
+        "script_level.level_keys": [
+          "U3L07 - allSeaGrass_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - sunBeams_2018",
+        "script_level.level_keys": [
+          "U3L07 - sunBeams_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - Free Play Loops and Random_2018",
+        "script_level.level_keys": [
+          "U3L07 - Free Play Loops and Random_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3-AP-Practice-Choose-The-Abstraction_2018",
+        "script_level.level_keys": [
+          "U3-AP-Practice-Choose-The-Abstraction_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - MC remove line of code loops_2018",
+        "script_level.level_keys": [
+          "U3L07 - MC remove line of code loops_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 Free Response Reflection_2018",
+        "script_level.level_keys": [
+          "U3L07 Free Response Reflection_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "subgoals_u3_top_down_FR_2018",
+        "script_level.level_keys": [
+          "subgoals_u3_top_down_FR_2018"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L10 SFLP",
+        "script_level.level_keys": [
+          "CSP U3L10 SFLP"
+        ],
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - individualCode_2018",
+        "script_level.level_keys": [
+          "U3L08 - individualCode_2018"
+        ],
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How To: Share Code with Teammates_2018",
+        "script_level.level_keys": [
+          "How To: Share Code with Teammates_2018"
+        ],
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - digitalScene_2018",
+        "script_level.level_keys": [
+          "U3L08 - digitalScene_2018"
+        ],
+        "lesson.key": "Practice PT - Design a Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018",
+        "script_level.level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018"
+        ],
+        "lesson.key": "Unit 3 Chapter 1 Assessment",
+        "lesson_group.key": "cspAssessment",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-mid-survey-2018-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-mid-survey-2018-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "Mid-Year Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp3-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2018-markdown-with-link-to-survey_v2",
+        "script_level.level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp3-2018"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

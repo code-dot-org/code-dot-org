@@ -1,40 +1,20 @@
-hidden false
 login_required true
 
-stage 'Pre Hour of Code Survey'
+lesson 'Pre Hour of Code Survey', display_name: 'Pre Hour of Code Survey', has_lesson_plan: false
 level 'HOC pre-survey 2016 levelgroup', assessment: true
 
-stage 'Flappy Code'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":2}'
+lesson 'Flappy Code', display_name: 'Flappy Code', has_lesson_plan: false
 level 'flappy_1'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'flappy_2'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":3}'
 level 'flappy_3'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'flappy_4'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":3}'
 level 'flappy_5'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":3}'
 level 'flappy_6'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'flappy_7'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'flappy_8'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'flappy_9'
-skin 'flappy'
-level_concept_difficulty '{"sequencing":1,"events":1}'
 level 'flappy_11'
 
-stage 'Post Hour of Code Survey'
+lesson 'Post Hour of Code Survey', display_name: 'Post Hour of Code Survey', has_lesson_plan: false
 level 'HOC post-survey 2016 levelgroup', assessment: true
+

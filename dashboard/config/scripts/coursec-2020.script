@@ -1,0 +1,202 @@
+hidden false
+hideable_lessons true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursec/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
+lesson_extras_available true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursec/{LESSON}'
+project_widget_visible true
+project_widget_types ["playlab", "artist"]
+family_name 'coursec'
+version_year '2020'
+is_stable true
+curriculum_umbrella 'CSF'
+tts true
+is_course true
+
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
+lesson 'Putting a STOP to Online Meanness', display_name: 'Putting a STOP to Online Meanness', has_lesson_plan: true, unplugged: true
+level 'csf_putting_a_stop_to_online_meanness'
+
+lesson 'Password Power-Up', display_name: 'Password Power-Up', has_lesson_plan: true, unplugged: true
+level 'csf_password_power-up'
+
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
+lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends Jr.', has_lesson_plan: true, unplugged: true
+level 'MyRoboticFriends-Unplugged_2020'
+
+lesson 'Programming in Maze', display_name: 'Programming with Angry Birds', has_lesson_plan: true
+level 'courseC_video_maze_2020', progression: 'Maze Intro: Programming with Blocks'
+level 'courseC_maze_programming1_2020', progression: 'Practice'
+level 'courseC_maze_programming2_2020', progression: 'Practice'
+level 'courseC_maze_programming3_2020', progression: 'Practice'
+level 'courseC_maze_programming4_2020', progression: 'Practice'
+level 'courseC_maze_programming5_2020', progression: 'Practice'
+level 'courseC_maze_programming6_2020', progression: 'Practice'
+level 'courseC_maze_programming7_2020', progression: 'Challenge', challenge: true
+level 'courseC_maze_programming8_2020', progression: 'Practice'
+level 'courseC_maze_programming8_predict1_2020', progression: 'Predict'
+level 'courseC_maze_programming9_2020', progression: 'Practice'
+bonus 'courseC_maze_programming_challenge1_2020'
+bonus 'courseC_maze_programming_challenge2_2020'
+
+lesson 'Debugging in Maze', display_name: 'Debugging in Maze', has_lesson_plan: true
+level 'courseC_video_debugging_2020', progression: 'Debugging with the Step Button'
+level 'courseC_maze_debugging1_2020', progression: 'Practice'
+level 'courseC_maze_debugging2_2020', progression: 'Practice'
+level 'courseC_maze_debugging3_2020', progression: 'Practice'
+level 'courseC_maze_debugging4_2020', progression: 'Practice'
+level 'courseC_maze_debugging5_2020', progression: 'Practice'
+level 'courseC_maze_debugging6_2020', progression: 'Practice'
+level 'courseC_maze_debugging7_2020', progression: 'Challenge', challenge: true
+level 'courseC_maze_debugging8_predict1_2020', progression: 'Predict'
+level 'courseC_maze_debugging9_2020', progression: 'Practice'
+bonus 'courseC_maze_debugging_challenge1_2020'
+bonus 'courseC_maze_debugging_challenge2_2020'
+
+lesson 'Programming in Collector', display_name: 'Collecting Treasure with Laurel', has_lesson_plan: true
+level 'courseC_video_collector_2020', progression: 'The Collector'
+level 'courseC_collector_prog1_2020', progression: 'Practice'
+level 'courseC_collector_prog2_2020', progression: 'Practice'
+level 'courseC_collector_prog3_2020', progression: 'Practice'
+level 'courseC_collector_prog4_2020', progression: 'Practice'
+level 'courseC_collector_prog5_2020', progression: 'Practice'
+level 'courseC_collector_prog6_2020', progression: 'Practice'
+level 'courseC_collector_prog7_2020', progression: 'Challenge', challenge: true
+level 'courseC_collector_prog8_2020', progression: 'Practice'
+level 'courseC_collector_prog9_2020', progression: 'Practice'
+level 'grade2_collector_A_2020', progression: 'Practice'
+level 'grade2_collector_A_predict1_2020', progression: 'Predict'
+level 'grade2_collector_10_2020', progression: 'Practice'
+bonus 'courseC_collector_prog_challenge1_2020', progression: 'Lesson Extras'
+bonus 'courseC_collector_prog_challenge2_2020', progression: 'Lesson Extras'
+
+lesson 'Programming in Artist', display_name: 'Creating Art with Code', has_lesson_plan: true
+level 'courseC_video_artist_2020', progression: 'Artist Intro with JR Hildebrand'
+level 'courseC_artist_prog1_2020', progression: 'Practice'
+level 'courseC_artist_prog2_2020', progression: 'Practice'
+level 'courseC_artist_prog3_2020', progression: 'Practice'
+level 'courseC_artist_prog4_2020', progression: 'Practice'
+level 'courseC_artist_prog5_2020', progression: 'Practice'
+level 'courseC_artist_prog6_2020', progression: 'Practice'
+level 'courseC_artist_prog7_2020', progression: 'Challenge', challenge: true
+level 'courseC_artist_prog8_2020', progression: 'Practice'
+level 'courseC_artist_prog6_predict1_2020', progression: 'Predict'
+bonus 'courseC_artist_prog_challenge1_2020'
+bonus 'courseC_artist_prog_challenge2a_2020'
+
+lesson_group 'csf_binary', display_name: 'Binary'
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true, unplugged: true
+level 'BinaryBracelets-Unplugged_2020'
+
+lesson_group 'csf_loops', display_name: 'Loops'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends Jr.', has_lesson_plan: true, unplugged: true
+level 'MyLoopyRoboticFriends-Unplugged_2020'
+
+lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8', has_lesson_plan: true
+level 'bb8_skinOverview_C-F_video_2020', progression: 'Programming with Rey and BB-8'
+level 'courseC_starWars_loops1_2020', progression: 'Practice'
+level 'courseC_starWars_loops1_predict1_2020', progression: 'Predict'
+level 'bb8_loops_C-F_video_2020', progression: 'Repeat Blocks with BB-8'
+level 'courseC_starWars_loops2_2020', progression: 'Practice'
+level 'courseC_starWars_loops4_2020', progression: 'Practice'
+level 'courseC_starWars_loops5_2020', progression: 'Practice'
+level 'courseC_starWars_loops6_2020', progression: 'Practice'
+level 'courseC_starWars_loops7_2020', progression: 'Practice'
+level 'courseC_starWars_loops8_2020', progression: 'Challenge', challenge: true
+level 'courseC_starWars_loops9_2020', progression: 'Practice'
+level 'courseC_starWars_loops10_2020', progression: 'Practice'
+level 'courseC_starWars_loops10_predict2_2020', progression: 'Predict'
+level 'courseC_starWars_loops11_2020', progression: 'Practice'
+bonus 'courseC_maze_loops_challenge1a_2020'
+bonus 'courseC_collector_loops_challenge2_2020'
+
+lesson 'Loops in Harvester', display_name: 'Harvesting Crops with Loops', has_lesson_plan: true
+level 'harvester_skinOverview_video_2020', progression: 'The Harvester'
+level 'courseC_harvester_loops1_2020', progression: 'Practice'
+level 'courseC_harvester_loops2_2020', progression: 'Practice'
+level 'courseC_harvester_loops3_2020', progression: 'Practice'
+level 'courseC_harvester_loops4_2020', progression: 'Practice'
+level 'courseC_harvester_loops6_2020', progression: 'Practice'
+level 'courseC_harvester_loops7_2020', progression: 'Practice'
+level 'courseC_harvester_loops5_2020', progression: 'Practice'
+level 'courseC_harvester_loops8_2020', progression: 'Challenge', challenge: true
+level 'courseC_harvester_loops9_2020', progression: 'Practice'
+level 'courseC_harvester_loops10_2020', progression: 'Practice'
+level 'courseC_harvester_loops11_2020', progression: 'Practice'
+level 'courseC_harvester_loops11_predict1_2020', progression: 'Predict'
+bonus 'courseC_harvester_loops_challenge1a_2020'
+bonus 'courseC_harvester_loops_challenge2_2020'
+
+lesson 'Looking Ahead', display_name: 'Looking Ahead with Minecraft', has_lesson_plan: true
+level 'Overworld Move to Sheep_2020', progression: 'Practice'
+level 'Overworld Chop Tree_2020', progression: 'Practice'
+level 'Overworld Shear Sheep_2020', progression: 'Practice'
+level 'Overworld Chop Trees_2020', progression: 'Practice'
+level 'Overworld Place Wall_2020', progression: 'Practice'
+level 'Overworld House Frame Chosen_2020', progression: 'Practice'
+level 'Overworld Plant Crops_2020', progression: 'Practice'
+level 'Overworld Avoid Monsters_2020', progression: 'Practice'
+level 'Underground Mining Coal_2020', progression: 'Practice'
+level 'Underground Iron_2020', progression: 'Practice'
+level 'Underground Avoiding Lava_2020', progression: 'Challenge', challenge: true
+level 'Underground If Statements_2020', progression: 'Challenge', challenge: true
+level 'Overworld Powered Minecart_2020', progression: 'Practice'
+level 'Overworld Free Play 20x20_2020', progression: 'Free Play'
+
+lesson 'Sticker Art with Loops', display_name: 'Sticker Art with Loops', has_lesson_plan: true
+level 'courseC_artist_loops1a_2020', progression: 'Mini-project: Sticker Design'
+level 'courseC_artist_loops1b_2020', progression: 'Mini-project: Sticker Design'
+level 'courseC_artist_loops2a_2020', progression: 'Mini-project: Sticker Design'
+level 'courseC_artist_loops3a_2020', progression: 'Mini-project: Sticker Design'
+level 'courseC_artist_loops4a_2020', progression: 'Mini-project: Sticker Design'
+level 'courseC_artist_loops5b_2020', progression: 'Mini-project: Sticker Design'
+level 'courseC_artist_loops6a_2020', progression: 'Mini-project: Sticker Design'
+level 'courseC_artist_loops7a_2020', progression: 'Mini-project: Sticker Design'
+level 'courseC_artist_loops8a_2020', progression: 'Free Play'
+
+lesson_group 'csf_events', display_name: 'Events'
+lesson 'Events: The Big Event', display_name: 'The Big Event', has_lesson_plan: true, unplugged: true
+level 'BigEvent-Unplugged_2020'
+
+lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
+level 'courseC_video_flappyIntro_2020', progression: 'Code Your Own Flappy Game'
+level 'courseC_flappy_events1_2020', progression: 'Practice'
+level 'courseC_flappy_events2_2020', progression: 'Practice'
+level 'courseC_flappy_events3_2020', progression: 'Practice'
+level 'courseC_flappy_events4_2020', progression: 'Practice'
+level 'courseC_flappy_events5_2020', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events6_2020', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events7_2020', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events8_2020', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events9_2020', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events10_2020', progression: 'Mini-project: Flappy Game'
+
+lesson 'Events in Play Lab', display_name: 'Chase Game with Events', has_lesson_plan: true
+level 'courseC_PlayLab_events1_2020', progression: 'Practice'
+level 'courseC_PlayLab_events2_2020', progression: 'Practice'
+level 'courseC_PlayLab_events3_2020', progression: 'Practice'
+level 'courseC_PlayLab_events4_2020', progression: 'Practice'
+level 'courseC_PlayLab_events5_2020', progression: 'Practice'
+level 'courseC_PlayLab_eventsA_embed_2020', progression: 'Mini-project: Chase Game'
+level 'courseC_PlayLab_events6_2020', progression: 'Mini-project: Chase Game'
+level 'courseC_PlayLab_events7_2020', progression: 'Mini-project: Chase Game'
+level 'courseC_PlayLab_events8_2020', progression: 'Mini-project: Chase Game'
+level 'courseC_PlayLab_events9_2020', progression: 'Mini-project: Chase Game'
+level 'courseC_PlayLab_eventsA_2020', progression: 'Mini-project: Chase Game'
+level 'courseC_PlayLab_eventsFP_2020', progression: 'Free Play'
+bonus 'courseC_PlayLab_events_challenge1_2020'
+
+lesson_group 'csf_data', display_name: 'Data'
+lesson 'Picturing Data', display_name: 'Picturing Data', has_lesson_plan: true, unplugged: true
+level 'PicturingData-Unplugged_2020'
+level 'courseC_data wizard_2020'
+
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'End of Course Project: Create a Play Lab Game', display_name: 'End of Course Project', has_lesson_plan: true
+level 'Begin planning your project_2018_2019_2020', progression: 'Project'
+level 'courseC19_playLab_EOC1_2020', progression: 'Project'
+level 'courseC19_playLab_EOC2_2020', progression: 'Project'
+level 'courseC19_playLab_EOC3_2020', progression: 'Project'
+level 'courseC19_playLab_EOC4_2020', progression: 'Project'
+level 'courseC19_playLab_EOC5_2020', progression: 'Project'
+level 'courseC19_playLab_EOC6_2020', progression: 'Project'
+

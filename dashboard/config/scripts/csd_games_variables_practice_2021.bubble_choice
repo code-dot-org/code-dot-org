@@ -1,0 +1,9 @@
+name 'CSD Games variables practice_2021'
+display_name 'Variables Practice'
+description 'Choose from the following activities to practice using variables.'
+
+sublevels
+level 'CSD U3 Variables change circle size_2021'
+level 'CSD U3 Variables names_2021'
+level 'CSD U3 Variables unused_2021'
+level 'CSD U3 Variables forbidden names_2021'

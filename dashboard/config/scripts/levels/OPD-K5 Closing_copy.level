@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-10-31T17:41:59.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "video_key": "opd_closing",
+    "instructions_important": "false",
+    "long_instructions": "> **If you enjoyed this course, sign up for an in-person workshop:**\r\n>\r\n> <a href=\"http://code.org/professional-development-workshops\" target=\"blank\">Sign up now</a> to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16685,
+    "name_suffix": "_copy",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-14 21:57:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2020-05-19 23:36:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

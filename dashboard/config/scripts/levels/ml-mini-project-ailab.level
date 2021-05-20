@@ -1,0 +1,19 @@
+<Ailab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "short_instructions": "Here are some short instructions for this test AI Lab level.",
+    "mode": "{\"datasets\":[\"candy\",\"titanic\",\"foods\"]}",
+    "parent_level_id": 24640,
+    "long_instructions": "# Mini-Project: Prepare: make an ML App\r\n\r\n## Lesson Sequence Notes\r\n- Part of 4-lesson sequence\r\n- Previously:\r\n\t- Students are mostly fluent with the tool in terms of selecting columns & creating models\r\n    - Up until now, students have not had any handles to help improve accuracy (such as % of training data, where data comes from, etc)\r\n    - Up until now, students have not thought about how data increases or decreases accuracy (ie: more data = better results)\r\n- Focus in these 3 lessons: **Data Sources & Improving Accuracy**. \r\n\t- Students see how choices around training data impacts accuracy (ie: how much training data, randomness of data, etc)\r\n    - Students see how qualities from within the data itself can increase or decrease accuracy (larger datasets = more accurate)\r\n    - Students begin creating model cards for their data\r\n\r\n## Curriculum Lesson Notes\r\n- Start of mini-project where students have most control over AI-Lab\r\n\r\n## AI-Lab Notes\r\n- Students should be able to select from several pre-curated datasets including data cards\r\n- Able to categorize columns, select features, and select labels\r\n- Able to select how much training data to withhold and whether it's first / last / random.\r\n- Before exporting, need to complete the model card\r\n- At this point, the only thing that still isn't exposed to them is the algorithm; this is still being done automatically for them based on whether it's continuous or categorical label\r\n\r\n## Dataset / Model Notes:\r\n- Real-World Datasets that lend themselves to model cards"
+  },
+  "game_id": 67,
+  "published": true,
+  "created_at": "2020-11-17T00:08:03.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-10-29 22:40:52 +0000\",\"changed\":[],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-10 05:33:10 +0000\",\"changed\":[],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-13 00:54:22 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-17 00:05:18 +0000\",\"changed\":[],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-17 00:05:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-17 00:06:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-17 00:06:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-17 00:07:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-17 00:07:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-17 00:08:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":66,\"changed_by_email\":\"brendan+teacher@code.org\"},{\"changed_at\":\"2020-11-18 22:36:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
+}]]></config>
+</Ailab>

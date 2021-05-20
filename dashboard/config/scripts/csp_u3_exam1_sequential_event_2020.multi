@@ -13,6 +13,14 @@ right ‘In sequential programming commands run in the order they are written. I
 
 
 teacher_markdown <<MARKDOWN
+**Explanation:** [Lesson 6 - Intro to Programming](https://curriculum.code.org/csp-20/unit3/6/) highlighted the differences between these two types of programming.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+CRD-2.C.5: In event-driven programming, program statements are executed when triggered rather than through the sequential flow of control.
+
+
+:::
 
 MARKDOWN
 

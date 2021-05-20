@@ -44,10 +44,8 @@ ignore_eyes_mismatches: true
 disable_all_eyes_running: true
 firebase_name: $FIREBASE_NAME
 firebase_secret: $FIREBASE_SECRET
+firebase_shared_secret: $FIREBASE_SHARED_SECRET
 use_my_apps: true
-use_my_shared_js: true
-build_blockly_core: true
-build_shared_js: true
 build_dashboard: true
 build_pegasus: true
 build_apps: true
@@ -55,18 +53,6 @@ localize_apps: true
 dashboard_enable_pegasus: true
 dashboard_workers: 5
 skip_seed_all: true
-" >> locals.yml
-echo "Wrote secrets from env vars into locals.yml."
-set -x
-
-# name: rake install
-RAKE_VERBOSE=true bundle exec rake install --trace
-
-# name: rake build
-RAKE_VERBOSE=true bundle exec rake build --trace
-
-# apply test settings for after unit tests
-echo "
 no_https_store: true
 override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
@@ -76,7 +62,16 @@ animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
 assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
 files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
 sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
+libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
 " >> locals.yml
+echo "Wrote secrets from env vars into locals.yml."
+set -x
+
+# name: rake install
+RAKE_VERBOSE=true bundle exec rake install --trace
+
+# name: rake build
+RAKE_VERBOSE=true bundle exec rake build --trace
 
 # name: seed ui tests
 bundle exec rake circle:seed_ui_test --trace

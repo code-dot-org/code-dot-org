@@ -1,0 +1,119 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "long_instructions": "# Terminology: *Parameter*\r\n\r\nWhen you have a command like: `moveForward(100)` we say that the `moveForward()` command *accepts a* **parameter**.  And 100 is the value *given* or *supplied* to `moveForward()`'s **parameter**.  Since this value can change, you will often see a written description for the command that looks something like **`moveForward(pixels)`** to indicate that the value supplied to `moveForward()`'s **parameter** should be the number of pixels you want it move.\r\n\r\nThe good old `moveForward()` command still exists.  In fact it's the **same command** as `moveForward(pixels)`. The \"parameter-less\" version of `moveForward()` simply supplies a **default value** to the parameter.  We might also say that the `moveForward()` command has an **optional parameter** since you could call either `moveForward()` or `moveForward(50)` and it doesn't cause an error when you run the program.\r\n\r\nNOTE: you can write your own functions that accept parameters, too!  But we'll get to that in later lessons.\r\n\r\n# New Commands!\r\n\r\nCheck it out.  The turtle toolbox now contains the *parameterized* versions of the turtle commands including `turnLeft(angle)` and `turnRight(angle)`.  Notice that `penUp()` and `penDown()` don't have parameters.  \r\n\r\n# Do This:\r\n\r\nUse the parameterized versions of the commands to draw a triangle with sides that are 100 pixels long.\r\n\r\n<img src=\"https://images.code.org/0207568ff82b0571fa6757081330749d-image-1441901783815.png\" width=150>",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "short_instructions": "Use the parameterized versions of the turtle commands to create a triangle with sides 100 pixels long. (Click to see full instructions)",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "nwkkv3tTxoA8esOQ6cA3vh6zTaTI/4tDFTlSpUOX9Qw8OdADcbaCSoxZ9fjS\nlOC+\n",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "min_workspace_height": "-41",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward(pixels) and turnRight(degrees) without any loops."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "At a minimum, to draw the triangle you need to move 3 times."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "maxTimes": 0,
+        "message": "App Lab is expecting that you'll use a combination of turnRight(degrees) and moveForward(pixels) to complete this task.  There is a clever way to use turnLeft that will result in a correct program, but use turnRight for now."
+      },
+      {
+        "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "maxTimes": 6,
+        "message": "App Lab is expecting that you'll need to call turnRight(degrees) exactly twice, or three times, to do this task."
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 16916,
+    "name_suffix": "_virtual",
+    "mini_rubric": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-04 20:27:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-12-04 20:37:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-09-18 17:56:27 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-15 03:44:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

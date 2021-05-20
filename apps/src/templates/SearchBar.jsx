@@ -3,6 +3,44 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 
+export default class SearchBar extends React.Component {
+  static propTypes = {
+    placeholderText: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    clearButton: PropTypes.bool
+  };
+
+  componentDidMount() {
+    this.searchBox.focus();
+  }
+
+  render() {
+    return (
+      <div style={styles.searchArea}>
+        <span className="fa fa-search" style={styles.icon} />
+        <input
+          style={styles.input}
+          placeholder={this.props.placeholderText}
+          onChange={this.props.onChange}
+          ref={input => {
+            this.searchBox = input;
+          }}
+        />
+        {this.props.clearButton && (
+          <span
+            className="fa fa-close"
+            style={styles.clearIcon}
+            onClick={() => {
+              this.searchBox.value = '';
+              this.props.onChange();
+            }}
+          />
+        )}
+      </div>
+    );
+  }
+}
+
 const BORDER_WIDTH = 1;
 const BORDER_COLOR = color.light_gray;
 const BORDER_RADIUS = 4;
@@ -27,35 +65,15 @@ const styles = {
     fontSize: 16,
     color: color.light_gray
   },
+  clearIcon: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    fontSize: 16,
+    color: color.light_gray
+  },
   searchArea: {
     position: 'relative',
     margin: '10px 0'
   }
 };
-
-export default class SearchBar extends React.Component {
-  static propTypes = {
-    placeholderText: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
-  };
-
-  componentDidMount() {
-    this.searchBox.focus();
-  }
-
-  render() {
-    return (
-      <div style={styles.searchArea}>
-        <span className="fa fa-search" style={styles.icon} />
-        <input
-          style={styles.input}
-          placeholder={this.props.placeholderText}
-          onChange={this.props.onChange}
-          ref={input => {
-            this.searchBox = input;
-          }}
-        />
-      </div>
-    );
-  }
-}

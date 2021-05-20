@@ -10,24 +10,26 @@ nav: promote_nav
 
 ## 1. Diffondi la notizia
 
-Tell your friends about the **#HourOfCode**!
+Se sei in Italia potresti approfondire anche sul sito italiano [Programma il Futuro](https://www.programmailfuturo.it/come/ora-del-codice).  
+  
+Parla ai tuoi amici dell'Ora del Codice **#OradelCodice #HourOfCode**!
 
 {{ promote/share_buttons }}
 
 ## 2. Chiedi a tutta la tua scuola di organizzare un'Ora del Codice
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Invia questo messaggio di posta elettronica]({{ promote/sample_emails }}) al Dirigente Scolastico della tua scuola e invita ogni classe ad iscriversi.
 
 ## 3. Proponi al tuo datore di lavoro di coinvolgere la tua organizzazione
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[Invia questo messaggio di posta elettronica]({{ promote/sample_emails }}) al tuo responsabile o all'Amministratore Delegato della tua azienda.
 
 ## 4. Promuovi l'Ora del Codice fra i tuoi conoscenti
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Recluta un po' di persone]({{ promote/sample_emails }}) — tra gli scout, in parrocchia, all'università, tra gli esperti, al sindacato o tra i tuoi amici. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Adatta questi [poster, banner, adesivi, video e altro](/promote/resources) per il tuo evento.
 
 ## 5. Proponi ad un amministratore locale di sostenere L'Ora del Codice
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
+[Invia questo messaggio di posta elettronica]({{ promote/sample_emails }}) agli Amministratori Locali, al Consiglio Comunale o al Consiglio Scolastico per invitarli a visitare la tua scuola per l'Ora di Codice. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
 
 {{ signup_button }}

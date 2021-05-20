@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-19T23:18:45.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "long_instructions": "# Debugging Reflection\r\n\r\n## Reflection Prompt\r\n\r\nThink about the process you used when you were practicing debugging.\r\n\r\n* What did you do to find and fix the bugs in these levels? \r\n\r\nRefer back to the Guide to Debugging. \r\n\r\n* How does the process you used fit in with the guide?\r\n* What would you want to add? \r\n\r\n![](https://images.code.org/95610043d076ef203bb513522d1110b0-image-1584662292984.58.44 PM.png)\r\n\r\n## Respond and Get Feedback\r\n\r\nYour response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will looking at your response to get ideas for their own classroom along with providing you new ideas for your classroom. \r\n\r\n \r\n\r\n",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "optional": "false",
+    "parent_level_id": 7223,
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 02:56:18 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-19 23:59:40 +0000\",\"changed\":[\"long_instructions\",\"peer_reviewable\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-03-20 00:00:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-03-20 00:00:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-03-20 00:01:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-06 20:56:48 +0000\",\"changed\":[\"peer_reviewable\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

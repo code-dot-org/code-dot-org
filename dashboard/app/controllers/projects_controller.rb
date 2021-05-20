@@ -18,22 +18,28 @@ class ProjectsController < ApplicationController
   # @option {Boolean|nil} :login_required Whether you must be logged in to
   #   access this project type. Default: false.
   # @option {String|nil} :default_image_url If present, set this as the
+  # @option {Boolean|nil} :i18n If present, include this level in the i18n sync
   # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
     artist: {
-      name: 'New Artist Project'
+      name: 'New Artist Project',
+      i18n: true
     },
     artist_k1: {
-      name: 'New K1 Artist Project'
+      name: 'New K1 Artist Project',
+      i18n: true
     },
     frozen: {
-      name: 'New Frozen Project'
+      name: 'New Frozen Project',
+      i18n: true
     },
     playlab: {
-      name: 'New Play Lab Project'
+      name: 'New Play Lab Project',
+      i18n: true
     },
     playlab_k1: {
-      name: 'New K1 Play Lab Project'
+      name: 'New K1 Play Lab Project',
+      i18n: true
     },
     starwars: {
       name: 'New Star Wars Project'
@@ -42,16 +48,20 @@ class ProjectsController < ApplicationController
       name: 'New Star Wars Blocks Project'
     },
     starwarsblocks: {
-      name: 'New Star Wars Expanded Blocks Project'
+      name: 'New Star Wars Expanded Blocks Project',
+      i18n: true
     },
     iceage: {
-      name: 'New Ice Age Project'
+      name: 'New Ice Age Project',
+      i18n: true
     },
     infinity: {
-      name: 'New Infinity Project'
+      name: 'New Infinity Project',
+      i18n: true
     },
     gumball: {
-      name: 'New Gumball Project'
+      name: 'New Gumball Project',
+      i18n: true
     },
     flappy: {
       name: 'New Flappy Project',
@@ -60,24 +70,24 @@ class ProjectsController < ApplicationController
       # public gallery, and to be published from the share dialog.
       default_image_url: '/blockly/media/flappy/placeholder.jpg',
     },
-    scratch: {
-      name: 'New Scratch Project',
-      levelbuilder_required: true,
-    },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
     },
     minecraft_adventurer: {
-      name: 'New Minecraft Adventurer Project'
+      name: 'New Minecraft Adventurer Project',
+      i18n: true
     },
     minecraft_designer: {
-      name: 'New Minecraft Designer Project'
+      name: 'New Minecraft Designer Project',
+      i18n: true
     },
     minecraft_hero: {
-      name: 'New Minecraft Hero Project'
+      name: 'New Minecraft Hero Project',
+      i18n: true
     },
     minecraft_aquatic: {
-      name: 'New Minecraft Aquatic Project'
+      name: 'New Minecraft Aquatic Project',
+      i18n: true
     },
     applab: {
       name: 'New App Lab Project',
@@ -93,10 +103,12 @@ class ProjectsController < ApplicationController
     },
     spritelab: {
       name: 'New Sprite Lab Project',
+      i18n: true
     },
     dance: {
       name: 'New Dance Lab Project',
       default_image_url: '/blockly/media/dance/placeholder.png',
+      i18n: true
     },
     makerlab: {
       name: 'New Maker Lab Project',
@@ -108,12 +120,15 @@ class ProjectsController < ApplicationController
     },
     bounce: {
       name: 'New Bounce Project',
+      i18n: true
     },
     sports: {
       name: 'New Sports Project',
+      i18n: true
     },
     basketball: {
       name: 'New Basketball Project',
+      i18n: true
     },
     algebra_game: {
       name: 'New Algebra Project'
@@ -123,29 +138,26 @@ class ProjectsController < ApplicationController
     },
     eval: {
       name: 'Eval Free Play'
+    },
+    javalab: {
+      name: 'New Java Lab Project',
+      levelbuilder_required: true
     }
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
 
-  # GET /projects
+  # GET /projects/:tab_name
+  # Where a valid :tab_name is (nil|public|libraries)
   def index
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
+    unless params[:tab_name] == 'public'
+      return redirect_to '/projects/public' unless current_user
+      return redirect_to '/', flash: {alert: 'Labs not allowed for admins.'} if current_user.admin
     end
-    unless current_user
-      redirect_to '/projects/public'
-    end
-  end
 
-  # GET /projects/public
-  def public
-    if current_user
-      render template: 'projects/index', locals: {is_public: true, limited_gallery: limited_gallery?}
-    else
-      render template: 'projects/public', locals: {limited_gallery: limited_gallery?}
-    end
+    view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
+    @limited_gallery = limited_gallery?
+    @current_tab = params[:tab_name]
   end
 
   def project_and_featured_project_fields
@@ -156,7 +168,8 @@ class ProjectsController < ApplicationController
       :storage_apps__project_type___project_type,
       :storage_apps__published_at___published_at,
       :featured_projects__featured_at___featured_at,
-      :featured_projects__unfeatured_at___unfeatured_at
+      :featured_projects__unfeatured_at___unfeatured_at,
+      :featured_projects__topic___topic
     ]
   end
 
@@ -177,6 +190,7 @@ class ProjectsController < ApplicationController
         projectName: project_details_value['name'],
         channel: channel,
         type: project_details[:project_type],
+        topic: project_details[:topic],
         publishedAt: project_details[:published_at],
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],
@@ -280,9 +294,10 @@ class ProjectsController < ApplicationController
     end
 
     iframe_embed = params[:iframe_embed] == true
+    iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
-    if iframe_embed
+    if iframe_embed || iframe_embed_app_and_code
       # explicitly set security related headers so that this page can actually
       # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
@@ -293,10 +308,10 @@ class ProjectsController < ApplicationController
       hide_source: sharing,
       share: sharing,
       iframe_embed: iframe_embed,
+      iframe_embed_app_and_code: iframe_embed_app_and_code,
       project_type: params[:key]
     )
     # for sharing pages, the app will display the footer inside the playspace instead
-    no_footer = sharing
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
     view_options(
@@ -304,16 +319,18 @@ class ProjectsController < ApplicationController
       full_width: true,
       callouts: [],
       channel: params[:channel_id],
-      no_footer: no_footer,
+      no_footer: sharing || iframe_embed_app_and_code,
       code_studio_logo: sharing && !iframe_embed,
-      no_header: sharing,
-      small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
+      no_header: sharing || iframe_embed_app_and_code,
+      small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
+      azure_speech_service_voices: azure_speech_service_options[:voices],
+      disallowed_html_tags: disallowed_html_tags
     )
 
     if params[:key] == 'artist'
-      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 
     if params[:key] == 'dance'
@@ -328,18 +345,21 @@ class ProjectsController < ApplicationController
     end
 
     FirehoseClient.instance.put_record(
-      study: 'project-views',
-      event: project_view_event_type(iframe_embed, sharing),
-      # allow cross-referencing with the storage_apps table.
-      project_id: storage_app_id,
-      # make it easier to group by project_type.
-      data_string: params[:key],
-      data_json: {
-        # not currently used, but may prove useful to have in the data later.
-        encrypted_channel_id: params[:channel_id],
-        # record type again to make it clear what data_string represents.
-        project_type: params[:key],
-      }.to_json
+      :analysis,
+      {
+        study: 'project-views',
+        event: project_view_event_type(iframe_embed, sharing),
+        # allow cross-referencing with the storage_apps table.
+        project_id: storage_app_id,
+        # make it easier to group by project_type.
+        data_string: params[:key],
+        data_json: {
+          # not currently used, but may prove useful to have in the data later.
+          encrypted_channel_id: params[:channel_id],
+          # record type again to make it clear what data_string represents.
+          project_type: params[:key],
+        }.to_json
+      }
     )
     render 'levels/show'
   end

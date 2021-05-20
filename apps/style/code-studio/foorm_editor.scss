@@ -1,0 +1,31 @@
+@import "codemirror/lib/codemirror";
+@import "codemirror/addon/lint/lint";
+@import "codemirror-spell-checker/src/css/spell-checker";
+@import 'json_editor';
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+}
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-matchingtag {
+  background: rgba(255, 150, 0, .3);
+}
+
+.container {
+  width: 95% !important;
+}
+
+div[role=dialog] {
+  div.modal-content {
+    margin: 0 !important;
+    @import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+    div {
+      height: auto;
+    }
+  }
+}

@@ -8,7 +8,7 @@
     "instructions_important": "false",
     "project_template_level_name": "CSD U2 Project Template",
     "hide_share_and_remix": "true",
-    "long_instructions": "# Navigation Bar and Footer\r\n\r\nEach of your pages needs a navigation bar and a footer.\r\n\r\n# Do This\r\n* For each page, make sure it has a navigation bar that links to other pages in your site.  For a review of the navigation bar, go to <a href=\"/s/csd2-2017/stage/9/puzzle/4\" target=\"_new\">Lesson 9 Level 4</a>.\r\n* For each page, make sure it has a footer at the bottom that explains the copyright information for your page. (Go to <a href=\"https://creativecommons.org/choose/\" target=\"_new\">Creative Commons</a> for help in creating this HTML.)",
+    "long_instructions": "# Navigation Bar and Footer\r\n\r\nEach of your pages needs a navigation bar and a footer.\r\n\r\n# Do This\r\n* For each page, make sure it has a navigation bar that links to other pages in your site.  For a review of the navigation bar, go to <a href=\"/s/csd2-2017/lessons/9/levels/4\" target=\"_new\">Lesson 9 Level 4</a>.\r\n* For each page, make sure it has a footer at the bottom that explains the copyright information for your page. (Go to <a href=\"https://creativecommons.org/choose/\" target=\"_new\">Creative Commons</a> for help in creating this HTML.)",
     "submittable": "false"
   },
   "published": true,

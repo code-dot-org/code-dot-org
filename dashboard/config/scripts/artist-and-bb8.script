@@ -1,4 +1,4 @@
-stage 'Programming with BB-8'
+lesson 'Programming with BB-8', display_name: 'Programming with BB-8', has_lesson_plan: false
 level 'courseB_starWars_prog1'
 level 'courseB_starWars_prog2'
 level 'courseB_starWars_prog3'
@@ -11,7 +11,7 @@ level 'courseB_starWars_prog9'
 level 'courseB_starWars_prog10'
 level 'courseB_starWars_prog11'
 
-stage 'Loops with BB-8'
+lesson 'Loops with BB-8', display_name: 'Loops with BB-8', has_lesson_plan: false
 level 'courseC_starWars_loops1'
 level 'courseC_starWars_loops1_predict1'
 level 'courseC_starWars_loops2'
@@ -25,7 +25,7 @@ level 'courseC_starWars_loops10'
 level 'courseC_starWars_loops10_predict2', assessment: true
 level 'courseC_starWars_loops11'
 
-stage 'C9 Artist Loops'
+lesson 'C9 Artist Loops', display_name: 'C9 Artist Loops', has_lesson_plan: false
 level 'courseC_artist_loopsPrePre1a'
 level 'courseC_artist_loopsPre1a'
 level 'courseC_artist_loop1'
@@ -39,7 +39,7 @@ level 'courseC_artist_loops6a'
 level 'courseC_artist_loops7a'
 level 'courseC_artist_loops8a'
 
-stage 'D7 to Laurel'
+lesson 'D7 to Laurel', display_name: 'D7 to Laurel', has_lesson_plan: false
 level 'courseD_video_debugging'
 level 'courseD_collector_debugging1'
 level 'courseD_collector_debugging2'
@@ -52,7 +52,7 @@ level 'courseD_collector_debugging8'
 level 'courseD_collector_debugging9'
 level 'courseD_collector_debugging10_predict1'
 
-stage 'D6 Frozen Artist'
+lesson 'D6 Frozen Artist', display_name: 'D6 Frozen Artist', has_lesson_plan: false
 level 'courseD_artist_project1'
 level 'courseD_artist_project2'
 level 'courseD_artist_project3'
@@ -63,7 +63,7 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
-stage 'F5 Minecraft'
+lesson 'F5 Minecraft', display_name: 'F5 Minecraft', has_lesson_plan: false
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'
@@ -79,7 +79,7 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-stage 'F7 add Conditionals'
+lesson 'F7 add Conditionals', display_name: 'F7 add Conditionals', has_lesson_plan: false
 level 'courseF_playlab_variables1a'
 level 'courseF_playlab_variables2b'
 level 'courseF_playlab_variables3b_josh'
@@ -91,7 +91,7 @@ level 'courseF_playlab_variables7c'
 level 'courseF_playlab_variables8c'
 level 'courseF_playlab_variables7b'
 
-stage 'D13 no If/While'
+lesson 'D13 no If/While', display_name: 'D13 no If/While', has_lesson_plan: false
 level 'courseD_farmer_condLoops1'
 level 'courseD_farmer_condLoops2'
 level 'courseD_farmer_condLoops3'
@@ -105,7 +105,7 @@ level 'courseD_farmer_condLoops9_predict1', assessment: true
 bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
-stage 'Ice Age Play Lab'
+lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab', has_lesson_plan: false
 level 'courseF_video_IceAgeIntro'
 level 'courseF_IceAge_1'
 level 'courseF_IceAge_2'
@@ -121,7 +121,7 @@ level 'courseF_IceAge_9'
 level 'courseF_IceAge_10'
 level 'courseF_IceAge_11'
 
-stage 'Bounce'
+lesson 'Bounce', display_name: 'Bounce', has_lesson_plan: false
 level 'bounce_1'
 level 'bounce_2'
 level 'bounce_3'
@@ -133,7 +133,7 @@ level 'bounce_10'
 level 'bounce_11'
 level 'bounce_12'
 
-stage 'NewBounce'
+lesson 'NewBounce', display_name: 'NewBounce', has_lesson_plan: false
 level 'courseD_bounce_events1s'
 level 'courseD_bounce_events2s'
 level 'courseD_bounce_events5s'
@@ -143,7 +143,7 @@ level 'courseD_bounce_events10s'
 level 'courseD_bounce_events11s'
 level 'courseD_bounce_events12s'
 
-stage 'F PlayLab Variables'
+lesson 'F PlayLab Variables', display_name: 'F PlayLab Variables', has_lesson_plan: false
 level 'CourseF_PlayLab_vars1'
 level 'CourseF_video_PlayLab_vars'
 level 'CourseF_PlayLab_vars2'
@@ -155,3 +155,4 @@ level 'CourseF_PlayLab_vars7'
 level 'CourseF_PlayLab_vars8'
 level 'CourseF_PlayLab_vars9'
 level 'CourseF_PlayLab_vars10'
+

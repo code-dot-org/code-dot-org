@@ -1,0 +1,94 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:28:38.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "pvz",
+    "maze": "[[0,0,0,0,0,4,0,0],[0,0,0,0,0,3,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,1,4],[0,0,0,0,0,1,0,0],[0,3,1,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
+    "short_instructions": "Help the zombie get to the sunflower.",
+    "long_instructions": "Help the zombie get to the sunflower.",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "step_speed": "3",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "1",
+    "step_mode": "1",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To use only one `move forward`, put it inside the `repeat until sunflower` block.\",\"hint_id\":\"courseD_maze_until6_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/619efbf260d1b1289e1e784d5647637f/courseD_maze_until6_2018.mp3\"}]",
+    "ideal": "5",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 21406,
+    "name_suffix": "_2021",
+    "top_level_procedure_autopopulate": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 16:38:54 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:37:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-25 17:44:49 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:38:48 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:40:01 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:40:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:41:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:42:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-01 01:43:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_untilBlockedOrNotClear">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="maze_forever"/>
+        <block type="maze_if">
+          <title name="DIR">isPathLeft</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_forever">
+              <statement name="DO">
+                <block type="maze_untilBlockedOrNotClear">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

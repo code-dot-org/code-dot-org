@@ -1,0 +1,1318 @@
+{
+  "script": {
+    "name": "ECSPD-NexTech",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "ECS Support Legacy"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:41 UTC",
+    "seeding_key": {
+      "script.name": "ECSPD-NexTech"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to PD",
+      "name": "Introduction to PD",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "key": "What is ECS?",
+      "name": "What is ECS?",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "key": "Impact of Computer Science",
+      "name": "Impact of Computer Science",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "key": "Growth Mindset",
+      "name": "Growth Mindset",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "key": "Teaching Strategies",
+      "name": "Teaching Strategies",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "key": "Preparing for in-person PD",
+      "name": "Preparing for in-person PD",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD presurvey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD presurvey"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD presurvey"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS Welcome Video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS Welcome Video"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "PDECS Welcome Video"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "PDECS tour"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS commitment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "PDECS commitment"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS commitment match"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS commitment match"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "PDECS commitment match"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS attendance commitment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS attendance commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "PDECS attendance commitment"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD pause"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD pause"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD pause"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD program overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD program overview"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD program overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD curriculum overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD curriculum overview"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD curriculum overview"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD unit matching"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD unit matching"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD unit matching"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD course goals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD course goals"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD course goals"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD PD overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD PD overview"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD PD overview"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD PD Phases"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD PD Phases"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD PD Phases"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD phase matching"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD phase matching"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD phase matching"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD PD goals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD PD goals"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD PD goals"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD program overlap"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD program overlap"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD program overlap"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD impact of CS"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD impact of CS"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD impact of CS"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD impact vid1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD impact vid1"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD impact vid1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD impact vid2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD impact vid2"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD impact vid2"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD impact vid2 question"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD impact vid2 question"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD impact vid2 question"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD impact in program"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD impact in program"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD impact in program"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD what is growth mindset"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD what is growth mindset"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD what is growth mindset"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD growth mindset in the classroom"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD growth mindset in the classroom"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD growth mindset in the classroom"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD growth mindset question"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD growth mindset question"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD growth mindset question"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD growth mindset strategies"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD growth mindset strategies"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD growth mindset strategies"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD strategies"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD strategies"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD strategies"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD teaching strategies video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD teaching strategies video"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD teaching strategies video"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD strategies"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD strategies"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD strategies"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "facilitator test"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "facilitator test"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "facilitator test"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD forum introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD forum introduction"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD forum introduction"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD PD details"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD PD details"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD postsurvey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD postsurvey"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD postsurvey"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD end of p1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD end of p1"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      },
+      "level_keys": [
+        "ECSPD end of p1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ECSPD presurvey",
+        "script_level.level_keys": [
+          "ECSPD presurvey"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS Welcome Video",
+        "script_level.level_keys": [
+          "PDECS Welcome Video"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS tour",
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS commitment",
+        "script_level.level_keys": [
+          "PDECS commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS commitment match",
+        "script_level.level_keys": [
+          "PDECS commitment match"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS attendance commitment",
+        "script_level.level_keys": [
+          "PDECS attendance commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD pause",
+        "script_level.level_keys": [
+          "ECSPD pause"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD program overview",
+        "script_level.level_keys": [
+          "ECSPD program overview"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD curriculum overview",
+        "script_level.level_keys": [
+          "ECSPD curriculum overview"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD unit matching",
+        "script_level.level_keys": [
+          "ECSPD unit matching"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD course goals",
+        "script_level.level_keys": [
+          "ECSPD course goals"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD PD overview",
+        "script_level.level_keys": [
+          "ECSPD PD overview"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD PD Phases",
+        "script_level.level_keys": [
+          "ECSPD PD Phases"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD phase matching",
+        "script_level.level_keys": [
+          "ECSPD phase matching"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD PD goals",
+        "script_level.level_keys": [
+          "ECSPD PD goals"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD program overlap",
+        "script_level.level_keys": [
+          "ECSPD program overlap"
+        ],
+        "lesson.key": "What is ECS?",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD impact of CS",
+        "script_level.level_keys": [
+          "ECSPD impact of CS"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD impact vid1",
+        "script_level.level_keys": [
+          "ECSPD impact vid1"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD impact vid2",
+        "script_level.level_keys": [
+          "ECSPD impact vid2"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD impact vid2 question",
+        "script_level.level_keys": [
+          "ECSPD impact vid2 question"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD impact in program",
+        "script_level.level_keys": [
+          "ECSPD impact in program"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD what is growth mindset",
+        "script_level.level_keys": [
+          "ECSPD what is growth mindset"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD growth mindset in the classroom",
+        "script_level.level_keys": [
+          "ECSPD growth mindset in the classroom"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD growth mindset question",
+        "script_level.level_keys": [
+          "ECSPD growth mindset question"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD growth mindset strategies",
+        "script_level.level_keys": [
+          "ECSPD growth mindset strategies"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD strategies",
+        "script_level.level_keys": [
+          "ECSPD strategies"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD teaching strategies video",
+        "script_level.level_keys": [
+          "ECSPD teaching strategies video"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD strategies",
+        "script_level.level_keys": [
+          "ECSPD strategies"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "facilitator test",
+        "script_level.level_keys": [
+          "facilitator test"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD forum introduction",
+        "script_level.level_keys": [
+          "ECSPD forum introduction"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD PD details",
+        "script_level.level_keys": [
+          "ECSPD PD details"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD postsurvey",
+        "script_level.level_keys": [
+          "ECSPD postsurvey"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD end of p1",
+        "script_level.level_keys": [
+          "ECSPD end of p1"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "ECSPD-NexTech"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

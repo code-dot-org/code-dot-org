@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {createMouseEvent} from '../../../../util/testUtils.js';
@@ -40,7 +40,8 @@ describe('The JSDebugger component', () => {
         showDebugButtons: true,
         showDebugConsole: true,
         showDebugWatch: true,
-        showDebugSlider: true
+        showDebugSlider: true,
+        debugConsoleDisabled: false
       })
     );
     getStore().dispatch(actions.initialize({runApp}));

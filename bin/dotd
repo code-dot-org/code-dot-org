@@ -52,10 +52,17 @@ def check_for_cdo_keys
 end
 
 # Prints the script intro to the console.
-def puts_script_intro
-  puts <<-EOS.unindent
+def puts_script_intro(dotd_name)
+  puts <<~EOS
 
-    #{bold 'Welcome to Robo-Dev-of-the-Day!'}
+    #{bold "Hi #{dotd_name}! Welcome to Robo-Dev-of-the-Day!"}
+  EOS
+
+  if dotd_name == ENV['USER']
+    puts dim '(Customize your name with the CDODEV_DOTD_NAME environment variable.)'
+  end
+
+  puts <<~EOS
 
     #{bold 'Documentation'}
 
@@ -97,7 +104,7 @@ def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
   warn_if_old_commit test_green_commit
 
-  DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
+  DevelopersTopic.set_dtp "pending confirmation (@#{dotd_name})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
@@ -110,6 +117,7 @@ def do_dtp(dotd_name)
   )
   print_database_changes production_pr_number
   dtp_auto_merged = should_i "merge DTP (#{GitHub.url(production_pr_number)})" do
+    DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
     GitHub.merge_pull_request(
       production_pr_number,
       "DTP (Test > Production: #{test_green_commit})"
@@ -339,26 +347,6 @@ def flush_and_gets
   gets
 end
 
-# Prompts the user for their name, returning it.
-# @return [String] The name of the user.
-def ask_for_name
-  name = ''
-  until name != ''
-    print 'Who are you? '
-    name = flush_and_gets.chomp
-  end
-
-  puts <<-EOS.unindent_with_indent(2)
-
-    Hi #{name}!
-
-  EOS
-
-  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DOTD")
-
-  name
-end
-
 # Prompts the user whether block should be executed by asking question,
 # executing the block, doing nothing, or exiting the program depending on user
 # response.
@@ -498,11 +486,13 @@ def main
   Slack.join_room('infra-staging')
   Slack.join_room('infra-test')
   Slack.join_room('infra-production')
+  Slack.join_room('infra-honeybadger')
   Slack.join_room('levelbuilder')
 
-  puts_script_intro
-  dotd_name = ask_for_name
+  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV['USER']
+  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
+  puts_script_intro(dotd_name)
   loop do
     dotd_menu(dotd_name)
   end

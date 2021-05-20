@@ -3,23 +3,6 @@ import ResourceCard from '../studioHomepages/ResourceCard';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const styles = {
-  container: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  },
-  card: {
-    marginBottom: 20
-  },
-  icon: {
-    fontSize: 40,
-    float: 'right',
-    lineHeight: '70px'
-  }
-};
-
 class YourSchoolResources extends Component {
   render() {
     return (
@@ -53,5 +36,23 @@ class YourSchoolResources extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    marginTop: 20
+  },
+  card: {
+    marginBottom: 20
+  },
+  icon: {
+    fontSize: 40,
+    float: 'right',
+    lineHeight: '70px'
+  }
+};
 
 export default YourSchoolResources;

@@ -1,79 +1,111 @@
 ---
-title: Útmutató szülőknek
+title: Kódolás Órája esemény útmutató szülőknek
 layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+# A Kódolás órája gyerekekkel - útmutató
 
-# A "Hour of Code" esemény gyerekekkel - útmutató
+Kipróbálni a Kódolás Óráját egyszerű és szórakoztató módja annak, hogy elsőkézből megismertesse gyermekét az informatikával. A számítástechnika nemcsak hogy minden tudományterület alapját képezi, hanem [ a legújabb tanulmányok szerint, hogy ](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): az informatikát tanuló gyermekek jobban teljesítenek más tantárgyakban, kiválóan helytállnak a problémamegoldásban, és <font color = "00adbc"> ** 17%-kal nagyobb eséllyel jelentkeznek az egyetemre ** </font>.
 
-### Csinálj egy "Hour of Code" eseményt otthon vagy önkéntesként menj el a gyereked iskolájába!
+Világszerte több tízmillió hallgatóval együtt csatlakozhatsz ehhez a globális eseményhez. Együtt inspirálhatjuk a gyerekeket a tanulásra, a sztereotípiák feloszlatására, és segíthetünk a gyerekeknek felfedezni új érdeklődési köröket. A legjobb az egészben, hogy már minden megvan, amire szükséged van ahhoz, hogy a Kódolás Óráját behozd az otthonodba!
 
----
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
 
-## 1) Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<h3>Mire van szükségem az elinduláshoz?</h3>
 
-## 2) Válassz bemutatót
+Egy Kódolás Órája alkalmat könnyű megszervezni, sőt tapasztalat sem szükséges hozzá! Nincs szükség informatikai vagy tanítási tapasztalatra, ahhoz hogy szórakoztató és egyben ismeretterjesztő feladatokat készíts gyermekeid számára.
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Kipróbálhatod a Kódolás Óráját számítógépenl, táblagépen, okostelefonnal vagy akár gépek nélkül is! Így kezdj neki.
 
-**Az "Hour of Code" esemény anyagai önállóan is elvégezhetőek, ezáltal a gyerekek saját ritmusukban haladhatnak.**
+[<button>Nézd meg az útmutatót</button>]({{ localized_files/hourofcode_parent_how_to }})
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+* * *
 
-## 3) A szükséges technológiai eszközök ellenőrzése
+## 1) Fedezd fel a feladatokat és gyakorlatokat
 
-A legjobb "Hour of Code" élményt internetkapcsolattal rendelkező számítógépekkel lehet elérni. De **nincs** feltétlenül szükség számítógépre. Nagyon sok tevékenységet a technológia jelenléte nélkül is elvégezhetünk, ezek az úgynevezett "unplugged" tevékenységek. Teszteld le a bemutatókat a számítógépeden vagy más eszközödön. Győződj meg arról, hogy megfelelően működnek a böngészőben, a videókkal és hangokkal egyetemben.
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-**Együtt tanulna a gyerekével?** Próbálja ki a [páros programozást](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). A technika lehetővé teszi az együttműködést.
+Számtalan [ Kódolás Órája tevékenység ](https://hourofcode.com/us/learn) áll rendelkezésére, ha internet-hozzáféréssel rendelkező számítógépen dolgozol. Javasoljuk, hogy idő előtt nézd át a rendelkezésre álló lehetőségeket, hogy ráirányíthasd gyermeked figyelmét az igazán élvezetes gyakorlatokra.
 
-## 4) Indítsd a "Hour of Code" eseményedet egy inspiráló videóval
+Minden tevékenységünk magába foglalja a problémamegoldást és a kritikai gondolkodást, a szórakozást és a kreativitást. Itt van néhány közkedvelt téma:
 
-Indítsa el a "Hour of Code" eseményt azáltal, hogyinspirálja a résztvevőket, valamint megvitatja, hogy a számítógépes tudomány milyen hatással van életünk minden részére.
+- Gyerekeknek, akik szeretnek játszani: [ Minecraft](https://code.org/minecraft) vagy  Táncparti </ a></li> 
+    
+    - Gyerekeknek, akik szeretik a Disney filmeket: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), vagy [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+    - Gyerekeknek, akik imádnak tanulni: [Mesterséges Intelligencia az óceánokért](https://code.org/oceans) or [Zeneszerzés Scratch-el](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)</ul>
 
-**Mutass egy inspiráló videót az alábbiak közül:**
+<h3>Számítógéppel vagy a nélkül?</h3>
 
-- Az eredeti Code.org bemutatóvideó Bill Gates, Mark Zuckerberg és az NBA sztár Chris Bosh szereplésével. (Elérhető [1 perces](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 perces](https://www.youtube.com/watch?v=nKIu9yen5nc) és [9 perces](https://www.youtube.com/watch?v=dU1xS07N-FA) verzióban).
-- A ["Hour of Code" a nagyvilágban videó](https://www.youtube.com/watch?v=KsOIlDT145A).
-- Obama elnök felhívja minden diák figyelmét [ebben a videóban](https://www.youtube.com/watch?v=6XvmhE1J9PY) az informatika fontosságára.
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+    
+    Ha korlátozottan fér csak hozzá csak számítógéphez, vagy egyáltalán nem, akkor a [ Kódolás Órája tevékenységek ](https://hourofcode.com/us/learn) szűrésével ki tudod választani a „Nincs számítógép vagy eszköz” opciót * Tantermi technológia * szakaszban.
+    
+    [![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
+    
+    Ezeket a [ rövid videókat ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) is megnézheted, ha további ötleteket szeretnél kapni arról, hogyan lehet otthoni feladatokat megkönnyíteni!
+    
+    ## 2) Készülj fel előre
+    
+    Most, hogy néhány oktatóanyagra már akár meg is fogant a fejedben, hasznos lehet kipróbálni az alábbi gyakorlatokat, mielőtt bemutatnád a gyerekednek.
+    
+    [![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-Nem gond, ha teljesen új vagy az informatika világában. Itt van néhány ötlet, hogy hogyan hozd létre a saját "Hour of Code" rendezvényedet:
+<h3>Több mint egy gyerek van otthon?</h3>
 
-- Magyarázd el, hogyan hat az életünkre a technológia, olyan példákkal, amelyek a fiúk és a lányok számára is érdekesek (beszélj életmentésről, emberek segítéséről, az emberek közötti kapcsolatok ápolásáról stb...).
-- Sorolj fel olyan dolgokat a midennapi életből amely programkód alapján működik.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+    
+    Javasolt minden gyereknek külön feljhallgató biztosítása, amennyiben külön eszközökön dolgoznak. Így képesek lesznek hangos tevékenységeket játszani anélkül, hogy elvonnák egymás figyelmét.
+    
+    Ha csak egy eszközt áll rendelkezésre, vagy egyszerűen interaktívabbá akarjod tenni az órát, próbáld ki a  páros programozást</ a >. A páros programozás ösztönzi a gyerekeket a kooperációra. Ha összefognak, segíthetnek egymásnak a problémák megoldásában. Megláthatják azt, hogy az informatika közösségépítő hatású, és együttműködésre sarkall.</p>
 
-Szeretnél még több ötletet? [Nézd meg mintatantervünket](/files/AfterschoolEducatorLessonPlanOutline.docx), mely a legjobb gyakolatokat tartalmazza egyenesen szakértőinktől.
+<h3>Csigázd fel őket! </h3>
 
-## 5) Kódolj!
+    
+    Ez egy nagyszerű lehetőség arra, hogy új típusú tevékenységeket ismertessenek meg a gyerekekkel. Az alábbi javaslatokkal vidámságot csempészhet akár egy oktatóprogramba is:
+    
+    - Mutasd meg nekik az alábbi [inspiráló videót](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ), amely az egyik kedvenc példaképüket tartalmazza
+    - Inspiráld őket egy videóval a [ tömérdek karrierlehetőségről](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP), amelyhez informatikai ismeretek szükségesek
+    - [ Rendelj néhány kiegészítőt](https://store.code.org/)! Választhatsz pólókat, matricákat vagy lemosható tetoválásokat. Oszd meg velük az élményt, és együtt izgulhattok a különdíjakért az óra végén. 
+    
+    
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-Ha már kiválasztottad azt a gyakorlatot, amelyiket csinálni szeretnél mentsd el gyorsan a könyvjelzők közé.
+    
+    ## 3) Tippek, hogyan vezesd be gyermekedet az informatika világába
+    
+    Nem gond, ha teljesen új vagy az informatika világában. Itt van néhány ötlet, hogy hogyan hozd létre a saját Kódolás Órája rendezvényedet:
+    
+    - Magyarázd el, hogy a technológia miért is olyan fontos az életünkben, keress konkrét példákat, amelyet érdekelhetik a gyermeked. Például, beszélgethettek gyógyszerekről, vagy virtuális közösségekről. Ezenkívül nézd meg a [ Code.org/CSforGood](https://code.org/csforgood) webhelyet a javasolt vitakérdésekkel kapcsolatban.
+    - Vegyétek számba minden nap olyan dolgokat, amelyek helyes műküdéséhez programozás szükséges.
+    
+    [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-**Ha a gyerek nehézségekbe ütközik**
+<h3>Have young women at home?</h3>
 
-Természetes reakciók lehetnek:
+    
+    <a href="https://code.org/girls"> Íme a javaslataink</a>, amelyek felkelthetik érdeklődésüket a számítástechnika iránt. ** Tipp: ** Kezdheted azzal, hogy elmondod nekik, hogy nagyszerűek lennének ebben!
 
-- "Nem tudom. Találjunk együtt megoldást!"
-- "A technika nem mindig úgy működik, mint ahogy azt mi elképzeljük."
-- "Programozni tanulni, olyan mint egy nyelvet tanulni, nem tudsz azonnal folyékonyan beszélni."
+<h3>Problémamegoldás közösen</h3>
 
-## 6) Ünnepelj
+    
+    **Ha valaki nehézségekbe ütközik, akkor természetes válasz az, hogy:** - Nem tudom! Találjuk meg együtt a problémát. - "A technológia nem mindig úgy működik, ahogy mi azt szeretnénk." - "Amikor programozni tanulunk az olyan, mint ha egy új nyelvet tanulnánk beszélni. Azonnal senki sem tud folyékonyan kommunikálni."
+    
+    A számítástechnika arról szól, hogy megtanulják, hogyan lehet „hibakeresést” végezni olyan helyzetekben, amelyek nem úgy alakultak, ahogy azt gondolták. Te és gyermeked együtt gondolkodhatnak a probléma megoldásának kreatív módjain!
+    
+    ## 4) Ne felejts el ünnepelni!
+    
+    A Kódolás Órája egy globális esemény, amelynek megünneplését a te családod is megérdemli. Íme néhány módszer, amellyel különlegessé teheted a a Kódolás Óráját:
+    
+    - Nyomtasd ki a [ Kódolás Órája tanúsítványokat ](https://staging.code.org/certificates), amelyeket oda tudsz adni a gyerekeknek, ha befejezték a feladatot. 
+    - [ Nyomtass matricákat](https://staging.hourofcode.com/us/promote/resources#stickers) otthon vagy  vásárold meg őket online meglepetésként. </li> 
+        
+        - Oszd meg a Kódolás Órája-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!</ul> 
+        
+        [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+<h2>Mi jön a "Hour of Code" esemény után?</h2>
 
-Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
-
-Olvasd át a ["Hour of Code" GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét, ha még mindig kérdésed van.
-
-## Mi jön a "Hour of Code" esemény után?
-
-A "Hour of Code" esemény csak egy újabb lépés előre, melynek célja, hogy megismerd jobban a technológiát, valamint azt, hogy hogyan kell szoftvereket készíteni:
-
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
-
-{{ signup_button }}
+        
+        A számítástechnikának nem kell véget érnie a Kódolás órájával! Míg a szülők 90%-a szeretné, hogy gyermeke informatikát tanuljon, az iskolák többségében még mindig nem létező tantárgy. Segítségül tantervünk webalapú és ingyenesen használható, örökre. [ További információ ](https://code.org/yourschool) arról, hogyan csempészhetsz informatikát gyermeked iskolájába.
+        
+        [<button>Nézd meg az útmutatót</button>]({{ localized_files/hourofcode_parent_how_to }})

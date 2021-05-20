@@ -1,0 +1,1418 @@
+{
+  "script": {
+    "name": "CSPPD3-Unit4",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS Principles Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:46 UTC",
+    "seeding_key": {
+      "script.name": "CSPPD3-Unit4"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Getting Started",
+      "name": "Getting Started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "key": "Unit 4 Overview",
+      "name": "Unit 4 Overview",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "key": "Chapter 1 Overview",
+      "name": "Chapter 1 Overview",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "key": "Chapter 2 Overview",
+      "name": "Chapter 2 Overview",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "key": "Practice Performance Tasks",
+      "name": "Practice Performance Tasks",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice Performance Tasks",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "key": "Challenge Overview",
+      "name": "Challenge Overview",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "key": "Complete the Challenge",
+      "name": "Complete the Challenge",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "key": "Share out and Submit",
+      "name": "Share out and Submit",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 Welcome"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 Welcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 Welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 overview"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 overview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PD check your progress"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PD check your progress"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "PD check your progress"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 tips for prep"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 tips for prep"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 tips for prep"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 plan"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 plan"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u2 plan"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 unit 4 overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 unit 4 overview"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 unit 4 overview"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 breakdown of u4 chunks"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 breakdown of u4 chunks"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 breakdown of u4 chunks"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 unit overview checkin"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 unit overview checkin"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 unit overview checkin"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 1 concepts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 concepts"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 1 concepts"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 1 resources"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 resources"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 1 resources"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt2"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 1 resources pt2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt3"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 1 resources pt3"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt4"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 1 resources pt4"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 1 checkin"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 checkin"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 1 checkin"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 2 concepts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 2 concepts"
+        ],
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 2 concepts"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 2 chunk 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 2 chunk 1"
+        ],
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 2 chunk 1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 2 chunk 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 2 chunk 2"
+        ],
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 2 chunk 2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 chapter 2 checkin"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 2 checkin"
+        ],
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 chapter 2 checkin"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 practice PT"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 practice PT"
+        ],
+        "lesson.key": "Practice Performance Tasks",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 practice PT"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 pause and reflect"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 pause and reflect"
+        ],
+        "lesson.key": "Practice Performance Tasks",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 pause and reflect"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 challenge overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 challenge overview"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 challenge overview"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 what is a challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 what is a challenge"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 what is a challenge"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 completing the challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 completing the challenge"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 completing the challenge"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 list of challenges"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 list of challenges"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 list of challenges"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 expectations"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 expectations"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u2 expectations"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 pick a challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 pick a challenge"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 pick a challenge"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 complete the challenge overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 complete the challenge overview"
+        ],
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 complete the challenge overview"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 do the challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 do the challenge"
+        ],
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 do the challenge"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 create your extension"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 create your extension"
+        ],
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u2 create your extension"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ],
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u2 reflect on challenge"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 share out overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 share out overview"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 share out overview"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 post to forum"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 post to forum"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 post to forum"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 submit forum link"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 submit forum link"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 submit forum link"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 final progress check"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 final progress check"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u2 final progress check"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u4 post survey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u4 post survey"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      },
+      "level_keys": [
+        "CSPPD3-u4 post survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 Welcome",
+        "script_level.level_keys": [
+          "CSPPD3-u4 Welcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 overview",
+        "script_level.level_keys": [
+          "CSPPD3-u4 overview"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PD check your progress",
+        "script_level.level_keys": [
+          "PD check your progress"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 tips for prep",
+        "script_level.level_keys": [
+          "CSPPD3-u4 tips for prep"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 plan",
+        "script_level.level_keys": [
+          "CSPPD3-u2 plan"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 unit 4 overview",
+        "script_level.level_keys": [
+          "CSPPD3-u4 unit 4 overview"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 breakdown of u4 chunks",
+        "script_level.level_keys": [
+          "CSPPD3-u4 breakdown of u4 chunks"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 unit overview checkin",
+        "script_level.level_keys": [
+          "CSPPD3-u4 unit overview checkin"
+        ],
+        "lesson.key": "Unit 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 1 concepts",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 concepts"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 1 resources",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 resources"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 1 resources pt2",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt2"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 1 resources pt3",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt3"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 1 resources pt4",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 resources pt4"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 1 checkin",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 1 checkin"
+        ],
+        "lesson.key": "Chapter 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 2 concepts",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 2 concepts"
+        ],
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 2 chunk 1",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 2 chunk 1"
+        ],
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 2 chunk 2",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 2 chunk 2"
+        ],
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 chapter 2 checkin",
+        "script_level.level_keys": [
+          "CSPPD3-u4 chapter 2 checkin"
+        ],
+        "lesson.key": "Chapter 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 practice PT",
+        "script_level.level_keys": [
+          "CSPPD3-u4 practice PT"
+        ],
+        "lesson.key": "Practice Performance Tasks",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 pause and reflect",
+        "script_level.level_keys": [
+          "CSPPD3-u4 pause and reflect"
+        ],
+        "lesson.key": "Practice Performance Tasks",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 challenge overview",
+        "script_level.level_keys": [
+          "CSPPD3-u4 challenge overview"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 what is a challenge",
+        "script_level.level_keys": [
+          "CSPPD3-u4 what is a challenge"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 completing the challenge",
+        "script_level.level_keys": [
+          "CSPPD3-u4 completing the challenge"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 list of challenges",
+        "script_level.level_keys": [
+          "CSPPD3-u4 list of challenges"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 expectations",
+        "script_level.level_keys": [
+          "CSPPD3-u2 expectations"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 pick a challenge",
+        "script_level.level_keys": [
+          "CSPPD3-u4 pick a challenge"
+        ],
+        "lesson.key": "Challenge Overview",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 complete the challenge overview",
+        "script_level.level_keys": [
+          "CSPPD3-u4 complete the challenge overview"
+        ],
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 do the challenge",
+        "script_level.level_keys": [
+          "CSPPD3-u4 do the challenge"
+        ],
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 create your extension",
+        "script_level.level_keys": [
+          "CSPPD3-u2 create your extension"
+        ],
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 reflect on challenge",
+        "script_level.level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ],
+        "lesson.key": "Complete the Challenge",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 share out overview",
+        "script_level.level_keys": [
+          "CSPPD3-u4 share out overview"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 post to forum",
+        "script_level.level_keys": [
+          "CSPPD3-u4 post to forum"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 submit forum link",
+        "script_level.level_keys": [
+          "CSPPD3-u4 submit forum link"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 final progress check",
+        "script_level.level_keys": [
+          "CSPPD3-u2 final progress check"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u4 post survey",
+        "script_level.level_keys": [
+          "CSPPD3-u4 post survey"
+        ],
+        "lesson.key": "Share out and Submit",
+        "lesson_group.key": "",
+        "script.name": "CSPPD3-Unit4"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

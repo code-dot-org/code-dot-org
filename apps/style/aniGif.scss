@@ -1,0 +1,38 @@
+#ani-gif-preview-wrapper {
+  vertical-align: top;
+}
+
+$aniGifPreviewWidth: 80px;
+$aniGifPreviewHeight: 60px;
+#ani-gif-preview {
+  display: table-cell;
+  background-size: $aniGifPreviewWidth $aniGifPreviewHeight;
+  // background-image set via javascript
+  width: $aniGifPreviewWidth;
+  height: $aniGifPreviewHeight;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 12px;
+
+  #play-button {
+    clear: both;
+    height: 40px;
+    position: relative;
+  }
+}
+
+/* Place ani-gif next to text for column width 300px or wider. */
+@media screen and (min-width: 1051px) {
+  #prompt-table.with-ani-gif {
+    margin-right: $aniGifPreviewWidth;
+    padding-right: 5px;
+  }
+
+  #ani-gif-preview-wrapper {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+}
+
+

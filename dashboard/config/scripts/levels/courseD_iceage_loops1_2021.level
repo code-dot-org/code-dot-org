@@ -1,0 +1,82 @@
+<Maze>
+  <config><![CDATA[{
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,1,1,4,1,1,1,4],[0,1,1,1,1,1,1,4],[0,1,1,1,4,1,1,4],[0,4,1,1,1,1,1,4],[0,2,1,1,1,1,3,4],[0,1,1,1,1,1,1,4],[4,4,4,4,4,4,4,4]]",
+    "skin": "scrat",
+    "short_instructions": "Help Scrat across the ice to get to the acorn!",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "parent_level_id": 21325,
+    "name_suffix": "_2021",
+    "top_level_procedure_autopopulate": "false",
+    "long_instructions": "Help Scrat across the slippery ice to get to the acorn!",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Watch out for broken ice! Scrat will fall right through!\",\"hint_id\":\"courseD_iceage_loops1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2989877b31f13247f81d185d7f4e3e14/courseD_iceage_loops1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will have to use this block:\\n\\n<xml><block type=\\\"maze_moveForward\\\"/></xml>\",\"hint_id\":\"courseD_iceage_loops1_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/298bfa74a8ecc417fbad4447ca52af0f/courseD_iceage_loops1.mp3\"}]",
+    "encrypted": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "show_type_hints": "false",
+    "maze_data": null,
+    "preload_asset_list": null
+  },
+  "game_id": 25,
+  "published": true,
+  "created_at": "2020-12-04T22:28:15.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "notes": "\"Free Play\"",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 17:23:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-21 17:24:38 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-26 20:20:26 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-03 23:36:28 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"skin\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-03 23:37:37 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-03 23:38:26 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 22:53:07 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:10:49 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:14:47 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"start_direction\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 23:58:53 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-12 21:23:41 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"is_k1\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-12 23:22:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-12 23:22:42 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-12 23:23:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-12 23:27:48 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"authored_hints\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-12 23:28:25 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-13 00:06:04 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"authored_hints\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2021-03-29 14:32:25 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+</xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

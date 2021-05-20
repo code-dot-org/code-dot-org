@@ -1,4 +1,4 @@
-stage 'Puzzles'
+lesson 'Puzzles', display_name: 'Puzzles', has_lesson_plan: false
 level 'Code Studio Puzzle Challenge 5 - Bee'
 level 'Code Studio Puzzle Challenge 6 - Bee'
 level 'Code Studio Puzzle Challenge 7 - Bee'
@@ -15,3 +15,4 @@ level 'Code Studio Puzzle Challenge 11 - Artist'
 level 'Code Studio Puzzle Challenge 12 - Artist'
 level 'Code Studio Puzzle Challenge 13 - Artist'
 level 'Code Studio Puzzle Challenge 14 - Artist'
+

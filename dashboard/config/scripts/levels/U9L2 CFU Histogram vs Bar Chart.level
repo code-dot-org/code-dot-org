@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "long_instructions": "## Reflection\r\n\r\nWhy would someone make a histogram instead of a bar chart?",
+    "encrypted_solution": "UBydvgytfUMNQ/4yUal9tP1GD6YLQ6SwrovyiWhFKKExgg3xXP/mcaTt5wFV\nYS4dmYSBEjDOqsQXRIxaBXWMVDfSeFfuWbczHWh/cchIVmyaquQk+rPjZxl8\niXR7Z6OYy5Hhaaa6i2Dol49+ip3znLHQfRa0bIdm8Q1rf1Q6GAUtecJ124vO\nREZsUBX32Zqup/x6SWY+TsBV6lD1yrhnNA==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19985,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2020-02-17T16:42:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-14 18:56:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-02-13 21:07:36 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-02-17 16:43:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2021-04-15 21:46:19 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

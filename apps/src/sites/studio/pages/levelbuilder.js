@@ -3,10 +3,27 @@
  */
 import _ from 'lodash';
 import codemirror from 'codemirror';
-import marked from 'marked';
-import renderer from '@cdo/apps/util/StylelessRenderer';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
+import $ from 'jquery';
+
+$(document).ready(initPage);
+
+function initPage() {
+  function make_selection_handler(flag) {
+    return function(e) {
+      e.preventDefault();
+      const options = $(this)
+        .parent()
+        .siblings('select')
+        .children('option');
+      options[flag ? 'attr' : 'removeAttr']('selected', true);
+    };
+  }
+
+  $('.select_all').click(make_selection_handler(true));
+  $('.select_none').click(make_selection_handler(false));
+}
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
@@ -34,9 +51,6 @@ window.levelbuilder.copyWorkspaceToClipboard = function() {
 
 // TODO: Remove when global `CodeMirror` is no longer required.
 window.CodeMirror = codemirror;
-// TODO: Remove when global `marked` is no longer required.
-window.marked = marked;
-window.renderer = renderer;
 
 // TODO: Extract .js from _authored_hints.haml and _instructions.haml, then remove this
 window.convertXmlToBlockly = convertXmlToBlockly;

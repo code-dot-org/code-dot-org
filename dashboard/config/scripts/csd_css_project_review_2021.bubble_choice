@@ -1,0 +1,10 @@
+name 'CSD CSS project Review_2021'
+display_name 'CSS Review'
+description 'Here are some CSS properties that you may have seen in the past couple of lessons.  You can use them to review the styles you might want for your web page.'
+
+sublevels
+level 'CSD Web Dev choice level add rule_2021'
+level 'CSD Web Dev choice level color_2021'
+level 'CSD Web Dev choice level text-align_2021'
+level 'CSD Web Dev choice level font-size_2021'
+level 'CSD Web Dev choice level font-family_2021'

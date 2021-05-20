@@ -1,9 +1,7 @@
 name 'AP_practice_Qs_rqb_85_CSP_5_4_1'
-right 'Knowledge of the programming language.
-'
+right 'Knowledge of the programming language.'
 wrong 'Knowing the purpose of the program.'
-wrong 'Having meaningul names for variables and procedures.
-'
+wrong 'Having meaningul names for variables and procedures.'
 wrong 'Understanding the structure of the components, including code blocks and procedures.'
 markdown <<MARKDOWN
 Which of the following is required when correcting compilation errors in a program?

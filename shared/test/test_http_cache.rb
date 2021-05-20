@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require 'rack/test'
 ENV['RACK_ENV'] = 'test'
 require_relative '../../deployment'
-require 'cdo/rack/whitelist'
+require 'cdo/rack/allowlist'
 
 require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 
@@ -51,12 +51,12 @@ module Cdo
       def app
         mock = mock_app
         Rack::Builder.app do
-          use Rack::Whitelist::Downstream,
+          use Rack::Allowlist::Downstream,
             HttpCache.config(rack_env)[:dashboard]
 
           require 'rack/cache'
           use Rack::Cache, ignore_headers: []
-          use Rack::Whitelist::Upstream,
+          use Rack::Allowlist::Upstream,
             HttpCache.config(rack_env)[:dashboard]
           run(mock)
         end
@@ -99,7 +99,7 @@ module Cdo
         end
         session = build_rack_mock_session
         cookies.each do |key, value|
-          session.set_cookie("#{key}=#{value}")
+          session.set_cookie("#{key}=#{value}", URI.parse(url))
         end
         request url, method: method
       end
@@ -110,7 +110,7 @@ module Cdo
           session.header name, value
         end
         cookies.each do |key, value|
-          session.set_cookie("#{key}=#{value}")
+          session.set_cookie("#{key}=#{value}", URI.parse(url))
         end
         Rack::Test::Session.new(session).get(url)
       end

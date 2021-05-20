@@ -131,6 +131,28 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.filter_workshops @workshop_query
   end
 
+  test 'filter_workshops with virtual status' do
+    params virtual: 'yes'
+
+    # No virtual workshops found, uses none to return empty set of records.
+    @workshop_query.expects(:select).returns([])
+    expects(:none)
+
+    @controller.filter_workshops @workshop_query
+
+    virtual_workshop = create :workshop,
+      virtual: true,
+      suppress_email: true
+
+    # Need to override expects method used elsewhere in this test file
+    # to set the return value to an array, instead of the mock @workshop_query
+    # object.
+    @workshop_query.expects(:select).returns([virtual_workshop])
+    expects(:where).with(id: [virtual_workshop.id])
+
+    @controller.filter_workshops @workshop_query
+  end
+
   test 'filter_workshops with facilitator_id' do
     User.stubs(:find_by).with(id: 789).returns(@user)
     expects(:facilitated_by).with(@user)
@@ -251,6 +273,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       :end,
       :course,
       :subject,
+      :virtual,
       :organizer_id,
       :teacher_email,
       :only_attended,

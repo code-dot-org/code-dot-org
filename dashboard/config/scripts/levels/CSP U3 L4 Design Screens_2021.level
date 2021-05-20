@@ -1,0 +1,49 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-12-04T22:00:57.000Z",
+  "level_num": "custom",
+  "user_id": 832,
+  "properties": {
+    "encrypted": "false",
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Do This\r\n\r\n* Look at the user interface design in your planning guide\r\n* Recreate the screens here\r\n* You can upload images to your app by clicking \"Choose...\" next to the \"image\" category in Design Mode.\r\n\r\n**Note:** You are not doing any programming yet on your app. You will start that in Lesson 8.",
+    "mini_rubric": "false",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "submittable": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "true",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 18800,
+    "project_template_level_name": "CSP U3 App Development Project Template_2021",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "validation_enabled": "false",
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-06-17 15:31:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-17 15:34:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-20 20:22:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"hide_design_mode\",\"hide_view_data_button\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-21 13:27:30 +0000\",\"changed\":[\"code_functions\",\"embed\",\"long_instructions\",\"start_blocks\",\"design_mode_at_start\",\"hide_design_mode\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-14 00:49:05 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-10-14 14:28:38 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-10-16 13:20:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

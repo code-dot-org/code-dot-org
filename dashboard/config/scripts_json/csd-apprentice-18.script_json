@@ -1,0 +1,771 @@
+{
+  "script": {
+    "name": "csd-apprentice-18",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "professional_learning_course": "CS Discoveries Facilitator in Training 2018-2019",
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:25 UTC",
+    "seeding_key": {
+      "script.name": "csd-apprentice-18"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Apprentice Reflection Overview",
+      "name": "Apprentice Reflection Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Apprentice Reflection Overview",
+        "lesson_group.key": "required",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "key": "Day 1",
+      "name": "Day 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "key": "Day 2",
+      "name": "Day 2",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "key": "Day 3",
+      "name": "Day 3",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "key": "Day 4",
+      "name": "Day 4",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "key": "Wrap Up",
+      "name": "Wrap Up",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "welcome-apprentice-18"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "welcome-apprentice-18"
+        ],
+        "lesson.key": "Apprentice Reflection Overview",
+        "lesson_group.key": "required",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "welcome-apprentice-18"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "morning-prep-monday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "morning-prep-monday"
+        ],
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "morning-prep-monday"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "feel-monday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "feel-monday"
+        ],
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "feel-monday"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-pushDL-unit1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pushDL-unit1"
+        ],
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "csd-pushDL-unit1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "morning-prep-tuesday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "morning-prep-tuesday"
+        ],
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "morning-prep-tuesday"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "feel-tuesday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "feel-tuesday"
+        ],
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "feel-tuesday"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "instructional-strategy-tuesday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "instructional-strategy-tuesday"
+        ],
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "instructional-strategy-tuesday"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-pushDL-unit2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pushDL-unit2"
+        ],
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "csd-pushDL-unit2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "morning-prep-wednesday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "morning-prep-wednesday"
+        ],
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "morning-prep-wednesday"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "feel-wednesday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "feel-wednesday"
+        ],
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "feel-wednesday"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "getting-buy-in-wednesday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "getting-buy-in-wednesday"
+        ],
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "getting-buy-in-wednesday"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-pushDL-unit2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pushDL-unit2"
+        ],
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "csd-pushDL-unit2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "morning-prep-thursday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "morning-prep-thursday"
+        ],
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "morning-prep-thursday"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "feel-thursday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "feel-thursday"
+        ],
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "feel-thursday"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "recruiting-thursday"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "recruiting-thursday"
+        ],
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "recruiting-thursday"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-pushDL-unit3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pushDL-unit3"
+        ],
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "csd-pushDL-unit3"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "apprentice-congrats"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "apprentice-congrats"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      },
+      "level_keys": [
+        "apprentice-congrats"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "welcome-apprentice-18",
+        "script_level.level_keys": [
+          "welcome-apprentice-18"
+        ],
+        "lesson.key": "Apprentice Reflection Overview",
+        "lesson_group.key": "required",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "morning-prep-monday",
+        "script_level.level_keys": [
+          "morning-prep-monday"
+        ],
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "feel-monday",
+        "script_level.level_keys": [
+          "feel-monday"
+        ],
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pushDL-unit1",
+        "script_level.level_keys": [
+          "csd-pushDL-unit1"
+        ],
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "morning-prep-tuesday",
+        "script_level.level_keys": [
+          "morning-prep-tuesday"
+        ],
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "feel-tuesday",
+        "script_level.level_keys": [
+          "feel-tuesday"
+        ],
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "instructional-strategy-tuesday",
+        "script_level.level_keys": [
+          "instructional-strategy-tuesday"
+        ],
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pushDL-unit2",
+        "script_level.level_keys": [
+          "csd-pushDL-unit2"
+        ],
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "morning-prep-wednesday",
+        "script_level.level_keys": [
+          "morning-prep-wednesday"
+        ],
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "feel-wednesday",
+        "script_level.level_keys": [
+          "feel-wednesday"
+        ],
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "getting-buy-in-wednesday",
+        "script_level.level_keys": [
+          "getting-buy-in-wednesday"
+        ],
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pushDL-unit2",
+        "script_level.level_keys": [
+          "csd-pushDL-unit2"
+        ],
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "morning-prep-thursday",
+        "script_level.level_keys": [
+          "morning-prep-thursday"
+        ],
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "feel-thursday",
+        "script_level.level_keys": [
+          "feel-thursday"
+        ],
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "recruiting-thursday",
+        "script_level.level_keys": [
+          "recruiting-thursday"
+        ],
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pushDL-unit3",
+        "script_level.level_keys": [
+          "csd-pushDL-unit3"
+        ],
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "apprentice-congrats",
+        "script_level.level_keys": [
+          "apprentice-congrats"
+        ],
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "csd-apprentice-18"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "script": {
+    "name": "test-migrated-models",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "peer_reviews_to_complete": 0,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "test-migrated-models"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lesson group",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "my lesson group"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lesson group",
+        "script.name": "test-migrated-models"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "new lesson",
+      "name": "My Lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "test-migrated-models"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "be74ab15-4657-426f-8935-65c9d285c61c",
+      "position": 1,
+      "properties": {
+        "name": "My Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be74ab15-4657-426f-8935-65c9d285c61c",
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "test-migrated-models"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "6174efd3-f122-476e-8fd3-8de6917bb8dc",
+      "position": 1,
+      "properties": {
+        "name": "My Activity Section",
+        "description": "My activity section description"
+      },
+      "seeding_key": {
+        "activity_section.key": "6174efd3-f122-476e-8fd3-8de6917bb8dc",
+        "lesson_activity.key": "be74ab15-4657-426f-8935-65c9d285c61c"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "My Activity Section"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test_maze_level"
+        ],
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "test-migrated-models",
+        "activity_section.key": "6174efd3-f122-476e-8fd3-8de6917bb8dc"
+      },
+      "level_keys": [
+        "test_maze_level"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "test_maze_level",
+        "script_level.level_keys": [
+          "test_maze_level"
+        ],
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "test-migrated-models",
+        "activity_section.key": "6174efd3-f122-476e-8fd3-8de6917bb8dc"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "objectives": [
+    {
+      "key": "9414596e-1588-475d-b210-2eefb6b1bfe7",
+      "properties": {
+        "description": "My Objective"
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "objective.key": "9414596e-1588-475d-b210-2eefb6b1bfe7"
+      }
+    }
+  ]
+}

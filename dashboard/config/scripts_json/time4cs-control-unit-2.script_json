@@ -1,0 +1,3367 @@
+{
+  "script": {
+    "name": "time4cs-control-unit-2",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "editor_experiment": "broward",
+      "lesson_extras_available": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:38 UTC",
+    "seeding_key": {
+      "script.name": "time4cs-control-unit-2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csf_digcit",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Digital Citizenship"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "csf_conditionals",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Conditionals"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "csf_nested_loops",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Nested Loops"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "csf_functions",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Functions"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "end_of_course_project",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "End of Course Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "time4cs-control-unit-2"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Crowdsourcing",
+      "name": "Crowdsourcing",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "Conditionals with Cards",
+      "name": "Conditionals with Cards",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "Nested Loops in Bee",
+      "name": "Nested Loops in Bee",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "Nested Loops in Artist",
+      "name": "Nested Loops in Artist",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "Nested Loops in Frozen",
+      "name": "Nested Loops in Frozen",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "Functions: Songwriting",
+      "name": "Functions: Songwriting",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "Functions in Minecraft",
+      "name": "Functions in Minecraft",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "Functions in Harvester",
+      "name": "Functions in Harvester",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "Functions in Artist",
+      "name": "Functions in Artist",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "key": "End of Course Project",
+      "name": "End of Course Project",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "time4cs-control-unit-2"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crowdsourcing-Unplugged"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crowdsourcing-Unplugged"
+        ],
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "Crowdsourcing-Unplugged"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ConditionalsWithCards-Unplugged"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "ConditionalsWithCards-Unplugged"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1a_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1a_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops1a_2019"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops1_2019"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoops_2019"
+        ],
+        "progression": "Nested Loops with the Bee"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_nestedLoops_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_video_nestedLoops_2019"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2019"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops2_predict1_2019"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops2_2019"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops3_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops3_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops3_2019"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops4_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops4_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops4_2019"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops5_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops5_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops5_2019"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops6_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops6_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops6_2019"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_nestedLoops7_2019"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops7_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops7_2019"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops8_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops8_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops8_2019"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops9_2019"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2019"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops9_predict2_2019"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_harvester_nested_loops_challenge1_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_harvester_nested_loops_challenge1_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_harvester_nested_loops_challenge1_2019"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_nested_loops_challenge2_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_nested_loops_challenge2_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_collector_nested_loops_challenge2_2019"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops1_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops1_2019"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1a_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops1a_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops1a_2019"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoopsArtist_2019"
+        ],
+        "progression": "Video"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_nestedLoopsArtist_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_video_nestedLoopsArtist_2019"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops2_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops2_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops2_2019"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops3_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops3_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops3_2019"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops4_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops4_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops4_2019"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops5_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops5_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops5_2019"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops7_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops7_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops7_2019"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops8_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops8_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops8_2019"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_artist_nestedLoops9_2019"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops9_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops9_2019"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops10_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops10_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops10_2019"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops9_predict1_2019"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops9_predict1_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops9_predict1_2019"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoopsFP_2019"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoopsFP_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoopsFP_2019"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops_challenge1_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops_challenge1_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops_challenge1_2019"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops_challenge2_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops_challenge2_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops_challenge2_2019"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project1_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #1"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project1_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project1_2019"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project2_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #1"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project2_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project2_2019"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project3_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #1"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project3_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project3_2019"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project4_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #1"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project4_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project4_2019"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project5_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #1"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project5_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project5_2019"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project1a_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #2"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project1a_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project1a_2019"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project2a_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #2"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project2a_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project2a_2019"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project3a_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #2"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project3a_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project3a_2019"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_project4a_2019"
+        ],
+        "progression": "Mini-Project: Snowflake #2"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_project4a_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseD_artist_project4a_2019"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Songwriting-Unplugged"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Songwriting-Unplugged"
+        ],
+        "lesson.key": "Functions: Songwriting",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "Songwriting-Unplugged"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_01_RETRY_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_01_RETRY_2019"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_02_Cole_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_02_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_02_Cole_2019"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_03_Cole_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_03_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_03_Cole_2019"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04_Cole_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_04_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_04_Cole_2019"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_04POINT5_RYAN_2019"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_05_Cole_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_05_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_05_Cole_2019"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_06_Cole_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_06_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_06_Cole_2019"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Function intro Ryan_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Function intro Ryan_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "Function intro Ryan_2019"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_07_Cole_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_07_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_07_Cole_2019"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_10_RETRY_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_10_RETRY_2019"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_Ali_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_Ali_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_Ali_2019"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC_HOC_2017_FP20x20_2019"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC_HOC_2017_FP20x20_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "MC_HOC_2017_FP20x20_2019"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "harvester_skinOverview_video_2019"
+        ],
+        "progression": "The Harvester"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "harvester_skinOverview_video_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "harvester_skinOverview_video_2019"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions1_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions1_2019"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions1a_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions1a_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions1a_2019"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2b_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions2b_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions2b_2019"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2ba_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions2ba_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions2ba_2019"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions3c_2019"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c1_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions3c1_2019"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_createFunctions2_2019"
+        ],
+        "progression": "How to Create a Simple Function"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_createFunctions2_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_video_createFunctions2_2019"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions7a1_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions7a1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions7a1_2019"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions8a1_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions8a1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions8a1_2019"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions9a1_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions9a1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions9a1_2019"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseE_farmer_functions10a1_2019"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions10a1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions10a1_2019"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions13_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions13_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions13_2019"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions11_predict_2019"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions11_predict_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions11_predict_2019"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict1_2019"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict1_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions_predict1_2019"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions2_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions2_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions2_2019"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions3_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions3_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions3_2019"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions5_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions5_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions5_2019"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions7_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions7_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions7_2019"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions8a_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions8a_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions8a_2019"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions8b_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions8b_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions8b_2019"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions8c_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions8c_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions8c_2019"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions8_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions8_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions8_2019"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseE_artist_functions9_2019"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions9_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions9_2019"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions10_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions10_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions10_2019"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict2_2019"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict2_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions_predict2_2019"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functionsProj_2019"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functionsProj_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functionsProj_2019"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge1_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_challenge1_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions_challenge1_2019"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge2_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_challenge2_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_artist_functions_challenge2_2019"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_project_exemplars_2019"
+        ],
+        "progression": "Example Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_project_exemplars_2019"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "courseE_project_exemplars_2019"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_Project_SpriteLab_2019"
+        ],
+        "progression": "Sprite Lab Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseE_Project_SpriteLab_2019"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "CourseE_Project_SpriteLab_2019"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Course E: Artist Project_2019"
+        ],
+        "progression": "Artist Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course E: Artist Project_2019"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "time4cs-control-unit-2"
+      },
+      "level_keys": [
+        "Course E: Artist Project_2019"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Crowdsourcing-Unplugged",
+        "script_level.level_keys": [
+          "Crowdsourcing-Unplugged"
+        ],
+        "lesson.key": "Crowdsourcing",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ConditionalsWithCards-Unplugged",
+        "script_level.level_keys": [
+          "ConditionalsWithCards-Unplugged"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops1a_2019",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1a_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops1_2019",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_nestedLoops_2019",
+        "script_level.level_keys": [
+          "courseD_video_nestedLoops_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops2_predict1_2019",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops2_2019",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops3_2019",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops3_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops4_2019",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops4_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops5_2019",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops5_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops6_2019",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops6_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops7_2019",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops7_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops8_2019",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops8_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops9_2019",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops9_predict2_2019",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_harvester_nested_loops_challenge1_2019",
+        "script_level.level_keys": [
+          "courseD_harvester_nested_loops_challenge1_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_nested_loops_challenge2_2019",
+        "script_level.level_keys": [
+          "courseD_collector_nested_loops_challenge2_2019"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops1_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops1_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops1a_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops1a_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_nestedLoopsArtist_2019",
+        "script_level.level_keys": [
+          "courseD_video_nestedLoopsArtist_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops2_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops2_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops3_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops3_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops4_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops4_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops5_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops5_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops7_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops7_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops8_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops8_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops9_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops9_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops10_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops10_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops9_predict1_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops9_predict1_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoopsFP_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoopsFP_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops_challenge1_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops_challenge1_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops_challenge2_2019",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops_challenge2_2019"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project1_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project1_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project2_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project2_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project3_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project3_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project4_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project4_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project5_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project5_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project1a_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project1a_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project2a_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project2a_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project3a_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project3a_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_project4a_2019",
+        "script_level.level_keys": [
+          "courseD_artist_project4a_2019"
+        ],
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Songwriting-Unplugged",
+        "script_level.level_keys": [
+          "Songwriting-Unplugged"
+        ],
+        "lesson.key": "Functions: Songwriting",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_01_RETRY_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_01_RETRY_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_02_Cole_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_02_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_03_Cole_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_03_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_04_Cole_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_04_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_04POINT5_RYAN_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_05_Cole_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_05_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_06_Cole_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_06_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Function intro Ryan_2019",
+        "script_level.level_keys": [
+          "Function intro Ryan_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_07_Cole_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_07_Cole_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_10_RETRY_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_10_RETRY_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_Ali_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_Ali_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC_HOC_2017_FP20x20_2019",
+        "script_level.level_keys": [
+          "MC_HOC_2017_FP20x20_2019"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "harvester_skinOverview_video_2019",
+        "script_level.level_keys": [
+          "harvester_skinOverview_video_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions1_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions1a_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions1a_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions2b_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions2b_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions2ba_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions2ba_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions3c_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions3c1_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_createFunctions2_2019",
+        "script_level.level_keys": [
+          "courseE_video_createFunctions2_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions7a1_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions7a1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions8a1_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions8a1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions9a1_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions9a1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions10a1_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions10a1_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions13_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions13_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions11_predict_2019",
+        "script_level.level_keys": [
+          "courseE_farmer_functions11_predict_2019"
+        ],
+        "lesson.key": "Functions in Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_predict1_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict1_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions2_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions2_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions3_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions3_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions5_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions5_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions7_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions7_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions8a_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions8a_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions8b_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions8b_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions8c_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions8c_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions8_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions8_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions9_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions9_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions10_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions10_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_predict2_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict2_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functionsProj_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functionsProj_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_challenge1_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions_challenge1_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_challenge2_2019",
+        "script_level.level_keys": [
+          "courseE_artist_functions_challenge2_2019"
+        ],
+        "lesson.key": "Functions in Artist",
+        "lesson_group.key": "csf_functions",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_project_exemplars_2019",
+        "script_level.level_keys": [
+          "courseE_project_exemplars_2019"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseE_Project_SpriteLab_2019",
+        "script_level.level_keys": [
+          "CourseE_Project_SpriteLab_2019"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "time4cs-control-unit-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course E: Artist Project_2019",
+        "script_level.level_keys": [
+          "Course E: Artist Project_2019"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "time4cs-control-unit-2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

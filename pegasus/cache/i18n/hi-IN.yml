@@ -2,7 +2,7 @@
 hi-IN:
   hour_of_code: आवर ऑफ़ कोड
   hello: हैलो वर्ल्ड
-  'yes': हाँ
+  'yes': हां
   'no': नहीं
   select_language: कृपया अपनी भाषा चुनें
   upgrade_ie_message: Code.org जल्द ही Internet Explorer 8, 9, और 10 को समर्थित करना
@@ -19,17 +19,15 @@ hi-IN:
     font-weight:bold"> आपके ऑवर ऑफ़ कोड  का प्लान करे</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें</a>'
+  csedweek_banner_teachers_text: " तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें"
   n_have_learned_an_hoc: |-
     का प्रयास एक कोड के घंटे सेवा की
      code ke ek ghante dha koshish karo
   anybody_can_learn: हर कोई सीख सकता है
   learn_now: अब जानें
   petition_message: हर स्कूल में हर छात्र को कंप्यूटर विज्ञान सीखने का अवसर होना चाहिए
-  petition_sign_message: 'अगर आप सहमत हैं, आपका नाम साइन इन करें।  # दूसरों में शामिल
-    हों।'
-  petition_sign_message_support: |-
-    यदि आप हमें समर्थन, अपना नाम साइन इन करें।  # दूसरों में शामिल हों।
-    Agar aap hamare samarthan kartha hein, up ne nam ko sankhet karo. Log nal shamil ho
+  petition_sign_message: यदि आप सहमत हैं, तो अपना नाम साइन करें और ऑवर ऑफ़ कोड अन्य
+    लोगों के साथ हमारी मेलिंग सूची में शामिल हों।
   petition_join_others: |-
     # दूसरों में शामिल हों
     Log nal shaamil ho
@@ -62,9 +60,7 @@ hi-IN:
   hoc2014_teachers: शिक्षक
   hoc2014_host: मेजबानी करे
   hoc2014_everyone: हर कोई
-  hoc2014_support: |-
-    यह का समर्थन
-    Is ka samarthan karo
+  hoc2014_support: समर्थन करें
   hoc2014_whatishoc: ऑवर ऑफ़ कोड क्या है?
   csedweek_map_header: |-
     घंटा कोड की घटनाओं दुनिया भर
@@ -236,6 +232,7 @@ hi-IN:
   if_you_enjoyed: यदि आपको सीखने में मज़ा आया, तो अपने दोस्तों से भी इसे आजमाने को
     कहें!  हम चाहते हैं कि पूरी दुनिया इसे सीखे।
   personalize_certificate: आपके प्रमाण पत्र को व्यक्तिगत करें
+  print_certificates: प्रमाण-पत्र प्रिंट करें
   share_achievement: आपकी उपलब्धि साझा करें
   beyond_hour_message: हमारे <a href='http://studio.code.org'>अन्य कोर्सों के साथ
     आगे बढ़ते रहें</a>, या <a href='/learn/beyond'>घंटे से आगे कैसे सीखें</a> के और
@@ -395,6 +392,7 @@ hi-IN:
   homepage_slot_text_frozen: ऐना और एल्सा के साथ फ्रोज़न
   homepage_slot_text_teacher: अध्यापक डैशबोर्ड
   homepage_slot_text_studio: हमारे सभी ट्यूटोरियल्स
+  homepage_slot_text_course4: कोर्स 4
   homepage_slot_text_shop: दुकान
   homepage_slot_text_flappy: फ्लैपी कोड
   homepage_action_text_hoc: प्रत्येक छात्र के लिए एक आवर ऑफ़ कोड
@@ -406,11 +404,12 @@ hi-IN:
   homepage_action_text_codevideo: वीडियो देखें
   homepage_action_text_teachervideo: वीडियो देखें
   homepage_action_text_watchvideo: वीडियो देखें
-  homepage_action_text_girlvideo: किसी लड़की को प्रेरित करें
+  homepage_action_text_girlvideo: एक लड़की को प्रेरित करें
   homepage_action_text_learn: सीखना शुरू करें
   homepage_action_text_signpetition: याचना पर हस्ताक्षर करें
   homepage_action_text_wincelebritychat: सेलिब्रिटी चैट जीतें
   homepage_signpetition_dropdown: मैं सहमत हूं &#x25BE;
+  homepage_signpetition_dropdown_text: मैं सहमत हूँ
   homepage_diversity_pledge: विविधता संकल्प लें
   homepage_banner_text_prizes: 'आवर ऑफ़ कोड दुबारा 7-13 दिसम्बर को आ रहा है। '
   homepage_banner_link_prizes: 'इतिहास में सबसे बड़े सीखने के कार्यक्रम में शामिल
@@ -530,6 +529,8 @@ hi-IN:
   minecraft_tutorials: Minecraft आवर ऑफ़ कोड ट्यूटोरियल्स
   minecraft_specs: कई भाषाएं | आधुनिक ब्राउजर और टैब्लेट्स | ग्रेड 2+
   minecraft_start_tutorial: ट्यूटोरियल शुरू करें
+  minecraft_agent_description: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड के
+    लिए लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
   minecraft_agent_button: शुरू करें
   minecraft_designer_description: Minecraft के आपके खुद के संस्करण में जानवरों और
     अन्य Minecraft प्राणियों को प्रोग्राम करें।
@@ -581,13 +582,15 @@ hi-IN:
   minecraft_og_agent: Minecraft आवर ऑफ़ कोड के लिए लौट आया है, और आप हीरो हैं! Minecraft
     बायोम्स के माध्यम से सफर के लिए कोड लिखें।
   sports_page_title: आवर ऑफ़ कोड स्पोर्ट्स
-  sports_og_title: खुद को प्रेरित करें। कोई भी सीख सकता है।
+  sports_og_title: अपने आप को पुश करें। कोई भी सीख सकता है।
   sports_og_description: चैम्पियन और गोल्ड मेडल विजेता आपको आवर ऑफ़ कोड आजमाने के
     लिए प्रोत्साहित करते हैं। अपनी खुद की स्पोर्ट्स गेम को कोड करें।
+  sports_title: अपनी खुद की स्पोर्ट्स गेम का कूटलेखन करें
   sports_watch_video: वीडियो देखें
-  sports_video_title: खुद को प्रेरित करें। कोई भी सीख सकता है।
+  sports_video_title: अपने आप को पुश करें। कोई भी सीख सकता है।
   sports_select_theme: अपना ट्यूटोरियल विषय चुनें
   sports_basketball_title: बास्केटबॉल गेम बनाएं
+  sports_all_sports_title: खेलों में मिलाएं व मिलान करें
   sports_featured_athletes: पेश किए गए एथलीट्स देखें
   sports_athletes_title: पेश किए गए एथलीट्स
   sports_athlete_Draymond: ड्रेमंड ग्रीन (Draymond Green) ओलम्पिक गोल्ड मेडल विजेता
@@ -622,13 +625,14 @@ hi-IN:
   sports_athlete_Harrison: हैरियन बार्न्स (Harrison Barnes), ओलम्पिक गोल्ड मेडल विजेता
     और NBA चैम्पियन, डल्लास मेवरिक्स
   watch_inspirational_videos: शुरुआत करने से पहले, इनमें से एक प्रेरित वीडियो देखें
-  video_title_inspire_girl: किसी लड़की को प्रेरित करें
-  video_title_cs_intro: कंप्यूटर साइंस का परिचय
-  video_title_schools_dont_teach: जो अधिकतर स्कूल नहीं पढ़ाते
-  video_title_obama: कंप्यूटर साइंस के बारे में राष्ट्रपति ओबामा
-  video_title_hoc_is_here: आवर ऑफ़ कोड यहां है - कोई भी सीख सकता है
+  video_title_cs_is_everything: कंप्यूटर साइंस सब कुछ बदल रहा है
+  video_title_inspire_girl: एक लड़की को प्रेरित करें
+  video_title_cs_intro: कंप्यूटर साइंस इंट्रो
+  video_title_schools_dont_teach: जो अधिकांश स्कूलों मे नहीं पढ़ाया जाता
+  video_title_obama: राष्ट्रपति ओबामा कंप्यूटर विज्ञान के संबंध मे
+  video_title_hoc_is_here: ऑवर ऑफ़ कोड यहां है - कोई भी सीख सकता है
   video_title_anybody_can_learn: कोई भी सीख सकता है
-  video_title_steph_curry: स्टेफ करी के साथ आवर ऑफ़ कोड
+  video_title_steph_curry: ऑवर ऑफ़ कोड स्टेप करी के साथ
   video_title_draymond_green: ड्रेमंड ग्रीन के साथ आवर ऑफ़ कोड
   video_title_russell_okung: रुसेल ओकंग के साथ आवर ऑफ कोड
   video_title_real_madrid: रियल मैड्रिड के साथ आवर ऑफ कोड
@@ -712,7 +716,7 @@ hi-IN:
     आपको ईमेल भेज सकते हैं?
   volunteer_engineer_submission_field_email_preference_privacy: "(हमारी गोपनीयता नीति
     देखें)"
-  volunteer_engineer_submission_field_email_preference_yes: हाँ
+  volunteer_engineer_submission_field_email_preference_yes: हां
   volunteer_engineer_submission_field_email_preference_no: नहीं
   volunteer_engineer_submission_final_paragraph: आपको मानचित्र पर सूचीबद्ध किया जाएगा,
     ताकि स्थानीय अध्यापक आवर ऑफ़ कोड या स्वयं सेवकों के लिए अन्य अवसरों हेतु आपसे
@@ -763,7 +767,7 @@ hi-IN:
     के कुछ शब्द कहने के लिए आप मेरी कक्षा में Skype पर आएं
   volunteer_engineer_submission_type_task_mentor: मैं अपने छात्रों के साथ कोडिंग के
     लिए तैयारी में मेरी मदद के लिए परामर्शदाता की तलाश में हूं
-  petition_age: आयु
+  petition_age: उम्र
   dashboard_announce_hoc_scaling_progress: उफ़! हम आवर ऑफ़ कोड के उच्च ट्रैफिक का
     सामना कर रहे हैं। हम इस सप्ताह किसी भी प्रगति को सुरक्षित करने के लिए अक्षम हैं,
     लेकिन इस सप्ताह से पहले प्रगति तब भी सुरक्षित रहती है।
@@ -847,7 +851,7 @@ hi-IN:
   dashboard_landing_loading: लोड हो रहा है...
   dashboard_action_cancel: रद्द करें
   dashboard_action_delete: मिटाएँ
-  dashboard_action_delete_yes: हाँ
+  dashboard_action_delete_yes: हां
   dashboard_action_delete_no: नहीं
   dashboard_action_confirm: मिटाएँ?
   dashboard_action_done: हो गया
@@ -913,6 +917,7 @@ hi-IN:
   dashboard_sections_table_secret: लॉगिन प्रकार
   dashboard_sections_table_grade: ग्रेड
   dashboard_sections_table_course: कोर्स
+  dashboard_sections_table_pairing_allowed: जोड़ी प्रोग्रामिंग
   dashboard_sections_table_stage_extras: अतरिक्त चरण
   dashboard_sections_table_students: छात्र
   dashboard_sections_table_code: अनुभाग कोड
@@ -1030,6 +1035,7 @@ hi-IN:
   dashboard_curriculum: पाठ्यक्रम
   dashboard_curriculum_overview: K-5 पाठ्यक्रम की रूपरेखा
   dashboard_overview: रूपरेखा
+  dashboard_sequence: अनुक्रम
   dashboard_framework: फ्रेमवर्क
   dashboard_standards: मानक
   dashboard_implementation_guide: कार्यान्वयन गाइड
@@ -1175,9 +1181,10 @@ hi-IN:
     तक पहुंच के लिए, <a href="http://browsehappy.com/" target="_blank">आधुनिक वेब
     ब्राउजर पर अपग्रेड करें।</a>
   mobile_devices: मोबाइल डिवाइसों के लिए साझेदार ट्यूटोरियल्स
+  frozen_name: ऐना और एल्सा के साथ कूटलेखन
   starwars_name: 'Star Wars: कोड से तारा समूह बनाना'
-  codeorg_name: क्लासिक भूलभुलैया
-  codeintl_name: क्लासिक भूलभुलैया
+  codeorg_name: क्लासिक मेज़ (Classic Maze)
+  codeintl_name: क्लासिक मेज़ (Classic Maze)
   khan_name: JavaScript से परिचय
   khanes_name: JavaScript से परिचय
   khanpt_name: JavaScript से परिचय
@@ -1205,14 +1212,20 @@ hi-IN:
   appinventor_name: AppInventor आवर ऑफ़ कोड
   blockly_name: ब्लॉक्ली
   projguts_name: चट्टान, कागज़, कैंची
-  hourofcode_name: क्लासिक भूलभुलैया
-  infinity_name: Infinity Play Lab
+  hourofcode_name: क्लासिक मेज़ (Classic Maze)
+  playlab_name: प्ले लैब
+  infinity_name: इन्फिनिटी प्ले लैब
+  artist_name: कलाकार
   monstercoding_name: रहस्यमयी आइलैंड कोडिंग खोज
   allcancode_name: मार्को भागो!
   csfirst_name: CS फर्स्ट
   boxisland_name: बॉक्स आइलैंड
   texasinstruments_name: 10 मिनट कोड
   teacherled_name: अध्यापकों द्वारा संचालित पाठ योजनाएं
+  course1_name: कोर्स 1
+  course2_name: कोर्स 2
+  course3_name: कोर्स 3
+  course4_name: कोर्स 4
   coursea-draft_name: कोर्स A
   coursea_name: कोर्स A
   courseb-draft_name: कोर्स B
@@ -1231,21 +1244,47 @@ hi-IN:
   coursed-2017_name: कोर्स D (2017)
   coursee-2017_name: कोर्स E (2017)
   coursef-2017_name: कोर्स F (2017)
+  coursea-2018_name: कोर्स A (2018)
+  courseb-2018_name: कोर्स B (2018)
+  coursec-2018_name: कोर्स C (2018)
+  coursed-2018_name: कोर्स D (2018)
+  coursee-2018_name: कोर्स E (2018)
+  coursef-2018_name: कोर्स F (2018)
+  coursea-2019_name: कोर्स A (2019)
+  courseb-2019_name: कोर्स B (2019)
+  coursec-2019_name: कोर्स C (2019)
+  coursed-2019_name: कोर्स D (2019)
+  coursee-2019_name: कोर्स E (2019)
+  coursef-2019_name: कोर्स F (2019)
+  coursea-2020_name: कोर्स A (2019)
+  courseb-2020_name: कोर्स B (2019)
+  coursec-2020_name: कोर्स C (2019)
+  coursed-2020_name: कोर्स D (2019)
+  coursee-2020_name: कोर्स E (2019)
+  coursef-2020_name: कोर्स F (2019)
   pre-express-2018_name: पूर्व-पाठक एक्सप्रेस कोर्स (2018)
+  express-2019_name: एक्सप्रेस कोर्स (2019)
   pre-express-2019_name: पूर्व-पाठक एक्सप्रेस कोर्स (2019)
+  express-2020_name: एक्सप्रेस कोर्स (2019)
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: त्वरित पाठ्यक्रम
+  express_name: एक्सप्रेस कोर्स
   pre-express_name: 'पूर्व-पाठक एक्सप्रेस कोर्स:'
   20-hour_name: त्वरित पाठ्यक्रम
   algebra_name: बीजगणित के पूरे कोर्स में CS
   AlgebraA_name: बीजगणित कोर्स A में CS
   AlgebraB_name: बीजगणित कोर्स B में CS
   gumball_name: गुम्बॉल
-  classicmaze_name: क्लासिक भूलभुलैया
+  classicmaze_name: क्लासिक मेज़ (Classic Maze)
   iceage_name: हिम युग
-  minecraft_name: Minecraft
+  minecraft_name: माइनक्राफ्ट
   starwarsblocks_name: Star Wars (ब्लॉक्स)
-  hoc-encryption_name: साधारण कूटलेखन
+  hoc-encryption_name: सरल एन्क्रिप्शन
+  text-compression_name: टेक्स्ट कम्प्रेशन
+  applab_name: ऐप लैब
+  gamelab_name: गेम लैब
   basketball_name: बास्केटबॉल गेम बनाएं
+  sports_name: अपनी खुद की स्पोर्ट्स गेम का कूटलेखन करें
   applab_gradelevel: आयु 13+
   applab_shortdescription_congrats: ऐप लैब ऐसा प्रोग्रामिंग परिवेश है, जहां आप साधारण
     ऐप्स बना सकते हैं। एक ऐप डिज़ाइन करें, इसे काम करने के लिए सक्रिय करने हेतु ब्लॉक्स
@@ -1299,7 +1338,10 @@ hi-IN:
   codesters_gradelevel: आयु 12-14
   texasinstruments_gradelevel: आयु 13-16
   teacherled_gradelevel: आयु 5+
+  course1_gradelevel: आयु 4-6
   course2_gradelevel: आयु 6-18
+  course3_gradelevel: आयु 8-18
+  course4_gradelevel: आयु 10-18
   coursea_gradelevel: आयु 4-7
   courseb_gradelevel: आयु 5-8
   coursec_gradelevel: आयु 6-10
@@ -1324,6 +1366,13 @@ hi-IN:
   coursed-2019_gradelevel: आयु 7-11
   coursee-2019_gradelevel: उम्र 8-12
   coursef-2019_gradelevel: आयु 9-13
+  coursea-2020_gradelevel: आयु 4-7
+  courseb-2020_gradelevel: आयु 5-8
+  coursec-2020_gradelevel: आयु 6-10
+  coursed-2020_gradelevel: आयु 7-11
+  coursee-2020_gradelevel: उम्र 8-12
+  coursef-2020_gradelevel: आयु 9-13
+  accelerated_gradelevel: आयु 10-18
   codeorg_platformtext: आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स
   codeintl_platformtext: आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स
   thinkersmithspanish_platformtext: अनप्लग्ड
@@ -1426,8 +1475,14 @@ hi-IN:
     आजमाएं
   hourofcode_shortdescription: मार्क ज़ुकरबर्ग (Mark Zuckerberg) और एंग्री बर्ड्स
     के साथ कोड करना सीखें
-  frozen_shortdescription: आइए ऐना और एल्सा से जुड़ने के लिए कोड का उपयोग करें, जब
-    वे बर्फ के जादू और सुंदरता की पड़ताल करती हैं।
+  frozen_shortdescription: आइए कोड का उपयोग करके एना और एल्सा से जुड़ते हैं ताकि वे
+    बर्फ के जादू और सुंदरता का पता लगा सकें।
+  starwars_shortdescription: ड्रॉइड्स प्रोग्राम करना सीखें, और एक दूर, बहुत दूर आकाशगंगा
+    में अपना खुद का स्टार वॉर्स गेम बनाएं।
+  playlab_shortdescription: एक कहानी बनाएँ या प्ले लैब के साथ एक गेम बनाएँ!
+  infinity_shortdescription: डिज्नी इन्फिनिटी पात्रों द्वारा अभिनीत एक कहानी या गेम
+    बनाने के लिए उपयोग करें।
+  artist_shortdescription: कलाकार के साथ शानदार चित्र और डिजाइन बनाएं!
   monsterocding_shortdescription: बच्चों के लिए रंगदार स्व-निर्देशित प्रोग्रामिंग
     एडवेंचर।
   allcancode_shortdescription: दृश्य प्रोग्रामिंग भाषा के साथ मार्को का मार्गदर्शन
@@ -1455,42 +1510,72 @@ hi-IN:
     विषयों पर गहन शोध करेंगे। इस कोर्स के अंत में, छात्र संवादात्मक कहानियां और गेम्स
     बनाएंगे, जिन्हें वे किसी भी व्यक्ति के साथ साझा कर सकते हैं। ग्रेड 4-8 के लिए
     इसकी सिफारिश की गई है।
-  coursea_shortdescription_congrats: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
-  courseb_shortdescription_congrats: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
-    (कोर्स A से मिलता-जुलता, लेकिन पुराने छात्रों के लिए और विविध प्रकारों के साथ।)
-  coursed_shortdescription_congrats: जल्दी से कोर्स C से अवधारणाओं को ग्रहण करें,
-    फिर कलन विधियों, नेस्टड लूप्स, सापेक्षों आदि पर जाएं।
-  coursee_shortdescription_congrats: जल्दी से कोर्स C और D में अवधारणाओं को ग्रहण
-    करें और फिर फंक्शन्स के साथ आगे जाएं।
-  coursef_shortdescription_congrats: कंप्यूटर साइंस के मूल सिद्धांतों में सभी अवधारणाएं
-    सीखें और अपनी खुद की कला, कहानी या गेम बनाएं।
-  coursea-2017_shortdescription_congrats: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
-  courseb-2017_shortdescription_congrats: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
-    (कोर्स A से मिलता-जुलता, लेकिन पुराने छात्रों के लिए और विविध प्रकारों के साथ।)
-  coursed-2017_shortdescription_congrats: जल्दी से कोर्स C से अवधारणाओं को ग्रहण करें,
-    फिर कलन विधियों, नेस्टड लूप्स, सापेक्षों आदि पर जाएं।
-  coursee-2017_shortdescription_congrats: जल्दी से कोर्स C और D में अवधारणाओं को ग्रहण
-    करें और फिर फंक्शन्स के साथ आगे जाएं।
-  coursef-2017_shortdescription_congrats: कंप्यूटर साइंस के मूल सिद्धांतों में सभी
-    अवधारणाएं सीखें और अपनी खुद की कला, कहानी या गेम बनाएं।
-  coursea-2018_shortdescription_congrats: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
-  courseb-2018_shortdescription_congrats: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
-    (कोर्स A से मिलता-जुलता, लेकिन पुराने छात्रों के लिए और विविध प्रकारों के साथ।)
-  coursed-2018_shortdescription_congrats: जल्दी से कोर्स C से अवधारणाओं को ग्रहण करें,
-    फिर कलन विधियों, नेस्टड लूप्स, सापेक्षों आदि पर जाएं।
-  coursee-2018_shortdescription_congrats: जल्दी से कोर्स C और D में अवधारणाओं को ग्रहण
-    करें और फिर फंक्शन्स के साथ आगे जाएं।
-  coursef-2018_shortdescription_congrats: कंप्यूटर साइंस के मूल सिद्धांतों में सभी
-    अवधारणाएं सीखें और अपनी खुद की कला, कहानी या गेम बनाएं।
-  coursea-2019_shortdescription_congrats: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
-  courseb-2019_shortdescription_congrats: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
-    (कोर्स A से मिलता-जुलता, लेकिन पुराने छात्रों के लिए और विविध प्रकारों के साथ।)
-  coursed-2019_shortdescription_congrats: जल्दी से कोर्स C से अवधारणाओं को ग्रहण करें,
-    फिर कलन विधियों, नेस्टड लूप्स, सापेक्षों आदि पर जाएं।
-  coursee-2019_shortdescription_congrats: जल्दी से कोर्स C और D में अवधारणाओं को ग्रहण
-    करें और फिर फंक्शन्स के साथ आगे जाएं।
-  coursef-2019_shortdescription_congrats: कंप्यूटर साइंस के मूल सिद्धांतों में सभी
-    अवधारणाएं सीखें और अपनी खुद की कला, कहानी या गेम बनाएं।
+  coursea_shortdescription_congrats: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+  courseb_shortdescription_congrats: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+    (कोर्स A के समान, लेकिन पुराने छात्रों के लिए अधिक विविधता के साथ।)
+  coursec_shortdescription_congrats: कंप्यूटर साइंस के मूल सिद्धांत सीखें और अपनी
+    खुद की कला, कहानियां या गेम्स बनाएं।
+  coursed_shortdescription_congrats: कोर्स C से अवधारणाओं को जल्दी कवर करते हुए, फिर
+    एल्गोरिदम, नेस्टेड लूप, कंडीशनल्स और बहुत सारों के साथ आगे बढ़ते हैं।
+  coursee_shortdescription_congrats: कोर्स C और D में अवधारणाओं को जल्दी से कवर करें
+    और फिर फंक्शन के साथ आगे बढ़ें।
+  coursef_shortdescription_congrats: कंप्यूटर विज्ञान के बुनियादी बातों में सभी अवधारणाओं
+    को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।
+  coursea-2017_shortdescription_congrats: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+  courseb-2017_shortdescription_congrats: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+    (कोर्स A के समान, लेकिन पुराने छात्रों के लिए अधिक विविधता के साथ।)
+  coursec-2017_shortdescription_congrats: कंप्यूटर साइंस के मूल सिद्धांत सीखें और
+    अपनी खुद की कला, कहानियां या गेम्स बनाएं।
+  coursed-2017_shortdescription_congrats: कोर्स C से अवधारणाओं को जल्दी कवर करते हुए,
+    फिर एल्गोरिदम, नेस्टेड लूप, कंडीशनल्स और बहुत सारों के साथ आगे बढ़ते हैं।
+  coursee-2017_shortdescription_congrats: कोर्स C और D में अवधारणाओं को जल्दी से कवर
+    करें और फिर फंक्शन के साथ आगे बढ़ें।
+  coursef-2017_shortdescription_congrats: कंप्यूटर विज्ञान के बुनियादी बातों में सभी
+    अवधारणाओं को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।
+  coursea-2018_shortdescription_congrats: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+  courseb-2018_shortdescription_congrats: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+    (कोर्स A के समान, लेकिन पुराने छात्रों के लिए अधिक विविधता के साथ।)
+  coursec-2018_shortdescription_congrats: कंप्यूटर साइंस के मूल सिद्धांत सीखें और
+    अपनी खुद की कला, कहानियां या गेम्स बनाएं।
+  coursed-2018_shortdescription_congrats: कोर्स C से अवधारणाओं को जल्दी कवर करते हुए,
+    फिर एल्गोरिदम, नेस्टेड लूप, कंडीशनल्स और बहुत सारों के साथ आगे बढ़ते हैं।
+  coursee-2018_shortdescription_congrats: कोर्स C और D में अवधारणाओं को जल्दी से कवर
+    करें और फिर फंक्शन के साथ आगे बढ़ें।
+  coursef-2018_shortdescription_congrats: कंप्यूटर विज्ञान के बुनियादी बातों में सभी
+    अवधारणाओं को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।
+  coursea-2019_shortdescription_congrats: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+  courseb-2019_shortdescription_congrats: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+    (कोर्स A के समान, लेकिन पुराने छात्रों के लिए अधिक विविधता के साथ।)
+  coursec-2019_shortdescription_congrats: कंप्यूटर साइंस के मूल सिद्धांत सीखें और
+    अपनी खुद की कला, कहानियां या गेम्स बनाएं।
+  coursed-2019_shortdescription_congrats: कोर्स C से अवधारणाओं को जल्दी कवर करते हुए,
+    फिर एल्गोरिदम, नेस्टेड लूप, कंडीशनल्स और बहुत सारों के साथ आगे बढ़ते हैं।
+  coursee-2019_shortdescription_congrats: कोर्स C और D में अवधारणाओं को जल्दी से कवर
+    करें और फिर फंक्शन के साथ आगे बढ़ें।
+  coursef-2019_shortdescription_congrats: कंप्यूटर विज्ञान के बुनियादी बातों में सभी
+    अवधारणाओं को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।
+  coursea-2020_shortdescription_congrats: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे
+    में बुनियादी बातें सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे
+    आप साझा कर सकते हैं।
+  courseb-2020_shortdescription_congrats: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे
+    में बुनियादी बातें सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे
+    आप साझा कर सकते हैं।
+  coursec-2020_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
+    और सापेक्षों का उपयोग करना सीखें। अपने आद्याक्षरों को युग्मक में रूपांतरित करें,
+    सवाल हल करने की विभिन्न तकनीकों का निरीक्षण करें और जानें कि साइबर बदमाशी का जवाब
+    कैसे देना है। कोर्स के अंत में, अपनी खुद की गेम या कहानी तैयार करें, जिसे आप साझा
+    कर सकें।
+  coursed-2020_shortdescription_congrats: छात्र, लूप्स, सापेक्षों और इवेंट्स के बारे
+    में अपनी समझ विकसित करते हैं। कूटलेखन से आगे, छात्र डिजीटल नागरिकता के बारे में
+    सीखते हैं।
+  coursee-2020_shortdescription_congrats: कलन विधियों, लूप्स, सापेक्षों और इवेंट्स
+    के साथ कूटलेखन करना शुरू करें। इस कोर्स के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट
+    डिज़ाइन करें और बनाएं, जिसे आप अपने दोस्तों व परिवार के साथ साझा कर सकें।
+  coursef-2020_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
+    और सापेक्षों का उपयोग करना सीखें। सवाल हल करने की विभिन्न तकनीकों का निरीक्षण
+    करें और कंप्यूटिंग व इंटरनेट के समाज पर पड़ने पर प्रभावों की चर्चा करें। इस कोर्स
+    के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट डिज़ाइन करें और बनाएं, जिसे आप दोस्तों
+    व परिवार के साथ साझा कर सकें।
   codeorg_longdescription: खींचें और छोड़ें प्रोग्रामिंग के साथ कंप्यूटर साइंस की
     मूल अवधारणाएं सीखें। यह गेम-जैसा, स्व-निर्देशित ट्यूटोरियल है, जिसमें बिल गेट्स,
     मार्क ज़ुकरबर्ग, एंग्री बर्ड्स और प्लांट्स वर्सेज ज़ोम्बीस द्वारा वीडियो लेक्चर
@@ -1625,6 +1710,11 @@ hi-IN:
     काम करता है, और परिणामों को विभिन्न मॉडलिंग प्रयोगों के तौर पर देखने में छात्रों
     की मदद करती है।
   hourofcode_longdescription: नए code.org/hoc के लिए प्लेसहोल्डर
+  frozen_longdescription: आइए ऐना और एल्सा के साथ जुड़ें, जब वे बर्फ के जादू और सुंदरता
+    की पड़ताल करती हैं। आप आइस-स्केटिंग करते समय हिम-पक्षी व पैटर्न और सर्दी का परीलोक
+    बनाएंगे, जिसे आप तब अपने दोस्तों के साथ साझा कर सकते हैं।
+  starwars_longdescription: ड्रॉइड्स प्रोग्राम करना सीखें, और एक दूर, बहुत दूर आकाशगंगा
+    में अपना खुद का स्टार वॉर्स गेम बनाएं।
   playlab_longdescription: प्ले लैब के साथ कहानी तैयार करें या गेम बनाएं! जानवरों,
     समुद्री डाकुओं, ज़ोम्बीज, निंजा और कई अन्य पात्रों को मूव करने, आवाजें करने, अंक
     हासिल करने और यहां तक कि आग के गोले फेंकने के लिए सक्रिय करें!
@@ -1663,6 +1753,7 @@ hi-IN:
   khan_beyond_name: कंप्यूटर प्रोग्रामिंग सीखें
   tynker_beyond_name: घर पर प्रोग्रामिंग सीखें
   scratch_beyond_name: कोडिंग के साथ रचनात्मक बनें
+  kodable_beyond_name: Kodable
   scratchjr_beyond_name: आरंभिक-पाठकों के लिए ScratchJR
   hopscotch_beyond_name: 'Hopscotch: आपके iPad पर प्रोग्रामिंग'
   groklearning_beyond_name: पाइथन प्रोग्रामिंग सीखें
@@ -2010,7 +2101,9 @@ hi-IN:
   header_about: के बारे में
   header_teacher_community: अध्यापक समुदाय
   header_help_support: 'सहायता और समर्थन '
-  header_report_bug: "“समस्या की रिपोर्ट करें”"
+  header_report_bug: समस्या की रिपोर्ट करें
+  header_legal_privacy: गोपनीयता नीति
+  header_legal_tos: सेवा की शर्तें
   header_tutorials: ट्यूटोरियल
   app_lab_documentation: ऐप लैब दस्तावेज
   app_lab_tutorials: ऐप लैब ट्यूटोरियल्स
@@ -2026,8 +2119,12 @@ hi-IN:
   user_header_create: 'बनाएं '
   user_header_applab: 'ऐप लैब '
   user_header_artist: 'कलाकार '
+  user_header_gamelab: गेम लैब
+  user_header_playlab: प्ले लैब
   user_header_dance: डांस पार्टी
-  user_header_minecraft: Minecraft
+  user_header_spritelab: स्प्राइट लैब
+  user_header_minecraft: माइनक्राफ्ट
+  user_header_flappy: फ्लैपी
   user_header_view_all: सभी प्रोजेक्ट देखें...
   user_header_view_project_gallery: प्रोजेक्ट गैलरी देखें
   user_header_view_my_projects: मेरे प्रोजेक्ट देखें
@@ -2081,6 +2178,7 @@ hi-IN:
     पर “Google कक्षा से छात्रों को समकालीन करें” बटन पर क्लिक करें।
   google_sign_in_instruct: 'वहां से, आपको “Google खाते के साथ साइन इन करें” विकल्प
     चुनना चाहिए:'
+  hero_name: 'Minecraft: हीरो का सफर'
   applab-intro_name: ऐप लैब परिचय
   applab_tile_title: ऐप लैब का परिचय (आयु वर्ग 13+)
   applab_tile_subtitle: ब्लॉक आधारित प्रोग्रामिंग का उपयोग करते हुए JavaScript में
@@ -2088,6 +2186,7 @@ hi-IN:
     स्तर तक ले जाएं। (केवल अंग्रेजी)
   applab_tile_start_tutorial: शुरू करें
   applab_tile_teacher_guide: अध्यापक गाइड देखें
+  aquatic_name: 'Minecraft: समुद्री यात्रा जलचर'
   account_sign_up_email_opt_in: क्या हम आपको हमारे पाठ्यक्रमों में अद्यतन, स्थानीय
     अवसरों या अन्य कंप्यूटर साइंस के बारे में ईमेल भेज सकते हैं? (मोटे तौर पर माह
     में एक बार)
@@ -2097,7 +2196,10 @@ hi-IN:
   hoc_overview_dance_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी को
     कोड करें। इसमें कैटी पेरी, मैडोना, जे, बाल्विन, सिया, कीथ अर्बन, कियारा और 25
     और को पेश करें!
-  hoc_overview_title: Code.org से आवर ऑफ़ कोड गतिविधियां
+  hoc_overview_dance_2019_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी
+    को कोड करें।पेश करते हैं कैटी पेरी, शॉन मेंडेस, पैनिक को! डिस्को, लिल नास एक्स,
+    जोनास ब्रदर्स, निकी मिनाज और 34 और में!
+  hoc_overview_title: ऑवर ऑफ़ कोड गतिविधियां code.org के तरफ से
   hoc_overview_subtitle: <a href="https://hourofcode.com">आवर ऑफ़ कोड</a> एक वैश्विक
     अभियान है, जो 180 से अधिक देशों में लाखों छात्रों तक पहुंच रहा है। कोई भी, कहीं
     भी आवर ऑफ़ कोड इवेंट आयोजित कर सकता है या 200 से अधिक एक-घंटे के ट्यूटोरिल्स को
@@ -2134,7 +2236,11 @@ hi-IN:
     यात्रा जलचर के लिए हमारी बिल्कुल नई Minecraft गतिविधि देखें! आज ही अपनी कक्षा
     को साइन अप करें।
   hoc2018_mc_aquatic_title: 'Minecraft: समुद्री यात्रा जलचर'
+  hoc2018_mc_aquatic_description: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड
+    के लिए लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
   hoc2018_mc_hero_title: Minecraft Hour of Code
+  hoc2018_mc_hero_description: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड के
+    लिए लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
   hoc2018_mc_designer_title: Minecraft डिज़ाइनर
   hoc2018_mc_designer_description: Minecraft के आपके खुद के संस्करण में जानवरों और
     अन्य Minecraft प्राणियों को प्रोग्राम करें।
@@ -2171,13 +2277,14 @@ hi-IN:
   hoc2018_mc_video_2min: 2 मिनट
   hoc2018_mc_video_3min: 3 मिनट
   hoc2018_mc_video_5min: 5 मिनट
-  hoc2018_mc_video_title_steph_curry: स्टेफ करी के साथ आवर ऑफ़ कोड
-  hoc2018_mc_video_title_sports: खुद को प्रेरित करें। कोई भी सीख सकता है।
-  hoc2018_mc_video_title_inspire_girl: किसी लड़की को प्रेरित करें
-  hoc2018_mc_video_title_cs_intro: कंप्यूटर साइंस का परिचय
-  hoc2018_mc_video_title_schools_dont_teach: जो अधिकतर स्कूल नहीं पढ़ाते
-  hoc2018_mc_video_title_obama: कंप्यूटर साइंस के बारे में राष्ट्रपति ओबामा
-  hoc2018_mc_video_title_hoc_is_here: आवर ऑफ़ कोड यहां है - कोई भी सीख सकता है
+  hoc2018_mc_video_title_steph_curry: ऑवर ऑफ़ कोड स्टेप करी के साथ
+  hoc2018_mc_video_title_sports: अपने आप को पुश करें। कोई भी सीख सकता है।
+  hoc2018_mc_video_title_cs_is_everything: कंप्यूटर साइंस सब कुछ बदल रहा है
+  hoc2018_mc_video_title_inspire_girl: एक लड़की को प्रेरित करें
+  hoc2018_mc_video_title_cs_intro: कंप्यूटर साइंस इंट्रो
+  hoc2018_mc_video_title_schools_dont_teach: जो अधिकांश स्कूलों मे नहीं पढ़ाया जाता
+  hoc2018_mc_video_title_obama: राष्ट्रपति ओबामा कंप्यूटर विज्ञान के संबंध मे
+  hoc2018_mc_video_title_hoc_is_here: ऑवर ऑफ़ कोड यहां है - कोई भी सीख सकता है
   hoc2018_mc_video_title_anybody_can_learn: कोई भी सीख सकता है
   hoc2018_mc_video_title_my_name_is_aracely: मेरा नाम अरासेली है
   hoc2018_mc_homepage_hoc_coming: आवर ऑफ़ कोड आ रहा है...
@@ -2188,6 +2295,9 @@ hi-IN:
   hoc2018_mc_homepage_watch_video: हमारा वीडियो देखें
   hoc2018_mc_homepage_join_us: हमसे जुड़ें
   hoc2018_mc_homepage_try_it: कर के देखे
+  hoc2018_mc_back: Minecraft आवर ऑफ़ कोड की बिल्कुल नई गतिविधि के साथ लौट आया है!
+  hoc2018_mc_back_journey: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड के लिए
+    लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
   hoc2018_mc_teacher_guide: अध्यापक गाइड देखें
   hoc2018_mc_minecraft_education: 'Minecraft शिक्षा '
   hoc2018_mc_continue_learning: Minecraft के साथ सीखना जारी रखें।
@@ -2208,24 +2318,24 @@ hi-IN:
   hoc2018_dance_party_specs: भाषा | फॉर्मैट | आयु 6-106
   hoc2018_dance_party_button: शुरू करें
   hoc2018_dance_keep_on_dancing_box_title: डांस करते रहें
-  hoc2018_dance_keep_on_dancing_description: विस्तृत परियोजना योजनाओं के साथ पहले
-    घंटे से आगे जाएं।
+  hoc2018_dance_keep_on_dancing_description: विस्तारित प्रोजेक्ट विचारों के साथ पहले
+    घंटे से आगे बढ़ें।
   hoc2018_dance_keep_on_dancing_specs: भाषा | फॉर्मैट | आयु 13+
-  hoc2018_dance_keep_on_dancing_button: भाग 2 शुरू करें
-  hoc2018_dance_teacher_resources_title: अध्यापक संसाधन
+  hoc2018_dance_keep_on_dancing_button: स्टार्ट पार्ट 2
+  hoc2018_dance_teacher_resources_title: शिक्षक संसाधन
   hoc2018_dance_teacher_resources_tile1_description: पाठ योजनाएं, प्रमाण-पत्र और संगीत
     की छंटाई।
   hoc2018_dance_teacher_resources_tile1_button: पाठ योजना
   hoc2018_dance_teacher_resources_tile2_title: डांस पार्टी अनप्लगड
-  hoc2018_dance_teacher_resources_tile2_description: कोई कंप्यूटर नहीं चाहिए! साथ
-    में डांस पार्टी को कोरियोग्राफ करने के लिए कोडिंग धारणाएं सीखें।
-  hoc2018_dance_teacher_resources_tile2_button: अनप्लग की गई गतिविधि
-  hoc2018_dance_featured_student_creations_title: पेश की गईं विद्यार्थियों की रचनाएं
+  hoc2018_dance_teacher_resources_tile2_description: कोई कंप्यूटर की आवश्यकता नहीं
+    है! डांस पार्टी को एक साथ कोरियोग्राफ करने के लिए कोडिंग अवधारणाओं को जानें।
+  hoc2018_dance_teacher_resources_tile2_button: अनप्लग्ड एक्टिविटी
+  hoc2018_dance_featured_student_creations_title: चुनिंदा छात्र रचना
   hoc2018_dance_videos_section_heading: प्रेरणा लें
   hoc2018_dance_video_title_what_is_creativity: रचनात्मकता क्या है?
   hoc2018_dance_view_creativity_video_playlist: रचनात्मकता क्या है? पूरी सीरीज देखें
     (5 मिनट)
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: इनके साथ साझेदारी में
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: साझेदारी में साथ
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
     Engineer* कम-आय वाले तथा सुविधाओं से वंचित अन्य बच्चों व युवाओं को कंप्यूटर साइंस
     में कैरियर बनाने के लिए प्रेरित करने, शिक्षित व प्रशिक्षित करने के लिए एक व्यापक
@@ -2251,6 +2361,7 @@ hi-IN:
     के लिए प्रति वर्ष $10,000 तक की छात्रवृत्तियों की पेशकश कर रहा है, जिन्होंने सफलतापूर्वक
     AP CS कोर्स पूरा कर लिया है या इस समय इस कोर्स में नामांकित हैं और अमेरिका में
     4-वर्षीय कॉलेज या यूनिवर्सिटी में CS डिग्री के लिए पढ़ाई करना चाहते हैं।
+  hoc2018_dance_amazon_scholarship_programs_button: अभी अप्लाई करें
   hoc2018_dance_amazon_internships_title: Amazon पर इंटर्न बनें
   hoc2018_dance_amazon_internships_description: गर्मी 2019 Amazon Future Engineer
     इंटर्नशिप्स के लिए आवेदन अब शुरू हो गए हैं। इंटर्न्स नई विशेषताओं की खोज करने
@@ -2260,9 +2371,9 @@ hi-IN:
   hoc2018_dance_amazon_internships_button: इंटर्नशिप ढूंढें
   hoc2018_dance_amazon_k8_programs_title: K-8 प्रोग्राम
   hoc2018_dance_amazon_funding_title: अपनी CS डिग्री के लिए फंड प्राप्त करें
-  hoc2018_dance_amazon_future_engineer_footer: "* जिन कलाकारों का संगीत इस ट्यूटोरियवल
-    में उपयोग किया गया है, वे Code.org के लिए अपने संगीत के उपयोग की लाइसेसिंग के
-    भाग के तौर पर Amazon को प्रायोजित या पृष्ठांकित नहीं कर रहे हैं।\n\n"
+  hoc2018_dance_amazon_future_engineer_footer: "* जिन कलाकारों का संगीत इस ट्यूटोरियल
+    में उपयोग किया गया है, Code.org में उनके संगीत के लाइसेंसिंग उपयोग के भाग के रूप
+    में वे अमेज़ॅन को प्रायोजित या समर्थन नहीं कर रहे हैं।\n\n"
   hoc2018_dance_measure: संगीत प्रविधि
   hoc2018_dance_measure_colon: 'संगीत प्रविधि:'
   hoc2018_aquatic_video1: 'Minecraft: समुद्री यात्रा जलचर - परिचय'
@@ -2278,7 +2389,19 @@ hi-IN:
   page_not_found_description: जो पृष्ठ आप खोज रहे हैं, वह इस पते पर मौजूद नहीं है।
     वेब पता देखें और दुबारा प्रस्तुत करें। या, हमारे मुख्य पृष्ठ पर जाएं
   page_not_found_button: मुख्य पृष्ठ पर वापस जाएं
-  hoc2018_mc_with_microsoft: इनके साथ साझेदारी में
+  hoc2018_mc_with_microsoft: साझेदारी में साथ
   hoc2018_mc_thank_microsoft: हम Microsoft का धन्यवाद करते हैं कि उन्हें यह सुनिश्चित
     करने के हमारे दृष्टिकोण और उद्देश्य को सहयोग किया कि प्रत्येक बच्चे के पास कंप्यूटर
     साइंस सीखने और 21वीं सदी में सफल होने के लिए कौशल हों।
+  homepage_slot_text_title_at_home: 'घर पर सीखें
+
+'
+  page_not_available_button: मुख्य पृष्ठ पर वापस जाएं
+  footer_powered_by_aws: अमेज़ॅन वेब सर्विसेज द्वारा संचालित
+  codebytes_skinny_banner_english_only: केवल-अंग्रेजी
+  footer_privacy_policy: गोपनीयता नीति
+  footer_about: के बारे में
+  footer_partners: साझेदार
+  footer_donate: दान करे
+  footer_support: सहयोग
+  footer_terms: शर्तें

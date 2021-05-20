@@ -1,50 +1,69 @@
 {
-  "https://studio.code.org/s/csd1-2017/stage/1/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lockable/1/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nThe class works in groups to design aluminum foil boats that will support as many pennies as possible.  At the end of the lesson groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course. \n\n\n## Resources\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      "title": "CS Discoveries Student Pre-Course Survey"
     }
   },
-  "https://studio.code.org/s/csd1-2017/stage/2/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lessons/1/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this lesson you will learn a formal problem solving process that will help you to structure your approach to a wide variety of problems.\n\n\n## Resources\n\n* [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)\n"
+      "markdown": "# Overview\n\nThe class works in groups to design aluminum foil boats that will support as many pennies as possible.  At the end of the lesson groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course. \n\n\n## Resources\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n",
+      "teacher_markdown": "[key]\n\n* [Aluminum Boats - Exemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))\n\n[/key]\n"
     }
   },
-  "https://studio.code.org/s/csd1-2017/stage/3/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lessons/2/levels/1": {
     "dsls": {
-      "markdown": "# Overview\nIn this lesson you'll apply the problem solving process to a variety of problems to explore how each step helps you develop and improve solutions to problems.\n\n## Resources\n\n* [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)\n"
+      "markdown": "# Overview\n\nIn this lesson you will learn a formal problem solving process that will help you to structure your approach to a wide variety of problems.\n\n\n## Resources\n\n* [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)\n",
+      "teacher_markdown": "* [The Problem Solving Process](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Activity Guide ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))\n\n\n"
     }
   },
-  "https://studio.code.org/s/csd1-2017/stage/4/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lessons/3/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this lesson you'll start thinking about how computers help solve certain kinds of problems and learn the key features of every computer.\n\n## Resources\n\n* [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)\n"
+      "markdown": "# Overview\nIn this lesson you'll apply the problem solving process to a variety of problems to explore how each step helps you develop and improve solutions to problems.\n\n## Resources\n\n* [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)\n",
+      "teacher_markdown": "[Solving Problems KEY](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/) - Activity Guide ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))\n"
     }
   },
-  "https://studio.code.org/s/csd1-2017/stage/4/puzzle/2": {
+  "https://studio.code.org/s/csd1-2017/lessons/4/levels/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you'll start thinking about how computers help solve certain kinds of problems and learn the key features of every computer.\n\n## Resources\n\n* [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)\n",
+      "teacher_markdown": "[What is a Computer - Exemplar](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/lessons/4/levels/2": {
     "display_name": "Video: What Makes a Computer, a Computer?"
   },
-  "https://studio.code.org/s/csd1-2017/stage/5/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lessons/5/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this lesson you'll learn about the different types of input and output devices used by computers and the types of information they send and receive.\n\n## Vocabulary\n\n* **Input** - A device or component that allows information to be given to a computer\n* **Output** - Any device or component that receives information from a computer\n\n\n## Resources\n\n* [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)\n"
+      "markdown": "# Overview\n\nIn this lesson you'll learn about the different types of input and output devices used by computers and the types of information they send and receive.\n\n## Vocabulary\n\n* **Input** - A device or component that allows information to be given to a computer\n* **Output** - Any device or component that receives information from a computer\n\n\n## Resources\n\n* [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)\n",
+      "teacher_markdown": "[Input and Output - Exemplar](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))\n\n"
     }
   },
-  "https://studio.code.org/s/csd1-2017/stage/6/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lessons/6/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this lesson you'll learn how processing is used by humans and computers to turn inputs into outputs.\n\n## Vocabulary\n\n* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer\n\n## Resources\n\n* [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+      "markdown": "# Overview\n\nIn this lesson you'll learn how processing is used by humans and computers to turn inputs into outputs.\n\n## Vocabulary\n\n* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer\n\n## Resources\n\n* [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n",
+      "teacher_markdown": "* [Card Sorting Algorithm](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))\n"
     }
   },
-  "https://studio.code.org/s/csd1-2017/stage/7/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lessons/7/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this lesson you'll learn about the kinds of information computers store and how storage is a critical part of processing information.\n\n## Resources\n\n* [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)\n"
+      "markdown": "# Overview\n\nIn this lesson you'll learn about the kinds of information computers store and how storage is a critical part of processing information.\n\n## Resources\n\n* [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)\n",
+      "teacher_markdown": "* [Storage and Processing - Exemplar](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))\n"
     }
   },
-  "https://studio.code.org/s/csd1-2017/stage/8/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lessons/8/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nIn this lesson you will explore the ways apps process different kinds of information in order to solve problems.\n\n## Resources\n\n* [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)\n"
+      "markdown": "# Overview\n\nIn this lesson you will explore the ways apps process different kinds of information in order to solve problems.\n\n## Resources\n\n* [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)\n",
+      "teacher_markdown": "* [App Exploration KEY](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)\n"
     }
   },
-  "https://studio.code.org/s/csd1-2017/stage/9/puzzle/1": {
+  "https://studio.code.org/s/csd1-2017/lessons/9/levels/1": {
     "dsls": {
-      "markdown": "# Overview\n\nFor this project you will design your own app that solves a problem that you get to define.\n\n## Resources\n\n* [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)\n* [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)\n* [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)\n"
+      "markdown": "# Overview\n\nFor this project you will design your own app that solves a problem that you get to define.\n\n## Resources\n\n* [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)\n* [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)\n* [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)\n",
+      "teacher_markdown": "* [Apps and Problem Solving](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))\n* [Apps and Problem Solving](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/lessons/9/levels/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
     }
   }
 }

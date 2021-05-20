@@ -2,77 +2,61 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Table} from 'react-bootstrap';
 import {RegionalPartnerValuePropType} from '../components/regional_partner_dropdown';
+import {CohortCalculatorStatuses} from '@cdo/apps/generated/pd/sharedApplicationConstants';
 import $ from 'jquery';
 
-const styles = {
-  tableWrapper: {
-    float: 'right'
-  }
-};
+export function countAcceptedApplications(applications) {
+  return (applications || []).filter(app =>
+    CohortCalculatorStatuses.includes(app.status)
+  ).length;
+}
 
 export default class CohortCalculator extends React.Component {
   static propTypes = {
     role: PropTypes.string.isRequired,
     regionalPartnerFilterValue: RegionalPartnerValuePropType,
-    accepted: PropTypes.number.isRequired,
-    registered: PropTypes.number.isRequired
+    accepted: PropTypes.number.isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      loading: true,
-      capacity: null,
-      accepted: null,
-      registered: null
+      loadingEnrollmentCount: null,
+      enrolled: null
     };
-    this.loadRequest = null;
   }
 
-  componentWillMount() {
-    this.load(this.props.regionalPartnerFilterValue);
+  componentDidMount() {
+    this.loadData();
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.load(nextProps.regionalPartnerFilterValue);
-  }
-
-  componentWillUnmount() {
-    this.abortLoad();
-  }
-
-  abortLoad() {
-    if (this.loadRequest) {
-      this.loadRequest.abort();
-    }
-  }
-
-  load(regionalPartnerFilterValue) {
-    this.abortLoad();
-    this.setState({loading: true});
-
-    this.loadRequest = $.ajax({
-      method: 'GET',
-      url: `/api/v1/regional_partners/capacity?role=${
-        this.props.role
-      }&regional_partner_value=${regionalPartnerFilterValue}`,
+  getPartnerRegistrationCount(role, regional_partner_value) {
+    return $.get({
+      url: `/api/v1/regional_partners/enrolled?role=${role}&regional_partner_value=${regional_partner_value}`,
       dataType: 'json'
-    }).done(data => {
-      this.setState({
-        loading: false,
-        capacity: data.capacity,
-        accepted: this.props.accepted,
-        registered: this.props.registered
-      });
-      this.loadRequest = null;
     });
   }
 
+  loadData(regionalPartnerFilterValue) {
+    this.setState({loadingEnrollmentCount: true});
+
+    this.getPartnerRegistrationCount(
+      this.props.role,
+      this.props.regionalPartnerFilterValue
+    )
+      .done(data => {
+        this.setState({
+          loadingEnrollmentCount: false,
+          enrolled: data.enrolled
+        });
+      })
+      .fail(() => {
+        this.setState({loadingEnrollmentCount: false});
+      });
+  }
+
   render() {
-    if (this.state.capacity === null) {
-      return null;
-    }
     return (
       <div style={styles.tableWrapper}>
         <Table striped condensed>
@@ -85,20 +69,16 @@ export default class CohortCalculator extends React.Component {
           </thead>
           <tbody>
             <tr>
-              <td>Available Seats</td>
-              <td>{this.state.capacity}</td>
-            </tr>
-            <tr>
               <td>Accepted</td>
-              <td>{this.state.accepted}</td>
-            </tr>
-            <tr>
-              <td>Remaining Capacity</td>
-              <td>{this.state.capacity - this.state.accepted}</td>
+              <td>{this.props.accepted}</td>
             </tr>
             <tr>
               <td>Registered</td>
-              <td>{this.state.registered}</td>
+              <td>
+                {this.state.loadingEnrollmentCount
+                  ? 'Loading...'
+                  : this.state.enrolled || '-'}
+              </td>
             </tr>
           </tbody>
         </Table>
@@ -106,3 +86,9 @@ export default class CohortCalculator extends React.Component {
     );
   }
 }
+
+const styles = {
+  tableWrapper: {
+    float: 'right'
+  }
+};

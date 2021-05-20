@@ -2,11 +2,11 @@ name 'cspu3_assess1_robotpath_exam_prep'
 height '160'
 layout 'wrap'
 
-wrong '<img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">'
-right '<img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">'
-wrong '<img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">'
-wrong '<img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">'
-wrong '<img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">'
+wrong 'https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png'
+right 'https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png'
+wrong 'https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png'
+wrong 'https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png'
+wrong 'https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png'
 
 
 markdown <<MARKDOWN

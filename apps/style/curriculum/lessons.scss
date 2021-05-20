@@ -1,0 +1,66 @@
+@import "font";
+@import "markdown";
+@import "pdf_printing";
+
+@media print {
+  /* we have components that we never want to include in a print view */
+  .lesson-overview-header {
+    display: none;
+  }
+}
+
+
+.activity-section-text {
+  // We only want to apply table styling to the text areas or it will apply on the progression details
+  table {
+    thead {
+      th {
+        border: 1px solid $light_gray;
+      }
+    }
+    tbody {
+      /**
+       * A pattern our curriculum authors often use is to include tables of
+       * slides, where in each row there's a cell with a screenshot of the slide
+       * and a cell with the description.
+       *
+       * Previously, they had been manually styling each screenshot with a
+       * border. To replicate this functionality, we say that every image which
+       * is an "only child" (ie, every image that's in a cell all by itself)
+       * should have a border. If at some point in the future this ends up
+       * styling images we _don't_ want to be styled, we could find a more
+       * precise way to implement this.
+       */
+      img:only-child {
+        border: 1px solid $black;
+      }
+      td {
+        padding: 10px;
+        border: 1px solid $light_gray;
+      }
+    }
+  }
+
+  // "slide" icons
+  .fa.fa-list-alt {
+    color: $purple;
+  }
+}
+
+.lessons-dropdown {
+ .Select-menu, .Select-menu-outer {
+    z-index: 3000
+  }
+}
+
+.modal .level-details {
+  a {
+    color: $link_color;
+    font-family: $gotham-regular, sans-serif;
+    font-weight: normal;
+    &:hover {
+      color: $link_color;
+      background: none;
+    }
+  }
+}

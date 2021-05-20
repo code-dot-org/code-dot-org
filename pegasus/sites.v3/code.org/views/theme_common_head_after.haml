@@ -2,16 +2,16 @@
 =view :old_ie
 =view :jquery
 
-- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env}")
+- cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]
 - user_type = "student" if user_type == "student_y"
 
 %script=view 'google_analytics.js', user_type: user_type
 
 -# webpack-runtime.js must appear exactly once on any page containing webpack entries
-%script{src: minifiable_asset_path('js/webpack-runtime.js')}
-%script{src: minifiable_asset_path('js/vendors.js')}
-%script{:defer => "defer", src: minifiable_asset_path("js/code.org/views/theme_common_head_after.js")}
+%script{src: webpack_asset_path('js/webpack-runtime.js')}
+%script{src: webpack_asset_path('js/vendors.js')}
+%script{:defer => "defer", src: webpack_asset_path("js/code.org/views/theme_common_head_after.js")}
 
-- if header['chart']
+- if @header['chart']
   %script{src:'https://www.google.com/jsapi'}

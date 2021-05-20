@@ -1,37 +1,38 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
 
-stage 'Unit 1 Assessment 1 - Binary and Ascii ', lockable: true
+lesson 'Unit 1 Assessment 1 - Binary and Ascii ', display_name: 'Unit 1 Assessment 1 - Binary and Ascii ', lockable: true, has_lesson_plan: false
 level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep', assessment: true
 
-stage 'Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc', lockable: true
+lesson 'Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc', display_name: 'Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc', lockable: true, has_lesson_plan: false
 level 'CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep', assessment: true
 
-stage 'Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression', lockable: true
+lesson 'Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression', display_name: 'Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression', lockable: true, has_lesson_plan: false
 level 'CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep', assessment: true
 
-stage 'Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts', lockable: true
+lesson 'Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts', display_name: 'Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts', lockable: true, has_lesson_plan: false
 level 'CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep', assessment: true
 
-stage 'Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction', lockable: true
+lesson 'Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction', display_name: 'Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction', lockable: true, has_lesson_plan: false
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep', assessment: true
 
-stage 'Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption', lockable: true
+lesson 'Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption', display_name: 'Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption', lockable: true, has_lesson_plan: false
 level 'CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep', assessment: true
 
-stage 'Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review', lockable: true
+lesson 'Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review', display_name: 'Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review', lockable: true, has_lesson_plan: false
 level 'CSP Unit 5 Cumulative Assessment 1 MC_exam_prep', assessment: true
 
-stage 'Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings', lockable: true
+lesson 'Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings', display_name: 'Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings', lockable: true, has_lesson_plan: false
 level 'CSP Unit 5 Cumulative Assessment 2 MC_exam_prep', assessment: true
 
-stage 'Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists', lockable: true
+lesson 'Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists', display_name: 'Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists', lockable: true, has_lesson_plan: false
 level 'CSP Unit 5 Cumulative Assessment 3 MC_exam_prep', assessment: true
 
-stage 'Unit 5 Assessment 4 - List Algorithms, Functions with Return Values', lockable: true
+lesson 'Unit 5 Assessment 4 - List Algorithms, Functions with Return Values', display_name: 'Unit 5 Assessment 4 - List Algorithms, Functions with Return Values', lockable: true, has_lesson_plan: false
 level 'CSP Unit 5 Cumulative Assessment 4 MC_exam_prep', assessment: true
 
-stage 'Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)', lockable: true
+lesson 'Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)', display_name: 'Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)', lockable: true, has_lesson_plan: false
 level 'CSP Cumulative Assess A_exam_prep', assessment: true
+

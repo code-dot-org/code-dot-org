@@ -3,13 +3,16 @@ peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
 
-stage 'Deeper Learning Overview', flex_category: 'required'
+lesson_group 'required', display_name: 'Overview'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview', has_lesson_plan: false
 level 'deeper learning', progression: 'Background'
 level 'csp deeper learning timeline', progression: 'Deadlines and Payment'
 level 'deeper learning recommendations- csp', progression: 'Resource Recommendations'
 level 'peer review recommendations', progression: 'Guidelines For Peer Review'
 
-stage 'Complete Unit 3 Deeper Learning Reflections'
+lesson_group 'content', display_name: 'Content'
+lesson 'Complete Unit 3 Deeper Learning Reflections', display_name: 'Complete Unit 3 Deeper Learning Reflections', has_lesson_plan: false
 level 'csp3dlp-lessons', progression: 'Lesson Connections and Philosophy'
 level 'csp3dlp-tools', progression: 'Tool Philosophy and Use'
 level 'csp3dlp-assessment', progression: 'Assessment'
+

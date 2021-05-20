@@ -68,15 +68,15 @@ export default class GoogleChart {
    *        are column names.
    * @param {string[]} columnList - Ordered list of column names to use as source
    *        data for the chart.  Column names must match keys in rawData.
-   * @param {Object} options - Plain options object that gets passed through to
+   * @param {Object} options - Optional plain options object that gets passed through to
    *        the Charts API.
    * @returns {Promise} that resolves when the chart has been rendered to the
    *          target container.
    */
-  async drawChart(rawData, columnList, options) {
+  async drawChart(rawData, columnList, options = {}) {
     await this.loadDependencies();
 
-    this.verifyData_(rawData, columnList);
+    this.verifyData_({data: rawData, columns: columnList});
     const dataTable = GoogleChart.dataTableFromRowsAndColumns(
       rawData,
       columnList
@@ -103,19 +103,32 @@ export default class GoogleChart {
 
   /**
    * Makes sure data looks okay, throws errors and logs warnings as appropriate.
-   * @param {string[]} columns
-   * @param {Object[]} data
+   * @param {Object} options
+   * @param {Object[]} options.data
+   * @param {string[]} options.columns
+   * @param {number} options.minColumns
+   * @param {number} options.maxColumns
    * @private
    */
-  verifyData_(data, columns) {
+  verifyData_(options) {
+    let {data, columns, minColumns = 2, maxColumns} = options;
+
     // Warn when no rows are present
     if (data.length === 0) {
       this.warn('No data.');
     }
 
+    if (maxColumns && columns.length > maxColumns) {
+      this.warn(
+        `Too many columns for chart; only using the first ${maxColumns}.`
+      );
+    }
+
     // Error when not enough columns are provided
-    if (columns.length < 2) {
-      throw new Error('Not enough columns for chart; expected at least 2.');
+    if (columns.length < minColumns) {
+      throw new Error(
+        `Not enough columns for chart; expected at least ${minColumns}.`
+      );
     }
 
     // Warn on empty columns?
@@ -135,8 +148,9 @@ export default class GoogleChart {
    */
   static dataTableFromRowsAndColumns(rows, columns) {
     const dataArray = rows.map(row => columns.map(key => row[key]));
+    const columnLabels = columns.map(column => ({label: column}));
     return GoogleChart.lib.visualization.arrayToDataTable(
-      [columns].concat(dataArray)
+      [columnLabels].concat(dataArray)
     );
   }
 
@@ -172,20 +186,33 @@ class PieChart extends GoogleChart {
 
   /**
    *
-   * @param {string[]} columns
-   * @param {Object[]} data
+   * @param {Object} options
    * @private
    * @override
    */
-  verifyData_(data, columns) {
-    super.verifyData_(data, columns);
-
-    if (columns.length > 2) {
-      this.warn('Too many columns for pie chart; only using the first 2.');
-    }
+  verifyData_(options) {
+    options.minColumns = 2;
+    options.maxColumns = 2;
+    super.verifyData_(options);
   }
 }
 GoogleChart.PieChart = PieChart;
+
+class Histogram extends GoogleChart {
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.visualization.Histogram(
+      this.targetDiv_
+    );
+    apiChart.draw(dataTable, options);
+  }
+
+  verifyData_(options) {
+    options.minColumns = 1;
+    options.maxColumns = 1;
+    super.verifyData_(options);
+  }
+}
+GoogleChart.Histogram = Histogram;
 
 /**
  * Google Charts API Bar Chart

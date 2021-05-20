@@ -8,8 +8,8 @@ fr-FR:
   upgrade_ie_message: Code.org supprimera bientôt son support pour Internet Explorer
     8, 9 et 10. Merci de passer à un navigateur moderne.
   upgrade_ie_message_csedweek: CSEdWeek.org supprimera bientôt son support pour Internet
-    Explorer 8, 9 et 10. Merci de passer à un navigateur actuel.
-  upgrade_ie_link: Pour en savoir plus
+    Explorer 8, 9 et 10. Merci de passer à un navigateur récent.
+  upgrade_ie_link: En savoir plus
   en: Informatique/Sciences informatiques
   computer_science_edweek: Semaine de l'enseignement de l’informatique
   csedweek_dates: Du 3 au 9 décembre 2018
@@ -20,16 +20,22 @@ fr-FR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Êtes-vous un professeur d’informatique&#160;? Voir les
     autres ressources de la Semaine de l’enseignement de l’informatique</a>'
+  csedweek_banner_teachers_text: Êtes-vous un professeur d’informatique ? Consultez
+    les autres ressources de la Semaine de l’enseignement de l’informatique
   n_have_learned_an_hoc: "<h1>Essayez une</h1><h2>Heure de Code</h2><h3># servi</h3>"
+  try_hoc_num_served: "<h1>Essayer une</h1><h2> Hour of Code</h2><h3>%{num} données</h3>"
+  try_hoc_num_served_markdown: "# Essayez une\\\\## Hour of Code\\\\### %{num} données
+    #Try an"
   anybody_can_learn: Tout le monde peut apprendre.
   learn_now: Apprenez maintenant
   petition_message: Chaque élève de chaque école devrait avoir la possibilité d'apprendre
     l'informatique.
   petition_sign_message: 'Si tu es d''accord, indique ton nom. Rejoins les # autres
     participants.'
-  petition_sign_message_support: 'Si vous nous soutenez, ajoutez votre nom. Rejoignez
-    # les autres.'
-  petition_join_others: 'Rejoignez # les autres'
+  petition_sign_message_num: Si tu es d'accord, ajoute ton nom et rejoins notre boîte
+    d'information avec les %{num} autres.
+  petition_join_others: 'Rejoindre # autres'
+  petition_join_others_num: Rejoindre les %{num} autres
   name: Nom
   email: E-mail
   zipcode: Code postal ou pays
@@ -38,19 +44,18 @@ fr-FR:
   twentyhours_text: Première Heure de Code complétée&#160;? Découvrez les concepts
     de l’informatique et de la programmation avec ce cours d’approfondissement.
   og_title: Chaque enfant mérite une opportunité
-  og_title_soon: L'Heure de Code arrive
-  og_title_here: L'Heure du Code est ici!
+  og_title_soon: L'Heure de Code est en cours de préparation...
+  og_title_here: Hour of Code est arrivée !
   og_description: Chaque élève de chaque école mérite une opportunité d'étudier l'informatique.
-  og_description_celeb: Essayez les nouveaux tutoriels, gagnez une conversation avec
-    une célébrité pour vous ou pour votre classe!
+  og_description_celeb: Essaie les nouveaux tutoriels. Gagne une conversation vidéo
+    avec une célébrité pour toi ou ta classe !
   csedweek_og_title: L'heure du code arrive
-  csedweek_og_description: L’heure de Code est un mouvement mondial qui touche des
-    dizaines de millions d’étudiants de tous âges dans plus de 180 pays et plus de
-    45 langues.
-  csedweek_og_description_soon: L'Heure de Code arrive du3 au 9 décembre 2018. L'informatique
-    est un apprentissage indispensable pour chaque élève.
-  csedweek_og_description_here: L'Heure de Code a lieu ici. L'informatique est un
-    apprentissage indispensable pour chaque élève.
+  csedweek_og_description: L’informatique est fondamentale pour l’apprentissage de
+    chaque étudiant.
+  csedweek_og_description_soon: Hour of Code sera là, du 3 au 9 décembre 2018. L'informatique
+    est un apprentissage fondamental pour chaque élève.
+  csedweek_og_description_here: Hour of Code est arrivée. L'informatique est un apprentissage
+    fondamental pour chaque élève.
   hoc2014_heading: Rejoignez l'<a href="http://hourofcode.com">Heure de Code</a><br/>Du
     8 au 14 décembre 2014<br/>
   hoc2014_students: Élèves
@@ -62,12 +67,14 @@ fr-FR:
   hoc2014_whatishoc: Qu'est-ce que l'Heure de Code&#160;?
   csedweek_map_header: "# Semaine de l'enseignement de l’informatique / les évènements
     de l’Heure de Code dans le monde entier"
+  csedweek_map_header_num: "%{num} Semaine de l'enseignement de l’informatique / les
+    événements de Hour of Code dans le monde entier"
   csedweek_map_signup: Inscrivez votre évènement
   csedweek_map_search_placeholder: Recherchez les évènements Heure de Code
   csedweek_map_search_search: Rechercher
   csedweek_map_search_reset: Réinitialiser
   csedweek_map_legend_title: Légende
-  csedweek_map_legend_event: Événement Heure de Code
+  csedweek_map_legend_event: Événement Hour of Code
   csedweek_map_legend_cs_tech_jam: Événement spécial
   cded_sign_up: Inscription
   cded_try_it: Participez
@@ -99,9 +106,9 @@ fr-FR:
   congratulations_on_completing_hoc: Nous te félicitons d’avoir terminé une Heure
     de Code !
   congratulations_volunteer: 'Félicitations : Maintenant que vous avez essayé une
-    Heure de Code, <a href="https://code.org/volunteer">inscrivez-vous pour faire
-    du bénévolat dans une salle de classe</a> et aidez les élèves à apprendre une
-    Heure de Code !'
+    Hour of Code, <a href="https://code.org/volunteer">inscrivez-vous pour faire du
+    bénévolat dans une salle de classe</a> et aidez les élèves à apprendre une Hour
+    of Code !'
   congratulations_on_completing_course: Félicitations, vous avez terminé %{course}
   congrats_next_tutorials_title: Essaie ensuite ces tutoriels
   congrats_next_tutorials_desc: Essaie ces plus courts tutoriels d’une heure seulement
@@ -123,11 +130,11 @@ fr-FR:
     sites web
   third_party_gradelevel_kto8: École primaire et collège
   third_party_gradelevel_kto2: De l'école maternelle jusqu'au CE1
-  third_party_gradelevel_2to8: Du CE1 jusqu'en 4ème
-  third_party_gradelevel_4to12: Du CM1 jusqu'en terminale
+  third_party_gradelevel_2to8: 'Du CE1 à la 4ème '
+  third_party_gradelevel_4to12: Du CM1 à la terminale
   third_party_gradelevel_5to12: Du CM2 jusqu'en terminale
-  third_party_gradelevel_6plus: 6ème ou plus
-  third_party_gradelevel_8plus: 4ème ou plus
+  third_party_gradelevel_6plus: 6ème et plus
+  third_party_gradelevel_8plus: 4ème et plus
   third_party_platform_all: 'Plateforme : Web, iPad & Android'
   third_party_platform_mobile: 'Plateforme : iPad & Android'
   third_party_platform_web: 'Plateforme : Web'
@@ -137,53 +144,54 @@ fr-FR:
   third_party_price_individual: 'Prix individuel : Essai gratuit & 25 $/mois'
   third_party_price_school: 'Prix pour les écoles : Plans gratuits & Pro à 2500+ $'
   third_party_tynker_desc: La plateforme informatique créative de Tynker aide les
-    enfants à développer leur pensée algorithmique et leurs compétences en programmation
+    enfants à développer leur pensée informatique et leurs compétences en programmation
     de manière amusante, intuitive et imaginative. Notre langage de programmation
-    visuelle innovant, nos cours interactifs suivis au rythme souhaité, et les activités
-    de programmation basées sur les jeux permettent des débuts faciles dans la programmation,
-    et habilitent les enfants à innover et à créer.
-  third_party_tynker_btn_curriculum: Essaie le cours de Tynker pour les lecteurs novices
+    visuelle innovant, nos cours interactifs auto-rythmés, et les activités de programmation
+    basées sur le jeu permettent des débuts faciles dans la programmation, et habilitent
+    les enfants à innover et à créer.
+  third_party_tynker_btn_curriculum: Essayez le programme de Tynker pour les Lecteurs
+    Novices
   third_party_tynker_btn_site: Voir Tynker
   third_party_scratchjr_desc: Scratch Jr. est un langage de programmation introductif
     qui permet aux jeunes enfants (de 5 à 7 ans) de créer leurs propres histoires
     et jeux interactifs. Les enfants emboîtent des blocs de programmation graphiques
-    pour que les personnages se déplacent, sautent, dansent et chantent. Les enfants
+    pour amener des personnages à se déplacer, sauter, danser et chanter. Les enfants
     peuvent modifier les personnages dans l'éditeur d'images, ajouter leurs propres
-    voix et sons, ou encore ajouter des photos d'eux-mêmes — puis utiliser les blocs
-    de programmation pour rendre leurs personnages vivants.
-  third_party_scratchjr_btn_curriculum: Télécharger le cours Scratch Jr.
+    voix et sons, ou encore ajouter des photos d'eux-mêmes - puis utiliser les blocs
+    de programmation pour donner vie à leurs personnages.
+  third_party_scratchjr_btn_curriculum: Télécharger le Programme Scratch Jr.
   third_party_scratchjr_btn_site: Voir Scratch Jr.
-  third_party_scratch_desc: Avec Scratch, tu peux programmer tes propres histoires,
-    jeux et animations interactifs, et partager tes créations avec les autres dans
+  third_party_scratch_desc: Avec Scratch, on peut programmer ses propres histoires,
+    jeux et animations interactifs, et partager les créations avec les autres, dans
     la communauté en ligne. Scratch permet aux jeunes d'apprendre à penser avec créativité,
     à raisonner en termes de systèmes, et à travailler en collaboration — des compétences
     essentielles pour la vie au XXIe siècle.
-  third_party_scratch_btn_curriculum: Télécharger le cours Scratch
-  third_party_scratch_btn_forum: Forum des éducateurs de Scratch
-  third_party_scratch_btn_site: Visiter Scratch
+  third_party_scratch_btn_curriculum: Télécharger le Programme Scratch
+  third_party_scratch_btn_forum: Forum des Éducateurs de Scratch
+  third_party_scratch_btn_site: Voir Scratch
   third_party_lightbot_desc: Dans Lightbot, les élèves doivent programmer un robot
-    avec des commandes pour résoudre des puzzles. Les élèves peuvent jouer au jeu
-    dans le navigateur (ce qui nécessite Flash Player), ou sur les appareils Android
-    et iOS. Les élèves jouent à l'ensemble initial de niveaux « basiques » dans Lightbot.
-    Ils apprendront comment dire à l'ordinateur ce qu'il doit faire avec une suite
-    de commandes basiques et découvriront ainsi comment les programmes informatiques
+    avec des commandes pour résoudre des énigmes. Les élèves peuvent jouer au jeu
+    dans le Navigateur (Flash Player est nécessaire), ou sur les appareils Android
+    et iOS. Les élèves jouent à l'ensemble de niveaux « de Base » initial, dans Lightbot.
+    Ils apprendront comment dire à l'ordinateur ce qu'il doit faire, avec une suite
+    de commandes basiques, et découvriront ainsi comment les programmes informatiques
     sont écrits.
-  third_party_lightbot_btn_curriculum: Télécharger le cours Lightbot
+  third_party_lightbot_btn_curriculum: Télécharger le Programme Lightbot
   third_party_lightbot_btn_site: Voir Lightbot
-  third_party_khan_desc: Apprendre à programmer le dessin, l'animation et les jeux
-    en utilisant JavaScript et ProcessingJS, ou apprendre comment créer des pages
-    web avec HTML & CSS. Vous pouvez partager tout ce que vous créez, découvrir ce
-    que d'autres ont créé et apprendre de leurs créations !
+  third_party_khan_desc: Apprends à programmer des dessins, des animations et des
+    jeux en utilisant JavaScript et ProcessingJS, ou apprends comment créer des pages
+    Web avec HTML & CSS. Tu peux partager tout ce que tu crées, découvrir ce que d'autres
+    ont créé et apprendre les uns des autres !
   third_party_khan_btn_learn: Apprendre l'informatique avec Khan Academy
   third_party_khan_btn_forum: Forum d'informatique de Khan Academy
-  third_party_appinv_desc: App Inventor du MIT est un outil de programmation basé
+  third_party_appinv_desc: App Inventor, du MIT, est un outil de programmation basé
     sur les blocs qui permet à tout le monde, même les novices, de commencer à programmer
     et d'élaborer des applications pleinement fonctionnelles pour les appareils Android.
-    Les utilisateurs novices d'App Inventor peuvent créer leur première application
-    prête et lancée en une heure ou moins, et peuvent programmer des applications
-    plus complexes en un temps significativement moins important qu'avec des langages
-    plus traditionnels, basés sur le texte.
-  third_party_appinv_btn_curriculum: Télécharger le cours App Inventor 2
+    Les utilisateurs novices d'App Inventor peuvent créer et lancer leur première
+    application en une heure ou moins, et peuvent programmer des applications plus
+    complexes en un temps significativement moindre qu'avec des langages plus traditionnels,
+    basés sur le texte.
+  third_party_appinv_btn_curriculum: Télécharger le Programme App Inventor 2
   third_party_appinv_btn_forum: Forum d'App Inventor 2
   third_party_appinv_btn_site: Voir App Inventor 2
   third_party_codehs_desc: CodeHS présente les éléments constitutifs de la programmation
@@ -193,39 +201,37 @@ fr-FR:
     développement professionnel. Les élèves autodidactes peuvent obtenir de l'aide
     par un réseau de tuteurs.
   third_party_codehs_btn_try: 'Intro à l''informatique : plus pour les écoles'
-  third_party_codecademy_desc: Nous repensons l'éducation jusqu'à ses fondations.
-    Le web a repensé presque tout — le commerce, les réseaux sociaux, la médecine,
-    etc. Nous construisons l'éducation dont le monde a besoin — la première éducation
-    réellement sur Internet.
-  third_party_codecademy_btn_curriculum: Télécharger le cours Codecademy
-  third_party_codecademy_btn_site: Visitez Codecademy
+  third_party_codecademy_desc: Nous repensons toute l'éducation depuis ses fondations.
+    Le Web a repensé presque tout - le commerce, les réseaux sociaux, la santé, et
+    plus encore. Nous construisons l'éducation dont le monde a besoin - la première
+    éducation véritablement issue du Net.
+  third_party_codecademy_btn_curriculum: Télécharger le Programme Codecademy
+  third_party_codecademy_btn_site: Voir Codecademy
   third_party_organization: Organisation
   third_party_curriculum: Programme
-  third_party_pricing: Prix
+  third_party_pricing: Tarification
   third_party_cost_free: Gratuit pour les étudiants et les enseignants
-  third_party_cost_5permonth: 5$ par mois pour chaque classe
-  third_party_cost_299: 2.99$/téléchargement
-  third_party_cost_free_399: Gratuit à l'essai, puis 399$/classe
-  third_party_cost_free_2: Gratuit à l'essai, puis 2$/élève
-  third_party_cost_free_10: Gratuit à l'essai, puis 9.99$/mois
+  third_party_cost_5permonth: 5$ par mois et par classe
+  third_party_cost_299: 2.99$ par téléchargement
+  third_party_cost_free_399: Gratuit à l'essai, puis 399$ par classe
+  third_party_cost_free_2: Gratuit à l'essai, puis 2$ par élève
+  third_party_cost_free_10: Gratuit à l'essai, puis 9.99$ par mois
   third_party_desc_5_4to8: Approximativement 5 leçons, du CM1 jusqu'en 4ème
-  third_party_desc_10to12_kto3: Approximativement 10 à 12 leçons, de l'école maternelle
+  third_party_desc_10to12_kto3: Approximativement 10 à 12 leçons, de la Maternelle
     au CE2
-  third_party_desc_11_kto5: Approximativement 11 leçons, de l'école maternelle au
-    CM2
-  third_party_desc_10to12_kto5: Environ 10–12 leçons, pour l'école maternelle et la
-    primaire
-  third_party_desc_40_4to8: Plus de 40 leçons, pour les élèves du collège
-  third_party_desc_dozens_kto8: Des dizaines de leçons pour tous les niveaux de l'école
-    primaire et du collège
-  third_party_desc_10to15_3to12: Entre 10 & 15 leçons, pour les élèves du collège
-    et du lycée
-  third_party_desc_25to40_3to12: De 25 à 40 leçons, destinées aux élèves de collège
-    et de lycée
-  third_party_desc_20_2to8: Environ 20 leçons, pour les élèves de l'école primaire
-    et du collège
-  third_party_desc_7to22_5to12: Entre 7 & 22 leçons, pour les élèves du collège et
-    du lycée
+  third_party_desc_11_kto5: Approximativement 11 leçons, de la Maternelle au CM2
+  third_party_desc_10to12_kto5: Approximativement 10 à 12 leçons, pour les élèves
+    de l'école Maternelle au CM2
+  third_party_desc_40_4to8: 'Plus de 40 leçons, pour les élèves du CM1 à la 4ème '
+  third_party_desc_dozens_kto8: 'Des dizaines de leçons pour tous les niveaux de la
+    Maternelle à la 4ème '
+  third_party_desc_10to15_3to12: Entre 10 et 15 leçons, pour les élèves du CE2 à la
+    Terminale
+  third_party_desc_25to40_3to12: De 25 à 40 leçons, destinées aux élèves du CE2 à
+    la Terminale
+  third_party_desc_20_2to8: 'Environ 20 leçons, pour les élèves du CE1 à la 4ème '
+  third_party_desc_7to22_5to12: 'Entre 7 et 22 leçons, pour les élèves du CM2 à la
+    Terminale '
   third_party_desc_20_4to12: Plus de 20 leçons, pour les élèves du collège et du lycée
   enter_valid_age: Merci de sélectionner un âge valide.
   enter_valid_email: Merci de saisir une adresse e-mail valide.
@@ -238,6 +244,19 @@ fr-FR:
   if_you_enjoyed: Si tu as aimé apprendre, demande à des amis d’essayer aussi ! Nous
     voulons que le monde entier apprenne.
   personalize_certificate: Personnalise ton diplôme
+  print_batch_certificates: Imprimez un lot de certificats
+  print_certificates: Imprimer les certificats
+  certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer
+    ton apprentissage."
+  print_ice_art_from_frozen: Imprimer l'art de la glace à partir du tutoriel de La
+    Reine des Neiges
+  want_a_blank_certificate_template: Vous désirez un certificat vierge pour y inscrire
+    le nom de vos élèves ?
+  landscape_recommended_certificates: Il est recommandé de choisir **Paysage** lorsque
+    vous imprimez les certificats.
+  print_one_here_certificates: Imprimez-en un ici.
+  enter_certificate_names: Saisissez jusqu'à 30 noms, **un par ligne**. Une page imprimable
+    avec des certificats personnalisés %{script_name}  sera générée.
   share_achievement: Partage ta réalisation
   beyond_hour_message: Continue avec nos <a href='http://studio.code.org'>autres cours</a>,
     ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>.
@@ -288,23 +307,19 @@ fr-FR:
   just_did_course2: Je viens de finir le Cours 2 — jettes-y un œil ! @codeorg
   just_did_course3: Je viens de finir le Cours 3 — jettes-y un œil ! @codeorg
   just_did_course4: Je viens de finir le Cours 4 — jettes-y un œil ! @codeorg
-  just_did_coursea: Je viens de finir le cours A, venez jeter un oeil! Merci @Microsoft
-    de soutenir @codeorg
-  just_did_courseb: Je viens de finir le cours B, venez jeter un oeil ! Merci @Microsoft
-    de soutenir @codeorg
-  just_did_coursec: Je viens de finir le cours C, venez jeter un oeil ! Merci @Microsoft
-    de soutenir @codeorg
-  just_did_coursed: Je viens de finir le cours D, venez jeter un oeil ! Merci @Microsoft
-    de soutenir @codeorg
-  just_did_coursee: Je viens de finir le cours E, venez jeter un oeil ! Merci @Microsoft
-    de soutenir @codeorg
-  just_did_coursef: Je viens de finir le cours F, venez jeter un oeil ! Merci @Microsoft
-    de soutenir @codeorg
+  just_did_coursea: Je viens de finir le Cours A - venez voir ! @codeorg
+  just_did_courseb: Je viens de finir le Cours B - venez voir ! @codeorg
+  just_did_coursec: Je viens de finir le Cours C - venez voir ! @codeorg
+  just_did_coursed: Je viens de finir le Cours D - venez voir ! @codeorg
+  just_did_coursee: Je viens de finir le Cours E - venez voir ! @codeorg
+  just_did_coursef: Je viens de finir le Cours F - venez voir ! @codeorg
   just_did_accelerated: Je viens de finir le Cours accéléré — jettes-y un œil ! @codeorg
-  just_did_hoc_donor: 'Je viens de finir l''Heure de Code #HourOfCode, venez jeter
-    un œil ! Merci %{donor_twitter} de soutenir @codeorg'
-  just_did_course_donor: Je viens de finir %{course}, venez jeter un œil ! Merci %{donor_twitter}
+  just_did_hoc_donor: 'Je viens de terminer #HourOfCode - venez voir ! (Merci %{donor_twitter}
+    de soutenir @codeorg)'
+  just_did_course_donor: 'Je viens de finir %{course}, venez voir ! Merci %{donor_twitter}
     de soutenir @codeorg
+
+'
   twitter_teach_cs: Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique
     ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/
     pour en savoir plus.
@@ -320,7 +335,7 @@ fr-FR:
   lines_of_code: PLUS DE <b># LIGNES DE CODE</b> ÉCRITES À CE JOUR.
   lines_of_code_alt: "<b>#</b> LIGNES DE CODE ÉCRITES PAR DES ÉLÈVES"
   who_has_done_hoc: 'Qui a fait l''Heure de Code #HourOfCode&#160;? @codeorg'
-  who_has_done_hoc_donor: 'Qui a fini #HeureDeCode? (Merci %{donor_twitter} de supporter
+  who_has_done_hoc_donor: 'Qui a fini #HourofCode ? (Merci %{donor_twitter} de supporter
     @codeorg)'
   hoc_leaderboards: Les classements de l'Heure de Code
   students_and_lines: "%{students} élèves ont fait l’Heure de Code et ont écrit %{lines}
@@ -333,12 +348,12 @@ fr-FR:
     Mariana Alzate, élève de CM2"
   stats_michael: "«&#160;Je n'ai <b>vraiment jamais</b> vu mes élèves aussi enthousiasmés
     d'apprendre.&#160;» — Michael Clark, enseignant"
-  studiobar_title: Explorez <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explore Code Studio
+  studiobar_title: Explorer <a href='http://studio.code.org'> et les cours de Code.org</a>
+  studiobar_title_nolink: Explorer les cours de Code.org
   studiobar_elementary_title: Cours élémentaires
   studiobar_elementary_body: Nos trois nouveaux cours pour l’école primaire
-  studiobar_dance_title: Fête dansante
-  studiobar_dance_body: Créez et partagez votre propre soirée dansante
+  studiobar_dance_title: Soirée Dansante
+  studiobar_dance_body: Crée et partage ta propre Soirée Dansante
   studiobar_hoc_title: L'Heure de Code
   studiobar_hoc_body: Apprends à coder avec Angry Birds
   studiobar_flappy_title: Le code de Flappy
@@ -351,13 +366,14 @@ fr-FR:
   studiobar_donate_body: Un enfant apprend pour chaque dollar que vous donnez.
   studiobar_shop_title: Boutique
   studiobar_shop_body: Casse les stéréotypes. Porte fièrement notre logo.
-  homepage_stats_students: des élèves américains ont un compte sur Code.org
-  homepage_stats_female: de nos élèves sont des femmes
-  homepage_stats_teachers: professeurs utilisent Code.org
-  homepage_stats_hourofcodde: des élèves dans le monde ont essayé l'Heure de Code
-  homepage_stats_policy: états ont changé leur politique pour favoriser l'étude de
-    l'informatique
-  homepage_stats_title: Nous faisons la différence
+  homepage_stats_students: Des étudiants américains ont plusieurs comptes sur Code.org
+  homepage_stats_female: de nos élèves sont du sexe féminin
+  homepage_stats_teachers: Les enseignants utilisent Code.org
+  homepage_stats_hourofcodde: Des millions d'étudiants dans le monde ont essayé l'Heure
+    de Code
+  homepage_stats_policy: Les états ont changé leurs méthodes pour rendre accessible
+    l'informatique.
+  homepage_stats_title: Nous changeons le monde
   homepage_hero_text_malala: "« Je mets au défi toutes les filles de tous les pays
     d'apprendre une Heure de Code » Malala, lauréat du prix Nobel de la Paix"
   homepage_hero_text_susan: "«&#160;Si vous pouvez changer la technologie, vous pouvez
@@ -368,10 +384,8 @@ fr-FR:
     d'apprendre l'informatique. » Sheryl, Directrice des Opérations, Facebook"
   homepage_hero_text_satya: "«&#160;L'informatique peut vous apporter les meilleures
     opportunités du monde.&#160;» Satya, PDG de Microsoft"
-  homepage_hero_text_satya_new: |-
-    &ldquo;L'informatique donne aux étudiants le pouvoir de
-    créer le monde de demain.&rdquo;
-    Satya, CEO de Microsoft
+  homepage_hero_text_satya_new: "&ldquo;L'informatique renforce l'influence \ndes
+    étudiants pour  créer le monde de demain.&rdquo;\nSatya, CEO of Microsoft"
   homepage_hero_text_bosh: "«&#160;Si vous codez, vous pouvez choisir le déroulement
     de votre vie.&#160;» Chris Bosh"
   homepage_hero_text_student1: "«&#160;Ces compétences ont changé mon avenir. Sans
@@ -389,12 +403,11 @@ fr-FR:
     enseignante"
   homepage_hero_text_teacher2: "«&#160;Ce programme à été soutenu par mes élèves qui
     se sont engagés et impliqués à 100%.&#160;» Adam, enseignant"
-  homepage_hero_text_stat_loc: 2,5 millions de filles sont inscrites pour apprendre
-    sur Code Studio
-  homepage_hero_text_stat_students: "#student_count comptes d'élèves sur Code Studio"
-  homepage_hero_text_stat_served: 'L’Heure de Code: #served servis'
-  homepage_hero_hoc_is_coming: L'Heure de Code arrive
-  homepage_hero_hoc_is_here: L'Heure de Code est là
+  homepage_hero_text_stat_loc: 8,5 millions de jeunes filles sont inscrites sur Code.org
+  homepage_hero_text_stat_students: "#student_count Comptes d'étudiants sur Code.org"
+  homepage_hero_text_stat_served: 'L''Heure de Code : "#served exact nombre exact'
+  homepage_hero_hoc_is_coming: L'Heure de Code est en cours de préparation...
+  homepage_hero_hoc_is_here: Clique ici pour faire l'Heure de Code
   homepage_slot_text_hoc: L'Heure de Code
   homepage_slot_text_frozen: La reine des neige avec Anna et Elsa
   homepage_slot_text_teacher: Tableau de bord enseignant
@@ -404,73 +417,76 @@ fr-FR:
   homepage_slot_text_flappy: Flappy l'oiseau
   homepage_action_text_hoc: Une Heure de Code pour chaque élève.
   homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: Rejoignez-nous
+  homepage_action_text_join_us: Rejoins-nous
   homepage_action_text_sign_up: Inscription
   homepage_action_text_try_it: Participez
-  homepage_action_text_volunteers: Bénévoles techniques recherchés
+  homepage_action_text_volunteers: Nous  recherchons des bénévoles avec une large
+    variété de compétences en informatique.
   homepage_action_text_codevideo: Voir la vidéo
   homepage_action_text_teachervideo: Voir la vidéo
   homepage_action_text_watchvideo: Voir la vidéo
-  homepage_action_text_girlvideo: Encourager une fille
-  homepage_action_text_learn: Commencer à apprendre
+  homepage_action_text_girlvideo: Donner l'envie d'apprendre aux jeunes filles
+  homepage_action_text_learn: Commencer la leçon
   homepage_action_text_signpetition: Signez la pétition
-  homepage_action_text_wincelebritychat: Gagnez un chat avec une célébrité
+  homepage_action_text_wincelebritychat: Gagne une conversation vidéo avec une célébrité
   homepage_signpetition_dropdown: Je suis d'accord ▾
+  homepage_signpetition_dropdown_text: J'accepte
   homepage_diversity_pledge: Prendre l'engagement de diversité
   homepage_banner_text_prizes: L’Heure de Code revient du 7 au 13 décembre.
   homepage_banner_link_prizes: Rejoins le plus grand évènement d'apprentissage de
     l’histoire.
-  homepage_banner_text_main: Code.org et le College Board s’associent pour améliorer
-    la diversité en informatique.
-  homepage_banner_text_link: Pour en savoir plus
+  homepage_banner_text_main: Code.org et le College Board s'associent pour apporter
+    plus de diversité dans le monde informatique.
+  homepage_banner_text_link: En savoir plus
   homepage_banner_privacy_link: Pour en savoir plus
   homepage_banner_20k_teachers: 20 000 enseignants formés enseignant maintenant l'informatique
     dans les classes.
-  homepage_banner_20k_teachers_link: Pour en savoir plus
+  homepage_banner_20k_teachers_link: En savoir plus
   homepage_banner_congress: Les leaders de l’Amérique font appel au Congrès pour financer
     le programme d'informatique K-12.
   homepage_banner_congress_link: Ajouter votre support
-  homepage_banner_emailprivacy: Nous faisons un changement majeur sur comment nous
-    soutenons la confidentialité de l'étudiant.
+  homepage_banner_emailprivacy: Nous mettons beaucoup d'effort à la protection de
+    vos données.
   homepage_banner_emailprivacy_link: Lire la suite
-  homepage_banner_40k_teachers_link: Pour en savoir plus
+  homepage_banner_40k_teachers_link: En savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
   homepage_slot_text_link_about_hoc: À propos de l'Heure de Code
   homepage_slot_text_link_host: Héberger une Heure de Code
   homepage_slot_text_link_hocserved: "# servi"
-  homepage_solot_text_link_volunteer: Soyez bénévole pour l’Heure de Code
+  homepage_solot_text_link_volunteer: Devenir bénévole pour l'Heure de Code
   homepage_slot_text_title_students: Élèves
   homepage_slot_text_blurb_students: Découvrez l'ensemble de nos tutoriels
   homepage_slot_text_blurb_students_courses: Explorer nos cours
-  homepage_slot_text_link_codestudio: Essaie le Code Studio
+  homepage_slot_text_link_codestudio: Essaie Code Studio
   homepage_slot_text_link_local: Trouvez un cours près de chez vous
   homepage_slot_text_link_othercourses: Autres cours en ligne
-  homepage_slot_text_title_educators: Éducateurs
+  homepage_slot_text_title_educators: Enseignants
   homepage_slot_text_blurb_educators: Enseignez à vos élèves
   homepage_slot_text_link_elementary: École primaire
   homepage_slot_text_link_middle: Collège
   homepage_slot_text_link_high: Lycée
-  homepage_slot_text_link_k5: Cours pour les classes de CM2
+  homepage_slot_text_link_k5: Cours de la petite section à la CM2
   homepage_slot_text_link_fullcurriculum: Consulter notre programme complet
-  homepage_slot_text_link_pd: Journée pédagogique
-  homepage_slot_text_title_advocates: Défenseurs
-  homepage_slot_text_blurb_advocates: Soutenir la diversité dans le calcul
+  homepage_slot_text_link_pd: Développement professionnel
+  homepage_slot_text_title_advocates: Les enseignants, les contributeurs dans le domaine
+    de l'informatique.
+  homepage_slot_text_blurb_advocates: Soutenir la diversité dans l’informatique
   homepage_slot_text_link_stats: Afficher les statistiques
-  homepage_slot_text_link_buy: S'impliquer
+  homepage_slot_text_link_buy: S'investir
   homepage_slot_text_link_donate: Faire un don
-  homepage_slot_text_link_shop: T-shirts, chapeaux, & plus
-  homepage_slot_text_link_administrators: Amener l'informatique dans votre école
-  homepage_gallery_header: Plus de %{project_count} millions de projets créés sur
-    Code.org
+  homepage_slot_text_link_shop: T-shirts, casquettes & plus
+  homepage_slot_text_link_administrators: Créer une classe d'informatique dans votre
+    école
+  homepage_gallery_header: Des %{project_count} millions de projets créés sur Code.org
   homepage_header_donors: Code.org remercie tout ceux qui l'ont soutenu
   homepage_donors_seall: Tout afficher
   homepage_donors_donate: Faire un don
-  homepage_below_hero_announcement_text: La protection de votre vie privée est importante
-    pour nous et nous faisons quelques mises à jour dans notre politique de confidentialité,
-    qui entreront en vigueur le 25 mai.
-  homepage_below_hero_announcement_link_text: Pour en savoir plus
+  homepage_below_hero_announcement_text: La protection de votre vie privée est l'une
+    de nos priorités et nous faisons réguliérement des mises à jour de notre politique
+    de confidentialité, appliquée depuis le 25 Mai.
+  homepage_below_hero_announcement_link_text: En savoir plus
   contact_form_topic_student: Je suis un élève
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis enseignant/éducateur
@@ -513,8 +529,8 @@ fr-FR:
   class_submission_level_college: Université
   class_submission_level_vocational: Professionnelle
   class_submission_languages_other: Autre(s) langue(s)
-  videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos inspirantes</a>
-    qui comprennent des modèles et de célébrités
+  videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos qui inspirent</a>
+    et qui font intervenir des modèles de référence et des célébrités
   careers_page_more: Plus de <a href='%{careers_url}' target='_blank'> vidéos inspirational</a>
     mettant en vedette les professionnels dans les domaines de la technologie
   playlab_choose_theme: Choisis ton thème de Labo de jeux
@@ -522,18 +538,17 @@ fr-FR:
   playlab_gumball_title: Le monde incroyable de Gumball
   playlab_iceage_title: L’âge de Glace - Bientôt disponible
   playlab_iceage_title_live: L’âge de Glace
-  starwars_subtitle: Construire une galaxie avec du code
+  starwars_subtitle: Construire une Galaxie Avec du Code
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Utiliser les blocs «&#160;Glisser-Déposer&#160;»
-    et JavaScript.
-  starwars_javascript_specs: En anglais seulement | Navigateurs modernes | 11 ans
-    et +
+  starwars_javascript_description: Utiliser les blocs glisser-déposer et JavaScript.
+  starwars_javascript_specs: En anglais seulement | Navigateurs récents | 11 ans et
+    plus
   starwars_blocks_title: Blocs
-  starwars_blocks_description: Utilise les blocs « Glisser-Déposer ».
+  starwars_blocks_description: Utiliser les blocs glisser-déposer.
   starwars_blocks_specs: Multi-langues | Navigateurs modernes, smartphones, tablettes
     | de 6 à 106 ans
   starwars_platform_text: Navigateurs récents, smartphones, tablettes
-  mc_name: Heure de Code Minecraft
+  mc_name: Hour of Code Minecraft
   mc_longdescription: Utilise des blocs de code pour emmener Steve ou Alex vivre une
     aventure dans le monde de Minecraft.
   mc_shortdescription: Utilise des blocs de code pour vivre une aventure dans le monde
@@ -541,7 +556,7 @@ fr-FR:
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs récents, smartphones, tablettes
   mc_specs: Plusieurs langages | Navigateurs modernes et tablettes | De 6 à 106 ans
-  minecraft_agent: 'Minecraft : Voyage du héros'
+  minecraft_agent: 'Minecraft : Le Voyage du Héros'
   minecraft_designer: Concepteur de Minecraft
   minecraft_adventurer: Aventurier de Minecraft
   minecraft_tutorials: Minecraft heure de Code tutoriels
@@ -560,48 +575,47 @@ fr-FR:
   minecraft_no_internet: Pas d'internet ?
   minecraft_download_adventurer: Télécharger la version offline de Minecraft aventurier.
   minecraft_subtitle: Une Heure de Code Minecraft
-  minecraft_store_camps: Camps d'Heure de Code Minecraft gratuits sur le Microsoft
-    Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Inscrivez-vous</a>
-    aux ateliers Heure de Code Minecraft gratuits sur les Microsoft Stores d'Australie,
-    du Canada, de Puerto Rico ou des États-Unis. Apprendre à coder est pour tout le
-    monde et combine à la fois créativité, résolution de problèmes et beaucoup de
-    plaisir."
-  minecraft_host_event: Accueillir un évènement Heure de Code Minecraft
+  minecraft_store_camps: Camps Hour of Code Minecraft gratuits sur le Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Inscris-toi</a>
+    aux ateliers gratuits Hour of Code Minecraft sur les Microsoft Stores d'Australie,
+    du Canada, de Puerto Rico ou des États-Unis. Apprends pourquoi coder est pour
+    tout le monde, et combine créativité, résolution de problèmes et beaucoup de plaisir."
+  minecraft_host_event: Animer un Événement Hour of Code Minecraft
   minecraft_teach_resources: Ressources et plan de la leçon pour les enseignants.
   minecraft_leader_guide: Téléchargez les ressources pour vous aider à planifier et
-    mener un évènement.
+    animer un événement.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Téléchargez</a>
     maintenant le guide de démarrage rapide pour les animateurs et des présentations
-    PowerPoint pour les élèves plus jeunes et plus âgés."
-  minecraft_join_online_training: Prêt à organiser votre propre Heure de Code avec
-    Minecraft, mais pas sûr où commencer? Jetez un oeil à nos <a href='%{minecraft_webinar_url}',
+    PowerPoint pour les jeunes élèves et les plus âgés."
+  minecraft_join_online_training: Prêt à animer votre propre Hour of Code avec Minecraft,
+    mais hésitant où commencer ? Jetez un œil à nos <a href='%{minecraft_webinar_url}',
     target='_blank'>webinars sur demande</a>. Vous y apprendrez les meilleurs pratiques,
-    accéderez à du materiel pour les organisateurs, and pourrez parcourir le nouveau
-    tutoriel, Le Voyage du Héros, fourni par l'équipe Minecraft. Commencez par réfléchir
-    à ce que vous aurez besoin d'apporter à l'Heure du Code pour les jeunes durant
-    la semaine de l'éducation de l'informatique (4 au 10 Décembre) et après.
-  minecraft_continue_learning: 'Les sciences informatiques pour tous : Au-delà d’une
-    Heure de Code sur le Microsoft Store'
+    accèderez à du matériel prêt-à-démarrer, pour les animateurs, et pourrez parcourir
+    le nouveau tutoriel, Le Voyage du Héros, fourni par l'équipe Minecraft. Prenez
+    une longueur d’avance, en réfléchissant à ce dont vous aurez besoin pour apporter
+    Hour of Code à des jeunes, durant la semaine de l'Éducation de l'Informatique
+    (du 4 au 10 Décembre) et après.
+  minecraft_continue_learning: 'L’Informatique pour Tous : Au-delà d’une Hour of Code,
+    sur le Microsoft Store'
   minecraft_continue_learning_description: Aucune expérience en informatique préalable
     requise ! Aidez chaque enfant à développer de précieuses compétences grâce à l'enseignement
-    informatique. Rejoignez-nous au Microsoft Store pour suivre un cursus de trois
-    ateliers d'une heure, durant lesquels vous apprendrez à coder dans un environement
-    plaisant et sans pression, vous familiariserez avec des concepts basiques d'informatique,
-    et vous préparerez à mener une Heure de Code avec vos eleves ou votre communauté.
-    Vous pouvez le faire ! <a href='%{minecraft_continue_learning_url}', target='_blank'>Inscrivez-vous
-    aujourd'hui</a>.
+    informatique. Rejoignez-nous au Microsoft Store pour suivre une série gratuite
+    de trois ateliers d'une heure, durant lesquels vous apprendrez à coder dans un
+    environnement plaisant et sans pression, vous familiariserez avec des concepts
+    fondamentaux d'informatique, et vous préparerez à animer une Hour of Code, avec
+    vos élèves ou votre communauté. Vous pouvez le faire ! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Inscrivez-vous aujourd'hui</a>.
   minecraft_future: Aidez tous les jeunes à se préparer pour le futur
   minecraft_future_description: Découvrez comment d'autres écoles et organismes à
-    but non-lucratif partagent leurs connaissances avec leurs communautés, de l’alphabétisation
-    informatique aux cours de sciences informatiques. Examinez les différentes options,
+    but non-lucratif partagent leurs connaissances, de l’alphabétisation informatique
+    aux cours d’informatique, avec leurs communautés. Examinez les différentes options,
     obtenez des trucs et astuces et <a href='%{minecraft_future_url}', target='_blank'>accédez
-    aux ressources</a> qu'ils ont trouvé les plus précieuses.
-  minecraft_og_designer: Minecraft est de retour pour une nouvelle activité pour l'Heure
-    de Code. Programmez des animaux et d'autres créatures dans votre version personnelle
-    de Minecraft.
-  minecraft_og_agent: Minecraft est de retour dans l'Heure de Code, et vous êtes le
-    héros! Ecrivez le code pour voyagez à travers les biomes de Minecraft.
+    aux ressources</a> qu'ils ont trouvées les plus précieuses.
+  minecraft_og_designer: Minecraft est de retour avec une nouvelle activité pour Hour
+    of Code. Programme des animaux et d'autres créatures Minecraft dans ta version
+    personnelle de Minecraft.
+  minecraft_og_agent: Minecraft est de retour dans Hour of Code, et tu es le héros
+    ! Écris le code pour voyager à travers les biomes de Minecraft.
   sports_page_title: Heure du Code Sports
   sports_og_title: Persévère. Tout le monde peut apprendre.
   sports_og_description: Choisir entre jouer au basket ou mélanger et combiner les
@@ -645,55 +659,58 @@ fr-FR:
   sports_athlete_Harrison: Harrison Barnes, champion olympique et Champion de la NBA,
     les Mavericks de Dallas
   watch_inspirational_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
-  video_title_cs_is_everything: L'informatique est en train de tout changer
-  video_title_inspire_girl: Encourager une fille
+  video_title_cs_is_everything: L'informatique est en Train de Tout Changer
+  video_title_inspire_girl: Donner l'envie d'apprendre aux jeunes filles
   video_title_cs_intro: Introduction à la science de l'informatique
   video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent pas
   video_title_obama: Le président Obama à propos de l'informatique
   video_title_hoc_is_here: L'Heure du Code est là - Tout le monde peut apprendre
   video_title_anybody_can_learn: Tout le monde peut apprendre
-  video_title_steph_curry: Heure de Code avec Steph Curry
+  video_title_steph_curry: Hour of Code avec Steph Curry
   video_title_draymond_green: Heure du Code avec Draymond Green
   video_title_russell_okung: Heure de Code avec Russell Okung
   video_title_real_madrid: Heure de Code avec le Real Madrid
   video_title_marco_belinelli: Heure de Code avec Marco Belinelli
   video_title_chris_bosh: Chris Bosh à propos de l'informatique
-  video_title_my_name_is_aracely: Mon Nom est Aracely
+  video_title_my_name_is_aracely: Je m’appelle Aracely
   video_1min: 1 minutes
   video_2min: 2 minutes
   video_3min: 3 min
   video_5min: 5 minutes
-  speak_another_language: Tu parles d'autres langues ?
+  speak_another_language: Vous parlez d'autres langues ?
   help_translate: Aidez-nous à traduire.
   no_internet: Pas d'internet ?
   download_offline: Télécharger la version hors ligne.
   are_you_teacher: Êtes-vous un enseignant?
   review_lesson_plan: Revoir le plan de la leçon et les autres ressources pour les
     enseignants.
-  volunteer_engineer_submission_title: Inspirer les élèves et les bénévoles
-  volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont accueillir
-    Une Heure de Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils
-    ont besoin de votre aide ! '
+  volunteer_engineer_submission_title: Inspirer les élèves et devenir bénévole
+  volunteer_engineer_submission_subtitle_generic: '100 000 enseignants vont animer
+    une Hour of Code dans leur classe cette année, du 7 au 13 décembre 2015. Ils ont
+    besoin de votre aide ! '
   volunteer_engineer_submission_subtitle_specific: "% {num_teachers} enseignants ont
     besoin de bénévoles.<br>% {num_volunteers} bénévoles se sont inscrits. Rejoignez-les."
-  volunteer_engineer_submission_intro_background: L’Heure de Code est un mouvement
-    mondial qui a pour but de présenter l'informatique durant une heure à des dizaines
-    de millions d’élèves dans 180 pays. Impliquez-vous lors de la Semaine de l’enseignement
-    de l’informatique, du 7 au 13 décembre 2015.
+  volunteer_engineer_submission_intro_background: Hour of Code est un mouvement mondial
+    qui a pour but de présenter l'informatique durant une heure à des dizaines de
+    millions d’élèves dans plus de 180 pays. Engagez-vous dans la Semaine de l’Enseignement
+    de l’Informatique, du 7 au 13 décembre.
   volunteer_engineer_submission_intro_recruit: 'Les enseignants aimeraient avoir quelqu''un
     de <span style="font-family: ''Gotham 7r'', sans-serif;">passionné par l''enseignement
-    des sciences informatiques</span> qui pourrait les aider dans la salle de classe,
-    ou quelqu''un qui pourrait <span style="font-family: ''Gotham 7r'', sans-serif;">inspirer</span>
+    de l’informatique, </span> qui pourrait les aider dans la salle de classe, ou
+    quelqu''un qui pourrait <span style="font-family: ''Gotham 7r'', sans-serif;">inspirer</span>
     leurs élèves en leur parlant des nombreuses possibilités qu’offre l''informatique
-    (ce qui pourrait se faire par un chat vidéo).'
+    (ce qui pourrait se faire par un échange vidéo).'
   volunteer_engineer_submission_intro_guide: En savoir plus sur notre <a href="%{volunteer_guide}">
     programme de bénévolat</a>.
   volunteer_engineer_submission_intro_signup: Veuillez saisir les informations suivantes
-    si vous êtes étudiant en informatique ou professionnel des logiciels. Les champs
-    marqués d'un <span class="form-required-field">*</span> sont obligatoires.
-  volunteer_engineer_submission_intro_links: Cherchez-vous des bénévoles ? Trouvez
-    un bénévole près de chez vous sur notre <a href="%{volunteer_local}">carte des
-    bénévoles</a>.
+    si vous êtes étudiant en informatique ou professionnel des logiciels. Vous devez
+    être âgé d’au moins 18 ans pour vous inscrire en tant que bénévole. Notez que
+    toutes les informations que vous fournirez, dans cette section, seront accessibles
+    à quiconque consultera la <a href="/volunteer/local">carte des bénévoles</a>.  Les
+    champs marqués d'un <span class="form-required-field">*</span> sont obligatoires.
+  volunteer_engineer_submission_intro_links: Êtes-vous un enseignant et cherchez-vous
+    des bénévoles ? Trouvez un bénévole près de chez vous sur notre <a href="%{volunteer_local}">carte
+    des bénévoles</a>.
   volunteer_engineer_submission_update_information: Mettez à jour vos informations
   volunteer_engineer_submission_header_shared: Informations partagées avec les enseignants
     sur la carte des bénévoles
@@ -734,8 +751,8 @@ fr-FR:
     partagée, mais nous vous ferons parvenir les demandes de la part des enseignants.
   volunteer_engineer_submission_field_email_placeholder: Adresse email
   volunteer_engineer_submission_field_email_preference: Pouvons-nous vous envoyer
-    des e-mails d’information sur nos formations, des opportunités près de chez vous
-    ou d’autres brèves dans le domaine informatique?
+    des e-mails d’information sur nos cours, des opportunités de bénévolat, ou d’autres
+    brèves dans le domaine informatique ?
   volunteer_engineer_submission_field_email_preference_privacy: "(Voir notre politique
     de protection des données)"
   volunteer_engineer_submission_field_email_preference_yes: Oui
@@ -785,16 +802,16 @@ fr-FR:
   volunteer_engineer_submission_num_volunteers_25: 25 bénévoles
   volunteer_engineer_submission_num_volunteers_50: 50 bénévoles
   volunteer_engineer_submission_type_task_onsite: J'aimerais que vous veniez dans
-    ma classe pour offrir de l’aide technique et du soutien.
+    ma classe afin d’offrir de l’aide technique et donner de l’inspiration.
   volunteer_engineer_submission_type_task_remote: J'aimerais que vous échangiez avec
-    ma classe par Skype pour donner quelques mots d’encouragement aux enfants.
-  volunteer_engineer_submission_type_task_mentor: Je recherche un conseiller pour
-    m'aider à me préparer à coder avec mes élèves.
+    ma classe par Skype, pour donner aux enfants quelques mots qui les inspireront.
+  volunteer_engineer_submission_type_task_mentor: Je recherche un conseiller qui m'aiderait
+    à me préparer à coder avec mes élèves.
   petition_age: Age
-  dashboard_announce_hoc_scaling_progress: Oups! Il y a une forte affluence sur l'Heure
-    de Code. Nous ne pouvons rien sauvegarder cette semaine, mais les sauvegardes
-    réalisées avant cette semaine sont toujours valables.
-  dashboard_announce_learn_more_button: Pour en savoir plus
+  dashboard_announce_hoc_scaling_progress: Oups ! Il y a une forte affluence sur Hour
+    of Code. Nous ne pouvons rien enregistrer, cette semaine, mais les enregistrements
+    réalisés avant cette semaine sont toujours en sécurité.
+  dashboard_announce_learn_more_button: En savoir plus
   dashboard_landing_title: Page d'accueil de l'enseignant
   dashboard_landing_welcome: Bienvenue dans la nouvelle version améliorée du tableau
     de bord des enseignants.
@@ -828,58 +845,57 @@ fr-FR:
     vous et vos élèves.
   dashboard_landing_more_tutorials: Vous désirez voir encore plus de tutoriels ?
   dashboard_landing_more_tutorials_desc: Il y a plus de tutoriels <a href="/learn/beyond">offerts
-    par nos partenaires.</a> Apprendre à programmer avec des robots, créer des pages
-    web ou une application personnalisée, ou explorer d'autres langages tels que C++,
-    Ruby ou Python !
-  dashboard_landing_inspire: Inspirer vos élèves avec des affiches, des vidéos et
-    plus encore.
-  dashboard_landing_video_library: Utilisez une vidéo de la vidéothèque des concepts
-    de science informatique.
-  dashboard_landing_report_bug: Demander une fonctionnalité ou signaler un bug.
+    par nos partenaires.</a> Apprends à programmer avec des robots, crée des pages
+    Web ou ta propre application, ou explore d'autres langages tels que C++, Ruby
+    ou Python !
+  dashboard_landing_inspire: Générez de l’inspiration chez vos élèves avec des affiches,
+    des vidéos et plus encore.
+  dashboard_landing_video_library: Utilisez une vidéo de la Vidéothèque des concepts
+    de l’informatique.
+  dashboard_landing_report_bug: Demandez une fonctionnalité ou signalez un bug.
   dashboard_landing_teacher_forum: Rejoignez la communauté d'apprentissage professionnel.
-  dashboard_hoc_courses: L'Heure de Code pour tous les âges
+  dashboard_hoc_courses: Hour of Code pour Tous les Âges
   dashboard_hoc_courses_desc: Essayez l'un de ces tutoriels plus courts (1 heure)
     avec vos élèves !
   dashboard_hoc_courses_desc_and_cta: Essayez l'un de ces courts tutoriels d’1 heure
     avec vos élèves. <a href="https://hourofcode.com">Rejoignez le mouvement de l'Heure
     de Code</a> au cours de la Semaine de l'enseignement de l’informatique.
-  dashboard_k5_courses: 20 heures de cours pour l’école primaire
-  dashboard_k5_courses_desc: Ces cours associent en ligne des tutoriels autoguidés
-    et effectués à son rythme avec des activités «&#160;débranchées&#160;» qui ne
-    nécessitent pas du tout d’ordinateur. Chaque cours se compose d'environ 20 leçons
-    qui peuvent être mises en œuvre en une seule unité ou au cours d'un semestre.
-    Même les enfants de maternelle qui ne savent pas lire peuvent participer. Pour
-    vous aider à démarrer, nous proposons des ateliers gratuits de perfectionnement
-    professionnel (sous forme de journées pédagogiques) de haute qualité à travers
-    les États-Unis. <a href="/professional-development-workshops">Trouvez-en un près
-    de chez vous !</a>
-  dashboard_middle_courses: 20 heures de cours au collège
+  dashboard_k5_courses: 20 heures de Cours, de la Maternelle au CM2
+  dashboard_k5_courses_desc: 'Ces cours associent des tutoriels en ligne, autoguidés
+    et auto- rythmés, avec des activités « débranchées » qui ne nécessitent pas du
+    tout d’ordinateur. Chaque cours se compose d''environ 20 leçons qui peuvent être
+    mises en œuvre en une seule unité ou au cours d''un semestre. Même les enfants
+    de Maternelle qui ne savent pas lire peuvent participer. Pour vous aider à démarrer,
+    nous proposons des ateliers gratuits de perfectionnement professionnel, de haute
+    qualité, à travers les États-Unis. <a href="/professional-development-workshops">Trouvez-en
+    un près de chez vous !</a> '
+  dashboard_middle_courses: 20 Heures de Cours au Collège
   dashboard_middle_courses_desc: Notre programme pour le collège utilise l’informatique
     et la programmation dans le cadre des mathématiques et des sciences au collège
     - comme un outil pour enseigner les concepts mathématiques et scientifiques. Pour
-    vous inscrire aux ateliers de perfectionnement professionnel/journées pédagogiques,
-    demandez un <a href="/educate/districts">partenariat à l’échelle du district</a>
-    avec Code.org.
-  dashboard_high_courses: Cours pour le lycée tout au long de l’année
-  dashboard_high_courses_desc: Notre programme pour le lycée aide les écoles publiques
+    vous inscrire aux ateliers de perfectionnement professionnel, faites une demande
+    pour un <a href="/educate/districts">partenariat à l’échelle du quartier</a> avec
+    Code.org.
+  dashboard_high_courses: Cours, pour le Lycée, Tout au Long de l’Année
+  dashboard_high_courses_desc: Notre programme pour le lycée aide les écoles de quartier
     à offrir des cours d’informatique toute l'année, en préparant le personnel enseignant
     en place à offrir ce nouveau domaine d’apprentissage. Pour vous inscrire aux ateliers
-    de perfectionnement professionnel/journées pédagogiques, demandez un <a href="/educate/districts">partenariat
-    à l’échelle du district</a> avec Code.org.
+    de perfectionnement professionnel, faites une demande pour un <a href="/educate/districts">partenariat
+    à l’échelle du quartier</a> avec Code.org.
   dashboard_course_csina: Informatique en algèbre
   dashboard_course_csina_desc: Code.org s'est associé avec Bootstrap afin d’élaborer
     un programme permettant d’enseigner des concepts d'algèbre et de géométrie par
     le biais de la programmation informatique.
-  dashboard_course_csins: Les sciences par le biais des sciences informatiques
-  dashboard_course_csins_desc: Code.org a établi un partenariat avec le projet GUTS
-    afin d’offrir une introduction aux concepts informatiques dans le contexte de
+  dashboard_course_csins: Les sciences et l’informatique
+  dashboard_course_csins_desc: Code.org a établi un partenariat avec le Projet GUTS
+    afin d’offrir une introduction aux concepts informatiques, dans le contexte de
     la modélisation et de la simulation.
   dashboard_course_ecs: Découverte de l'informatique
-  dashboard_course_ecs_desc: 'La découverte de l’informatique est un cours d''une
-    année, composé de 6 unités : Interaction homme-machine, résolution de problèmes,
-    conception web, programmation, traitement et analyse des données et robotique.'
-  dashboard_course_csp: Les principes des sciences informatiques AP®
-  dashboard_course_csp_desc: Code.org a conçu un cours rigoureux, attrayant et accessible
+  dashboard_course_ecs_desc: 'La Découverte de l’Informatique est un cours d''une
+    année, composé de 6 unités : Interaction Homme-Machine, Résolution de Problèmes,
+    Conception Web, Programmation, Traitement et Analyse des Données, et Robotique.'
+  dashboard_course_csp: Les Principes de l’Informatique AP®
+  dashboard_course_csp_desc: Code.org a conçu un cours rigoureux, captivant et accessible,
     qui explore les concepts fondamentaux de l’informatique.
   dashboard_landing_loading: Chargement...
   dashboard_action_cancel: Annuler
@@ -890,16 +906,20 @@ fr-FR:
   dashboard_action_done: Terminé
   dashboard_action_print_certificates: Imprimer les certificats
   dashboard_assessments_view: 'Afficher les évaluations dans :'
-  dashboard_assessments_none: Pas d'évaluation
+  dashboard_assessments_none: La plupart des enseignants mesurent les progrès de leurs
+    élèves à l'aide de l'onglet "Afficher les Progrès". Si vous souhaitez donner à
+    vos élèves des évaluations supplémentaires, vous pouvez trouver des questions
+    et des domaines recommandés dans les plans de cours. Ceux-là sont faits en dehors
+    de Code.org.
   dashboard_assessments_none_part2: Si vous enseignez au collège ou au lycée, nous
-    avons des questions d'évaluation disponibles dans le cadre du Code Studio pour
-    aider vos élèves à se préparer pour le test d'AP. Pour utiliser ces évaluations,
-    assignez d'abord le cours à la classe puis sélectionnez le cours depuis menu déroulant
-    au-dessus et vous y verrez les réponses de vos élèves.
-  dashboard_assessments_summaries: Résumés
-  dashboard_assessments_answers: Toutes les réponses
-  dashboard_surveys_answers: Sondages
-  dashboard_percent: Pourcentage
+    avons des questions d'évaluation disponibles, dans le cadre du Code.org, pour
+    aider vos élèves à se préparer pour le test AP. Pour utiliser ces évaluations,
+    assignez d'abord le cours à la classe, puis sélectionnez le cours depuis le menu
+    déroulant, au-dessus, et vous y verrez les réponses de vos élèves.
+  dashboard_assessments_summaries: Résumés des Évaluations
+  dashboard_assessments_answers: Toutes les réponses aux évaluations
+  dashboard_surveys_answers: Enquêtes
+  dashboard_percent: Pour cent
   dashboard_filter_by_stage: 'Filtrer par étape :'
   dashboard_filter_all: Tout
   dashboard_download_csv: Télécharger en CSV
@@ -915,7 +935,7 @@ fr-FR:
   dashboard_navigation_view_progress: Progression
   dashboard_navigation_view_text_responses: Réponses écrites
   dashboard_navigation_view_assessments: Évaluations
-  dashboard_navigation_view_assessments_surveys: Évaluations/Sondages
+  dashboard_navigation_view_assessments_surveys: Évaluations/Enquêtes
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
@@ -934,7 +954,12 @@ fr-FR:
     dans %{script_name}
   dashboard_progress_pair_programming: programmation en binôme
   dashboard_responses_view: 'Afficher les réponses écrites dans :'
-  dashboard_responses_none: Pas de réponses écrites
+  dashboard_responses_none: 'La plupart de nos cours sont conçus à destination des
+    plus jeunes et ne nécessitent pas que les élèves tapent des réponses textuelles
+    aux questions ; vous ne verrez donc aucune réponse écrite, ici. Pour les étudiants
+    plus âgés, dans les cours de collège et lycée, vous pouvez voir les documents
+    qu’ils ont soumis, relatifs aux questions de réponse textuelle, en sélectionnant
+    le cours assigné dans le menu déroulant ci-dessus. '
   dashboard_sections_new_section: Nouvelle section
   dashboard_sections_new_google_section: Importer la section depuis Google Classroom
   dashboard_sections_jumbotron_instruction: Créer de nouvelles sections et leur ajouter
@@ -945,7 +970,7 @@ fr-FR:
   dashboard_sections_table_grade: Classe
   dashboard_sections_table_course: Cours
   dashboard_sections_table_pairing_allowed: Programmation en Binôme
-  dashboard_sections_table_stage_extras: Étape Supplémentaire
+  dashboard_sections_table_stage_extras: 'Les Suppléments de l’Étape '
   dashboard_sections_table_students: Élèves
   dashboard_sections_table_code: Code de la section
   dashboard_sections_name: Nom de la section
@@ -971,7 +996,7 @@ fr-FR:
   dashboard_sections_move_to_section: 'Déplacer vers la section :'
   dashboard_sections_enter_code: 'Entrez le code de la section :'
   dashboard_sections_code_placeholder: Code de 6 caractères (ABCDEF)
-  dashboard_sections_other_section: Autre enseignant
+  dashboard_sections_other_section: Autre Enseignant
   dashboard_sections_both_sections: Souhaitez-vous que le ou les élève(s) soient dans
     les deux sections ?
   dashboard_sections_yes_both: Oui, je veux copier le/les élève(s) afin qu'ils figurent
@@ -979,24 +1004,21 @@ fr-FR:
   dashboard_sections_no_move: Non, je veux déplacer le/les élève(s) afin qu'ils ne
     se trouvent que dans la nouvelle section.
   dashboard_sections_move_students: Déplacer les élèves
-  dashboard_sections_assign_hoc_script_desc: Participant à l’heure du Code ?
-  dashboard_sections_assign_hoc_script_msg: Veuillez noter que nous n’enregistrerons
-    pas votre progression dans ce cours pendant la semaine du 5 au 11 décembre, en
-    raison du niveau sans précédent du trafic vers notre site recevront penant l’Heure
-    du Code.  Vous pouvez toujours affecter le cours et donner à tous les étudiants
-    des certificats de participation.  (La plupart enseignants <a href='%{certificate_url}'>impriment
-    ceux-ci à l’avance</a>). <br/> <br/> Nous sommes ravis par le nombre d’enseignants
-    et d’étudiants qui participent et nous sommes désolés de ne pas être en mesure
-    d’enregistrer tout. Si votre classe veut aller plus loin, vous pouvez poursuivre
-    au-delà de l'Heure du Code et enseigner un cours comme comme Informatique de base.  Notre
-    tableau de bord enseignant vous permettra de suivre les progrès de vos élèves
-    toutes les deux semaines toute l’année.
-  dashboard_sections_assign_activity: Assigner un cours
+  dashboard_sections_assign_hoc_script_desc: Participant à Hour of Code ?
+  dashboard_sections_assign_hoc_script_msg: Veuillez noter que nous ne serons pas
+    en mesure d’enregistrer votre progression dans ce cours pendant la semaine du
+    5 au 11 décembre, en raison du trafic important que notre site recevra pendant
+    Hour of Code. Vous pouvez toujours affecter le cours et donner à tous les étudiants
+    des certificats de participation. (La plupart des enseignants <a href='%{certificate_url}'>impriment
+    ceux-ci à l’avance</a>). Nous enregistrerons et ferons un état du progrès des
+    étudiants, toutes les deux semaines, tout au long de l’année.
+  dashboard_sections_assign_activity: Assigner un Cours
   dashboard_error_none_selected: Vous n'avez sélectionné aucun élève à déplacer. Veuillez
     sélectionner au moins un élève.
   dashboard_error_other_section: Si vous déplacez des élèves entre vos propres sections,
     sélectionnez votre section dans la liste déroulante. Pour déplacer vos élèves
-    dans la section d'un autre enseignant, sélectionnez simplement « Autre section ».
+    dans la section d'un autre enseignant, sélectionnez simplement « Autre Section
+    ».
   dashboard_students_add_multiple: 'Entrez ou collez le nom de vos élèves, un par
     ligne&#160;:'
   dashboard_students_new_google_classroom_section: Pour ajouter des élèves, utilisez
@@ -1011,8 +1033,8 @@ fr-FR:
   dashboard_students_female: Féminin
   dashboard_students_completed_levels: Niveaux terminés
   dashboard_students_total_lines: Lignes de code
-  dashboard_students_share_section: 'Partagez la page de connexion de cette section
-    avec vos élèves&#160;:'
+  dashboard_students_share_section: Demandez à vos élèves d'aller sur la page <a href=%{join_url}
+    > %{join_url}< / a > et de taper le code de section (%{section_code})
   dashboard_students_share_section_secondary: 'Vous pouvez également partager la page
     de connexion de cette section avec vos étudiants :'
   dashboard_students_print_info: Imprimez des cartes avec les données de connexion
@@ -1046,26 +1068,27 @@ fr-FR:
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Cliquez
     ici</a> pour consulter notre politique de confidentialité, qui peut être partagée
     ou imprimée pour vos élèves.
-  dashboard_curriculum_k5_title: Ressources pour éducateur en écoles primaires
-  dashboard_curriculum_middle_title: Ressources pour éducateur au collège
-  dashboard_curriculum_high_title: Ressources pour éducateur au lycée
-  dashboard_lesson_plans: Plans des cours
+  dashboard_curriculum_k5_title: Ressources pour les Éducateurs de la Maternelle au
+    CM2
+  dashboard_curriculum_middle_title: Ressources pour les Éducateurs au collège
+  dashboard_curriculum_high_title: Ressources pour les Éducateurs au lycée
+  dashboard_lesson_plans: Plans des Cours
   dashboard_view_all_lesson_plans: Télécharger le programme complet des Cours 1 à
     3
   dashboard_course1: 'Cours 1&#160;:'
   dashboard_course2: 'Cours 2&#160;:'
   dashboard_course3: 'Cours 3&#160;:'
-  dashboard_course4: 'Cours 4 (bêta) : '
+  dashboard_course4: 'Cours 4 : '
   dashboard_coursea: 'Cours A: '
   dashboard_courseb: 'Cours B: '
   dashboard_coursec: 'Cours C: '
   dashboard_coursed: 'Cours D: '
   dashboard_coursee: 'Cours E: '
   dashboard_coursef: 'Cours F: '
-  dashboard_pre-express: 'Cours rapide pour les primo-lecteurs : '
+  dashboard_pre-express: 'Cours Express pour les pré-lecteurs : '
   dashboard_express: 'Cours Express : '
   dashboard_unplugged: Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez
-    ces leçons en mode "déconnecté" </a> dans votre classe.
+    ces leçons "débranchées" </a> dans votre classe.
   dashboard_tools: 'Outils: '
   dashboard_curriculum: Programme
   dashboard_curriculum_overview: Aperçu du programme pour les élèves de primaire
@@ -1080,12 +1103,12 @@ fr-FR:
   dashboard_puzzle_solving: 'Résolution de puzzles&#160;:'
   dashboard_student_worksheet: feuille d'activités de l’élève
   dashboard_teacher_worksheet: feuille d'activités de l’enseignant
-  dashboard_curriculum_csina: 'L’algèbre par le biais des sciences informatiques&#160;:'
-  dashboard_curriculum_csins: 'Les sciences par le biais des sciences informatiques&#160;:'
-  dashboard_curriculum_csp: 'Les principes des sciences informatiques AP®&#160;:'
-  dashboard_curriculum_ecs: 'Découvrir les sciences informatiques :'
-  dashboard_curriculum_csd: 'Découvertes Informatiques : '
-  dashboard_curriculum_apcsa: 'Cours avancé en Java : '
+  dashboard_curriculum_csina: 'L’Informatique en Algèbre :'
+  dashboard_curriculum_csins: 'L’Informatique en Sciences : '
+  dashboard_curriculum_csp: 'Les Principes de l’Informatique :'
+  dashboard_curriculum_ecs: 'Découvrir l’Informatique :'
+  dashboard_curriculum_csd: 'Découvertes de l’Informatique : '
+  dashboard_curriculum_apcsa: 'Cours avancé AP d’Informatique en Java : '
   dashboard_grade_k: Classe
   dashboard_grade_other: Autre
   dashboard_login_word: Mot
@@ -1128,47 +1151,46 @@ fr-FR:
     de connexion, <b>photo, mot ou courriel</b> que vous voudrez choisir pour une
     section.
   dashboard_faq: Foire aux Questions
-  dashboard_faq_k5: Foire aux Questions CM2
+  dashboard_faq_k5: Foire aux Questions de la Maternelle au CM2
   code_hoc_coming: L'Heure de Code est là — du 8 au 14 décembre&#160;!
   code_sign_up: Enregistrez-vous pour participer à la Semaine de l'enseignement de
     l'informatique.
-  host_an_hour: Accueillez une Heure
-  learn_banner_title: Rejoins-nous pour l'Heure de Code
-  learn_banner_desc: L’Heure du Code est un mouvement mondial qui atteint de plus
-    100 millions d’étudiants dans plus de 180 pays. N’importe qui, n’importe où peut
-    organiser un événement Heure du Code. Aidez-nous à donner à chaque élève la possibilité
-    d’apprendre l’informatique ! Les organisateurs peuvent suivre notre <a href='%{how_to_url}'
-    target='_blank'> guide pratique</a> pour l’enseignement d’une Heure du Code et
-    inspirer les élèves avec <a href='%{videos_url}' target='_blank'> ces vidéos</a>.
+  host_an_hour: Animez une heure
+  learn_banner_title: Rejoignez-nous pour Hour of Code
+  learn_banner_desc: Hour of Code est un mouvement mondial qui touche plus 100 millions
+    d’étudiants dans plus de 180 pays. Quiconque, n’importe où peut organiser un événement
+    Hour of Code. Aidez-nous à donner à chaque élève la possibilité d’apprendre l’informatique
+    ! Les organisateurs peuvent suivre notre <a href='%{how_to_url}' target='_blank'>
+    guide pratique</a> pour l’enseignement d’une Hour of Code et inspirer les élèves
+    avec <a href='%{videos_url}' target='_blank'> ces vidéos</a>.
   learn_more: En savoir plus
   learn_sign_up_description: Enregistrez-vous pour participer à l'Heure de Code pendant
     la Semaine de l'enseignement de l'informatique.
   learn_sign_up_button: Inscription
-  learn_videos_watch: Regardez cette vidéo pleine d’idées avec votre classe
-  learn_videos_show: Montrez cette vidéo pleine d’idées à votre classe
-  learn_videos_before_hoc: Regardez une vidéo pleine d’idées avant votre Heure de
-    Code
+  learn_videos_watch: Regardez cette vidéo inspirante avec votre classe
+  learn_videos_show: Montrez cette vidéo inspirante à votre classe
+  learn_videos_before_hoc: Regardez une vidéo inspirante avant votre Hour of Code
   learn_educator_resources_description: Apprenez à enseigner une Heure de Code
   learn_educator_resources_button: Ressources de l'éducateur
   learn_are_you_educator: Êtes-vous un éducateur ? Apprenez <a href="http://hourofcode.com/resources/how-to">comment
     enseigner une Heure de Code</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Trouvez un bénévole
-    local</a> pour vous aider lors de votre Heure de Code
+    local</a> pour vous aider lors de votre Hour of Code
   learn_teacher_led_lesson_plans: Soyez inspiré par les <a href="https://code.org/teacher-led">plans
-    de cours d’Une Heure de Code menés par l’enseignant</a>
+    de cours de Hour of Code, menée par les enseignants</a>
   learn_how_to_hoc: Suivez <a href="https://hourofcode.com/how-to">notre guide pratique</a>
-    de l'enseignement d'une Heure de Code
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">En savoir plus</a> sur
-    les prix pour chaque éducateur, jusqu’à épuisement des stocks.
-  learn_inspirational_videos: Poussez l’imagination des élèves en leur montrant <a
-    href="https://code.org/educate/inspire">ces vidéos</a>
+    de l'enseignement de Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> En savoir plus</a> sur
+    les prix pour chaque éducateur.
+  learn_inspirational_videos: Inspirez vos élèves en leur montrant <a href="https://code.org/educate/inspire">ces
+    vidéos</a>
   hoc2014_try_new_tutorials: Essayez nos nouveaux tutoriels Heure de Code
   hoc2014_try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version
     bêta
   hoc2014_try_scrat: Angry Birds, PvZ, et Scrat
   hoc2014_try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
   carousel_heading_codeorg: Tutoriels de Code.org
-  carousel_heading_codeorg_any_device: Tutoriels de Code.org (pour tous supports)
+  carousel_heading_codeorg_any_device: Tutoriels de Code.org (pour tous appareils)
   carousel_heading_3rd_party: Tutoriels par des tierces parties
   carousel_heading_third_party: Tutoriels par des tierces parties
   carousel_heading_international: Tutoriels de partenaires dans votre langue
@@ -1188,17 +1210,18 @@ fr-FR:
   carousel_heading_beyond_languages: Tutoriels dans d'autres langages de programmation
   carousel_heading_apps_games: Crée tes propres applications ou jeux
   carousel_heading_university: Cours universitaires en ligne
+  carousel_heading_online_university: 'Cours Universitaires Disponibles en Ligne '
   carousel_heading_webpages: Apprendre à faire des pages Web
   carousel_heading_robots: Apprendre à programmer avec des robots
   carousel_heading_ide: Plateformes populaires parmi les enseignants
-  carousel_heading_desktop: Apprenez à programmer sur un ordinateur
+  carousel_heading_desktop: Apprends à coder sur un ordinateur
   carousel_heading_mobtabelem: Pour téléphones et tablettes
-  carousel_heading_prereader: Pour les primo-lecteurs
-  carousel_heading_beyondblocks: Au-delà des blocs - apprendre un langage de programmation
-  carousel_heading_nointernet: Connexion instable ou inexistante ? Installez ces applis
-    sur votre ordinateur
+  carousel_heading_prereader: Pour les pré-lecteurs
+  carousel_heading_beyondblocks: Vas au-delà des blocs - apprends un langage de programmation
+  carousel_heading_nointernet: Connexion Internet instable ou inexistante ? Installe
+    ces applis sur ton ordinateur
   educator_notes: Notes de l'enseignant
-  teach_led_lesson_plans: Plans de cours menés par l’enseignant
+  teach_led_lesson_plans: Plans de Cours Menés par l’Enseignant
   learn_footer_all_tutorials: Voir <a href="https://code.org/educate/allhourofcode">la
     liste complète des tutoriels de l’Heure de Code</a>. Pour consulter nos critères
     et directives de soumission pour les tutoriels de l'Heure de Code, <a href="https://hourofcode.com/tutorial-guidelines">cliquez
@@ -1207,8 +1230,8 @@ fr-FR:
   more_resources_educators: Plus de ressources pour les enseignants et les éducateurs
   beyond_submission: Vous voulez soumettre un tutoriel pour Au-delà d'une Heure ?
     Consultez les critères et le formulaire de soumission.
-  third_party_submission: Vous voulez soumettre un tutoriel pour qu’il figure ici ?
-    <a href="%{submission_url}">Consultez les critères et le formulaire de soumission.</a>
+  third_party_submission: Vous souhaitez soumettre un tutoriel pour qu’il figure ici
+    ? <a href="%{submission_url}">Consultez les critères et le formulaire à soumettre.</a>
   participants: participants
   teachers_notes: Notes de l'enseignant
   teachers_notes_hoc: 'Enseignants&#160;: Lisez ici des notes importantes pour les
@@ -1221,7 +1244,7 @@ fr-FR:
     target="_blank">navigateur Web moderne.</a>
   mobile_devices: Tutoriels des partenaires pour appareils mobiles
   frozen_name: Code avec Anna et Elsa
-  starwars_name: 'Star Wars : Construire une galaxie avec du code'
+  starwars_name: 'Star Wars : Construire une Galaxie avec du Code'
   codeorg_name: Labyrinthe classique
   codeintl_name: Labyrinthe classique
   khan_name: Introduction au JavaScript
@@ -1260,7 +1283,7 @@ fr-FR:
   csfirst_name: D’abord l’informatique
   boxisland_name: Île Box
   texasinstruments_name: 10 minutes de Code
-  teacherled_name: Plans de cours menés par l’enseignant
+  teacherled_name: Plans de Cours Menés par l’Enseignant
   course1_name: Cours 1
   course2_name: Cours 2
   course3_name: Cours 3
@@ -1283,22 +1306,41 @@ fr-FR:
   coursed-2017_name: Cours D (2017)
   coursee-2017_name: Cours E (2017)
   coursef-2017_name: Cours F (2017)
-  pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
-  pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
+  coursea-2018_name: Cours A (2018)
+  courseb-2018_name: Cours B (2018)
+  coursec-2018_name: Cours C (2018)
+  coursed-2018_name: Cours D (2018)
+  coursee-2018_name: Cours E (2018)
+  coursef-2018_name: Cours F (2018)
+  coursea-2019_name: Cours A (2019)
+  courseb-2019_name: Cours B (2019)
+  coursec-2019_name: Cours C (2019)
+  coursed-2019_name: Cours D (2019)
+  coursee-2019_name: Cours E (2019)
+  coursef-2019_name: Cours F (2019)
+  express-2018_name: Cours Express (2018)
+  pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
+  express-2019_name: Cour rapide (2019)
+  pre-express-2019_name: Cours Express pour les Pré-lecteurs (2019)
+  express-2020_name: Cours Express (2020)
+  csd2_name: 'Unité 2 : Développement Web'
+  csd3_name: 'Unité 3 : Animation et Jeux'
   accelerated_name: Cours accéléré
   express_name: Cours Express
+  pre-express_name: Cours Express pour les Pré-lecteurs
   20-hour_name: Cours accéléré
-  algebra_name: Informatique en algèbre
-  AlgebraA_name: Informatique en algèbre cours A
-  AlgebraB_name: Informatique en algèbre cours B
+  algebra_name: Cours Complet d’Informatique en Algèbre
+  AlgebraA_name: L’Informatique en Algèbre Cours A
+  AlgebraB_name: L’Informatique en Algèbre Cours B
   gumball_name: Gumball
   classicmaze_name: Labyrinthe classique
   iceage_name: L’âge de Glace
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blocs)
   hoc-encryption_name: Cryptage simple
+  text-compression_name: Compression de texte
   applab_name: Labo des applis
-  gamelab_name: Labo des jeux
+  gamelab_name: Labo des Jeux
   basketball_name: Faire un match de basket
   sports_name: Coder ton propre jeu de sports
   applab_gradelevel: 'Âge recommandé: 13 ans et plus'
@@ -1382,6 +1424,12 @@ fr-FR:
   coursed-2019_gradelevel: 4ème ou plus
   coursee-2019_gradelevel: De 8 à 12 ans
   coursef-2019_gradelevel: Seconde ou plus
+  coursea-2020_gradelevel: CM2 ou plus
+  courseb-2020_gradelevel: 6ème ou plus
+  coursec-2020_gradelevel: 5ème ou plus
+  coursed-2020_gradelevel: 4ème ou plus
+  coursee-2020_gradelevel: De 8 à 12 ans
+  coursef-2020_gradelevel: Seconde ou plus
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -1523,60 +1571,86 @@ fr-FR:
     les concepts de programmation vus dans les cours précédents pour résoudre des
     problèmes plus complexes. À la fin de ce cours, les élèves auront créé des histoires
     interactives et des jeux qu'ils pourront partager. Recommandé du CM1 à la 4e.
-  coursea_shortdescription_congrats: Une introduction à l’informatique pour les primo-lecteurs.
-  courseb_shortdescription_congrats: Une introduction à l'informatique pour les primo-lecteurs.
-    (Semblable au cours A, mais avec plus de variété pour les étudiants plus âgés.)
+  coursea_shortdescription_congrats: Une initiation à l’informatique pour les pré-lecteurs.
+  courseb_shortdescription_congrats: Une introduction à l'informatique pour les pré-lecteurs.
+    (Semblable au Cours A, mais avec plus de variété pour les étudiants plus âgés.)
   coursec_shortdescription_congrats: Apprendre les rudiments de l’informatique et
     de créer vos propres œuvres d’art, vos histoires et vos jeux.
-  coursed_shortdescription_congrats: Voyez rapidement les notions du cours C, puis
-    allez plus loin avec les algorithmes, boucles imbriquées, instructions conditionnelles
+  coursed_shortdescription_congrats: Abordez rapidement les notions dans le Cours
+    C, puis allez plus loin avec les algorithmes, les boucles imbriquées, les conditions,
     et plus encore.
-  coursee_shortdescription_congrats: Voyez rapidement les notions des cours C et D,
-    et allez plus loin avec les fonctions.
-  coursef_shortdescription_congrats: Apprenez toutes les notions fondamentales de
-    l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
-  coursea-2017_shortdescription_congrats: Une introduction à l’informatique pour les
-    primo-lecteurs.
+  coursee_shortdescription_congrats: Abordez rapidement les notions dans les  Cours
+    C et D, puis allez plus loin avec les fonctions.
+  coursef_shortdescription_congrats: Apprends toutes les notions dans les Concepts
+    Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou
+    jeux.
+  coursea-2017_shortdescription_congrats: Une initiation à l’informatique pour les
+    pré-lecteurs.
   courseb-2017_shortdescription_congrats: Une introduction à l'informatique pour les
-    primo-lecteurs. (Semblable au cours A, mais avec plus de variété pour les étudiants
+    pré-lecteurs. (Semblable au Cours A, mais avec plus de variété pour les étudiants
     plus âgés.)
   coursec-2017_shortdescription_congrats: Apprendre les rudiments de l’informatique
     et de créer vos propres œuvres d’art, vos histoires et vos jeux.
-  coursed-2017_shortdescription_congrats: Voyez rapidement les notions du cours C,
-    puis allez plus loin avec les algorithmes, boucles imbriquées, instructions conditionnelles
+  coursed-2017_shortdescription_congrats: Abordez rapidement les notions dans le Cours
+    C, puis allez plus loin avec les algorithmes, les boucles imbriquées, les conditions,
     et plus encore.
-  coursee-2017_shortdescription_congrats: Voyez rapidement les notions des cours C
-    et D, et allez plus loin avec les fonctions.
-  coursef-2017_shortdescription_congrats: Apprenez toutes les notions fondamentales
-    de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
-  coursea-2018_shortdescription_congrats: Une introduction à l’informatique pour les
-    primo-lecteurs.
+  coursee-2017_shortdescription_congrats: Abordez rapidement les notions dans les  Cours
+    C et D, puis allez plus loin avec les fonctions.
+  coursef-2017_shortdescription_congrats: Apprends toutes les notions dans les Concepts
+    Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou
+    jeux.
+  coursea-2018_shortdescription_congrats: Une initiation à l’informatique pour les
+    pré-lecteurs.
   courseb-2018_shortdescription_congrats: Une introduction à l'informatique pour les
-    primo-lecteurs. (Semblable au cours A, mais avec plus de variété pour les étudiants
+    pré-lecteurs. (Semblable au Cours A, mais avec plus de variété pour les étudiants
     plus âgés.)
   coursec-2018_shortdescription_congrats: Apprendre les rudiments de l’informatique
     et de créer vos propres œuvres d’art, vos histoires et vos jeux.
-  coursed-2018_shortdescription_congrats: Voyez rapidement les notions du cours C,
-    puis allez plus loin avec les algorithmes, boucles imbriquées, instructions conditionnelles
+  coursed-2018_shortdescription_congrats: Abordez rapidement les notions dans le Cours
+    C, puis allez plus loin avec les algorithmes, les boucles imbriquées, les conditions,
     et plus encore.
-  coursee-2018_shortdescription_congrats: Voyez rapidement les notions des cours C
-    et D, et allez plus loin avec les fonctions.
-  coursef-2018_shortdescription_congrats: Apprenez toutes les notions fondamentales
-    de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
-  coursea-2019_shortdescription_congrats: Une introduction à l’informatique pour les
-    primo-lecteurs.
+  coursee-2018_shortdescription_congrats: Abordez rapidement les notions dans les  Cours
+    C et D, puis allez plus loin avec les fonctions.
+  coursef-2018_shortdescription_congrats: Apprends toutes les notions dans les Concepts
+    Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou
+    jeux.
+  coursea-2019_shortdescription_congrats: Une initiation à l’informatique pour les
+    pré-lecteurs.
   courseb-2019_shortdescription_congrats: Une introduction à l'informatique pour les
-    primo-lecteurs. (Semblable au cours A, mais avec plus de variété pour les étudiants
+    pré-lecteurs. (Semblable au Cours A, mais avec plus de variété pour les étudiants
     plus âgés.)
   coursec-2019_shortdescription_congrats: Apprendre les rudiments de l’informatique
     et de créer vos propres œuvres d’art, vos histoires et vos jeux.
-  coursed-2019_shortdescription_congrats: Voyez rapidement les notions du cours C,
-    puis allez plus loin avec les algorithmes, boucles imbriquées, instructions conditionnelles
+  coursed-2019_shortdescription_congrats: Abordez rapidement les notions dans le Cours
+    C, puis allez plus loin avec les algorithmes, les boucles imbriquées, les conditions,
     et plus encore.
-  coursee-2019_shortdescription_congrats: Voyez rapidement les notions des cours C
-    et D, et allez plus loin avec les fonctions.
-  coursef-2019_shortdescription_congrats: Apprenez toutes les notions fondamentales
-    de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
+  coursee-2019_shortdescription_congrats: Abordez rapidement les notions dans les  Cours
+    C et D, puis allez plus loin avec les fonctions.
+  coursef-2019_shortdescription_congrats: Apprends toutes les notions dans les Concepts
+    Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou
+    jeux.
+  coursea-2020_shortdescription_congrats: Apprends les bases de l'informatique et
+    de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre
+    histoire que tu peux partager.
+  courseb-2020_shortdescription_congrats: Apprends les bases de l'informatique et
+    de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre
+    histoire que tu peux partager.
+  coursec-2020_shortdescription_congrats: Crée des programmes avec séquençage, boucles
+    et événements. Traduis tes initiales en binaire, étudie différentes techniques
+    de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin
+    du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
+  coursed-2020_shortdescription_congrats: Les élèves développent leur compréhension
+    des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent
+    la citoyenneté numérique.
+  coursee-2020_shortdescription_congrats: Commence à coder avec des algorithmes, des
+    boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans
+    la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux
+    partager avec tes amis et ta famille.
+  coursef-2020_shortdescription_congrats: Apprends à utiliser différents types de
+    boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques
+    de résolution de problèmes et discute des impacts sociétaux de l'informatique
+    et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet
+    de synthèse que tu peux partager avec tes amis et ta famille.
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec la
     programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique
     auto-dirigé mettant en vedette des conférences vidéo de Bill Gates, Mark Zuckerberg,
@@ -2112,21 +2186,20 @@ fr-FR:
     tout en affûtant leurs compétences en mathématiques et en sciences.
   compatibility_hide_this_warning: Cacher l'avertissement
   compatibility_unsupported_browser: Votre navigateur n'est pas supporté. Merci de
-    mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de
-    nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y
-    avoir des choses qui ne fonctionnent pas.
+    le mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un
+    de nos navigateurs supportés</a>. Vous pouvez essayer d’afficher la page, mais
+    la fonctionnalité risque d’être rompue.
   compatibility_unsupported_browser_markdown: Votre navigateur n'est pas supporté.
-    Merci de mettre à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}).
-    Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent
-    pas.
+    Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}).
+    Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue.
   flappy_shortcode: battre des ailes
   header_home: Accueil
-  header_my_dashboard: Mon tableau de bord
+  header_my_dashboard: Mon Tableau de Bord
   header_courses: Cours
   header_course_catalog: Catalogue des cours
   header_project_gallery: Projets
   header_sections: Sections
-  header_professional_learning: Apprentissage professionnel
+  header_professional_learning: Apprentissage Professionnel
   header_educate_overview: Aperçu enseignant
   header_educate_elementary: École primaire
   header_educate_middle: Collège
@@ -2155,7 +2228,16 @@ fr-FR:
   header_teacher_community: Communauté des enseignants
   header_help_support: 'Aide et support '
   header_report_bug: Rapporter un problème
-  header_tutorials: Tutoriels
+  header_legal_privacy: Politique de confidentialité
+  header_legal_tos: Conditions Générales d'Utilisation
+  header_tutorials: Didacticiels
+  header_screen_reader_hamburger: Menu
+  app_lab_documentation: Documentation sur le Labo des Applis
+  app_lab_tutorials: Tutoriels du Labo des Applis
+  game_lab_documentation: Documentation sur le Labo des Jeux
+  game_lab_tutorials: Tutoriels du Labo des Jeux
+  sprite_lab_documentation: Documentation sur le Labo des Lutins
+  sprite_lab_tutorials: Tutoriels du Labo des Lutins
   header_documentation: Documentation
   user_header_label: Bonjour %{username}
   user_header_team: Équipe
@@ -2166,123 +2248,135 @@ fr-FR:
   user_header_create: 'Créer '
   user_header_applab: 'Labo des applis '
   user_header_artist: 'Artiste '
-  user_header_gamelab: Labo des jeux
+  user_header_gamelab: Labo des Jeux
   user_header_playlab: Labo de jeux
-  user_header_dance: Fête dansante
+  user_header_dance: Soirée Dansante
+  user_header_spritelab: Le Labo des Lutins
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Afficher tous les projets...
-  user_header_view_project_gallery: Voir la galerie de projets
+  user_header_view_project_gallery: Afficher la galerie des projets
   user_header_view_my_projects: Afficher mes projets
   view_all_sections: Afficher toutes les sections
-  view_section: Afficher la section
+  view_section: Afficher la Section
   view_named_section: Afficher %{section_name}
-  privacy_doc_explanation: Cliquez ici pour accéder au document sur notre gestion
-    des données qui peut être partager ou imprimer pour vos élèves.
+  privacy_doc_explanation: Cliquez ici pour accéder au document sur la confidentialité,
+    et afin de le partager avec ou de l’imprimer pour vos élèves.
   signing_in: Connexion en cours
   sign_in_overview: 'Vos élèves peuvent se connecter avec leurs comptes Code.org en
     suivant les étapes suivantes:'
   sign_in_instruct_website: Aller à %{code_org_url}.
   sign_in_instruct_code: 'Saisir leur code de section: %{section_code}.'
-  sign_in_instruct_name: Choisir leur nom visible.
-  sign_in_instruct_secret: Choisir leur secret %{secret}.
-  sign_in_instruct_button: Cliquer sur le bouton « Se connecter ».
-  sign_in_overview_cards: Les élèves peuvent trouver toutes ces informations y compris
-    leur secret %{secret} sur les cartes de connexion ci-dessous.
-  reset_student_password: Réinitialiser les mots de passe de l’élève
-  reset_student_password_instructions: Vous pouvez réinitialiser <word/picture> secret
-    pour n'importe quel élève en allant dans l'onglet "Gestion des élèves" pour votre
-    section. Cliquez sur le bouton "Afficher le secret" sous la colonne "Mot de passe"
-    et ensuite cliquez sur le bouton "Réinitialiser le secret".
-  login_cards: Cartes de connexion
+  sign_in_instruct_name: Choisissez leur nom d’affichage.
+  sign_in_instruct_secret: Choisissez leur secret %{secret}.
+  sign_in_instruct_button: Cliquez sur le bouton « Se connecter ».
+  sign_in_overview_cards: Les élèves peuvent trouver toutes ces informations, y compris
+    leur secret %{secret}, sur les cartes de connexion ci-dessous.
+  reset_student_password: Réinitialiser les mots de passe des élèves
+  reset_student_password_instructions: Vous pouvez réinitialiser le secret <word/picture>
+    pour n'importe quel élève, en allant dans l'onglet de la section « Gérer les Élèves
+    », en cliquant sur le bouton « Afficher le secret », dans la colonne « Mot de
+    passe », et en cliquant ensuite sur le bouton « Réinitialiser le secret ».
+  login_cards: Cartes de Connexion
   print_login_cards: Imprimer les cartes de connexion
-  joining_section: Rejoignez votre section (une fois seulement)
-  joining_section_overview: Si un élève n'a pas encore rejoint votre section, s'il
-    vous plait demandez lui/elle de suivre les instructions suivantes. Notez qu'il/elle
-    n'as besoin de le faire qu'une seule fois. En rejoignant votre section, les élèves
-    seront capable de voir les cours qui leurs sont assignés et vous pourrez suivre
-    leur progrès sur le travail qu'ils ont finit quand ils sont connectés.
+  joining_section: Rejoindre votre section (une fois seulement)
+  joining_section_overview: Si un élève n'a pas encore rejoint votre section, veuillez
+    lui demander de suivre les instructions suivantes. Notez qu'il n'a besoin de le
+    faire qu'une seule fois. En rejoignant votre section, les élèves seront en mesure
+    de voir le cours qui leur est assigné et vous pourrez suivre la progression de
+    leur travail tant qu'ils seront connectés.
   joining_section_instruct_website: 'Créez un compte Code.org s’ils ne l’ont pas déjà
-    fait. Cela peut se faire à https://studio.code.org/users/sign_up. Notez qu’ils
-    peuvent s’inscrire soit avec une adresse e-mail et un mot de passe, soit à travers
-    Google, Facebook ou Microsoft en cliquant sur un de ces boutons :'
+    fait. Cela peut se faire sur https://studio.code.org/users/sign_up. Notez qu’ils
+    peuvent s’inscrire soit avec une adresse e-mail et un mot de passe, soit avec
+    Google, Facebook ou Microsoft, en cliquant sur un de ces boutons :'
   joining_section_instruct_account: Connectez-vous à leur compte Code.org.
-  joining_section_instruct_code: 'Allez à %{code_org_url} te saisissez le code de
-    la section: %{section_code}.'
-  joining_section_instruct_button: Une fois qu’ils ont appuyé sur le bouton « Go »,
-    ils doivent être ajoutés dans votre section.
+  joining_section_instruct_code: 'Allez à %{code_org_url} et saisissez le code de
+    la section : %{section_code}.'
+  joining_section_instruct_button: Une fois qu’ils ont appuyé sur le bouton « Go »,
+    ils devraient être ajoutés à votre section.
   signing_in_single_instruct: Vos élèves peuvent se connecter à leurs comptes Code.org
-    en allant sur https://code.org/ et en cliquant sur le bouton « Connexion » en
-    haut à droite.
+    en allant sur https://code.org/ et en cliquant sur le bouton « Connexion », situé
+    en haut à droite.
   reset_student_password_email: Si votre élève a créé un compte Code.org en utilisant
-    son adresse e-mail et un mot de passe (au lieu de se connecter avec Google, Facebook,
-    Microsoft ou Clever), vous pouvez réinitialiser son mot de passe en allant dans
-    l’onglet « Gérer les élèves » de la section, puis en cliquant sur « Réinitialiser
-    le mot de passe » sous la colonne « Mot de passe ».
+    son adresse e-mail et un mot de passe (au lieu de se connecter avec leur compte
+    Google, Facebook, Microsoft ou Clever), vous pouvez réinitialiser son mot de passe
+    en allant dans l’onglet « Gérer les élèves » de la section, puis en cliquant sur
+    « Réinitialiser le mot de passe », dans la colonne « Mot de passe ».
   syncing_students: Synchronisation de vos élèves
-  syncing_students_instructions: 'Si jamais votre section Code.org n’est plus à jour
-    avec votre liste d’élèves Google Classroom, cliquez sur « Synchroniser les élèves
-    depuis Google Classroom » dans l’onglet « Gérer les élèves » :'
-  google_sign_in_instruct: 'À partir de là, ils doivent choisir l’option « Se connecter
-    avec mon compte Google »:'
+  syncing_students_instructions: 'Si jamais votre section Code.org n’est plus identique
+    à votre liste d’élèves, dans Google Classroom, cliquez sur « Synchroniser les
+    élèves depuis Google Classroom » dans l’onglet « Gérer les élèves » :'
+  google_sign_in_instruct: 'À partir de là, ils doivent choisir l’option « Se connecter
+    avec mon Compte Google » :'
   hero_name: 'Minecraft: Le voyage du héros'
-  applab-intro_name: Introduction pour App Lab
-  applab_tile_title: Introduction au labo des applis (13 ans et +)
-  applab_tile_subtitle: Créez votre propre appli en JavaScript avec la programmation
-    en blocs. Ou passez au niveau supérieur avec la programmation en texte. (en anglais
-    seulement)
+  applab-intro_name: Introduction au Labo des Applis
+  applab_tile_title: Introduction au Labo des Applis (13 ans et plus)
+  applab_tile_subtitle: Crée ta propre appli en JavaScript avec la programmation basée
+    sur les blocs. Ou passe au niveau supérieur avec la programmation textuelle. (En
+    Anglais Seulement)
   applab_tile_start_tutorial: Commencer
   applab_tile_teacher_guide: Voir le guide de l'enseignant
+  aquatic_name: 'Minecraft : Voyage Aquatique'
   account_sign_up_email_opt_in: Pouvons-nous vous envoyer des e-mails d’information
     sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
     le domaine informatique?
   account_sign_up_child_accept_terms: Je confirme que j’ai l'autorisation de mes parents
-    ou de mon tuteur légal pour utiliser les services de Code.org.
-  hoc_overview_dance_title: Fête dansante
-  hoc_overview_dance_subtitle: Codez une Fête dansante à partager avec vos amis. Avec
-    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres !
-  hoc_overview_title: Activités Heure de Code de Code.org
-  hoc_overview_subtitle: L'<a href="https://hourofcode.com">Heure de Code</a> est
-    un mouvement mondial qui touche des dizaines de millions d'étudiants dans plus
-    de 180 pays. N'importe qui, n'importe où, peut organiser un événement Heure de
-    Code ou essayer l'un des plus de 200 tutoriels d'une heure, disponibles dans plus
-    de 45 langues.
+    ou de mon tuteur légal d’utiliser les services de Code.org.
+  hoc_overview_dance_title: Soirée Dansante
+  hoc_overview_dance_subtitle: Codez une Soirée Dansante à partager avec vos amis.
+    Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres !
+  hoc_overview_dance_2019_subtitle: Code une Soirée Dansante à partager avec tes amis.
+    Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, et 34 autres artistes !
+  hoc_overview_title: Activités Hour of Code de Code.org
+  hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code</a> est un
+    mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de
+    180 pays. Quiconque, n'importe où, peut organiser un événement Hour of Code ou
+    essayer un des 500 et plus tutoriels d'une heure, disponibles en plus de 45 langues.
   hoc_overview_partner_activities_title: Plus d'activités des partenaires
-  hoc_overview_partner_activities_body: Le site Web Heure de Code propose plus de
-    100 activités informatiques pour tous les âges et tous les niveaux d'expérience,
+  hoc_overview_partner_activities_body: Le site Web Hour of Code propose plus de 500
+    activités informatiques, pour tous les âges et tous les niveaux d'expérience,
     développées par Code.org et ses partenaires.
-  hoc_overview_partner_activities_link: Nouvelles activités
+  hoc_overview_partner_activities_link: Afficher les Activités
   hoc_overview_start_tutorial: Commencer
+  hoc_overview_more_resources: 'Pour obtenir plus de ressources sur la manière de
+    communiquer avec votre classe à distance, consultez notre guide pour l''organisation
+    d''une [virtual Hour of Code] (https://hourofcode.com/us/how-to/virtual). Nous
+    invitons les étudiants qui n''ont pas de matériel ou qui n''ont pas accès à Internet
+    à partager ce paquet d''[unplugged Hour of Code activities] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+
+'
   hoc_overview_view_teacher_guide: Voir le guide de l'enseignant
   hoc2018_creativity: créativité
   hoc2018_creativity_create: Créer
-  hoc2018_creativity_hoc_coming: L'Heure de Code approche…
+  hoc2018_creativity_hoc_coming: Hour of Code approche…
   hoc2018_creativity_what_will_you_create: Qu'allez-vous créer ?
-  hoc2018_creativity_homepage: Donne des ailes à ton imagination et naissance à l’innovation.
-    Commence avec une Heure de Code et ta propre touche créative, quelle qu’elle soit.
-    Regarde notre vidéo.
-  hoc2018_creativity_hoc_about: 'Cette année, l''Heure du Code est centrée sur la
-    créativité. '
-  hoc2018_creativity_social_media: Cette année, l'#HourOfCode concerne la créativité.
-    J'y participe ! Et vous ?
-  hoc2018_creativity_social_media_2: Cette année, l'#HourOfCode concerne la créativité.
-    Qu'allez-vous créer ?
-  hoc2018_creativity_courses: Allez plus loin avec les cours Code.org
-  hoc2018_creativity_courses_link: Allez plus loin avec les <a href="https://studio.code.org/courses">cours
+  hoc2018_creativity_homepage: Imagines plus loin et apprends à laisser parler tes
+    idées. Commences avec une Heure de Code et ta propre touche de créativité, sans
+    te prendre la tête. Regardes notre vidéo.
+  hoc2018_creativity_hoc_about: 'Cette année, Hour of Code est centrée sur la créativité. '
+  hoc2018_creativity_social_media: 'Cette année, #HourOfCode est centrée sur la créativité.
+    J''y participe ! Et toi ?'
+  hoc2018_creativity_social_media_2: 'Cette année, #HourOfCode est centrée sur la
+    créativité. Que vas-tu créer ?'
+  hoc2018_creativity_courses: Aller plus loin avec les cours Code.org
+  hoc2018_creativity_courses_link: Aller plus loin avec les <a href="https://studio.code.org/courses">cours
     Code.org</a>
-  hoc2018_homepage: Inscrivez votre classe pour qu’elle essaie une des 150 NOUVELLES
-    activités pour l’Heure de Code (3-9 décembre) !
+  hoc2018_homepage: Inscrivez votre classe pour réaliser l'une de nos 150  NOUVELLES
+    activités pour l'Heure de Code (Dec 3-9)!
   hoc2018_mc_page_title: Minecraft heure de Code tutoriels
   hoc2018_mc_details: Beaucoup de langues | Les navigateurs modernes et comprimés
     | Grades 2 +
-  hoc2018_mc_aquatic_announcement: Inscrivez votre classe pour essayer l’une des plus
-    de 150 nouvelles activités pour l'Heure de Code (du 3 au 9 décembre). N’oubliez
-    pas de jeter un oeil à notre nouvelle activité Minecraft de 2018, le Voyage aquatique !
-    Inscrivez votre classe dès aujourd'hui.
+  hoc2018_mc_aquatic_announcement: Inscrivez votre classe pour qu’elle essaie une
+    des 150 et plus NOUVELLES activités pour Hour of Code (du 3 au 9 décembre). Assurez-vous
+    de jeter un œil à notre nouvelle activité Minecraft, pour 2018, le Voyage Aquatique
+    ! Inscrivez votre classe dès aujourd'hui.
   hoc2018_mc_aquatic_title: 'Minecraft : Voyage Aquatique'
   hoc2018_mc_aquatic_description: Minecraft est de retour pour l’Heure de code avec
     une toute nouvelle activité ! Exploration de Minecraft avec le code.
-  hoc2018_mc_hero_title: 'Minecraft : Voyage du héros'
+  hoc2019_mc_aquatic_description: Explore et construis des mondes sous-marins avec
+    le code.
+  hoc2018_mc_hero_title: 'Minecraft : Le Voyage du Héros'
   hoc2018_mc_hero_description: Minecraft est de retour pour l’Heure de code avec une
     toute nouvelle activité ! Exploration de Minecraft avec le code.
   hoc2018_mc_designer_title: Concepteur de Minecraft
@@ -2294,27 +2388,27 @@ fr-FR:
   hoc2018_mc_start: Commencer
   hoc2018_mc_no_internet: Pas d'internet ?
   hoc2018_mc_download_adventurer: Télécharger la version offline de Minecraft aventurier.
-  hoc2018_mc_educators: Pour les enseignants
+  hoc2018_mc_educators: Pour les Enseignants
   hoc2018_mc_educators_box1_title: Coder avec Minecraft
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition offre un programme
-    d’études, un entraînement et une programmation conforme aux normes dans Minecraft.'
+  hoc2018_mc_educators_box1_desc: 'Minecraft : Education Edition offre un programme
+    d’études, une formation et du codage dans Minecraft, conformes aux normes.'
   hoc2018_mc_educators_box1_button: Démarrer
   hoc2018_mc_educators_box2_title: Télécharger le guide de l'animateur
   hoc2018_mc_educators_box2_desc: Cette boîte à outils vous aidera à organiser une
-    Heure de Code et à faire s’engager vos élèves dans l'informatique.
+    Hour of Code et à impliquer vos élèves dans l'informatique.
   hoc2018_mc_educators_box2_button: Télécharger
   hoc2018_mc_educators_box3_title: Participer à un atelier pour élèves gratuit
-  hoc2018_mc_educators_box3_desc: Rendez visite à un Microsoft Store près de chez
-    vous pour un atelier Heure de Code gratuit. Pour les participants de tous niveaux
-    à partir de 6 ans.
+  hoc2018_mc_educators_box3_desc: Rendez-vous dans  un Microsoft Store, près de chez
+    vous, et participez à un atelier Hour of Code gratuit. Pour tous niveaux de compétence,
+    et à partir de 6 ans.
   hoc2018_mc_educators_box3_button: Trouver un atelier
-  hoc2018_mc_educators_box4_title: Accéder à plus de ressources de sciences informatiques
-  hoc2018_mc_educators_box4_desc: Créez du changement dans votre communauté avec les
-    compétences numériques et les ressources de formation en informatique de Microsoft.
-  hoc2018_mc_educators_box4_button: Explorez les ressources
+  hoc2018_mc_educators_box4_title: Accéder à plus de ressources informatiques
+  hoc2018_mc_educators_box4_desc: Générez du changement dans votre communauté, avec
+    des compétences numériques et les ressources éducatives en informatique de Microsoft.
+  hoc2018_mc_educators_box4_button: Explorer les ressources
   hoc2018_mc_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
-  hoc2018_mc_videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos inspirantes</a>
-    qui comprennent des modèles et de célébrités
+  hoc2018_mc_videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos qui
+    inspirent</a> et qui font intervenir des modèles de référence et des célébrités
   hoc2018_mc_careers_more: Plus de <a href='%{careers_url}' target='_blank'> vidéos
     inspirational</a> mettant en vedette les professionnels dans les domaines de la
     technologie
@@ -2322,10 +2416,10 @@ fr-FR:
   hoc2018_mc_video_2min: 2 minutes
   hoc2018_mc_video_3min: 3 min
   hoc2018_mc_video_5min: 5 minutes
-  hoc2018_mc_video_title_steph_curry: Heure de Code avec Steph Curry
+  hoc2018_mc_video_title_steph_curry: Hour of Code avec Steph Curry
   hoc2018_mc_video_title_sports: Persévère. Tout le monde peut apprendre.
-  hoc2018_mc_video_title_cs_is_everything: L'informatique est en train de tout changer
-  hoc2018_mc_video_title_inspire_girl: Encourager une fille
+  hoc2018_mc_video_title_cs_is_everything: L'informatique est en Train de Tout Changer
+  hoc2018_mc_video_title_inspire_girl: Donner l'envie d'apprendre aux jeunes filles
   hoc2018_mc_video_title_cs_intro: Introduction à la science de l'informatique
   hoc2018_mc_video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent
     pas
@@ -2333,113 +2427,145 @@ fr-FR:
   hoc2018_mc_video_title_hoc_is_here: L'Heure du Code est là - Tout le monde peut
     apprendre
   hoc2018_mc_video_title_anybody_can_learn: Tout le monde peut apprendre
-  hoc2018_mc_video_title_my_name_is_aracely: Mon Nom est Aracely
-  hoc2018_mc_homepage_hoc_coming: L’Heure de code va arriver...
+  hoc2018_mc_video_title_my_name_is_aracely: Je m’appelle Aracely
+  hoc2018_mc_homepage_hoc_coming: Chargement de l'Heure de Code...
   hoc2018_mc_homepage_what_create: Qu'allez-vous créer ?
-  hoc2018_mc_homepage_give_flight: Donne des ailes à ton imagination et naissance
-    à l’innovation. Commence avec une Heure de Code et ta propre touche créative,
-    quelle qu’elle soit.
-  hoc2018_mc_homepage_watch_video: Regardez notre vidéo
-  hoc2018_mc_homepage_join_us: Rejoignez-nous
+  hoc2018_mc_homepage_give_flight: Imagines plus loin et apprends à laisser parler
+    tes idées. Commences avec une Heure de Code et ta propre touche de créativité
+    sans te prendre la tête.
+  hoc2018_mc_homepage_watch_video: Regardes notre vidéo
+  hoc2018_mc_homepage_join_us: Rejoins-nous
   hoc2018_mc_homepage_try_it: Participez
   hoc2018_mc_back: Minecraft est de retour pour une toute nouvelle activité de l'Heure
     de Code!
   hoc2018_mc_back_journey: Minecraft est de retour pour l’Heure de code avec une toute
     nouvelle activité ! Exploration de Minecraft avec le code.
   hoc2018_mc_teacher_guide: Voir le guide de l'enseignant
-  hoc2018_mc_minecraft_education: Minecraft version éducation
+  hoc2018_mc_minecraft_education: Minecraft Éducation
   hoc2018_mc_continue_learning: Continuer à apprendre avec Minecraft.
-  hoc2018_mc_go_to_mc_education: Allez sur Minecraft version éducation
-  hoc2018_mc_short_description: Utilise ta créativité et tes compétences de résolution
+  hoc2018_mc_go_to_mc_education: Aller sur Minecraft Éducation
+  hoc2018_mc_short_description: Utilise ta créativité et tes compétences en résolution
     de problèmes pour trouver des trésors et explorer des mondes sous-marins avec
-    la puissance de la programmation.
-  hoc2018_mc_short_description_shorter: Utilisez votre créativité et vos compétences
-    de résolution de problèmes pour explorer et construire des mondes sous-marins
-    avec la programmation.
-  hoc2018_mc_journey: Voyage à travers Minecraft avec la programmation.
-  hoc2018_dance_party_main_heading: Fête dansante
+    la puissance du code.
+  hoc2018_mc_short_description_shorter: Utilise ta créativité et tes compétences en
+    résolution de problèmes pour explorer et construire des mondes sous-marins avec
+    le code.
+  hoc2018_mc_journey: Voyage à travers Minecraft avec le code.
+  hoc2018_dance_party_main_heading: Soirée Dansante
   hoc2018_dance_party_landing_title: Danse
-  hoc2018_dance_party_subheading: Aider à traduire Soirée Dansante
-  hoc2018_dance_create_your_own_dance_title: Créez votre propre soirée dansante
-  hoc2018_dance_party_box_title: Fête dansante
-  hoc2018_dance_party_box_description: Codez une soirée dansante à partager avec vos
+  hoc2018_dance_party_subheading: Aidez à traduire Soirée Dansante
+  hoc2018_dance_create_your_own_dance_title: Crée ta propre Soirée Dansante
+  hoc2018_dance_party_box_title: Soirée Dansante
+  hoc2018_dance_party_box_description: Code une Soirée Dansante à partager avec tes
     amis !
   hoc2018_dance_party_specs: Langue | Format | De 6 à 106 ans
   hoc2018_dance_party_button: Commencer
-  hoc2018_dance_keep_on_dancing_box_title: Continuez à danser
-  hoc2018_dance_keep_on_dancing_description: Allez au-delà de la première heure avec
-    de longues idées de projets.
+  hoc2018_dance_keep_on_dancing_box_title: Continue De Danser
+  hoc2018_dance_keep_on_dancing_description: 'Vas au-delà de la première heure avec
+    des idées de projets étendues. '
   hoc2018_dance_keep_on_dancing_specs: Langue | Format | 13 ans et plus
-  hoc2018_dance_keep_on_dancing_button: Commencer la partie 2
-  hoc2018_dance_teacher_resources_title: Ressources pédagogiques
+  hoc2018_dance_keep_on_dancing_button: Commencer la Partie 2
+  hoc2018_dance_teacher_resources_title: Ressources Pédagogiques
   hoc2018_dance_teacher_resources_tile1_description: Plans de cours, certificats et
     filtrage de la musique.
   hoc2018_dance_teacher_resources_tile1_button: Plan de cours
-  hoc2018_dance_teacher_resources_tile2_title: Soirée dansante décontractée
-  hoc2018_dance_teacher_resources_tile2_description: Pas besoin d’ordinateurs!  Apprenez
-    les concepts de codage pour chorégraphier une soirée dansante ensemble.
-  hoc2018_dance_teacher_resources_tile2_button: Activité manuelle
-  hoc2018_dance_featured_student_creations_title: Créations d’élèves en vedette
-  hoc2018_dance_videos_section_heading: Trouvez de l’inspiration
-  hoc2018_dance_video_title_what_is_creativity: Qu'est-ce que la créativité ?
-  hoc2018_dance_view_creativity_video_playlist: Qu'est-ce que la créativité ? Voir
-    la série complète (5 min)
+  hoc2018_dance_teacher_resources_tile2_title: Soirée Dansante Débranchée
+  hoc2018_dance_teacher_resources_tile2_description: Pas besoin d’ordinateurs ! Apprenez
+    les concepts de code informatique pour chorégraphier une Soirée Dansante ensemble.
+  hoc2018_dance_teacher_resources_tile2_button: Activité "Déconnectée"
+  hoc2018_dance_featured_student_creations_title: Créations d’Élèves en vedette
+  hoc2018_dance_videos_section_heading: Trouve de l’Inspiration
+  hoc2018_dance_video_title_what_is_creativity: Qu'est-ce que la Créativité ?
+  hoc2018_dance_view_creativity_video_playlist: Qu'est-ce que la Créativité ? Voir
+    la Série Complète (5 min)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: En partenariat avec
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
-    Engineer* est un programme complet destiné à inspirer, éduquer et former les enfants
-    et jeunes à faible revenu ou autrement défavorisés à poursuivre une carrière dans
-    l’informatique. <a href='%{amazon_future_engineer_link}' target='_blank'>En savoir
-    plus</a>
-  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Apprenez en plus
-    sur Amazon Future Engineer
+    Engineer* est un programme destiné à sensibiliser les enfants défavorisés aux
+    opportunités du numérique et les aider à bâtir une carrière dans les métiers de
+    l’informatique. Ce programme sera destiné aux enfants défavorisés du primaire
+    au supérieur avec une attention toute particulière pour les jeunes filles. <a
+    href='%{amazon_future_engineer_link}' target='_blank'>En savoir plus</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* est un programme destiné à sensibiliser les enfants défavorisés
+    aux opportunités du numérique et les aider à bâtir une carrière dans les métiers
+    de l’informatique. Ce programme sera destiné aux enfants défavorisés du primaire
+    au supérieur avec une attention toute particulière pour les jeunes filles. [En
+    savoir plus](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Pour en savoir
+    plus sur Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: À propos d'Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_description: Découvrez le programme de
-    la maternelle à la carrière d’Amazon pour accroître l’accès à l’enseignement informatique.
-    Trouvez des informations sur la manière de vous impliquer dans nos camps d’été,
-    nos classes d’informatique au secondaire, nos bourses d’études et nos stages.
-  hoc2018_dance_amazon_about_future_engineer_button: Pour en savoir plus
+  hoc2018_dance_amazon_about_future_engineer_description: Découvrez le programme d’Amazon,
+    qui s’étend de la Maternelle jusqu’à l’âge actif, destiné à accroître l’accès
+    à l’enseignement informatique. Trouvez des informations sur la manière de vous
+    impliquer dans nos camps d’été, nos classes d’informatique au secondaire, nos
+    bourses d’études et nos stages.
+  hoc2018_dance_amazon_about_future_engineer_button: En savoir plus
   hoc2018_dance_amazon_try_coding_this_summer_title: Essayez de coder cet été
   hoc2018_dance_amazon_try_coding_this_summer_description: Participez aux camps d'informatique
-    gratuits, amusants et inclusifs d'Amazon Future Engineer! Des camps d'été sont
-    disponibles pour les élèves de la maternelle à la 8e année dans plusieurs endroits
-    aux États-Unis pour l'été 2019.
+    gratuits, amusants et inclusifs d'Amazon Future Engineer ! Les camps d'été sont
+    disponibles pour les élèves, de la Maternelle à la 4ème, dans plusieurs localités
+    aux États-Unis, pour l'été 2019.
   hoc2018_dance_amazon_try_coding_this_summer_button: Rejoignez un camp
   hoc2018_dance_amazon_scholarship_programs_title: Programmes de bourses
   hoc2018_dance_amazon_scholarship_programs_description: Amazon offre des bourses
-    d’études de 10000 dollars par an aux élèves mal desservis qui ont terminé avec
-    succès ou sont actuellement inscrits à un cours avancé en informatique et qui
-    ont l’intention de suivre un cursus universitaire de 4 ans en informatique aux
-    États-Unis.
-  hoc2018_dance_amazon_scholarship_programs_button: Demander maintenant
+    d’études de 10000 dollars par an aux élèves défavorisés qui ont terminé avec succès
+    ou sont actuellement inscrits à un cours avancé AP d’informatique et qui ont l’intention
+    de suivre un cursus universitaire de 4 ans en informatique aux États-Unis.
+  hoc2018_dance_amazon_scholarship_programs_button: Postuler maintenant
   hoc2018_dance_amazon_internships_title: Faire un stage chez Amazon
   hoc2018_dance_amazon_internships_description: Les candidatures sont maintenant ouvertes
-    pour les stages de l'été 2019 Amazon Future Engineer. Les stagiaires collaboreront
+    pour les stages Amazon Future Engineer de l'été 2019. Les stagiaires collaboreront
     avec un responsable, un mentor technique et d'autres stagiaires pour innover et
-    créer de nouvelles fonctionnalités et services pour le compte de clients Amazon.
+    créer de nouvelles fonctionnalités et services pour le compte de clients d’Amazon.
     Les stages sont disponibles aux États-Unis et au Canada.
   hoc2018_dance_amazon_internships_button: Trouver un stage
-  hoc2018_dance_amazon_k8_programs_title: Programmes de primaire et collège
-  hoc2018_dance_amazon_funding_title: Obtenir un financement pour votre diplôme de
-    sciences informatiques
+  hoc2018_dance_amazon_k8_programs_title: 'Programmes de la Maternelle à la 4ème '
+  hoc2018_dance_amazon_funding_title: Obtenir un financement pour votre diplôme en
+    informatique
   hoc2018_dance_amazon_future_engineer_footer: "* Les artistes dont la musique est
-    utilisée dans ce tutoriel ne sont pas sponsorisés par ni ne soutiennent Amazon
-    dans le cadre de l’utilisation de la licence de leur musique sur Code.org.\n\n"
+    utilisée dans ce tutoriel ni ne sponsorisent, ni ne soutiennent Amazon quant à
+    l'octroi d'une licence pour l'utilisation de leur musique à Code.org."
   hoc2018_dance_measure: Mesure
   hoc2018_dance_measure_colon: 'Mesure:'
   hoc2018_aquatic_video1: 'Minecraft : Voyage Aquatique - Introduction'
-  hoc2018_aquatic_video2: 'Minecraft : Voyage Aquatique - Boucles'
-  hoc2018_aquatic_video3: 'Minecraft : Voyage Aquatique - Instructions Conditionnelles'
+  hoc2018_aquatic_video2: 'Minecraft : Voyage Aquatique - Les Boucles'
+  hoc2018_aquatic_video3: 'Minecraft : Voyage Aquatique - Les Conditions'
   hoc2018_aquatic_video4: 'Minecraft : Voyage aquatique - Félicitations'
   hoc2018_dance_video1: Soirée Dansante - Introduction
-  hoc2018_dance_video2: Soirée Dansante - Évènements
-  hoc2018_dance_video3: Soirée Dansante - Propriétés
+  hoc2018_dance_video2: Soirée Dansante – Les Événements
+  hoc2018_dance_video3: Soirée Dansante – Les Propriétés
   hoc2018_dance_video4: Soirée Dansante - Félicitations
-  page_not_found_title: Page introuvable
-  page_not_found_header: '404 : Page introuvable'
-  page_not_found_description: La page recherchée n’existe pas à cette adresse. Vérifiez
-    l’adresse web et réessayez, ou retournez à notre page d’accueil.
+  page_not_found_title: Page Introuvable
+  page_not_found_header: '404 : Page Introuvable'
+  page_not_found_description: La page recherchée n'existe pas à cette adresse. Vérifie
+    l'adresse du site internet et réessaie. Sinon, retourne sur la page d'accueil.
   page_not_found_button: Retourner à la page d’accueil
   hoc2018_mc_with_microsoft: En partenariat avec
   hoc2018_mc_thank_microsoft: Nous remercions Microsoft du soutien accordé à notre
-    vision et mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique
-    et les compétences nécessaires pour réussir au XXIe siècle.
+    vision et notre mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique
+    et d’obtenir les compétences nécessaires pour réussir au XXIe siècle.
+  hoc2019_mc_mee_title: Minecraft AI pour de Bon
+  hoc2019_mc_mee_description1: 'Le nouveau didacticiel Minecraft Hour of Code est
+    maintenant disponible dans Minecraft : Édition Éducation pour Windows, Mac et
+    iPad. Apprenez les bases du codage et explorez l''IA avec vos élèves!'
+  hoc2019_mc_mee_description2: Accédez à des ressources gratuites, qui comprennent
+    un plan de leçon, des vidéos, un programme d'études en informatique et des formations
+    pour les enseignants.
+  hoc2019_mc_more_coding_resources: Plus De Ressources De Codage
+  hoc2019_dance_previous_versions: Vous cherchez une version antérieure de Soirée
+    Dansante ?  Cliquez ici pour commencer [Partie 1](%{dance_2018_link}) et [Partie
+    2](%{dance_extras_2018_link}) qui datent de l'année dernière.
+  homepage_slot_text_title_at_home: 'Cours disponible à la Maison '
+  homepage_slot_text_blurb_at_home: Apprends facilement avec ces cours
+  homepage_slot_text_link_code_break: Prends une Pause de Code
+  homepage_slot_text_link_do_hoc: Fais une Heure de Code
+  homepage_slot_text_link_express_course: Essaies  un cours express
+  page_not_available_button: Retourner à la page d’accueil
+  footer_powered_by_aws: Fourni par Amazon Web Services
+  codebytes_skinny_banner_english_only: Seulement en anglais
+  footer_privacy_policy: Politique de confidentialité
+  footer_about: À propos
+  footer_partners: Partenaires
+  footer_donate: Donner
+  footer_support: Assistance
+  footer_terms: Conditions Générales

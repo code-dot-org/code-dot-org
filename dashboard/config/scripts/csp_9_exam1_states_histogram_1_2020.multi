@@ -1,0 +1,28 @@
+name 'csp-9-exam1-states-histogram-1_2020'
+editor_experiment ''
+wrong 'More than half of all states are larger than 100,000 square miles'
+wrong 'More than half of all states are smaller than 50,000 square miles'
+wrong 'Some states are larger than 200,000 square miles'
+right 'The most common size of states is between 50,000 and 100,000 square miles'
+
+markdown <<MARKDOWN
+The histogram chart below has a single bar for every state in the United States. Each state is placed in a bucket, or range, based on its area in square miles.
+
+Which of the following conclusions is BEST supported by the histogram chart?
+
+![](https://images.code.org/ab58715c330c62414f15120f4159edb2-image-1583551533032.01.59 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Histograms show frequency of data in a range or “bucket”. In this case, the range that contained the most data (individual states) was 50,000-100,000 square miles.
+
+Students made and interpreted histograms similar to this one in [Lesson 2 - Exploring One Column](https://curriculum.code.org/csp-20/unit9/2/) 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-2.D: Extract information from data using a program.
+:::
+
+
+MARKDOWN

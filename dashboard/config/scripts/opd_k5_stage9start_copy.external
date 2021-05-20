@@ -1,0 +1,15 @@
+name 'OPD-K5 Stage9Start_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Exploring Teacher Resources
+
+It's time to start planning your instruction. In this stage, we'll be touring other areas of the Code.org platform and the **<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">Teacher Dashboard</a>**.
+
+A screenshot of the Teacher Dashboard is below. You will need to log into your Code.org teacher account in order to see it. Once you are logged in, it should be the default screen that you see on the Code.org website. If you do not have a teacher account, you can **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">sign up for one here</a>**.
+
+<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

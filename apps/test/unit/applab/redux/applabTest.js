@@ -1,5 +1,5 @@
 /** @file Tests for App Lab redux module */
-import {expect, assert} from '../../../util/configuredChai';
+import {expect, assert} from '../../../util/deprecatedChai';
 import {
   getStore,
   registerReducers,
@@ -94,7 +94,7 @@ describe('App Lab redux module', () => {
 
   describe('interfaceMode', () => {
     it('exposes state on the interfaceMode key', () => {
-      expect(store.getState().interfaceMode).to.be.defined;
+      expect(store.getState().interfaceMode).to.not.be.undefined;
     });
 
     describe('the initial state', () => {
@@ -147,7 +147,7 @@ describe('App Lab redux module', () => {
 
   describe('maker', () => {
     it('exposes state on the maker key', () => {
-      expect(store.getState().maker).to.be.defined;
+      expect(store.getState().maker).to.not.be.undefined;
     });
   });
 });

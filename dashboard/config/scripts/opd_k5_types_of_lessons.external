@@ -1,0 +1,31 @@
+name 'OPD-K5 types of lessons'
+title 'Types of Lessons'
+description 'description here'
+markdown <<MARKDOWN
+# Organization of CS Fundamentals courses
+
+## Concept chunks
+
+Each CS Fundamentals course is organized into concept chunks, the big ideas that provide structure to a course. Concept chunks make it easy for teachers to see at a glance what is covered in a course. **Code.org provides <a href="http://curriculum.code.org/csf-19" target="blank" rel="noopener noreferrer">lesson plans</a> for every lesson in the curriculum, both on and off the computer**. The different kinds of lessons in each concept chunk are explained in detail below.
+
+To illustrate, here are the five lessons contained in the “Loops” concept chunk in Course C, as they appear in the course.
+
+
+<img src="https://images.code.org/953ebc5b17a97ee7fc9ee9261b4ee132-image-1571689334077.png">
+
+## Unplugged lessons
+**These lessons are done away from the computer and are often used to introduce a new concept in a hands-on, tangible way.** Students will often work with pencil and paper or physical manipulatives.  These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives. Often an unplugged lesson sets the stage for a subsequent skill-building lesson investigating the same concept on the computer.
+
+## Plugged lessons – Skill building
+**These lessons are done on the computer and give students structured practice with a new tool or programming concept.** These puzzle progressions generally start with a sequence of practice puzzles that gradually increase until reaching a challenge puzzle. There are often additional puzzles after the challenge that intentionally get easier to help build efficacy and confidence at the end of the lesson.
+
+
+## Plugged lessons – Application
+**These lessons are done on the computer and give students space to apply learned concepts in creative ways.** These lessons typically walk students through the creation of a mini-project that will be unique for them based on their own creative decisions. There are no right or wrong answers here!
+
+## End of course projects
+Each course offers the opportunity for students to take what they’ve learned at the end of a lesson and put it together into a unique project that represents their own creativity. We'll learn more about them later on in this course.
+
+
+
+MARKDOWN

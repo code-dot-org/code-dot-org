@@ -11,6 +11,16 @@ wrong ‘orange’
 
 teacher_markdown <<MARKDOWN
 
+**Explanation:** Since this is an example of event-driven programming, the commands on lines 4 and 5 will only execute when the user clicks the “topButton” since they are inside the `onEvent` block. Since this question asks about the situation of the user NOT clicking the button, the last change to the color happens when line 2 executes and sets it to blue.
+
+[Lesson 6 - Intro to Programming](https://curriculum.code.org/csp-20/unit3/6/) showed students examples of programs like this one.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+CRD-2.C.5: In event-driven programming, program statements are executed when triggered rather than through the sequential flow of control.
+
+:::
+
 MARKDOWN
 
 markdown <<MARKDOWN

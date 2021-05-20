@@ -3,8 +3,8 @@ require 'active_record/errors'
 namespace :db do
   def database_exists?
     Rake::Task['environment'].invoke
-    ActiveRecord::Base.connection
-  rescue ActiveRecord::NoDatabaseError
+    ActiveRecord::Base.connection.execute('SHOW TABLES')
+  rescue ActiveRecord::NoDatabaseError, ActiveRecord::StatementInvalid
     false
   else
     true
@@ -21,18 +21,24 @@ namespace :db do
     end
   end
 
-  task :round_trip_schema_cache do
-    Rake::Task['environment'].invoke
-
-    # This should be a no-op, but on staging we sometimes get a cache dump that changes when round-tripped through Marshal.
-    schema_cache_file = dashboard_dir('db/schema_cache.dump')
-    2.times do
-      data = File.binread(schema_cache_file)
-      checksum = Digest::MD5.digest data
-      open(schema_cache_file, 'wb') do |f|
-        f.write(Marshal.dump(Marshal.load(data)))
+  namespace :schema do
+    namespace :cache do
+      # Normalize schema cache dump by re-processing the binary output through Marshal.
+      # This should be a no-op, but sometimes the output changes when round-tripped through Marshal
+      # (e.g., from subtle differences in how Ruby de-duplicates String objects in hash keys).
+      # See also SchemaCacheDedup patch.
+      task :dump do
+        file = 'schema_cache.dump'
+        path = File.join(ActiveRecord::Tasks::DatabaseTasks.db_dir, file)
+        old = File.binread(path)
+        new = Marshal.dump(Marshal.load(old))
+        unless old == new
+          ChatClient.log "#{file} changed from " \
+            "#{Digest::MD5.hexdigest(old)[0..4]} (#{old.bytesize} bytes) to " \
+            "#{Digest::MD5.hexdigest(new)[0..4]} (#{new.bytesize} bytes) after reprocessing."
+          File.binwrite(path, new)
+        end
       end
-      ChatClient.log "Can the schema cache dump #{checksum} be round-tripped through Marshal? #{(data == Marshal.dump(Marshal.load(data)))}"
     end
   end
 end

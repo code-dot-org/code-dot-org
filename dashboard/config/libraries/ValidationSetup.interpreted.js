@@ -3,6 +3,7 @@
 function levelSuccess(testResult) {
   validationState = 'succeeded';
   validationResult = testResult;
+  validationMessage =  "reinfFeedbackMsg";
 }
 
 function levelFailure(testResult, msg) {

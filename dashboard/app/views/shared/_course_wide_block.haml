@@ -42,12 +42,13 @@
 - elsif id == Script::TWENTY_HOUR_NAME && view == 'small'
   - url = script_reset_url(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
-  .courseblock-span6.courseblock-wide-small{style: "min-height: 120px;"}
+  .courseblock-span6.courseblock-wide-small
     = link_to script_url(Script::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
         %img{src: CDO.code_org_url('/images/fit-150x100/code20hr.jpg')}
       .courseblock-span4.heading
         %h3= t('upsell.20-hour.title')
+        %h4= data_t_suffix('script.name', id, 'description_audience')
         .smalltext= t('upsell.20-hour.body_short')
 
 - elsif id == 'unplugged' && view == 'large'
@@ -69,6 +70,7 @@
         %img{src: CDO.code_org_url('/images/fit-150x100/unplugged.png')}
       .courseblock-span4.heading
         %h3= t("upsell.#{id}.title")
+        %h4= t("upsell.#{id}.audience")
         .smalltext= t("upsell.#{id}.body_short")
 
 - elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME].include? id
@@ -83,13 +85,15 @@
         %h3= title
         .smalltext= body
 
-- elsif [Script::EXPRESS_NAME, Script::PRE_READER_EXPRESS_NAME].include? id
-  .courseblock-span6.courseblock-wide-small{style: "min-height: 140px;"}
+- elsif [Script::EXPRESS, Script::PREEXPRESS].any? {|course| id.match(/^#{course}/)}
+  .courseblock-span6.courseblock-wide-small
     = link_to script_url(id)  do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/logo_tall_#{id}.jpg")}
+        - image = (family_name.nil?) ? "logo_tall_#{id}.jpg" : "logo_tall_#{family_name}.jpg"
+        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/#{image}")}
       .courseblock-span4.heading
         %h3= data_t_suffix('script.name', id, 'title')
+        %h4= data_t_suffix('script.name', id, 'description_audience')
         .smalltext= data_t_suffix('script.name', id, 'description_short')
 
 - elsif [Script::COURSE1_NAME, Script::COURSE2_NAME, Script::COURSE3_NAME, Script::COURSE4_NAME, Script::ALGEBRA_NAME].include? id
@@ -106,3 +110,13 @@
               = t('beta')
         %h4= data_t_suffix('script.name', id, 'description_audience')
         .smalltext= data_t_suffix('script.name', id, 'description')
+
+- else
+  .courseblock-span6.courseblock-wide-small
+    = link_to script_url(id)  do
+      .courseblock-span2.imgspan
+        - image = (family_name.nil?) ? "logo_tall_#{id}.jpg" : "logo_tall_#{family_name}.jpg"
+        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/#{image}")}
+      .courseblock-span4.heading
+        %h3= data_t_suffix('script.name', id, 'title')
+        .smalltext= data_t_suffix('script.name', id, 'description_short')

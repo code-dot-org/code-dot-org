@@ -8,7 +8,7 @@ require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 require 'cdo/git_utils'
 require 'uri'
 require 'cdo'
-require 'cdo/aws/cdo_google_credentials'
+require 'cdo/aws/config'
 
 ####################################################################################################
 ##
@@ -70,6 +70,10 @@ end
 
 def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
+end
+
+def bin_i18n_dir(*dirs)
+  deploy_dir('bin/i18n', *dirs)
 end
 
 def shared_constants_dir(*dirs)

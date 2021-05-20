@@ -6,11 +6,21 @@
   "user_id": 0,
   "properties": {
     "title": "Getting Started: A Look at Siri",
-    "long_instructions": "Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below. \n\n<iframe width=\"637px\" height=\"375px\" src=\"https://www.youtube.com/embed/8ciagGASro0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n__Reflect on the prompts below:__ \n\n- What types of information does Siri respond to in the video?\n- What do you think Siri is paying attention to in order to create these answers?\n",
-    "encrypted_solution": "PBLoJKXX6Mq1Ru1lk6qZKIn195gLTSTP5e4azykMA9XOaTTsaBf/m65AuAKZ\nevckXyjgFVGhlB+RvjnG3nZ7fAp+ccHFw34UE1BelCFDuRuHSHS5Hp4F/hAH\nFTY4gNZoXCvomPi1Z5EVwxZAXwVn2SxCBitKfwXjY2ce7h2r2txF465oQij2\nE6143dyGiJnCcTWo/bsHqhy1BCLiTV+baCMjFtDG25aTEokwQsFnsAMRG6hB\nGCu4nRBrp8zdUyqWLSy6cnPwFICTvdQe2gCTRlN2GtnItyHKxpb1lmGh0E34\nYs3lNOlhnzav5dcSE6jrwkGa08j+UgcK1qS+MsvrKBo0BeQbKB3+mo7czA2d\n4Aa+vzrGVQndmUg22lM5AhpA2XJ6tlHyBZtqwOCHw5i2ZoM2h/5vTk6xsxZN\nLCiGO/NI5a0HbgfJAbfa3WAXPeov\n",
+    "long_instructions": "Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below.\r\n\r\n[Video](https://www.youtube.com/watch?v=2zoRh-Kuwpo)\r\n\r\n<br/>\r\n__Reflect on the prompts below:__ \r\n\r\n- What types of information does Siri respond to in the video?\r\n- What do you think Siri is paying attention to in order to create these answers?\r\n",
+    "encrypted_solution": "DQMiMS6bxKLYLV1gK9Zm61af8QyIwjATVj7k0yf3UKZF0Vdzx2HXSenQ6d2p\nYmvNqBQYp4yuHJHILh/pG5SjF8irMdQDOA7tJbmI1gMl4DiDctuXqvCOpcLk\nSYFPh9SlPvDsG0fVvXFWt/oYXZRlg7wjaeE/qCyzSUGMc6ujInMMEaE8VyZU\nEyLXcuhNdosGw+jzt7SG2vZEoO2/h2lT1Gk0khI27dMNOABK/6qrZELi0szP\nflH51oT2Vurts8JC9dQ+kZ9sc+RmU+bSUzXVxJgRABQ2+2ocQRM5eLO19oMj\n5HUhXsnkKOHTQxrkLPfonGvb48zUY0oAlA4zI2dGG1d9ZEMbNp4jpSojpAk6\n76WoKiLDw2x89bKsgHIOr9sjWBHcTEuCY8/m+gZkkfHtf1jtZ2f2TzHRT/c+\nOs92sXIIhH6HGDQZHq/2FwpNBOBX\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-18 23:24:59 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-18 23:29:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

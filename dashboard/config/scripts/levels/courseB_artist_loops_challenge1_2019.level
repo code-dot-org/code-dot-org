@@ -47,7 +47,11 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 16:15:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 19:39:48 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-28 16:15:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 19:39:48 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

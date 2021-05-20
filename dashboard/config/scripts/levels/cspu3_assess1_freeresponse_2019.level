@@ -6,16 +6,22 @@
   "user_id": 532,
   "properties": {
     "long_instructions": "Explain how abstraction allows for the creation of increasingly complex systems.  Reference top-down design strategy in your response.",
-    "encrypted_solution": "ABxVB21b8GRgno4X30z2FYMJHc00Se6aMNrjlFtYnXq4o8wCI2euwNVJpzti\nR8441eOixrCHxl9ysvztm56jQkYdths8oPHUaHGuZqTEPRxcRRrzpfxEkfMx\nWK+trF5AcTbuyoBU9KSsalrGl7bsYBYNnATxtVMk0ViZAmDe5OmZDzA5k8Yp\nNzm/OPWuZyRgyw5eM4nrb6T2M8cpZYMIUa+SDDSHGWYo6ptVws01Dipnwm08\nzs6rqyfIOoTnoN3KrBGtdoB/qzEurz7tJnRPq4iqaSyXNNDY0FvOMkxYFmwA\nDA0g9nLKV8HcnlZGuOuasEHTvZ9TFmKCCWm/9vx6pkK0oxs0wIGZ2xXbOeqg\nXZade06CTt3aCOkV8iqo81bmdpywwA7ef3LraRSFsLVPJbnHKvM9XRmJdW1s\nlNRYiDhD4f1r5F38gZ8nJYVOL5wbkusxVqFVFnsSyY5+qvHuSP7jHWcUsudZ\nCW8trCVsbFipxL3J4UzWi4zQvs9RsMwyUGzJ6XgxA/MadDCjaJQSnELAfd4u\nuIgHj9rYWILwzHrHg7H3/sS/ft4NVctS4dqZpKBsYpPXAUhPk6x3Y0thYpP7\n9UI9LxUoQLWo5T2xdjSKhJA1LV6qLmG1twqssoYtypDaecgm0beQluFYzQ/Q\nAA16yDhRLMhtrFnbhWXInyF9KIu4rwP/DaijEE3dQsFO7O1Ar8R2f9nW4M0H\nCorBr9V0qYTz/NEgrtnPAo0s0U6CxXAmD0T1OAyFYbIUwcLVPLM7KPGpZ0Tz\nyUC4/hir91NxvWUtH6Y7zY/SYcIrWwMF2IZoAtkk12ajvpTbKONXZ4xsxMfB\nne38iqorK7YygWHupta/qyoQl7K+qyPMRO9oDQbSoiyHzcw8jXM/twtrg1AB\nusFs/c091EKpSpzNkpLp9bVlMO2I8CZhWed2AMmi+18r0m1KDcInNWWw7vLU\nX4f6s30M7XSZA8EL2ti+p1SO2I/rxEDtvG7hUzZPQcIGiHzuUAv7/kFctkWp\n7FU0TjWf+KYtgKh1vxQxImYS2RGzDyx9Y5cDv7dyWwqs6goIZL3SU2Hlz1sv\nED5ecPg3rxYlgb06icHtTumeeKca190PeZ/XSdDIaPXqlXTKPHiDW26Z02+O\nGNQfnxxWzEW9+v5BaFjRELksLZ+6J1EoGZ+WITkZ3Mpo1XPXUjhzPQhhi04y\norc+BByUBtbL5fsgKOzecnCRNmYwcvYH1ubfnfOCF6aZu/jqk2ll6V9PNm8m\nnCc00CBxZ+qhnJjimVaYCj3VRzSrfTk8ukl1NMK957UBEfZKGFRRx6naKd62\nr6blivDfgidLOgQqPsbZoPpRvvKhjqZZy1URS5sg0LR0MQ0hzh3psqp5XXXb\n535LapzyYrknz1L6rzybNrcIdDHGYSjl4ndnTMKNEf7zZrv4HvLvNwV7B/NX\nDtR3M2t9fOY=\n",
+    "encrypted_solution": "cDET54oZdVPdh2cZM4E6TQ5smSMqwG+rKnVqKIONbMCvhyxv2KChrqSiVR+E\n0QoQjChwynOH5xUODO2vSaVJHy4Erd8GZ/dPLOFn33So1+IbyOiN5gJRJHNk\nglUIGi5wD6QVn5Qnsh+uUjatEs9mG0e93R0noQ5s6/iuspudUhXsIcfdHJ0J\nEOER3j+JodNJGXawPp3u8H+G9AKSLoNu5T76hIc4ltlha8GQGeEG6uE2W6Rt\nzL3+Lpxnomsbgb+2wf71BYfqM68IYZ5GPS6dF2cvxVX8gmdW2UhAgIvMU/XS\nHsGLuxrSVbwRyjZsrsmNr/84xX+9kWcwNok7SUVepsAZgO6gl+za5Aksk0RI\nLzE/NkwBvtfkM44alwMNDZYEWwI8hWHJuwQceuzc4fqQp4/u1E6W48hK61pL\nKd/6UwJ+QE5t6p+zPn8ddWX6Gx4CdfmM8S8aru9sH2FhJ9ajXALM3T8KkOQ9\nlh5YXxw2HgPE6RlAn502lUqG8cShFIX+3Mfii3KyTgdFqfi5tnYLEjEXQJ2D\n7SczR0c0vZomtxn94hKUGMI2fUWCwjW/CMTp3cHir/GJ5iDz4tBwb/ea2HaH\nbnBIeaEPmsgM0EYWPh2ZgHfwi/RzVaQFz52YlLn00h+bZ4ejMqyZBVmJZNHs\nCN45qtVWoduRNZ0SmQtF4iRt8dHCCQCAHyAnT8MqY6XuNOhMagFthzoQEwU3\nJdQhXcZt4gKddu/ASce2R6OtWejZjh3+VjAikPjz+r7lH06H7x+5bPxzM/vX\nQnWC84UPHqyrY4NoR8jgMuSjcL9UFoUjob6RBumgL5VDN2J9HoJHytydtcaA\n1niGuTbduYwWaybmkoQKEVqAlwJM7xcjH+7xQpDQ8oWF+Qpd5ytoNwgtsd6/\nRxuMDjzxNi1f/4UwRRltrkOty8ggIHXyIXQFFjvbYaolkoJXZsCfyPmMMDA+\nEECiRPZwLD6ndbS3J9GE6y/MMDTyBkmNkzPp+MlOEV80XhOJm9mM1D7CE/TZ\n4FzhUEyY2DSR34vSDy5RbkbmWvVOVmw7EM6240/7mXAs0VSKo2zuVPw3kaNn\ns9sHoJQQIBkYdeYeNHnj/Hf8VFcN6zysf7z4Kn/KEFASCxAQwLHIBEJAM0qQ\nTwWBCSjssGjPFEFhAlo9OjF4gZnGwWNUpf3btXqXgx6U1jQ9IUS0Kh4j+jzY\nwM1U9FmU1+4K/8ywxZSXxha6VFasubVPGltuE4Vanzf7UXRA62PEXe6ZFoK0\nVyowwzxHjnfDjcA/UVoEe0lEYBwyaefk3Q1DVS4ZPFDyR/DyXmOjWdHs5PGg\n57SbFyu9Ovfe2BXAp0IBhRQbt2V51qV1QXUXKzjXH4BOZmuH11XqcF73NEKH\nvVOewS89SrPEhYyLcyD8OfolcSANy6zV8czG5wNo6YfwXxd9hw==\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 13216,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "optional": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-05-11 22:34:41 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

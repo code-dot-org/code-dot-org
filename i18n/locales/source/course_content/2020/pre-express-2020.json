@@ -1,0 +1,875 @@
+{
+  "https://studio.code.org/s/pre-express-2020/lessons/2/levels/2": {
+    "short_instructions": "For this puzzle, snap the blocks together and press \"▶ Run\"!",
+    "long_instructions": "To get Scrat to the acorn, snap the [blockly block][0] block to the bottom of the [blockly block][1] block, then press \"▶ Run\"!",
+    "authored_hints": {
+      "1": "If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click \"Run\" again.",
+      "2": "Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!"
+    },
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/2/levels/3": {
+    "short_instructions": "Snap all blocks together to finish your code, then click \"▶ Run\".",
+    "long_instructions": "Snap both [blockly block][0] blocks to the bottom of the [blockly block][1] block to finish your code, then click \"▶ Run\".",
+    "authored_hints": {
+      "1": "Your code should look like this:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/2/levels/4": {
+    "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
+    "long_instructions": "Grab a [blockly block][0] block from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
+    "authored_hints": {
+      "1": "Your code should look like this:\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/2/levels/5": {
+    "short_instructions": "Drag the extra block back to the toolbox to throw it away.",
+    "long_instructions": "There's an extra block at the end of this code!\n\nDrag it back to the toolbox to throw it away.",
+    "authored_hints": {
+      "1": "Your code should look like this:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/2/levels/6": {
+    "short_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
+    "long_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
+    "authored_hints": {
+      "1": "Your code should look like this:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/2/levels/7": {
+    "short_instructions": "Try this one all by yourself!",
+    "long_instructions": "Try this one all by yourself!",
+    "authored_hints": {
+      "1": "Your code should look like this:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/2": {
+    "short_instructions": "Get the bird to the bad pig!",
+    "long_instructions": "_\"Play with these blocks and try to get me to the bad pig!\"_",
+    "authored_hints": {
+      "courseA_maze_seq1_a": "If you are having trouble getting the bird to move, make sure blocks are snapped in place under [blockly block][0]",
+      "courseA_maze_seq1_b": "The bird will need to move West 3 times to get to the pig. Use this block:\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "courseA_maze_seq1_1": "Click the lightbulb when you need a hint!"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/3": {
+    "short_instructions": "Give this one a try.",
+    "long_instructions": "Give this one a try.",
+    "authored_hints": {
+      "1": "Try writing down the steps on paper to find a solution!",
+      "2": "You will need to use this block:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/4": {
+    "short_instructions": "What can you add to the end of this code to get the bird to the pig?",
+    "long_instructions": "_\"Here piggy, piggy!\"_\n\nWhat can you add to the end of this code to get the bird to the pig?",
+    "authored_hints": {
+      "1": "Say the steps out loud and see if it helps you figure out the answer."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/5": {
+    "short_instructions": "Move one way, then another to get the bird to the pig!",
+    "long_instructions": "Move one way, then another to get the bird to the pig!",
+    "authored_hints": {
+      "courseA_maze_seq6_a": "Your final code should have 3 movement blocks.",
+      "courseA_maze_seq6_b": "If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/6": {
+    "short_instructions": "Solve this level and get the bird to the pig!",
+    "long_instructions": "Solve this level and get the bird to the pig!",
+    "authored_hints": {
+      "courseA_maze_seq8_a": "If you're stuck, try drawing the image on paper to see how the bird should move."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/7": {
+    "short_instructions": "Challenge: Avoid the TNT to get the bird to the pig! ",
+    "long_instructions": "**Challenge:** Avoid the TNT to get the bird to the pig!",
+    "authored_hints": {
+      "courseA_maze_seq10_a": "If you're having trouble, try writing down the steps on a piece of paper first.",
+      "courseA_maze_seq10_b": "You will need to go 3 different directions to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/8": {
+    "short_instructions": "Move one way, then another to get the bird to the pig.",
+    "long_instructions": "Time for a shorter puzzle!  Move one way, then another to get the bird to the pig."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/9": {
+    "short_instructions": "Get that pig! ",
+    "long_instructions": "Get that pig!"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/levels/10": {
+    "short_instructions": "Get the pig any way you can!",
+    "long_instructions": "Get the pig any way you can!",
+    "authored_hints": {
+      "courseA_maze_seq13_a": "If the path you need is unclear, use your finger to trace your way from the bird to the pig.",
+      "courseA_maze_seq13_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.",
+      "courseA_maze_seq13_c": "These [blockly block][0]\n\n[blockly block][1]\n\n blocks will help you move closer to the pig."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/extras?level_name=courseA_maze_seq_challenge1_2020": {
+    "short_instructions": "Something is wrong here. Help fix the code to get the bird to the pig!",
+    "long_instructions": "Debug this level. Remove the extra blocks, and add the missing blocks. Get the bird to the pig!",
+    "authored_hints": {
+      "courseA_maze_seq_challenge1_a": "There are two solutions to this puzzle."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/3/extras?level_name=courseA_maze_seq_challenge2_2020": {
+    "short_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
+    "long_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
+    "authored_hints": {
+      "courseA_maze_seq_challenge2_a": "Try counting the spaces with your finger. Remember not to count the space where you start!"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/2": {
+    "short_instructions": "\"Go get the scrap metal, BB-8!\"",
+    "long_instructions": "[Rey][0]_\"Go get the scrap metal, BB-8!\"_\n\nWatch out for walls and crates. Scrap metal looks like this: [picture of scrap metal][1]",
+    "authored_hints": {
+      "courseB_starWars_prog1_a": "Try adding blocks one at a time, then click \"Run\" to see what happens.",
+      "courseB_starWars_prog1_b": "You will want to move East to solve this puzzle. How far do you need to move?\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/3": {
+    "short_instructions": "Get all the metal.",
+    "long_instructions": "[][0] _\"Get all the metal.\"_",
+    "authored_hints": {
+      "courseB_starWars_prog2_a": "Split this problem into two parts. Get one one pile of scrap metal, then figure out how to get to the other one."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/4": {
+    "short_instructions": "Get all the scrap metal",
+    "long_instructions": "[][0] _\"Keep going, BB-8!\"_",
+    "authored_hints": {
+      "courseB_starWars_prog3_a": "You will need to move 3 ways to solve this puzzle.",
+      "courseB_starWars_prog3_b": "Build one piece of code at a time. Run it to figure out where to go from there."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/5": {
+    "short_instructions": "Get all the scrap metal",
+    "long_instructions": "[][0] _\"Get it, BB-8!\"_",
+    "authored_hints": {
+      "courseB_starWars_prog4_a": "Build one piece of code at a time. Run it to figure out where to go from there.",
+      "courseB_starWars_prog4_b": "Try using the `repeat` block for shorter code.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/6": {
+    "short_instructions": "Get the scrap metal",
+    "long_instructions": "[][0] _\"Can you get it all?\"_",
+    "authored_hints": {
+      "courseB_starWars_prog5_a": "Doesn't this pattern look a little like the last puzzle?",
+      "courseB_starWars_prog5_b": "BB-8 will grab the scrap metal as he rolls over it.",
+      "courseB_starWars_prog5_c": "Trace this pattern with your finger. Count the pieces of metal as you move.",
+      "courseB_starWars_prog5_da": "Look what happens if you use the same solution as the stair-step puzzle:\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/7": {
+    "short_instructions": "Get all the scrap metal",
+    "long_instructions": "[][0] _\"You can do it!\"_",
+    "authored_hints": {
+      "courseB_starWars_prog6_a": "This pattern is just a stair step with two moves per direction!",
+      "courseB_starWars_prog6_b": "Try using the `repeat` block for shorter code.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/8": {
+    "short_instructions": "Go get it!",
+    "long_instructions": "[][0] _\"Go get it!\"_",
+    "authored_hints": {
+      "courseB_starWars_prog7_a": "Doesn't this pattern look a little like the last puzzle?",
+      "courseB_starWars_prog7_b": "BB-8 will grab the scrap metal as he rolls over it.",
+      "courseB_starWars_prog7_c": "Try drawing the large stair step pattern over this puzzle. Does it cover all of the scrap metal?"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/9": {
+    "short_instructions": "**Challenge:** Help BB-8 gather the glowing scrap metal",
+    "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\n**Challenge**: Gather all the scrap metal.",
+    "authored_hints": {
+      "courseB_starWars_prog8_a": "It is okay to go back over a set of spaces where you have already traveled.",
+      "courseB_starWars_prog8_b": "Try using the `repeat` block to see what happens to the code that you put inside.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/10": {
+    "short_instructions": "Help BB-8 gather the glowing scrap metal",
+    "long_instructions": "[][0] _\"You can do it!\"_",
+    "authored_hints": {
+      "courseB_starWars_prog9_a": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.",
+      "courseB_starWars_prog9_b": "There are many ways to solve this puzzle.",
+      "courseB_starWars_prog9_c": "Could a `repeat` [blockly block][0]loop help out here?"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/11": {
+    "short_instructions": "Help BB-8 gather the glowing scrap metal",
+    "long_instructions": "[][0] _\"Can you get it all?\"_"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/4/levels/12": {
+    "short_instructions": "Help BB-8 gather the glowing scrap metal",
+    "long_instructions": "[][0] _\"Keep going!\"_"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/2": {
+    "short_instructions": "Play with these blocks to help the harvester pick the piece of corn.",
+    "long_instructions": "Help the harvester pick the piece of corn!",
+    "authored_hints": {
+      "courseA_harvester_seq1_a": "Use this block to pick the corn when the harvester finds it!\n\n[blockly block][0]",
+      "courseA_harvester_seq1_b": "The harvester will need to move East three times to get to the corn. Use this block:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/3": {
+    "short_instructions": "Use three `move west` blocks and one `pick corn` block to solve this puzzle.",
+    "long_instructions": "Use **three** [blockly block][0] blocks to get the harvester to the corn! ",
+    "authored_hints": {
+      "courseA_harvester_seq2_a": "Don't forget to use [blockly block][0] to pick the corn!",
+      "courseA_harvester_seq2_b": "Try writing down the steps on paper to find a solution!"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/4": {
+    "short_instructions": "Use three `Move North` blocks and one `Pick Corn` block.",
+    "long_instructions": "Use **three** [blockly block][0] blocks to get the harvester to the corn! Don't forget to pick the corn at the end.",
+    "authored_hints": {
+      "courseA_harvester_seq3_a": "Did you remember to use this block?\n\n[blockly block][0]",
+      "courseA_harvester_seq3_b": "Say the steps out loud and see if it helps you figure out the answer."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/6": {
+    "short_instructions": "Add one block to help the harvester pick the corn.",
+    "long_instructions": "Add _one_ block to help the harvester pick the corn.",
+    "authored_hints": {
+      "courseA_harvester_seq4_a": "How many spaces are between the Harvester and the corn? How many blocks are already in your workspace?",
+      "courseA_harvester_seq4_b": "You will need five `Move East` blocks and one `Pick Corn` block:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/7": {
+    "short_instructions": "Find the bug and fix it!",
+    "long_instructions": "Can you figure out what is wrong with this code? Help the harvester pick the corn!",
+    "authored_hints": {
+      "courseA_harvester_seq5_a": "Which block moves the harvester the wrong way?",
+      "courseA_harvester_seq5_b": "You need to remove one block.",
+      "courseA_harvester_seq5_c": "Throw this block in the trash!\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/8": {
+    "short_instructions": "Try it yourself!",
+    "long_instructions": "Try it yourself!",
+    "authored_hints": {
+      "courseA_harvester_seq6_a": "If you're stuck, try saying the steps out loud. It could help you figure out the right path."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/9": {
+    "short_instructions": "Try it yourself!",
+    "long_instructions": "You have to move in two directions to get to the corn! Help the harvester pick the right direction.",
+    "authored_hints": {
+      "courseA_harvester_seq7_a": "Try solving the puzzle in 2 parts, one part before the corner and one part after the corner.",
+      "courseA_harvester_seq7_b": "Having trouble? This is the path the harvester should take."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/10": {
+    "short_instructions": "Now the harvester needs to pick corn two times!",
+    "long_instructions": "Now the harvester needs to pick corn two times!",
+    "authored_hints": {
+      "courseA_harvester_seq8_a": "Your final code should have **4** movement blocks and **2** pick blocks."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/11": {
+    "short_instructions": "Add two blocks to finish this puzzle!",
+    "long_instructions": "Add two blocks to finish this puzzle!",
+    "authored_hints": {
+      "courseA_harvester_seq9_a": "Run the code a few times to see what happens. Where does the harvester stop?",
+      "courseA_harvester_seq9_b": "Don't forget to pick all the corn! You will need **3** pick corn blocks.",
+      "courseA_harvester_seq9_c": "You should take this path to pick all the corn."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/12": {
+    "short_instructions": "Make sure to pick all the corn!",
+    "long_instructions": "The harvester needs to pick all the corn! Do you see a pattern?",
+    "authored_hints": {
+      "courseA_harvester_seq10_a": "Are you stuck? Try writing down the steps on a piece of paper first.",
+      "courseA_harvester_seq10_b": "You need to `Move East`, then `Move North`. Do this two times. Don't forget to get all the corn too!",
+      "courseA_harvester_seq10_c": "Try using this path to pick all the corn."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/13": {
+    "short_instructions": "Pick all the corn.",
+    "long_instructions": "_Thank you for helping me!_ \n\nPick all the corn."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/14": {
+    "short_instructions": "Try it by yourself! Pick all the corn.",
+    "long_instructions": "Try it by yourself! Pick all the corn."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/5/levels/15": {
+    "short_instructions": "Play with these blocks to help the harvester pick corn.",
+    "long_instructions": "Help the harvester pick corn!",
+    "authored_hints": {
+      "courseA_bee_seq1_a": "Use this block to pick corn once the harvester gets to it.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/1": {
+    "short_instructions": "Help Scrat across the ice to get to the acorn!",
+    "long_instructions": "Help Scrat across the slippery ice to get to the acorn!",
+    "authored_hints": {
+      "courseB_iceage_loops1_a": "Watch out for broken ice! Scrat will fall right through!",
+      "courseB_iceage_loops1_b": "You will have to use this block:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/2": {
+    "short_instructions": "Use two different move blocks to get to the acorn!",
+    "long_instructions": "Use both [blockly block][0] and [blockly block][1] blocks to get to the acorn!",
+    "authored_hints": {
+      "courseB_iceage_loops2_a": "Break this puzzle into two pieces, one before the corner, and one after the corner.",
+      "courseB_iceage_loops2_b": "If you get stuck, try saying the steps out loud.",
+      "courseB_iceage_loops2_c": "Follow this path to get Scrat to the acorn."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/4": {
+    "short_instructions": "Can you get to the acorn with just one `W` block?",
+    "long_instructions": "Can you get to the acorn with just one [blockly block][0] block? Try using a loop!",
+    "authored_hints": {
+      "courseB_iceage_loops3_a": "Use this new block!\n [blockly block][0]",
+      "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` [blockly block][0]loop, then put the block you want inside of it."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/5": {
+    "short_instructions": "Add one more block to get Scrat all the way to the acorn!",
+    "long_instructions": "Add one more block to get Scrat all the way to the acorn!",
+    "authored_hints": {
+      "courseB_iceage_loops4_a": "Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?",
+      "courseB_iceage_loops4_b": "Don't be afraid to run your code and see what happens!",
+      "courseB_iceage_loops4_c": "This is the path Scrat should take."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/6": {
+    "short_instructions": "Can you add a loop to get to the acorn?",
+    "long_instructions": "Can you add a loop to get to the acorn?",
+    "authored_hints": {
+      "courseB_iceage_loops6_a": "Your final code will have **three** movement blocks.",
+      "courseB_iceage_loops6_b": "You only need to add **one** more loop!",
+      "courseB_iceage_loops6_c": "Your final path should look like this."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/7": {
+    "short_instructions": "Scrat really wants that acorn! ",
+    "long_instructions": "Scrat really wants that acorn! ",
+    "authored_hints": {
+      "courseB_iceage_loops7_a": "If you get stuck, try writing steps down on a piece of paper. Do you see a pattern?",
+      "courseB_iceage_loops7_b": "This is the path Scrat should take to get to the acorn."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/8": {
+    "short_instructions": "Can you fix this code? ",
+    "long_instructions": "Can you fix this code? ",
+    "authored_hints": {
+      "courseB_iceage_loops8_a": "Are the movement blocks right? What else can you change?",
+      "courseB_iceage_loops8_b": "The first loop should repeat **3** times, the second should repeat **5** times, the third loop should repeat **4** times, and the last loop should repeat **4** times.",
+      "courseB_iceage_loops8_c": "Use loops to help Scrat follow this path."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/9": {
+    "short_instructions": "The acorn is so far away! Can you use loops to help Scrat get there?",
+    "long_instructions": "The acorn is so far away! Can you use loops to help Scrat get there?",
+    "authored_hints": {
+      "courseB_iceage_loops9_a": "Having trouble? Try breaking this puzzle into smaller pieces. Don't be afraid to run your puzzle as you code!",
+      "courseB_iceage_loops9_b": "Your final code should have **4** loops.",
+      "courseB_iceage_loops9_c": "Scrat should follow this path to get the acorn."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/10": {
+    "short_instructions": "Help Scrat get all the way over to the acorn!",
+    "long_instructions": "Help Scrat get all the way over to the acorn!",
+    "authored_hints": {
+      "courseB_iceage_loops10_a": "Watch out for broken ice! Scrat will fall into the water!",
+      "courseB_iceage_loops10_b": "Try saying the steps out loud or writing them down on a piece of paper. Do you see any patterns?",
+      "courseB_iceage_loops10_c": "This is a long puzzle! Follow this path."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/11": {
+    "short_instructions": "Help Scrat get to the acorn!",
+    "long_instructions": "Help Scrat get to the acorn!"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/6/levels/12": {
+    "short_instructions": "Get to the acorn any way you can!",
+    "long_instructions": "Get to the acorn any way you can!"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/2": {
+    "short_instructions": "Get at least one piece of treasure without mistakes to pass!",
+    "long_instructions": "**Free Play:** Move Laurel around and get as much treasure as you can. Get at least one item with no mistakes to pass this level.  \n\n* * *\n\nDrag blocks into the workspace and try to figure out how to get treasure.  ",
+    "authored_hints": {
+      "courseB_collector_loops1_a": "The [blockly block][0] block can be used to pick up treasure when you are standing on top of it."
+    },
+    "callouts": {
+      "courseB_collector_loops1_1": "Use this block to collect the treasure."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/3": {
+    "short_instructions": "Get all four piles to pass this level.",
+    "long_instructions": "Move Laurel to the treasure, then use the [blockly block][0] block to pick it up.\n\nGet all four piles to pass this level.",
+    "authored_hints": {
+      "courseB_collector_loops2_a": "You'll have to move before you can collect any treasure.",
+      "courseB_collector_loops2_b": "When you have reached a spot with treasure, use the [blockly block][0] block to pick it up."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/5": {
+    "short_instructions": "How can Laurel get all five piles of treasure using only one `E -->` block?",
+    "long_instructions": "How can Laurel get all five piles of treasure using only one [blockly block][0] block?",
+    "authored_hints": {
+      "courseB_collector_prog3_a": "Try using a [blockly block][0] block to collect your treasure.",
+      "courseB_collector_prog3_b": "Remember you can put more than one block inside a repeat loop."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/6": {
+    "short_instructions": "Fix Laurel's path to get all of this treasure!",
+    "long_instructions": "Fix Laurel's path to get all of this treasure!",
+    "authored_hints": {
+      "courseB_collector_loops4_a": "Try using the step button to figure out where things go wrong.",
+      "courseB_collector_loops4_b": "To change how far Laurel goes, change the number of times that the loop runs.",
+      "courseB_collector_loops4_c": "Laurel needs to walk down and collect the treasure after she finishes the `repeat` [blockly block][0]loop!"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/7": {
+    "short_instructions": "Add to the code from the last puzzle to get all of the treasure. ",
+    "long_instructions": "Add to the code from the last puzzle to get all of the treasure. ",
+    "authored_hints": {
+      "courseB_collector_loops5_a": "Use more than one loop to get the job done.",
+      "courseB_collector_loops5_b": "Try running the code a couple of times to see what happens."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/8": {
+    "short_instructions": "Figure out the code to help Laurel get all of the treasure!",
+    "long_instructions": "Figure out the code to help Laurel get all of the treasure!",
+    "authored_hints": {
+      "courseB_collector_loops6_a": "Can't figure out where things start going wrong? Use the \"Step\" button to run through your program one block at a time.",
+      "courseB_collector_loops6_b": "You can change the number of times the repeat loop runs by clicking on the \"3\" and choosing a different number.",
+      "courseB_collector_loops6_c": "You will want to use 3 `repeat` [blockly block][0] loops to solve this puzzle.",
+      "courseB_collector_loops6_d": "If you're confused, try breaking this puzzle into 3 pieces."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/9": {
+    "short_instructions": "Write the code to get all of this treasure.",
+    "long_instructions": "Write the code to get all of this treasure.",
+    "authored_hints": {
+      "courseB_collector_loops7_a": "If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.",
+      "courseB_collector_loops7_b": "You will need 3 repeat loops to solve this puzzle, and don't forget the extra treasure at the end!"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/10": {
+    "short_instructions": "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
+    "long_instructions": "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
+    "authored_hints": {
+      "courseB_collector_loops8_challenge_a": "If you can't figure out where to put the repeat loops, write out the code step-by-step and look for a pattern."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/11": {
+    "short_instructions": "_\"Help me get the treasure from this deep valley.\"_",
+    "long_instructions": "_\"Help me get the treasure from this deep valley.\"_",
+    "authored_hints": {
+      "courseB_collector_loops9_a": "Does this seem too hard?  Break it up into 3 little problems to make it feel easier.",
+      "courseB_collector_loops9_b": "You will need 3 repeat loops, one after the other, for this solution."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/12": {
+    "short_instructions": "Help Laurel get all of the treasure from this cave.",
+    "long_instructions": "Help Laurel get all of the treasure from this cave.",
+    "authored_hints": {
+      "courseB_collector_loops10_a": "If you can't figure out where to put the `repeat` loops, write out the code step-by-step and look for a pattern.",
+      "courseB_collector_loops10_b": "Try writing the moves down on a piece of paper and looking for a pattern."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/levels/13": {
+    "short_instructions": "Eureka!  Get as much treasure as you can!",
+    "long_instructions": "Eureka!  Get as much treasure as you can!"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/extras?level_name=courseB_collector_loops_challenge1_2020": {
+    "short_instructions": "This time you have limited blocks. Get all of the treasure! ",
+    "long_instructions": "This time you have limited blocks. Get all of the treasure! ",
+    "authored_hints": {
+      "courseB_collector_loops_challenge1_b": "Start by looping the following commands:\n\n[blockly block][0]",
+      "courseB_collector_loops_challenge1_c": "Move East twice between each path.\n\n[blockly block][0]\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. ",
+      "courseB_collector_loops_challenge1_d": "Try this!\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/7/extras?level_name=courseB_collector_loops_challenge2a_2020": {
+    "short_instructions": "Help Laurel get at least **5** pieces of treasure to finish this puzzle.",
+    "long_instructions": "_\"Let's get the treasure!\"_\n\nHelp Laurel get at least **5** pieces of treasure to finish this puzzle.",
+    "authored_hints": {
+      "courseB_collector_loops_challenge2a_a": "If something goes wrong, try debugging it. Don't give up!",
+      "courseB_collector_loops_challenge2a_b": "Look at this option for getting through the maze. Do you see a pattern that you can repeat?",
+      "courseB_collector_loops_challenge2a_c": "To collect all of the treasure, you will either need to add two  [blockly block][0] blocks inside your loop, or put the block inside of its own `repeat` block."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/2": {
+    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/3": {
+    "short_instructions": "Help the artist draw this line two times forward.",
+    "long_instructions": "Help the artist draw this line two times forward.\n\n[][0]",
+    "authored_hints": {
+      "courseA_artist_loops2_a": "Can't figure out how to draw a line?  Start attaching blocks to the [blockly block][0] block to see what happens.",
+      "courseA_artist_loops2_b": "Use this block [blockly block][0] to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/4": {
+    "short_instructions": "Draw a line forward five times.",
+    "long_instructions": "Our artist is trying to draw a line five times, but can't get it right. Can you help?\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_artist_loops3_a": "Trace slowly through the program with your finger to see where it goes wrong.",
+      "courseA_artist_loops3_b": "You will want to use a block like this to solve this puzzle.\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/6": {
+    "short_instructions": "Now, use a `repeat` loop to draw this line five times!",
+    "long_instructions": "Now, use a [blockly block][0] loop to draw this line five times!\n\n[][1]",
+    "authored_hints": {
+      "courseA_artist_loops4_a": "If you want the loop to repeat more than 4 times, you can change the number at the top of the block.",
+      "courseA_artist_loops4_b": "Since you can only use one [blockly block][0]\n\nblock, try putting it inside of the [blockly block][1] loop."
+    },
+    "callouts": {
+      "courseA_artist_loops4_1": "This number tells you how many of these blocks you can use in this puzzle."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/7": {
+    "short_instructions": "Draw a line seven steps long. This will become our horizon.",
+    "long_instructions": "## Draw a line seven steps long. This will become our horizon.\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_artist_loops5_a": "Try using what you've learned about [blockly block][0] blocks to complete this puzzle!",
+      "courseA_artist_loops5_b": "If you want the loop to repeat more than 4 times, you can change the number at the top of the block.",
+      "courseA_artist_loops5_c": "Since you can only use one [blockly block][0] block, try putting it inside of the \n\n[blockly block][1]\n\nloop."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/8": {
+    "short_instructions": "Let's put a nice hill in the back.",
+    "long_instructions": "## Let's put a nice hill in the back.\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_artist_loops6_a": "Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.",
+      "courseA_artist_loops6_b": "You will need 2 blocks in 2 directions to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/9": {
+    "short_instructions": "Use the `repeat` loop to add waves to the water.",
+    "long_instructions": "Use the [blockly block][0] loop to add waves to the water.\n\n[expandable][1]",
+    "authored_hints": {
+      "courseA_artist_loops7_a": "Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.",
+      "courseA_artist_loops7_b": "Write the code for one wave first, then repeat that to draw the other two.",
+      "courseA_artist_loops7_c": "Remember you can put more than one block in a [blockly block][0] loop."
+    },
+    "callouts": {
+      "courseA_artist_loops7_1": "This number means that only one of this kind of block can be used in the final answer."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/10": {
+    "short_instructions": "We need a ladder up to the boat.",
+    "long_instructions": "## We need a ladder up to the boat.\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_artist_loops8_a": "Try running the code to see what has been written for you.",
+      "courseA_artist_loops8_b": "How would you loop the code that has been given to you?",
+      "courseA_artist_loops8_c": "What does the code do?\\\nWhat is it supposed to do?\\\nWhat does that tell you?"
+    },
+    "callouts": {
+      "courseA_artist_loops8_1": "Did you know that you can draw back over a line whenever you need to?"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/11": {
+    "short_instructions": "Challenge: Fix the stairs.",
+    "long_instructions": "## **Challenge:** The stairs down to the dock are broken.  Help me fix them.\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_artist_loops9_a": "Add another block to the code you are given to draw the rest of the stairs.",
+      "courseA_artist_loops9_b": "The block you add should go inside of the \n\n[blockly block][0]\n\n loop.",
+      "courseA_artist_loops9_c": "If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/12": {
+    "short_instructions": "Help me put down stones so I don't fall in!",
+    "long_instructions": "## Time to head back to land. Help me put down stones so I don't fall in!\n\n[expandable][0]"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/13": {
+    "short_instructions": "Help me build steps to watch the ship sail away.",
+    "long_instructions": "## Help me build steps to watch the ship sail away.\n\n[expandable][0]"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/levels/14": {
+    "short_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.",
+    "long_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.\n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/extras?level_name=courseA_artist_loops_challenge2a_2020": {
+    "short_instructions": "_\"Help me get these three tents set up!\"_",
+    "long_instructions": "_\"Help me get the camp site ready!\"_\n\nUse the blocks in the toolbox to draw these three tents.",
+    "authored_hints": {
+      "courseA_artist_loops_challenge2_a": "Blocks like this [blockly block][0] will let your artist move at a slant!",
+      "courseA_artist_loops_challenge2_b": "When you finish one tent, `jump` up twice to get to the next!",
+      "courseA_artist_loops_challenge2_c": "All of your blocks will need to be inside of a loop to finish this puzzle."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/8/extras?level_name=courseA_artist_loops_challenge1_2020": {
+    "short_instructions": "Can you draw a house? Make it look just the way you like it!",
+    "long_instructions": "You can use a loop to draw many lines in a row.\n\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!\n\nHere are some ideas:\n\n[][0]",
+    "teacher_markdown": "This lesson extra is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/2": {
+    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun.",
+    "long_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/4": {
+    "short_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
+    "long_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
+    "authored_hints": {
+      "courseB_artist_loops2_a": "If you want the loop to repeat more than 4 times, you can change the number at the top of the block.",
+      "courseB_artist_loops2_b": "Try running the code first to see where the artist ends up."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/5": {
+    "short_instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "long_instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "authored_hints": {
+      "courseB_artist_loops3_a": "Remember to use a `repeat` [blockly block][0] loop for better code!",
+      "courseB_artist_loops3_b": "The artist will want to move South to draw this line."
+    },
+    "callouts": {
+      "courseB_artist_loops3_1": "There is only one of these blocks in the toolbox.  How will you use it?"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/6": {
+    "short_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
+    "long_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground.",
+    "authored_hints": {
+      "courseB_artist_loops4_a": "The jump block lets you move forward without drawing a line.",
+      "courseB_artist_loops4_b": "You will need to add a block inside of the repeat loop to solve this puzzle.",
+      "courseB_artist_loops4_c": "Don't forget to change the number of times the loop repeats."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/7": {
+    "short_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
+    "long_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
+    "authored_hints": {
+      "courseB_artist_loops5_a": "Drag out a `repeat` [blockly block][0] loop, then put the other blocks inside of it. How many times do you need to repeat?"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/8": {
+    "short_instructions": "Climb the vine and see where it goes?",
+    "long_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
+    "authored_hints": {
+      "courseB_artist_loops6_b": "Try writing the moves down on a piece of paper and look for a pattern."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/9": {
+    "short_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
+    "long_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
+    "authored_hints": {
+      "courseB_artist_loops7_a": "This challenge uses **4** loops, one right after another!",
+      "courseB_artist_loops7_b": "Notice that every loop makes a stair pattern that goes a different direction.\n\n[][0]",
+      "courseB_artist_loops7_c": "The loops should do this:\n\n-   Loop 1\n    -   Right\n    -   Down\n\n-   Loop 2\n    -   Right\n    -   Up\n\n-   Loop 3\n    -   Left\n    -   Up\n\n-   Loop 4\n    -   Left\n    -   Down"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/10": {
+    "short_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
+    "long_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
+    "authored_hints": {
+      "courseB_artist_loops8_a": "How many times should you repeat the pattern to make the ladder?",
+      "courseB_artist_loops8_b": "Try running the code you're given to see what it does."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/11": {
+    "short_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
+    "long_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
+    "authored_hints": {
+      "courseB_artist_loops9_a": "Remember that jump blocks can be used to move without drawing a line.",
+      "courseB_artist_loops9_b": "You will want to use the W block to solve this puzzle.",
+      "courseB_artist_loops9_c": "Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/levels/12": {
+    "short_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
+    "long_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.\n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/extras?level_name=courseB_artist_loops_challenge1_2020": {
+    "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
+    "long_instructions": "_\"It's time to toss the dice! Can you help me draw these?\"_",
+    "authored_hints": {
+      "courseB_artist_loops_challenge1_a": "Blocks like this: [blockly block][0] will let your artist move at a slant!",
+      "courseB_artist_loops_challenge1_b": "When you finish one of the dice, `jump` to the next!",
+      "courseB_artist_loops_challenge1_c": "You will need to `move` or `jump` over some of the same lines twice. "
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/9/extras?level_name=courseB_artist_loops_challenge2_2020": {
+    "short_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
+    "long_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
+    "authored_hints": {
+      "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
+      "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
+    },
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/levels/1": {
+    "short_instructions": "Need a better playlab/events combo"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/levels/2": {
+    "short_instructions": "This is a Play Lab level. Move blocks to the workspace and see what happens!",
+    "long_instructions": "This is a Play Lab level. Move blocks to the workspace and see what happens!"
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/levels/3": {
+    "short_instructions": "Jorge the Dog wants to say \"Hi there.\" Can you help him?",
+    "long_instructions": "Jorge the Dog wants to say \"Hi there.\" Can you help him?",
+    "authored_hints": {
+      "courseA_playLab_events2_a": "Look for a block that makes the dog say something.",
+      "courseA_playLab_events2_b": "This is the code you need to complete this puzzle:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/levels/4": {
+    "short_instructions": "Connect the `move left` block to the `when left` event block that is already in the workspace.",
+    "long_instructions": "Help Jorge the Dog get moving by connecting the [blockly block][0] block to the [blockly block][1] event block that is already in the workspace.\n\nUse the arrow keys or press the arrow buttons to move Jorge to the flag and finish the level!",
+    "authored_hints": {
+      "courseA_playLab_events3_a": "Drag this block  [blockly block][0] out and snap it to the bottom of [blockly block][1]",
+      "courseA_playLab_events3_b": "Remember to use the left arrow key to move Jorge to the flag once you have written your program. When the flag turns green, you've finished!"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/levels/5": {
+    "short_instructions": "Add another event block to get Jorge to move right when the `right` button is clicked.",
+    "long_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
+    "authored_hints": {
+      "courseA_playLab_events4_a": "Here is the event block that you will need to get Jorge to move right:\n\n[blockly block][0]",
+      "courseA_playLab_events4_b": "This is the code you will need to complete this puzzle:\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "courseA_playlab_events4_callout1": "This is a callout"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/levels/6": {
+    "short_instructions": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed. Make Jorge get the flags to finish the level!",
+    "long_instructions": "Add events to have Jorge move up and down when the \\`up\\` and \\`down\\` buttons are pressed. Make Jorge get the flags to finish the level!",
+    "authored_hints": {
+      "courseA_playLab_events5_a": "Here are the event blocks that you will need to use to move Jorge up and down:\n\n[blockly block][0]\n\nand \n\n[blockly block][1]",
+      "courseA_playLab_events5_b": "Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?\n\n[][0]"
+    },
+    "callouts": {
+      "courseA_playLab_events5_1": "Click here to change the direction of the event arrow."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/levels/7": {
+    "short_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked. When your code is ready, click on Jorge to try it out!",
+    "long_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked. When your code is ready, click on Jorge to try it out!",
+    "authored_hints": {
+      "courseA_playLab_events6_a": "Here is the event block that you would use to have Jorge do something when clicked:\n\n[blockly block][0]",
+      "courseA_playLab_events6_b": "Here is the block you would use to change the background:\n\n[blockly block][0]",
+      "courseA_playLab_events6_c": "Here is the block you would use to play a random sound:\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "courseA_playLab_events6_1": "This let's you choose a \"random\" sound, which means that you don't know what you are going to get until you hear it!"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/levels/8": {
+    "short_instructions": "_Freeplay:_ Add anything you want to this game.",
+    "long_instructions": "_Freeplay:_ Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseA_playLab_events7_a": "Use this block to control what happens when the actors collide.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/extras?level_name=courseA_playlab_events_challenge2_2020": {
+    "short_instructions": "Give everyone something to do when you click on them.",
+    "long_instructions": "Give everyone something to do when you click on them. What will the animals say? What else will happen?\n\nIn this puzzle, make sure to click for hints. The hints will give you fun things to try!\n\n[][0]",
+    "authored_hints": {
+      "courseA_playlab_events_challenge2_a": "You can make a bird sing.\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge2_b": "You can make a robot beep.\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge2_c": "You can make an angry monster growl.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/10/extras?level_name=courseA_playlab_events_challenge1_2020": {
+    "short_instructions": "Can you write code to show the rest of my friends? The hints will help you do this project step-by-step.",
+    "long_instructions": "Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?\n\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\n\n[][0]",
+    "authored_hints": {
+      "courseA_playlab_events_challenge1_a": "Make Waddles the Penguin show when you click Robin!\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge1_b": "Make Boo the Ghost show when you click Waddles!\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge1_c": "Make Jayden the Fuzzy Monster show when you click Boo!\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge1_d": "Make Spiff the Robot show when you click the monster!\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge1_e": "Finally, make Wendel the Wizard show when you click Spiff!\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/levels/1": {
+    "short_instructions": "See if you can figure out what each block does.",
+    "long_instructions": "This game is called \"Play Lab\".  \n\nSee if you can figure out what each block does.",
+    "teacher_markdown": "This is a free-play level. Because it shows up at the beginning of the lesson, it is intended to serve as a \"sandbox\" where students can experiment with new blocks While students are not actually required to write any code in this level, doing so will allow them to make discoveries of their own before being asked to perform specific tasks. Encourage your students to take their time here."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/levels/2": {
+    "short_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
+    "long_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
+    "authored_hints": {
+      "courseB_playlab_events2_a": "This is the block to have Daisy say something:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/levels/3": {
+    "short_instructions": "Use an event to make Daisy the Dragon switch to a random mood when you click on her.",
+    "long_instructions": "Use an event to make Daisy the Dragon switch to a random [][0] mood when you click on her.",
+    "authored_hints": {
+      "courseB_playlab_events3_a": "This is the block you should use to add the event:\n\n[blockly block][0]",
+      "courseB_playlab_events3_b": "This is the block you need to switch Daisy's mood:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/levels/4": {
+    "short_instructions": "Get the dragon to finish this level!",
+    "long_instructions": "Knight time!  Get the dragon to finish this level.\n\nAdd an event so that the knight moves toward the dragon when the left arrow is clicked.",
+    "authored_hints": {
+      "courseB_playlab_events4_a": "This is the event that controls the left arrow:\n\n[blockly block][0]",
+      "courseB_playlab_events4_b": "This is the block that makes the knight move left.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/levels/5": {
+    "short_instructions": "Add an event so that the knight runs away from the dragon when you press the right arrow.",
+    "long_instructions": "Now add an event so that the knight runs away from the dragon when you press the right arrow.  \n\nMove the knight to the right to pass this level.",
+    "authored_hints": {
+      "courseB_playlab_events5_a": "This is the event block that controls the right arrow: \n\n[blockly block][0]",
+      "courseB_playlab_events5_b": "This is the block that makes the knight run away. \n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/levels/6": {
+    "short_instructions": "Help your knight get all of the flags!\n\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
+    "long_instructions": "Help your knight get all of the flags!\n\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
+    "authored_hints": {
+      "courseB_playlab_events6_a": "You will need these event blocks:\n\n[blockly block][0]",
+      "courseB_playlab_events6_b": "Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.\n\n[][0]",
+      "courseB_playlab_events6_c": "Get to all of the flags to pass!"
+    },
+    "callouts": {
+      "courseB_playlab_events6_a": "Use the green drop down arrow to change directions."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/levels/7": {
+    "short_instructions": "1.  Set the knight to vanish when he runs into the dragon.    \n2.  Play a sound when they collide to make it feel more real.  ",
+    "long_instructions": "Make this game fun by adding more things!\n\n1.  Set the knight to vanish when he runs into the dragon.   \n2.  Play a sound when they collide to make it feel more real.   \n\n* * *\n\nVisit all of the goals, then run into the dragon to pass the level.",
+    "authored_hints": {
+      "courseB_playlab_events7_a": "This is the event block that you will need:\n\n[blockly block][0]",
+      "courseB_playlab_events7_b": "This is the block you need to play a sound.\n\n[blockly block][0]",
+      "courseB_playlab_events7_c": "This is the block you need to make the knight vanish:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/levels/8": {
+    "short_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?",
+    "long_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here."
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/extras?level_name=courseB_playlab_events_challenge1_2020": {
+    "short_instructions": "Make the animals move down when you press ▼. ",
+    "long_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?",
+    "teacher_markdown": "This lesson extra is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseB_playlab_events_challenge1_a": "Make the other animals move down when you press `▼`. \n\n[blockly block][0]",
+      "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:\n\n[blockly block][0]",
+      "courseB_playlab_events_challenge1_c": "What will the everyone say when the race is over? Make them talk with this event:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/lessons/11/extras?level_name=courseB_playlab_events_challenge2_2020": {
+    "short_instructions": "Make the animals disappear when you click on them.",
+    "long_instructions": "Let's make the animals disappear when you click on them.\nTry playing with the dog now, then help the other animals join in the fun. You can also add sounds and score points to create a game of Animal Tag!\n\n[][0]",
+    "authored_hints": {
+      "courseB_playlab_events_challenge2_a": "Each animal in the game should disappear when clicked. It should also come back after a second or two!",
+      "courseB_playlab_events_challenge2_b": "Use other event blocks to make the other animals disappear!\n\n[blockly block][0]",
+      "courseB_playlab_events_challenge2_c": "Use extra commands to play sounds or score points when you click the animals!\n\n[blockly block][0]",
+      "courseB_playlab_events_challenge2_d": "Mix it up!\n\nMake some animals give more points than others.\nUse different sounds.\nChange the animals' moods!"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "updateTitleWithColor",
+    "blockText": "show title screen {BREAK} title {TITLE} color {COLOR}",
+    "args": [
+      {
+        "name": "BREAK",
+        "dummy": true
+      },
+      {
+        "name": "TITLE"
+      },
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      }
+    ],
+    "inline": false
+  }
+}

@@ -1,35 +1,65 @@
 import React from 'react';
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 
 /**
  * A set of arrow buttons
  */
-var ArrowButtons = function(props) {
-  return (
-    <ProtectedStatefulDiv id="soft-buttons" className="soft-buttons-none">
-      <button type="button" id="leftButton" disabled className="arrow">
-        <img src="/blockly/media/1x1.gif" className="left-btn icon21" />
-      </button>
-      {
-        ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
-      }
-      <button type="button" id="rightButton" disabled className="arrow">
-        <img src="/blockly/media/1x1.gif" className="right-btn icon21" />
-      </button>
-      {
-        ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
-      }
-      <button type="button" id="upButton" disabled className="arrow">
-        <img src="/blockly/media/1x1.gif" className="up-btn icon21" />
-      </button>
-      {
-        ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
-      }
-      <button type="button" id="downButton" disabled className="arrow">
-        <img src="/blockly/media/1x1.gif" className="down-btn icon21" />
-      </button>
-    </ProtectedStatefulDiv>
-  );
+class ArrowButtons extends React.Component {
+  static propTypes = {
+    // from redux
+    visible: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool.isRequired
+  };
+
+  render() {
+    const {visible, disabled} = this.props;
+    const style = visible ? styles.visible : styles.hidden;
+    return (
+      <div style={style} id="soft-buttons">
+        <button
+          type="button"
+          id="leftButton"
+          disabled={disabled}
+          className="arrow"
+        >
+          <img src="/blockly/media/1x1.gif" className="left-btn icon21" />
+        </button>
+        <button
+          type="button"
+          id="rightButton"
+          disabled={disabled}
+          className="arrow"
+        >
+          <img src="/blockly/media/1x1.gif" className="right-btn icon21" />
+        </button>
+        <button
+          type="button"
+          id="upButton"
+          disabled={disabled}
+          className="arrow"
+        >
+          <img src="/blockly/media/1x1.gif" className="up-btn icon21" />
+        </button>
+        <button
+          type="button"
+          id="downButton"
+          disabled={disabled}
+          className="arrow"
+        >
+          <img src="/blockly/media/1x1.gif" className="down-btn icon21" />
+        </button>
+      </div>
+    );
+  }
+}
+
+const styles = {
+  hidden: {display: 'none'},
+  visible: {display: 'inline-block'}
 };
 
-module.exports = ArrowButtons;
+export default connect(state => ({
+  visible: state.arrowDisplay.buttonsAreVisible,
+  disabled: state.arrowDisplay.buttonsAreDisabled
+}))(ArrowButtons);

@@ -1,0 +1,240 @@
+hidden false
+hideable_lessons true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursed/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
+lesson_extras_available true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursed/{LESSON}'
+family_name 'coursed'
+version_year '2020'
+is_stable true
+curriculum_umbrella 'CSF'
+tts true
+is_course true
+
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true, unplugged: true
+level 'GraphPaperProgramming-Unplugged_2020'
+
+lesson 'Introduction to Online Puzzles', display_name: 'Introduction to Online Puzzles', has_lesson_plan: true
+level 'courseD_video_ramp1_2020', progression: 'Maze Intro: Programming with Blocks'
+level 'courseD_maze_ramp1_2020', progression: 'Practice'
+level 'courseD_maze_ramp2_2020', progression: 'Practice'
+level 'courseD_maze_ramp3_2020', progression: 'Practice'
+level 'courseD_maze_intro4_2020', progression: 'Practice'
+level 'courseD_maze_ramp5_2020', progression: 'Practice'
+level 'courseD_maze_intro5a_2020', progression: 'Practice'
+level 'courseD_maze_ramp5b_2020', progression: 'Challenge', challenge: true
+level 'courseD_maze_intro5c_2020', progression: 'Practice'
+level 'courseD_maze_ramp5d_2020', progression: 'Practice'
+
+lesson 'Relay Programming', display_name: 'Relay Programming', has_lesson_plan: true, unplugged: true
+level 'RelayProgramming-Unplugged_2020'
+
+lesson 'Debugging in Collector', display_name: 'Debugging with Laurel', has_lesson_plan: true
+level 'courseD_video_debugging_2020', progression: 'De-bugging with the Step Button'
+level 'courseD_collector_debugging1a_2020', progression: 'Practice'
+level 'courseD_collector_debugging2a_2020', progression: 'Practice'
+level 'courseD_collector_debugging3a_2020', progression: 'Practice'
+level 'courseD_collector_debugging4a_2020', progression: 'Practice'
+level 'courseD_collector_debugging5a_2020', progression: 'Practice'
+level 'courseD_collector_debugging6a_2020', progression: 'Challenge', challenge: true
+level 'courseD_collector_debugging8a_2020', progression: 'Practice'
+level 'courseD_collector_debugging9a_2020', progression: 'Practice'
+
+lesson_group 'csf_events', display_name: 'Events'
+lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: true
+level 'courseD_bounce_events1s_2020', progression: 'Practice'
+level 'courseD_bounce_events2s_2020', progression: 'Practice'
+level 'courseD_bounce_events5s_2020', progression: 'Practice'
+level 'courseD_bounce_events6s_2020', progression: 'Practice'
+level 'courseD_bounce_events7s_2020', progression: 'Practice'
+level 'courseD_bounce_events10s_2020', progression: 'Practice'
+level 'courseD_bounce_events11s_2020', progression: 'Practice'
+level 'courseD_bounce_events12s_2020', progression: 'Free Play'
+
+lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game', has_lesson_plan: true
+level 'courseE_video_StarWarsProject_2020', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_7_no_video', progression: 'Practice'
+skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
+level 'blockly:Studio:hoc2015_blockly_8', progression: 'Practice'
+skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
+level 'blockly:Studio:hoc2015_blockly_9', progression: 'Practice'
+skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
+level 'blockly:Studio:hoc2015_blockly_10', progression: 'Practice'
+skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
+level 'blockly:Studio:hoc2015_blockly_11', progression: 'Practice'
+skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
+level 'blockly:Studio:hoc2015_blockly_12', progression: 'Practice'
+skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
+level 'blockly:Studio:hoc2015_blockly_13', progression: 'Practice'
+skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
+level 'blockly:Studio:hoc2015_blockly_14', progression: 'Practice'
+skin 'hoc2015'
+video_key_for_next_level 'starwars_blocks_congrats'
+level_concept_difficulty '{"sequencing":1}'
+level 'blockly:Studio:hoc2015_blockly_15', progression: 'Free Play'
+
+lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: true
+level 'CourseD_Dance_2020_vid1', progression: 'Warm Up'
+level 'CourseD_Dance_2020_01', progression: 'Practice'
+level 'CourseD_Dance_2020_vid2', progression: 'Events'
+level 'CourseD_Dance_2020_02', progression: 'Events'
+level 'CourseD_Dance_2020_03', progression: 'Events'
+level 'CourseD_Dance_2020_vid3', progression: 'Measures'
+level 'CourseD_Dance_2020_04', progression: 'Measures'
+level 'CourseD_Dance_2020_05', progression: 'Measures'
+level 'CourseD_Dance_2020_06', progression: 'Measures'
+level 'CourseD_Dance_2020_vid4', progression: 'Properties'
+level 'CourseD_Dance_2020_07', progression: 'Properties'
+level 'CourseD_Dance_2020_08', progression: 'Properties'
+level 'CourseD_Dance_2020_09', progression: 'Properties'
+level 'CourseD_Dance_2020_vid5', progression: 'Wrap-up'
+level 'CourseD_Dance_2020_10', progression: 'Free Play'
+bonus 'CourseD_Dance_2020_bonus1'
+bonus 'CourseD_Dance_2020_bonus3'
+
+lesson_group 'csf_loops', display_name: 'Loops'
+lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age', has_lesson_plan: true
+level 'courseD_iceage_loops1_2020', progression: 'Practice'
+level 'courseD_iceage_loops2_2020', progression: 'Practice'
+level 'scrat_loops_C-F_video_2020', progression: 'Using the Repeat Block'
+level 'courseD_iceage_loops3_2020', progression: 'Practice'
+level 'courseD_iceage_loops4_2020', progression: 'Practice'
+level 'courseD_iceage_loops6_2020', progression: 'Practice'
+level 'courseD_iceage_loops7_2020', progression: 'Practice'
+level 'courseD_iceage_loops8_2020', progression: 'Practice'
+level 'courseD_iceage_loops9_2020', progression: 'Practice'
+level 'courseD_iceage_loops10_2020', progression: 'Challenge', challenge: true
+level 'courseD_iceage_loops11_2020', progression: 'Practice'
+level 'courseD_iceage_loops12_2020', progression: 'Practice'
+
+lesson 'Loops in Artist', display_name: 'Drawing Shapes with Loops', has_lesson_plan: true
+level 'ramp_video_artistIntro_2020', progression: 'Artist Intro with JR Hildebrand'
+level 'ramp_artist_loops1_2020', progression: 'Practice'
+level 'ramp_artist_loops2_2020', progression: 'Practice'
+level 'ramp_video_loopsArtist_2020', progression: 'Loops with the Artist'
+level 'ramp_artist_loops3_2020', progression: 'Practice'
+level 'ramp_artist_loops4_2020', progression: 'Practice'
+level 'ramp_artist_loops5_2020', progression: 'Practice'
+level 'ramp_artist_loops6_2020', progression: 'Practice'
+level 'ramp_artist_loops7_2020', progression: 'Practice'
+level 'ramp_artist_loops8_2020', progression: 'Challenge', challenge: true
+level 'ramp_artist_loops9_2020', progression: 'Practice'
+
+lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Maze', has_lesson_plan: true
+level 'courseD_bee_nestedLoops1a_2020', progression: 'Practice'
+level 'courseD_bee_nestedLoops1_2020', progression: 'Practice'
+level 'courseD_video_nestedLoops_2020', progression: 'Nested Loops with the Bee'
+level 'courseD_bee_nestedLoops2_predict1_2020', progression: 'Prediction'
+level 'courseD_bee_nestedLoops2_2020', progression: 'Practice'
+level 'courseD_maze_nestedLoops3_2020', progression: 'Practice'
+level 'courseD_maze_nestedLoops4_2020', progression: 'Practice'
+level 'courseD_maze_nestedLoops5_2020', progression: 'Practice'
+level 'courseD_maze_nestedLoops6_2020', progression: 'Practice'
+level 'courseD_bee_nestedLoops7_2020', progression: 'Challenge', challenge: true
+level 'courseD_bee_nestedLoops8_2020', progression: 'Practice'
+level 'courseD_bee_nestedLoops9_2020', progression: 'Practice'
+level 'courseD_bee_nestedLoops9_predict2_2020', progression: 'Prediction'
+bonus 'courseD_harvester_nested_loops_challenge1_2020'
+bonus 'courseD_collector_nested_loops_challenge2_2020'
+
+lesson_group 'csf_conditionals', display_name: 'Conditionals'
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true, unplugged: true
+level 'ConditionalsWithCards-Unplugged_2020'
+
+lesson 'Conditionals in Bee', display_name: 'If/Else with Bee', has_lesson_plan: true
+level 'courseD_bee_conditionalsVid1_2020', progression: 'Conditionals: If Statements'
+level 'courseD_bee_conditionals1_predict1_2020', progression: 'Prediction'
+level 'courseD_bee_conditionals2_2020', progression: 'Practice'
+level 'courseD_bee_conditionals3_2020', progression: 'Practice'
+level 'courseD_bee_conditionals4_2020', progression: 'Practice'
+level 'courseD_bee_conditionals5_2020', progression: 'Practice'
+level 'courseD_bee_conditionals6_2020', progression: 'Practice'
+level 'courseD_bee_conditionalsVidIfElse_2020', progression: 'Conditionals: If and If/Else Statements'
+level 'courseD_bee_conditionals7_2020', progression: 'Practice'
+level 'courseD_bee_conditionals7_predict2_2020', progression: 'Prediction'
+level 'courseD_bee_conditionals8_2020', progression: 'Challenge', challenge: true
+level 'courseD_bee_conditionals9_2020', progression: 'Practice'
+level 'courseD_bee_conditionals10_2020', progression: 'Practice'
+bonus 'courseD_bee_conditionals_challenge1_2020'
+bonus 'courseD_bee_conditionals_challenge2_2020'
+
+lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer', has_lesson_plan: true
+level 'courseD_farmer_while1_2020', progression: 'Practice'
+level 'courseD_farmer_while2_2020', progression: 'Practice'
+level 'courseD_farmer_while3_2020', progression: 'Practice'
+level 'courseD_video_whileIntro_2020', progression: 'While Loops with the Farmer'
+level 'courseD_farmer_while4_predict1_2020', progression: 'Prediction'
+level 'courseD_farmer_while4_2020', progression: 'Practice'
+level 'courseD_farmer_while5_2020', progression: 'Practice'
+level 'courseD_farmer_while6_2020', progression: 'Practice'
+level 'courseD_farmer_while7_2020', progression: 'Practice'
+level 'courseD_farmer_while8_2020', progression: 'Challenge', challenge: true
+level 'courseD_farmer_while9_2020', progression: 'Practice'
+level 'courseD_farmer_while10_2020', progression: 'Practice'
+level 'courseD_farmer_while10_predict2_2020', progression: 'Prediction'
+bonus 'courseD_farmer_while_challenge1_2020'
+
+lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze', has_lesson_plan: true
+level 'courseD_maze_until1_2020', progression: 'Practice'
+level 'courseD_video_repeatUntil_2020', progression: 'Repeat Until Statements'
+level 'courseD_maze_until2_predict1_2020', progression: 'Prediction'
+level 'courseD_maze_until3_2020', progression: 'Practice'
+level 'courseD_maze_until4_2020', progression: 'Practice'
+level 'courseD_maze_until5_2020', progression: 'Practice'
+level 'courseD_maze_until6_2020', progression: 'Practice'
+level 'courseD_maze_until7_2020', progression: 'Practice'
+level 'courseD_maze_until9_2020', progression: 'Challenge', challenge: true
+level 'courseD_maze_until10_2020', progression: 'Practice'
+level 'courseD_maze_until10_predict2_2020', progression: 'Prediction'
+
+lesson 'Conditionals & Loops in Harvester', display_name: 'Harvesting with Conditionals', has_lesson_plan: true
+level 'harvester_skinOverview_video_2020', progression: 'The Harvester'
+level 'courseD_farmer_condLoops1_2020', progression: 'Practice'
+level 'courseD_farmer_condLoops2_2020', progression: 'Practice'
+level 'courseD_farmer_condLoops3_2020', progression: 'Practice'
+level 'courseD_farmer_condLoops4_2020', progression: 'Practice'
+level 'courseD_farmer_condLoops5_2020', progression: 'Practice'
+level 'courseD_farmer_condLoops6_2020', progression: 'Practice'
+level 'courseD_farmer_condLoops7_2020', progression: 'Challenge', challenge: true
+level 'courseD_farmer_condLoops8_2020', progression: 'Practice'
+level 'courseD_farmer_condLoops9_2020', progression: 'Practice'
+level 'courseD_farmer_condLoops9_predict1_2020', progression: 'Prediction'
+bonus 'courseD_farmer_condLoops_challenge1_2020'
+bonus 'courseD_farmer_condLoops_challenge2_2020'
+
+lesson_group 'csf_binary', display_name: 'Binary'
+lesson 'Unplugged: Binary', display_name: 'Binary Images', has_lesson_plan: true, unplugged: true
+level 'BinaryImages-Unplugged_2020'
+
+lesson 'Artist Binary', display_name: 'Binary Images with Artist', has_lesson_plan: true
+level 'courseD_external_binary1_2018_2019_2020', progression: 'Practice'
+level 'courseD_artist_binary1_2020', progression: 'Practice'
+level 'courseD_artist_binary2_2020', progression: 'Practice'
+level 'courseD_artist_binary3_2020', progression: 'Practice'
+level 'courseD_artist_binary4_2020', progression: 'Practice'
+level 'courseD_artist_binary5_2020', progression: 'Practice'
+level 'courseD_artist_binary6_2020', progression: 'Practice'
+level 'courseD_artist_binary7_2020', progression: 'Practice'
+level 'courseD_artist_binary8_2020', progression: 'Practice'
+level 'courseD_artist_binary8_predict1_2020', progression: 'Prediction'
+level 'courseD_artist_binaryFP_2020', progression: 'Free Play'
+bonus 'courseD_artist_binary_challenge1_2020'
+bonus 'courseD_artist_binary_challenge2_2020'
+
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
+lesson 'Be A Super Digital Citizen', display_name: 'Be A Super Digital Citizen', has_lesson_plan: true, unplugged: true
+level 'csf_be_a_super_digital_citizen'
+
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
+level 'courseD_project_exemplars_2020_2021', progression: 'Example projects'
+level 'courseD_EOC_2020', progression: 'Create your project'
+

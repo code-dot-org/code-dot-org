@@ -1,13 +1,10 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2019-06-21T21:28:35.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "console.log": null
+      "console.log": null,
+      "comment": null
     },
     "embed": "false",
     "instructions_important": "false",
@@ -20,6 +17,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
+    "validation_enabled": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "execute_palette_apis_only": "false",
@@ -37,14 +35,18 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "koiDD8t4K8z1NjCdlXQmS2hsPC3JVhBIpbyPsHNXcJjQb5HsIJ++A4A0mS9z\nNWGSRUyR39BkKH3dNIk2Avk1hQ==\n"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2019-06-21T21:28:35.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-07 17:50:22 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:51:56 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:52:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"slider_speed\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:57:12 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"expand_debugger\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 17:20:56 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"watchers_prepopulated\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 17:21:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-21 21:32:11 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-21 21:37:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-21 21:38:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 18:39:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 18:42:44 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 18:43:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-12 23:26:57 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"show_debug_watch\",\"watchers_prepopulated\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-07 17:50:22 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:51:56 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:52:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"slider_speed\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:57:12 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"expand_debugger\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 17:20:56 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"watchers_prepopulated\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-11 17:21:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-21 21:32:11 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-21 21:37:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-21 21:38:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 18:39:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 18:42:44 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 18:43:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-12 23:26:57 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"show_debug_watch\",\"watchers_prepopulated\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-09-03 17:06:54 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-01-15 23:52:52 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,13 +1,10 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {assert, expect} from '../../util/configuredChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
-import i18n from '@cdo/apps/code-studio/i18n';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
-
-var testUtils = require('../../util/testUtils');
-
+import * as testUtils from '../../util/testUtils';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   getStore,
@@ -16,11 +13,12 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
-var Applab = require('@cdo/apps/applab/applab');
-var designMode = require('@cdo/apps/applab/designMode');
-var applabCommands = require('@cdo/apps/applab/commands');
-var constants = require('@cdo/apps/applab/constants');
-var shareWarnings = require('@cdo/apps/shareWarnings');
+import pageConstantsReducer from '@cdo/apps/redux/pageConstants';
+import Applab from '@cdo/apps/applab/applab';
+import designMode from '@cdo/apps/applab/designMode';
+import applabCommands from '@cdo/apps/applab/commands';
+import * as constants from '@cdo/apps/applab/constants';
+import shareWarnings from '@cdo/apps/shareWarnings';
 
 function setupVizDom() {
   // Create a sample DOM to test against
@@ -41,11 +39,12 @@ function setupVizDom() {
     '</div>';
   return $(sampleDom);
 }
-describe('applab', () => {
+
+describe('Applab', () => {
   testUtils.sandboxDocumentBody();
   testUtils.setExternalGlobals();
 
-  describe('applab: designMode.addScreenIfNecessary', function() {
+  describe('designMode.addScreenIfNecessary', function() {
     it('adds a screen if we dont have one', function() {
       var html =
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
@@ -81,7 +80,7 @@ describe('applab', () => {
     });
   });
 
-  describe('applab: getIdDropdown filtering modes', function() {
+  describe('getIdDropdown filtering modes', function() {
     var documentRoot;
 
     beforeEach(function() {
@@ -128,7 +127,7 @@ describe('applab', () => {
     });
   });
 
-  describe('applab: getIdDropdownForCurrentScreen ordering', function() {
+  describe('getIdDropdownForCurrentScreen ordering', function() {
     var documentRoot;
 
     beforeEach(function() {
@@ -538,12 +537,16 @@ describe('applab', () => {
     before(() => sinon.stub(Applab, 'render'));
     after(() => Applab.render.restore());
 
-    beforeEach(stubRedux);
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({...reducers, pageConstants: pageConstantsReducer});
+    });
+
     afterEach(restoreRedux);
 
-    beforeEach(() => registerReducers(reducers));
-    describe('the expandDebugger level option', () => {
+    describe('configuration options', () => {
       let config;
+
       beforeEach(() => {
         config = {
           channel: 'bar',
@@ -554,31 +557,89 @@ describe('applab', () => {
           }
         };
       });
-      it('will leave the debugger closed when false', () => {
-        expect(config.level.expandDebugger).not.to.be.true;
-        Applab.init(config);
-        expect(isDebuggerOpen(getStore().getState())).to.be.false;
-      });
-      it('will open the debugger when true', () => {
-        expect(config.level.expandDebugger).not.to.be.true;
-        Applab.init({
-          ...config,
-          level: {
-            ...config.level,
-            expandDebugger: true
-          }
+
+      describe('expandDebugger', () => {
+        it('leaves debugger closed when false', () => {
+          expect(config.level.expandDebugger).not.to.be.true;
+          Applab.init(config);
+          expect(isDebuggerOpen(getStore().getState())).to.be.false;
         });
-        expect(isDebuggerOpen(getStore().getState())).to.be.true;
+
+        it('opens debugger when true', () => {
+          expect(config.level.expandDebugger).not.to.be.true;
+          Applab.init({
+            ...config,
+            level: {
+              ...config.level,
+              expandDebugger: true
+            }
+          });
+          expect(isDebuggerOpen(getStore().getState())).to.be.true;
+        });
+      });
+
+      describe('hasDesignMode page constant', () => {
+        it('is true if design mode is not hidden and not in start or widget mode', () => {
+          config.level.hideDesignMode = false;
+          config.level.widgetMode = false;
+          config.isStartMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDesignMode).to.be.true;
+        });
+
+        it('is false if design mode is hidden for level', () => {
+          config.level.hideDesignMode = true;
+          config.level.widgetMode = false;
+          config.isStartMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDesignMode).to.be.false;
+        });
+
+        it('is false in widget mode', () => {
+          config.level.hideDesignMode = false;
+          config.level.widgetMode = true;
+          config.isStartMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDesignMode).to.be.false;
+        });
+
+        it('is true in levelbuilder widget mode', () => {
+          config.level.hideDesignMode = false;
+          config.level.widgetMode = true;
+          config.isStartMode = true;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDesignMode).to.be.true;
+        });
+      });
+
+      describe('hasDataMode page constant', () => {
+        it('is true if data button is not hidden and not in widget mode', () => {
+          config.level.hideViewDataButton = false;
+          config.level.widgetMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDataMode).to.be.true;
+        });
+
+        it('is false if data button is hidden for level', () => {
+          config.level.hideViewDataButton = true;
+          config.level.widgetMode = false;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDataMode).to.be.false;
+        });
+
+        it('is false in widget mode', () => {
+          config.level.hideViewDataButton = false;
+          config.level.widgetMode = true;
+          Applab.init(config);
+          expect(getStore().getState().pageConstants.hasDataMode).to.be.false;
+        });
       });
     });
   });
 
-  describe('The applab.makeFooterMenuItems ', () => {
+  describe('makeFooterMenuItems ', () => {
     beforeEach(() => {
       sinon.stub(project, 'getUrl');
-      i18n.t.callsFake(function(txt) {
-        return txt;
-      });
     });
 
     afterEach(() => {
@@ -591,7 +652,7 @@ describe('applab', () => {
       );
       var footItems = Applab.makeFooterMenuItems(true);
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === commonMsg.openWorkspace()
+        item => item.text === commonMsg.howItWorks()
       );
       var reportAbuseIndex = footItems.findIndex(
         item => item.text === commonMsg.reportAbuse()
@@ -605,7 +666,7 @@ describe('applab', () => {
       );
       var footItems = Applab.makeFooterMenuItems(true);
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === commonMsg.openWorkspace()
+        item => item.text === commonMsg.howItWorks()
       );
       var makeOwnIndex = footItems.findIndex(
         item => item.text === applabMsg.makeMyOwnApp()
@@ -619,12 +680,24 @@ describe('applab', () => {
       );
       var footItems = Applab.makeFooterMenuItems(true);
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === commonMsg.openWorkspace()
+        item => item.text === commonMsg.howItWorks()
       );
       var reportAbuseIndex = footItems.findIndex(
         item => item.text === commonMsg.reportAbuse()
       );
       expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+    });
+  });
+
+  describe('Applab.getHtmlForWidgetMode', () => {
+    it('changes the width of screens', () => {
+      // Applab project with two screens, a label, a button, and an image.
+      Applab.levelHtml = `<div id="designModeViz" class="appModern clip-content" tabindex="1" data-radium="true" style="width: 320px; height: 450px;"><div class="screen" tabindex="1" data-theme="default" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);"><button id="button1" style="padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 85px; top: 40px;">Button</button><label style="margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 60px; height: 18px; position: absolute; left: 110px; top: 110px;" id="label1">text</label></div><div class="screen" tabindex="1" data-theme="default" id="screen2" style="display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);"><img src="/blockly/media/1x1.gif" data-canonical-image-url="" data-image-type="" data-object-fit="contain" id="image1" style="height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 105px; top: 140px; margin: 0px;"></div></div>`;
+
+      const expectedHtml = `<div id="designModeViz" class="appModern clip-content" tabindex="1" data-radium="true" style="width: 320px; height: 450px;"><div class="screen" tabindex="1" data-theme="default" id="screen1" style="display: block; height: 450px; width: 600px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);"><button id="button1" style="padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 85px; top: 40px;">Button</button><label style="margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 60px; height: 18px; position: absolute; left: 110px; top: 110px;" id="label1">text</label></div><div class="screen" tabindex="1" data-theme="default" id="screen2" style="display: none; height: 450px; width: 600px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);"><img src="/blockly/media/1x1.gif" data-canonical-image-url="" data-image-type="" data-object-fit="contain" id="image1" style="height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 105px; top: 140px; margin: 0px;"></div></div>`;
+
+      const actualHtml = Applab.getHtmlForWidgetMode();
+      expect(actualHtml).to.equal(expectedHtml);
     });
   });
 });

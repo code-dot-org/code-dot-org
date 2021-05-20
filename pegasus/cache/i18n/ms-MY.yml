@@ -17,6 +17,8 @@ ms-MY:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Adakah anda seorang guru Sains Komputer? Sila lihat sumber
     lain Minggu Pendidikan Sains Komputer</a>'
+  csedweek_banner_teachers_text: Adakah anda seorang guru Sains Komputer? Sila lihat
+    sumber lain Minggu Pendidikan Sains Komputer
   anybody_can_learn: Sesiapapun boleh belajar.
   learn_now: Pelajari Sekarang
   petition_message: Setiap pelajar di setiap sekolah perlu diberi peluang untuk mempelajari
@@ -29,6 +31,7 @@ ms-MY:
   twentyhours_heading: Cuba Pengenalan kepada Kursus Sains Komputer kami
   twentyhours_text: Selesai Satu Jam Kod pertama anda?  Belajar lebih banyak asas
     sains komputer dan programming dalam kursus sambungan berikut.
+  og_title_soon: Jam Kod akan datang
   csedweek_og_title: Minggu Pendidikan Sains Komputer
   hoc2014_heading: Sertai <a href="http://hourofcode.com">1 Jam Pengaturcaraan</a>
     <br/> 8-14 Disember, 2014 <br/>
@@ -133,6 +136,8 @@ ms-MY:
     menulis %{lines} baris kod."
   start_hoc: Mulakan Satu Jam Kod sekarang
   contact_form_topic_press: Akhbar/media (temu bual atau penglibatan perbualan)
+  studiobar_dance_title: Majlis Tari-Menari
+  studiobar_dance_body: Cipta dan kongsi Majlis Tari-Menari anda sendiri
   studiobar_hoc_title: Satu Jam Kod
   studiobar_hoc_body: Belajar kod dengan Angry Birds
   studiobar_flappy_title: Kod Flappy
@@ -141,6 +146,7 @@ ms-MY:
   studiobar_frozen_title: Hour of Code
   studiobar_donate_title: Derma
   studiobar_shop_title: Kedai
+  homepage_hero_hoc_is_coming: Jam Kod akan datang
   homepage_slot_text_hoc: Satu Jam Kod
   homepage_slot_text_shop: Kedai
   homepage_slot_text_flappy: Kod Flappy
@@ -151,6 +157,7 @@ ms-MY:
   homepage_action_text_watchvideo: Tonton Video
   homepage_action_text_signpetition: Tandatangan petisyen
   homepage_signpetition_dropdown: Tandatangan petisyen kami &#x25BE;
+  homepage_signpetition_dropdown_text: saya setuju
   homepage_banner_text_link: Ketahui lebih lanjut
   homepage_banner_privacy_link: Ketahui lebih lanjut
   homepage_banner_20k_teachers_link: Ketahui lebih lanjut
@@ -158,6 +165,7 @@ ms-MY:
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Sesiapa pun boleh belajar. Mulakan hari ini
   homepage_slot_text_link_hoc: Cuba Hour of Code
+  homepage_slot_text_blurb_students: Jelajahi semua tutorial kami
   homepage_slot_text_link_codestudio: Cuba Code Studio
   homepage_slot_text_link_local: Cari kelas tempatan
   homepage_slot_text_link_othercourses: Lain-lain kursus dalam talian
@@ -378,6 +386,7 @@ ms-MY:
   coursee-2017_gradelevel: Umur 8-12 tahun
   coursee-2018_gradelevel: Umur 8-12 tahun
   coursee-2019_gradelevel: Umur 8-12 tahun
+  coursee-2020_gradelevel: Umur 8-12 tahun
   codeorg_beyond_gradelevel: Peringkat umur 4-104 tahun
   khan_beyond_gradelevel: Sekolah Menengah +
   tynker_beyond_gradelevel: Umur 5-13 tahun
@@ -406,17 +415,46 @@ ms-MY:
   sphero_beyond_gradelevel: Umur 8 keatas
   flappy_shortcode: mengepak
   header_courses: kursus-kursus
+  header_course_catalog: Katalog Kursus
+  header_project_gallery: Projek
   header_educate_hoc: Hour of Code
+  header_about: Tentang
+  header_help_support: 'Bantuan dan sokongan '
+  header_report_bug: Laporkan masalah
+  header_legal_privacy: Dasar Privasi
+  header_legal_tos: Terma Perkhidmatan
   user_header_label: Hi %{username}
   user_header_settings: Akaun saya
   user_header_logout: Daftar keluar
   user_header_signin: Log masuk
+  user_header_create: 'Cipta '
+  user_header_dance: Majlis Tari-Menari
   user_header_flappy: Flappy
   applab_tile_start_tutorial: Mula
+  hoc_overview_dance_title: Majlis Tari-Menari
+  hoc_overview_dance_subtitle: Kod Majlis Tari-Menari untuk berkongsi dengan rakan
+    anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan
+    25 lagi!
+  hoc_overview_dance_2019_subtitle: Kod Majlis Tari-Menari untuk berkongsi dengan
+    rakan anda. Menampilkan Katy Perry, Shawn Mendes, Panic! Di Disko, Lil Nas X,
+    Jonas Brothers, Nicki Minaj, dan 34 lagi!
   hoc_overview_start_tutorial: Mula
   hoc2018_creativity_create: Buat
   hoc2018_mc_start: Mula
   hoc2018_mc_homepage_try_it: Selamat mencuba
+  hoc2018_dance_party_main_heading: Majlis Tari-Menari
+  hoc2018_dance_party_box_title: Majlis Tari-Menari
   hoc2018_dance_party_button: Mula
   hoc2018_dance_teacher_resources_tile2_button: Cabut aktiviti
   hoc2018_dance_amazon_about_future_engineer_button: Ketahui lebih lanjut
+  hoc2018_dance_measure: Corak Berirama
+  hoc2018_dance_measure_colon: 'Corak Berirama:'
+  hoc2018_mc_thank_microsoft: "  Kami mengucapkan terima kasih kepada Microsoft kerana
+    menyokong wawasan dan misi kami untuk memastikan setiap kanak-kanak mempunyai
+    peluang mempelajari sains komputer dan kemahiran untuk berjaya pada abad ke-21.
+    \ "
+  footer_privacy_policy: Dasar Privasi
+  footer_about: Tentang
+  footer_donate: Derma
+  footer_support: Bantuan dan Komuniti
+  footer_terms: Terma

@@ -1,0 +1,1303 @@
+{
+  "script": {
+    "name": "ecs-unit5",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "ECS Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:51 UTC",
+    "seeding_key": {
+      "script.name": "ecs-unit5"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Getting Started",
+      "name": "Getting Started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "key": "Unit 5 Overview",
+      "name": "Unit 5 Overview",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "key": "Unit 5 lessons",
+      "name": "Unit 5 lessons",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "key": "Unit 5 Challenge",
+      "name": "Unit 5 Challenge",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "key": "Close & Next Steps",
+      "name": "Close & Next Steps",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Close & Next Steps",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3- unit 5- welcome"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3- unit 5- welcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3- unit 5- welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 about"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 about"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 about"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "PDECS tour"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 plan"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 plan"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 plan"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD course goals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD course goals"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD course goals"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 intro to u5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 intro to u5"
+        ],
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 intro to u5"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u5 what is data"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u5 what is data"
+        ],
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "CSPPD3-u5 what is data"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 tools"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 tools"
+        ],
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 tools"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 connections"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 connections"
+        ],
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 connections"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 1-3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 1-3"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 1-3"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 4-5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 4-5"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 4-5"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 6-7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 6-7"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 6-7"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 8"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 8"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 9-12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 9-12"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 9-12"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 13"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 13"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 13"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 14-16"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 14-16"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 14-16"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 17"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 17"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 17"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 18-20"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 18-20"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 18-20"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 21"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 21"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 21"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 22-24"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 22-24"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 22-24"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 25"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 25"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 25"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 26-27"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 26-27"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 26-27"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 28-29"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 28-29"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 28-29"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 30"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 30"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 day 30"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 what is a challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 what is a challenge"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 what is a challenge"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD3-u5 list of challenges"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD3-u5 list of challenges"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD3-u5 list of challenges"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECS Unit 5 Challenge Selection"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECS Unit 5 Challenge Selection"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECS Unit 5 Challenge Selection"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSD3-u5 do the challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSD3-u5 do the challenge"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSD3-u5 do the challenge"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 create your extension"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 create your extension"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "CSPPD3-u2 create your extension"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "CSPPD3-u2 reflect on challenge"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 expectations"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 expectations"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "CSPPD3-u2 expectations"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECS Unit 5 Challenge Submission"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECS Unit 5 Challenge Submission"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECS Unit 5 Challenge Submission"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Challenge Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Challenge Reflection"
+        ],
+        "lesson.key": "Close & Next Steps",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      },
+      "level_keys": [
+        "ECSPD Challenge Reflection"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3- unit 5- welcome",
+        "script_level.level_keys": [
+          "ECSPD3- unit 5- welcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 about",
+        "script_level.level_keys": [
+          "ECSPD3-u5 about"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS tour",
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 plan",
+        "script_level.level_keys": [
+          "ECSPD3-u5 plan"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD course goals",
+        "script_level.level_keys": [
+          "ECSPD course goals"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 intro to u5",
+        "script_level.level_keys": [
+          "ECSPD3-u5 intro to u5"
+        ],
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u5 what is data",
+        "script_level.level_keys": [
+          "CSPPD3-u5 what is data"
+        ],
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 tools",
+        "script_level.level_keys": [
+          "ECSPD3-u5 tools"
+        ],
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 connections",
+        "script_level.level_keys": [
+          "ECSPD3-u5 connections"
+        ],
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 1-3",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 1-3"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 4-5",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 4-5"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 6-7",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 6-7"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 8",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 8"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 9-12",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 9-12"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 13",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 13"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 14-16",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 14-16"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 17",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 17"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 18-20",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 18-20"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 21",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 21"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 22-24",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 22-24"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 25",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 25"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 26-27",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 26-27"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 28-29",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 28-29"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 day 30",
+        "script_level.level_keys": [
+          "ECSPD3-u5 day 30"
+        ],
+        "lesson.key": "Unit 5 lessons",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 what is a challenge",
+        "script_level.level_keys": [
+          "ECSPD3-u5 what is a challenge"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD3-u5 list of challenges",
+        "script_level.level_keys": [
+          "ECSPD3-u5 list of challenges"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECS Unit 5 Challenge Selection",
+        "script_level.level_keys": [
+          "ECS Unit 5 Challenge Selection"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSD3-u5 do the challenge",
+        "script_level.level_keys": [
+          "ECSD3-u5 do the challenge"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 create your extension",
+        "script_level.level_keys": [
+          "CSPPD3-u2 create your extension"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 reflect on challenge",
+        "script_level.level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 expectations",
+        "script_level.level_keys": [
+          "CSPPD3-u2 expectations"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECS Unit 5 Challenge Submission",
+        "script_level.level_keys": [
+          "ECS Unit 5 Challenge Submission"
+        ],
+        "lesson.key": "Unit 5 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Challenge Reflection",
+        "script_level.level_keys": [
+          "ECSPD Challenge Reflection"
+        ],
+        "lesson.key": "Close & Next Steps",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit5"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

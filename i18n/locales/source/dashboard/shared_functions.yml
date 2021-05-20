@@ -1,0 +1,21 @@
+---
+en:
+  data:
+    shared_functions:
+      driving with arrow keys: driving with arrow keys
+      fluttering: fluttering
+      growing: growing
+      jittering: jittering
+      moving east: moving east
+      moving east and looping: moving east and looping
+      moving north: moving north
+      moving south: moving south
+      moving west: moving west
+      moving west and looping: moving west and looping
+      moving with arrow keys: moving with arrow keys
+      patrolling: patrolling
+      shrinking: shrinking
+      spinning left: spinning left
+      spinning right: spinning right
+      wandering: wandering
+      wobbling: wobbling

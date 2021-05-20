@@ -1,5 +1,5 @@
 name 'courseA_multi_collector_loops11_predict2'
-question 'The code below uses loops.  What will happen when you click "Run"?'
+question 'The code below uses loops. What will happen when you click "Run"?'
 right 'Laurel will get all of the treasure along the top and side, but not along the bottom.', feedback: 'Correct.'
 wrong 'Laurel will not get any treasure at all.', feedback: 'Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
 wrong 'Laurel will get all of the treasure.', feedback: 'Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'

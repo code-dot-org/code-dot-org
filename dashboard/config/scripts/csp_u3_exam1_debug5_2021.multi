@@ -1,0 +1,32 @@
+name 'csp-u3-exam1-debug5_2021'
+height 'auto'
+
+question ‘The following program is run. Then the user clicks the “bottomButton” TWO TIMES. What will be displayed in the console?’
+
+wrong ‘`aaa`  
+`bbb`  
+`ccc`  
+`ccc`  
+`ddd`’
+right ‘`bbb`  
+`ddd`  
+`ccc`  
+`ccc`’
+wrong ‘`bbb`  
+`ddd`  
+`aaa`  
+`aaa`’
+wrong ‘`bbb`  
+`ccc`  
+`ccc`  
+`ddd`’
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/7fd1e3acb1cd47c258734ebe2cf0bd83-image-1567612893823.01.03 AM.png" style="width:500px">
+MARKDOWN

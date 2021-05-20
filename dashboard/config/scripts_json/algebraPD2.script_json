@@ -1,0 +1,1003 @@
+{
+  "script": {
+    "name": "algebraPD2",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS in Algebra Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:43 UTC",
+    "seeding_key": {
+      "script.name": "algebraPD2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome!",
+      "name": "Welcome!",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "key": "Teaching with Puzzles",
+      "name": "Teaching with Puzzles",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching with Puzzles",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "key": "Teaching with the Design Recipe",
+      "name": "Teaching with the Design Recipe",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "key": "The Design Recipe",
+      "name": "The Design Recipe",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "key": "Teacher Dashboard",
+      "name": "Teacher Dashboard",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "key": "Lesson Prep",
+      "name": "Lesson Prep",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg P2 Welcome"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg P2 Welcome"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg P2 Welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDECS tour"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Cirlces of Eval"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Cirlces of Eval"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Cirlces of Eval"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg block match"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg block match"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg block match"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Puzzle Tips"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Puzzle Tips"
+        ],
+        "lesson.key": "Teaching with Puzzles",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Puzzle Tips"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Puzzles Pre"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Puzzles Pre"
+        ],
+        "lesson.key": "Teaching with Puzzles",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Puzzles Pre"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg DR 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg DR 1"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg DR 1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg DR Multi 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg DR Multi 1"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg DR Multi 1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg DR Text 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg DR Text 1"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg DR Text 1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg DR Multi 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg DR Multi 2"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg DR Multi 2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg DR Match 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg DR Match 1"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg DR Match 1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Design Recipe Video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Design Recipe Video"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Design Recipe Video"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Eval Design Recipe 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Eval Design Recipe 3"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "Eval Design Recipe 3"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Eval Design Recipe 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Eval Design Recipe 5"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "Eval Design Recipe 5"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Design Recipe 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Design Recipe 1"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "Calc Design Recipe 1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Eval Design Recipe Free Play"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Eval Design Recipe Free Play"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "Eval Design Recipe Free Play"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Dashboard 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Dashboard 1"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Dashboard 1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Dashboard 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Dashboard 2"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Dashboard 2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Dashboard 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Dashboard 3"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Dashboard 3"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Teacher Plan"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Teacher Plan"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Teacher Plan"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Prep a Lesson"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Prep a Lesson"
+        ],
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Prep a Lesson"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Prep on Paper"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Prep on Paper"
+        ],
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Prep on Paper"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Prep Sandbox"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Prep Sandbox"
+        ],
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "PDAlg Prep Sandbox"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lesson Prep Final"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lesson Prep Final"
+        ],
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      },
+      "level_keys": [
+        "Lesson Prep Final"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PDAlg P2 Welcome",
+        "script_level.level_keys": [
+          "PDAlg P2 Welcome"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS tour",
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Cirlces of Eval",
+        "script_level.level_keys": [
+          "PDAlg Cirlces of Eval"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg block match",
+        "script_level.level_keys": [
+          "PDAlg block match"
+        ],
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Puzzle Tips",
+        "script_level.level_keys": [
+          "PDAlg Puzzle Tips"
+        ],
+        "lesson.key": "Teaching with Puzzles",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Puzzles Pre",
+        "script_level.level_keys": [
+          "PDAlg Puzzles Pre"
+        ],
+        "lesson.key": "Teaching with Puzzles",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg DR 1",
+        "script_level.level_keys": [
+          "PDAlg DR 1"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg DR Multi 1",
+        "script_level.level_keys": [
+          "PDAlg DR Multi 1"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg DR Text 1",
+        "script_level.level_keys": [
+          "PDAlg DR Text 1"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg DR Multi 2",
+        "script_level.level_keys": [
+          "PDAlg DR Multi 2"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg DR Match 1",
+        "script_level.level_keys": [
+          "PDAlg DR Match 1"
+        ],
+        "lesson.key": "Teaching with the Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Design Recipe Video",
+        "script_level.level_keys": [
+          "PDAlg Design Recipe Video"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Eval Design Recipe 3",
+        "script_level.level_keys": [
+          "Eval Design Recipe 3"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Eval Design Recipe 5",
+        "script_level.level_keys": [
+          "Eval Design Recipe 5"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Design Recipe 1",
+        "script_level.level_keys": [
+          "Calc Design Recipe 1"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Eval Design Recipe Free Play",
+        "script_level.level_keys": [
+          "Eval Design Recipe Free Play"
+        ],
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Dashboard 1",
+        "script_level.level_keys": [
+          "PDAlg Dashboard 1"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Dashboard 2",
+        "script_level.level_keys": [
+          "PDAlg Dashboard 2"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Dashboard 3",
+        "script_level.level_keys": [
+          "PDAlg Dashboard 3"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Teacher Plan",
+        "script_level.level_keys": [
+          "PDAlg Teacher Plan"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Prep a Lesson",
+        "script_level.level_keys": [
+          "PDAlg Prep a Lesson"
+        ],
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Prep on Paper",
+        "script_level.level_keys": [
+          "PDAlg Prep on Paper"
+        ],
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Prep Sandbox",
+        "script_level.level_keys": [
+          "PDAlg Prep Sandbox"
+        ],
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lesson Prep Final",
+        "script_level.level_keys": [
+          "Lesson Prep Final"
+        ],
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

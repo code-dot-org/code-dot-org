@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/deprecatedChai';
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 describe('hasDuplicateVariablesInForLoops', function() {

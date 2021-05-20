@@ -1,18 +1,22 @@
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
+import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
+import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
+import {NotificationType} from '@cdo/apps/templates/Notification';
 
 const defaultProps = {
   name: 'csp',
   title: 'Computer Science Principles 2017',
   assignmentFamilyTitle: 'Computer Science Principles',
   id: 30,
-  descriptionStudent: 'Desc here',
-  descriptionTeacher: 'Desc here',
+  descriptionStudent:
+    '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
+  descriptionTeacher:
+    '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   sectionsInfo: [],
   teacherResources: [],
   isTeacher: true,
@@ -35,22 +39,85 @@ const defaultProps = {
   ],
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
-  versions: []
+  versions: [],
+  sectionsForDropdown: [],
+  announcements: [],
+  isSignedIn: true,
+  useMigratedResources: false
+};
+
+const fakeTeacherAnnouncement = {
+  notice: 'Notice - Teacher',
+  details: 'Teachers are the best',
+  link: '/foo/bar/teacher',
+  type: NotificationType.information,
+  visibility: VisibilityType.teacher
+};
+const fakeStudentAnnouncement = {
+  notice: 'Notice - Student',
+  details: 'Students are the best',
+  link: '/foo/bar/student',
+  type: NotificationType.information,
+  visibility: VisibilityType.student
+};
+const fakeTeacherAndStudentAnnouncement = {
+  notice: 'Notice - Teacher And Student',
+  details: 'More detail here',
+  link: '/foo/bar/teacherAndStudent',
+  type: NotificationType.information,
+  visibility: VisibilityType.teacherAndStudent
 };
 
 describe('CourseOverview', () => {
+  it('has correct course description for teacher', () => {
+    const wrapper = shallow(<CourseOverview {...defaultProps} />);
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+      '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
+    );
+  });
+
+  it('has correct course description for student', () => {
+    const wrapper = shallow(
+      <CourseOverview
+        {...defaultProps}
+        isTeacher={false}
+        viewAs={ViewType.Student}
+      />
+    );
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+      '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
+    );
+  });
+
+  it('has non-verified and provided teacher announcements if necessary', () => {
+    const wrapper = shallow(
+      <CourseOverview
+        {...defaultProps}
+        announcements={[
+          fakeTeacherAnnouncement,
+          fakeTeacherAndStudentAnnouncement
+        ]}
+      />
+    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
+  });
+
+  it('has student announcement if viewing as student', () => {
+    const wrapper = shallow(
+      <CourseOverview
+        {...defaultProps}
+        viewAs={ViewType.Student}
+        announcements={[fakeStudentAnnouncement]}
+      />
+    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
+  });
+
   it('renders a top row for teachers', () => {
     const wrapper = shallow(
       <CourseOverview {...defaultProps} isTeacher={true} />
     );
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
-  });
-
-  it('renders no top row for students', () => {
-    const wrapper = shallow(
-      <CourseOverview {...defaultProps} isTeacher={false} />
-    );
-    assert.equal(wrapper.find('CourseOverviewTopRow').length, 0);
   });
 
   it('renders a CourseScript for each script', () => {

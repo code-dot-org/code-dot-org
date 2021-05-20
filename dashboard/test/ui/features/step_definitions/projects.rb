@@ -62,6 +62,7 @@ Then(/^I report abuse on the project$/) do
   steps %Q{
     Then I switch tabs
     Then I wait until current URL contains "report_abuse"
+    And I wait until element "#uitest-email" is visible
     And I type "abuse_reporter@school.edu" into "#uitest-email"
     And I select the "Other" option in dropdown "uitest-abuse-type"
     And I type "I just don't like it." into "#uitest-abuse-detail"
@@ -115,8 +116,8 @@ Then /^I navigate to the public gallery via the gallery switcher$/ do
   steps <<-STEPS
     Then I click selector "#uitest-gallery-switcher div:contains(Public Projects)"
     Then check that I am on "http://studio.code.org/projects/public"
-    And I wait until element "#public-gallery" is visible
-    And element "#react-personal-projects" is not visible
+    And I wait until element "#uitest-public-projects" is visible
+    And element "#uitest-personal-projects" is not visible
   STEPS
 end
 
@@ -124,8 +125,8 @@ Then /^I navigate to the personal gallery via the gallery switcher$/ do
   steps <<-STEPS
     Then I click selector "#uitest-gallery-switcher div:contains(My Projects)"
     Then check that I am on "http://studio.code.org/projects"
-    And I wait until element "#public-gallery" is not visible
-    And element "#react-personal-projects" is visible
+    And I wait until element "#uitest-personal-projects" is visible
+    And element "#uitest-public-projects" is not visible
   STEPS
 end
 

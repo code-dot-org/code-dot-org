@@ -20,6 +20,12 @@ export const AudioErrorType = {
   INITIALIZE: 'initialize',
   SAVE: 'save'
 };
+export const ImageMode = {
+  FILE: 'file',
+  ICON: 'icon',
+  URL: 'url',
+  DEFAULT: 'default'
+};
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -36,14 +42,6 @@ const errorUploadDisabled =
 function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
-
-const styles = {
-  emptyText: {
-    margin: '1em 0',
-    fontSize: '16px',
-    lineHeight: '20px'
-  }
-};
 
 /**
  * A component for managing hosted assets.
@@ -131,9 +129,16 @@ export default class AssetManager extends React.Component {
    * when loading the current list of assets.
    * @param xhr
    */
-  onAssetListFailure = xhr => {
+  onAssetListFailure = ({status}) => {
+    const {useFilesApi} = this.props;
+    if (useFilesApi && status === 404) {
+      // No files in this project yet, proceed with an empty file list
+      this.onAssetListReceived({files: []});
+      return;
+    }
+
     this.setState({
-      statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
+      statusMessage: 'Error loading asset list: ' + getErrorMessage(status)
     });
   };
 
@@ -258,11 +263,13 @@ export default class AssetManager extends React.Component {
   };
 
   getAssetRows = () => {
+    const api = this.props.useFilesApi ? filesApi : assetsApi;
+
     return this.state.assets.map(asset => {
       return (
         <AssetRow
           {...this.defaultAssetProps(asset)}
-          useFilesApi={this.props.useFilesApi}
+          api={api}
           onChoose={
             this.props.assetChosen &&
             (() => this.props.assetChosen(asset.filename, asset.timestamp))
@@ -361,7 +368,7 @@ export default class AssetManager extends React.Component {
       assetList = (
         <div>
           <div
-            style={{maxHeight: '330px', overflowY: 'scroll', margin: '1em 0'}}
+            style={{maxHeight: '380px', overflowY: 'scroll', margin: '1em 0'}}
           >
             <table style={{width: '100%'}}>
               <tbody>{rows}</tbody>
@@ -375,3 +382,11 @@ export default class AssetManager extends React.Component {
     return assetList;
   }
 }
+
+const styles = {
+  emptyText: {
+    margin: '1em 0',
+    fontSize: '16px',
+    lineHeight: '20px'
+  }
+};

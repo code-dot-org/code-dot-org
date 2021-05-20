@@ -1,0 +1,1508 @@
+{
+  "script": {
+    "name": "CSPPD",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS Principles Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:39 UTC",
+    "seeding_key": {
+      "script.name": "CSPPD"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to PD",
+      "name": "Introduction to PD",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "What is CSP?",
+      "name": "What is CSP?",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "Exploring CSP Instructional Materials",
+      "name": "Exploring CSP Instructional Materials",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring CSP Instructional Materials",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "Impact of Computer Science",
+      "name": "Impact of Computer Science",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "Growth Mindset",
+      "name": "Growth Mindset",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "Teaching Strategies",
+      "name": "Teaching Strategies",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "Preparing for in-person PD",
+      "name": "Preparing for in-person PD",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD presurvey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD presurvey"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD presurvey"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Welcome to the Family!"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Welcome to the Family!"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "Welcome to the Family!"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "PDECS tour"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS commitment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "PDECS commitment"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS commitment match"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS commitment match"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "PDECS commitment match"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS attendance commitment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS attendance commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "PDECS attendance commitment"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD pause"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD pause"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD pause"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD program overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD program overview"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD program overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD curriculum overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD curriculum overview"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD curriculum overview"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD unit matching"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD unit matching"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD unit matching"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD course goals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD course goals"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD course goals"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD PT description"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD PT description"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD PT description"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD AP quiz"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD AP quiz"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD AP quiz"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD PD overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD PD overview"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD PD overview"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD PD Phases"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD PD Phases"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD PD Phases"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD phase matching"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD phase matching"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD phase matching"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD PD goals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD PD goals"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD PD goals"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD program overlap"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD program overlap"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD program overlap"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD instructional materials"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD instructional materials"
+        ],
+        "lesson.key": "Exploring CSP Instructional Materials",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD instructional materials"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD materials overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD materials overview"
+        ],
+        "lesson.key": "Exploring CSP Instructional Materials",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD materials overview"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD materials question1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD materials question1"
+        ],
+        "lesson.key": "Exploring CSP Instructional Materials",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD materials question1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD impact of CS"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD impact of CS"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD impact of CS"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD impact vid1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD impact vid1"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD impact vid1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD impact vid2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD impact vid2"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD impact vid2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD impact vid2 question"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD impact vid2 question"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD impact vid2 question"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD impact in program"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD impact in program"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD impact in program"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD what is growth mindset"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD what is growth mindset"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD what is growth mindset"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD growth mindset in the classroom"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD growth mindset in the classroom"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD growth mindset in the classroom"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD growth mindset question"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD growth mindset question"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD growth mindset question"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD growth mindset strategies"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD growth mindset strategies"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD growth mindset strategies"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD strategies"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD strategies"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD strategies"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD teaching strategies video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD teaching strategies video"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD teaching strategies video"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD strategies"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD strategies"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD strategies"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD facilitators"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD facilitators"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD facilitators"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD forum introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD forum introduction"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD forum introduction"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD PD details"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "ECSPD PD details"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD postsurvey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD postsurvey"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD postsurvey"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD end of p1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD end of p1"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      },
+      "level_keys": [
+        "CSPPD end of p1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSPPD presurvey",
+        "script_level.level_keys": [
+          "CSPPD presurvey"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Welcome to the Family!",
+        "script_level.level_keys": [
+          "Welcome to the Family!"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS tour",
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS commitment",
+        "script_level.level_keys": [
+          "PDECS commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS commitment match",
+        "script_level.level_keys": [
+          "PDECS commitment match"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS attendance commitment",
+        "script_level.level_keys": [
+          "PDECS attendance commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD pause",
+        "script_level.level_keys": [
+          "ECSPD pause"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD program overview",
+        "script_level.level_keys": [
+          "CSPPD program overview"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD curriculum overview",
+        "script_level.level_keys": [
+          "CSPPD curriculum overview"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD unit matching",
+        "script_level.level_keys": [
+          "CSPPD unit matching"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD course goals",
+        "script_level.level_keys": [
+          "CSPPD course goals"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD PT description",
+        "script_level.level_keys": [
+          "CSPPD PT description"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD AP quiz",
+        "script_level.level_keys": [
+          "CSPPD AP quiz"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD PD overview",
+        "script_level.level_keys": [
+          "CSPPD PD overview"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD PD Phases",
+        "script_level.level_keys": [
+          "CSPPD PD Phases"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD phase matching",
+        "script_level.level_keys": [
+          "CSPPD phase matching"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD PD goals",
+        "script_level.level_keys": [
+          "CSPPD PD goals"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD program overlap",
+        "script_level.level_keys": [
+          "CSPPD program overlap"
+        ],
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD instructional materials",
+        "script_level.level_keys": [
+          "CSPPD instructional materials"
+        ],
+        "lesson.key": "Exploring CSP Instructional Materials",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD materials overview",
+        "script_level.level_keys": [
+          "CSPPD materials overview"
+        ],
+        "lesson.key": "Exploring CSP Instructional Materials",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD materials question1",
+        "script_level.level_keys": [
+          "CSPPD materials question1"
+        ],
+        "lesson.key": "Exploring CSP Instructional Materials",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD impact of CS",
+        "script_level.level_keys": [
+          "CSPPD impact of CS"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD impact vid1",
+        "script_level.level_keys": [
+          "ECSPD impact vid1"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD impact vid2",
+        "script_level.level_keys": [
+          "ECSPD impact vid2"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD impact vid2 question",
+        "script_level.level_keys": [
+          "ECSPD impact vid2 question"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD impact in program",
+        "script_level.level_keys": [
+          "CSPPD impact in program"
+        ],
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD what is growth mindset",
+        "script_level.level_keys": [
+          "ECSPD what is growth mindset"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD growth mindset in the classroom",
+        "script_level.level_keys": [
+          "ECSPD growth mindset in the classroom"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD growth mindset question",
+        "script_level.level_keys": [
+          "ECSPD growth mindset question"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD growth mindset strategies",
+        "script_level.level_keys": [
+          "ECSPD growth mindset strategies"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD strategies",
+        "script_level.level_keys": [
+          "CSPPD strategies"
+        ],
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD teaching strategies video",
+        "script_level.level_keys": [
+          "CSPPD teaching strategies video"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD strategies",
+        "script_level.level_keys": [
+          "CSPPD strategies"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD facilitators",
+        "script_level.level_keys": [
+          "CSPPD facilitators"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD forum introduction",
+        "script_level.level_keys": [
+          "CSPPD forum introduction"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD PD details",
+        "script_level.level_keys": [
+          "ECSPD PD details"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD postsurvey",
+        "script_level.level_keys": [
+          "CSPPD postsurvey"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD end of p1",
+        "script_level.level_keys": [
+          "CSPPD end of p1"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

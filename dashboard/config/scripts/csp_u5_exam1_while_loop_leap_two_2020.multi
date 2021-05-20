@@ -1,0 +1,45 @@
+name 'csp-u5-exam1-while-loop-leap-two_2020'
+editor_experiment ''
+wrong '0  
+2  
+4  
+6'
+wrong '0  
+2  
+4'
+wrong '2  
+4  
+6'
+right 'The program will result in an infinite loop'
+
+
+
+markdown <<MARKDOWN
+What will be displayed in the console when the following program runs?
+
+```
+var count = 0
+while (count != 5){
+  console.log(count);
+  count = count + 2;
+}
+```
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** The variable `count` is initialized with the value `0`. Each time the while-loop runs, the value stored in `count` increases by 2 (0, 2, 4, 6….). This means that the Boolean expression `count != 5` will never evaluate to `false` and the program will result in an infinite loop.
+
+[Lesson 5 - Loops Explore](https://curriculum.code.org/csp-20/unit5/5/) introduced students to the concept of an infinite loop and the conditions that can cause one to result.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.K: For iteration:
+a. Write iteration statements.
+b. Determine the result or side-effect of iteration statements.
+:::
+
+
+MARKDOWN

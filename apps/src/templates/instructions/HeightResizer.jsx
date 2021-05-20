@@ -11,6 +11,116 @@ import styleConstants from '../../styleConstants';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
+class HeightResizer extends React.Component {
+  static propTypes = {
+    /**
+     * @returns {number} top - the top Y value of the element we are resizing
+     */
+    resizeItemTop: PropTypes.func.isRequired,
+    position: PropTypes.number.isRequired,
+    /**
+     * @param {number} desiredHeight - the height we'd like to resize to
+     */
+    onResize: PropTypes.func.isRequired,
+    style: PropTypes.object
+  };
+
+  state = {
+    dragging: false,
+    dragStart: 0
+  };
+
+  componentDidMount() {
+    this.resizerRef.addEventListener('mousedown', this.onMouseDown);
+    this.resizerRef.addEventListener('mouseup', this.onMouseUp);
+    this.resizerRef.addEventListener('mousemove', this.onMouseMove);
+    this.resizerRef.addEventListener('touchstart', this.onMouseDown);
+    this.resizerRef.addEventListener('touchend', this.onMouseUp);
+    this.resizerRef.addEventListener('touchmove', this.onMouseMove);
+  }
+
+  componentWillUnmount() {
+    this.resizerRef.removeEventListener('mousedown', this.onMouseDown);
+    this.resizerRef.removeEventListener('mouseup', this.onMouseUp);
+    this.resizerRef.removeEventListener('mousemove', this.onMouseMove);
+    this.resizerRef.removeEventListener('touchstart', this.onMouseDown);
+    this.resizerRef.removeEventListener('touchend', this.onMouseUp);
+    this.resizerRef.removeEventListener('touchmove', this.onMouseMove);
+  }
+
+  componentDidUpdate(_, prevState) {
+    // Update listeners as dragging state changes.
+    if (!prevState.dragging && this.state.dragging) {
+      // Add document listeners when drag starts.
+      document.addEventListener('mousemove', this.onMouseMove);
+      document.addEventListener('mouseup', this.onMouseUp);
+    } else if (prevState.dragging && !this.state.dragging) {
+      // Remove document listeners when drag ends.
+      document.removeEventListener('mousemove', this.onMouseMove);
+      document.removeEventListener('mouseup', this.onMouseUp);
+    }
+  }
+
+  onMouseDown = event => {
+    if (event.button && event.button !== 0) {
+      return;
+    }
+
+    event.stopPropagation();
+    if (event.cancelable) {
+      event.preventDefault();
+    }
+
+    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+    this.setState({dragging: true, dragStart: pageY});
+  };
+
+  onMouseUp = event => {
+    event.stopPropagation();
+    if (event.cancelable) {
+      event.preventDefault();
+    }
+
+    this.setState({dragging: false});
+  };
+
+  onMouseMove = event => {
+    event.stopPropagation();
+    if (event.cancelable) {
+      event.preventDefault();
+    }
+
+    if (!this.state.dragging) {
+      return;
+    }
+
+    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+    const desiredHeight = pageY - this.props.resizeItemTop();
+
+    this.props.onResize(desiredHeight);
+  };
+
+  render() {
+    const mainStyle = [
+      styles.main,
+      {
+        top: this.props.position - RESIZER_HEIGHT
+      },
+      this.props.style
+    ];
+
+    return (
+      <div
+        id="ui-test-resizer"
+        style={mainStyle}
+        ref={ref => (this.resizerRef = ref)}
+      >
+        <div style={styles.ellipsis} className="fa fa-ellipsis-h" />
+      </div>
+    );
+  }
+}
+
 const styles = {
   main: {
     position: 'absolute',
@@ -29,88 +139,5 @@ const styles = {
     paddingTop: 1 // results in a slightly better centering
   }
 };
-
-class HeightResizer extends React.Component {
-  static propTypes = {
-    position: PropTypes.number.isRequired,
-    /**
-     * @param {number} delta - amount we're trying to resize by
-     * @returns {number} delta - amount we've actually resized
-     */
-    onResize: PropTypes.func.isRequired,
-    style: PropTypes.object
-  };
-
-  state = {
-    dragging: false,
-    dragStart: 0
-  };
-
-  componentDidUpdate(_, state) {
-    // Update listeners as dragging state changes
-    if (this.state.dragging && !state.dragging) {
-      document.addEventListener('mousemove', this.onMouseMove);
-      document.addEventListener('mouseup', this.onMouseUp);
-    } else if (!this.state.dragging && state.dragging) {
-      document.removeEventListener('mousemove', this.onMouseMove);
-      document.removeEventListener('mouseup', this.onMouseUp);
-    }
-  }
-
-  onMouseDown = event => {
-    if (event.button !== 0) {
-      return;
-    }
-    event.stopPropagation();
-    event.preventDefault();
-
-    this.setState({dragging: true, dragStart: event.pageY});
-  };
-
-  onMouseUp = event => {
-    event.stopPropagation();
-    event.preventDefault();
-
-    this.setState({dragging: false});
-  };
-
-  onMouseMove = event => {
-    event.stopPropagation();
-    event.preventDefault();
-
-    if (!this.state.dragging) {
-      return;
-    }
-
-    const delta = event.pageY - this.state.dragStart;
-
-    // onResize can choose to limit how much we actually move, and will report
-    // back the value
-    const actualDelta = this.props.onResize(delta);
-    this.setState({dragStart: this.state.dragStart + actualDelta});
-  };
-
-  render() {
-    const mainStyle = [
-      styles.main,
-      {
-        top: this.props.position - RESIZER_HEIGHT
-      },
-      this.props.style
-    ];
-
-    return (
-      <div
-        id="ui-test-resizer"
-        style={mainStyle}
-        onMouseDown={this.onMouseDown}
-        onMouseUp={this.onMouseUp}
-        onMouseMove={this.onMouseMove}
-      >
-        <div style={styles.ellipsis} className="fa fa-ellipsis-h" />
-      </div>
-    );
-  }
-}
 
 export default Radium(HeightResizer);

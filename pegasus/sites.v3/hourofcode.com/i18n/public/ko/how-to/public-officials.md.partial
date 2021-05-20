@@ -6,61 +6,61 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to involve your entire community
+# 전체 커뮤니티의 참여를 이끄는 방법
 
-### Show your state, district, or city your commitment to computer science
+### 주 정부 또는 학군, 시에게 여러분의 컴퓨터 과학에 대한 헌신을 보여주세요.
 
----
+* * *
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## 지역 의원을 아워오브코드에 초청하시겠습니까?
 
-[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
+[초청을 성사시켜 이벤트를 성공적으로 만드는데](/files/elected-official.pdf) 필요한 모든 정보가 들어 있는 툴키트를 보세요!
 
 ![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
+왼쪽에서 오른쪽으로: *아칸소와 노스 캐롤라이나, 아리조나 주지사가 아워오브코드에 참여하고 있습니다.*
 
 ## 모든 학교들이 참여해서, 모든 학생들이 배워볼 수 있도록!
 
-### 1. Read our one-pager
+### 1. 소책자 읽기
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+[컴퓨터 과학 교육이 중요한 이유 ]({{ localized_files/hoc_one_pager }})와 아워오브코드를 지지함으로써 그러한 노력에 도움을 주는 방법 참조.
 
-### 2. Recruit local schools and districts
+### 2. 지역 학교와 학군 모집
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+[이 이메일]({{ promote/sample_emails }}) 또는[이 광고문]({{ promote/stats_url }}) 을 시작점으로 사용하여 학교와 학군을 위한 이 [하우 투]({{ urls/how_to_guide }}) 를 살펴보세요.
 
-### 3. Host an Hour of Code event
+### 3. 아워오브코드 이벤트 주최
 
-See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+쇼 운영 샘플로 [이벤트 하우 투 가이드]({{ urls/how_to_events }}) 와[보도자료 키트]({{ promote/press_kit_url }}), 기타 이벤트 기획 자료를 참조하세요. 이벤트 주최는 아워오브코드를 홍보하고 참여를 증가시키기 위한 좋은 방법입니다.
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
+### 4. 컴퓨터 과학 교육 주간 동안 이벤트에 참석 ({{ campaign_date/short }})
 
-[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
+[학군 또는 시, 주에서 참가할]({{ urls/events }}) 학급과 학교 찾기
 
-### 5. Issue a proclamation or resolution
+### 5. 선언서 또는 결의안 발행
 
-See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+주 의원 및 지역 국회의원에 의해 활용될 수 있는, 컴퓨터 과학 교육주간과 그 목표를 지지하는 이[예시 결의안]({{ urls/proclamation }}) 을 참조하세요.
 
-### 6. Draft an op-ed
+### 6. 칼럼 기사 작성
 
-Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
+지역 신문에 기고문을 발표하는 방법도 고려합니다. 컴퓨터 과학 교육주간과 그 목표를 지지하는 이 [예시 칼럼 기사]({{ promote/op_ed }}) 를 참조하세요.
 
-### 7. Spread the word
+### 7. 입소문 내기
 
-[Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+[아워오브코드 동영상을 페이스북 ](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) 에서 공유하고 [트위터에서 지원한다는 말을 합니다 ](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). 이벤트 사진 또는 여러분과 다른 어른들이 아워오브코드를 하는 동영상들을 공유해 주세요. **#HourOfCode** 해시 태그를 사용하여 Code.org(@code.org)가 보고 지원을 더 많이 해 줄 수 있게 해주세요. 또는 다음의 예시 트윗을 사용하세요:
 
-- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *남녀를 불문하고 모든 학생들은 컴퓨터 과학을 배울 기회를 가져야 합니다. 우리와 함께 #HourOfCode [https://hourofcode.com]({{ urls/home }})으로 시작하세요.*
+- *오늘 우리는 아워오브코드 운동에 함께 참여하게 된 것이 자랑스럽습니다. 참여하시겠습니까? [https://hourofcode.com]({{ urls/home }})*
 
-### 8. Issue a press release
+### 8. 보도자료 배포 
 
-[Use this sample]({{ promote/official_press_release }}) as a guide.
+[다음 예시]({{ promote/official_press_release }}) 를 안내서로 사용하세요.
 
-### 9. Connect locally
+### 9. 지역적으로 연결
 
-[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
+[주 내 컴퓨터 과학 교육에 대해 더 알아보기]({{ urls/advocacy }}). 거기에 있는 청원서에 서명하고 지역 및 주, 연방 차원에서 Code.org의 컴퓨터 과학 교육을 대변하는 노력에 관한 업데이트를 얻으세요. 
 
 {{ signup_button }}

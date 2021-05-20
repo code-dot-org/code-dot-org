@@ -31,11 +31,6 @@ title: "Professional Development Workshop Survey"
   course = workshop[:course]
   subject = workshop[:subject]
 
-  def local_view(name, options = {})
-    options[:form] = PdWorkshopSurvey
-    view "pd_survey_controls/#{name.to_s}", options
-  end
-
   facilitator_specific_questions = {
     sourceName: 'who_facilitated_ss[]',
     sourceLabel: 'Who facilitated your workshop today? (check at least one)',
@@ -87,13 +82,13 @@ title: "Professional Development Workshop Survey"
   window.pdWorkshopSurvey = {
     enrollmentCode: "#{enrollment_code}",
     course: "#{course}",
-    facilitatorSpecificQuestions: #{facilitator_specific_questions.to_json}
+    facilitatorSpecificQuestions: #{facilitator_specific_questions.to_json.html_safe}
   };
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
-%script{type: "text/javascript", src: minifiable_asset_path('js/code.org/public/pd-workshop-survey/splat.js')}
+%script{type: "text/javascript", src: webpack_asset_path('js/code.org/public/pd-workshop-survey/splat.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 %div
@@ -122,13 +117,15 @@ title: "Professional Development Workshop Survey"
 
     .main-section
       .form-group
-        = local_view :yes_no_select,
+        = view "pd_survey_controls/yes_no_select",
+          form: PdWorkshopSurvey,
           name: 'consent_b',
           label: 'Your participation is voluntary but strongly encouraged. Do you consent to completing this survey?'
 
     .consent-only
       .form-group
-        = local_view :yes_no_select,
+        = view "pd_survey_controls/yes_no_select",
+          form: PdWorkshopSurvey,
           name: 'will_teach_b',
           label: "Will you be teaching/are you teaching #{course} #{subject} in the next school year?"
       .form-group{id: 'will-teach-no-explain-wrapper', style: 'display: none;'}
@@ -138,7 +135,8 @@ title: "Professional Development Workshop Survey"
           %input.form-control{name: 'will_not_teach_explanation_s', placeholder: 'Why not?', type: 'text'}
 
       .form-group
-        = local_view :multi_select,
+        = view "pd_survey_controls/multi_select",
+          form: PdWorkshopSurvey,
           name: 'reason_for_attending_ss[]',
           label: 'Reason for attending? (select all that apply)'
       .form-group{id: 'reason-for-attending-other-wrapper', style: 'display: none;'}
@@ -148,7 +146,8 @@ title: "Professional Development Workshop Survey"
           %input.form-control{name: 'reason_for_attending_other_s', placeholder: 'Other', type: 'text'}
 
       .form-group
-        = local_view :multi_select,
+        = view "pd_survey_controls/multi_select",
+          form: PdWorkshopSurvey,
           name: 'how_heard_ss[]',
           label: 'How did you hear about this workshop? (select all that apply)'
       .form-group{id: 'how-heard-other-wrapper', style: 'display: none;'}
@@ -158,7 +157,8 @@ title: "Professional Development Workshop Survey"
           %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurvey,
           name: 'received_clear_communication_s',
           label: 'I received clear communication about when and where the workshop would take place.'
 
@@ -168,7 +168,8 @@ title: "Professional Development Workshop Survey"
             Do you believe your school has the technology requirements modern web browsers/sufficient
             internet access/1:1 computing environment necessary to effectively teach the course?'
           )
-        = local_view :yes_no_select,
+        = view "pd_survey_controls/yes_no_select",
+          form: PdWorkshopSurvey,
           name: 'school_has_tech_b',
           label: school_has_tech_label
 
@@ -179,12 +180,14 @@ title: "Professional Development Workshop Survey"
         %textarea.form-control{name: 'venue_feedback_s', rows: 4, type: 'text'}
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurvey,
           name: 'how_much_learned_s',
           label: 'Overall, how much have you learned from your workshop about computer science?'
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurvey,
           name: 'how_motivating_s',
           label: 'During your workshop, how motivating were the activities that this program had you do?'
 
@@ -194,27 +197,32 @@ title: "Professional Development Workshop Survey"
       .form-group#facilitator-specific-questions
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurvey,
           name: 'how_much_participated_s',
           label: 'During your workshop, how much did you participate?'
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurvey,
           name: 'how_often_talk_about_ideas_outside_s',
           label: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurvey,
           name: 'how_often_lost_track_of_time_s',
           label: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurvey,
           name: 'how_excited_before_s',
           label: 'Before the workshop, how excited were you about going to your Code.org workshop?'
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurvey,
           name: 'overall_how_interested_s',
           label: 'Overall, how interested were you in the Code.org in-person workshop?'
 
@@ -239,7 +247,9 @@ title: "Professional Development Workshop Survey"
           label: 'I feel like I am a part of a community of teachers.'
         }]
 
-      = local_view :agree_scale_select_table, items: agree_scale_questions
+      = view "pd_survey_controls/agree_scale_select_table",
+          form: PdWorkshopSurvey,
+          items: agree_scale_questions
 
       .form-group
         %label.control-label{for: 'things_you_liked_s'}
@@ -258,7 +268,8 @@ title: "Professional Development Workshop Survey"
         %textarea.form-control{name: 'anything_else_s', rows: 4, type: 'text'}
 
       .form-group
-        = local_view :yes_no_select,
+        = view "pd_survey_controls/yes_no_select",
+          form: PdWorkshopSurvey,
           name: 'willing_to_talk_b',
           label: 'Would you be willing to talk to someone at Code.org about your PD experiences?'
       .form-group{id: 'willing-to-talk-contact-wrapper', style: 'display: none;'}
@@ -269,17 +280,20 @@ title: "Professional Development Workshop Survey"
 
       - if is_first_survey
         .form-group
-          = local_view :single_select,
+          = view "pd_survey_controls/single_select",
+            form: PdWorkshopSurvey,
             name: 'gender_s',
             label: 'Gender'
 
         .form-group
-          = local_view :multi_select,
+          = view "pd_survey_controls/multi_select",
+            form: PdWorkshopSurvey,
             name: 'race_ss[]',
             label: 'Race? (select all that apply)'
 
         .form-group
-          = local_view :single_select,
+          = view "pd_survey_controls/single_select",
+            form: PdWorkshopSurvey,
             name: 'age_s',
             label: 'What is your age?'
 
@@ -289,17 +303,20 @@ title: "Professional Development Workshop Survey"
           %input.form-control{name: 'years_taught_i', type: 'text', maxlength: 2}
 
         .form-group
-          = local_view :multi_select,
+          = view "pd_survey_controls/multi_select",
+            form: PdWorkshopSurvey,
             name: 'grades_taught_ss[]',
             label: 'What grade level do you teach? (select all that apply)'
 
         .form-group
-          = local_view :multi_select,
+          = view "pd_survey_controls/multi_select",
+            form: PdWorkshopSurvey,
             name: 'grades_planning_to_teach_ss[]',
             label: 'What grade level are you planning to teach this course to? (select all that apply)'
 
         .form-group
-          = local_view :multi_select,
+          = view "pd_survey_controls/multi_select",
+            form: PdWorkshopSurvey,
             name: 'subjects_taught_ss[]',
             label: 'What subjects have you taught? (select all that apply)'
 

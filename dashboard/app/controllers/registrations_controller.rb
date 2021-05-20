@@ -14,18 +14,28 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/sign_up
   #
   def new
-    # Used by old signup form
     session[:user_return_to] ||= params[:user_return_to]
-    # Used by new signup form
-    store_location_for(:user, params[:user_return_to]) if params[:user_return_to]
-
     if PartialRegistration.in_progress?(session)
-      user_params = params[:user] || {}
-      @user = User.new_with_session(user_params, session)
+      user_params = params[:user] || ActionController::Parameters.new
+      user_params[:user_type] ||= session[:default_sign_up_user_type]
+      @user = User.new_with_session(user_params.permit(:user_type), session)
     else
+      save_default_sign_up_user_type
       @already_hoc_registered = params[:already_hoc_registered]
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
       super
+    end
+  end
+
+  # If the user[user_type] queryparam is provided and valid, save its value
+  # into the session so we can use it as a default on the finish_sign_up page.
+  # If not, clear it from the session so we don't use a misleading default.
+  def save_default_sign_up_user_type
+    requested_user_type = params.dig(:user, :user_type)
+    if User::USER_TYPE_OPTIONS.include? requested_user_type
+      session[:default_sign_up_user_type] = requested_user_type
+    else
+      session.delete(:default_sign_up_user_type)
     end
   end
 
@@ -53,7 +63,11 @@ class RegistrationsController < Devise::RegistrationsController
   # Cancels the in-progress partial user registration and redirects to sign-up page.
   #
   def cancel
-    PartialRegistration.cancel(session)
+    provider = PartialRegistration.get_provider(session) || 'email'
+    SignUpTracking.log_cancel_finish_sign_up(session, provider)
+    SignUpTracking.end_sign_up_tracking(session)
+
+    PartialRegistration.delete(session)
     redirect_to new_user_registration_path
   end
 
@@ -98,10 +112,14 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     should_send_new_teacher_email = current_user && current_user.teacher?
-    TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
-    if current_user
+    TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
+    should_send_parent_email = current_user && current_user.parent_email.present?
+    ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
+
+    if current_user # successful registration
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
+      PartialRegistration.delete session
     end
 
     SignUpTracking.log_sign_up_result resource, session
@@ -138,6 +156,30 @@ class RegistrationsController < Devise::RegistrationsController
     head :no_content
   end
 
+  def parent_email_params
+    params.
+      require(:user).
+      tap do |user|
+        user[:parent_email_preference_email] = user[:parent_email]
+        if user[:parent_email_preference_opt_in].empty?
+          user[:parent_email_preference_opt_in_required] = '0'
+          user[:parent_email_update_only] = '1'
+        else
+          user[:parent_email_update_only] = '0'
+          user[:parent_email_preference_opt_in_required] = '1'
+          user[:parent_email_preference_request_ip] = request.ip
+        end
+      end.
+      permit(
+        :parent_email_preference_email,
+        :parent_email_preference_opt_in,
+        :parent_email_preference_request_ip,
+        :parent_email_preference_source,
+        :parent_email_preference_opt_in_required,
+        :parent_email_update_only
+      )
+  end
+
   def sign_up_params
     super.tap do |params|
       if params[:user_type] == "teacher"
@@ -145,6 +187,9 @@ class RegistrationsController < Devise::RegistrationsController
         params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
+      elsif params[:user_type] == "student"
+        params[:parent_email_preference_request_ip] = request.ip
+        params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
       end
 
       params[:data_transfer_agreement_accepted] = params[:data_transfer_agreement_accepted] == "1"
@@ -195,10 +240,30 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def set_email
     return head(:bad_request) if params[:user].nil?
-
     successfully_updated = update_user_email
 
     if successfully_updated
+      head :no_content
+    else
+      render status: :unprocessable_entity,
+             json: current_user.errors.as_json(full_messages: true),
+             content_type: 'application/json'
+    end
+  end
+
+  #
+  # PATCH /users/parent_email
+  #
+  # Route allowing user to update the parent email address associated
+  # with the account
+  #
+  def set_parent_email
+    return head(:bad_request) if params[:user].nil?
+
+    successfully_updated = current_user.update_without_password(parent_email_params)
+
+    if successfully_updated
+      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now
       head :no_content
     else
       render status: :unprocessable_entity,
@@ -266,6 +331,11 @@ class RegistrationsController < Devise::RegistrationsController
       notice: I18n.t('auth.demigration_success')
   end
 
+  def existing_account
+    params.require([:email, :provider])
+    render 'existing_account'
+  end
+
   private
 
   def update_user_email
@@ -298,9 +368,9 @@ class RegistrationsController < Devise::RegistrationsController
         format.html do
           set_flash_message :notice, flash_message_kind, {username: user.username}
           begin
-            redirect_back fallback_location: after_update_path_for(user)
+            redirect_back fallback_location: edit_registration_path(current_user)
           rescue ActionController::RedirectBackError
-            redirect_to after_update_path_for(user)
+            redirect_to edit_registration_path(user)
           end
         end
         format.any {head :no_content}
@@ -425,26 +495,32 @@ class RegistrationsController < Devise::RegistrationsController
   def log_account_deletion_to_firehose(current_user, dependent_users)
     # Log event for user initiating account deletion.
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit-v2',
-      event: 'initiated-account-deletion',
-      user_id: current_user.id,
-      data_json: {
-        user_type: current_user.user_type,
-        dependent_user_ids: dependent_users.pluck(:id),
-      }.to_json
+      :analysis,
+      {
+        study: 'user-soft-delete-audit-v2',
+        event: 'initiated-account-deletion',
+        user_id: current_user.id,
+        data_json: {
+          user_type: current_user.user_type,
+          dependent_user_ids: dependent_users.pluck(:id),
+        }.to_json
+      }
     )
 
     # Log separate events for dependent users destroyed in user-initiated account deletion.
     # This should only happen for teachers.
     dependent_users.each do |user|
       FirehoseClient.instance.put_record(
-        study: 'user-soft-delete-audit-v2',
-        event: 'dependent-account-deletion',
-        user_id: user[:id],
-        data_json: {
-          user_type: user[:user_type],
-          deleted_by_id: current_user.id,
-        }.to_json
+        :analysis,
+        {
+          study: 'user-soft-delete-audit-v2',
+          event: 'dependent-account-deletion',
+          user_id: user[:id],
+          data_json: {
+            user_type: user[:user_type],
+            deleted_by_id: current_user.id,
+          }.to_json
+        }
       )
     end
   end
@@ -452,7 +528,7 @@ class RegistrationsController < Devise::RegistrationsController
   def destroy_users(current_user, dependent_users)
     users = [current_user] + dependent_users
     user_ids_to_destroy = users.pluck(:id)
-    User.destroy(user_ids_to_destroy)
+    User.ignore_deleted_at_index.destroy(user_ids_to_destroy)
 
     log_account_deletion_to_firehose(current_user, dependent_users)
   end

@@ -1,7 +1,7 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as actions from './errorDialogStackModule';
+import * as actions from './redux/errorDialogStack';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -9,7 +9,7 @@ var labMsg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
 import msg from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import * as animationActions from './animationListModule';
+import * as animationActions from './redux/animationList';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
 
@@ -91,7 +91,11 @@ class ErrorDialogStack extends React.Component {
             </p>
             <p>
               {msg.contactWithoutEmail()}{' '}
-              <a href={pegasus('/contact')} target="_blank">
+              <a
+                href={pegasus('/contact')}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://code.org/contact
               </a>
               .
@@ -99,12 +103,14 @@ class ErrorDialogStack extends React.Component {
             <DialogFooter>
               {error.error_cause && (
                 <Button
+                  __useDeprecatedTag
                   text={msg.delete() + ' "' + animationName + '"'}
                   onClick={() => this.handleDeleteChoice(error.error_cause)}
                   color="red"
                 />
               )}
               <Button
+                __useDeprecatedTag
                 text={msg.reloadPage()}
                 onClick={() => this.handleReloadChoice(error.error_cause)}
               />

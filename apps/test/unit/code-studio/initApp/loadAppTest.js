@@ -29,17 +29,13 @@ describe('loadApp.js', () => {
         readLevelId = levelId;
         return OLD_CODE;
       });
-    sinon.stub($, 'ajax').callsFake(() => {
-      return {
-        done() {
-          return {
-            fail(callback) {
-              callback();
-            }
-          };
+    sinon.stub($, 'ajax').callsFake(() => ({
+      done: successCallback => ({
+        fail: failureCallback => {
+          successCallback({signedIn: false});
         }
-      };
-    });
+      })
+    }));
   });
   beforeEach(() => {
     writtenLevelId = undefined;
@@ -58,36 +54,6 @@ describe('loadApp.js', () => {
     clientState.sourceForLevel.restore();
     $.ajax.restore();
     window.appOptions = oldAppOptions;
-  });
-
-  it('stores attempts for logged-out users against the server level id', () => {
-    setupApp(appOptions);
-    appOptions.onAttempt({});
-
-    expect(writtenLevelId).to.equal(SERVER_LEVEL_ID);
-  });
-
-  it('stores attempts for logged-out users against the server project level id for template backed level', () => {
-    appOptions.serverProjectLevelId = SERVER_PROJECT_LEVEL_ID;
-    setupApp(appOptions);
-    appOptions.onAttempt({});
-
-    expect(writtenLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
-  });
-
-  it('stores completed attempts for logged-out users against the server level id', () => {
-    setupApp(appOptions);
-    appOptions.onComplete({});
-
-    expect(writtenLevelId).to.equal(SERVER_LEVEL_ID);
-  });
-
-  it('stores completed attempts for logged-out users against the server project level for template backed level', () => {
-    appOptions.serverProjectLevelId = SERVER_PROJECT_LEVEL_ID;
-    setupApp(appOptions);
-    appOptions.onComplete({});
-
-    expect(writtenLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
   });
 
   it('loads attempt stored under server level id', done => {
@@ -186,7 +152,6 @@ describe('loadApp.js', () => {
         expect(writtenLevelId).to.be.undefined;
         expect(name).to.equal('_share_image.png');
         expect(blob).to.have.property('type', 'image/png');
-        expect(blob).to.have.property('size', 523181);
         done();
       });
 

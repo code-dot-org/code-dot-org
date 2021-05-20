@@ -30,8 +30,7 @@ end
 
 service 'mysql' do
   action [:enable, :start]
-  # MySQL community package only provides Debian service script.
-  provider Chef::Provider::Service::Debian
-  subscribes :reload, 'template[cdo.cnf]', :immediately
+  provider Chef::Provider::Service::Systemd
+  subscribes :restart, 'template[cdo.cnf]', :immediately
 end
 node.override['cdo-apps']['local_mysql'] = true if node['cdo-apps']

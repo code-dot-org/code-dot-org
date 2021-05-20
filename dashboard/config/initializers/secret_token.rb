@@ -10,7 +10,3 @@
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
 Dashboard::Application.config.secret_key_base = CDO.dashboard_secret_key_base
-
-unless Rails.env.production?
-  Dashboard::Application.config.secret_key_base ||= "not a secure secret key!"
-end

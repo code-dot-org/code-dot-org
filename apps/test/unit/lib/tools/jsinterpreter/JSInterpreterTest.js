@@ -1,4 +1,4 @@
-import {expect, assert} from '../../../../util/configuredChai';
+import {expect, assert} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import Observer from '@cdo/apps/Observer';
@@ -6,6 +6,79 @@ import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 describe('The JSInterpreter class', function() {
   var jsInterpreter;
+
+  describe('static function getFunctionsAndMetadata', () => {
+    it('returns no comment when no comment is passed', () => {
+      let code = 'function testFunction() {}';
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].comment).to.equal('');
+    });
+
+    let comment = 'comment';
+    it('returns block comments as-is', () => {
+      let multiLineComment = 'comment\nanother comment';
+      let code = `/*\n${multiLineComment}\n*/\nfunction testFunction() {}`;
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].comment).to.equal(multiLineComment);
+    });
+
+    it('returns no comment when an empty block comment is passed', () => {
+      let code = '/**/\nfunction testFunction() {}';
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].comment).to.equal('');
+    });
+
+    it('detects block comments with trailing spaces', () => {
+      let code = `/*${comment}*/    \nfunction testFunction() {}`;
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].comment).to.equal(`${comment}`);
+    });
+
+    it('strips stars from JSDocComments', () => {
+      let code = `/**\n * ${comment}\n * ${comment}\n */\nfunction testFunction() {}`;
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].comment).to.equal(`${comment}\n${comment}`);
+    });
+
+    it('returns multiple single-line comments', () => {
+      let code = `//${comment}\n//${comment}\nfunction testFunction() {}`;
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].comment).to.equal(`${comment}\n${comment}`);
+    });
+
+    it('returns no comment when an empty comment is passed', () => {
+      let code = '//\nfunction testFunction() {}';
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].comment).to.equal('');
+    });
+
+    it('returns no comment when a comment is more than one line away', () => {
+      let code = '//comment\n\nfunction testFunction() {}';
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].comment).to.equal('');
+    });
+
+    it('returns no parameters when no parameter is passed', () => {
+      let code = 'function testFunction() {}';
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].parameters).to.be.an('array').that.is.empty;
+    });
+
+    it('returns all parameters passed', () => {
+      let param1 = 'param1';
+      let param2 = 'param2';
+      let code = `function testFunction(${param1}, ${param2}) {}`;
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].parameters).to.include.members([param1, param2]);
+    });
+
+    it('returns the name of the function', () => {
+      let functionName = 'testFunction';
+      let code = `function ${functionName}() {}`;
+      let functions = JSInterpreter.getFunctionsAndMetadata(code);
+      expect(functions[0].functionName).to.equal(functionName);
+    });
+  });
 
   function initWithCode(code) {
     // Setup a jsInterpreter instance with `hideSource: true` so an editor isn't
@@ -879,7 +952,7 @@ myCallback("this message is coming from inside the interpreter");
           jsInterpreter.executeInterpreter(true);
         });
         it('will populate the executionError property of the interpreter', () => {
-          expect(jsInterpreter.executionError).to.be.defined;
+          expect(jsInterpreter.executionError).to.not.be.undefined;
           expect(jsInterpreter.executionError).to.equal('gotcha');
         });
         it('will call the handleError method.', () => {

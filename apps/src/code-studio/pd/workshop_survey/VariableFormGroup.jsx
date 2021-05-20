@@ -26,13 +26,6 @@ const questionPropType = PropTypes.shape({
   values: PropTypes.arrayOf(PropTypes.string)
 });
 
-const styles = {
-  tdLabel: {
-    padding: 15,
-    verticalAlign: 'inherit'
-  }
-};
-
 class ColumnVariableQuestion extends React.Component {
   static propTypes = {
     selectedValues: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -302,3 +295,10 @@ export default class VariableFormGroup extends React.Component {
     );
   }
 }
+
+const styles = {
+  tdLabel: {
+    padding: 15,
+    verticalAlign: 'inherit'
+  }
+};

@@ -1,0 +1,50 @@
+name 'How If-Else Statements Work_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## How If-Else Statements work
+
+<img src="https://images.code.org/73eb353de3b62582617e66bfcf4208a7-image-1479490636331.png" style="float: right">
+
+With an *if-else* statement you are giving an **either-or** command: 
+
+**either** the lines of code inside the *if* will execute **or** the lines inside the *else* will execute. Those are the options.
+
+You saw in the video how to add an *else* clause to an if-statement -- hit the little `+` symbol on the tail of the *if* statement.
+
+Inside the curly braces for the *else* clause you put lines of code that you want to run if the Boolean condition from the *if* statement is *false*.
+
+Some important notes about the else clause:
+
+* The `else` must come *immediately* after the closing curly brace of an *if* statement
+* The `else` also has its own set of opening and closing curly braces to encapsulate lines of code
+
+<br><br>
+
+<img src="https://images.code.org/b7711c7851e5cc9bd08fa53500d692ce-image-1479495721089.png" style="float: right; width: 275px">
+
+Considering our flow chart from before, until now we haven't had a way to make the program do something different if the condition was *false*.  With an `if-else` statement we do. 
+
+We can now write a program that "branches" at a particular point, running one of two possible sections of code.
+
+<div style="clear: both">&nbsp;</div>
+
+## A Worked Example
+
+<div style="clear: both">&nbsp;</div>
+
+<img src="https://images.code.org/2e05fc16d828eda2cc4ef5db036d635a-image-1479496055965.png" style="float: right;">
+
+<span style="color: #00adbc; font-size: 150%">1.</span>
+Lines of code execute sequentially as usual. Prompt the user to enter their age.
+
+<span style="color: #00adbc; font-size: 150%">2.</span>
+The <code>if</code> statement and Boolean expression are also the same as before. The expression evaluates to either <em>true</em> or <em>false.</em>
+
+<span style="color: #00adbc; font-size: 150%">3.</span> With an <code>if-else</code> statement you are guaranteeing that exactly one of these two sections of code <strong>will</strong> execute.  If the condition is <em>true</em> (age is 18 or greater) then the lines of code inside the if-statement's curly braces are executed. If the condition is <em>false</em> it jumps to the else clause and executes any lines of code it finds between the else clause's curly braces.
+
+<span style="color: #00adbc; font-size: 150%">4.</span> Finally the program picks up normal execution directly after the <code>if-else</code> block. At this point in the program, we know that <em>either</em> the code in the if-block <em>or</em> the else block has executed.
+MARKDOWN

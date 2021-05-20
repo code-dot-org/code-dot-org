@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T16:56:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Functions with Parameters",
+    "encrypted_solution": "eXOeuo2rDjFj12s2Q4XdjEtNNBIhK40Njq1STS6KB70srMc4WkDRZDFWVmXv\nAmPGXgBuE+LpLQ0lfg4LGJ2/iUMcoIVdREn7zhf2KuxIRpYsHx+cW7L8o26e\neSKkSb9g3AU1myuieaw9LacgwdTOw5vpApsKvGEJMt5KjiYnYWlIB648tExP\nQc9TX7Oc9CHMY1EQzaslK0LiyKBE1IFYj8Wyk0uEL/K9HljXEbz4TF9Ja/NH\njQIeCecqL0SkuAJ7otAeQBmolWopuTwRe36XwISzktXMZhHEFtBwot6QArAp\nHo7sC76j5UG4ZBBCYQgkKaVziPzQBpld09slg8k0vME1abSiWRvlx/FCXRW6\nDtEjNzAIpVOvQrDXOpWincT5s8OefRplltPdJ1L5xTervijymnFYCNep/MLI\nppgDG+lW33XW3XYuhDAOuaTKCVwDsnOG9aq+5rtxMt460cgkrBzlnKyu7QJ+\ni0OknRQwPr4kExk3NHolXOXaIdx/fBD19MiDeIxERXQFSkPQXFgZNg==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16952,
+    "name_suffix": "_virtual",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "long_instructions": "“Abstraction” is often used to focus on a general case and ignore a specific instance of a problem. \r\n\r\nGiven this meaning of the word, how are functions with parameters an example of abstraction?\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-11-26 14:17:11 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2018-11-30 13:59:48 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

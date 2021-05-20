@@ -1,5 +1,5 @@
 .accept-terms-reminder
-  = t('terms_interstitial.reminder_desc', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+  = t('terms_interstitial.reminder_desc_markdown', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
   %br
   %br
   %button#review-terms.primary= t('terms_interstitial.review_terms')

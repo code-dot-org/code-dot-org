@@ -1,0 +1,138 @@
+hidden false
+login_required true
+hideable_lessons true
+student_detail_progress_view true
+
+lesson 'Episode 1 - Algorithms with Hill Harper', display_name: 'Episode 1 - Algorithms with Hill Harper', has_lesson_plan: false
+level 'CodeBreak Episode Placeholder', progression: 'Code Break: Episode 1'
+level 'Episode 1 Instructions', progression: 'Practice'
+level 'CodeBreak E01 Practice', progression: 'Practice'
+level 'Episode 1 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E01 Challenges', progression: 'Challenges'
+
+lesson 'Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott', display_name: 'Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott', has_lesson_plan: false
+level 'CodeBreak Episode 2 Placeholder', progression: 'Code Break: Episode 2'
+level 'Episode 2 Instructions', progression: 'Practice'
+level 'Episode 2 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E02 Challenges', progression: 'Challenges'
+
+lesson 'Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner', display_name: 'Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner', has_lesson_plan: false, visible_after: '2020-04-08 08:00:00 -0700'
+level 'CodeBreak Episode 3 Placeholder', progression: 'Code Break: Episode 3'
+level 'Episode 3 Instructions', progression: 'Practice'
+level 'CodeBreak E03 Practice', progression: 'Practice'
+level 'CodeBreak Episode 3 Video', progression: 'Video'
+level 'Episode 3 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E03 Int Challenge', progression: 'Challenges'
+
+lesson 'Episode 4 - Digital Information with Mike Krieger & Alice Keeler', display_name: 'Episode 4 - Digital Information with Mike Krieger & Alice Keeler', has_lesson_plan: false, visible_after: '2020-04-15 08:00:00 -0700'
+level 'CodeBreak Episode 4 Placeholder', progression: 'Code Break: Episode 4'
+level 'Episode 4 Instructions', progression: 'Practice'
+level 'CodeBreak E04 Practice', progression: 'Practice'
+level 'CodeBreak E04 Challenges', progression: 'Challenges'
+
+lesson 'Episode 5 - Simulations & Data with Bill Gates', display_name: 'Episode 5 - Simulations & Data with Bill Gates', has_lesson_plan: false, visible_after: '2020-04-22 08:00:00 -0700'
+level 'CodeBreak Episode 5 Placeholder', progression: 'Code Break: Episode 5'
+level 'Episode 5 Instructions', progression: 'Practice'
+level 'CodeBreak E05 Practice', progression: 'Practice'
+level 'Episode 5 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E05 Challenges', progression: 'Challenges'
+
+lesson 'The Internet with Keegan-Michael Key & Vint Cerf', display_name: 'The Internet with Keegan-Michael Key & Vint Cerf', has_lesson_plan: false
+level 'CodeBreak Episode 6 Placeholder', progression: 'Code Break: Episode 6'
+level 'Episode 6 Instructions', progression: 'Practice'
+level 'CodeBreak e05 Practice Web lab', progression: 'Practice'
+level 'Episode 6 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E06 Challenges', progression: 'Challenges'
+
+lesson 'Conditionals with Sal Khan & Flo Vaughn', display_name: 'Conditionals with Sal Khan & Flo Vaughn', has_lesson_plan: false
+level 'CodeBreak Episode 7 Placeholder', progression: 'Code Break: Episode 7'
+level 'Episode 7 Instructions', progression: 'Practice'
+level 'courseD_bee_conditionalsVid1_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals1_predict1_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals2_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals3_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals4_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals5_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals6_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals7_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals7_predict2_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals8_2019', progression: 'If-Else with Bee Practice', challenge: true
+level 'courseD_bee_conditionals9_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals10_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionalsVidIfElse_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals_challenge1_2019', progression: 'If-Else with Bee Practice'
+level 'courseD_bee_conditionals_challenge2_2019', progression: 'If-Else with Bee Practice'
+level 'CodeBreak E7 Practice Magic 8 Ball', progression: 'App Lab Practice'
+level 'Episode 7 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E07 Challenges', progression: 'Challenges'
+
+lesson 'Variables with Yara Shahidi & Fuzzy Khosrowshahi', display_name: 'Variables with Yara Shahidi & Fuzzy Khosrowshahi', has_lesson_plan: false
+level 'CodeBreak Episode 8 Placeholder', progression: 'Code Break: Episode 8'
+level 'Episode 8 Instructions', progression: 'Practice'
+level 'courseF_bee_variables_1_2019', progression: 'Variables with Bee'
+level 'courseF_bee_variables_2_2019', progression: 'Variables with Bee'
+level 'courseF_bee_variables_3_2019', progression: 'Variables with Bee'
+level 'courseF_bee_variables_4_2019', progression: 'Variables with Bee'
+level 'courseF_bee_variables_5_2019', progression: 'Variables with Bee'
+level 'courseF_bee_variables_6_2019', progression: 'Variables with Bee', challenge: true
+level 'courseF_bee_variables_7_2019', progression: 'Variables with Bee'
+level 'courseF_bee_variables_8_2019', progression: 'Variables with Bee'
+level 'Episode 8 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E08 Challenges', progression: 'Challenges'
+
+lesson 'Events with Macklemore & Scott Forstall', display_name: 'Events with Macklemore & Scott Forstall', has_lesson_plan: false
+level 'CodeBreak Episode 9 Placeholder', progression: 'Code Break: Episode 9'
+level 'Episode 9 Instructions', progression: 'Practice'
+level 'CourseD_Dance_Party_01', progression: 'Practice'
+level 'CourseD_Dance_Party_02', progression: 'Practice'
+level 'CourseD_Dance_Party_03', progression: 'Practice'
+level 'CourseD_Dance_Party_04', progression: 'Practice'
+level 'CourseD_Dance_Party_05', progression: 'Practice'
+level 'CourseD_Dance_Party_06', progression: 'Practice'
+level 'CourseD_Dance_Party_08', progression: 'Practice'
+level 'CourseD_Dance_Party_09', progression: 'Practice'
+level 'CourseD_Dance_Party_10', progression: 'Practice'
+level 'CourseD_Dance_Party_11', progression: 'Practice'
+level 'CourseD_Dance_Party_11b', progression: 'Practice'
+level 'CourseD_Dance_Party_11_5', progression: 'Practice'
+level 'Episode 9 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E09 Challenges', progression: 'Challenges'
+
+lesson 'AI with Kat Graham & Kate Park', display_name: 'AI with Kat Graham & Kate Park', has_lesson_plan: false, visible_after: '2020-05-27 08:00:00 -0700'
+level 'CodeBreak Episode 10 Placeholder', progression: 'Code Break: Episode 10'
+level 'Episode 10 Instructions', progression: 'Practice'
+level 'CourseF_Oceans_Video_Machine_Learning', progression: 'Practice'
+level 'CourseF_Oceans_FishVTrash', progression: 'Practice'
+level 'CourseF_Oceans_CreaturesVTrashDemo', progression: 'Practice'
+level 'CourseF_Oceans_CreaturesVTrash', progression: 'Practice'
+level 'CourseF_Oceans_Video_Training_Data', progression: 'Practice'
+level 'CourseF_Oceans_Short', progression: 'Practice'
+level 'CourseF_Oceans_Video_Societal_Implications', progression: 'Practice'
+level 'CourseF_Oceans_Long', progression: 'Practice'
+level 'Episode 10 Challenge Instructions', progression: 'Challenges'
+
+lesson 'Abstraction with Susan Wojcicki & China Anne McClain', display_name: 'Abstraction with Susan Wojcicki & China Anne McClain', has_lesson_plan: false
+level 'CodeBreak Episode 11 Placeholder', progression: 'Code Break: Episode 11'
+level 'Episode 11 Instructions', progression: 'Practice'
+level 'MC_HOC_2017_01_RETRY_2019', progression: 'Practice'
+level 'MC_HOC_2017_02_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_03_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_04_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_04POINT5_RYAN_2019', progression: 'Practice'
+level 'MC_HOC_2017_05_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_06_Cole_2019', progression: 'Practice'
+level 'Function intro Ryan_2019', progression: 'Practice'
+level 'MC_HOC_2017_07_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_10_RETRY_2019', progression: 'Practice'
+level 'MC_HOC_2017_Ali_2019', progression: 'Practice'
+level 'MC_HOC_2017_FP20x20_2019', progression: 'Free Play'
+level 'Episode 11 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E11 Challenges', progression: 'Challenges'
+
+lesson 'Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia', display_name: 'Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia', has_lesson_plan: false
+level 'CodeBreak Episode 12 Placeholder', progression: 'Code Break: Episode 12'
+level 'Episode 12 Instructions', progression: 'Practice'
+level 'CodeBreak E12 Practice Mike2', progression: 'Practice'
+level 'Episode 12 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E12 Challenges', progression: 'Challenges'
+

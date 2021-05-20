@@ -2,23 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
 import ProgressBubbleSet from './ProgressBubbleSet';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-
-const styles = {
-  summary: {
-    marginTop: 20,
-    marginBottom: 30,
-    fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif'
-  }
-};
+import i18n from '@cdo/locale';
 
 export default class ProgressLessonContent extends React.Component {
   static propTypes = {
     description: PropTypes.string,
-    levels: PropTypes.arrayOf(levelType).isRequired,
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     selectedSectionId: PropTypes.string
   };
@@ -28,7 +20,13 @@ export default class ProgressLessonContent extends React.Component {
     const progressions = progressionsFromLevels(levels);
 
     let bubbles;
-    if (progressions.length === 1 && !progressions[0].name) {
+    if (progressions.length === 0) {
+      bubbles = (
+        <span style={styles.noLevelsWarning}>
+          {i18n.lessonContainsNoLevels()}
+        </span>
+      );
+    } else if (progressions.length === 1 && !progressions[0].name) {
       bubbles = (
         <ProgressBubbleSet
           levels={progressions[0].levels}
@@ -40,7 +38,7 @@ export default class ProgressLessonContent extends React.Component {
       bubbles = progressions.map((progression, index) => (
         <ProgressLevelSet
           key={index}
-          name={progression.name}
+          name={progression.displayName}
           levels={progression.levels}
           disabled={disabled}
           selectedSectionId={selectedSectionId}
@@ -58,3 +56,15 @@ export default class ProgressLessonContent extends React.Component {
     );
   }
 }
+
+const styles = {
+  summary: {
+    marginTop: 20,
+    marginBottom: 30,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
+  noLevelsWarning: {
+    fontSize: 13
+  }
+};

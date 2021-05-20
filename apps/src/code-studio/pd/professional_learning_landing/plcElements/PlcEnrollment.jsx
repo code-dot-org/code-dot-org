@@ -3,18 +3,6 @@ import React from 'react';
 import color from '../../../../util/color';
 import EnrollmentUnitAssignment from './EnrollmentUnitAssignment';
 
-const styles = {
-  courseSection: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  },
-  courseSectionHeader: {
-    color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r"',
-    fontSize: '18px'
-  }
-};
-
 export default class PlcEnrollment extends React.Component {
   static propTypes = {
     plcData: PropTypes.object
@@ -44,3 +32,15 @@ export default class PlcEnrollment extends React.Component {
     );
   }
 }
+
+const styles = {
+  courseSection: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  courseSectionHeader: {
+    color: color.dark_charcoal,
+    fontFamily: '"Gotham 4r"',
+    fontSize: '18px'
+  }
+};
