@@ -29,7 +29,7 @@ export default storybook => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -51,7 +51,7 @@ export default storybook => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -70,7 +70,7 @@ export default storybook => {
         isSaveInProgress={true}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />

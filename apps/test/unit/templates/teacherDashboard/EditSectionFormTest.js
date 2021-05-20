@@ -26,7 +26,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -64,7 +64,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -102,7 +102,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -140,7 +140,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -181,7 +181,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -207,7 +207,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -230,7 +230,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -256,7 +256,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -279,7 +279,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -302,7 +302,7 @@ describe('EditSectionForm', () => {
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />

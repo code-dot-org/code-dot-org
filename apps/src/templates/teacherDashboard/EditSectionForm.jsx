@@ -72,7 +72,7 @@ class EditSectionForm extends Component {
     isSaveInProgress: PropTypes.bool.isRequired,
     textToSpeechScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
-    hiddenStageState: PropTypes.object.isRequired,
+    hiddenLessonState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeEnglishName: PropTypes.string,
@@ -85,14 +85,14 @@ class EditSectionForm extends Component {
   };
 
   onSaveClick = () => {
-    const {section, hiddenStageState} = this.props;
+    const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
     const scriptId = section.scriptId;
 
     const isScriptHidden =
       sectionId &&
       scriptId &&
-      isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
+      isScriptHiddenForSection(hiddenLessonState, sectionId, scriptId);
 
     if (isScriptHidden) {
       this.setState({showHiddenUnitWarning: true});
@@ -570,7 +570,7 @@ let defaultPropsFromState = state => ({
   isSaveInProgress: state.teacherSections.saveInProgress,
   textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-  hiddenStageState: state.hiddenLesson,
+  hiddenLessonState: state.hiddenLesson,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName,
   localeCode: state.locales.localeCode,
