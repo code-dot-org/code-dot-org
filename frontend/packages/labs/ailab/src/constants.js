@@ -219,7 +219,6 @@ export const styles = {
     boxSizing: "border-box",
     border: "solid 4px rgba(0,0,0,0)",
     borderRadius: 0,
-    height: 220,
     cursor: "pointer"
   },
 
